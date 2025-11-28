@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALEVOLDON | Creative Developer Portfolio</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- React & ReactDOM -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    
+    <!-- Babel for JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Marked.js for Markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            black: '#050505',
+                            cyan: '#22d3ee',
+                            purple: '#a855f7',
+                            dark: '#0a0a0a',
+                            gray: '#1f2937'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    },
+                    animation: {
+                        'gradient-x': 'gradient-x 3s ease infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        'gradient-x': {
+                            '0%, 100%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'left center'
+                            },
+                            '50%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'right center'
+                            },
+                        },
+                        'float': {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect, useRef } = React;
+
+        // --- FALLBACK DATA ---
+        const FALLBACK_PROFILE = {
+            login: "ALEVOLDON",
+            name: "Vladimir Rybalsky", 
+            avatar_url: "https://github.com/ALEVOLDON.png",
+            html_url: "https://github.com/ALEVOLDON",
+            bio: "Creative Full Stack Developer | React, Three.js, Python | Building digital experiences.",
+            public_repos: 24,
+            followers: 142,
+            following: 38,
+            location: "Worldwide",
+            created_at: "2017-01-01T00:00:00Z"
+        };
+
+        const FALLBACK_STATS = {
+            totalStars: 45,
+            totalForks: 12,
+            totalSize: 5120,
+            totalWatchers: 15,
+            grade: 'A',
+            languages: [
+                { name: 'JavaScript', percent: 65 },
+                { name: 'Python', percent: 20 },
+                { name: 'TypeScript', percent: 10 },
+                { name: 'CSS', percent: 5 }
+            ]
+        };
+
+        const FALLBACK_REPOS = [
+            { id: 1, name: "jukrainian", description: "Learn Ukrainian language platform.", html_url: "https://github.com/ALEVOLDON/jukrainian", language: "JavaScript", stargazers_count: 10, forks_count: 2 },
+            { id: 2, name: "sc_liked_to_playlist_web", description: "Convert SoundCloud liked tracks to playlists.", html_url: "https://github.com/ALEVOLDON/sc_liked_to_playlist_web", language: "Python", stargazers_count: 15, forks_count: 4 },
+            { id: 3, name: "Smart-Daw-Landing-React", description: "Landing page for a Smart DAW application.", html_url: "https://github.com/ALEVOLDON/Smart-Daw-Landing-React", language: "JavaScript", stargazers_count: 8, forks_count: 1 },
+            { id: 4, name: "habit-tracker", description: "A simple and effective habit tracking app.", html_url: "https://github.com/ALEVOLDON/habit-tracker", language: "TypeScript", stargazers_count: 12, forks_count: 3 },
+            { id: 5, name: "acid-synth", description: "Web-based acid synthesizer.", html_url: "https://github.com/ALEVOLDON/acid-synth", language: "JavaScript", stargazers_count: 20, forks_count: 5 },
+            { id: 6, name: "CineBlocker", description: "Browser extension to block spoilers.", html_url: "https://github.com/ALEVOLDON/CineBlocker", language: "JavaScript", stargazers_count: 18, forks_count: 2 }
+        ];
+
+        const FALLBACK_README = `# ALEVOLDON
+
+Creative Full Stack Developer
+
+## Skills
+- React, Three.js, Python
+- Building digital experiences
+
+## Projects
+Check out my repositories on GitHub!`;
+
+        // --- ICONS COMPONENT WRAPPER ---
+        const Icon = ({ name, size = 24, className = "" }) => {
+            const iconRef = useRef(null);
+
+            useEffect(() => {
+                if (iconRef.current) {
+                    const iconElement = document.createElement('i');
+                    iconElement.setAttribute('data-lucide', name);
+                    iconRef.current.innerHTML = ''; 
+                    iconRef.current.appendChild(iconElement);
+                    lucide.createIcons({
+                        root: iconRef.current,
+                        nameAttr: 'data-lucide',
+                        attrs: {
+                            width: size,
+                            height: size,
+                            class: className
+                        }
+                    });
+                }
+            }, [name, size, className]);
+
+            return <span ref={iconRef} className="inline-flex items-center justify-center" />;
+        };
+
+        // --- COMPONENT: THREE.JS BACKGROUND ---
+        const ThreeBackground = () => {
+            const mountRef = useRef(null);
+            const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
+            useEffect(() => {
+                const handleMouseMove = (e) => {
+                    setMousePos({
+                        x: (e.clientX - window.innerWidth / 2) * 0.0005,
+                        y: (e.clientY - window.innerHeight / 2) * 0.0005
+                    });
+                };
+                window.addEventListener('mousemove', handleMouseMove);
+                return () => window.removeEventListener('mousemove', handleMouseMove);
+            }, []);
+
+            useEffect(() => {
+                if (!mountRef.current) return;
+                const scene = new THREE.Scene();
+                scene.fog = new THREE.FogExp2(0x050505, 0.002);
+
+                const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+                camera.position.z = 30;
+
+                const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+                renderer.setSize(window.innerWidth, window.innerHeight);
+                renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+                mountRef.current.appendChild(renderer.domElement);
+
+                const geometry = new THREE.BufferGeometry();
+                const count = 4000;
+                const positions = new Float32Array(count * 3);
+                const colors = new Float32Array(count * 3);
+                const color1 = new THREE.Color(0x22d3ee); 
+                const color2 = new THREE.Color(0xa855f7); 
+
+                for (let i = 0; i < count; i++) {
+                    const r = 40 * Math.random(); 
+                    const theta = Math.random() * Math.PI * 2;
+                    const phi = Math.acos((Math.random() * 2) - 1);
+                    positions[i * 3] = r * Math.sin(phi) * Math.cos(theta);
+                    positions[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta);
+                    positions[i * 3 + 2] = r * Math.cos(phi);
+                    const mixed = Math.random() > 0.5 ? color1 : color2;
+                    colors[i * 3] = mixed.r;
+                    colors[i * 3 + 1] = mixed.g;
+                    colors[i * 3 + 2] = mixed.b;
+                }
+
+                geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+                geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+                const material = new THREE.PointsMaterial({ size: 0.1, vertexColors: true, transparent: true, opacity: 0.8 });
+                const particles = new THREE.Points(geometry, material);
+                scene.add(particles);
+
+                let frameId;
+                const animate = () => {
+                    frameId = requestAnimationFrame(animate);
+                    particles.rotation.y += 0.001;
+                    particles.rotation.x += 0.0005;
+                    particles.rotation.x += (mousePos.y - particles.rotation.x) * 0.05;
+                    particles.rotation.y += (mousePos.x - particles.rotation.y) * 0.05;
+                    renderer.render(scene, camera);
+                };
+                animate();
+
+                const handleResize = () => {
+                    camera.aspect = window.innerWidth / window.innerHeight;
+                    camera.updateProjectionMatrix();
+                    renderer.setSize(window.innerWidth, window.innerHeight);
+                };
+                window.addEventListener('resize', handleResize);
+
+                return () => {
+                    window.removeEventListener('resize', handleResize);
+                    cancelAnimationFrame(frameId);
+                    if (mountRef.current) mountRef.current.removeChild(renderer.domElement);
+                    geometry.dispose();
+                    material.dispose();
+                    renderer.dispose();
+                };
+            }, [mousePos]);
+            return <div ref={mountRef} className="fixed inset-0 z-0 pointer-events-none" />;
+        };
+
+        // --- COMPONENT: NAVBAR ---
+        const Navbar = ({ activeSection, scrollTo }) => {
+            const navItems = ['Home', 'About', 'Projects', 'Contact'];
+            return (
+                <nav className="fixed top-0 w-full z-50 px-6 py-4 bg-black/50 backdrop-blur-md border-b border-white/5 transition-all duration-300">
+                    <div className="max-w-7xl mx-auto flex justify-between items-center">
+                        <div className="text-xl font-bold tracking-tighter cursor-pointer flex items-center gap-2" onClick={() => scrollTo('home')}>
+                            <span className="text-white">ALEVOLDON</span>
+                            <span className="text-cyber-cyan">.DEV</span>
+                        </div>
+                        <div className="hidden md:flex gap-8 text-sm font-medium text-gray-400">
+                            {navItems.map(item => (
+                                <button
+                                    key={item}
+                                    onClick={() => scrollTo(item.toLowerCase())}
+                                    className={`hover:text-cyber-cyan transition-colors uppercase tracking-widest text-xs py-2 border-b-2 ${activeSection === item.toLowerCase() ? 'border-cyber-cyan text-white' : 'border-transparent'}`}
+                                >
+                                    {item}
+                                </button>
+                            ))}
+                        </div>
+                        <div className="md:hidden text-white"><Icon name="menu" /></div>
+                    </div>
+                </nav>
+            );
+        };
+
+        // --- COMPONENT: HERO ---
+        const Hero = ({ profile, loading, scrollTo }) => {
+            return (
+                <section id="home" className="min-h-screen flex items-center justify-center px-6 pt-20 relative overflow-hidden">
+                    <div className="max-w-4xl w-full text-center z-10">
+                        {loading ? (
+                             <div className="flex justify-center"><div className="animate-spin text-cyber-cyan"><Icon name="loader-2" size={48} /></div></div>
+                        ) : (
+                            <div className="animate-float">
+                                <div className="relative inline-block mb-8 group cursor-pointer">
+                                    <div className="absolute -inset-1 bg-gradient-to-r from-cyber-cyan to-cyber-purple rounded-full blur opacity-50 group-hover:opacity-100 transition duration-500"></div>
+                                    <img src={profile?.avatar_url} alt="Avatar" className="relative w-40 h-40 rounded-full border-2 border-black object-cover" />
+                                    <div className="absolute bottom-2 right-2 bg-cyber-black rounded-full p-2 border border-cyber-cyan">
+                                        <Icon name="code" size={16} className="text-cyber-cyan" />
+                                    </div>
+                                </div>
+                                <h1 className="text-5xl md:text-8xl font-black mb-6 tracking-tight leading-tight">
+                                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyber-cyan via-white to-cyber-purple animate-gradient-x">
+                                        {profile?.name || "DEVELOPER"}
+                                    </span>
+                                </h1>
+                                <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed font-mono">
+                                    {profile?.bio || "Building the future of the web."}
+                                </p>
+                                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                                    <button onClick={() => scrollTo('projects')} className="px-8 py-3 bg-cyber-cyan text-black font-bold rounded hover:bg-white transition hover:scale-105 shadow-[0_0_20px_rgba(34,211,238,0.3)] flex items-center justify-center gap-2">
+                                        <Icon name="terminal" size={20} /> View Projects
+                                    </button>
+                                    <a href={profile?.html_url} target="_blank" rel="noreferrer" className="px-8 py-3 border border-white/20 rounded font-bold hover:bg-white/10 transition flex items-center justify-center gap-2">
+                                        <Icon name="github" size={20} /> GitHub Profile
+                                    </a>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                </section>
+            );
+        };
+
+        // --- COMPONENT: ABOUT (MAXIMIZED STATS DASHBOARD) ---
+        const About = ({ profile, readme, stats }) => {
+            const langColors = {
+                'JavaScript': '#facc15', 'TypeScript': '#2563eb', 'HTML': '#f97316', 'CSS': '#3b82f6',
+                'Python': '#eab308', 'Vue': '#22c55e', 'React': '#22d3ee', 'Go': '#06b6d4', 'Other': '#6b7280'
+            };
+
+            const createMarkup = (markdown) => {
+                if (!markdown) return { __html: "Loading README data..." };
+                return { __html: marked.parse(markdown) };
+            };
+
+            // Calculate "Years Active"
+            const getYearsActive = (createdAt) => {
+                if (!createdAt) return 0;
+                const start = new Date(createdAt);
+                const now = new Date();
+                const diff = now.getFullYear() - start.getFullYear();
+                return diff < 1 ? 1 : diff;
+            };
+
+            return (
+                <section id="about" className="py-24 px-6 glass-panel border-y border-white/5 relative z-10">
+                    <div className="max-w-7xl mx-auto">
+                        <div className="flex items-center gap-4 mb-16">
+                            <div className="h-px bg-cyber-cyan w-12"></div>
+                            <h2 className="text-3xl font-bold text-white uppercase tracking-widest">System Analytics</h2>
+                            <div className="h-px bg-white/10 flex-grow"></div>
+                        </div>
+
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                            
+                            {/* LEFT COLUMN: STATS DASHBOARD (Span 5) */}
+                            <div className="lg:col-span-5 space-y-4">
+                                
+                                {/* 1. Main Stats Panel (Visual Match to Screenshot) */}
+                                <div className="bg-cyber-dark border border-white/10 rounded-xl p-5 hover:border-cyber-purple/50 transition-colors">
+                                    <h3 className="text-md font-bold text-cyber-purple mb-4 flex items-center gap-2 uppercase tracking-wider">
+                                        {profile?.name || "User"}'s GitHub Stats
+                                    </h3>
+                                    <div className="flex items-center justify-between">
+                                        <div className="space-y-2 text-sm font-medium">
+                                            <div className="flex items-center gap-2 text-white"><Icon name="star" size={14} className="text-yellow-400" /> Total Stars: <span className="ml-auto font-bold">{stats?.totalStars || 0}</span></div>
+                                            <div className="flex items-center gap-2 text-white"><Icon name="git-fork" size={14} className="text-blue-400" /> Total Forks: <span className="ml-auto font-bold">{stats?.totalForks || 0}</span></div>
+                                            <div className="flex items-center gap-2 text-white"><Icon name="folder-git" size={14} className="text-cyber-cyan" /> Total Repos: <span className="ml-auto font-bold">{profile?.public_repos || 0}</span></div>
+                                            <div className="flex items-center gap-2 text-white"><Icon name="users" size={14} className="text-pink-500" /> Followers: <span className="ml-auto font-bold">{profile?.followers || 0}</span></div>
+                                            <div className="flex items-center gap-2 text-white"><Icon name="eye" size={14} className="text-green-400" /> Watchers: <span className="ml-auto font-bold">{stats?.totalWatchers || 0}</span></div>
+                                        </div>
+                                        
+                                        {/* Grade Circle */}
+                                        <div className="relative w-24 h-24 flex items-center justify-center">
+                                            <svg className="w-full h-full" viewBox="0 0 100 100">
+                                                <circle cx="50" cy="50" r="45" fill="none" stroke="#333" strokeWidth="8" />
+                                                <circle cx="50" cy="50" r="45" fill="none" stroke="#a855f7" strokeWidth="8" strokeDasharray="283" strokeDashoffset="40" strokeLinecap="round" transform="rotate(-90 50 50)" />
+                                            </svg>
+                                            <div className="absolute text-3xl font-black text-white">{stats?.grade || 'B+'}</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* 2. Languages Panel (Visual Match to Screenshot) */}
+                                <div className="bg-cyber-dark border border-white/10 rounded-xl p-5 hover:border-cyber-cyan/50 transition-colors">
+                                    <h3 className="text-md font-bold text-cyber-cyan mb-4 flex items-center gap-2 uppercase tracking-wider">
+                                        Most Used Languages
+                                    </h3>
+                                    {stats?.languages && stats.languages.length > 0 ? (
+                                        <>
+                                            <div className="w-full h-3 bg-gray-800 rounded-full overflow-hidden flex mb-4">
+                                                {stats.languages.map((lang, index) => (
+                                                    <div key={index} style={{ width: `${lang.percent}%`, backgroundColor: langColors[lang.name] || langColors['Other'] }} className="h-full hover:opacity-80 transition-opacity"></div>
+                                                ))}
+                                            </div>
+                                            <div className="grid grid-cols-2 gap-y-1 gap-x-2">
+                                                {stats.languages.map((lang, index) => (
+                                                    <div key={index} className="flex items-center gap-2 text-xs">
+                                                        <span className="w-2 h-2 rounded-full" style={{ backgroundColor: langColors[lang.name] || langColors['Other'] }}></span>
+                                                        <span className="text-gray-300">{lang.name}</span>
+                                                        <span className="text-gray-500 ml-auto">{lang.percent}%</span>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </>
+                                    ) : (
+                                        <div className="text-sm text-gray-500 italic">No language data available.</div>
+                                    )}
+                                </div>
+
+                                {/* 3. Activity/Streaks Panel (Visual Match to Screenshot) */}
+                                <div className="bg-cyber-dark border border-white/10 rounded-xl p-6 hover:border-pink-500/50 transition-colors flex items-center justify-between">
+                                    <div className="text-center">
+                                        <div className="text-2xl font-bold text-pink-500 mb-1">
+                                            {stats?.totalSize > 1024 ? `${(stats.totalSize / 1024).toFixed(1)}MB` : `${stats.totalSize}KB`}
+                                        </div>
+                                        <div className="text-[10px] text-gray-400 uppercase tracking-wider">Total Code Volume</div>
+                                        <div className="text-[10px] text-gray-600 mt-1">Estimated size</div>
+                                    </div>
+
+                                    <div className="flex flex-col items-center">
+                                        <div className="relative w-20 h-20 flex items-center justify-center mb-2">
+                                            <svg className="w-full h-full animate-pulse" viewBox="0 0 100 100">
+                                                <circle cx="50" cy="50" r="45" fill="none" stroke="#333" strokeWidth="6" />
+                                                <circle cx="50" cy="50" r="45" fill="none" stroke="#ec4899" strokeWidth="6" strokeDasharray="283" strokeDashoffset="0" strokeLinecap="round" transform="rotate(-90 50 50)" />
+                                                <path d="M50 25 Q65 50 50 75 Q35 50 50 25" fill="#ec4899" opacity="0.5" />
+                                            </svg>
+                                            <div className="absolute text-2xl font-bold text-white">{getYearsActive(profile?.created_at)}</div>
+                                        </div>
+                                        <div className="text-xs font-bold text-cyber-cyan uppercase">Years Active</div>
+                                        <div className="text-[10px] text-gray-500">Since {new Date(profile?.created_at).getFullYear()}</div>
+                                    </div>
+
+                                    <div className="text-center">
+                                        <div className="text-2xl font-bold text-pink-500 mb-1">{profile?.public_repos || 0}</div>
+                                        <div className="text-[10px] text-gray-400 uppercase tracking-wider">Public Projects</div>
+                                        <div className="text-[10px] text-gray-600 mt-1">Open Source</div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            {/* RIGHT COLUMN: README */}
+                            <div className="lg:col-span-7">
+                                <div className="h-full p-8 bg-cyber-dark/80 border border-white/10 rounded-xl relative overflow-hidden group min-h-[500px]">
+                                    <div className="absolute -right-10 -top-10 opacity-5 group-hover:opacity-10 transition-opacity transform rotate-12">
+                                        <Icon name="file-code" size={300} />
+                                    </div>
+                                    <div className="flex justify-between items-center mb-6 border-b border-white/5 pb-4">
+                                        <h3 className="text-xl font-bold text-white flex items-center gap-2">
+                                            <span className="text-cyber-purple">cat</span> README.md
+                                        </h3>
+                                        <div className="flex gap-2">
+                                            <div className="w-3 h-3 rounded-full bg-red-500/20 border border-red-500"></div>
+                                            <div className="w-3 h-3 rounded-full bg-yellow-500/20 border border-yellow-500"></div>
+                                            <div className="w-3 h-3 rounded-full bg-green-500/20 border border-green-500"></div>
+                                        </div>
+                                    </div>
+                                    <div 
+                                        className="markdown-content prose prose-invert max-w-none font-mono text-sm text-gray-400 leading-relaxed pl-2 h-[450px] overflow-y-auto pr-2 custom-scrollbar"
+                                        dangerouslySetInnerHTML={createMarkup(readme)}
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            );
+        };
+
+        // --- COMPONENT: PROJECTS ---
+        const Projects = ({ repos, loading }) => {
+            const getLangColor = (lang) => {
+                const map = { 'JavaScript': 'bg-yellow-400', 'TypeScript': 'bg-blue-600', 'HTML': 'bg-orange-500', 'CSS': 'bg-blue-500', 'Python': 'bg-yellow-600', 'Vue': 'bg-green-500', 'React': 'bg-cyber-cyan', 'Go': 'bg-cyan-600' };
+                return map[lang] || 'bg-gray-400';
+            };
+
+            return (
+                <section id="projects" className="py-24 px-6 relative z-10">
+                    <div className="max-w-7xl mx-auto">
+                        <div className="text-center mb-16">
+                            <h2 className="text-4xl md:text-6xl font-black mb-4">
+                                SELECTED <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyber-purple to-cyber-cyan">WORKS</span>
+                            </h2>
+                            <p className="text-gray-500 font-mono">Exploring the repository matrix</p>
+                        </div>
+                        {loading ? (
+                            <div className="flex justify-center"><Icon name="loader" className="animate-spin text-white" /></div>
+                        ) : (
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                {repos.map((repo) => (
+                                    <a key={repo.id} href={repo.html_url} target="_blank" rel="noreferrer" className="group relative bg-cyber-dark border border-white/10 rounded-xl overflow-hidden hover:border-cyber-cyan/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] flex flex-col">
+                                        <div className="p-6 flex flex-col h-full">
+                                            <div className="flex justify-between items-start mb-6">
+                                                <div className="p-2 bg-white/5 rounded text-cyber-cyan group-hover:bg-cyber-cyan group-hover:text-black transition-colors"><Icon name="git-branch" size={20} /></div>
+                                                <Icon name="external-link" size={16} className="text-gray-600 group-hover:text-white transition-colors" />
+                                            </div>
+                                            <h3 className="text-lg font-bold text-white mb-2 group-hover:text-cyber-cyan transition-colors">{repo.name}</h3>
+                                            <p className="text-gray-400 text-sm mb-6 flex-grow line-clamp-3 font-mono leading-relaxed">{repo.description || "No description provided."}</p>
+                                            <div className="flex items-center justify-between text-xs font-medium text-gray-500 pt-4 border-t border-white/5 mt-auto">
+                                                <div className="flex items-center gap-2"><span className={`w-2 h-2 rounded-full ${getLangColor(repo.language)}`}></span>{repo.language || 'Code'}</div>
+                                                <div className="flex gap-4">
+                                                    <span className="flex items-center gap-1 hover:text-yellow-400 transition-colors"><Icon name="star" size={12}/> {repo.stargazers_count}</span>
+                                                    <span className="flex items-center gap-1 hover:text-blue-400 transition-colors"><Icon name="git-fork" size={12}/> {repo.forks_count}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+                </section>
+            );
+        };
+
+        // --- COMPONENT: CONTACT ---
+        const Contact = ({ email }) => {
+            return (
+                <section id="contact" className="py-32 px-6 bg-gradient-to-t from-black via-black to-transparent relative z-10">
+                    <div className="max-w-2xl mx-auto text-center">
+                        <div className="inline-block p-3 rounded-full bg-white/5 mb-6 animate-bounce"><Icon name="mail" size={24} className="text-cyber-purple" /></div>
+                        <h2 className="text-4xl font-bold mb-6 text-white">Initialize Communication</h2>
+                        <p className="text-gray-400 mb-10 text-lg">Ready to collaborate on the next big thing? <br/>Drop a packet to my inbox.</p>
+                        <div className="flex justify-center gap-4">
+                            <a href={`mailto:${email}`} className="flex items-center gap-2 px-8 py-4 bg-white text-black font-bold rounded hover:bg-gray-200 transition-all">
+                                <Icon name="send" size={18} /> Send Email
+                            </a>
+                        </div>
+                        <footer className="mt-24 pt-8 border-t border-white/5 text-gray-600 text-xs font-mono flex flex-col md:flex-row justify-between items-center gap-4">
+                            <span>© {new Date().getFullYear()} ALEVOLDON. All systems nominal.</span>
+                            <div className="flex gap-4">
+                                <span className="hover:text-cyber-cyan cursor-pointer transition-colors">GitHub</span>
+                                <span className="hover:text-cyber-cyan cursor-pointer transition-colors">Twitter</span>
+                                <span className="hover:text-cyber-cyan cursor-pointer transition-colors">LinkedIn</span>
+                            </div>
+                        </footer>
+                    </div>
+                </section>
+            );
+        };
+
+        // --- MAIN APP COMPONENT ---
+        const App = () => {
+            const [activeSection, setActiveSection] = useState('home');
+            const [profile, setProfile] = useState(null);
+            const [repos, setRepos] = useState([]);
+            const [readme, setReadme] = useState('');
+            const [loading, setLoading] = useState(true);
+            const [stats, setStats] = useState({ totalStars: 0, totalForks: 0, totalSize: 0, totalWatchers: 0, grade: 'B', languages: [] });
+
+            useEffect(() => {
+                const fetchData = async () => {
+                    const username = 'ALEVOLDON';
+                    try {
+                        // 1. Profile
+                        let profileData;
+                        try {
+                            const res = await fetch(`https://api.github.com/users/${username}`);
+                            if(res.ok) profileData = await res.json();
+                            else throw new Error("Profile API fail");
+                        } catch(e) {
+                            console.warn("Profile fallback");
+                            profileData = FALLBACK_PROFILE;
+                        }
+                        if (!profileData.name) profileData.name = FALLBACK_PROFILE.name;
+                        setProfile(profileData);
+
+                        // 2. FETCH ALL REPOS FOR STATS
+                        let allReposForStats = [];
+                        try {
+                            const res = await fetch(`https://api.github.com/users/${username}/repos?sort=pushed&per_page=100`);
+                            if(res.ok) {
+                                allReposForStats = await res.json();
+                            } else {
+                                allReposForStats = []; 
+                            }
+                        } catch(e) {
+                            console.warn("Stats repo fallback");
+                            allReposForStats = [];
+                        }
+
+                        // Calculate Stats
+                        const calcStats = { totalStars: 0, totalForks: 0, totalSize: 0, totalWatchers: 0, grade: 'B', languages: [] };
+                        const langCounts = {};
+                        let totalLangs = 0;
+
+                        if (allReposForStats.length > 0) {
+                            allReposForStats.forEach(repo => {
+                                calcStats.totalStars += repo.stargazers_count;
+                                calcStats.totalForks += repo.forks_count;
+                                calcStats.totalSize += repo.size; // in KB
+                                calcStats.totalWatchers += repo.watchers_count;
+                                
+                                if (repo.language) {
+                                    langCounts[repo.language] = (langCounts[repo.language] || 0) + 1;
+                                    totalLangs++;
+                                }
+                            });
+
+                            // Calculate Grade (Mock Logic based on stars)
+                            if (calcStats.totalStars > 100) calcStats.grade = 'S';
+                            else if (calcStats.totalStars > 50) calcStats.grade = 'A+';
+                            else if (calcStats.totalStars > 20) calcStats.grade = 'A';
+                            else if (calcStats.totalStars > 5) calcStats.grade = 'B+';
+                            else calcStats.grade = 'B';
+
+                            const langArr = Object.entries(langCounts)
+                                .map(([name, count]) => ({ name, count, percent: Math.round((count / totalLangs) * 100) }))
+                                .sort((a, b) => b.count - a.count);
+                            
+                            if (langArr.length > 5) {
+                                const top5 = langArr.slice(0, 5);
+                                const otherCount = langArr.slice(5).reduce((acc, curr) => acc + curr.count, 0);
+                                const otherPercent = Math.round((otherCount / totalLangs) * 100);
+                                calcStats.languages = [...top5, { name: 'Other', count: otherCount, percent: otherPercent }];
+                            } else {
+                                calcStats.languages = langArr;
+                            }
+                        } else {
+                            // USE FALLBACK IF API FAILED
+                            calcStats.totalStars = FALLBACK_STATS.totalStars;
+                            calcStats.totalForks = FALLBACK_STATS.totalForks;
+                            calcStats.totalSize = FALLBACK_STATS.totalSize;
+                            calcStats.totalWatchers = FALLBACK_STATS.totalWatchers;
+                            calcStats.grade = FALLBACK_STATS.grade;
+                            calcStats.languages = FALLBACK_STATS.languages;
+                        }
+
+                        setStats(calcStats);
+
+                        // 3. FETCH SPECIFIC PINNED PROJECTS FOR DISPLAY
+                        const pinnedNames = [
+                            'jukrainian', 
+                            'sc_liked_to_playlist_web', 
+                            'Smart-Daw-Landing-React', 
+                            'habit-tracker', 
+                            'acid-synth', 
+                            'CineBlocker'
+                        ];
+                        
+                        let pinnedRepos = [];
+                        try {
+                            const requests = pinnedNames.map(name => 
+                                fetch(`https://api.github.com/repos/${username}/${name}`).then(res => res.ok ? res.json() : null)
+                            );
+                            const results = await Promise.all(requests);
+                            pinnedRepos = results.filter(r => r !== null);
+                        } catch (e) {
+                            console.warn("Pinned repos fetch failed");
+                        }
+
+                        setRepos(pinnedRepos.length > 0 ? pinnedRepos : FALLBACK_REPOS);
+
+                        // 4. Readme
+                        try {
+                            let text = "";
+                            const branches = ['main', 'master'];
+                            for(let branch of branches) {
+                                const res = await fetch(`https://raw.githubusercontent.com/${username}/${username}/${branch}/README.md`);
+                                if(res.ok) {
+                                    text = await res.text();
+                                    break;
+                                }
+                            }
+                            if(text) {
+                                const cleanText = text
+                                    .replace(/!\[.*?\]\(.*?github-readme-stats.*?\)/g, '')
+                                    .replace(/!\[.*?\]\(.*?github-profile-trophy.*?\)/g, '')
+                                    .replace(/!\[.*?\]\(.*?github-readme-streak-stats.*?\)/g, '')
+                                    .replace(/!\[.*?\]\(.*?komarev\.com\/ghpvc.*?\)/g, '')
+                                    .replace(/<img.*?src=".*?github-readme-stats.*?".*?>/g, '');
+                                setReadme(cleanText);
+                            } else {
+                                setReadme(FALLBACK_README);
+                            }
+                        } catch(e) {
+                            setReadme(FALLBACK_README);
+                        }
+
+                    } catch (err) {
+                        console.error("Critical Fetch Error", err);
+                    } finally {
+                        setLoading(false);
+                    }
+                };
+
+                fetchData();
+            }, []);
+
+            const scrollTo = (id) => {
+                const el = document.getElementById(id);
+                if(el) {
+                    el.scrollIntoView({ behavior: 'smooth' });
+                    setActiveSection(id);
+                }
+            };
+
+            useEffect(() => {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) setActiveSection(entry.target.id);
+                    });
+                }, { threshold: 0.5 });
+                ['home', 'about', 'projects', 'contact'].forEach(id => {
+                    const el = document.getElementById(id);
+                    if(el) observer.observe(el);
+                });
+                return () => observer.disconnect();
+            }, [loading]);
+
+            return (
+                <div className="relative w-full">
+                    <ThreeBackground />
+                    <Navbar activeSection={activeSection} scrollTo={scrollTo} />
+                    <Hero profile={profile} loading={loading} scrollTo={scrollTo} />
+                    <About profile={profile} readme={readme} stats={stats} />
+                    <Projects repos={repos} loading={loading} />
+                    <Contact email="contact@alevoldon.dev" />
+                </div>
+            );
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>

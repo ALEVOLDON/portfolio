@@ -92,10 +92,10 @@ const App = () => {
                 // 3. Получение конкретных закрепленных проектов для отображения
                 const pinnedNames = [
                     'jukrainian', 
-                    'sc_liked_to_playlist_web', 
-                    'Smart-Daw-Landing-React', 
                     'habit-tracker', 
+                    'sc_liked_to_playlist_web', 
                     'acid-synth', 
+                    'Smart-Daw-Landing-React', 
                     'CineBlocker'
                 ];
                 

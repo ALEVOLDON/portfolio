@@ -1,8 +1,44 @@
-import React from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import Icon from './Icon';
 import GenerativeThumbnail from './GenerativeThumbnail';
 
 const Projects = ({ repos, loading }) => {
+    const [activeFilter, setActiveFilter] = useState('All');
+
+    const languages = useMemo(() => {
+        if (!repos) return ['All'];
+        const langs = new Set();
+        repos.forEach(repo => {
+            if (repo.language) langs.add(repo.language);
+        });
+        return ['All', ...Array.from(langs)];
+    }, [repos]);
+
+    const filteredRepos = useMemo(() => {
+        if (activeFilter === 'All') return repos;
+        return repos.filter(repo => repo.language === activeFilter);
+    }, [repos, activeFilter]);
+
+    useEffect(() => {
+        if (loading || !repos) return;
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+        document.querySelectorAll('#projects .reveal').forEach(el => {
+            if (!el.classList.contains('active')) {
+                observer.observe(el);
+            }
+        });
+
+        return () => observer.disconnect();
+    }, [filteredRepos, loading, repos]);
+
     const getLangColor = (lang) => {
         const map = { 'JavaScript': 'bg-yellow-400', 'TypeScript': 'bg-blue-600', 'HTML': 'bg-orange-500', 'CSS': 'bg-blue-500', 'Python': 'bg-yellow-600', 'Vue': 'bg-green-500', 'React': 'bg-cyber-cyan', 'Go': 'bg-cyan-600' };
         return map[lang] || 'bg-gray-400';
@@ -15,13 +51,29 @@ const Projects = ({ repos, loading }) => {
                     <h2 className="text-4xl md:text-6xl font-black mb-4">
                         SELECTED <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyber-purple to-cyber-cyan">WORKS</span>
                     </h2>
-                    <p className="text-gray-500 font-mono">Exploring the repository matrix</p>
+                    <p className="text-gray-500 font-mono mb-8">Exploring the repository matrix</p>
+
+                    {/* Filter Bar */}
+                    <div className="flex flex-wrap justify-center gap-3">
+                        {languages.map(lang => (
+                            <button
+                                key={lang}
+                                onClick={() => setActiveFilter(lang)}
+                                className={`px-4 py-2 rounded-full text-sm font-mono border transition-all duration-300 ${activeFilter === lang
+                                    ? 'bg-cyber-cyan text-black border-cyber-cyan shadow-[0_0_15px_rgba(34,211,238,0.4)]'
+                                    : 'bg-transparent text-gray-400 border-white/10 hover:border-cyber-cyan/50 hover:text-white'
+                                    }`}
+                            >
+                                {lang}
+                            </button>
+                        ))}
+                    </div>
                 </div>
                 {loading ? (
                     <div className="flex justify-center"><Icon name="loader" className="animate-spin text-white" /></div>
                 ) : (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {repos.map((repo, index) => (
+                        {filteredRepos.map((repo, index) => (
                             <a key={repo.id} href={repo.html_url} target="_blank" rel="noreferrer" className="group relative bg-cyber-dark border border-white/10 rounded-xl overflow-hidden hover:border-cyber-cyan/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] flex flex-col reveal" style={{ transitionDelay: `${index * 150}ms` }}>
                                 <div className="w-full h-48 overflow-hidden border-b border-white/5 relative">
                                     <GenerativeThumbnail seedStr={repo.name} />

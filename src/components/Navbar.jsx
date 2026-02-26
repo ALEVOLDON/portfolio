@@ -21,7 +21,7 @@ const Navbar = ({ activeSection, scrollTo }) => {
                     <span className="text-white">ALEVOLDON</span>
                     <span className="text-cyber-cyan">.DEV</span>
                 </div>
-                <div className="hidden md:flex gap-8 text-sm font-medium text-gray-400">
+                <div className="hidden md:flex gap-8 text-sm font-medium text-gray-400 items-center">
                     {navItems.map(item => (
                         <button
                             key={item}
@@ -32,7 +32,7 @@ const Navbar = ({ activeSection, scrollTo }) => {
                         </button>
                     ))}
                 </div>
-                <div className="md:hidden relative">
+                <div className="md:hidden relative flex items-center gap-2">
                     <button
                         onClick={handleMenuClick}
                         className="text-white hover:text-cyber-cyan transition-colors p-2"
@@ -44,8 +44,8 @@ const Navbar = ({ activeSection, scrollTo }) => {
                     {/* Мобильное меню */}
                     <div
                         className={`absolute top-full right-0 mt-2 w-48 bg-cyber-dark border border-white/10 rounded-xl shadow-2xl overflow-hidden transition-all duration-300 ${isMenuOpen
-                                ? 'opacity-100 translate-y-0 pointer-events-auto'
-                                : 'opacity-0 -translate-y-4 pointer-events-none'
+                            ? 'opacity-100 translate-y-0 pointer-events-auto'
+                            : 'opacity-0 -translate-y-4 pointer-events-none'
                             }`}
                     >
                         <div className="py-2">
@@ -54,8 +54,8 @@ const Navbar = ({ activeSection, scrollTo }) => {
                                     key={item}
                                     onClick={() => handleNavClick(item)}
                                     className={`w-full text-left px-6 py-3 text-sm font-medium uppercase tracking-widest transition-colors ${activeSection === item.toLowerCase()
-                                            ? 'text-cyber-cyan bg-cyber-cyan/10 border-l-2 border-cyber-cyan'
-                                            : 'text-gray-400 hover:text-white hover:bg-white/5'
+                                        ? 'text-cyber-cyan bg-cyber-cyan/10 border-l-2 border-cyber-cyan'
+                                        : 'text-gray-400 hover:text-white hover:bg-white/5'
                                         }`}
                                 >
                                     {item}

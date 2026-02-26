@@ -19,7 +19,7 @@ const Navbar = ({ activeSection, scrollTo }) => {
             <div className="max-w-7xl mx-auto flex justify-between items-center">
                 <div className="text-xl font-bold tracking-tighter cursor-pointer flex items-center gap-2" onClick={() => scrollTo('home')}>
                     <span className="text-white">ALEVOLDON</span>
-                    <span className="text-cyber-cyan">.DEV</span>
+                    <span className="text-cyber-cyan">.COM</span>
                 </div>
                 <div className="hidden md:flex gap-8 text-sm font-medium text-gray-400">
                     {navItems.map(item => (
@@ -33,32 +33,30 @@ const Navbar = ({ activeSection, scrollTo }) => {
                     ))}
                 </div>
                 <div className="md:hidden relative">
-                    <button 
+                    <button
                         onClick={handleMenuClick}
                         className="text-white hover:text-cyber-cyan transition-colors p-2"
                         aria-label="Toggle menu"
                     >
                         <Icon name={isMenuOpen ? "x" : "menu"} size={24} />
                     </button>
-                    
+
                     {/* Мобильное меню */}
-                    <div 
-                        className={`absolute top-full right-0 mt-2 w-48 bg-cyber-dark border border-white/10 rounded-xl shadow-2xl overflow-hidden transition-all duration-300 ${
-                            isMenuOpen 
-                                ? 'opacity-100 translate-y-0 pointer-events-auto' 
+                    <div
+                        className={`absolute top-full right-0 mt-2 w-48 bg-cyber-dark border border-white/10 rounded-xl shadow-2xl overflow-hidden transition-all duration-300 ${isMenuOpen
+                                ? 'opacity-100 translate-y-0 pointer-events-auto'
                                 : 'opacity-0 -translate-y-4 pointer-events-none'
-                        }`}
+                            }`}
                     >
                         <div className="py-2">
                             {navItems.map(item => (
                                 <button
                                     key={item}
                                     onClick={() => handleNavClick(item)}
-                                    className={`w-full text-left px-6 py-3 text-sm font-medium uppercase tracking-widest transition-colors ${
-                                        activeSection === item.toLowerCase()
+                                    className={`w-full text-left px-6 py-3 text-sm font-medium uppercase tracking-widest transition-colors ${activeSection === item.toLowerCase()
                                             ? 'text-cyber-cyan bg-cyber-cyan/10 border-l-2 border-cyber-cyan'
                                             : 'text-gray-400 hover:text-white hover:bg-white/5'
-                                    }`}
+                                        }`}
                                 >
                                     {item}
                                 </button>
@@ -67,10 +65,10 @@ const Navbar = ({ activeSection, scrollTo }) => {
                     </div>
                 </div>
             </div>
-            
+
             {/* Overlay для закрытия меню при клике вне его */}
             {isMenuOpen && (
-                <div 
+                <div
                     className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 md:hidden"
                     onClick={() => setIsMenuOpen(false)}
                 />

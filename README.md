@@ -1,16 +1,90 @@
-# React + Vite
+# ALEVOLDON — Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A cyberpunk-styled developer portfolio built with React + Vite. Fetches live data from GitHub API with intelligent caching and graceful fallback.
 
-Currently, two official plugins are available:
+🌐 **Live:** [alevoldon.com](https://alevoldon.com)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Layer | Tech |
+|---|---|
+| Framework | React 19 + Vite 7 |
+| Styling | Tailwind CSS v4 |
+| 3D Background | Three.js |
+| Generative Thumbnails | p5.js |
+| Markdown Rendering | marked |
+| Icons | lucide-react |
+| Hosting | Netlify |
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Three.js particle background** — interactive, reacts to mouse movement
+- **GitHub API integration** — live profile stats, repos, README
+- **Smart caching** — localStorage cache with 15-min TTL, instant load on repeat visits
+- **Graceful fallback** — local avatar + real profile data shown even when GitHub API is rate-limited
+- **Generative project thumbnails** — unique p5.js particle sketch per repo, seeded by repo name
+- **Scroll reveal animations** — IntersectionObserver-based
+- **Responsive** — mobile menu with backdrop blur
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── ThreeBackground.jsx   # Three.js particle scene
+│   ├── Navbar.jsx            # Fixed nav with mobile menu
+│   ├── Hero.jsx              # Landing section
+│   ├── About.jsx             # GitHub stats + README
+│   ├── Projects.jsx          # Repo cards with language filter
+│   ├── Contact.jsx           # Email + social links
+│   ├── GenerativeThumbnail.jsx # p5.js canvas per project card
+│   ├── ScrollToTop.jsx       # Floating scroll button
+│   └── Icon.jsx              # lucide-react wrapper
+├── services/
+│   └── github.js             # API fetching, caching, fallback logic
+├── App.jsx
+├── main.jsx
+└── index.css
+public/
+└── avatar.jpg                # Local avatar (always loads, no API needed)
+```
+
+## Local Development
+
+```bash
+npm install
+npm run dev
+```
+
+Opens at `http://localhost:5173`
+
+## Deploy
+
+Netlify auto-deploys on push to `main`. Config in `netlify.toml`:
+- Build command: `npm run build`
+- Publish dir: `dist`
+- SPA redirects: all routes → `index.html`
+
+```bash
+git add .
+git commit -m "your message"
+git push origin main
+```
+
+## GitHub API & Rate Limits
+
+The app hits three GitHub API endpoints on load:
+- `GET /users/ALEVOLDON` — profile
+- `GET /users/ALEVOLDON/repos` — all repos for stats
+- `GET /repos/ALEVOLDON/{name}` × 6 — pinned repos
+
+Anonymous rate limit is **60 requests/hour**. When limited, the app automatically falls back to:
+- Local avatar (`/avatar.jpg`)
+- Hardcoded profile data (real name, bio)
+- Cached data from localStorage if available
+
+---
+
+© 2025 Vladimir Rybalsky (ALEVOLDON)

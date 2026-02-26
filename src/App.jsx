@@ -38,7 +38,7 @@ const App = () => {
           const res = await fetch(`https://api.github.com/users/${username}`);
           if (res.ok) profileData = await res.json();
           else throw new Error("Profile API fail");
-        } catch (e) {
+        } catch {
           console.warn("Profile fallback");
           profileData = FALLBACK_PROFILE;
         }
@@ -58,7 +58,7 @@ const App = () => {
           } else {
             allReposForStats = [];
           }
-        } catch (e) {
+        } catch {
           console.warn("Stats repo fallback");
           allReposForStats = [];
         }
@@ -142,7 +142,7 @@ const App = () => {
             ...repo,
             image: imageMap[repo.name] || null
           }));
-        } catch (e) {
+        } catch {
           console.warn("Pinned repos fetch failed");
         }
 
@@ -170,7 +170,7 @@ const App = () => {
           } else {
             setReadme(FALLBACK_README);
           }
-        } catch (e) {
+        } catch {
           setReadme(FALLBACK_README);
         }
 

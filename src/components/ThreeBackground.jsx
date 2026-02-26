@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 
 const ThreeBackground = () => {
@@ -18,6 +18,7 @@ const ThreeBackground = () => {
 
     useEffect(() => {
         if (!mountRef.current) return;
+        const mountEl = mountRef.current;
         const scene = new THREE.Scene();
         scene.fog = new THREE.FogExp2(0x050505, 0.002);
 
@@ -29,7 +30,7 @@ const ThreeBackground = () => {
         // Let's ensure it has an absolute layout context
         renderer.setSize(window.innerWidth, window.innerHeight);
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-        mountRef.current.appendChild(renderer.domElement);
+        mountEl.appendChild(renderer.domElement);
 
         const geometry = new THREE.BufferGeometry();
         const count = 4000;
@@ -78,8 +79,8 @@ const ThreeBackground = () => {
         return () => {
             window.removeEventListener('resize', handleResize);
             cancelAnimationFrame(frameId);
-            if (mountRef.current && renderer.domElement && mountRef.current.contains(renderer.domElement)) {
-                mountRef.current.removeChild(renderer.domElement);
+            if (renderer.domElement && mountEl.contains(renderer.domElement)) {
+                mountEl.removeChild(renderer.domElement);
             }
             geometry.dispose();
             material.dispose();

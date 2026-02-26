@@ -1,6 +1,42 @@
 import React, { useEffect, useRef } from 'react';
 import p5 from 'p5';
 
+class Particle {
+    constructor(p, hueBase) {
+        this.p = p;
+        this.pos = p.createVector(p.random(p.width), p.random(p.height));
+        this.vel = p.createVector(p.random(-1, 1), p.random(-1, 1));
+        this.acc = p.createVector(0, 0);
+        this.maxSpeed = p.random(0.5, 1.5);
+        this.colorHue = hueBase + p.random(-20, 20);
+    }
+
+    update() {
+        const angle = this.p.noise(this.pos.x * 0.01, this.pos.y * 0.01, this.p.frameCount * 0.005) * this.p.TWO_PI * 4;
+        const force = this.p.constructor.Vector.fromAngle(angle);
+        force.setMag(0.1);
+
+        this.acc.add(force);
+        this.vel.add(this.acc);
+        this.vel.limit(this.maxSpeed);
+        this.pos.add(this.vel);
+        this.acc.mult(0);
+    }
+
+    display() {
+        this.p.noStroke();
+        this.p.fill(this.colorHue, 200, 255, 150);
+        this.p.ellipse(this.pos.x, this.pos.y, 3, 3);
+    }
+
+    checkEdges() {
+        if (this.pos.x > this.p.width) this.pos.x = 0;
+        if (this.pos.x < 0) this.pos.x = this.p.width;
+        if (this.pos.y > this.p.height) this.pos.y = 0;
+        if (this.pos.y < 0) this.pos.y = this.p.height;
+    }
+}
+
 const GenerativeThumbnail = ({ seedStr }) => {
     const sketchRef = useRef(null);
     const p5Instance = useRef(null);
@@ -63,43 +99,6 @@ const GenerativeThumbnail = ({ seedStr }) => {
                 }
             };
 
-            // Particle Class
-            class Particle {
-                constructor(p, hueBase) {
-                    this.p = p;
-                    this.pos = p.createVector(p.random(p.width), p.random(p.height));
-                    this.vel = p.createVector(p.random(-1, 1), p.random(-1, 1));
-                    this.acc = p.createVector(0, 0);
-                    this.maxSpeed = p.random(0.5, 1.5);
-                    this.colorHue = hueBase + p.random(-20, 20); // slight variation around base hue
-                }
-
-                update() {
-                    // Flow field effect based on perlin noise
-                    let angle = this.p.noise(this.pos.x * 0.01, this.pos.y * 0.01, this.p.frameCount * 0.005) * this.p.TWO_PI * 4;
-                    let force = this.p.constructor.Vector.fromAngle(angle);
-                    force.setMag(0.1);
-
-                    this.acc.add(force);
-                    this.vel.add(this.acc);
-                    this.vel.limit(this.maxSpeed);
-                    this.pos.add(this.vel);
-                    this.acc.mult(0); // reset acceleration
-                }
-
-                display() {
-                    this.p.noStroke();
-                    this.p.fill(this.colorHue, 200, 255, 150);
-                    this.p.ellipse(this.pos.x, this.pos.y, 3, 3);
-                }
-
-                checkEdges() {
-                    if (this.pos.x > this.p.width) this.pos.x = 0;
-                    if (this.pos.x < 0) this.pos.x = this.p.width;
-                    if (this.pos.y > this.p.height) this.pos.y = 0;
-                    if (this.pos.y < 0) this.pos.y = this.p.height;
-                }
-            }
         };
 
         if (sketchRef.current) {

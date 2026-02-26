@@ -1,4 +1,4 @@
-export const FALLBACK_PROFILE = { name: "ALEVOLDON", bio: "Building the future of the web.", avatar_url: "https://github.com/ALEVOLDON.png", html_url: "https://github.com/ALEVOLDON", public_repos: 42, followers: 15, created_at: "2022-06-28T10:00:00Z" };
+export const FALLBACK_PROFILE = { name: "Vladimir Rybalsky", bio: "Ex-artist 🎨 & sound designer 🎧 • Frontend 💻 & Blockchain 🤖 • AI 🧠 & Prompt Engineering ⚡ 🔭 • Building digital vibes 🌟, tools 🔧 & ideas 💡", avatar_url: "/avatar.jpg", html_url: "https://github.com/ALEVOLDON", public_repos: 42, followers: 15, created_at: "2022-06-28T10:00:00Z" };
 export const FALLBACK_STATS = { totalStars: 156, totalForks: 23, totalSize: 20480, totalWatchers: 45, grade: 'A+', languages: [{ name: 'JavaScript', percent: 45, count: 12 }, { name: 'React', percent: 25, count: 8 }, { name: 'CSS', percent: 15, count: 5 }, { name: 'HTML', percent: 10, count: 3 }, { name: 'Other', percent: 5, count: 2 }] };
 export const FALLBACK_REPOS = [
   { id: 1, name: "jukrainian", description: "Learn Ukrainian through gamified exercises. Next.js + Tailwind + PostgreSQL.", html_url: "https://github.com/ALEVOLDON/jukrainian", language: "TypeScript", stargazers_count: 56, forks_count: 12, image: "/projects/jukrainian.png" },
@@ -40,7 +40,8 @@ const isRateLimited = (response) => {
 
 const normalizeProfile = (profileData) => ({
   ...FALLBACK_PROFILE,
-  ...(profileData || {})
+  ...(profileData || {}),
+  avatar_url: FALLBACK_PROFILE.avatar_url, // always use local avatar
 });
 
 const normalizeRepos = (repos) => (

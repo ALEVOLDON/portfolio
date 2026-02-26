@@ -1,5 +1,6 @@
 import React from 'react';
 import Icon from './Icon';
+import GenerativeThumbnail from './GenerativeThumbnail';
 
 const Projects = ({ repos, loading }) => {
     const getLangColor = (lang) => {
@@ -10,7 +11,7 @@ const Projects = ({ repos, loading }) => {
     return (
         <section id="projects" className="py-24 px-6 relative z-10">
             <div className="max-w-7xl mx-auto">
-                <div className="text-center mb-16">
+                <div className="text-center mb-16 reveal">
                     <h2 className="text-4xl md:text-6xl font-black mb-4">
                         SELECTED <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyber-purple to-cyber-cyan">WORKS</span>
                     </h2>
@@ -20,10 +21,14 @@ const Projects = ({ repos, loading }) => {
                     <div className="flex justify-center"><Icon name="loader" className="animate-spin text-white" /></div>
                 ) : (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {repos.map((repo) => (
-                            <a key={repo.id} href={repo.html_url} target="_blank" rel="noreferrer" className="group relative bg-cyber-dark border border-white/10 rounded-xl overflow-hidden hover:border-cyber-cyan/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] flex flex-col">
-                                <div className="p-6 flex flex-col h-full">
-                                    <div className="flex justify-between items-start mb-6">
+                        {repos.map((repo, index) => (
+                            <a key={repo.id} href={repo.html_url} target="_blank" rel="noreferrer" className="group relative bg-cyber-dark border border-white/10 rounded-xl overflow-hidden hover:border-cyber-cyan/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] flex flex-col reveal" style={{ transitionDelay: `${index * 150}ms` }}>
+                                <div className="w-full h-48 overflow-hidden border-b border-white/5 relative">
+                                    <GenerativeThumbnail seedStr={repo.name} />
+                                    <div className="absolute inset-0 bg-cyber-cyan/20 opacity-0 group-hover:opacity-100 transition-opacity z-10 mix-blend-overlay"></div>
+                                </div>
+                                <div className="p-6 flex flex-col h-full flex-grow">
+                                    <div className="flex justify-between items-start mb-4">
                                         <div className="p-2 bg-white/5 rounded text-cyber-cyan group-hover:bg-cyber-cyan group-hover:text-black transition-colors"><Icon name="git-branch" size={20} /></div>
                                         <Icon name="external-link" size={16} className="text-gray-600 group-hover:text-white transition-colors" />
                                     </div>

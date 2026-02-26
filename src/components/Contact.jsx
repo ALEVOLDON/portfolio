@@ -16,7 +16,7 @@ const Contact = ({ email }) => {
 
     return (
         <section id="contact" className="py-32 px-6 bg-gradient-to-t from-black via-black to-transparent relative z-10">
-            <div className="max-w-2xl mx-auto text-center">
+            <div className="max-w-2xl mx-auto text-center reveal">
                 <div className="inline-block p-3 rounded-full bg-white/5 mb-6 animate-bounce"><Icon name="mail" size={24} className="text-cyber-purple" /></div>
                 <h2 className="text-4xl font-bold mb-6 text-white">Initialize Communication</h2>
                 <p className="text-gray-400 mb-10 text-lg">Ready to collaborate on the next big thing? <br />Drop a packet to my inbox.</p>
@@ -27,8 +27,8 @@ const Contact = ({ email }) => {
                     <button
                         onClick={copyEmail}
                         className={`flex items-center justify-center gap-2 px-8 py-4 border border-white/20 rounded font-bold transition-all ${copied
-                                ? 'bg-cyber-cyan text-black border-cyber-cyan'
-                                : 'text-white hover:bg-white/10 hover:border-cyber-cyan'
+                            ? 'bg-cyber-cyan text-black border-cyber-cyan'
+                            : 'text-white hover:bg-white/10 hover:border-cyber-cyan'
                             }`}
                     >
                         <Icon name={copied ? "check" : "copy"} size={18} />

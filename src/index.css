@@ -59,6 +59,18 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+/* Scroll Reveal Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Markdown Styles within the About section */
 .markdown-content a {
     color: #22d3ee;

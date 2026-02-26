@@ -10,7 +10,14 @@ import ScrollToTop from './components/ScrollToTop';
 // Fallback DATA from old index.html
 const FALLBACK_PROFILE = { name: "ALEVOLDON", bio: "Building the future of the web.", avatar_url: "https://avatars.githubusercontent.com/u/108390197?v=4", html_url: "https://github.com/ALEVOLDON", public_repos: 42, followers: 15, created_at: "2022-06-28T10:00:00Z" };
 const FALLBACK_STATS = { totalStars: 156, totalForks: 23, totalSize: 20480, totalWatchers: 45, grade: 'A+', languages: [{ name: 'JavaScript', percent: 45, count: 12 }, { name: 'React', percent: 25, count: 8 }, { name: 'CSS', percent: 15, count: 5 }, { name: 'HTML', percent: 10, count: 3 }, { name: 'Other', percent: 5, count: 2 }] };
-const FALLBACK_REPOS = [{ id: 1, name: "jukrainian", description: "Learn Ukrainian through gamified exercises. Next.js + Tailwind + PostgreSQL.", html_url: "https://github.com/ALEVOLDON/jukrainian", language: "TypeScript", stargazers_count: 56, forks_count: 12 }, { id: 2, name: "habit-tracker", description: "Track your daily habits and build streaks. React + Firebase.", html_url: "https://github.com/ALEVOLDON/habit-tracker", language: "React", stargazers_count: 34, forks_count: 5 }, { id: 3, name: "acid-synth", description: "WebAudio API synthesizer modeled after TB-303.", html_url: "https://github.com/ALEVOLDON/acid-synth", language: "JavaScript", stargazers_count: 42, forks_count: 8 }];
+const FALLBACK_REPOS = [
+  { id: 1, name: "jukrainian", description: "Learn Ukrainian through gamified exercises. Next.js + Tailwind + PostgreSQL.", html_url: "https://github.com/ALEVOLDON/jukrainian", language: "TypeScript", stargazers_count: 56, forks_count: 12, image: "/projects/jukrainian.png" },
+  { id: 2, name: "habit-tracker", description: "Track your daily habits and build streaks. React + Firebase.", html_url: "https://github.com/ALEVOLDON/habit-tracker", language: "React", stargazers_count: 34, forks_count: 5, image: "/projects/habit-tracker.png" },
+  { id: 3, name: "acid-synth", description: "WebAudio API synthesizer modeled after TB-303.", html_url: "https://github.com/ALEVOLDON/acid-synth", language: "JavaScript", stargazers_count: 42, forks_count: 8, image: "/projects/acid-synth.png" },
+  { id: 4, name: "sc_liked_to_playlist_web", description: "SoundCloud liked tracks to playlist converter Web UI.", html_url: "https://github.com/ALEVOLDON/sc_liked_to_playlist_web", language: "JavaScript", stargazers_count: 15, forks_count: 2, image: "/projects/sc_liked_to_playlist_web.png" },
+  { id: 5, name: "Smart-Daw-Landing-React", description: "Landing page for a smart DAW project.", html_url: "https://github.com/ALEVOLDON/Smart-Daw-Landing-React", language: "TypeScript", stargazers_count: 12, forks_count: 1, image: "/projects/Smart-Daw-Landing-React.png" },
+  { id: 6, name: "CineBlocker", description: "Browser extension to block movie spoilers.", html_url: "https://github.com/ALEVOLDON/CineBlocker", language: "JavaScript", stargazers_count: 28, forks_count: 4, image: "/projects/CineBlocker.png" }
+];
 const FALLBACK_README = "# Hello World\n\nI am a full-stack developer passionate about building excellent software that improves the lives of those around me.\n\n### Skills\n- Front-end: React, Vue, Tailwind CSS\n- Back-end: Node.js, Go, PostgreSQL\n- Tools: Git, Docker, Figma";
 
 const App = () => {
@@ -117,7 +124,20 @@ const App = () => {
             fetch(`https://api.github.com/repos/${username}/${name}`).then(res => res.ok ? res.json() : null)
           );
           const results = await Promise.all(requests);
-          pinnedRepos = results.filter(r => r !== null);
+          // Map images to fetched repos dynamically
+          const imageMap = {
+            'jukrainian': "/projects/jukrainian.png",
+            'habit-tracker': "/projects/habit-tracker.png",
+            'acid-synth': "/projects/acid-synth.png",
+            'sc_liked_to_playlist_web': "/projects/sc_liked_to_playlist_web.png",
+            'Smart-Daw-Landing-React': "/projects/Smart-Daw-Landing-React.png",
+            'CineBlocker': "/projects/CineBlocker.png"
+          };
+
+          pinnedRepos = results.filter(r => r !== null).map(repo => ({
+            ...repo,
+            image: imageMap[repo.name] || null
+          }));
         } catch (e) {
           console.warn("Pinned repos fetch failed");
         }
@@ -171,13 +191,29 @@ const App = () => {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) setActiveSection(entry.target.id);
+        // Section tracking
+        if (entry.target.tagName.toLowerCase() === 'section' && entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+
+        // Reveal animation tracking
+        if (entry.target.classList.contains('reveal')) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          }
+        }
       });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.15 });
+
+    // Observe sections for navbar
     ['home', 'about', 'projects', 'contact'].forEach(id => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
     });
+
+    // Observe reveal elements
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
     return () => observer.disconnect();
   }, [loading]);
 

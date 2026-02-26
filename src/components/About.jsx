@@ -25,7 +25,7 @@ const About = ({ profile, readme, stats }) => {
     return (
         <section id="about" className="py-24 px-6 glass-panel border-y border-white/5 relative z-10">
             <div className="max-w-7xl mx-auto">
-                <div className="flex items-center gap-4 mb-16">
+                <div className="flex items-center gap-4 mb-16 reveal">
                     <div className="h-px bg-cyber-cyan w-12"></div>
                     <h2 className="text-3xl font-bold text-white uppercase tracking-widest">System Analytics</h2>
                     <div className="h-px bg-white/10 flex-grow"></div>
@@ -37,7 +37,7 @@ const About = ({ profile, readme, stats }) => {
                     <div className="lg:col-span-5 space-y-4">
 
                         {/* 1. Main Stats Panel (Visual Match to Screenshot) */}
-                        <div className="bg-cyber-dark border border-white/10 rounded-xl p-5 hover:border-cyber-purple/50 transition-colors">
+                        <div className="bg-cyber-dark border border-white/10 rounded-xl p-5 hover:border-cyber-purple/50 transition-colors reveal">
                             <h3 className="text-md font-bold text-cyber-purple mb-4 flex items-center gap-2 uppercase tracking-wider">
                                 {profile?.name || "User"}'s GitHub Stats
                             </h3>
@@ -62,7 +62,7 @@ const About = ({ profile, readme, stats }) => {
                         </div>
 
                         {/* 2. Languages Panel (Visual Match to Screenshot) */}
-                        <div className="bg-cyber-dark border border-white/10 rounded-xl p-5 hover:border-cyber-cyan/50 transition-colors">
+                        <div className="bg-cyber-dark border border-white/10 rounded-xl p-5 hover:border-cyber-cyan/50 transition-colors reveal" style={{ transitionDelay: '100ms' }}>
                             <h3 className="text-md font-bold text-cyber-cyan mb-4 flex items-center gap-2 uppercase tracking-wider">
                                 Most Used Languages
                             </h3>
@@ -89,7 +89,7 @@ const About = ({ profile, readme, stats }) => {
                         </div>
 
                         {/* 3. Activity/Streaks Panel (Visual Match to Screenshot) */}
-                        <div className="bg-cyber-dark border border-white/10 rounded-xl p-6 hover:border-pink-500/50 transition-colors flex items-center justify-between">
+                        <div className="bg-cyber-dark border border-white/10 rounded-xl p-6 hover:border-pink-500/50 transition-colors flex items-center justify-between reveal" style={{ transitionDelay: '200ms' }}>
                             <div className="text-center">
                                 <div className="text-2xl font-bold text-pink-500 mb-1">
                                     {stats?.totalSize > 1024 ? `${(stats.totalSize / 1024).toFixed(1)}MB` : `${stats.totalSize}KB`}
@@ -121,7 +121,7 @@ const About = ({ profile, readme, stats }) => {
                     </div>
 
                     {/* RIGHT COLUMN: README */}
-                    <div className="lg:col-span-7">
+                    <div className="lg:col-span-7 reveal" style={{ transitionDelay: '300ms' }}>
                         <div className="h-full p-8 bg-cyber-dark/80 border border-white/10 rounded-xl relative overflow-hidden group min-h-[500px]">
                             <div className="absolute -right-10 -top-10 opacity-5 group-hover:opacity-10 transition-opacity transform rotate-12">
                                 <Icon name="file-code" size={300} />

@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Fira+Code:wght@400;600&display=swap');
+
+body {
+    background-color: #050505;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #050505;
+}
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #22d3ee;
+}
+
+.glass-panel {
+    background: rgba(10, 10, 10, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Markdown Styles within the About section */
+.markdown-content a {
+    color: #22d3ee;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+.markdown-content a:hover {
+    border-bottom-color: #22d3ee;
+}
+.markdown-content h1, .markdown-content h2, .markdown-content h3 {
+    color: white;
+    font-weight: 700;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+.markdown-content p {
+    margin-bottom: 1em;
+    line-height: 1.6;
+}
+.markdown-content ul, .markdown-content ol {
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+    list-style-type: disc;
+}
+.markdown-content li {
+    margin-bottom: 0.25em;
+}
+.markdown-content code {
+    background: rgba(255,255,255,0.1);
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9em;
+}
+.markdown-content pre {
+    background: #111;
+    padding: 1em;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-bottom: 1em;
+}
+.markdown-content img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 1em 0;
+}
+
+

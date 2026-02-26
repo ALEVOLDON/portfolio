@@ -42,10 +42,14 @@ const App = () => {
           console.warn("Profile fallback");
           profileData = FALLBACK_PROFILE;
         }
-        if (!profileData.name) profileData.name = FALLBACK_PROFILE.name;
-        setProfile(profileData);
 
-        // 2. FETCH ALL REPOS FOR STATS
+        // Ensure ALL properties are copied over if missing from API partial response
+        if (!profileData.name) profileData.name = FALLBACK_PROFILE.name;
+        if (!profileData.bio) profileData.bio = FALLBACK_PROFILE.bio;
+        if (!profileData.avatar_url) profileData.avatar_url = FALLBACK_PROFILE.avatar_url;
+        if (!profileData.html_url) profileData.html_url = FALLBACK_PROFILE.html_url;
+
+        setProfile(profileData);
         let allReposForStats = [];
         try {
           const res = await fetch(`https://api.github.com/users/${username}/repos?sort=pushed&per_page=100`);

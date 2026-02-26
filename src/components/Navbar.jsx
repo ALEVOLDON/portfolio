@@ -19,7 +19,7 @@ const Navbar = ({ activeSection, scrollTo }) => {
             <div className="max-w-7xl mx-auto flex justify-between items-center">
                 <div className="text-xl font-bold tracking-tighter cursor-pointer flex items-center gap-2" onClick={() => scrollTo('home')}>
                     <span className="text-white">ALEVOLDON</span>
-                    <span className="text-cyber-cyan">.DEV</span>
+                    <span className="text-cyber-cyan">.COM</span>
                 </div>
                 <div className="hidden md:flex gap-8 text-sm font-medium text-gray-400 items-center">
                     {navItems.map(item => (

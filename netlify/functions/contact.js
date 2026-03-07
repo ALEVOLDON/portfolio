@@ -59,6 +59,7 @@ export async function handler(event) {
             ? telegram
             : `@${telegram}`
         : '';
+    const telegramHandle = normalizedTelegram.replace(/^@/, '');
 
     const text = [
         '<b>New contact request</b>',
@@ -80,16 +81,18 @@ export async function handler(event) {
             chat_id: chatId,
             text,
             parse_mode: 'HTML',
-            reply_markup: {
-                inline_keyboard: [
-                    [
-                        {
-                            text: 'Reply via email',
-                            url: `mailto:${email}`
-                        }
+            ...(telegramHandle ? {
+                reply_markup: {
+                    inline_keyboard: [
+                        [
+                            {
+                                text: 'Open Telegram',
+                                url: `https://t.me/${telegramHandle}`
+                            }
+                        ]
                     ]
-                ]
-            }
+                }
+            } : {})
         })
     });
 

@@ -110,7 +110,7 @@ const App = () => {
       <Hero profile={profile} loading={loading} scrollTo={scrollTo} />
       <About profile={profile} readme={readme} stats={stats} />
       <Projects repos={repos} loading={loading} />
-      <Contact email="contact@alevoldon.dev" />
+      <Contact />
       <ScrollToTop />
     </div>
   );

@@ -4,6 +4,7 @@ import Icon from './Icon';
 const INITIAL_FORM = {
     name: '',
     email: '',
+    telegram: '',
     message: '',
     company: ''
 };
@@ -46,6 +47,7 @@ const Contact = () => {
                 body: JSON.stringify({
                     name: form.name.trim(),
                     email: form.email.trim(),
+                    telegram: form.telegram.trim(),
                     message: form.message.trim(),
                     company: form.company.trim()
                 })
@@ -110,6 +112,18 @@ const Contact = () => {
                             />
                         </label>
                     </div>
+                    <label className="block">
+                        <span className="mb-2 block text-sm font-mono uppercase tracking-[0.2em] text-gray-500">Telegram</span>
+                        <input
+                            type="text"
+                            name="telegram"
+                            value={form.telegram}
+                            onChange={updateField}
+                            maxLength="64"
+                            className="w-full rounded border border-white/15 bg-white/5 px-4 py-3 text-white outline-none transition-all focus:border-cyber-cyan focus:bg-white/8"
+                            placeholder="@yourusername (optional)"
+                        />
+                    </label>
                     <label className="block">
                         <span className="mb-2 block text-sm font-mono uppercase tracking-[0.2em] text-gray-500">Message</span>
                         <textarea

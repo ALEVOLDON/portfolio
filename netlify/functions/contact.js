@@ -33,6 +33,7 @@ export async function handler(event) {
 
     const name = String(payload.name || '').trim();
     const email = String(payload.email || '').trim();
+    const telegram = String(payload.telegram || '').trim();
     const message = String(payload.message || '').trim();
     const company = String(payload.company || '').trim();
 
@@ -44,7 +45,7 @@ export async function handler(event) {
         return json({ error: 'Name, email, and message are required.' }, 400);
     }
 
-    if (name.length > 80 || email.length > 120 || message.length > 2000) {
+    if (name.length > 80 || email.length > 120 || telegram.length > 64 || message.length > 2000) {
         return json({ error: 'Message is too long.' }, 400);
     }
 
@@ -53,15 +54,22 @@ export async function handler(event) {
         return json({ error: 'Invalid email address.' }, 400);
     }
 
+    const normalizedTelegram = telegram
+        ? telegram.startsWith('@')
+            ? telegram
+            : `@${telegram}`
+        : '';
+
     const text = [
         '<b>New contact request</b>',
         '',
         `<b>Name:</b> ${escapeHtml(name)}`,
         `<b>Email:</b> ${escapeHtml(email)}`,
+        normalizedTelegram ? `<b>Telegram:</b> ${escapeHtml(normalizedTelegram)}` : '',
         '',
         `<b>Message:</b>`,
         escapeHtml(message).replaceAll('\n', '\n')
-    ].join('\n');
+    ].filter(Boolean).join('\n');
 
     const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
         method: 'POST',
@@ -71,7 +79,17 @@ export async function handler(event) {
         body: JSON.stringify({
             chat_id: chatId,
             text,
-            parse_mode: 'HTML'
+            parse_mode: 'HTML',
+            reply_markup: {
+                inline_keyboard: [
+                    [
+                        {
+                            text: 'Reply via email',
+                            url: `mailto:${email}`
+                        }
+                    ]
+                ]
+            }
         })
     });
 

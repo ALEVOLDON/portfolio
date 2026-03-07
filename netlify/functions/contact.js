@@ -11,6 +11,20 @@ const escapeHtml = (value) => value
     .replaceAll('<', '&lt;')
     .replaceAll('>', '&gt;');
 
+const formatTimestamp = () => {
+    const formatter = new Intl.DateTimeFormat('en-GB', {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false,
+        timeZone: 'Europe/Moscow'
+    });
+
+    return formatter.format(new Date()).replace(',', '');
+};
+
 const verifyTurnstileToken = async ({ secretKey, token, ip }) => {
     const body = new URLSearchParams({
         secret: secretKey,
@@ -108,16 +122,19 @@ export async function handler(event) {
             : `@${telegram}`
         : '';
     const telegramHandle = normalizedTelegram.replace(/^@/, '');
+    const submittedAt = formatTimestamp();
 
     const text = [
-        '<b>New contact request</b>',
+        '<b>New Lead</b>',
+        '<i>alevoldon.com</i>',
         '',
-        `<b>Name:</b> ${escapeHtml(name)}`,
-        `<b>Email:</b> ${escapeHtml(email)}`,
-        normalizedTelegram ? `<b>Telegram:</b> ${escapeHtml(normalizedTelegram)}` : '',
+        `<b>Name</b>: ${escapeHtml(name)}`,
+        `<b>Email</b>: ${escapeHtml(email)}`,
+        normalizedTelegram ? `<b>Telegram</b>: ${escapeHtml(normalizedTelegram)}` : '',
+        `<b>Time</b>: ${submittedAt} MSK`,
         '',
-        `<b>Message:</b>`,
-        escapeHtml(message).replaceAll('\n', '\n')
+        '<b>Message</b>',
+        `<blockquote>${escapeHtml(message).replaceAll('\n', '\n')}</blockquote>`
     ].filter(Boolean).join('\n');
 
     const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {

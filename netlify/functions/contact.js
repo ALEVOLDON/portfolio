@@ -11,6 +11,31 @@ const escapeHtml = (value) => value
     .replaceAll('<', '&lt;')
     .replaceAll('>', '&gt;');
 
+const verifyTurnstileToken = async ({ secretKey, token, ip }) => {
+    const body = new URLSearchParams({
+        secret: secretKey,
+        response: token
+    });
+
+    if (ip) {
+        body.set('remoteip', ip);
+    }
+
+    const response = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: body.toString()
+    });
+
+    if (!response.ok) {
+        throw new Error('Turnstile verification failed.');
+    }
+
+    return response.json();
+};
+
 export async function handler(event) {
     if (event.httpMethod !== 'POST') {
         return json({ error: 'Method not allowed.' }, 405);
@@ -18,6 +43,7 @@ export async function handler(event) {
 
     const botToken = process.env.TELEGRAM_BOT_TOKEN;
     const chatId = process.env.TELEGRAM_CHAT_ID;
+    const turnstileSecretKey = process.env.TURNSTILE_SECRET_KEY;
 
     if (!botToken || !chatId) {
         return json({ error: 'Telegram integration is not configured.' }, 500);
@@ -36,6 +62,7 @@ export async function handler(event) {
     const telegram = String(payload.telegram || '').trim();
     const message = String(payload.message || '').trim();
     const company = String(payload.company || '').trim();
+    const turnstileToken = String(payload.turnstileToken || '').trim();
 
     if (company) {
         return json({ ok: true });
@@ -52,6 +79,27 @@ export async function handler(event) {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
         return json({ error: 'Invalid email address.' }, 400);
+    }
+
+    if (turnstileSecretKey) {
+        if (!turnstileToken) {
+            return json({ error: 'Spam check is required.' }, 400);
+        }
+
+        try {
+            const verification = await verifyTurnstileToken({
+                secretKey: turnstileSecretKey,
+                token: turnstileToken,
+                ip: event.headers['client-ip'] || event.headers['x-forwarded-for'] || ''
+            });
+
+            if (!verification.success) {
+                return json({ error: 'Spam check failed. Try again.' }, 400);
+            }
+        } catch (error) {
+            console.error('Turnstile verification error:', error);
+            return json({ error: 'Spam protection is unavailable right now.' }, 502);
+        }
     }
 
     const normalizedTelegram = telegram

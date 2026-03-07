@@ -1,29 +1,12 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import * as lucide from 'lucide-react';
 
-const Icon = ({ name, size = 24, className = "" }) => {
-    const iconRef = useRef(null);
+const toPascalCase = (value) => value
+    .split('-')
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join('');
 
-    useEffect(() => {
-        if (iconRef.current) {
-            const iconElement = document.createElement('i');
-            iconElement.setAttribute('data-lucide', name);
-            iconRef.current.innerHTML = '';
-            iconRef.current.appendChild(iconElement);
-
-            // Re-create icons on the specific element
-            if (lucide.createIcons) {
-                // For lucide browser script, not applicable here, we should use lucide-react components directly
-                // Let's refactor this to use lucide-react dynamically
-            }
-        }
-    }, [name, size, className]);
-
-    // Better approach with lucide-react:
-    const toPascalCase = (str) => {
-        return str.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('');
-    };
-
+const Icon = ({ name, size = 24, className = '' }) => {
     const componentName = toPascalCase(name);
     const LucideIcon = lucide[componentName];
 

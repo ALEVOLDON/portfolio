@@ -279,7 +279,7 @@ const Contact = () => {
                     </div>
                 </form>
                 <footer className="mt-24 pt-8 border-t border-white/5 text-gray-600 text-xs font-mono flex flex-col md:flex-row justify-between items-center gap-4">
-                    <span>Р’В© {new Date().getFullYear()} ALEVOLDON. All systems nominal.</span>
+                    <span>&copy; {new Date().getFullYear()} ALEVOLDON. All systems nominal.</span>
                     <div className="flex gap-4">
                         <a href="https://github.com/ALEVOLDON" target="_blank" rel="noreferrer" className="hover:text-cyber-cyan transition-colors flex items-center gap-1">
                             <Icon name="github" size={14} /> GitHub

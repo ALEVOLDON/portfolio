@@ -10,7 +10,7 @@ export const FALLBACK_REPOS = [
 ];
 export const FALLBACK_README = "# Hello World\n\nI am a full-stack developer passionate about building excellent software that improves the lives of those around me.\n\n### Skills\n- Front-end: React, Vue, Tailwind CSS\n- Back-end: Node.js, Go, PostgreSQL\n- Tools: Git, Docker, Figma";
 
-const CACHE_KEY = 'portfolio-cache-v1';
+const CACHE_KEY = 'portfolio-cache-v2';
 const CACHE_TTL_MS = 15 * 60 * 1000;
 
 const PINNED_REPO_NAMES = [

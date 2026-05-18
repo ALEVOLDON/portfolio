@@ -167,9 +167,10 @@ export const fetchPortfolioData = async (username, cachedData = null) => {
     const statsRes = await fetch(`https://api.github.com/users/${username}/repos?sort=pushed&per_page=100`);
     if (statsRes.ok) {
       reposForStats = await statsRes.json();
-      // Filter pinned repositories directly from the retrieved list to save 6 API calls!
+      // Dynamically select the 6 most recently active original repositories (excluding forks and profile README repo)
       pinnedRepos = reposForStats
-        .filter((repo) => PINNED_REPO_NAMES.includes(repo.name))
+        .filter((repo) => !repo.fork && repo.name.toLowerCase() !== username.toLowerCase())
+        .slice(0, 6)
         .map((repo) => ({ ...repo, image: REPO_IMAGE_MAP[repo.name] || null }));
     } else if (isRateLimited(statsRes)) {
       rateLimited = true;

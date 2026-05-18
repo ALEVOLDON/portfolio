@@ -132,6 +132,7 @@ export const getCachedPortfolioData = () => {
   if (!cached) return null;
   return {
     timestamp: cached.timestamp || 0,
+    isFallback: cached.isFallback || false,
     profile: normalizeProfile(cached.profile),
     repos: normalizeRepos(cached.repos),
     stats: normalizeStats(cached.stats),
@@ -141,6 +142,7 @@ export const getCachedPortfolioData = () => {
 
 export const isCachedPortfolioFresh = (cached) => {
   if (!cached?.timestamp) return false;
+  if (cached.isFallback) return false; // Proactively background-sync if cache is just fallback data!
   return Date.now() - cached.timestamp < CACHE_TTL_MS;
 };
 
@@ -165,26 +167,15 @@ export const fetchPortfolioData = async (username, cachedData = null) => {
     const statsRes = await fetch(`https://api.github.com/users/${username}/repos?sort=pushed&per_page=100`);
     if (statsRes.ok) {
       reposForStats = await statsRes.json();
+      // Filter pinned repositories directly from the retrieved list to save 6 API calls!
+      pinnedRepos = reposForStats
+        .filter((repo) => PINNED_REPO_NAMES.includes(repo.name))
+        .map((repo) => ({ ...repo, image: REPO_IMAGE_MAP[repo.name] || null }));
     } else if (isRateLimited(statsRes)) {
       rateLimited = true;
     }
   } catch {
     reposForStats = [];
-  }
-
-  try {
-    const pinnedRequests = PINNED_REPO_NAMES.map((name) =>
-      fetch(`https://api.github.com/repos/${username}/${name}`).then((res) => {
-        if (res.ok) return res.json();
-        if (isRateLimited(res)) rateLimited = true;
-        return null;
-      })
-    );
-    const pinnedResults = await Promise.all(pinnedRequests);
-    pinnedRepos = pinnedResults
-      .filter((repo) => repo !== null)
-      .map((repo) => ({ ...repo, image: REPO_IMAGE_MAP[repo.name] || null }));
-  } catch {
     pinnedRepos = [];
   }
 
@@ -205,11 +196,15 @@ export const fetchPortfolioData = async (username, cachedData = null) => {
     cleanedReadme = '';
   }
 
+  // Check if we had to use static hardcoded fallback data (e.g. all requests failed or rate limited)
+  const isFallback = rateLimited || profileData === FALLBACK_PROFILE || pinnedRepos.length === 0;
+
   const finalData = {
     profile: normalizeProfile(profileData),
     stats: reposForStats.length > 0 ? buildStats(reposForStats) : normalizeStats(cachedData?.stats),
     repos: pinnedRepos.length > 0 ? pinnedRepos : normalizeRepos(cachedData?.repos),
-    readme: normalizeReadme(cleanedReadme || cachedData?.readme)
+    readme: normalizeReadme(cleanedReadme || cachedData?.readme),
+    isFallback
   };
 
   setCachedData(finalData);

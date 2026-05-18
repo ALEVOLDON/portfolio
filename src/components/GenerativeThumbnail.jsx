@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-import p5 from 'p5';
 
 class Particle {
     constructor(p, hueBase) {
@@ -42,6 +41,8 @@ const GenerativeThumbnail = ({ seedStr }) => {
     const p5Instance = useRef(null);
 
     useEffect(() => {
+        let cancelled = false;
+
         const sketch = (p) => {
             let particles = [];
             let hueBase;
@@ -102,12 +103,17 @@ const GenerativeThumbnail = ({ seedStr }) => {
         };
 
         if (sketchRef.current) {
-            p5Instance.current = new p5(sketch, sketchRef.current);
+            import('p5').then(({ default: p5 }) => {
+                if (cancelled || !sketchRef.current) return;
+                p5Instance.current = new p5(sketch, sketchRef.current);
+            });
         }
 
         return () => {
+            cancelled = true;
             if (p5Instance.current) {
                 p5Instance.current.remove();
+                p5Instance.current = null;
             }
         };
     }, [seedStr]);

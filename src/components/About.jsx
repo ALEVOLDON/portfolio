@@ -1,5 +1,6 @@
 import React from 'react';
 import * as marked from 'marked';
+import DOMPurify from 'dompurify';
 import Icon from './Icon';
 
 const About = ({ profile, readme, stats }) => {
@@ -10,7 +11,8 @@ const About = ({ profile, readme, stats }) => {
 
     const createMarkup = (markdown) => {
         if (!markdown) return { __html: "Loading README data..." };
-        return { __html: marked.parse(markdown) };
+        const html = marked.parse(markdown);
+        return { __html: DOMPurify.sanitize(html, { USE_PROFILES: { html: true } }) };
     };
 
     // Calculate "Years Active"

@@ -31,6 +31,8 @@
 - 🚀 **Netlify deployment** with a serverless contact endpoint
 - 📱 **Telegram notifications** for incoming contact requests
 - 🤖 **Cloudflare Turnstile** spam protection
+- 📊 **Modern Analytics**: Plausible Analytics (privacy-focused) & Microsoft Clarity (heatmaps & session recordings)
+- 🔍 **SEO Optimization**: Integrated robots.txt, sitemap.xml, and canonical meta configuration
 
 ---
 
@@ -46,6 +48,7 @@
 | **Hosting** | Netlify |
 | **Contact Delivery** | Netlify Functions, Telegram Bot API |
 | **Anti-spam** | Cloudflare Turnstile |
+| **Web Analytics** | Plausible Analytics, Microsoft Clarity |
 
 ---
 
@@ -67,11 +70,17 @@
 - **Local Storage Cache**: Cached GitHub data to ensure instant load times on repeat visits.
 - **Fallbacks**: Graceful fallback for profile, stats, repos, and README content in case of GitHub API rate limits.
 
+### 📊 Web Analytics & SEO
+- **Privacy-first Analytics**: Lightweight, cookie-less unique visitor and referral tracking via Plausible Analytics.
+- **Behavioral Tracking**: Session recordings and visual click/scroll heatmaps via Microsoft Clarity.
+- **SEO Readiness**: Canonical link tags, Open Graph meta-tags, standard-compliant `sitemap.xml`, and optimized crawling via `robots.txt`.
+
 ---
 
 ## 📁 Project Structure
 
 ```text
+ANALYTICS_GUIDE.md       # Detailed guide on tracking website stats
 src/
 ├── components/          # UI components
 │   ├── About.jsx

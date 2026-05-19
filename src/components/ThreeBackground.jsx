@@ -1,286 +1,271 @@
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 
+const isSmallViewport = () => window.innerWidth < 768 || window.innerHeight < 620;
+
 const ThreeBackground = () => {
     const mountRef = useRef(null);
-    const mousePos = useRef({ x: 0, y: 0, rawX: 0, rawY: 0 });
-    const smoothedMouse = useRef({ x: 0, y: 0, rawX: 0, rawY: 0 });
-    const velocities = useRef([]);
+    const pointer = useRef({ x: 0, y: 0 });
+    const easedPointer = useRef({ x: 0, y: 0 });
+    const pointerVelocity = useRef({ x: 0, y: 0 });
 
     useEffect(() => {
-        const handleMouseMove = (e) => {
-            // Map mouse 2D coords to 3D world space coordinates
-            mousePos.current = {
-                x: ((e.clientX / window.innerWidth) * 2 - 1) * 35,
-                y: -((e.clientY / window.innerHeight) * 2 - 1) * 20,
-                rawX: (e.clientX / window.innerWidth) * 2 - 1,
-                rawY: -((e.clientY / window.innerHeight) * 2 - 1)
-            };
+        const handlePointerMove = (event) => {
+            pointer.current.x = (event.clientX / window.innerWidth) * 2 - 1;
+            pointer.current.y = -((event.clientY / window.innerHeight) * 2 - 1);
         };
-        window.addEventListener('mousemove', handleMouseMove);
-        return () => window.removeEventListener('mousemove', handleMouseMove);
+
+        window.addEventListener('pointermove', handlePointerMove, { passive: true });
+        return () => window.removeEventListener('pointermove', handlePointerMove);
     }, []);
 
     useEffect(() => {
         if (!mountRef.current) return;
+
         const mountEl = mountRef.current;
-        const scene = new THREE.Scene();
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        const backgroundScene = new THREE.Scene();
+        const particleScene = new THREE.Scene();
+        const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
         const clock = new THREE.Clock();
 
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        camera.position.z = 30;
-
-        const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
-        renderer.setClearColor(0x000000, 0);
+        const renderer = new THREE.WebGLRenderer({
+            alpha: true,
+            antialias: false,
+            powerPreference: 'high-performance'
+        });
+        renderer.setClearColor(0x030106, 1);
         mountEl.appendChild(renderer.domElement);
 
-        // ==========================================
-        // LAYER 1 & 2: BACKGROUND SHADER PLANE
-        // ==========================================
-        const bgMaterial = new THREE.ShaderMaterial({
+        const backgroundMaterial = new THREE.ShaderMaterial({
             uniforms: {
                 uTime: { value: 0 },
-                uResolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) },
-                uMouse: { value: new THREE.Vector2(0, 0) }
+                uResolution: { value: new THREE.Vector2(1, 1) },
+                uPointer: { value: new THREE.Vector2(0, 0) },
+                uReducedMotion: { value: prefersReducedMotion ? 1 : 0 }
             },
             vertexShader: `
                 varying vec2 vUv;
+
                 void main() {
-                    vUv = uv;
-                    gl_Position = vec4(position, 1.0);
+                    vUv = position.xy * 0.5 + 0.5;
+                    gl_Position = vec4(position.xy, 0.0, 1.0);
                 }
             `,
             fragmentShader: `
+                precision highp float;
+
                 uniform float uTime;
                 uniform vec2 uResolution;
-                uniform vec2 uMouse;
+                uniform vec2 uPointer;
+                uniform int uReducedMotion;
                 varying vec2 vUv;
 
-                // ashima simplex 3D noise
-                vec4 permute(vec4 x){return mod(((x*34.0)+1.0)*x, 289.0);}
-                vec4 taylorInvSqrt(vec4 r){return 1.79284291400159 - 0.85373472095314 * r;}
+                vec3 mod289(vec3 x) { return x - floor(x * (1.0 / 289.0)) * 289.0; }
+                vec4 mod289(vec4 x) { return x - floor(x * (1.0 / 289.0)) * 289.0; }
+                vec4 permute(vec4 x) { return mod289(((x * 34.0) + 10.0) * x); }
+                vec4 taylorInvSqrt(vec4 r) { return 1.79284291400159 - 0.85373472095314 * r; }
 
-                float snoise(vec3 v){
-                  const vec2  C = vec2(1.0/6.0, 1.0/3.0) ;
-                  const vec4  D = vec4(0.0, 0.5, 1.0, 2.0);
+                float snoise(vec3 v) {
+                    const vec2 C = vec2(1.0 / 6.0, 1.0 / 3.0);
+                    const vec4 D = vec4(0.0, 0.5, 1.0, 2.0);
 
-                  vec3 i  = floor(v + dot(v, C.yyy) );
-                  vec3 x0 =   v - i + dot(i, C.xxx) ;
+                    vec3 i = floor(v + dot(v, C.yyy));
+                    vec3 x0 = v - i + dot(i, C.xxx);
 
-                  vec3 g = step(x0.yzx, x0.xyz);
-                  vec3 l = 1.0 - g;
-                  vec3 i1 = min( g.xyz, l.zxy );
-                  vec3 i2 = max( g.xyz, l.zxy );
+                    vec3 g = step(x0.yzx, x0.xyz);
+                    vec3 l = 1.0 - g;
+                    vec3 i1 = min(g.xyz, l.zxy);
+                    vec3 i2 = max(g.xyz, l.zxy);
 
-                  vec3 x1 = x0 - i1 + 1.0 * C.xxx;
-                  vec3 x2 = x0 - i2 + 2.0 * C.xxx;
-                  vec3 x3 = x0 - D.yyy;
+                    vec3 x1 = x0 - i1 + C.xxx;
+                    vec3 x2 = x0 - i2 + C.yyy;
+                    vec3 x3 = x0 - D.yyy;
 
-                  i = mod(i, 289.0 );
-                  vec4 p = permute( permute( permute(
-                             i.z + vec4(0.0, i1.z, i2.z, 1.0 ))
-                           + i.y + vec4(0.0, i1.y, i2.y, 1.0 ))
-                           + i.x + vec4(0.0, i1.x, i2.x, 1.0 ));
+                    i = mod289(i);
+                    vec4 p = permute(permute(permute(
+                        i.z + vec4(0.0, i1.z, i2.z, 1.0))
+                        + i.y + vec4(0.0, i1.y, i2.y, 1.0))
+                        + i.x + vec4(0.0, i1.x, i2.x, 1.0));
 
-                  float n_ = 0.142857142857;
-                  vec3  ns = n_ * D.wyz - D.xzx;
+                    float n_ = 0.142857142857;
+                    vec3 ns = n_ * D.wyz - D.xzx;
 
-                  vec4 j = p - 49.0 * floor(p * ns.z *ns.z);
+                    vec4 j = p - 49.0 * floor(p * ns.z * ns.z);
+                    vec4 x_ = floor(j * ns.z);
+                    vec4 y_ = floor(j - 7.0 * x_);
 
-                  vec4 x_ = floor(j * ns.z);
-                  vec4 y_ = floor(j - 7.0 * x_ );
+                    vec4 x = x_ * ns.x + ns.yyyy;
+                    vec4 y = y_ * ns.x + ns.yyyy;
+                    vec4 h = 1.0 - abs(x) - abs(y);
 
-                  vec4 x = x_ *ns.x + ns.yyyy;
-                  vec4 y = y_ *ns.x + ns.yyyy;
-                  vec4 h = 1.0 - abs(x) - abs(y);
+                    vec4 b0 = vec4(x.xy, y.xy);
+                    vec4 b1 = vec4(x.zw, y.zw);
 
-                  vec4 b0 = vec4( x.xy, y.xy );
-                  vec4 b1 = vec4( x.zw, y.zw );
+                    vec4 s0 = floor(b0) * 2.0 + 1.0;
+                    vec4 s1 = floor(b1) * 2.0 + 1.0;
+                    vec4 sh = -step(h, vec4(0.0));
 
-                  vec4 s0 = floor(b0)*2.0 + 1.0;
-                  vec4 s1 = floor(b1)*2.0 + 1.0;
-                  vec4 sh = -step(h, vec4(0.0));
+                    vec4 a0 = b0.xzyw + s0.xzyw * sh.xxyy;
+                    vec4 a1 = b1.xzyw + s1.xzyw * sh.zzww;
 
-                  vec4 a0 = b0.xzyw + s0.xzyw*sh.xxyy ;
-                  vec4 a1 = b1.xzyw + s1.xzyw*sh.zzww ;
+                    vec3 p0 = vec3(a0.xy, h.x);
+                    vec3 p1 = vec3(a0.zw, h.y);
+                    vec3 p2 = vec3(a1.xy, h.z);
+                    vec3 p3 = vec3(a1.zw, h.w);
 
-                  vec3 p0 = vec3(a0.xy,h.x);
-                  vec3 p1 = vec3(a0.zw,h.y);
-                  vec3 p2 = vec3(a1.xy,h.z);
-                  vec3 p3 = vec3(a1.zw,h.w);
+                    vec4 norm = taylorInvSqrt(vec4(dot(p0, p0), dot(p1, p1), dot(p2, p2), dot(p3, p3)));
+                    p0 *= norm.x;
+                    p1 *= norm.y;
+                    p2 *= norm.z;
+                    p3 *= norm.w;
 
-                  vec4 norm = taylorInvSqrt(vec4(dot(p0,p0), dot(p1,p1), dot(p2, p2), dot(p3,p3)));
-                  p0 *= norm.x;
-                  p1 *= norm.y;
-                  p2 *= norm.z;
-                  p3 *= norm.w;
+                    vec4 m = max(0.6 - vec4(dot(x0, x0), dot(x1, x1), dot(x2, x2), dot(x3, x3)), 0.0);
+                    m = m * m;
+                    return 42.0 * dot(m * m, vec4(dot(p0, x0), dot(p1, x1), dot(p2, x2), dot(p3, x3)));
+                }
 
-                  vec4 m = max(0.6 - vec4(dot(x0,x0), dot(x1,x1), dot(x2,x2), dot(x3,x3)), 0.0);
-                  m = m * m;
-                  return 42.0 * dot( m*m, vec4( dot(p0,x0), dot(p1,x1),
-                                                dot(p2,x2), dot(p3,x3) ) );
+                float fbm(vec3 p) {
+                    float value = 0.0;
+                    float amplitude = 0.5;
+                    for (int i = 0; i < 4; i++) {
+                        value += amplitude * snoise(p);
+                        p = p * 2.03 + vec3(11.7, 4.2, 8.1);
+                        amplitude *= 0.5;
+                    }
+                    return value;
                 }
 
                 void main() {
-                    // Aspect ratio correction
-                    vec2 uv = (gl_FragCoord.xy - 0.5 * uResolution.xy) / uResolution.y;
+                    vec2 centered = (gl_FragCoord.xy - 0.5 * uResolution.xy) / uResolution.y;
+                    float time = uReducedMotion == 1 ? 0.0 : uTime;
 
-                    // Large glow fields control points (drifting dynamically with slow LFOs and eased mouse inertia)
-                    vec2 cp1 = vec2(0.25 * sin(uTime * 0.05), 0.18 * cos(uTime * 0.04)) + uMouse * 0.14;
-                    vec2 cp2 = vec2(0.3 * cos(uTime * 0.038), 0.22 * sin(uTime * 0.052)) - uMouse * 0.10;
-                    vec2 cp3 = vec2(0.22 * sin(uTime * 0.032 + 1.2), 0.26 * cos(uTime * 0.046 - 0.8)) + uMouse * 0.07;
+                    vec2 pointerField = uPointer * vec2(0.16, 0.10);
+                    vec2 slowDrift = vec2(
+                        fbm(vec3(centered * 0.65 + pointerField, time * 0.025)),
+                        fbm(vec3(centered * 0.72 - pointerField.yx, time * 0.022 + 8.0))
+                    );
 
-                    // Apply multi-octave 3D simplex noise distortion to UV coordinates (organic fluid motion)
-                    vec2 noiseUv = uv * 1.5;
-                    float nX = snoise(vec3(noiseUv, uTime * 0.016));
-                    float nY = snoise(vec3(noiseUv + vec2(13.4, 27.8), uTime * 0.018));
-                    vec2 distortedUv = uv + vec2(nX, nY) * 0.16;
+                    vec2 warped = centered + slowDrift * 0.22;
+                    float nebulaA = fbm(vec3(warped * 1.25 + vec2(-0.18, 0.12), time * 0.035));
+                    float nebulaB = fbm(vec3(warped * 1.85 + vec2(2.8, -1.4), time * -0.028));
+                    float veil = fbm(vec3(warped * 3.4 + slowDrift * 0.55, time * 0.018 + 4.0));
 
-                    // Distance fields to attractors
-                    float d1 = length(distortedUv - cp1);
-                    float d2 = length(distortedUv - cp2);
-                    float d3 = length(distortedUv - cp3);
+                    float field = smoothstep(-0.25, 0.72, nebulaA * 0.72 + nebulaB * 0.38);
+                    float filament = pow(smoothstep(0.08, 0.78, abs(veil)), 2.5);
+                    float verticalDepth = smoothstep(-0.9, 0.65, centered.y + nebulaB * 0.22);
 
-                    // Soft Gaussian glows
-                    float glow1 = exp(-d1 * d1 * 5.0);
-                    float glow2 = exp(-d2 * d2 * 3.8);
-                    float glow3 = exp(-d3 * d3 * 2.8);
+                    vec3 deepInk = vec3(0.010, 0.006, 0.019);
+                    vec3 midnight = vec3(0.020, 0.014, 0.045);
+                    vec3 cyan = vec3(0.04, 0.78, 0.94);
+                    vec3 violet = vec3(0.55, 0.25, 0.95);
+                    vec3 blue = vec3(0.05, 0.18, 0.62);
 
-                    // AI Colors: Cyan, Deep Purple, and Indigo Blue
-                    vec3 colorCyan = vec3(0.0, 0.90, 1.0);
-                    vec3 colorPurple = vec3(0.66, 0.33, 0.97);
-                    vec3 colorIndigo = vec3(0.08, 0.24, 0.78);
+                    vec3 color = mix(deepInk, midnight, verticalDepth);
+                    color += cyan * field * 0.18;
+                    color += violet * smoothstep(0.22, 1.0, nebulaB + 0.45) * 0.16;
+                    color += blue * filament * 0.12;
 
-                    // Accumulate glow colors
-                    vec3 finalColor = glow1 * colorCyan + glow2 * colorPurple + glow3 * colorIndigo;
+                    float softBloom = pow(max(field + filament * 0.42, 0.0), 3.2);
+                    color += mix(cyan, violet, smoothstep(-0.3, 0.6, nebulaB)) * softBloom * 0.08;
 
-                    // Layer 1: Subtle multi-scale volumetric background fog
-                    float fogNoise = snoise(vec3(uv * 3.2, uTime * 0.012));
-                    finalColor += vec3(fogNoise * 0.015);
+                    float heroDarkZone = 1.0 - smoothstep(0.0, 0.46, length(centered * vec2(0.82, 1.18)));
+                    color *= 1.0 - heroDarkZone * 0.48;
 
-                    // Dampen the total output to maintain dark cinematic background & high UI readability
-                    finalColor *= 0.16;
-                    
-                    // Add very low dark ambient indigo base
-                    finalColor += vec3(0.012, 0.008, 0.022);
+                    float vignette = smoothstep(1.14, 0.24, length(centered * vec2(0.78, 1.0)));
+                    color *= 0.35 + vignette * 0.74;
 
-                    // Film Grain Overlay (organic cinematic texture)
-                    float grain = fract(sin(dot(gl_FragCoord.xy, vec2(12.9898, 78.233))) * 43758.5453);
-                    finalColor += (grain - 0.5) * 0.012;
+                    float grain = fract(sin(dot(gl_FragCoord.xy + time * 18.0, vec2(12.9898, 78.233))) * 43758.5453);
+                    color += (grain - 0.5) * 0.010;
 
-                    // Vignette to darken edges
-                    vec2 dV = gl_FragCoord.xy / uResolution.xy - vec2(0.5);
-                    float vignette = 1.0 - dot(dV, dV) * 1.5;
-                    vignette = clamp(vignette, 0.0, 1.0);
-                    finalColor *= pow(vignette, 1.4);
-
-                    gl_FragColor = vec4(finalColor, 1.0);
+                    gl_FragColor = vec4(max(color, vec3(0.0)), 1.0);
                 }
             `,
-            depthWrite: false,
             depthTest: false,
-            transparent: true
+            depthWrite: false
         });
 
-        // Background quad covering viewport
-        const bgGeometry = new THREE.PlaneGeometry(1, 1);
-        const bgMesh = new THREE.Mesh(bgGeometry, bgMaterial);
-        bgMesh.position.set(0, 0, -95);
-        camera.add(bgMesh);
-        scene.add(camera);
+        const background = new THREE.Mesh(new THREE.PlaneGeometry(2, 2), backgroundMaterial);
+        backgroundScene.add(background);
 
-        // ==========================================
-        // LAYER 3: SPARSE PARTICLE FIELD
-        // ==========================================
-        const count = 220;
-        const geometry = new THREE.BufferGeometry();
-        const positions = new Float32Array(count * 3);
-        const colors = new Float32Array(count * 3);
-        const sizes = new Float32Array(count);
-        const opacities = new Float32Array(count);
-        const seeds = new Float32Array(count * 3);
+        const particleCount = prefersReducedMotion ? 0 : (isSmallViewport() ? 70 : 130);
+        const particleGeometry = new THREE.BufferGeometry();
+        const positions = new Float32Array(particleCount * 3);
+        const basePositions = new Float32Array(particleCount * 3);
+        const colors = new Float32Array(particleCount * 3);
+        const sizes = new Float32Array(particleCount);
+        const seeds = new Float32Array(particleCount * 4);
 
-        const colorCyan = new THREE.Color(0x22d3ee);
-        const colorViolet = new THREE.Color(0xa855f7);
-        const colorWhite = new THREE.Color(0xe2e8f0);
+        const colorA = new THREE.Color(0x48e8ff);
+        const colorB = new THREE.Color(0xa855f7);
+        const colorC = new THREE.Color(0xd8f8ff);
 
-        velocities.current = [];
+        for (let i = 0; i < particleCount; i++) {
+            const i3 = i * 3;
+            const z = -10 - Math.random() * 55;
+            const depthScale = 1 + Math.abs(z) / 45;
 
-        for (let i = 0; i < count; i++) {
-            // Distribute in a wide 3D box
-            positions[i * 3] = (Math.random() - 0.5) * 95;
-            positions[i * 3 + 1] = (Math.random() - 0.5) * 55;
-            positions[i * 3 + 2] = -Math.random() * 50 - 5; // Z between -55 and -5
+            positions[i3] = (Math.random() - 0.5) * 72 * depthScale;
+            positions[i3 + 1] = (Math.random() - 0.5) * 44 * depthScale;
+            positions[i3 + 2] = z;
 
-            // Slow initial velocities
-            velocities.current.push({
-                x: (Math.random() - 0.5) * 0.005,
-                y: (Math.random() - 0.5) * 0.005,
-                z: (Math.random() - 0.5) * 0.002
-            });
+            basePositions[i3] = positions[i3];
+            basePositions[i3 + 1] = positions[i3 + 1];
+            basePositions[i3 + 2] = z;
 
-            // Random seeds for frequency and direction of drift
-            seeds[i * 3] = Math.random() * 1.8 + 0.2;
-            seeds[i * 3 + 1] = Math.random() * 1.8 + 0.2;
-            seeds[i * 3 + 2] = Math.random() * 1.8 + 0.2;
+            const color = Math.random() < 0.52 ? colorA : Math.random() < 0.82 ? colorB : colorC;
+            colors[i3] = color.r;
+            colors[i3 + 1] = color.g;
+            colors[i3 + 2] = color.b;
 
-            // Sizes (scaled by shader size attenuation)
-            sizes[i] = 1.2 + Math.random() * 3.8;
-
-            // Opacities
-            opacities[i] = 0.1 + Math.random() * 0.65;
-
-            // Select color from UI theme palette
-            const r = Math.random();
-            let col = colorWhite;
-            if (r < 0.42) col = colorCyan;
-            else if (r < 0.82) col = colorViolet;
-
-            colors[i * 3] = col.r;
-            colors[i * 3 + 1] = col.g;
-            colors[i * 3 + 2] = col.b;
+            sizes[i] = 0.65 + Math.random() * 2.3;
+            seeds[i * 4] = Math.random() * 100;
+            seeds[i * 4 + 1] = 0.04 + Math.random() * 0.14;
+            seeds[i * 4 + 2] = 0.18 + Math.random() * 0.82;
+            seeds[i * 4 + 3] = Math.random() * Math.PI * 2;
         }
 
-        geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-        geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
-        geometry.setAttribute('size', new THREE.BufferAttribute(sizes, 1));
-        geometry.setAttribute('customOpacity', new THREE.BufferAttribute(opacities, 1));
+        particleGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+        particleGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+        particleGeometry.setAttribute('size', new THREE.BufferAttribute(sizes, 1));
+        particleGeometry.setAttribute('seed', new THREE.BufferAttribute(seeds, 4));
 
         const particleMaterial = new THREE.ShaderMaterial({
             uniforms: {
-                uOpacityMultiplier: { value: 0.88 }
+                uPixelRatio: { value: 1 },
+                uBaseOpacity: { value: isSmallViewport() ? 0.30 : 0.42 }
             },
             vertexShader: `
                 attribute float size;
-                attribute float customOpacity;
+                attribute vec4 seed;
                 varying vec3 vColor;
-                varying float vOpacity;
+                varying float vAlpha;
 
                 void main() {
                     vColor = color;
-                    vOpacity = customOpacity;
+                    vAlpha = seed.z;
                     vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
-                    // Size attenuation: closer particles appear larger
-                    gl_PointSize = size * (280.0 / -mvPosition.z);
+                    float depth = clamp(180.0 / -mvPosition.z, 1.0, 10.0);
+                    gl_PointSize = size * depth;
                     gl_Position = projectionMatrix * mvPosition;
                 }
             `,
             fragmentShader: `
-                uniform float uOpacityMultiplier;
+                precision highp float;
+
+                uniform float uBaseOpacity;
                 varying vec3 vColor;
-                varying float vOpacity;
+                varying float vAlpha;
 
                 void main() {
-                    // Procedural radial soft glowing circle
-                    float dist = length(gl_PointCoord - vec2(0.5));
-                    if (dist > 0.5) discard;
-                    
-                    float glow = smoothstep(0.5, 0.05, dist);
-                    glow = pow(glow, 1.8);
-                    
-                    gl_FragColor = vec4(vColor, glow * vOpacity * uOpacityMultiplier);
+                    vec2 p = gl_PointCoord - 0.5;
+                    float d = length(p);
+                    if (d > 0.5) discard;
+                    float core = smoothstep(0.5, 0.02, d);
+                    float haze = smoothstep(0.5, 0.18, d) * 0.35;
+                    float alpha = clamp((core * 0.72 + haze) * vAlpha * uBaseOpacity, 0.0, 0.55);
+                    gl_FragColor = vec4(vColor, alpha);
                 }
             `,
             transparent: true,
@@ -289,139 +274,106 @@ const ThreeBackground = () => {
             vertexColors: true
         });
 
-        const particles = new THREE.Points(geometry, particleMaterial);
-        scene.add(particles);
+        const particleCamera = new THREE.PerspectiveCamera(58, window.innerWidth / window.innerHeight, 0.1, 120);
+        particleCamera.position.z = 18;
+        const particles = new THREE.Points(particleGeometry, particleMaterial);
+        particleScene.add(particles);
 
-        let frameId;
-        const animate = () => {
-            frameId = requestAnimationFrame(animate);
+        let frameId = 0;
+        let visible = true;
 
-            const time = clock.getElapsedTime();
-            const posAttr = geometry.attributes.position;
-            const posArray = posAttr.array;
-            const opacityAttr = geometry.attributes.customOpacity;
-            const opacityArray = opacityAttr.array;
-
-            // Eased/Delayed mouse interaction (inertia/viscosity)
-            const k = 0.024;
-            smoothedMouse.current.x += (mousePos.current.x - smoothedMouse.current.x) * k;
-            smoothedMouse.current.y += (mousePos.current.y - smoothedMouse.current.y) * k;
-            smoothedMouse.current.rawX += (mousePos.current.rawX - smoothedMouse.current.rawX) * k;
-            smoothedMouse.current.rawY += (mousePos.current.rawY - smoothedMouse.current.rawY) * k;
-
-            // Update background shader uniform
-            bgMaterial.uniforms.uTime.value = time;
-            bgMaterial.uniforms.uMouse.value.set(smoothedMouse.current.rawX, smoothedMouse.current.rawY);
-
-            const mx = smoothedMouse.current.x;
-            const my = smoothedMouse.current.y;
-
-            for (let i = 0; i < count; i++) {
-                const i3 = i * 3;
-                let x = posArray[i3];
-                let y = posArray[i3 + 1];
-                let z = posArray[i3 + 2];
-
-                const vel = velocities.current[i];
-                const sx = seeds[i3];
-                const sy = seeds[i3 + 1];
-                const sz = seeds[i3 + 2];
-
-                // 1. Organic slow drift (sine field)
-                const driftX = Math.sin(time * 0.16 * sx + i) * 0.0008;
-                const driftY = Math.cos(time * 0.14 * sy + i) * 0.0008;
-                const driftZ = Math.sin(time * 0.08 * sz + i) * 0.0004;
-
-                vel.x += driftX;
-                vel.y += driftY;
-                vel.z += driftZ;
-
-                // 2. Viscous interaction with the smoothed mouse attractor/repeller
-                const dx = x - mx;
-                const dy = y - my;
-                const dist = Math.sqrt(dx * dx + dy * dy);
-
-                if (dist < 24) {
-                    // Soft repeller pushing particles away with circular viscosity
-                    const force = (1.0 - dist / 24) * 0.0028;
-                    const swirlX = -dy * force * 0.35;
-                    const swirlY = dx * force * 0.35;
-                    vel.x += dx * force + swirlX;
-                    vel.y += dy * force + swirlY;
-                }
-
-                // Apply damping (viscosity)
-                vel.x *= 0.976;
-                vel.y *= 0.976;
-                vel.z *= 0.976;
-
-                // Update position
-                x += vel.x;
-                y += vel.y;
-                z += vel.z;
-
-                // Keep particles inside bounding box
-                if (x > 50) { x = -50; vel.x *= 0.5; }
-                else if (x < -50) { x = 50; vel.x *= 0.5; }
-
-                if (y > 32) { y = -32; vel.y *= 0.5; }
-                else if (y < -32) { y = 32; vel.y *= 0.5; }
-
-                if (z > -2) { z = -55; vel.z *= 0.5; }
-                else if (z < -55) { z = -2; vel.z *= 0.5; }
-
-                posArray[i3] = x;
-                posArray[i3 + 1] = y;
-                posArray[i3 + 2] = z;
-
-                // Breathing opacity modulation
-                opacityArray[i] = 0.1 + 0.65 * Math.sin(time * 0.22 * sx + i);
-            }
-
-            posAttr.needsUpdate = true;
-            opacityAttr.needsUpdate = true;
-
-            renderer.render(scene, camera);
-        };
-        animate();
-
-        const handleResize = () => {
+        const setRendererSize = () => {
             const width = window.innerWidth;
             const height = window.innerHeight;
+            const pixelRatio = Math.min(window.devicePixelRatio || 1, isSmallViewport() ? 1 : 1.35);
 
-            camera.aspect = width / height;
-            camera.updateProjectionMatrix();
+            renderer.setPixelRatio(pixelRatio);
             renderer.setSize(width, height);
-            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+            backgroundMaterial.uniforms.uResolution.value.set(width * pixelRatio, height * pixelRatio);
+            particleMaterial.uniforms.uBaseOpacity.value = isSmallViewport() ? 0.30 : 0.42;
 
-            bgMaterial.uniforms.uResolution.value.set(width, height);
-
-            const fovRad = (camera.fov * Math.PI) / 180;
-            const planeHeight = 2 * 95 * Math.tan(fovRad / 2);
-            const planeWidth = planeHeight * camera.aspect;
-            bgMesh.scale.set(planeWidth, planeHeight, 1);
+            particleCamera.aspect = width / height;
+            particleCamera.updateProjectionMatrix();
         };
-        window.addEventListener('resize', handleResize);
-        
-        // Initial setup for the background plane scale
-        handleResize();
+
+        const animate = () => {
+            frameId = requestAnimationFrame(animate);
+            if (!visible) return;
+
+            const time = clock.getElapsedTime();
+            const easing = 0.035;
+            const lastX = easedPointer.current.x;
+            const lastY = easedPointer.current.y;
+
+            easedPointer.current.x += (pointer.current.x - easedPointer.current.x) * easing;
+            easedPointer.current.y += (pointer.current.y - easedPointer.current.y) * easing;
+            pointerVelocity.current.x = easedPointer.current.x - lastX;
+            pointerVelocity.current.y = easedPointer.current.y - lastY;
+
+            backgroundMaterial.uniforms.uTime.value = time;
+            backgroundMaterial.uniforms.uPointer.value.set(easedPointer.current.x, easedPointer.current.y);
+
+            if (particleCount > 0) {
+                const positionAttr = particleGeometry.attributes.position;
+                const positionArray = positionAttr.array;
+
+                for (let i = 0; i < particleCount; i++) {
+                    const i3 = i * 3;
+                    const i4 = i * 4;
+                    const seed = seeds[i4];
+                    const speed = seeds[i4 + 1];
+                    const phase = seeds[i4 + 3];
+                    const depth = Math.abs(basePositions[i3 + 2]) / 55;
+                    const parallax = (1.15 - depth) * 2.4;
+
+                    const flowX = Math.sin(time * speed + seed + phase) * (0.55 + depth);
+                    const flowY = Math.cos(time * speed * 0.84 + seed * 1.7) * (0.42 + depth * 0.6);
+                    const viscousX = easedPointer.current.x * parallax + pointerVelocity.current.x * 46 * (1.0 - depth);
+                    const viscousY = easedPointer.current.y * parallax + pointerVelocity.current.y * 32 * (1.0 - depth);
+
+                    positionArray[i3] = basePositions[i3] + flowX + viscousX;
+                    positionArray[i3 + 1] = basePositions[i3 + 1] + flowY + viscousY;
+                    positionArray[i3 + 2] = basePositions[i3 + 2];
+                }
+
+                positionAttr.needsUpdate = true;
+            }
+
+            renderer.autoClear = true;
+            renderer.render(backgroundScene, camera);
+            renderer.autoClear = false;
+            renderer.render(particleScene, particleCamera);
+        };
+
+        const handleVisibilityChange = () => {
+            visible = document.visibilityState === 'visible';
+            if (visible) clock.getDelta();
+        };
+
+        window.addEventListener('resize', setRendererSize);
+        document.addEventListener('visibilitychange', handleVisibilityChange);
+        setRendererSize();
+        animate();
 
         return () => {
-            window.removeEventListener('resize', handleResize);
+            window.removeEventListener('resize', setRendererSize);
+            document.removeEventListener('visibilitychange', handleVisibilityChange);
             cancelAnimationFrame(frameId);
+
             if (renderer.domElement && mountEl.contains(renderer.domElement)) {
                 mountEl.removeChild(renderer.domElement);
             }
-            bgGeometry.dispose();
-            bgMaterial.dispose();
-            geometry.dispose();
+
+            background.geometry.dispose();
+            backgroundMaterial.dispose();
+            particleGeometry.dispose();
             particleMaterial.dispose();
             renderer.dispose();
         };
     }, []);
 
     return (
-        <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden bg-[#040208]">
+        <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden bg-[#030106]">
             <div ref={mountRef} className="absolute inset-0" />
             <div className="background-vignette" />
         </div>

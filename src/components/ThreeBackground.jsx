@@ -3,14 +3,18 @@ import * as THREE from 'three';
 
 const ThreeBackground = () => {
     const mountRef = useRef(null);
-    const mousePos = useRef({ x: 0, y: 0 });
+    const mousePos = useRef({ x: 0, y: 0, rawX: 0, rawY: 0 });
+    const smoothedMouse = useRef({ x: 0, y: 0, rawX: 0, rawY: 0 });
+    const velocities = useRef([]);
 
     useEffect(() => {
         const handleMouseMove = (e) => {
-            // Map mouse 2D coords to 3D world space at z = 0
+            // Map mouse 2D coords to 3D world space coordinates
             mousePos.current = {
-                x: ((e.clientX / window.innerWidth) * 2 - 1) * 28,
-                y: -((e.clientY / window.innerHeight) * 2 - 1) * 16
+                x: ((e.clientX / window.innerWidth) * 2 - 1) * 35,
+                y: -((e.clientY / window.innerHeight) * 2 - 1) * 20,
+                rawX: (e.clientX / window.innerWidth) * 2 - 1,
+                rawY: -((e.clientY / window.innerHeight) * 2 - 1)
             };
         };
         window.addEventListener('mousemove', handleMouseMove);
@@ -21,160 +25,296 @@ const ThreeBackground = () => {
         if (!mountRef.current) return;
         const mountEl = mountRef.current;
         const scene = new THREE.Scene();
-        scene.fog = new THREE.FogExp2(0x050505, 0.006);
+        const clock = new THREE.Clock();
 
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
         camera.position.z = 30;
 
         const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
         renderer.setSize(window.innerWidth, window.innerHeight);
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
         renderer.setClearColor(0x000000, 0);
         mountEl.appendChild(renderer.domElement);
 
+        // ==========================================
+        // LAYER 1 & 2: BACKGROUND SHADER PLANE
+        // ==========================================
+        const bgMaterial = new THREE.ShaderMaterial({
+            uniforms: {
+                uTime: { value: 0 },
+                uResolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) },
+                uMouse: { value: new THREE.Vector2(0, 0) }
+            },
+            vertexShader: `
+                varying vec2 vUv;
+                void main() {
+                    vUv = uv;
+                    gl_Position = vec4(position, 1.0);
+                }
+            `,
+            fragmentShader: `
+                uniform float uTime;
+                uniform vec2 uResolution;
+                uniform vec2 uMouse;
+                varying vec2 vUv;
+
+                // ashima simplex 3D noise
+                vec4 permute(vec4 x){return mod(((x*34.0)+1.0)*x, 289.0);}
+                vec4 taylorInvSqrt(vec4 r){return 1.79284291400159 - 0.85373472095314 * r;}
+
+                float snoise(vec3 v){
+                  const vec2  C = vec2(1.0/6.0, 1.0/3.0) ;
+                  const vec4  D = vec4(0.0, 0.5, 1.0, 2.0);
+
+                  vec3 i  = floor(v + dot(v, C.yyy) );
+                  vec3 x0 =   v - i + dot(i, C.xxx) ;
+
+                  vec3 g = step(x0.yzx, x0.xyz);
+                  vec3 l = 1.0 - g;
+                  vec3 i1 = min( g.xyz, l.zxy );
+                  vec3 i2 = max( g.xyz, l.zxy );
+
+                  vec3 x1 = x0 - i1 + 1.0 * C.xxx;
+                  vec3 x2 = x0 - i2 + 2.0 * C.xxx;
+                  vec3 x3 = x0 - D.yyy;
+
+                  i = mod(i, 289.0 );
+                  vec4 p = permute( permute( permute(
+                             i.z + vec4(0.0, i1.z, i2.z, 1.0 ))
+                           + i.y + vec4(0.0, i1.y, i2.y, 1.0 ))
+                           + i.x + vec4(0.0, i1.x, i2.x, 1.0 ));
+
+                  float n_ = 0.142857142857;
+                  vec3  ns = n_ * D.wyz - D.xzx;
+
+                  vec4 j = p - 49.0 * floor(p * ns.z *ns.z);
+
+                  vec4 x_ = floor(j * ns.z);
+                  vec4 y_ = floor(j - 7.0 * x_ );
+
+                  vec4 x = x_ *ns.x + ns.yyyy;
+                  vec4 y = y_ *ns.x + ns.yyyy;
+                  vec4 h = 1.0 - abs(x) - abs(y);
+
+                  vec4 b0 = vec4( x.xy, y.xy );
+                  vec4 b1 = vec4( x.zw, y.zw );
+
+                  vec4 s0 = floor(b0)*2.0 + 1.0;
+                  vec4 s1 = floor(b1)*2.0 + 1.0;
+                  vec4 sh = -step(h, vec4(0.0));
+
+                  vec4 a0 = b0.xzyw + s0.xzyw*sh.xxyy ;
+                  vec4 a1 = b1.xzyw + s1.xzyw*sh.zzww ;
+
+                  vec3 p0 = vec3(a0.xy,h.x);
+                  vec3 p1 = vec3(a0.zw,h.y);
+                  vec3 p2 = vec3(a1.xy,h.z);
+                  vec3 p3 = vec3(a1.zw,h.w);
+
+                  vec4 norm = taylorInvSqrt(vec4(dot(p0,p0), dot(p1,p1), dot(p2, p2), dot(p3,p3)));
+                  p0 *= norm.x;
+                  p1 *= norm.y;
+                  p2 *= norm.z;
+                  p3 *= norm.w;
+
+                  vec4 m = max(0.6 - vec4(dot(x0,x0), dot(x1,x1), dot(x2,x2), dot(x3,x3)), 0.0);
+                  m = m * m;
+                  return 42.0 * dot( m*m, vec4( dot(p0,x0), dot(p1,x1),
+                                                dot(p2,x2), dot(p3,x3) ) );
+                }
+
+                void main() {
+                    // Aspect ratio correction
+                    vec2 uv = (gl_FragCoord.xy - 0.5 * uResolution.xy) / uResolution.y;
+
+                    // Large glow fields control points (drifting dynamically with slow LFOs and eased mouse inertia)
+                    vec2 cp1 = vec2(0.25 * sin(uTime * 0.05), 0.18 * cos(uTime * 0.04)) + uMouse * 0.14;
+                    vec2 cp2 = vec2(0.3 * cos(uTime * 0.038), 0.22 * sin(uTime * 0.052)) - uMouse * 0.10;
+                    vec2 cp3 = vec2(0.22 * sin(uTime * 0.032 + 1.2), 0.26 * cos(uTime * 0.046 - 0.8)) + uMouse * 0.07;
+
+                    // Apply multi-octave 3D simplex noise distortion to UV coordinates (organic fluid motion)
+                    vec2 noiseUv = uv * 1.5;
+                    float nX = snoise(vec3(noiseUv, uTime * 0.016));
+                    float nY = snoise(vec3(noiseUv + vec2(13.4, 27.8), uTime * 0.018));
+                    vec2 distortedUv = uv + vec2(nX, nY) * 0.16;
+
+                    // Distance fields to attractors
+                    float d1 = length(distortedUv - cp1);
+                    float d2 = length(distortedUv - cp2);
+                    float d3 = length(distortedUv - cp3);
+
+                    // Soft Gaussian glows
+                    float glow1 = exp(-d1 * d1 * 5.0);
+                    float glow2 = exp(-d2 * d2 * 3.8);
+                    float glow3 = exp(-d3 * d3 * 2.8);
+
+                    // AI Colors: Cyan, Deep Purple, and Indigo Blue
+                    vec3 colorCyan = vec3(0.0, 0.90, 1.0);
+                    vec3 colorPurple = vec3(0.66, 0.33, 0.97);
+                    vec3 colorIndigo = vec3(0.08, 0.24, 0.78);
+
+                    // Accumulate glow colors
+                    vec3 finalColor = glow1 * colorCyan + glow2 * colorPurple + glow3 * colorIndigo;
+
+                    // Layer 1: Subtle multi-scale volumetric background fog
+                    float fogNoise = snoise(vec3(uv * 3.2, uTime * 0.012));
+                    finalColor += vec3(fogNoise * 0.015);
+
+                    // Dampen the total output to maintain dark cinematic background & high UI readability
+                    finalColor *= 0.16;
+                    
+                    // Add very low dark ambient indigo base
+                    finalColor += vec3(0.012, 0.008, 0.022);
+
+                    // Film Grain Overlay (organic cinematic texture)
+                    float grain = fract(sin(dot(gl_FragCoord.xy, vec2(12.9898, 78.233))) * 43758.5453);
+                    finalColor += (grain - 0.5) * 0.012;
+
+                    // Vignette to darken edges
+                    vec2 dV = gl_FragCoord.xy / uResolution.xy - vec2(0.5);
+                    float vignette = 1.0 - dot(dV, dV) * 1.5;
+                    vignette = clamp(vignette, 0.0, 1.0);
+                    finalColor *= pow(vignette, 1.4);
+
+                    gl_FragColor = vec4(finalColor, 1.0);
+                }
+            `,
+            depthWrite: false,
+            depthTest: false,
+            transparent: true
+        });
+
+        // Background quad covering viewport
+        const bgGeometry = new THREE.PlaneGeometry(1, 1);
+        const bgMesh = new THREE.Mesh(bgGeometry, bgMaterial);
+        bgMesh.position.set(0, 0, -95);
+        camera.add(bgMesh);
+        scene.add(camera);
+
+        // ==========================================
+        // LAYER 3: SPARSE PARTICLE FIELD
+        // ==========================================
+        const count = 220;
         const geometry = new THREE.BufferGeometry();
-        const count = 3600;
         const positions = new Float32Array(count * 3);
         const colors = new Float32Array(count * 3);
-        const velocities = new Float32Array(count * 3);
         const sizes = new Float32Array(count);
-        
-        const coreColor = new THREE.Color(0xf0fbff);
-        const cyan = new THREE.Color(0x22d3ee);
-        const violet = new THREE.Color(0xa855f7);
-        const magenta = new THREE.Color(0xec4899);
-        const deepBlue = new THREE.Color(0x2563eb);
+        const opacities = new Float32Array(count);
+        const seeds = new Float32Array(count * 3);
 
-        // Distribute particles in a cosmic galactic spiral disk on load
+        const colorCyan = new THREE.Color(0x22d3ee);
+        const colorViolet = new THREE.Color(0xa855f7);
+        const colorWhite = new THREE.Color(0xe2e8f0);
+
+        velocities.current = [];
+
         for (let i = 0; i < count; i++) {
-            const isCore = Math.random() < 0.18;
-            const arm = Math.floor(Math.random() * 3);
-            const r = isCore
-                ? Math.pow(Math.random(), 1.8) * 9
-                : 8 + Math.pow(Math.random(), 0.75) * 29;
-            const theta = arm * ((Math.PI * 2) / 3) + r * 0.18 + (Math.random() - 0.5) * 1.25;
-            const diskTilt = 0.42;
-            const localZ = (Math.random() - 0.5) * (isCore ? 7 : 4);
-            const y = r * Math.sin(theta) * Math.cos(diskTilt) - localZ * Math.sin(diskTilt);
-            const z = r * Math.sin(theta) * Math.sin(diskTilt) + localZ * Math.cos(diskTilt);
-            
-            positions[i * 3] = r * Math.cos(theta);
-            positions[i * 3 + 1] = y;
-            positions[i * 3 + 2] = z;
+            // Distribute in a wide 3D box
+            positions[i * 3] = (Math.random() - 0.5) * 95;
+            positions[i * 3 + 1] = (Math.random() - 0.5) * 55;
+            positions[i * 3 + 2] = -Math.random() * 50 - 5; // Z between -55 and -5
 
-            // Initialize orbital speed perpendicular to the center to orbit immediately
-            const speed = Math.sqrt(Math.max(r, 1)) * 0.035;
-            velocities[i * 3] = -Math.sin(theta) * speed;
-            velocities[i * 3 + 1] = Math.cos(theta) * speed;
-            velocities[i * 3 + 2] = (Math.random() - 0.5) * 0.01;
+            // Slow initial velocities
+            velocities.current.push({
+                x: (Math.random() - 0.5) * 0.005,
+                y: (Math.random() - 0.5) * 0.005,
+                z: (Math.random() - 0.5) * 0.002
+            });
 
-            const radialMix = Math.min(r / 38, 1);
-            const mixed = coreColor.clone().lerp(Math.random() > 0.45 ? cyan : violet, radialMix);
-            if (Math.random() > 0.86) mixed.lerp(magenta, 0.45);
-            if (Math.random() > 0.82) mixed.lerp(deepBlue, 0.35);
-            colors[i * 3] = mixed.r;
-            colors[i * 3 + 1] = mixed.g;
-            colors[i * 3 + 2] = mixed.b;
-            sizes[i] = isCore ? 0.45 + Math.random() * 0.55 : 0.16 + Math.random() * 0.42;
+            // Random seeds for frequency and direction of drift
+            seeds[i * 3] = Math.random() * 1.8 + 0.2;
+            seeds[i * 3 + 1] = Math.random() * 1.8 + 0.2;
+            seeds[i * 3 + 2] = Math.random() * 1.8 + 0.2;
+
+            // Sizes (scaled by shader size attenuation)
+            sizes[i] = 1.2 + Math.random() * 3.8;
+
+            // Opacities
+            opacities[i] = 0.1 + Math.random() * 0.65;
+
+            // Select color from UI theme palette
+            const r = Math.random();
+            let col = colorWhite;
+            if (r < 0.42) col = colorCyan;
+            else if (r < 0.82) col = colorViolet;
+
+            colors[i * 3] = col.r;
+            colors[i * 3 + 1] = col.g;
+            colors[i * 3 + 2] = col.b;
         }
 
         geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
         geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
         geometry.setAttribute('size', new THREE.BufferAttribute(sizes, 1));
+        geometry.setAttribute('customOpacity', new THREE.BufferAttribute(opacities, 1));
 
-        // Create a custom soft circular glow texture dynamically in JS memory
-        const createCircleTexture = () => {
-            const canvas = document.createElement('canvas');
-            canvas.width = 16;
-            canvas.height = 16;
-            const ctx = canvas.getContext('2d');
-            const gradient = ctx.createRadialGradient(8, 8, 0, 8, 8, 8);
-            gradient.addColorStop(0, 'rgba(255, 255, 255, 1)');
-            gradient.addColorStop(0.3, 'rgba(255, 255, 255, 0.8)');
-            gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
-            ctx.fillStyle = gradient;
-            ctx.fillRect(0, 0, 16, 16);
-            
-            return new THREE.CanvasTexture(canvas);
-        };
-
-        const texture = createCircleTexture();
-        const material = new THREE.ShaderMaterial({
+        const particleMaterial = new THREE.ShaderMaterial({
             uniforms: {
-                pointTexture: { value: texture },
-                opacity: { value: 0.84 }
+                uOpacityMultiplier: { value: 0.88 }
             },
             vertexShader: `
                 attribute float size;
+                attribute float customOpacity;
                 varying vec3 vColor;
-                varying float vAlpha;
+                varying float vOpacity;
 
                 void main() {
                     vColor = color;
-                    vAlpha = mix(0.48, 1.0, smoothstep(42.0, 4.0, length(position)));
+                    vOpacity = customOpacity;
                     vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
-                    gl_PointSize = clamp(size * (330.0 / -mvPosition.z), 1.0, 16.0);
+                    // Size attenuation: closer particles appear larger
+                    gl_PointSize = size * (280.0 / -mvPosition.z);
                     gl_Position = projectionMatrix * mvPosition;
                 }
             `,
             fragmentShader: `
-                uniform sampler2D pointTexture;
-                uniform float opacity;
+                uniform float uOpacityMultiplier;
                 varying vec3 vColor;
-                varying float vAlpha;
+                varying float vOpacity;
 
                 void main() {
-                    vec4 tex = texture2D(pointTexture, gl_PointCoord);
-                    vec3 glow = vColor * (0.85 + vAlpha * 0.35);
-                    gl_FragColor = vec4(glow, tex.a * vAlpha * opacity);
+                    // Procedural radial soft glowing circle
+                    float dist = length(gl_PointCoord - vec2(0.5));
+                    if (dist > 0.5) discard;
+                    
+                    float glow = smoothstep(0.5, 0.05, dist);
+                    glow = pow(glow, 1.8);
+                    
+                    gl_FragColor = vec4(vColor, glow * vOpacity * uOpacityMultiplier);
                 }
             `,
             transparent: true,
-            blending: THREE.AdditiveBlending, // Overlapping particles glow brighter!
+            blending: THREE.AdditiveBlending,
             depthWrite: false,
             vertexColors: true
         });
 
-        const particles = new THREE.Points(geometry, material);
-        particles.rotation.x = -0.18;
+        const particles = new THREE.Points(geometry, particleMaterial);
         scene.add(particles);
-
-        const coreTexture = createCircleTexture();
-        const coreMaterial = new THREE.SpriteMaterial({
-            map: coreTexture,
-            color: 0x22d3ee,
-            transparent: true,
-            opacity: 0.26,
-            blending: THREE.AdditiveBlending,
-            depthWrite: false
-        });
-        const coreGlow = new THREE.Sprite(coreMaterial);
-        coreGlow.scale.set(18, 18, 1);
-        coreGlow.position.set(0, 0, 1);
-        scene.add(coreGlow);
-
-        const haloMaterial = new THREE.SpriteMaterial({
-            map: coreTexture,
-            color: 0xa855f7,
-            transparent: true,
-            opacity: 0.12,
-            blending: THREE.AdditiveBlending,
-            depthWrite: false
-        });
-        const haloGlow = new THREE.Sprite(haloMaterial);
-        haloGlow.scale.set(38, 38, 1);
-        haloGlow.position.set(0, 0, -2);
-        scene.add(haloGlow);
 
         let frameId;
         const animate = () => {
             frameId = requestAnimationFrame(animate);
 
+            const time = clock.getElapsedTime();
             const posAttr = geometry.attributes.position;
             const posArray = posAttr.array;
+            const opacityAttr = geometry.attributes.customOpacity;
+            const opacityArray = opacityAttr.array;
 
-            const mx = mousePos.current.x;
-            const my = mousePos.current.y;
+            // Eased/Delayed mouse interaction (inertia/viscosity)
+            const k = 0.024;
+            smoothedMouse.current.x += (mousePos.current.x - smoothedMouse.current.x) * k;
+            smoothedMouse.current.y += (mousePos.current.y - smoothedMouse.current.y) * k;
+            smoothedMouse.current.rawX += (mousePos.current.rawX - smoothedMouse.current.rawX) * k;
+            smoothedMouse.current.rawY += (mousePos.current.rawY - smoothedMouse.current.rawY) * k;
+
+            // Update background shader uniform
+            bgMaterial.uniforms.uTime.value = time;
+            bgMaterial.uniforms.uMouse.value.set(smoothedMouse.current.rawX, smoothedMouse.current.rawY);
+
+            const mx = smoothedMouse.current.x;
+            const my = smoothedMouse.current.y;
 
             for (let i = 0; i < count; i++) {
                 const i3 = i * 3;
@@ -182,93 +322,89 @@ const ThreeBackground = () => {
                 let y = posArray[i3 + 1];
                 let z = posArray[i3 + 2];
 
-                let vx = velocities[i3];
-                let vy = velocities[i3 + 1];
-                let vz = velocities[i3 + 2];
+                const vel = velocities.current[i];
+                const sx = seeds[i3];
+                const sy = seeds[i3 + 1];
+                const sz = seeds[i3 + 2];
 
-                // 1. Gravity from center (galactic core)
-                const dc = Math.sqrt(x*x + y*y + z*z) || 1;
-                const forceC = 0.2 / (dc * dc + 6.0); // central gravitational force
-                let ax = -x * forceC;
-                let ay = -y * forceC;
-                let az = -z * forceC;
+                // 1. Organic slow drift (sine field)
+                const driftX = Math.sin(time * 0.16 * sx + i) * 0.0008;
+                const driftY = Math.cos(time * 0.14 * sy + i) * 0.0008;
+                const driftZ = Math.sin(time * 0.08 * sz + i) * 0.0004;
 
-                // Spiral galactic rotation force (orbital velocity acceleration)
-                const swirl = 0.012;
-                ax += -y * (swirl / dc);
-                ay += x * (swirl / dc);
+                vel.x += driftX;
+                vel.y += driftY;
+                vel.z += driftZ;
 
-                // 2. Dynamic Gravity from Mouse Attractor
-                const dx = mx - x;
-                const dy = my - y;
-                const dz = 0 - z;
-                const dm = Math.sqrt(dx*dx + dy*dy + dz*dz) || 1;
-                
-                if (dm < 30) {
-                    const forceM = 0.65 / (dm * dm + 8.0); // space curvature / mass pull
-                    ax += dx * forceM;
-                    ay += dy * forceM;
-                    az += dz * forceM;
+                // 2. Viscous interaction with the smoothed mouse attractor/repeller
+                const dx = x - mx;
+                const dy = y - my;
+                const dist = Math.sqrt(dx * dx + dy * dy);
 
-                    const swirlM = 0.018 * (1 - dm / 30);
-                    ax += -dy * swirlM;
-                    ay += dx * swirlM;
+                if (dist < 24) {
+                    // Soft repeller pushing particles away with circular viscosity
+                    const force = (1.0 - dist / 24) * 0.0028;
+                    const swirlX = -dy * force * 0.35;
+                    const swirlY = dx * force * 0.35;
+                    vel.x += dx * force + swirlX;
+                    vel.y += dy * force + swirlY;
                 }
 
-                // 3. Update Velocities
-                vx += ax;
-                vy += ay;
-                vz += az;
+                // Apply damping (viscosity)
+                vel.x *= 0.976;
+                vel.y *= 0.976;
+                vel.z *= 0.976;
 
-                // Add physical damping (friction)
-                vx *= 0.975;
-                vy *= 0.975;
-                vz *= 0.975;
+                // Update position
+                x += vel.x;
+                y += vel.y;
+                z += vel.z;
 
-                // 4. Update Positions
-                x += vx;
-                y += vy;
-                z += vz;
+                // Keep particles inside bounding box
+                if (x > 50) { x = -50; vel.x *= 0.5; }
+                else if (x < -50) { x = 50; vel.x *= 0.5; }
 
-                // Recycling out-of-bounds particles back to outer orbits
-                const dist = Math.sqrt(x*x + y*y + z*z);
-                if (dist > 50) {
-                    const theta = Math.random() * Math.PI * 2;
-                    x = 40 * Math.cos(theta);
-                    y = 40 * Math.sin(theta);
-                    z = (Math.random() - 0.5) * 4;
-                    vx = -Math.sin(theta) * 0.08;
-                    vy = Math.cos(theta) * 0.08;
-                    vz = 0;
-                }
+                if (y > 32) { y = -32; vel.y *= 0.5; }
+                else if (y < -32) { y = 32; vel.y *= 0.5; }
+
+                if (z > -2) { z = -55; vel.z *= 0.5; }
+                else if (z < -55) { z = -2; vel.z *= 0.5; }
 
                 posArray[i3] = x;
                 posArray[i3 + 1] = y;
                 posArray[i3 + 2] = z;
 
-                velocities[i3] = vx;
-                velocities[i3 + 1] = vy;
-                velocities[i3 + 2] = vz;
+                // Breathing opacity modulation
+                opacityArray[i] = 0.1 + 0.65 * Math.sin(time * 0.22 * sx + i);
             }
 
             posAttr.needsUpdate = true;
-
-            // Slowly orbit the entire galaxy for rotational parallax depth
-            particles.rotation.z += 0.0002;
-            coreGlow.material.opacity = 0.22 + Math.sin(Date.now() * 0.0012) * 0.04;
-            coreGlow.rotation.z -= 0.0007;
-            haloGlow.rotation.z += 0.00025;
+            opacityAttr.needsUpdate = true;
 
             renderer.render(scene, camera);
         };
         animate();
 
         const handleResize = () => {
-            camera.aspect = window.innerWidth / window.innerHeight;
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+
+            camera.aspect = width / height;
             camera.updateProjectionMatrix();
-            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setSize(width, height);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+
+            bgMaterial.uniforms.uResolution.value.set(width, height);
+
+            const fovRad = (camera.fov * Math.PI) / 180;
+            const planeHeight = 2 * 95 * Math.tan(fovRad / 2);
+            const planeWidth = planeHeight * camera.aspect;
+            bgMesh.scale.set(planeWidth, planeHeight, 1);
         };
         window.addEventListener('resize', handleResize);
+        
+        // Initial setup for the background plane scale
+        handleResize();
 
         return () => {
             window.removeEventListener('resize', handleResize);
@@ -276,18 +412,16 @@ const ThreeBackground = () => {
             if (renderer.domElement && mountEl.contains(renderer.domElement)) {
                 mountEl.removeChild(renderer.domElement);
             }
+            bgGeometry.dispose();
+            bgMaterial.dispose();
             geometry.dispose();
-            material.dispose();
-            texture.dispose();
-            coreTexture.dispose();
-            coreMaterial.dispose();
-            haloMaterial.dispose();
+            particleMaterial.dispose();
             renderer.dispose();
         };
     }, []);
 
     return (
-        <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden bg-[#040208]">
             <div ref={mountRef} className="absolute inset-0" />
             <div className="background-vignette" />
         </div>

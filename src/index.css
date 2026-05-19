@@ -59,6 +59,14 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+.background-vignette {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 50% 38%, rgba(5, 5, 5, 0.1) 0%, rgba(5, 5, 5, 0.35) 42%, rgba(5, 5, 5, 0.82) 100%),
+        linear-gradient(180deg, rgba(5, 5, 5, 0.15) 0%, rgba(5, 5, 5, 0.05) 32%, rgba(5, 5, 5, 0.7) 100%);
+}
+
 /* Scroll Reveal Animations */
 .reveal {
     opacity: 0;

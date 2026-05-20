@@ -11,7 +11,15 @@ const Hero = ({ profile, loading, scrollTo }) => {
                     <div className="animate-float">
                         <div className="relative inline-block mb-8 group cursor-pointer">
                             <div className="absolute -inset-1 bg-gradient-to-r from-cyber-cyan to-cyber-purple rounded-full blur opacity-50 group-hover:opacity-100 transition duration-500"></div>
-                            <img src={profile?.avatar_url} alt="Avatar" className="relative w-40 h-40 rounded-full border-2 border-black object-cover" />
+                            <img
+                                src={profile?.avatar_url}
+                                alt="Avatar"
+                                width="160"
+                                height="160"
+                                fetchPriority="high"
+                                decoding="async"
+                                className="relative w-40 h-40 rounded-full border-2 border-black object-cover"
+                            />
                             <div className="absolute bottom-2 right-2 bg-cyber-black rounded-full p-2 border border-cyber-cyan">
                                 <Icon name="code" size={16} className="text-cyber-cyan" />
                             </div>

@@ -42,8 +42,9 @@ const GenerativeThumbnail = ({ seedStr }) => {
 
     useEffect(() => {
         let cancelled = false;
+        let observer = null;
 
-        const sketch = (p) => {
+        const createSketch = () => (p) => {
             let particles = [];
             let hueBase;
             const numParticles = 60; // Keep it low for performance since there are multiple cards
@@ -102,15 +103,29 @@ const GenerativeThumbnail = ({ seedStr }) => {
 
         };
 
-        if (sketchRef.current) {
+        const startSketch = () => {
+            if (!sketchRef.current || p5Instance.current) return;
+
             import('p5').then(({ default: p5 }) => {
                 if (cancelled || !sketchRef.current) return;
-                p5Instance.current = new p5(sketch, sketchRef.current);
+                p5Instance.current = new p5(createSketch(), sketchRef.current);
             });
+        };
+
+        if (sketchRef.current) {
+            observer = new IntersectionObserver((entries) => {
+                if (entries.some((entry) => entry.isIntersecting)) {
+                    startSketch();
+                    observer?.disconnect();
+                }
+            }, { rootMargin: '250px 0px' });
+
+            observer.observe(sketchRef.current);
         }
 
         return () => {
             cancelled = true;
+            observer?.disconnect();
             if (p5Instance.current) {
                 p5Instance.current.remove();
                 p5Instance.current = null;

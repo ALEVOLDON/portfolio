@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import ThreeBackground from './components/ThreeBackground';
+import React, { Suspense, lazy, useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -16,13 +15,30 @@ import {
   fetchPortfolioData
 } from './services/github';
 
+const ThreeBackground = lazy(() => import('./components/ThreeBackground'));
+
+const StaticBackground = () => (
+  <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden bg-[#030106]">
+    <div className="background-vignette" />
+  </div>
+);
+
 const App = () => {
   const [activeSection, setActiveSection] = useState('home');
-  const [profile, setProfile] = useState(null);
-  const [repos, setRepos] = useState([]);
-  const [readme, setReadme] = useState('');
-  const [loading, setLoading] = useState(true);
-  const [stats, setStats] = useState({ totalStars: 0, totalForks: 0, totalSize: 0, totalWatchers: 0, grade: 'B', languages: [] });
+  const [profile, setProfile] = useState(FALLBACK_PROFILE);
+  const [repos, setRepos] = useState(FALLBACK_REPOS);
+  const [readme, setReadme] = useState(FALLBACK_README);
+  const loading = false;
+  const [stats, setStats] = useState(FALLBACK_STATS);
+  const [showBackground, setShowBackground] = useState(false);
+
+  useEffect(() => {
+    const scheduleBackground = window.requestIdleCallback || ((callback) => window.setTimeout(callback, 1200));
+    const cancelBackground = window.cancelIdleCallback || window.clearTimeout;
+    const handle = scheduleBackground(() => setShowBackground(true), { timeout: 1800 });
+
+    return () => cancelBackground(handle);
+  }, []);
 
   useEffect(() => {
     let cancelled = false;
@@ -40,7 +56,6 @@ const App = () => {
 
       if (cached) {
         applyData(cached);
-        setLoading(false);
         if (isCachedPortfolioFresh(cached)) return;
       }
 
@@ -48,7 +63,6 @@ const App = () => {
         const { data, rateLimited } = await fetchPortfolioData(username, cached);
         if (cancelled) return;
         applyData(data);
-        setLoading(false);
         if (rateLimited) {
           console.warn('GitHub API rate limit reached. Using cached/fallback data where needed.');
         }
@@ -61,7 +75,6 @@ const App = () => {
             stats: FALLBACK_STATS,
             readme: FALLBACK_README
           });
-          setLoading(false);
         }
       }
     };
@@ -105,7 +118,9 @@ const App = () => {
 
   return (
     <div className="relative w-full">
-      <ThreeBackground />
+      <Suspense fallback={<StaticBackground />}>
+        {showBackground ? <ThreeBackground /> : <StaticBackground />}
+      </Suspense>
       <Navbar activeSection={activeSection} scrollTo={scrollTo} />
       <Hero profile={profile} loading={loading} scrollTo={scrollTo} />
       <About profile={profile} readme={readme} stats={stats} />

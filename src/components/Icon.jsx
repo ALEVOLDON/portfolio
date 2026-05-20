@@ -1,14 +1,52 @@
 import React from 'react';
-import * as lucide from 'lucide-react';
+import {
+    ArrowUp,
+    Check,
+    Code,
+    ExternalLink,
+    Eye,
+    FileCode,
+    FolderGit,
+    GitBranch,
+    GitFork,
+    Github,
+    Loader,
+    Loader2,
+    Mail,
+    Menu,
+    Send,
+    Star,
+    Terminal,
+    Twitter,
+    Users,
+    X
+} from 'lucide-react';
 
-const toPascalCase = (value) => value
-    .split('-')
-    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
-    .join('');
+const icons = {
+    'arrow-up': ArrowUp,
+    check: Check,
+    code: Code,
+    'external-link': ExternalLink,
+    eye: Eye,
+    'file-code': FileCode,
+    'folder-git': FolderGit,
+    'git-branch': GitBranch,
+    'git-fork': GitFork,
+    github: Github,
+    loader: Loader,
+    'loader-2': Loader2,
+    mail: Mail,
+    menu: Menu,
+    send: Send,
+    star: Star,
+    terminal: Terminal,
+    twitter: Twitter,
+    users: Users,
+    x: X
+};
 
 const Icon = ({ name, size = 24, className = '' }) => {
-    const componentName = toPascalCase(name);
-    const LucideIcon = lucide[componentName];
+    const LucideIcon = icons[name];
 
     if (!LucideIcon) {
         console.warn(`Icon ${name} not found in lucide-react`);

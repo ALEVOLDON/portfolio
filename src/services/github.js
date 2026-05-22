@@ -8,9 +8,9 @@ export const FALLBACK_REPOS = [
   { id: 5, name: "sc_liked_to_playlist_web", description: "SoundCloud liked tracks manager and local MP3 playlist generator with clean responsive web interface.", html_url: "https://github.com/ALEVOLDON/sc_liked_to_playlist_web", language: "JavaScript", stargazers_count: 0, forks_count: 0, image: null },
   { id: 6, name: "habit-tracker", description: "Clean responsive full-stack habit tracking application with interactive calendar grid and streak tracking.", html_url: "https://github.com/ALEVOLDON/habit-tracker", language: "React", stargazers_count: 0, forks_count: 0, image: null }
 ];
-export const FALLBACK_README = "# Hello World\n\nI am a full-stack developer passionate about building excellent software that improves the lives of those around me.\n\n### Skills\n- Front-end: React, Vue, Tailwind CSS\n- Back-end: Node.js, Go, PostgreSQL\n- Tools: Git, Docker, Figma";
+export const FALLBACK_README = "# Hello World\n\nI am a full-stack developer passionate about building excellent software that improves the lives of those around me.\n\n## Skills\n- Front-end: React, Vue, Tailwind CSS\n- Back-end: Node.js, Go, PostgreSQL\n- Tools: Git, Docker, Figma";
 
-const CACHE_KEY = 'portfolio-cache-v2';
+const CACHE_KEY = 'portfolio-cache-v3';
 const CACHE_TTL_MS = 15 * 60 * 1000;
 
 const PINNED_REPO_NAMES = [

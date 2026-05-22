@@ -33,11 +33,17 @@ const App = () => {
   const [showBackground, setShowBackground] = useState(false);
 
   useEffect(() => {
-    const scheduleBackground = window.requestIdleCallback || ((callback) => window.setTimeout(callback, 1200));
-    const cancelBackground = window.cancelIdleCallback || window.clearTimeout;
-    const handle = scheduleBackground(() => setShowBackground(true), { timeout: 1800 });
+    const enableBackground = () => setShowBackground(true);
 
-    return () => cancelBackground(handle);
+    window.addEventListener('pointermove', enableBackground, { once: true, passive: true });
+    window.addEventListener('scroll', enableBackground, { once: true, passive: true });
+    window.addEventListener('keydown', enableBackground, { once: true });
+
+    return () => {
+      window.removeEventListener('pointermove', enableBackground);
+      window.removeEventListener('scroll', enableBackground);
+      window.removeEventListener('keydown', enableBackground);
+    };
   }, []);
 
   useEffect(() => {
@@ -79,9 +85,20 @@ const App = () => {
       }
     };
 
-    loadPortfolio();
+    const scheduleSync = () => {
+      if (cancelled) return;
+      loadPortfolio();
+    };
+
+    window.addEventListener('pointermove', scheduleSync, { once: true, passive: true });
+    window.addEventListener('scroll', scheduleSync, { once: true, passive: true });
+    window.addEventListener('keydown', scheduleSync, { once: true });
+
     return () => {
       cancelled = true;
+      window.removeEventListener('pointermove', scheduleSync);
+      window.removeEventListener('scroll', scheduleSync);
+      window.removeEventListener('keydown', scheduleSync);
     };
   }, []);
 
@@ -122,10 +139,12 @@ const App = () => {
         {showBackground ? <ThreeBackground /> : <StaticBackground />}
       </Suspense>
       <Navbar activeSection={activeSection} scrollTo={scrollTo} />
-      <Hero profile={profile} loading={loading} scrollTo={scrollTo} />
-      <About profile={profile} readme={readme} stats={stats} />
-      <Projects repos={repos} loading={loading} />
-      <Contact />
+      <main>
+        <Hero profile={profile} loading={loading} scrollTo={scrollTo} />
+        <About profile={profile} readme={readme} stats={stats} />
+        <Projects repos={repos} loading={loading} />
+        <Contact />
+      </main>
       <ScrollToTop />
     </div>
   );

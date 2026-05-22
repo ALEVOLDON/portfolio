@@ -10,7 +10,7 @@
     <a href="https://vitejs.dev/"><img src="https://img.shields.io/badge/Vite-7-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite" /></a>
     <a href="https://tailwindcss.com/"><img src="https://img.shields.io/badge/Tailwind-v4-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white" alt="Tailwind" /></a>
     <a href="https://threejs.org/"><img src="https://img.shields.io/badge/Three.js-Black?style=flat-square&logo=three.js&logoColor=white" alt="Three.js" /></a>
-    <a href="https://netlify.com/"><img src="https://img.shields.io/badge/Netlify-Deployed-00C7B7?style=flat-square&logo=netlify&logoColor=white" alt="Netlify" /></a>
+    <a href="https://vercel.com/"><img src="https://img.shields.io/badge/Vercel-Deployed-black?style=flat-square&logo=vercel" alt="Vercel" /></a>
   </p>
 
   <p>
@@ -32,7 +32,7 @@
 - 🖼️ **p5.js** generative thumbnails for project cards
 - 🐙 **Live GitHub** profile, repository, and README data fetching
 - 🗄️ **Local caching** and fallback data for GitHub API resilience
-- 🚀 **Netlify deployment** with a serverless contact endpoint
+- 🚀 **Vercel deployment** with a serverless contact endpoint
 - 📱 **Telegram notifications** for incoming contact requests
 - 🤖 **Cloudflare Turnstile** spam protection
 - 📊 **Modern Analytics**: Plausible Analytics (privacy-focused) & Microsoft Clarity (heatmaps & session recordings)
@@ -52,8 +52,8 @@
 | **3D / Visuals** | Three.js (WebGL), p5.js |
 | **Content** | GitHub REST API, `marked` |
 | **Icons** | `lucide-react` |
-| **Hosting** | Netlify |
-| **Contact Delivery** | Netlify Functions, Telegram Bot API |
+| **Hosting** | Vercel |
+| **Contact Delivery** | Vercel Serverless Functions, Telegram Bot API |
 | **Anti-spam** | Cloudflare Turnstile |
 | **Web Analytics** | Plausible Analytics, Microsoft Clarity |
 
@@ -116,9 +116,8 @@ src/
 ├── index.css            # Tailwind directives and global styles
 └── main.jsx             # React entry point
 
-netlify/
-└── functions/
-    └── contact.js       # Serverless function for Telegram messaging
+api/
+└── contact.js           # Serverless function for Telegram messaging
 ```
 
 ---
@@ -156,12 +155,12 @@ The site works out of the box for viewing, but the **contact flow** and **spam p
 ### Frontend (`.env`)
 Create a local `.env` file in the root directory:
 ```env
-VITE_CONTACT_ENDPOINT=/.netlify/functions/contact
+VITE_CONTACT_ENDPOINT=/api/contact
 VITE_TURNSTILE_SITE_KEY=your_cloudflare_turnstile_site_key
 ```
 
-### Netlify Functions
-Set the following variables in your Netlify Environment settings:
+### Vercel Serverless Functions
+Set the following variables in your Vercel Environment settings:
 ```env
 TELEGRAM_BOT_TOKEN=your_telegram_bot_token
 TELEGRAM_CHAT_ID=your_telegram_chat_id
@@ -170,14 +169,13 @@ TURNSTILE_SECRET_KEY=your_cloudflare_turnstile_secret_key
 
 ---
 
-## 🌐 Netlify Deployment
+## 🌐 Vercel Deployment
 
-This project is pre-configured for Netlify via [`netlify.toml`](./netlify.toml).
+This project is configured for Vercel deployment. Vercel automatically detects the Vite framework and runs the build command.
 
-- **Build command**: `npm run build`
-- **Publish directory**: `dist`
-- **Functions directory**: `netlify/functions`
-- **Routing**: SPA redirect (all routes to `index.html`)
+- **Build Command**: `npm run build`
+- **Output Directory**: `dist`
+- **API Routes**: Configured automatically via the `api/` folder
 
 **Typical Deploy Flow:**
 ```bash
@@ -185,7 +183,7 @@ git add .
 git commit -m "Update portfolio"
 git push origin main
 ```
-*Netlify will automatically trigger a new deployment from the `main` branch.*
+*Vercel will automatically trigger a new deployment from the `main` branch on every push.*
 
 ---
 

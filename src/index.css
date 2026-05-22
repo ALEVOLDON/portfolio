@@ -9,6 +9,8 @@
 
   --font-sans: 'Inter', sans-serif;
   --font-mono: 'Fira Code', monospace;
+  --font-cyber: 'Orbitron', sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
 
   --animate-gradient-x: gradient-x 3s ease infinite;
   --animate-float: float 6s ease-in-out infinite;
@@ -33,9 +35,15 @@
 body {
     background-color: var(--color-cyber-black);
     color: #ffffff;
+    font-family: var(--font-sans);
     overflow-x: hidden;
     margin: 0; /* Important */
     padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-cyber);
+    letter-spacing: 0.05em;
 }
 
 /* Custom Scrollbar */

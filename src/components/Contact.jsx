@@ -268,7 +268,7 @@ const Contact = () => {
                         <button
                             type="submit"
                             disabled={status === 'sending'}
-                            className="flex items-center justify-center gap-2 rounded bg-white px-8 py-4 font-bold text-black transition-all hover:bg-gray-200 disabled:cursor-not-allowed disabled:opacity-70"
+                            className="flex items-center justify-center gap-2 rounded bg-white px-8 py-4 font-bold text-black transition-all hover:bg-cyber-cyan hover:scale-[1.03] hover:shadow-[0_0_25px_rgba(34,211,238,0.25)] disabled:cursor-not-allowed disabled:opacity-70"
                         >
                             <Icon name={status === 'success' ? 'check' : 'send'} size={18} />
                             {status === 'sending' ? 'Sending...' : 'Send Message'}

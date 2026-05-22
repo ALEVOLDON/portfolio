@@ -39,7 +39,7 @@ const About = ({ profile, readme, stats }) => {
                     <div className="lg:col-span-5 space-y-4">
 
                         {/* 1. Main Stats Panel (Visual Match to Screenshot) */}
-                        <div className="bg-cyber-dark border border-white/10 rounded-xl p-5 hover:border-cyber-purple/50 transition-colors reveal">
+                        <div className="bg-cyber-dark border border-white/10 rounded-xl p-5 hover:border-cyber-purple/50 hover:shadow-[0_0_25px_rgba(168,85,247,0.15)] transition-all duration-300 reveal reveal-left">
                             <h3 className="text-md font-bold text-cyber-purple mb-4 flex items-center gap-2 uppercase tracking-wider">
                                 {profile?.name || "User"}'s GitHub Stats
                             </h3>
@@ -64,7 +64,7 @@ const About = ({ profile, readme, stats }) => {
                         </div>
 
                         {/* 2. Languages Panel (Visual Match to Screenshot) */}
-                        <div className="bg-cyber-dark border border-white/10 rounded-xl p-5 hover:border-cyber-cyan/50 transition-colors reveal" style={{ transitionDelay: '100ms' }}>
+                        <div className="bg-cyber-dark border border-white/10 rounded-xl p-5 hover:border-cyber-cyan/50 hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition-all duration-300 reveal reveal-left" style={{ transitionDelay: '100ms' }}>
                             <h3 className="text-md font-bold text-cyber-cyan mb-4 flex items-center gap-2 uppercase tracking-wider">
                                 Most Used Languages
                             </h3>
@@ -91,7 +91,7 @@ const About = ({ profile, readme, stats }) => {
                         </div>
 
                         {/* 3. Activity/Streaks Panel (Visual Match to Screenshot) */}
-                        <div className="bg-cyber-dark border border-white/10 rounded-xl p-6 hover:border-pink-500/50 transition-colors flex items-center justify-between reveal" style={{ transitionDelay: '200ms' }}>
+                        <div className="bg-cyber-dark border border-white/10 rounded-xl p-6 hover:border-pink-500/50 hover:shadow-[0_0_25px_rgba(236,72,153,0.15)] transition-all duration-300 flex items-center justify-between reveal reveal-left" style={{ transitionDelay: '200ms' }}>
                             <div className="text-center">
                                 <div className="text-2xl font-bold text-pink-500 mb-1">
                                     {stats?.totalSize > 1024 ? `${(stats.totalSize / 1024).toFixed(1)}MB` : `${stats.totalSize}KB`}
@@ -123,8 +123,8 @@ const About = ({ profile, readme, stats }) => {
                     </div>
 
                     {/* RIGHT COLUMN: README */}
-                    <div className="lg:col-span-7 reveal" style={{ transitionDelay: '300ms' }}>
-                        <div className="h-full p-8 bg-cyber-dark/80 border border-white/10 rounded-xl relative overflow-hidden group min-h-[500px]">
+                    <div className="lg:col-span-7 reveal reveal-right" style={{ transitionDelay: '300ms' }}>
+                        <div className="h-full p-8 bg-cyber-dark/80 border border-white/10 hover:border-white/20 hover:shadow-[0_0_30px_rgba(255,255,255,0.02)] rounded-xl relative overflow-hidden group min-h-[500px] transition-all duration-300">
                             <div className="absolute -right-10 -top-10 opacity-5 group-hover:opacity-10 transition-opacity transform rotate-12">
                                 <Icon name="file-code" size={300} />
                             </div>

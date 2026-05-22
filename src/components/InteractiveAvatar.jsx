@@ -224,7 +224,7 @@ const InteractiveAvatar = ({ profile, loading }) => {
             if (positionAttr) {
               pointsGeometry = new THREE.BufferGeometry();
               const originalPositions = positionAttr.array;
-              const step = 8; // Keep every 8th vertex to reduce density
+              const step = 2; // Keep every 2nd vertex (gives ~31k points) for a refined look
               const newPositions = [];
               for (let i = 0; i < originalPositions.length; i += 3 * step) {
                 newPositions.push(originalPositions[i], originalPositions[i + 1], originalPositions[i + 2]);

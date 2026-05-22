@@ -19,7 +19,8 @@ import {
     Terminal,
     Twitter,
     Users,
-    X
+    X,
+    Sliders
 } from 'lucide-react';
 
 const icons = {
@@ -38,6 +39,7 @@ const icons = {
     mail: Mail,
     menu: Menu,
     send: Send,
+    sliders: Sliders,
     star: Star,
     terminal: Terminal,
     twitter: Twitter,

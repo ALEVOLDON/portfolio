@@ -3,11 +3,19 @@ import * as THREE from 'three';
 
 const isSmallViewport = () => window.innerWidth < 768 || window.innerHeight < 620;
 
-const ThreeBackground = () => {
+const ThreeBackground = ({ brightness = 1.0, speed = 1.0, theme = 'cyber' }) => {
     const mountRef = useRef(null);
     const pointer = useRef({ x: 0, y: 0 });
     const easedPointer = useRef({ x: 0, y: 0 });
     const pointerVelocity = useRef({ x: 0, y: 0 });
+    
+    const configRef = useRef({ brightness, speed, theme });
+    const timeAccumulator = useRef(0);
+
+    // Sync React props to WebGL animation loop without re-instantiating WebGL
+    useEffect(() => {
+        configRef.current = { brightness, speed, theme };
+    }, [brightness, speed, theme]);
 
     useEffect(() => {
         const handlePointerMove = (event) => {
@@ -38,12 +46,22 @@ const ThreeBackground = () => {
         renderer.setClearColor(0x030106, 1);
         mountEl.appendChild(renderer.domElement);
 
+        const currentColors = {
+            cyan: new THREE.Color(0x22d3ee),
+            violet: new THREE.Color(0xa855f7),
+            blue: new THREE.Color(0x0e7490)
+        };
+
         const backgroundMaterial = new THREE.ShaderMaterial({
             uniforms: {
                 uTime: { value: 0 },
                 uResolution: { value: new THREE.Vector2(1, 1) },
                 uPointer: { value: new THREE.Vector2(0, 0) },
-                uReducedMotion: { value: prefersReducedMotion ? 1 : 0 }
+                uReducedMotion: { value: prefersReducedMotion ? 1 : 0 },
+                uColorCyan: { value: currentColors.cyan.clone() },
+                uColorViolet: { value: currentColors.violet.clone() },
+                uColorBlue: { value: currentColors.blue.clone() },
+                uBrightness: { value: brightness }
             },
             vertexShader: `
                 varying vec2 vUv;
@@ -60,6 +78,10 @@ const ThreeBackground = () => {
                 uniform vec2 uResolution;
                 uniform vec2 uPointer;
                 uniform int uReducedMotion;
+                uniform vec3 uColorCyan;
+                uniform vec3 uColorViolet;
+                uniform vec3 uColorBlue;
+                uniform float uBrightness;
                 varying vec2 vUv;
 
                 vec3 mod289(vec3 x) { return x - floor(x * (1.0 / 289.0)) * 289.0; }
@@ -156,11 +178,11 @@ const ThreeBackground = () => {
                     float filament = pow(smoothstep(0.08, 0.78, abs(veil)), 2.5);
                     float verticalDepth = smoothstep(-0.9, 0.65, centered.y + nebulaB * 0.22);
 
-                    vec3 deepInk = vec3(0.010, 0.006, 0.019);
-                    vec3 midnight = vec3(0.020, 0.014, 0.045);
-                    vec3 cyan = vec3(0.04, 0.78, 0.94);
-                    vec3 violet = vec3(0.55, 0.25, 0.95);
-                    vec3 blue = vec3(0.05, 0.18, 0.62);
+                    vec3 deepInk = vec3(0.010, 0.006, 0.019) * uBrightness;
+                    vec3 midnight = vec3(0.020, 0.014, 0.045) * uBrightness;
+                    vec3 cyan = uColorCyan * uBrightness;
+                    vec3 violet = uColorViolet * uBrightness;
+                    vec3 blue = uColorBlue * uBrightness;
 
                     vec3 color = mix(deepInk, midnight, verticalDepth);
                     color += cyan * field * 0.18;
@@ -193,13 +215,9 @@ const ThreeBackground = () => {
         const particleGeometry = new THREE.BufferGeometry();
         const positions = new Float32Array(particleCount * 3);
         const basePositions = new Float32Array(particleCount * 3);
-        const colors = new Float32Array(particleCount * 3);
+        const colorTypes = new Float32Array(particleCount);
         const sizes = new Float32Array(particleCount);
         const seeds = new Float32Array(particleCount * 4);
-
-        const colorA = new THREE.Color(0x48e8ff);
-        const colorB = new THREE.Color(0xa855f7);
-        const colorC = new THREE.Color(0xd8f8ff);
 
         for (let i = 0; i < particleCount; i++) {
             const i3 = i * 3;
@@ -214,10 +232,9 @@ const ThreeBackground = () => {
             basePositions[i3 + 1] = positions[i3 + 1];
             basePositions[i3 + 2] = z;
 
-            const color = Math.random() < 0.52 ? colorA : Math.random() < 0.82 ? colorB : colorC;
-            colors[i3] = color.r;
-            colors[i3 + 1] = color.g;
-            colors[i3 + 2] = color.b;
+            // Map particle types (0: Cyan theme, 1: Violet theme, 2: White/silver)
+            const type = Math.random() < 0.52 ? 0.0 : Math.random() < 0.82 ? 1.0 : 2.0;
+            colorTypes[i] = type;
 
             sizes[i] = 0.65 + Math.random() * 2.3;
             seeds[i * 4] = Math.random() * 100;
@@ -227,23 +244,34 @@ const ThreeBackground = () => {
         }
 
         particleGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-        particleGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+        particleGeometry.setAttribute('colorType', new THREE.BufferAttribute(colorTypes, 1));
         particleGeometry.setAttribute('size', new THREE.BufferAttribute(sizes, 1));
         particleGeometry.setAttribute('seed', new THREE.BufferAttribute(seeds, 4));
 
         const particleMaterial = new THREE.ShaderMaterial({
             uniforms: {
                 uPixelRatio: { value: 1 },
-                uBaseOpacity: { value: isSmallViewport() ? 0.30 : 0.42 }
+                uBaseOpacity: { value: isSmallViewport() ? 0.30 : 0.42 },
+                uColorCyan: { value: currentColors.cyan.clone() },
+                uColorViolet: { value: currentColors.violet.clone() }
             },
             vertexShader: `
                 attribute float size;
+                attribute float colorType;
                 attribute vec4 seed;
+                uniform vec3 uColorCyan;
+                uniform vec3 uColorViolet;
                 varying vec3 vColor;
                 varying float vAlpha;
 
                 void main() {
-                    vColor = color;
+                    if (colorType < 0.5) {
+                        vColor = uColorCyan;
+                    } else if (colorType < 1.5) {
+                        vColor = uColorViolet;
+                    } else {
+                        vColor = vec3(0.9, 0.95, 1.0);
+                    }
                     vAlpha = seed.z;
                     vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
                     float depth = clamp(180.0 / -mvPosition.z, 1.0, 10.0);
@@ -270,8 +298,7 @@ const ThreeBackground = () => {
             `,
             transparent: true,
             blending: THREE.AdditiveBlending,
-            depthWrite: false,
-            vertexColors: true
+            depthWrite: false
         });
 
         const particleCamera = new THREE.PerspectiveCamera(58, window.innerWidth / window.innerHeight, 0.1, 120);
@@ -300,7 +327,11 @@ const ThreeBackground = () => {
             frameId = requestAnimationFrame(animate);
             if (!visible) return;
 
-            const time = clock.getElapsedTime();
+            const delta = clock.getDelta();
+            // Accrue time driven by dynamic speed configuration
+            timeAccumulator.current += delta * configRef.current.speed;
+            const time = timeAccumulator.current;
+
             const easing = 0.035;
             const lastX = easedPointer.current.x;
             const lastY = easedPointer.current.y;
@@ -310,8 +341,48 @@ const ThreeBackground = () => {
             pointerVelocity.current.x = easedPointer.current.x - lastX;
             pointerVelocity.current.y = easedPointer.current.y - lastY;
 
+            // Map target theme colors for smooth interpolation
+            let targetCyan, targetViolet, targetBlue;
+            switch (configRef.current.theme) {
+                case 'solar':
+                    targetCyan = new THREE.Color(0xf2994a); // Amber Gold
+                    targetViolet = new THREE.Color(0xeb5757); // Warm Red
+                    targetBlue = new THREE.Color(0x551100); // Deep Amber-Rust
+                    break;
+                case 'emerald':
+                    targetCyan = new THREE.Color(0x22c55e); // Neon Green
+                    targetViolet = new THREE.Color(0x0f766e); // Teal
+                    targetBlue = new THREE.Color(0x021c16); // Deep Emerald
+                    break;
+                case 'void':
+                    targetCyan = new THREE.Color(0xd1d5db); // Light Silver
+                    targetViolet = new THREE.Color(0x4b5563); // Cool Gray
+                    targetBlue = new THREE.Color(0x0b0f19); // Ink Dark Gray
+                    break;
+                case 'cyber':
+                default:
+                    targetCyan = new THREE.Color(0x22d3ee); // Cyan
+                    targetViolet = new THREE.Color(0xa855f7); // Violet
+                    targetBlue = new THREE.Color(0x0e7490); // Dark Blue
+                    break;
+            }
+
+            // Smooth linear interpolation (LERP) of active palettes
+            const colorLerpSpeed = 0.04;
+            currentColors.cyan.lerp(targetCyan, colorLerpSpeed);
+            currentColors.violet.lerp(targetViolet, colorLerpSpeed);
+            currentColors.blue.lerp(targetBlue, colorLerpSpeed);
+
+            // Sync WebGL uniforms
             backgroundMaterial.uniforms.uTime.value = time;
             backgroundMaterial.uniforms.uPointer.value.set(easedPointer.current.x, easedPointer.current.y);
+            backgroundMaterial.uniforms.uBrightness.value = configRef.current.brightness;
+            backgroundMaterial.uniforms.uColorCyan.value.copy(currentColors.cyan);
+            backgroundMaterial.uniforms.uColorViolet.value.copy(currentColors.violet);
+            backgroundMaterial.uniforms.uColorBlue.value.copy(currentColors.blue);
+
+            particleMaterial.uniforms.uColorCyan.value.copy(currentColors.cyan);
+            particleMaterial.uniforms.uColorViolet.value.copy(currentColors.violet);
 
             if (particleCount > 0) {
                 const positionAttr = particleGeometry.attributes.position;
@@ -321,13 +392,13 @@ const ThreeBackground = () => {
                     const i3 = i * 3;
                     const i4 = i * 4;
                     const seed = seeds[i4];
-                    const speed = seeds[i4 + 1];
+                    const speedCoef = seeds[i4 + 1];
                     const phase = seeds[i4 + 3];
                     const depth = Math.abs(basePositions[i3 + 2]) / 55;
                     const parallax = (1.15 - depth) * 2.4;
 
-                    const flowX = Math.sin(time * speed + seed + phase) * (0.55 + depth);
-                    const flowY = Math.cos(time * speed * 0.84 + seed * 1.7) * (0.42 + depth * 0.6);
+                    const flowX = Math.sin(time * speedCoef + seed + phase) * (0.55 + depth);
+                    const flowY = Math.cos(time * speedCoef * 0.84 + seed * 1.7) * (0.42 + depth * 0.6);
                     const viscousX = easedPointer.current.x * parallax + pointerVelocity.current.x * 46 * (1.0 - depth);
                     const viscousY = easedPointer.current.y * parallax + pointerVelocity.current.y * 32 * (1.0 - depth);
 

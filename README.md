@@ -25,6 +25,10 @@
 - ⚡ **React 19 + Vite 7** frontend for lightning-fast performance
 - 🎨 **Tailwind CSS v4** styling
 - 🌌 **Three.js** animated, particle-based background
+- 🎛️ **Background Engine HUD Panel**: Floating diagnostics panel allowing users to adjust brightness, particle drift velocity, and morph colors between Cyber, Solar, Emerald, and Void themes over smooth LERP transitions.
+- 🖱️ **Hardware-Accelerated Custom Cursor**: Dual-layer pointer with trail effects, interactive scaling, and hover mixing modes.
+- 🔠 **Futuristic Typography**: Customized Google Fonts configuration utilizing Orbitron for titles/technical HUD displays and Space Grotesk for labels/interactive controls.
+- 🎬 **Cubic-Bezier Scroll Reveals**: Responsive slide-ins, staggered grid reveals, and neomorphic hover glows on metrics cards.
 - 🖼️ **p5.js** generative thumbnails for project cards
 - 🐙 **Live GitHub** profile, repository, and README data fetching
 - 🗄️ **Local caching** and fallback data for GitHub API resilience
@@ -33,6 +37,7 @@
 - 🤖 **Cloudflare Turnstile** spam protection
 - 📊 **Modern Analytics**: Plausible Analytics (privacy-focused) & Microsoft Clarity (heatmaps & session recordings)
 - 🔍 **SEO Optimization**: Integrated robots.txt, sitemap.xml, and canonical meta configuration
+- ⚡ **Lighthouse Performance Optimizations**: Lazy-loaded WebGL background, deferred third-party tracking, and deferred font loading for optimal Core Web Vitals.
 
 ---
 
@@ -42,7 +47,8 @@
 | --- | --- |
 | **Frontend** | React 19, Vite 7 |
 | **Styling** | Tailwind CSS v4 |
-| **3D / Visuals** | Three.js, p5.js |
+| **Typography** | Google Fonts (Orbitron, Space Grotesk, Inter, Fira Code) |
+| **3D / Visuals** | Three.js (WebGL), p5.js |
 | **Content** | GitHub REST API, `marked` |
 | **Icons** | `lucide-react` |
 | **Hosting** | Netlify |
@@ -54,11 +60,12 @@
 
 ## 🚀 Features
 
-### 🎨 Portfolio UI
-- **Generative Background**: Animated hero and particle-based background via Three.js.
-- **Dynamic Content**: GitHub-powered profile and project sections. READMEs are dynamically rendered from GitHub content.
-- **Smart Filtering**: Language-aware project filtering.
-- **Smooth UX**: Scroll reveal transitions and fully responsive navigation.
+### 🎨 Portfolio UI & UX
+- **Interactive Ambient Engine**: Control panel widget for real-time background shader updates. Adjust brightness (0.2x to 2.0x), time velocity (0.0x to 2.5x to pause/speed drift), and smoothly transition color presets in the GPU loop.
+- **Lag-Free Cursor Trails**: Hardware-accelerated custom cursor dot and trail ring that rescales on hover and auto-disables on touchscreen devices.
+- **Staggered Animations**: Directional scroll reveals driven by CSS cubic-bezier transitions as page sections come into view.
+- **Neomorphic Glows**: Custom interactive neon shadows that project from GitHub stats cards on hover.
+- **Modern Layout**: Responsive viewport grid with sticky navigation and automatic highlight observers.
 
 ### 📨 Contact System
 - **Inline Form**: A sleek contact form completely replacing `mailto:`.
@@ -75,6 +82,12 @@
 - **Behavioral Tracking**: Session recordings and visual click/scroll heatmaps via Microsoft Clarity.
 - **SEO Readiness**: Canonical link tags, Open Graph meta-tags, standard-compliant `sitemap.xml`, and optimized crawling via `robots.txt`.
 
+### ⚡ Performance & Optimization
+- **Dynamic Asset Deferral**: Deferred loading of Google Fonts (`media="print"` onload technique) and late initialization of the Three.js WebGL canvas (rendered only after first user movement, scroll, or keystroke) to achieve a near-perfect Google Lighthouse score.
+- **Lazy API Fetching**: Delayed GitHub profile data fetch until active user interaction, avoiding blockages during critical initial paint ticks.
+- **Resource Preloading**: High-priority preloading for the profile avatar (`fetchpriority="high"`) to eliminate LCP (Largest Contentful Paint) delays.
+- **Asynchronous Analytics**: Plausible and Microsoft Clarity tracking scripts are queued via `requestIdleCallback` to run during idle browser cycles, eliminating main-thread contention.
+
 ---
 
 ## 📁 Project Structure
@@ -84,14 +97,16 @@ ANALYTICS_GUIDE.md       # Detailed guide on tracking website stats
 src/
 ├── components/          # UI components
 │   ├── About.jsx
+│   ├── BackgroundControls.jsx # HUD widget for background settings
 │   ├── Contact.jsx
+│   ├── CustomCursor.jsx       # Smooth mouse trail pointer
 │   ├── GenerativeThumbnail.jsx
 │   ├── Hero.jsx
 │   ├── Icon.jsx
 │   ├── Navbar.jsx
 │   ├── Projects.jsx
 │   ├── ScrollToTop.jsx
-│   └── ThreeBackground.jsx
+│   └── ThreeBackground.jsx    # WebGL background and particle shaders
 ├── services/            # API integrations
 │   └── github.js        # GitHub data fetching & caching
 ├── App.jsx              # Main application layout

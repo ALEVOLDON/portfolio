@@ -36,7 +36,7 @@ const Hero = ({ profile, loading, scrollTo }) => {
                             <button onClick={() => scrollTo('projects')} className="px-8 py-3 bg-cyber-cyan text-black font-bold rounded hover:bg-white transition hover:scale-105 shadow-[0_0_20px_rgba(34,211,238,0.3)] flex items-center justify-center gap-2">
                                 <Icon name="terminal" size={20} /> View Projects
                             </button>
-                            <a href={profile?.html_url} target="_blank" rel="noreferrer" className="px-8 py-3 border border-white/20 rounded font-bold hover:bg-white/10 transition flex items-center justify-center gap-2">
+                            <a href={profile?.html_url} target="_blank" rel="noopener noreferrer" className="px-8 py-3 border border-white/20 rounded font-bold hover:bg-white/10 transition flex items-center justify-center gap-2">
                                 <Icon name="github" size={20} /> GitHub Profile
                             </a>
                         </div>

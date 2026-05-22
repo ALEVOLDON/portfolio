@@ -74,7 +74,7 @@ const Projects = ({ repos, loading }) => {
                 ) : (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {filteredRepos.map((repo, index) => (
-                            <a key={repo.id} href={repo.html_url} target="_blank" rel="noreferrer" className="group relative bg-cyber-dark border border-white/10 rounded-xl overflow-hidden hover:border-cyber-cyan/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] flex flex-col reveal" style={{ transitionDelay: `${index * 150}ms` }}>
+                            <a key={repo.id} href={repo.html_url} target="_blank" rel="noopener noreferrer" className="group relative bg-cyber-dark border border-white/10 rounded-xl overflow-hidden hover:border-cyber-cyan/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] flex flex-col reveal" style={{ transitionDelay: `${index * 150}ms` }}>
                                 <div className="w-full h-48 overflow-hidden border-b border-white/5 relative">
                                     <GenerativeThumbnail seedStr={repo.name} />
                                     <div className="absolute inset-0 bg-cyber-cyan/20 opacity-0 group-hover:opacity-100 transition-opacity z-10 mix-blend-overlay"></div>

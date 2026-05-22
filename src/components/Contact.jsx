@@ -281,13 +281,13 @@ const Contact = () => {
                 <footer className="mt-24 pt-8 border-t border-white/5 text-gray-600 text-xs font-mono flex flex-col md:flex-row justify-between items-center gap-4">
                     <span>&copy; {new Date().getFullYear()} ALEVOLDON. All systems nominal.</span>
                     <div className="flex gap-4">
-                        <a href="https://github.com/ALEVOLDON" target="_blank" rel="noreferrer" className="hover:text-cyber-cyan transition-colors flex items-center gap-1">
+                        <a href="https://github.com/ALEVOLDON" target="_blank" rel="noopener noreferrer" className="hover:text-cyber-cyan transition-colors flex items-center gap-1">
                             <Icon name="github" size={14} /> GitHub
                         </a>
-                        <a href="https://twitter.com/AleVoldon" target="_blank" rel="noreferrer" className="hover:text-cyber-cyan transition-colors flex items-center gap-1">
+                        <a href="https://twitter.com/AleVoldon" target="_blank" rel="noopener noreferrer" className="hover:text-cyber-cyan transition-colors flex items-center gap-1">
                             <Icon name="twitter" size={14} /> Twitter
                         </a>
-                        <a href="https://codepen.io/GTWY" target="_blank" rel="noreferrer" className="hover:text-cyber-cyan transition-colors flex items-center gap-1">
+                        <a href="https://codepen.io/GTWY" target="_blank" rel="noopener noreferrer" className="hover:text-cyber-cyan transition-colors flex items-center gap-1">
                             <Icon name="code" size={14} /> CodePen
                         </a>
                     </div>

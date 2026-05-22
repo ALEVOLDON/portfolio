@@ -206,20 +206,35 @@ const InteractiveAvatar = ({ profile, loading }) => {
             }
             mesh.material = cyberGlassMat;
 
-            // Holographic glowing particle overlay using the same geometry
+            // Holographic glowing particle overlay using downsampled geometry to reduce density
             const pointsMat = new THREE.PointsMaterial({
               color: 0x22d3ee,
-              size: 0.016, // Fine point-cloud particle size
+              size: 0.02, // Slightly larger particles for better visibility with lower density
               sizeAttenuation: true,
               transparent: true,
-              opacity: 0.9,
+              opacity: 0.85,
               blending: THREE.AdditiveBlending,
               map: dotTexture,
               depthWrite: false,
             });
             activePointsMaterials.push(pointsMat);
 
-            const pointCloud = new THREE.Points(mesh.geometry, pointsMat);
+            let pointsGeometry;
+            const positionAttr = mesh.geometry.attributes.position;
+            if (positionAttr) {
+              pointsGeometry = new THREE.BufferGeometry();
+              const originalPositions = positionAttr.array;
+              const step = 8; // Keep every 8th vertex to reduce density
+              const newPositions = [];
+              for (let i = 0; i < originalPositions.length; i += 3 * step) {
+                newPositions.push(originalPositions[i], originalPositions[i + 1], originalPositions[i + 2]);
+              }
+              pointsGeometry.setAttribute('position', new THREE.Float32BufferAttribute(newPositions, 3));
+            } else {
+              pointsGeometry = mesh.geometry;
+            }
+
+            const pointCloud = new THREE.Points(pointsGeometry, pointsMat);
             // Sync local transform
             pointCloud.position.copy(mesh.position);
             pointCloud.rotation.copy(mesh.rotation);

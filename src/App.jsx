@@ -1,5 +1,6 @@
 import React, { Suspense, lazy, useState, useEffect } from 'react';
 import CustomCursor from './components/CustomCursor';
+import BackgroundControls from './components/BackgroundControls';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -32,6 +33,11 @@ const App = () => {
   const loading = false;
   const [stats, setStats] = useState(FALLBACK_STATS);
   const [showBackground, setShowBackground] = useState(false);
+  const [bgConfig, setBgConfig] = useState({
+    brightness: 1.0,
+    speed: 1.0,
+    theme: 'cyber'
+  });
 
   useEffect(() => {
     const enableBackground = () => setShowBackground(true);
@@ -137,8 +143,9 @@ const App = () => {
   return (
     <div className="relative w-full">
       <CustomCursor />
+      <BackgroundControls bgConfig={bgConfig} setBgConfig={setBgConfig} />
       <Suspense fallback={<StaticBackground />}>
-        {showBackground ? <ThreeBackground /> : <StaticBackground />}
+        {showBackground ? <ThreeBackground {...bgConfig} /> : <StaticBackground />}
       </Suspense>
       <Navbar activeSection={activeSection} scrollTo={scrollTo} />
       <main>

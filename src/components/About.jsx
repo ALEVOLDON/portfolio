@@ -29,7 +29,7 @@ const About = ({ profile, readme, stats }) => {
             <div className="max-w-7xl mx-auto">
                 <div className="flex items-center gap-4 mb-16 reveal">
                     <div className="h-px bg-cyber-cyan w-12"></div>
-                    <h2 className="text-3xl font-bold text-white uppercase tracking-widest">System Analytics</h2>
+                    <h2 className="text-3xl font-black text-white uppercase tracking-widest font-cyber">System Analytics</h2>
                     <div className="h-px bg-white/10 flex-grow"></div>
                 </div>
 
@@ -40,16 +40,16 @@ const About = ({ profile, readme, stats }) => {
 
                         {/* 1. Main Stats Panel (Visual Match to Screenshot) */}
                         <div className="bg-cyber-dark border border-white/10 rounded-xl p-5 hover:border-cyber-purple/50 hover:shadow-[0_0_25px_rgba(168,85,247,0.15)] transition-all duration-300 reveal reveal-left">
-                            <h3 className="text-md font-bold text-cyber-purple mb-4 flex items-center gap-2 uppercase tracking-wider">
+                            <h3 className="text-sm font-bold text-cyber-purple mb-4 flex items-center gap-2 uppercase tracking-widest font-cyber">
                                 {profile?.name || "User"}'s GitHub Stats
                             </h3>
                             <div className="flex items-center justify-between">
-                                <div className="space-y-2 text-sm font-medium">
-                                    <div className="flex items-center gap-2 text-white"><Icon name="star" size={14} className="text-yellow-400" /> Total Stars: <span className="ml-auto font-bold">{stats?.totalStars || 0}</span></div>
-                                    <div className="flex items-center gap-2 text-white"><Icon name="git-fork" size={14} className="text-blue-400" /> Total Forks: <span className="ml-auto font-bold">{stats?.totalForks || 0}</span></div>
-                                    <div className="flex items-center gap-2 text-white"><Icon name="folder-git" size={14} className="text-cyber-cyan" /> Total Repos: <span className="ml-auto font-bold">{profile?.public_repos || 0}</span></div>
-                                    <div className="flex items-center gap-2 text-white"><Icon name="users" size={14} className="text-pink-500" /> Followers: <span className="ml-auto font-bold">{profile?.followers || 0}</span></div>
-                                    <div className="flex items-center gap-2 text-white"><Icon name="eye" size={14} className="text-green-400" /> Watchers: <span className="ml-auto font-bold">{stats?.totalWatchers || 0}</span></div>
+                                <div className="space-y-2 text-sm font-medium font-display">
+                                    <div className="flex items-center gap-2 text-white"><Icon name="star" size={14} className="text-yellow-400" /> Total Stars: <span className="ml-auto font-bold font-cyber">{stats?.totalStars || 0}</span></div>
+                                    <div className="flex items-center gap-2 text-white"><Icon name="git-fork" size={14} className="text-blue-400" /> Total Forks: <span className="ml-auto font-bold font-cyber">{stats?.totalForks || 0}</span></div>
+                                    <div className="flex items-center gap-2 text-white"><Icon name="folder-git" size={14} className="text-cyber-cyan" /> Total Repos: <span className="ml-auto font-bold font-cyber">{profile?.public_repos || 0}</span></div>
+                                    <div className="flex items-center gap-2 text-white"><Icon name="users" size={14} className="text-pink-500" /> Followers: <span className="ml-auto font-bold font-cyber">{profile?.followers || 0}</span></div>
+                                    <div className="flex items-center gap-2 text-white"><Icon name="eye" size={14} className="text-green-400" /> Watchers: <span className="ml-auto font-bold font-cyber">{stats?.totalWatchers || 0}</span></div>
                                 </div>
 
                                 {/* Grade Circle */}
@@ -58,14 +58,14 @@ const About = ({ profile, readme, stats }) => {
                                         <circle cx="50" cy="50" r="45" fill="none" stroke="#333" strokeWidth="8" />
                                         <circle cx="50" cy="50" r="45" fill="none" stroke="#a855f7" strokeWidth="8" strokeDasharray="283" strokeDashoffset="40" strokeLinecap="round" transform="rotate(-90 50 50)" />
                                     </svg>
-                                    <div className="absolute text-3xl font-black text-white">{stats?.grade || 'B+'}</div>
+                                    <div className="absolute text-3xl font-black text-white font-cyber">{stats?.grade || 'B+'}</div>
                                 </div>
                             </div>
                         </div>
 
                         {/* 2. Languages Panel (Visual Match to Screenshot) */}
                         <div className="bg-cyber-dark border border-white/10 rounded-xl p-5 hover:border-cyber-cyan/50 hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition-all duration-300 reveal reveal-left" style={{ transitionDelay: '100ms' }}>
-                            <h3 className="text-md font-bold text-cyber-cyan mb-4 flex items-center gap-2 uppercase tracking-wider">
+                            <h3 className="text-sm font-bold text-cyber-cyan mb-4 flex items-center gap-2 uppercase tracking-widest font-cyber">
                                 Most Used Languages
                             </h3>
                             {stats?.languages && stats.languages.length > 0 ? (
@@ -75,12 +75,12 @@ const About = ({ profile, readme, stats }) => {
                                             <div key={index} style={{ width: `${lang.percent}%`, backgroundColor: langColors[lang.name] || langColors['Other'] }} className="h-full hover:opacity-80 transition-opacity"></div>
                                         ))}
                                     </div>
-                                    <div className="grid grid-cols-2 gap-y-1 gap-x-2">
+                                    <div className="grid grid-cols-2 gap-y-1.5 gap-x-2 font-display">
                                         {stats.languages.map((lang, index) => (
                                             <div key={index} className="flex items-center gap-2 text-xs">
                                                 <span className="w-2 h-2 rounded-full" style={{ backgroundColor: langColors[lang.name] || langColors['Other'] }}></span>
                                                 <span className="text-gray-300">{lang.name}</span>
-                                                <span className="text-gray-500 ml-auto">{lang.percent}%</span>
+                                                <span className="text-gray-500 ml-auto font-cyber">{lang.percent}%</span>
                                             </div>
                                         ))}
                                     </div>
@@ -91,12 +91,12 @@ const About = ({ profile, readme, stats }) => {
                         </div>
 
                         {/* 3. Activity/Streaks Panel (Visual Match to Screenshot) */}
-                        <div className="bg-cyber-dark border border-white/10 rounded-xl p-6 hover:border-pink-500/50 hover:shadow-[0_0_25px_rgba(236,72,153,0.15)] transition-all duration-300 flex items-center justify-between reveal reveal-left" style={{ transitionDelay: '200ms' }}>
+                        <div className="bg-cyber-dark border border-white/10 rounded-xl p-6 hover:border-pink-500/50 hover:shadow-[0_0_25px_rgba(236,72,153,0.15)] transition-all duration-300 flex items-center justify-between reveal reveal-left font-display" style={{ transitionDelay: '200ms' }}>
                             <div className="text-center">
-                                <div className="text-2xl font-bold text-pink-500 mb-1">
+                                <div className="text-2xl font-bold text-pink-500 mb-1 font-cyber">
                                     {stats?.totalSize > 1024 ? `${(stats.totalSize / 1024).toFixed(1)}MB` : `${stats.totalSize}KB`}
                                 </div>
-                                <div className="text-[10px] text-gray-400 uppercase tracking-wider">Total Code Volume</div>
+                                <div className="text-[10px] text-gray-400 uppercase tracking-widest font-display">Total Code Volume</div>
                                 <div className="text-[10px] text-gray-600 mt-1">Estimated size</div>
                             </div>
 
@@ -107,15 +107,15 @@ const About = ({ profile, readme, stats }) => {
                                         <circle cx="50" cy="50" r="45" fill="none" stroke="#ec4899" strokeWidth="6" strokeDasharray="283" strokeDashoffset="0" strokeLinecap="round" transform="rotate(-90 50 50)" />
                                         <path d="M50 25 Q65 50 50 75 Q35 50 50 25" fill="#ec4899" opacity="0.5" />
                                     </svg>
-                                    <div className="absolute text-2xl font-bold text-white">{getYearsActive(profile?.created_at)}</div>
+                                    <div className="absolute text-2xl font-black text-white font-cyber">{getYearsActive(profile?.created_at)}</div>
                                 </div>
-                                <div className="text-xs font-bold text-cyber-cyan uppercase">Years Active</div>
+                                <div className="text-xs font-bold text-cyber-cyan uppercase tracking-wider font-display">Years Active</div>
                                 <div className="text-[10px] text-gray-500">Since {profile?.created_at ? new Date(profile.created_at).getFullYear() : 'Unknown'}</div>
                             </div>
 
                             <div className="text-center">
-                                <div className="text-2xl font-bold text-pink-500 mb-1">{profile?.public_repos || 0}</div>
-                                <div className="text-[10px] text-gray-400 uppercase tracking-wider">Public Projects</div>
+                                <div className="text-2xl font-bold text-pink-500 mb-1 font-cyber">{profile?.public_repos || 0}</div>
+                                <div className="text-[10px] text-gray-400 uppercase tracking-widest font-display">Public Projects</div>
                                 <div className="text-[10px] text-gray-600 mt-1">Open Source</div>
                             </div>
                         </div>
@@ -129,8 +129,8 @@ const About = ({ profile, readme, stats }) => {
                                 <Icon name="file-code" size={300} />
                             </div>
                             <div className="flex justify-between items-center mb-6 border-b border-white/5 pb-4">
-                                <h3 className="text-xl font-bold text-white flex items-center gap-2">
-                                    <span className="text-cyber-purple">cat</span> README.md
+                                <h3 className="text-md font-bold text-white flex items-center gap-2 font-cyber tracking-wider">
+                                    <span className="text-cyber-purple font-mono">cat</span> README.md
                                 </h3>
                                 <div className="flex gap-2">
                                     <div className="w-3 h-3 rounded-full bg-red-500/20 border border-red-500"></div>

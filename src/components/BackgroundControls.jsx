@@ -39,7 +39,7 @@ const BackgroundControls = ({ bgConfig, setBgConfig }) => {
                     <div className="flex justify-between items-center mb-4 pb-2 border-b border-white/5">
                         <div className="flex items-center gap-2">
                             <span className="w-2 h-2 rounded-full bg-cyber-cyan animate-pulse"></span>
-                            <h4 className="text-xs font-bold text-white uppercase tracking-wider">AMBIENT ENGINE</h4>
+                            <h4 className="text-xs font-black text-white uppercase tracking-widest font-cyber">AMBIENT ENGINE</h4>
                         </div>
                         <button
                             onClick={() => setIsOpen(false)}
@@ -59,13 +59,13 @@ const BackgroundControls = ({ bgConfig, setBgConfig }) => {
 
                     {/* Theme Selectors */}
                     <div className="mb-4">
-                        <span className="block text-[10px] text-gray-400 uppercase tracking-widest mb-2">MATRIX PALETTE</span>
+                        <span className="block text-[9px] text-gray-400 uppercase tracking-[0.2em] mb-2 font-display">MATRIX PALETTE</span>
                         <div className="grid grid-cols-2 gap-2">
                             {themes.map(t => (
                                 <button
                                     key={t.id}
                                     onClick={() => handleThemeChange(t.id)}
-                                    className={`p-2 rounded text-left border text-xs transition-all duration-300 flex items-center justify-between ${
+                                    className={`p-2 rounded text-left border text-xs transition-all duration-300 flex items-center justify-between font-display font-medium ${
                                         bgConfig.theme === t.id
                                             ? 'border-cyber-cyan bg-cyber-cyan/10 text-white shadow-[0_0_15px_rgba(34,211,238,0.1)]'
                                             : 'border-white/10 bg-transparent text-gray-400 hover:border-white/20 hover:text-white'
@@ -85,9 +85,9 @@ const BackgroundControls = ({ bgConfig, setBgConfig }) => {
                     <div className="space-y-4">
                         {/* Brightness */}
                         <div>
-                            <div className="flex justify-between text-[10px] text-gray-400 uppercase tracking-widest mb-1">
+                             <div className="flex justify-between text-[9px] text-gray-400 uppercase tracking-[0.2em] mb-1 font-display font-medium">
                                 <span>BRIGHTNESS</span>
-                                <span className="text-cyber-cyan">{bgConfig.brightness.toFixed(1)}x</span>
+                                <span className="text-cyber-cyan font-cyber font-bold">{bgConfig.brightness.toFixed(1)}x</span>
                             </div>
                             <input
                                 type="range"
@@ -102,9 +102,9 @@ const BackgroundControls = ({ bgConfig, setBgConfig }) => {
 
                         {/* Speed */}
                         <div>
-                            <div className="flex justify-between text-[10px] text-gray-400 uppercase tracking-widest mb-1">
+                             <div className="flex justify-between text-[9px] text-gray-400 uppercase tracking-[0.2em] mb-1 font-display font-medium">
                                 <span>DRIFT VELOCITY</span>
-                                <span className="text-cyber-cyan">{bgConfig.speed.toFixed(1)}x</span>
+                                <span className="text-cyber-cyan font-cyber font-bold">{bgConfig.speed.toFixed(1)}x</span>
                             </div>
                             <input
                                 type="range"

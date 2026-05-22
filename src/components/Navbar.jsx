@@ -17,11 +17,11 @@ const Navbar = ({ activeSection, scrollTo }) => {
     return (
         <nav className="fixed top-0 w-full z-50 px-6 py-4 bg-black/50 backdrop-blur-md border-b border-white/5 transition-all duration-300">
             <div className="max-w-7xl mx-auto flex justify-between items-center">
-                <div className="text-xl font-bold tracking-tighter cursor-pointer flex items-center gap-2" onClick={() => scrollTo('home')}>
+                <div className="text-xl font-black tracking-wider cursor-pointer flex items-center gap-2 font-cyber" onClick={() => scrollTo('home')}>
                     <span className="text-white">ALEVOLDON</span>
                     <span className="text-cyber-cyan">.COM</span>
                 </div>
-                <div className="hidden md:flex gap-8 text-sm font-medium text-gray-400 items-center">
+                <div className="hidden md:flex gap-8 text-sm font-medium text-gray-400 items-center font-display">
                     {navItems.map(item => (
                         <button
                             key={item}
@@ -53,7 +53,7 @@ const Navbar = ({ activeSection, scrollTo }) => {
                                 <button
                                     key={item}
                                     onClick={() => handleNavClick(item)}
-                                    className={`w-full text-left px-6 py-3 text-sm font-medium uppercase tracking-widest transition-colors ${activeSection === item.toLowerCase()
+                                    className={`w-full text-left px-6 py-3 text-sm font-medium uppercase tracking-widest transition-colors font-display ${activeSection === item.toLowerCase()
                                         ? 'text-cyber-cyan bg-cyber-cyan/10 border-l-2 border-cyber-cyan'
                                         : 'text-gray-400 hover:text-white hover:bg-white/5'
                                         }`}

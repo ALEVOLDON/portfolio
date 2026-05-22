@@ -25,19 +25,19 @@ const Hero = ({ profile, loading, scrollTo }) => {
                                     <Icon name="code" size={16} className="text-cyber-cyan" />
                                 </div>
                             </div>
-                            <h1 className="text-5xl md:text-8xl font-black mb-6 tracking-tight leading-tight">
+                            <h1 className="text-5xl md:text-8xl font-black mb-6 tracking-widest leading-tight font-cyber">
                                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyber-cyan via-white to-cyber-purple animate-gradient-x">
                                     {profile?.name || "DEVELOPER"}
                                 </span>
                             </h1>
-                            <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed font-mono">
+                            <p className="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed font-display tracking-wide">
                                 {profile?.bio || "Building the future of the web."}
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <button onClick={() => scrollTo('projects')} className="px-8 py-3 bg-cyber-cyan text-black font-bold rounded hover:bg-white transition hover:scale-105 shadow-[0_0_20px_rgba(34,211,238,0.3)] flex items-center justify-center gap-2">
+                                <button onClick={() => scrollTo('projects')} className="px-8 py-3 bg-cyber-cyan text-black font-bold rounded hover:bg-white transition hover:scale-105 shadow-[0_0_20px_rgba(34,211,238,0.3)] flex items-center justify-center gap-2 font-display tracking-wider uppercase text-xs md:text-sm">
                                     <Icon name="terminal" size={20} /> View Projects
                                 </button>
-                                <a href={profile?.html_url} target="_blank" rel="noopener noreferrer" className="px-8 py-3 border border-white/20 rounded font-bold hover:bg-white/10 transition flex items-center justify-center gap-2">
+                                <a href={profile?.html_url} target="_blank" rel="noopener noreferrer" className="px-8 py-3 border border-white/20 rounded font-bold hover:bg-white/10 transition flex items-center justify-center gap-2 font-display tracking-wider uppercase text-xs md:text-sm">
                                     <Icon name="github" size={20} /> GitHub Profile
                                 </a>
                             </div>

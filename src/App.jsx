@@ -1,4 +1,5 @@
 import React, { Suspense, lazy, useState, useEffect } from 'react';
+import CustomCursor from './components/CustomCursor';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -135,6 +136,7 @@ const App = () => {
 
   return (
     <div className="relative w-full">
+      <CustomCursor />
       <Suspense fallback={<StaticBackground />}>
         {showBackground ? <ThreeBackground /> : <StaticBackground />}
       </Suspense>

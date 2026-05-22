@@ -71,12 +71,41 @@ body {
 .reveal {
     opacity: 0;
     transform: translateY(30px);
-    transition: all 0.8s ease-out;
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
+}
+
+.reveal.reveal-left {
+    transform: translateX(-50px);
+}
+.reveal.reveal-left.active {
+    transform: translateX(0);
+}
+
+.reveal.reveal-right {
+    transform: translateX(50px);
+}
+.reveal.reveal-right.active {
+    transform: translateX(0);
+}
+
+.reveal.reveal-scale {
+    transform: scale(0.95);
+}
+.reveal.reveal-scale.active {
+    transform: scale(1);
+}
+
+/* Hide default cursor on desktop when custom cursor is active */
+@media (pointer: fine) {
+    .custom-cursor-active,
+    .custom-cursor-active * {
+        cursor: none !important;
+    }
 }
 
 /* Markdown Styles within the About section */

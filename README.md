@@ -38,6 +38,7 @@
 - 📊 **Modern Analytics**: Plausible Analytics (privacy-focused) & Microsoft Clarity (heatmaps & session recordings)
 - 🔍 **SEO Optimization**: Integrated robots.txt, sitemap.xml, and canonical meta configuration
 - ⚡ **Lighthouse Performance Optimizations**: Lazy-loaded WebGL background, deferred third-party tracking, and deferred font loading for optimal Core Web Vitals.
+- 🧬 **Hybrid 3D Cyber-Scanner Avatar**: Three.js WebGL-based profile widget that parses the GitHub avatar image into a 3D depth-map mesh with glowing wireframes, particle nodes, slow idle scanning, and interactive cursor-tilt tracking.
 
 ---
 
@@ -66,6 +67,7 @@
 - **Staggered Animations**: Directional scroll reveals driven by CSS cubic-bezier transitions as page sections come into view.
 - **Neomorphic Glows**: Custom interactive neon shadows that project from GitHub stats cards on hover.
 - **Modern Layout**: Responsive viewport grid with sticky navigation and automatic highlight observers.
+- **Procedural 3D Avatar Scanner**: Converts the GitHub avatar image into a WebGL-based depth map, rendering a 3D wireframe mesh and glowing particle nodes that dynamically tilt as they track mouse hover coordinates.
 
 ### 📨 Contact System
 - **Inline Form**: A sleek contact form completely replacing `mailto:`.
@@ -103,6 +105,7 @@ src/
 │   ├── GenerativeThumbnail.jsx
 │   ├── Hero.jsx
 │   ├── Icon.jsx
+│   ├── InteractiveAvatar.jsx  # 3D WebGL face-scan hologram
 │   ├── Navbar.jsx
 │   ├── Projects.jsx
 │   ├── ScrollToTop.jsx

@@ -14,6 +14,13 @@
 
   --animate-gradient-x: gradient-x 3s ease infinite;
   --animate-float: float 6s ease-in-out infinite;
+  --animate-scanline: scanline 5s linear infinite;
+
+  @keyframes scanline {
+    0% { transform: translateY(-20px); }
+    50% { transform: translateY(180px); }
+    100% { transform: translateY(-20px); }
+  }
 
   @keyframes gradient-x {
     0%, 100% {

@@ -1,5 +1,6 @@
 import React from 'react';
 import Icon from './Icon';
+import InteractiveAvatar from './InteractiveAvatar';
 
 const Hero = ({ profile, loading, scrollTo }) => {
     return (
@@ -10,27 +11,13 @@ const Hero = ({ profile, loading, scrollTo }) => {
                 ) : (
                     <div className="reveal reveal-scale">
                         <div className="animate-float">
-                            <div className="relative inline-block mb-8 group cursor-pointer">
-                                <div className="absolute -inset-1 bg-gradient-to-r from-cyber-cyan to-cyber-purple rounded-full blur opacity-50 group-hover:opacity-100 transition duration-500"></div>
-                                <img
-                                    src={profile?.avatar_url}
-                                    alt="Avatar"
-                                    width="160"
-                                    height="160"
-                                    fetchPriority="high"
-                                    decoding="async"
-                                    className="relative w-40 h-40 rounded-full border-2 border-black object-cover"
-                                />
-                                <div className="absolute bottom-2 right-2 bg-cyber-black rounded-full p-2 border border-cyber-cyan">
-                                    <Icon name="code" size={16} className="text-cyber-cyan" />
-                                </div>
-                            </div>
-                            <h1 className="text-5xl md:text-8xl font-black mb-6 tracking-widest leading-tight font-cyber">
+                            <InteractiveAvatar profile={profile} loading={loading} />
+                            <h1 className="text-4xl md:text-6xl font-black mb-6 tracking-widest leading-tight font-cyber">
                                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyber-cyan via-white to-cyber-purple animate-gradient-x">
                                     {profile?.name || "DEVELOPER"}
                                 </span>
                             </h1>
-                            <p className="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed font-display tracking-wide">
+                            <p className="text-base md:text-lg text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed font-display tracking-wide">
                                 {profile?.bio || "Building the future of the web."}
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">

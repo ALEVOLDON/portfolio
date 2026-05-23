@@ -35,7 +35,7 @@
 - 🚀 **Vercel deployment** with a serverless contact endpoint
 - 📱 **Telegram notifications** for incoming contact requests
 - 🤖 **Cloudflare Turnstile** spam protection
-- 📊 **Modern Analytics**: Plausible Analytics (privacy-focused) & Microsoft Clarity (heatmaps & session recordings)
+- 📊 **Modern Analytics**: Vercel Analytics (privacy-focused) & Microsoft Clarity (heatmaps & session recordings)
 - 🔍 **SEO Optimization**: Integrated robots.txt, sitemap.xml, and canonical meta configuration
 - ⚡ **Lighthouse Performance Optimizations**: Lazy-loaded WebGL background, deferred third-party tracking, and deferred font loading for optimal Core Web Vitals.
 - 🧬 **Volumetric 3D Cyber-Hologram Avatar**: Interactive Three.js WebGL avatar rendering a custom 3D head model (`stylized-head.glb`) with a dark cyber-glass core, a dynamic downsampled holographic particle cloud, shifting cyber-cyan/purple gradient colors, rotating gyroscopic orbital HUD rings, and cursor-tilt tracking.
@@ -55,7 +55,7 @@
 | **Hosting** | Vercel |
 | **Contact Delivery** | Vercel Serverless Functions, Telegram Bot API |
 | **Anti-spam** | Cloudflare Turnstile |
-| **Web Analytics** | Plausible Analytics, Microsoft Clarity |
+| **Web Analytics** | Vercel Analytics, Microsoft Clarity |
 
 ---
 
@@ -80,7 +80,7 @@
 - **Fallbacks**: Graceful fallback for profile, stats, repos, and README content in case of GitHub API rate limits.
 
 ### 📊 Web Analytics & SEO
-- **Privacy-first Analytics**: Lightweight, cookie-less unique visitor and referral tracking via Plausible Analytics.
+- **Privacy-first Analytics**: Lightweight, cookie-less unique visitor and referral tracking via Vercel Analytics.
 - **Behavioral Tracking**: Session recordings and visual click/scroll heatmaps via Microsoft Clarity.
 - **SEO Readiness**: Canonical link tags, Open Graph meta-tags, standard-compliant `sitemap.xml`, and optimized crawling via `robots.txt`.
 
@@ -88,7 +88,7 @@
 - **Dynamic Asset Deferral**: Deferred loading of Google Fonts (`media="print"` onload technique) and late initialization of the Three.js WebGL canvas (rendered only after first user movement, scroll, or keystroke) to achieve a near-perfect Google Lighthouse score.
 - **Lazy API Fetching**: Delayed GitHub profile data fetch until active user interaction, avoiding blockages during critical initial paint ticks.
 - **Resource Preloading**: High-priority preloading for the profile avatar (`fetchpriority="high"`) to eliminate LCP (Largest Contentful Paint) delays.
-- **Asynchronous Analytics**: Plausible and Microsoft Clarity tracking scripts are queued via `requestIdleCallback` to run during idle browser cycles, eliminating main-thread contention.
+- **Asynchronous Analytics**: Microsoft Clarity tracking script is queued via `requestIdleCallback` to run during idle browser cycles, and Vercel Analytics is integrated directly via lightweight client-side injection.
 
 ---
 

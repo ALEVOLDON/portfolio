@@ -47,12 +47,6 @@
       window.addEventListener('load', function () {
         var schedule = window.requestIdleCallback || function (callback) { return window.setTimeout(callback, 1600); };
         schedule(function () {
-          var plausible = document.createElement('script');
-          plausible.defer = true;
-          plausible.dataset.domain = 'alevoldon.com';
-          plausible.src = 'https://plausible.io/js/script.js';
-          document.head.appendChild(plausible);
-
           (function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
             t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;

@@ -20,7 +20,9 @@ import {
     Twitter,
     Users,
     X,
-    Sliders
+    Sliders,
+    ChevronLeft,
+    ChevronRight
 } from 'lucide-react';
 
 const icons = {
@@ -44,7 +46,9 @@ const icons = {
     terminal: Terminal,
     twitter: Twitter,
     users: Users,
-    x: X
+    x: X,
+    'chevron-left': ChevronLeft,
+    'chevron-right': ChevronRight
 };
 
 const Icon = ({ name, size = 24, className = '' }) => {

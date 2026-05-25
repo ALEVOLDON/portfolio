@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Projects from './components/Projects';
+import BrainGraph from './components/BrainGraph';
 import Contact from './components/Contact';
 import ScrollToTop from './components/ScrollToTop';
 import {
@@ -130,7 +131,7 @@ const App = () => {
       });
     }, { threshold: 0.15 });
 
-    ['home', 'about', 'projects', 'contact'].forEach((id) => {
+    ['home', 'about', 'projects', 'brain', 'contact'].forEach((id) => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
     });
@@ -152,6 +153,7 @@ const App = () => {
         <Hero profile={profile} loading={loading} scrollTo={scrollTo} />
         <About profile={profile} readme={readme} stats={stats} />
         <Projects repos={repos} loading={loading} />
+        <BrainGraph />
         <Contact />
       </main>
       <ScrollToTop />

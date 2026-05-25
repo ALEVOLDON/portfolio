@@ -3,7 +3,7 @@ import Icon from './Icon';
 
 const Navbar = ({ activeSection, scrollTo }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const navItems = ['Home', 'About', 'Projects', 'Contact'];
+    const navItems = ['Home', 'About', 'Projects', 'Brain', 'Contact'];
 
     const handleMenuClick = () => {
         setIsMenuOpen(!isMenuOpen);

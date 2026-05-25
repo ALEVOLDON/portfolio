@@ -39,6 +39,7 @@
 - 🔍 **SEO Optimization**: Integrated robots.txt, sitemap.xml, and canonical meta configuration
 - ⚡ **Lighthouse Performance Optimizations**: Lazy-loaded WebGL background, deferred third-party tracking, and deferred font loading for optimal Core Web Vitals.
 - 🧬 **Volumetric 3D Cyber-Hologram Avatar**: Interactive Three.js WebGL avatar rendering a custom 3D head model (`stylized-head.glb`) with a dark cyber-glass core, a dynamic downsampled holographic particle cloud, shifting cyber-cyan/purple gradient colors, rotating gyroscopic orbital HUD rings, and cursor-tilt tracking.
+- 🧠 **Mind Vault & Knowledge Graph**: An interactive 2D Canvas force-directed graph view of personal Telegram channel posts (synced via Obsidian vault), allowing instant search, tag filtering, zoom/pan controls, and inline Markdown article reading.
 
 ---
 
@@ -69,6 +70,13 @@
 - **Modern Layout**: Responsive viewport grid with sticky navigation and automatic highlight observers.
 - **Volumetric 3D Avatar Hologram**: Renders a custom 3D head model with a hybrid material stack consisting of a dark semi-transparent glass base (acting as depth occlusion) and a downsampled glowing holographic point cloud (reducing vertex density for a matrix-like effect), complete with three independent gyroscopic scanner rings.
 
+### 🧠 Mind Vault & Knowledge Graph
+- **Interactive 2D Canvas Physics Engine**: Features spring attraction (Hooke's Law), charge repulsion (Coulomb's Law with 400x softening to prevent infinite velocity spikes), and center-gravity pull.
+- **Micro-Interaction Optimizations**: Employs sticky hover (hysteresis with a 6px buffer) to lock onto nodes without jitter, and nearest-node calculation to prevent overlap confusion.
+- **O(1) Performance Scaling**: Utilizes Map key-value lookups inside the requestAnimationFrame loop to bypass O(N) array scans, preserving a stable 60 FPS even with 250+ post nodes.
+- **Rich Document Reader**: Features an embedded Markdown parser (`marked` + `dompurify`) rendering fully stylized article views with Lucide metadata blocks and direct opening links to Telegram.
+- **Knowledge Controls**: HUD controls to dynamically restrict post limits, toggle tag visibility on/off, freeze/unfreeze simulation, and recenter/stabilize the layout.
+
 ### 📨 Contact System
 - **Inline Form**: A sleek contact form completely replacing `mailto:`.
 - **Serverless Forwarding**: Messages are securely forwarded to Telegram via a Netlify Function.
@@ -96,10 +104,14 @@
 
 ```text
 ANALYTICS_GUIDE.md       # Detailed guide on tracking website stats
+public/
+└── data/
+    └── posts.json       # Compiled static database of Obsidian vault posts
 src/
 ├── components/          # UI components
 │   ├── About.jsx
 │   ├── BackgroundControls.jsx # HUD widget for background settings
+│   ├── BrainGraph.jsx         # Obsidian-style interactive force-directed canvas graph
 │   ├── Contact.jsx
 │   ├── CustomCursor.jsx       # Smooth mouse trail pointer
 │   ├── GenerativeThumbnail.jsx

@@ -116,7 +116,7 @@ const CustomCursor = () => {
             {/* Outer Ring */}
             <div
                 ref={ringRef}
-                className={`custom-cursor-ring fixed top-0 left-0 w-8 h-8 -ml-4 -mt-4 border-2 border-cyber-cyan/50 rounded-full pointer-events-none z-50 transition-all duration-300 ease-out mix-blend-screen
+                className={`custom-cursor-ring fixed top-0 left-0 w-8 h-8 -ml-4 -mt-4 border-2 border-cyber-cyan/50 rounded-full pointer-events-none z-50 mix-blend-screen
                     ${isHovered ? 'scale-150 border-cyber-purple bg-cyber-purple/5' : ''}
                     ${isClicked ? 'scale-75 border-white bg-white/10' : ''}
                 `}

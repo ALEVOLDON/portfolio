@@ -123,6 +123,10 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+.custom-cursor-ring {
+    transition: border-color 0.3s ease-out, background-color 0.3s ease-out, scale 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease-out;
+}
+
 /* Markdown Styles within the About section */
 .markdown-content a {
     color: #22d3ee;

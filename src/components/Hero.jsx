@@ -34,7 +34,7 @@ const Hero = ({ profile, loading, scrollTo }) => {
             </div>
             
             {/* Scroll Down Indicator */}
-            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 text-gray-500 font-mono text-[10px] uppercase tracking-widest pointer-events-none reveal" style={{ transitionDelay: '500ms' }}>
+            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-gray-500 font-mono text-[10px] uppercase tracking-widest pointer-events-none reveal" style={{ transitionDelay: '500ms' }}>
                 <span>Scroll Down</span>
                 <div className="w-5 h-8 border-2 border-gray-500 rounded-full flex justify-center p-1">
                     <div className="w-1.5 h-1.5 bg-cyber-cyan rounded-full animate-bounce"></div>

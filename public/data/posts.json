@@ -1,6 +1,35 @@
 {
   "posts": [
     {
+      "id": 2929,
+      "date": "2026-05-25T23:08:26.000Z",
+      "title": "🎧 Кажется я понял, чего не хватает современным сайтам — звука.",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 2929,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "webdesign",
+        "ux",
+        "sounddesign",
+        "webaudio",
+        "creativecoding",
+        "frontend",
+        "gamedev",
+        "interactive",
+        "ai",
+        "vibecoding",
+        "design",
+        "learning",
+        "tools",
+        "как",
+        "сайт",
+        "что"
+      ],
+      "content": "# 🎧 Кажется я понял, чего не хватает современным сайтам — звука.\n\n🎧 Кажется я понял, чего не хватает современным сайтам — звука.\n\nНе фоновой музыки «чтобы было», а полноценного звукового UX. Чтобы сайт ощущался не как набор страниц, а как пространство.\n\nЧем больше думаю — тем больше кажется, что будущее сайтов ближе к геймдеву.\n\nПредставь:\n\n— зашёл → сайт тихо «просыпается»\n— навёл → короткий воздушный отклик\n— открыл проект → пространственный переход\n— перешёл в раздел → голос говорит куда ты попал\n— исследуешь граф → каждый узел звучит по-своему\n\nНе раздражающий набор кликов, а целый звуковой язык интерфейса.\n\nДаже можно сделать режимы:\n\n🔇 Silent\n🔉 UI Sounds\n🎙 Voice Guide\n🎧 Immersive Mode\n\nИдея вообще не про музыку.\nА про ощущение присутствия.\n\nСайт начинает реагировать на тебя как игра — и появляется чувство исследования, а не скроллинга.\n\nЗабавно, что раньше я занимался саунд-дизайном, а сейчас только начинаю понимать, что сайты ещё очень долго будут эволюционировать не только визуально.\n\n#webdesign #ux #sounddesign #webaudio #creativecoding #frontend #gamedev #interactive #ai #vibecoding\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACC3FqFNZq1-_Yzu1bl3DoHyqrpelCgQACfhdrGwKXqEg014tGu_EVMwEAAwIAA3kAAzsE\n\n## Tags\n\n#telegram-import #live-sync #webdesign #ux #sounddesign #webaudio #creativecoding #frontend #gamedev #interactive #ai #vibecoding #design #learning #tools #как #сайт #что"
+    },
+    {
       "id": 2928,
       "date": "2026-05-25T18:18:39.000Z",
       "title": "🧠 Интегрировал Obsidian-граф знаний в свое портфолио: от Telegram-бота до Canva...",

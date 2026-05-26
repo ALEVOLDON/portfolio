@@ -36,6 +36,11 @@ const BrainGraph = () => {
   const selectedTagRef = useRef(null);
   const physicsEnabledRef = useRef(physicsEnabled);
 
+  // Touch gesture state refs
+  const touchStartDistRef = useRef(0);
+  const touchStartTransformRef = useRef(null);
+  const touchStartCenterRef = useRef({ x: 0, y: 0 });
+
   // Set hover state only in the ref to prevent triggering React component re-renders during mouse moves
   const setHoveredNode = (node) => {
     hoveredNodeRef.current = node;
@@ -45,6 +50,19 @@ const BrainGraph = () => {
   useEffect(() => { selectedPostRef.current = selectedPost; }, [selectedPost]);
   useEffect(() => { selectedTagRef.current = selectedTag; }, [selectedTag]);
   useEffect(() => { physicsEnabledRef.current = physicsEnabled; }, [physicsEnabled]);
+
+  // Auto-scroll to the reader panel on mobile screens when a post is selected
+  useEffect(() => {
+    if (selectedPost && window.innerWidth < 1024) {
+      const readerElement = document.getElementById('brain-reader');
+      if (readerElement) {
+        // Delay slightly to allow the DOM to render the detail view container
+        setTimeout(() => {
+          readerElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    }
+  }, [selectedPost]);
 
   // Load and sanitize posts
   useEffect(() => {
@@ -222,7 +240,7 @@ const BrainGraph = () => {
     }
   }, [selectedPost]);
 
-  // Non-passive wheel event listener registration for page-scroll prevention and smooth zoom
+  // Non-passive wheel & touch event listener registration for page-scroll prevention and smooth interaction
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -251,10 +269,20 @@ const BrainGraph = () => {
       };
     };
 
+    const onTouchStart = (e) => handleTouchStart(e);
+    const onTouchMove = (e) => handleTouchMove(e);
+    const onTouchEnd = (e) => handleTouchEnd(e);
+
     canvas.addEventListener('wheel', handleWheel, { passive: false });
+    canvas.addEventListener('touchstart', onTouchStart, { passive: false });
+    canvas.addEventListener('touchmove', onTouchMove, { passive: false });
+    canvas.addEventListener('touchend', onTouchEnd, { passive: false });
 
     return () => {
       canvas.removeEventListener('wheel', handleWheel);
+      canvas.removeEventListener('touchstart', onTouchStart);
+      canvas.removeEventListener('touchmove', onTouchMove);
+      canvas.removeEventListener('touchend', onTouchEnd);
     };
   }, []);
 
@@ -609,6 +637,141 @@ const BrainGraph = () => {
     isPanningRef.current = false;
   };
 
+  const handleTouchStart = (e) => {
+    if (e.touches.length === 1) {
+      const touch = e.touches[0];
+      const pos = screenToGraph(touch.clientX, touch.clientY);
+      const clickRadius = 25; // Wider touch radius for mobile fingers
+      const clickedNode = nodesRef.current.find(n => {
+        const dx = n.x - pos.x;
+        const dy = n.y - pos.y;
+        return Math.sqrt(dx * dx + dy * dy) < (n.size + clickRadius);
+      });
+
+      if (clickedNode) {
+        dragNodeRef.current = clickedNode;
+        dragStartRef.current = { x: pos.x - clickedNode.x, y: pos.y - clickedNode.y };
+        clickedNode.vx = 0;
+        clickedNode.vy = 0;
+        e.preventDefault(); // Stop page scrolling when dragging a node
+      } else {
+        isPanningRef.current = true;
+        panStartRef.current = { x: touch.clientX - transformRef.current.x, y: touch.clientY - transformRef.current.y };
+        e.preventDefault(); // Stop page scrolling when panning the graph
+      }
+    } else if (e.touches.length === 2) {
+      isPanningRef.current = false;
+      dragNodeRef.current = null;
+
+      const t1 = e.touches[0];
+      const t2 = e.touches[1];
+
+      const dx = t2.clientX - t1.clientX;
+      const dy = t2.clientY - t1.clientY;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+
+      touchStartDistRef.current = dist;
+      touchStartTransformRef.current = { ...transformRef.current };
+      touchStartCenterRef.current = {
+        x: (t1.clientX + t2.clientX) / 2,
+        y: (t1.clientY + t2.clientY) / 2
+      };
+      e.preventDefault();
+    }
+  };
+
+  const handleTouchMove = (e) => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    if (dragNodeRef.current && e.touches.length === 1) {
+      const touch = e.touches[0];
+      const pos = screenToGraph(touch.clientX, touch.clientY);
+      const node = dragNodeRef.current;
+      node.x = pos.x - dragStartRef.current.x;
+      node.y = pos.y - dragStartRef.current.y;
+      node.vx = 0;
+      node.vy = 0;
+      e.preventDefault();
+    } else if (isPanningRef.current && e.touches.length === 1) {
+      const touch = e.touches[0];
+      transformRef.current = {
+        ...transformRef.current,
+        x: touch.clientX - panStartRef.current.x,
+        y: touch.clientY - panStartRef.current.y
+      };
+      e.preventDefault();
+    } else if (e.touches.length === 2 && touchStartTransformRef.current) {
+      const t1 = e.touches[0];
+      const t2 = e.touches[1];
+
+      const dx = t2.clientX - t1.clientX;
+      const dy = t2.clientY - t1.clientY;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+
+      const centerX = (t1.clientX + t2.clientX) / 2;
+      const centerY = (t1.clientY + t2.clientY) / 2;
+
+      const startDist = touchStartDistRef.current || 1;
+      const startTransform = touchStartTransformRef.current;
+      const startCenter = touchStartCenterRef.current;
+
+      const scaleFactor = dist / startDist;
+      const newScale = Math.min(Math.max(0.1, startTransform.scale * scaleFactor), 4);
+
+      const dCenterX = centerX - startCenter.x;
+      const dCenterY = centerY - startCenter.y;
+
+      const rect = canvas.getBoundingClientRect();
+      const focusX = centerX - rect.left;
+      const focusY = centerY - rect.top;
+
+      const graphFocusX = (focusX - startTransform.x) / startTransform.scale;
+      const graphFocusY = (focusY - startTransform.y) / startTransform.scale;
+
+      transformRef.current = {
+        scale: newScale,
+        x: focusX - graphFocusX * newScale + dCenterX,
+        y: focusY - graphFocusY * newScale + dCenterY
+      };
+      e.preventDefault();
+    }
+  };
+
+  const handleTouchEnd = (e) => {
+    if (dragNodeRef.current) {
+      const node = dragNodeRef.current;
+      let isTap = false;
+
+      if (e.changedTouches && e.changedTouches.length > 0) {
+        const touch = e.changedTouches[0];
+        const pos = screenToGraph(touch.clientX, touch.clientY);
+        const dragDist = Math.sqrt(
+          Math.pow(pos.x - (node.x + dragStartRef.current.x), 2) +
+          Math.pow(pos.y - (node.y + dragStartRef.current.y), 2)
+        );
+        if (dragDist < 10) { // slightly more generous tolerance for fingers
+          isTap = true;
+        }
+      } else {
+        isTap = true;
+      }
+
+      if (isTap) {
+        if (node.type === 'post') {
+          setSelectedPost(node.data);
+        } else if (node.type === 'tag') {
+          setSelectedTag(prev => prev === node.data ? null : node.data);
+        }
+      }
+      dragNodeRef.current = null;
+    }
+
+    isPanningRef.current = false;
+    touchStartTransformRef.current = null;
+  };
+
+
   const handleResetLayout = () => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -645,7 +808,7 @@ const BrainGraph = () => {
           </h2>
           <p className="text-gray-400 max-w-2xl text-sm md:text-base font-display">
             Interactive graph of my Telegram channel posts. Each node represents a post or a tag. 
-            Zoom with your scroll wheel, drag nodes to explore, and click them to read.
+            Drag nodes or pan to explore, pinch or use scroll wheel to zoom, and tap or click to read.
           </p>
         </div>
 
@@ -673,7 +836,7 @@ const BrainGraph = () => {
           </div>
 
           {/* Filtering & Settings options */}
-          <div className="lg:col-span-7 flex flex-wrap gap-3 items-center justify-end">
+          <div className="lg:col-span-7 flex flex-wrap gap-2 md:gap-3 items-center justify-start lg:justify-end">
             
             {selectedTag && (
               <div className="flex items-center gap-1.5 px-3 py-2 bg-cyber-purple/20 border border-cyber-purple/40 text-cyber-purple text-xs font-medium rounded-lg">
@@ -741,7 +904,7 @@ const BrainGraph = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 relative flex-grow w-full reveal reveal-scale active delay-200">
           
           {/* LEFT PANEL: Canvas Graph View (8 columns) */}
-          <div className="lg:col-span-8 h-[500px] lg:h-[600px] rounded-2xl border border-white/10 bg-cyber-dark/40 backdrop-blur-sm overflow-hidden relative">
+          <div className="lg:col-span-8 h-[350px] sm:h-[400px] lg:h-[600px] rounded-2xl border border-white/10 bg-cyber-dark/40 backdrop-blur-sm overflow-hidden relative">
             
             {/* Legend and node counts overlay */}
             <div className="absolute left-4 top-4 z-10 bg-cyber-black/70 border border-white/5 backdrop-blur-md px-3 py-2.5 rounded-lg text-[10px] md:text-xs text-gray-400 space-y-1.5 pointer-events-none">
@@ -779,7 +942,7 @@ const BrainGraph = () => {
           </div>
 
           {/* RIGHT PANEL: Scrollable Post Feed / Article Reader (4 columns) */}
-          <div className="lg:col-span-4 h-[500px] lg:h-[600px] rounded-2xl border border-white/10 bg-cyber-dark/60 backdrop-blur-md overflow-hidden flex flex-col relative">
+          <div id="brain-reader" className="lg:col-span-4 h-[400px] lg:h-[600px] rounded-2xl border border-white/10 bg-cyber-dark/60 backdrop-blur-md overflow-hidden flex flex-col relative">
             
             {selectedPost ? (
               /* DETAILED VIEW MODE */

@@ -739,6 +739,15 @@ const BrainGraph = () => {
         } else if (node.type === 'tag') {
           setSelectedTag(prev => prev === node.data ? null : node.data);
         }
+
+        // Play spatial audio chime/blip on tap on mobile touch devices
+        const canvas = canvasRef.current;
+        const transform = transformRef.current;
+        if (canvas && transform) {
+          const screenX = node.x * transform.scale + transform.x;
+          const xRatio = (screenX / canvas.width) * 2 - 1;
+          AudioService.playSpatialNode(node.type, xRatio);
+        }
       }
       dragNodeRef.current = null;
     }

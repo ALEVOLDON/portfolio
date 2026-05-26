@@ -45,17 +45,7 @@ const Projects = ({ repos, loading }) => {
         return Math.max(0, len - cardsToShow);
     }, [filteredRepos, cardsToShow]);
 
-    // Reset index on filter change to avoid empty views
-    useEffect(() => {
-        setCurrentIndex(0);
-    }, [activeFilter]);
-
-    // Adjust index if it exceeds maxIndex (e.g. after resizing)
-    useEffect(() => {
-        if (currentIndex > maxIndex) {
-            setCurrentIndex(maxIndex);
-        }
-    }, [maxIndex, currentIndex]);
+    const safeCurrentIndex = Math.min(currentIndex, maxIndex);
 
     // Scroll reveal observer
     useEffect(() => {
@@ -137,7 +127,10 @@ const Projects = ({ repos, loading }) => {
                         {languages.map(lang => (
                             <button
                                 key={lang}
-                                onClick={() => setActiveFilter(lang)}
+                                onClick={() => {
+                                    setActiveFilter(lang);
+                                    setCurrentIndex(0);
+                                }}
                                 className={`px-4 py-2 rounded-full text-xs font-display uppercase tracking-wider border transition-all duration-300 ${activeFilter === lang
                                     ? 'bg-cyber-cyan text-black border-cyber-cyan shadow-[0_0_15px_rgba(34,211,238,0.4)]'
                                     : 'bg-transparent text-gray-400 border-white/10 hover:border-cyber-cyan/50 hover:text-white'
@@ -164,7 +157,7 @@ const Projects = ({ repos, loading }) => {
                                 className={`flex transition-transform duration-500 ease-out ${!showCarouselControls ? 'justify-center mx-auto' : ''}`}
                                 style={{ 
                                     transform: showCarouselControls 
-                                        ? `translateX(-${currentIndex * (100 / filteredRepos.length)}%)` 
+                                        ? `translateX(-${safeCurrentIndex * (100 / filteredRepos.length)}%)` 
                                         : 'none',
                                     width: showCarouselControls 
                                         ? `${(filteredRepos.length / cardsToShow) * 100}%` 
@@ -230,7 +223,7 @@ const Projects = ({ repos, loading }) => {
                                 </button>
                                 <button
                                     onClick={handleNext}
-                                    disabled={currentIndex === maxIndex}
+                                    disabled={safeCurrentIndex === maxIndex}
                                     className="absolute -right-2 md:-right-12 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full border border-cyber-cyan/20 bg-cyber-dark/80 text-cyber-cyan hover:border-cyber-cyan hover:shadow-[0_0_15px_rgba(34,211,238,0.4)] disabled:opacity-25 disabled:pointer-events-none transition-all duration-300 backdrop-blur-md cursor-pointer hidden md:flex"
                                     aria-label="Next slide"
                                 >
@@ -247,7 +240,7 @@ const Projects = ({ repos, loading }) => {
                                         key={idx}
                                         onClick={() => setCurrentIndex(idx)}
                                         className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
-                                            currentIndex === idx 
+                                            safeCurrentIndex === idx 
                                                 ? 'w-6 bg-cyber-cyan shadow-[0_0_10px_rgba(34,211,238,0.5)]' 
                                                 : 'w-2 bg-white/20 hover:bg-white/40'
                                         }`}

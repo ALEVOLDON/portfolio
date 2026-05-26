@@ -79,7 +79,7 @@
 
 ### 📨 Contact System
 - **Inline Form**: A sleek contact form completely replacing `mailto:`.
-- **Serverless Forwarding**: Messages are securely forwarded to Telegram via a Netlify Function.
+- **Serverless Forwarding**: Messages are securely forwarded to Telegram via a Vercel Serverless Function.
 - **Fast Follow-up**: Optional Telegram handle field from the sender.
 - **Bot Protection**: Honeypot field for low-effort bot filtering, backed by Cloudflare Turnstile verification.
 

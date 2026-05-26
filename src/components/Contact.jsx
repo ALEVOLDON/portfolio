@@ -156,7 +156,7 @@ const Contact = () => {
         setFeedback('');
 
         try {
-            const response = await fetch(import.meta.env.VITE_CONTACT_ENDPOINT || '/.netlify/functions/contact', {
+            const response = await fetch(import.meta.env.VITE_CONTACT_ENDPOINT || '/api/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

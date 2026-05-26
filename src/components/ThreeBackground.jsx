@@ -61,7 +61,7 @@ const ThreeBackground = ({ brightness = 1.0, speed = 1.0, theme = 'cyber' }) => 
                 uColorCyan: { value: currentColors.cyan.clone() },
                 uColorViolet: { value: currentColors.violet.clone() },
                 uColorBlue: { value: currentColors.blue.clone() },
-                uBrightness: { value: brightness }
+                uBrightness: { value: configRef.current.brightness }
             },
             vertexShader: `
                 varying vec2 vUv;

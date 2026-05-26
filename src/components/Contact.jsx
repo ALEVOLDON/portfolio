@@ -190,12 +190,12 @@ const Contact = () => {
     };
 
     return (
-        <section id="contact" className="py-32 px-6 bg-gradient-to-t from-black via-black to-transparent relative z-10">
+        <section id="contact" className="py-16 md:py-32 px-6 bg-gradient-to-t from-black via-black to-transparent relative z-10">
             <div className="max-w-2xl mx-auto text-center reveal">
-                <div className="inline-block p-3 rounded-full bg-white/5 mb-6 animate-bounce"><Icon name="mail" size={24} className="text-cyber-purple" /></div>
-                <h2 className="text-4xl font-black mb-6 text-white font-cyber tracking-widest uppercase">Initialize Communication</h2>
-                <p className="text-gray-400 mb-10 text-lg font-display tracking-wide">Ready to collaborate on the next big thing? <br />Send the brief here and I will get it in Telegram.</p>
-                <form onSubmit={submitForm} className="space-y-4 text-left">
+                <div className="inline-block p-3 rounded-full bg-white/5 mb-4 md:mb-6 animate-bounce"><Icon name="mail" size={24} className="text-cyber-purple" /></div>
+                <h2 className="text-2xl md:text-4xl font-black mb-4 md:mb-6 text-white font-cyber tracking-widest uppercase">Initialize Communication</h2>
+                <p className="text-gray-400 mb-6 md:mb-10 text-sm md:text-lg font-display tracking-wide">Ready to collaborate on the next big thing? <br />Send the brief here and I will get it in Telegram.</p>
+                <form onSubmit={submitForm} className="space-y-3 md:space-y-4 text-left">
                     <input
                         type="text"
                         name="company"
@@ -215,7 +215,7 @@ const Contact = () => {
                                 value={form.name}
                                 onChange={updateField}
                                 maxLength="80"
-                                className="w-full rounded border border-white/15 bg-white/5 px-4 py-3 text-white outline-none transition-all focus:border-cyber-cyan focus:bg-white/8 font-display"
+                                className="w-full rounded border border-white/15 bg-white/5 px-3.5 py-2.5 md:px-4 md:py-3 text-white outline-none transition-all focus:border-cyber-cyan focus:bg-white/8 font-display"
                                 placeholder="Your name"
                             />
                         </label>
@@ -227,7 +227,7 @@ const Contact = () => {
                                 value={form.email}
                                 onChange={updateField}
                                 maxLength="120"
-                                className="w-full rounded border border-white/15 bg-white/5 px-4 py-3 text-white outline-none transition-all focus:border-cyber-cyan focus:bg-white/8 font-display"
+                                className="w-full rounded border border-white/15 bg-white/5 px-3.5 py-2.5 md:px-4 md:py-3 text-white outline-none transition-all focus:border-cyber-cyan focus:bg-white/8 font-display"
                                 placeholder="you@example.com"
                             />
                         </label>
@@ -240,7 +240,7 @@ const Contact = () => {
                             value={form.telegram}
                             onChange={updateField}
                             maxLength="64"
-                            className="w-full rounded border border-white/15 bg-white/5 px-4 py-3 text-white outline-none transition-all focus:border-cyber-cyan focus:bg-white/8 font-display"
+                            className="w-full rounded border border-white/15 bg-white/5 px-3.5 py-2.5 md:px-4 md:py-3 text-white outline-none transition-all focus:border-cyber-cyan focus:bg-white/8 font-display"
                             placeholder="@yourusername (optional)"
                         />
                     </label>
@@ -252,7 +252,7 @@ const Contact = () => {
                             onChange={updateField}
                             rows="6"
                             maxLength="2000"
-                            className="h-40 w-full resize-none overflow-y-auto rounded border border-white/15 bg-white/5 px-4 py-3 text-white outline-none transition-all focus:border-cyber-cyan focus:bg-white/8 font-display"
+                            className="h-24 md:h-40 w-full resize-none overflow-y-auto rounded border border-white/15 bg-white/5 px-3.5 py-2.5 md:px-4 md:py-3 text-white outline-none transition-all focus:border-cyber-cyan focus:bg-white/8 font-display"
                             placeholder="Tell me about the project, timeline, and what you need."
                         />
                     </label>
@@ -268,7 +268,7 @@ const Contact = () => {
                         <button
                             type="submit"
                             disabled={status === 'sending'}
-                            className="flex items-center justify-center gap-2 rounded bg-white px-8 py-4 font-bold text-black transition-all hover:bg-cyber-cyan hover:scale-[1.03] hover:shadow-[0_0_25px_rgba(34,211,238,0.25)] disabled:cursor-not-allowed disabled:opacity-70 tracking-wider uppercase text-xs md:text-sm"
+                            className="flex items-center justify-center gap-2 rounded bg-white px-6 py-3 md:px-8 md:py-4 font-bold text-black transition-all hover:bg-cyber-cyan hover:scale-[1.03] hover:shadow-[0_0_25px_rgba(34,211,238,0.25)] disabled:cursor-not-allowed disabled:opacity-70 tracking-wider uppercase text-xs md:text-sm"
                         >
                             <Icon name={status === 'success' ? 'check' : 'send'} size={18} />
                             {status === 'sending' ? 'Sending...' : 'Send Message'}
@@ -278,7 +278,7 @@ const Contact = () => {
                         </p>
                     </div>
                 </form>
-                <footer className="mt-24 pt-8 border-t border-white/5 text-gray-600 text-[10px] font-display tracking-widest uppercase flex flex-col md:flex-row justify-between items-center gap-4">
+                <footer className="mt-12 md:mt-24 pt-6 md:pt-8 border-t border-white/5 text-gray-600 text-[10px] font-display tracking-widest uppercase flex flex-col md:flex-row justify-between items-center gap-4">
                     <span>&copy; {new Date().getFullYear()} ALEVOLDON. All systems nominal.</span>
                     <div className="flex gap-4">
                         <a href="https://github.com/ALEVOLDON" target="_blank" rel="noopener noreferrer" className="hover:text-cyber-cyan transition-colors flex items-center gap-1">

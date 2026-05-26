@@ -1,9 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Icon from './Icon';
+import AudioService from '../services/AudioService';
 
 const Navbar = ({ activeSection, scrollTo }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [audioMode, setAudioMode] = useState(AudioService.mode);
+    const [prevActiveMode, setPrevActiveMode] = useState(localStorage.getItem('prevActiveAudioMode') || 'immersive');
     const navItems = ['Home', 'About', 'Projects', 'Brain', 'Contact'];
+
+    useEffect(() => {
+        const handleModeChange = (e) => {
+            const newMode = e.detail;
+            setAudioMode(newMode);
+            if (newMode !== 'silent') {
+                setPrevActiveMode(newMode);
+                localStorage.setItem('prevActiveAudioMode', newMode);
+            }
+        };
+        window.addEventListener('audioModeChanged', handleModeChange);
+        return () => window.removeEventListener('audioModeChanged', handleModeChange);
+    }, []);
+
+    const toggleMute = () => {
+        if (audioMode === 'silent') {
+            AudioService.setMode(prevActiveMode);
+        } else {
+            AudioService.setMode('silent');
+        }
+    };
 
     const handleMenuClick = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -31,8 +55,37 @@ const Navbar = ({ activeSection, scrollTo }) => {
                             {item}
                         </button>
                     ))}
+                    
+                    {/* Audio Quick Toggle Desktop */}
+                    <button
+                        onClick={toggleMute}
+                        className={`p-2 rounded-lg border transition-all duration-300 flex items-center justify-center gap-1.5 hover:scale-105 ${
+                            audioMode !== 'silent'
+                                ? 'border-cyber-cyan/30 text-cyber-cyan bg-cyber-cyan/5 shadow-[0_0_10px_rgba(34,211,238,0.15)] animate-pulse'
+                                : 'border-white/10 text-gray-500 hover:text-white hover:border-white/20'
+                        }`}
+                        title={audioMode !== 'silent' ? 'Mute Audio' : 'Unmute Audio'}
+                    >
+                        <Icon name={audioMode !== 'silent' ? "volume-2" : "volume-x"} size={16} />
+                        <span className="text-[9px] uppercase tracking-widest hidden lg:inline font-mono">
+                            {audioMode === 'silent' ? 'MUTE' : audioMode === 'ui' ? 'UI FX' : 'AMB'}
+                        </span>
+                    </button>
                 </div>
                 <div className="md:hidden relative flex items-center gap-2">
+                    {/* Audio Quick Toggle Mobile */}
+                    <button
+                        onClick={toggleMute}
+                        className={`p-2 rounded-lg border transition-all duration-300 flex items-center justify-center gap-1 hover:scale-105 ${
+                            audioMode !== 'silent'
+                                ? 'border-cyber-cyan/30 text-cyber-cyan bg-cyber-cyan/5 shadow-[0_0_10px_rgba(34,211,238,0.15)]'
+                                : 'border-white/10 text-gray-500 hover:text-white hover:border-white/20'
+                        }`}
+                        title={audioMode !== 'silent' ? 'Mute Audio' : 'Unmute Audio'}
+                    >
+                        <Icon name={audioMode !== 'silent' ? "volume-2" : "volume-x"} size={16} />
+                    </button>
+
                     <button
                         onClick={handleMenuClick}
                         className="text-white hover:text-cyber-cyan transition-colors p-2"

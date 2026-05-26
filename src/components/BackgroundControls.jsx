@@ -1,8 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Icon from './Icon';
+import AudioService from '../services/AudioService';
 
-const BackgroundControls = ({ bgConfig, setBgConfig }) => {
+const BackgroundControls = ({ bgConfig, setBgConfig, setShowSynth }) => {
     const [isOpen, setIsOpen] = useState(false);
+    const [audioMode, setAudioMode] = useState(AudioService.mode);
+
+    useEffect(() => {
+        const handleModeChange = (e) => {
+            setAudioMode(e.detail);
+        };
+        window.addEventListener('audioModeChanged', handleModeChange);
+        return () => window.removeEventListener('audioModeChanged', handleModeChange);
+    }, []);
+
+    const handleAudioModeChange = (modeId) => {
+        AudioService.setMode(modeId);
+    };
+
+    const audioModes = [
+        { id: 'silent', label: 'Silent', icon: '🔇', desc: 'Mute all sounds' },
+        { id: 'ui', label: 'UI FX', icon: '🎛️', desc: 'Hover & click feedback' },
+        { id: 'immersive', label: 'Ambient', icon: '🌌', desc: 'Full drone & spatial audio' }
+    ];
 
     const themes = [
         { id: 'cyber', label: 'Cyber', colors: ['#22d3ee', '#a855f7'], desc: 'Cyan + Purple' },
@@ -81,6 +101,28 @@ const BackgroundControls = ({ bgConfig, setBgConfig }) => {
                         </div>
                     </div>
 
+                    {/* Audio Matrix */}
+                    <div className="mb-4">
+                        <span className="block text-[9px] text-gray-400 uppercase tracking-[0.2em] mb-2 font-display">AUDIO MATRIX</span>
+                        <div className="grid grid-cols-3 gap-1.5">
+                            {audioModes.map(m => (
+                                <button
+                                    key={m.id}
+                                    onClick={() => handleAudioModeChange(m.id)}
+                                    className={`py-1.5 px-1 rounded text-center border text-[10px] transition-all duration-300 flex flex-col items-center justify-center font-display font-medium gap-0.5 ${
+                                        audioMode === m.id
+                                            ? 'border-cyber-cyan bg-cyber-cyan/10 text-white shadow-[0_0_15px_rgba(34,211,238,0.15)]'
+                                            : 'border-white/10 bg-transparent text-gray-400 hover:border-white/20 hover:text-white'
+                                    }`}
+                                    title={m.desc}
+                                >
+                                    <span className="text-sm">{m.icon}</span>
+                                    <span className="uppercase tracking-wider text-[8px] font-mono">{m.label}</span>
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+
                     {/* Sliders */}
                     <div className="space-y-4">
                         {/* Brightness */}
@@ -117,6 +159,18 @@ const BackgroundControls = ({ bgConfig, setBgConfig }) => {
                             />
                         </div>
                     </div>
+
+                    {/* Modular Console Toggle Button */}
+                    <button
+                        onClick={() => {
+                            setShowSynth(prev => !prev);
+                            setIsOpen(false); // Close drawer to keep screen tidy
+                        }}
+                        className="w-full mt-4 py-2 bg-gradient-to-r from-zinc-900 to-zinc-950 border border-white/10 hover:border-cyber-cyan/50 text-white hover:text-cyber-cyan text-xs font-cyber font-bold tracking-widest uppercase rounded-lg transition-all cursor-pointer flex items-center justify-center gap-1.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] hover:shadow-[0_0_10px_rgba(34,211,238,0.15)]"
+                    >
+                        <Icon name="sliders" size={14} className="animate-pulse" />
+                        <span>Patch Console</span>
+                    </button>
                 </div>
             )}
         </div>

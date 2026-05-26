@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import AudioService from '../services/AudioService';
 
 const CustomCursor = () => {
     const dotRef = useRef(null);
@@ -41,6 +42,7 @@ const CustomCursor = () => {
         };
 
         const onMouseDown = () => {
+            AudioService.playClick();
             setRingSize(24);
             if (ringRef.current) {
                 ringRef.current.classList.add('border-white', 'bg-white/10');
@@ -78,6 +80,7 @@ const CustomCursor = () => {
                 el.closest('.hoverable') ||
                 el.closest('.group')
             )) {
+                AudioService.playTick();
                 setRingSize(48);
                 if (ringRef.current) {
                     ringRef.current.classList.add('border-cyber-purple', 'bg-cyber-purple/5');
@@ -151,13 +154,13 @@ const CustomCursor = () => {
             {/* Inner Dot */}
             <div
                 ref={dotRef}
-                className="custom-cursor-dot fixed top-0 left-0 w-1.5 h-1.5 -ml-0.75 -mt-0.75 bg-cyber-cyan rounded-full pointer-events-none z-50 mix-blend-screen opacity-0 transition-opacity duration-300"
+                className="custom-cursor-dot fixed top-0 left-0 w-1.5 h-1.5 -ml-0.75 -mt-0.75 bg-cyber-cyan rounded-full pointer-events-none z-[9999] mix-blend-screen opacity-0 transition-opacity duration-300"
                 style={{ transform: 'translate3d(-100px, -100px, 0)' }}
             />
             {/* Outer Ring */}
             <div
                 ref={ringRef}
-                className="custom-cursor-ring fixed top-0 left-0 w-8 h-8 -ml-4 -mt-4 border-2 border-cyber-cyan/50 rounded-full pointer-events-none z-50 mix-blend-screen opacity-0 transition-opacity duration-300"
+                className="custom-cursor-ring fixed top-0 left-0 w-8 h-8 -ml-4 -mt-4 border-2 border-cyber-cyan/50 rounded-full pointer-events-none z-[9999] mix-blend-screen opacity-0 transition-opacity duration-300"
                 style={{ transform: 'translate3d(-100px, -100px, 0)' }}
             />
         </>

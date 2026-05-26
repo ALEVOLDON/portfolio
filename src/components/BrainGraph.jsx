@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { marked } from 'marked';
 import DOMPurify from 'dompurify';
+import AudioService from '../services/AudioService';
 import { 
   Search, 
   RotateCcw, 
@@ -15,6 +16,18 @@ import {
   ArrowLeft,
   ChevronRight
 } from 'lucide-react';
+
+const seededRandom = (value) => {
+  const text = String(value);
+  let hash = 2166136261;
+
+  for (let i = 0; i < text.length; i++) {
+    hash ^= text.charCodeAt(i);
+    hash = Math.imul(hash, 16777619);
+  }
+
+  return (hash >>> 0) / 4294967295;
+};
 
 const BrainGraph = () => {
   const [posts, setPosts] = useState([]);
@@ -121,8 +134,8 @@ const BrainGraph = () => {
         color: '#22d3ee', // cyber-cyan
         glowColor: 'rgba(34, 211, 238, 0.8)',
         data: post,
-        x: Math.random() * 500 - 250,
-        y: Math.random() * 500 - 250,
+        x: seededRandom(`${post.id}:x`) * 500 - 250,
+        y: seededRandom(`${post.id}:y`) * 500 - 250,
         vx: 0,
         vy: 0
       };
@@ -150,8 +163,8 @@ const BrainGraph = () => {
           color: '#a855f7', // cyber-purple
           glowColor: 'rgba(168, 85, 247, 0.8)',
           data: tag,
-          x: Math.random() * 500 - 250,
-          y: Math.random() * 500 - 250,
+          x: seededRandom(`${tag}:x`) * 500 - 250,
+          y: seededRandom(`${tag}:y`) * 500 - 250,
           vx: 0,
           vy: 0
         };
@@ -164,7 +177,7 @@ const BrainGraph = () => {
             links.push({
               source: `post-${post.id}`,
               target: `tag-${tag}`,
-              distance: 120 + Math.random() * 60
+              distance: 120 + seededRandom(`${post.id}:${tag}:distance`) * 60
             });
           }
         });
@@ -235,56 +248,10 @@ const BrainGraph = () => {
     try {
       const rawHtml = marked.parse(selectedPost.content || '');
       return DOMPurify.sanitize(rawHtml);
-    } catch (e) {
+    } catch {
       return selectedPost.content || '';
     }
   }, [selectedPost]);
-
-  // Non-passive wheel & touch event listener registration for page-scroll prevention and smooth interaction
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-
-    const handleWheel = (e) => {
-      e.preventDefault(); // Stop main page scrolling
-      
-      const zoomIntensity = 0.05;
-      const rect = canvas.getBoundingClientRect();
-      const mouseX = e.clientX - rect.left;
-      const mouseY = e.clientY - rect.top;
-
-      const transform = transformRef.current;
-      const currentScale = transform.scale;
-      
-      const zoomFactor = e.deltaY < 0 ? (1 + zoomIntensity) : (1 - zoomIntensity);
-      const newScale = Math.min(Math.max(0.1, currentScale * zoomFactor), 4);
-
-      const graphMouseX = (mouseX - transform.x) / currentScale;
-      const graphMouseY = (mouseY - transform.y) / currentScale;
-
-      transformRef.current = {
-        scale: newScale,
-        x: mouseX - graphMouseX * newScale,
-        y: mouseY - graphMouseY * newScale
-      };
-    };
-
-    const onTouchStart = (e) => handleTouchStart(e);
-    const onTouchMove = (e) => handleTouchMove(e);
-    const onTouchEnd = (e) => handleTouchEnd(e);
-
-    canvas.addEventListener('wheel', handleWheel, { passive: false });
-    canvas.addEventListener('touchstart', onTouchStart, { passive: false });
-    canvas.addEventListener('touchmove', onTouchMove, { passive: false });
-    canvas.addEventListener('touchend', onTouchEnd, { passive: false });
-
-    return () => {
-      canvas.removeEventListener('wheel', handleWheel);
-      canvas.removeEventListener('touchstart', onTouchStart);
-      canvas.removeEventListener('touchmove', onTouchMove);
-      canvas.removeEventListener('touchend', onTouchEnd);
-    };
-  }, []);
 
   // Main Render & Physics simulation loop (runs on mount only, using refs to avoid tearing down the canvas)
   useEffect(() => {
@@ -612,6 +579,15 @@ const BrainGraph = () => {
       // Update hover state only when changed to avoid React trigger spam
       if (currentHovered !== hoveredNodeRef.current) {
         setHoveredNode(currentHovered);
+        if (currentHovered) {
+          const canvas = canvasRef.current;
+          const transform = transformRef.current;
+          if (canvas && transform) {
+            const screenX = currentHovered.x * transform.scale + transform.x;
+            const xRatio = (screenX / canvas.width) * 2 - 1;
+            AudioService.playSpatialNode(currentHovered.type, xRatio);
+          }
+        }
       }
     }
   };
@@ -637,7 +613,7 @@ const BrainGraph = () => {
     isPanningRef.current = false;
   };
 
-  const handleTouchStart = (e) => {
+  function handleTouchStart(e) {
     if (e.touches.length === 1) {
       const touch = e.touches[0];
       const pos = screenToGraph(touch.clientX, touch.clientY);
@@ -678,9 +654,9 @@ const BrainGraph = () => {
       };
       e.preventDefault();
     }
-  };
+  }
 
-  const handleTouchMove = (e) => {
+  function handleTouchMove(e) {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -736,9 +712,9 @@ const BrainGraph = () => {
       };
       e.preventDefault();
     }
-  };
+  }
 
-  const handleTouchEnd = (e) => {
+  function handleTouchEnd(e) {
     if (dragNodeRef.current) {
       const node = dragNodeRef.current;
       let isTap = false;
@@ -769,7 +745,55 @@ const BrainGraph = () => {
 
     isPanningRef.current = false;
     touchStartTransformRef.current = null;
-  };
+  }
+
+  // Non-passive wheel & touch event listener registration for page-scroll prevention and smooth interaction
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const handleWheel = (e) => {
+      e.preventDefault(); // Stop main page scrolling
+
+      const zoomIntensity = 0.05;
+      const rect = canvas.getBoundingClientRect();
+      const mouseX = e.clientX - rect.left;
+      const mouseY = e.clientY - rect.top;
+
+      const transform = transformRef.current;
+      const currentScale = transform.scale;
+
+      const zoomFactor = e.deltaY < 0 ? (1 + zoomIntensity) : (1 - zoomIntensity);
+      const newScale = Math.min(Math.max(0.1, currentScale * zoomFactor), 4);
+
+      const graphMouseX = (mouseX - transform.x) / currentScale;
+      const graphMouseY = (mouseY - transform.y) / currentScale;
+
+      transformRef.current = {
+        scale: newScale,
+        x: mouseX - graphMouseX * newScale,
+        y: mouseY - graphMouseY * newScale
+      };
+    };
+
+    const onTouchStart = (e) => handleTouchStart(e);
+    const onTouchMove = (e) => handleTouchMove(e);
+    const onTouchEnd = (e) => handleTouchEnd(e);
+
+    canvas.addEventListener('wheel', handleWheel, { passive: false });
+    canvas.addEventListener('touchstart', onTouchStart, { passive: false });
+    canvas.addEventListener('touchmove', onTouchMove, { passive: false });
+    canvas.addEventListener('touchend', onTouchEnd, { passive: false });
+
+    return () => {
+      canvas.removeEventListener('wheel', handleWheel);
+      canvas.removeEventListener('touchstart', onTouchStart);
+      canvas.removeEventListener('touchmove', onTouchMove);
+      canvas.removeEventListener('touchend', onTouchEnd);
+    };
+    // The handlers read mutable refs, so this listener should be bound once for the canvas lifetime.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
 
   const handleResetLayout = () => {

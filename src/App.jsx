@@ -8,6 +8,8 @@ import Projects from './components/Projects';
 import BrainGraph from './components/BrainGraph';
 import Contact from './components/Contact';
 import ScrollToTop from './components/ScrollToTop';
+import AudioService from './services/AudioService';
+import ModularSynth from './components/ModularSynth';
 import {
   FALLBACK_PROFILE,
   FALLBACK_REPOS,
@@ -39,6 +41,7 @@ const App = () => {
     speed: 1.0,
     theme: 'cyber'
   });
+  const [showSynth, setShowSynth] = useState(false);
 
   useEffect(() => {
     const enableBackground = () => setShowBackground(true);
@@ -53,6 +56,17 @@ const App = () => {
       window.removeEventListener('keydown', enableBackground);
     };
   }, []);
+
+  // Setup global interaction listeners for AudioContext activation
+  useEffect(() => {
+    AudioService.setupInteractionListeners();
+    return () => AudioService.cleanupInteractionListeners();
+  }, []);
+
+  // Sync theme changes with the audio service
+  useEffect(() => {
+    AudioService.setTheme(bgConfig.theme);
+  }, [bgConfig.theme]);
 
   useEffect(() => {
     let cancelled = false;
@@ -144,7 +158,8 @@ const App = () => {
   return (
     <div className="relative w-full">
       <CustomCursor />
-      <BackgroundControls bgConfig={bgConfig} setBgConfig={setBgConfig} />
+      <BackgroundControls bgConfig={bgConfig} setBgConfig={setBgConfig} setShowSynth={setShowSynth} />
+      {showSynth && <ModularSynth onClose={() => setShowSynth(false)} />}
       <Suspense fallback={<StaticBackground />}>
         {showBackground ? <ThreeBackground {...bgConfig} /> : <StaticBackground />}
       </Suspense>

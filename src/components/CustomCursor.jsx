@@ -1,11 +1,8 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 const CustomCursor = () => {
     const dotRef = useRef(null);
     const ringRef = useRef(null);
-    const [isHovered, setIsHovered] = useState(false);
-    const [isClicked, setIsClicked] = useState(false);
-    const [isVisible, setIsVisible] = useState(false);
 
     const mouseRef = useRef({ x: -100, y: -100 });
     const ringPosRef = useRef({ x: -100, y: -100 });
@@ -17,16 +14,56 @@ const CustomCursor = () => {
 
         document.documentElement.classList.add('custom-cursor-active');
 
+        // Show cursor elements
+        if (dotRef.current) dotRef.current.style.opacity = '1';
+        if (ringRef.current) ringRef.current.style.opacity = '1';
+
+        const setRingSize = (size) => {
+            if (!ringRef.current) return;
+            const halfSize = size / 2;
+            ringRef.current.style.width = `${size}px`;
+            ringRef.current.style.height = `${size}px`;
+            ringRef.current.style.marginLeft = `${-halfSize}px`;
+            ringRef.current.style.marginTop = `${-halfSize}px`;
+        };
+
         const onMouseMove = (e) => {
             mouseRef.current.x = e.clientX;
             mouseRef.current.y = e.clientY;
-            setIsVisible(true);
+            
+            // Ensure they are visible when moving
+            if (dotRef.current && dotRef.current.style.opacity === '0') {
+                dotRef.current.style.opacity = '1';
+            }
+            if (ringRef.current && ringRef.current.style.opacity === '0') {
+                ringRef.current.style.opacity = '1';
+            }
         };
 
-        const onMouseDown = () => setIsClicked(true);
-        const onMouseUp = () => setIsClicked(false);
-        const onMouseLeave = () => setIsVisible(false);
-        const onMouseEnter = () => setIsVisible(true);
+        const onMouseDown = () => {
+            setRingSize(24);
+            if (ringRef.current) {
+                ringRef.current.classList.add('border-white', 'bg-white/10');
+            }
+        };
+
+        const onMouseUp = () => {
+            const isCurrentlyHovered = ringRef.current && ringRef.current.classList.contains('border-cyber-purple');
+            setRingSize(isCurrentlyHovered ? 48 : 32);
+            if (ringRef.current) {
+                ringRef.current.classList.remove('border-white', 'bg-white/10');
+            }
+        };
+
+        const onMouseLeave = () => {
+            if (dotRef.current) dotRef.current.style.opacity = '0';
+            if (ringRef.current) ringRef.current.style.opacity = '0';
+        };
+
+        const onMouseEnter = () => {
+            if (dotRef.current) dotRef.current.style.opacity = '1';
+            if (ringRef.current) ringRef.current.style.opacity = '1';
+        };
 
         const onMouseOver = (e) => {
             const el = e.target;
@@ -41,7 +78,10 @@ const CustomCursor = () => {
                 el.closest('.hoverable') ||
                 el.closest('.group')
             )) {
-                setIsHovered(true);
+                setRingSize(48);
+                if (ringRef.current) {
+                    ringRef.current.classList.add('border-cyber-purple', 'bg-cyber-purple/5');
+                }
             }
         };
 
@@ -58,7 +98,10 @@ const CustomCursor = () => {
                 el.closest('.hoverable') ||
                 el.closest('.group')
             )) {
-                setIsHovered(false);
+                setRingSize(32);
+                if (ringRef.current) {
+                    ringRef.current.classList.remove('border-cyber-purple', 'bg-cyber-purple/5');
+                }
             }
         };
 
@@ -103,23 +146,18 @@ const CustomCursor = () => {
         };
     }, []);
 
-    if (!isVisible) return null;
-
     return (
         <>
             {/* Inner Dot */}
             <div
                 ref={dotRef}
-                className="custom-cursor-dot fixed top-0 left-0 w-1.5 h-1.5 -ml-0.75 -mt-0.75 bg-cyber-cyan rounded-full pointer-events-none z-50 mix-blend-screen"
+                className="custom-cursor-dot fixed top-0 left-0 w-1.5 h-1.5 -ml-0.75 -mt-0.75 bg-cyber-cyan rounded-full pointer-events-none z-50 mix-blend-screen opacity-0 transition-opacity duration-300"
                 style={{ transform: 'translate3d(-100px, -100px, 0)' }}
             />
             {/* Outer Ring */}
             <div
                 ref={ringRef}
-                className={`custom-cursor-ring fixed top-0 left-0 w-8 h-8 -ml-4 -mt-4 border-2 border-cyber-cyan/50 rounded-full pointer-events-none z-50 mix-blend-screen
-                    ${isHovered ? 'scale-150 border-cyber-purple bg-cyber-purple/5' : ''}
-                    ${isClicked ? 'scale-75 border-white bg-white/10' : ''}
-                `}
+                className="custom-cursor-ring fixed top-0 left-0 w-8 h-8 -ml-4 -mt-4 border-2 border-cyber-cyan/50 rounded-full pointer-events-none z-50 mix-blend-screen opacity-0 transition-opacity duration-300"
                 style={{ transform: 'translate3d(-100px, -100px, 0)' }}
             />
         </>

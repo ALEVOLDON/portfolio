@@ -26,6 +26,7 @@
 - 🎨 **Tailwind CSS v4** styling
 - 🌌 **Three.js** animated, particle-based background
 - 🎛️ **Background Engine HUD Panel**: Floating diagnostics panel allowing users to adjust brightness, particle drift velocity, and morph colors between Cyber, Solar, Emerald, and Void themes over smooth LERP transitions.
+- 🔊 **Generative Sound Design & Modular Synth**: Real-time sound engine using native Web Audio API (ambient drone, UI ticks/clicks, and spatial graph audio) paired with a draggable virtual Eurorack Modular Synth console ("MODEL CZ-1") with custom rotary knobs (VCO, VCF, LFO, and Delay FX) that adapts as a bottom drawer on mobile.
 - 🖱️ **Hardware-Accelerated Custom Cursor**: Dual-layer pointer with trail effects, interactive scaling, and hover mixing modes.
 - 🔠 **Futuristic Typography**: Customized Google Fonts configuration utilizing Orbitron for titles/technical HUD displays and Space Grotesk for labels/interactive controls.
 - 🎬 **Cubic-Bezier Scroll Reveals**: Responsive slide-ins, staggered grid reveals, and neomorphic hover glows on metrics cards.
@@ -69,6 +70,14 @@
 - **Neomorphic Glows**: Custom interactive neon shadows that project from GitHub stats cards on hover.
 - **Modern Layout**: Responsive viewport grid with sticky navigation and automatic highlight observers.
 - **Volumetric 3D Avatar Hologram**: Renders a custom 3D head model with a hybrid material stack consisting of a dark semi-transparent glass base (acting as depth occlusion) and a downsampled glowing holographic point cloud (reducing vertex density for a matrix-like effect), complete with three independent gyroscopic scanner rings.
+
+### 🔊 Interactive Sound Design & Eurorack Synth
+- **Generative Audio Engine**: Zero-dependency Web Audio API implementation synthesizing audio on the fly with no asset footprint (0 KB).
+- **Dynamic Themed Ambient Drone**: Deep, breathing background drone built from pure sine waves, shifting base notes and LFO rates dynamically to match the visual theme (`cyber`, `solar`, `emerald`, `void`).
+- **Tactile UI Sound Effects**: Responsive ticks on button/link hovers, and organic double-pulse click sounds.
+- **Spatial Graph Audio**: Hovering over Mind Vault graph nodes calculates their screen position and maps it to a `StereoPannerNode` (left-to-right panning). Posts sound warmer; tags sound like high-pitched chimes.
+- **Virtual Eurorack Console (MODEL CZ-1)**: Draggable floating modular synth casing with custom rotary knobs tracking mouse/touch drags to adjust VCO frequency, tuning intervals, VCF cutoff, resonance Q, LFO speed, depth, and Delay FX time/feedback.
+- **Mobile Responsive Docking**: Docks as a compact bottom sheet on viewport widths $< 640px$, scaling down the knobs to `42px` to prevent screen crowding.
 
 ### 🧠 Mind Vault & Knowledge Graph
 - **Interactive 2D Canvas Physics Engine**: Features spring attraction (Hooke's Law), charge repulsion (Coulomb's Law with 400x softening to prevent infinite velocity spikes), and center-gravity pull.
@@ -118,11 +127,14 @@ src/
 │   ├── Hero.jsx
 │   ├── Icon.jsx
 │   ├── InteractiveAvatar.jsx  # 3D WebGL face-scan hologram
+│   ├── ModularSynth.jsx       # Draggable Eurorack modular synth widget
 │   ├── Navbar.jsx
 │   ├── Projects.jsx
+│   ├── RotaryKnob.jsx         # Mouse/touch vertical drag dial
 │   ├── ScrollToTop.jsx
 │   └── ThreeBackground.jsx    # WebGL background and particle shaders
 ├── services/            # API integrations
+│   ├── AudioService.js        # Web Audio API synthesizers & delay loop
 │   └── github.js        # GitHub data fetching & caching
 ├── App.jsx              # Main application layout
 ├── index.css            # Tailwind directives and global styles

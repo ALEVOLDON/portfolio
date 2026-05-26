@@ -22,7 +22,9 @@ import {
     X,
     Sliders,
     ChevronLeft,
-    ChevronRight
+    ChevronRight,
+    Volume2,
+    VolumeX
 } from 'lucide-react';
 
 const icons = {
@@ -48,7 +50,9 @@ const icons = {
     users: Users,
     x: X,
     'chevron-left': ChevronLeft,
-    'chevron-right': ChevronRight
+    'chevron-right': ChevronRight,
+    'volume-2': Volume2,
+    'volume-x': VolumeX
 };
 
 const Icon = ({ name, size = 24, className = '' }) => {

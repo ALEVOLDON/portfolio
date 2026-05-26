@@ -57,10 +57,20 @@ const App = () => {
     };
   }, []);
 
-  // Setup global interaction listeners for AudioContext activation
+  // Setup global interaction listeners for AudioContext activation and click sounds
   useEffect(() => {
     AudioService.setupInteractionListeners();
-    return () => AudioService.cleanupInteractionListeners();
+
+    const handleGlobalClick = () => {
+      AudioService.playClick();
+    };
+
+    window.addEventListener('click', handleGlobalClick);
+
+    return () => {
+      AudioService.cleanupInteractionListeners();
+      window.removeEventListener('click', handleGlobalClick);
+    };
   }, []);
 
   // Sync theme changes with the audio service

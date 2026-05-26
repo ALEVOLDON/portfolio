@@ -42,7 +42,6 @@ const CustomCursor = () => {
         };
 
         const onMouseDown = () => {
-            AudioService.playClick();
             setRingSize(24);
             if (ringRef.current) {
                 ringRef.current.classList.add('border-white', 'bg-white/10');

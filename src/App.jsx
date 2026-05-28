@@ -8,6 +8,7 @@ import Projects from './components/Projects';
 import BrainGraph from './components/BrainGraph';
 import Contact from './components/Contact';
 import ScrollToTop from './components/ScrollToTop';
+import SpotifyPlayer from './components/SpotifyPlayer';
 import AudioService from './services/AudioService';
 import ModularSynth from './components/ModularSynth';
 import {
@@ -174,6 +175,7 @@ const App = () => {
         {showBackground ? <ThreeBackground {...bgConfig} /> : <StaticBackground />}
       </Suspense>
       <Navbar activeSection={activeSection} scrollTo={scrollTo} />
+      <SpotifyPlayer />
       <main>
         <Hero profile={profile} loading={loading} scrollTo={scrollTo} />
         <About profile={profile} readme={readme} stats={stats} />

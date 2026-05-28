@@ -27,6 +27,9 @@
 - 🌌 **Three.js** animated, particle-based background
 - 🎛️ **Background Engine HUD Panel**: Floating diagnostics panel allowing users to adjust brightness, particle drift velocity, and morph colors between Cyber, Solar, Emerald, and Void themes over smooth LERP transitions.
 - 🔊 **Generative Sound Design & Modular Synth**: Real-time sound engine using native Web Audio API (ambient drone, UI ticks/clicks, and spatial graph audio) paired with a draggable virtual Eurorack Modular Synth console ("MODEL CZ-1") with custom rotary knobs (VCO, VCF, LFO, and Delay FX) that adapts as a bottom drawer on mobile.
+- 💊 **Holographic Capsule Navbar**: Centered, floating glassmorphic nav bar with sub-pixel gradient borders and an elastic background highlight tracker that slides behind active links.
+- 🪐 **3D Planetary Ring Logo**: An interactive 3D spinning text logo representing a planetary orbit, displaying alternating text (like `ALEVOLDON` and `METAVERSE`) wrapped in 3D coordinates.
+- 🎵 **Spotify Soundtrack Sidebar Widget**: Global slide-out glass drawer containing a streaming Spotify playlist, triggered by an animated floating player button on the screen edge.
 - 🖱️ **Hardware-Accelerated Custom Cursor**: Dual-layer pointer with trail effects, interactive scaling, and hover mixing modes.
 - 🔠 **Futuristic Typography**: Customized Google Fonts configuration utilizing Orbitron for titles/technical HUD displays and Space Grotesk for labels/interactive controls.
 - 🎬 **Cubic-Bezier Scroll Reveals**: Responsive slide-ins, staggered grid reveals, and neomorphic hover glows on metrics cards.
@@ -65,6 +68,9 @@
 
 ### 🎨 Portfolio UI & UX
 - **Interactive Ambient Engine**: Control panel widget for real-time background shader updates. Adjust brightness (0.2x to 2.0x), time velocity (0.0x to 2.5x to pause/speed drift), and smoothly transition color presets in the GPU loop.
+- **Holographic Capsule Navbar**: Centered, floating glassmorphic nav bar with sub-pixel gradient borders (cyan-to-purple) using CSS masking techniques. Features an elastic background highlight tracker that slides behind active links and is synced with Web Audio tick triggers on hover.
+- **3D Planetary Ring Logo**: Custom 3D spinning text logo representing a planetary orbit, displaying alternating text (like `ALEVOLDON` and `METAVERSE`) wrapped in 3D coordinates. Speeds up and glows brighter on hover.
+- **Spotify Soundtrack Sidebar Widget**: Global slide-out glass drawer containing a streaming Spotify playlist, triggered by an animated floating player button on the screen edge. Includes a spinning record icon, pulsing neon indicator, and closed overlay click handler.
 - **Lag-Free Cursor Trails**: Hardware-accelerated custom cursor dot and trail ring that rescales on hover and auto-disables on touchscreen devices.
 - **Staggered Animations**: Directional scroll reveals driven by CSS cubic-bezier transitions as page sections come into view.
 - **Neomorphic Glows**: Custom interactive neon shadows that project from GitHub stats cards on hover.
@@ -132,6 +138,7 @@ src/
 │   ├── Projects.jsx
 │   ├── RotaryKnob.jsx         # Mouse/touch vertical drag dial
 │   ├── ScrollToTop.jsx
+│   ├── SpotifyPlayer.jsx      # Global slide-out Spotify player widget
 │   └── ThreeBackground.jsx    # WebGL background and particle shaders
 ├── services/            # API integrations
 │   ├── AudioService.js        # Web Audio API synthesizers & delay loop

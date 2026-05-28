@@ -4,7 +4,7 @@ import InteractiveAvatar from './InteractiveAvatar';
 
 const Hero = ({ profile, loading, scrollTo }) => {
     return (
-        <section id="home" className="min-h-screen flex items-center justify-center px-6 pt-20 relative overflow-hidden">
+        <section id="home" className="min-h-screen md:h-screen flex items-center justify-center px-6 pt-20 relative overflow-hidden">
             <div className="max-w-4xl w-full text-center z-10">
                 {loading ? (
                     <div className="flex justify-center"><div className="animate-spin text-cyber-cyan"><Icon name="loader-2" size={48} /></div></div>
@@ -34,7 +34,7 @@ const Hero = ({ profile, loading, scrollTo }) => {
             </div>
             
             {/* Scroll Down Indicator */}
-            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-gray-500 font-mono text-[10px] uppercase tracking-widest pointer-events-none reveal" style={{ transitionDelay: '500ms' }}>
+            <div className="absolute bottom-12 left-0 right-0 mx-auto w-fit hidden md:flex flex-col items-center gap-2 text-gray-500 font-mono text-[10px] uppercase tracking-widest pointer-events-none opacity-60 hover:opacity-100 transition-opacity duration-300">
                 <span>Scroll Down</span>
                 <div className="w-5 h-8 border-2 border-gray-500 rounded-full flex justify-center p-1">
                     <div className="w-1.5 h-1.5 bg-cyber-cyan rounded-full animate-bounce"></div>

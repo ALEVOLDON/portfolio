@@ -24,7 +24,12 @@ import {
     ChevronLeft,
     ChevronRight,
     Volume2,
-    VolumeX
+    VolumeX,
+    Music,
+    Waves,
+    Sparkles,
+    Headphones,
+    Disc
 } from 'lucide-react';
 
 const icons = {
@@ -52,7 +57,12 @@ const icons = {
     'chevron-left': ChevronLeft,
     'chevron-right': ChevronRight,
     'volume-2': Volume2,
-    'volume-x': VolumeX
+    'volume-x': VolumeX,
+    music: Music,
+    waves: Waves,
+    sparkles: Sparkles,
+    headphones: Headphones,
+    disc: Disc
 };
 
 const Icon = ({ name, size = 24, className = '' }) => {

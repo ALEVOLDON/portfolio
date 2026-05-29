@@ -26,7 +26,7 @@ const SpotifyPlayer = () => {
                     <div className="flex items-center justify-center relative">
                         {/* Pulse effect rings */}
                         <span className="absolute -inset-1 rounded-full bg-cyber-cyan/20 animate-ping opacity-75"></span>
-                        <Icon name="music" size={20} className="relative z-10 animate-[spin_8s_linear_infinite]" />
+                        <Icon name="headphones" size={20} className="relative z-10" />
                     </div>
                 )}
             </button>

@@ -19,9 +19,9 @@ const BackgroundControls = ({ bgConfig, setBgConfig, setShowSynth }) => {
     };
 
     const audioModes = [
-        { id: 'silent', label: 'Silent', icon: '🔇', desc: 'Mute all sounds' },
-        { id: 'ui', label: 'UI FX', icon: '🎛️', desc: 'Hover & click feedback' },
-        { id: 'immersive', label: 'Ambient', icon: '🌌', desc: 'Full drone & spatial audio' }
+        { id: 'silent', label: 'Silent', icon: 'volume-x', desc: 'Mute all sounds' },
+        { id: 'ui', label: 'UI FX', icon: 'sliders', desc: 'Hover & click feedback' },
+        { id: 'immersive', label: 'Ambient', icon: 'waves', desc: 'Full drone & spatial audio' }
     ];
 
     const themes = [
@@ -116,7 +116,7 @@ const BackgroundControls = ({ bgConfig, setBgConfig, setShowSynth }) => {
                                     }`}
                                     title={m.desc}
                                 >
-                                    <span className="text-sm">{m.icon}</span>
+                                    <Icon name={m.icon} size={16} className={audioMode === m.id ? 'text-cyber-cyan' : 'text-neutral-400 group-hover:text-white'} />
                                     <span className="uppercase tracking-wider text-[8px] font-mono">{m.label}</span>
                                 </button>
                             ))}

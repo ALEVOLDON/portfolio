@@ -193,7 +193,7 @@ const Contact = () => {
         <section id="contact" className="py-16 md:py-32 px-6 bg-gradient-to-t from-black via-black to-transparent relative z-10">
             <div className="max-w-2xl mx-auto text-center reveal">
                 <div className="inline-block p-3 rounded-full bg-white/5 mb-4 md:mb-6 animate-bounce"><Icon name="mail" size={24} className="text-cyber-purple" /></div>
-                <h2 className="text-2xl md:text-4xl font-black mb-4 md:mb-6 text-white font-cyber tracking-widest uppercase">Initialize Communication</h2>
+                <h2 className="text-2xl md:text-4xl font-black mb-4 md:mb-6 text-white font-cyber tracking-widest uppercase cyber-glitch" data-text="INITIALIZE COMMUNICATION">Initialize Communication</h2>
                 <p className="text-gray-400 mb-6 md:mb-10 text-sm md:text-lg font-display tracking-wide">Ready to collaborate on the next big thing? <br />Send the brief here and I will get it in Telegram.</p>
                 <form onSubmit={submitForm} className="space-y-3 md:space-y-4 text-left">
                     <input
@@ -208,7 +208,7 @@ const Contact = () => {
                     />
                     <div className="grid gap-4 sm:grid-cols-2">
                         <label className="block">
-                            <span className="mb-2 block text-[10px] font-bold font-display uppercase tracking-[0.25em] text-gray-500">Name</span>
+                            <span className="mb-2 block text-[10px] font-bold font-display uppercase tracking-[0.25em] text-zinc-400">Name</span>
                             <input
                                 type="text"
                                 name="name"
@@ -220,7 +220,7 @@ const Contact = () => {
                             />
                         </label>
                         <label className="block">
-                            <span className="mb-2 block text-[10px] font-bold font-display uppercase tracking-[0.25em] text-gray-500">Email</span>
+                            <span className="mb-2 block text-[10px] font-bold font-display uppercase tracking-[0.25em] text-zinc-400">Email</span>
                             <input
                                 type="email"
                                 name="email"
@@ -233,7 +233,7 @@ const Contact = () => {
                         </label>
                     </div>
                     <label className="block">
-                        <span className="mb-2 block text-[10px] font-bold font-display uppercase tracking-[0.25em] text-gray-500">Telegram</span>
+                        <span className="mb-2 block text-[10px] font-bold font-display uppercase tracking-[0.25em] text-zinc-400">Telegram</span>
                         <input
                             type="text"
                             name="telegram"
@@ -245,7 +245,7 @@ const Contact = () => {
                         />
                     </label>
                     <label className="block">
-                        <span className="mb-2 block text-[10px] font-bold font-display uppercase tracking-[0.25em] text-gray-500">Message</span>
+                        <span className="mb-2 block text-[10px] font-bold font-display uppercase tracking-[0.25em] text-zinc-400">Message</span>
                         <textarea
                             name="message"
                             value={form.message}
@@ -278,7 +278,7 @@ const Contact = () => {
                         </p>
                     </div>
                 </form>
-                <footer className="mt-12 md:mt-24 pt-6 md:pt-8 border-t border-white/5 text-gray-600 text-[10px] font-display tracking-widest uppercase flex flex-col md:flex-row justify-between items-center gap-4">
+                <footer className="mt-12 md:mt-24 pt-6 md:pt-8 border-t border-white/5 text-zinc-500 text-[10px] font-display tracking-widest uppercase flex flex-col md:flex-row justify-between items-center gap-4">
                     <span>&copy; {new Date().getFullYear()} ALEVOLDON. All systems nominal.</span>
                     <div className="flex gap-4">
                         <a href="https://github.com/ALEVOLDON" target="_blank" rel="noopener noreferrer" className="hover:text-cyber-cyan transition-colors flex items-center gap-1">

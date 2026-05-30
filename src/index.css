@@ -309,6 +309,152 @@ input[type="range"]::-webkit-slider-thumb:hover {
     filter: drop-shadow(0 0 6px rgba(34, 211, 238, 0.8));
 }
 
+/* Cyber Grid Overlay */
+.cyber-grid-overlay {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    background-image: 
+        linear-gradient(var(--grid-color, rgba(34, 211, 238, 0.012)) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-color, rgba(34, 211, 238, 0.012)) 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: center;
+    opacity: 0.8;
+    mask-image: radial-gradient(circle at 50% 50%, black 20%, rgba(0, 0, 0, 0.35) 60%, transparent 95%);
+    -webkit-mask-image: radial-gradient(circle at 50% 50%, black 20%, rgba(0, 0, 0, 0.35) 60%, transparent 95%);
+    transition: background-image 0.5s ease;
+}
+
+/* Theme-specific grid color mappings */
+body:has(.theme-cyber), .theme-cyber {
+    --grid-color: rgba(34, 211, 238, 0.015);
+}
+body:has(.theme-solar), .theme-solar {
+    --grid-color: rgba(242, 153, 74, 0.018);
+}
+body:has(.theme-emerald), .theme-emerald {
+    --grid-color: rgba(34, 197, 94, 0.015);
+}
+body:has(.theme-void), .theme-void {
+    --grid-color: rgba(209, 213, 219, 0.015);
+}
+
+/* Tech Corners brackets */
+.tech-corners {
+    position: relative;
+    --corner-color: rgba(255, 255, 255, 0.15);
+}
+.tech-corners::before, .tech-corners::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    pointer-events: none;
+    border-color: var(--corner-color);
+    transition: opacity 0.3s ease, border-color 0.3s ease, transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    z-index: 10;
+}
+.tech-corners::before {
+    top: 0;
+    left: 0;
+    border-top: 1.5px solid;
+    border-left: 1.5px solid;
+    transform: translate(-1px, -1px);
+}
+.tech-corners::after {
+    bottom: 0;
+    right: 0;
+    border-bottom: 1.5px solid;
+    border-right: 1.5px solid;
+    transform: translate(1px, 1px);
+}
+.tech-corners:hover::before {
+    transform: translate(-4px, -4px);
+}
+.tech-corners:hover::after {
+    transform: translate(4px, 4px);
+}
+
+/* Corner color variants */
+.corners-cyan {
+    --corner-color: rgba(34, 211, 238, 0.35);
+}
+.corners-cyan:hover {
+    --corner-color: rgba(34, 211, 238, 0.95);
+}
+.corners-purple {
+    --corner-color: rgba(168, 85, 247, 0.35);
+}
+.corners-purple:hover {
+    --corner-color: rgba(168, 85, 247, 0.95);
+}
+.corners-pink {
+    --corner-color: rgba(236, 72, 153, 0.35);
+}
+.corners-pink:hover {
+    --corner-color: rgba(236, 72, 153, 0.95);
+}
+.corners-white {
+    --corner-color: rgba(255, 255, 255, 0.15);
+}
+.corners-white:hover {
+    --corner-color: rgba(255, 255, 255, 0.75);
+}
+
+/* Sci-fi digital glitch animation */
+.cyber-glitch {
+    position: relative;
+}
+.cyber-glitch:hover::before, .cyber-glitch:hover::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #050505;
+    overflow: hidden;
+}
+.cyber-glitch:hover::before {
+    left: 2px;
+    text-shadow: -1.5px 0 #22d3ee;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim-1 1.2s infinite linear alternate-reverse;
+}
+.cyber-glitch:hover::after {
+    left: -2px;
+    text-shadow: -1.5px 0 #a855f7;
+    clip: rect(85px, 450px, 140px, 0);
+    animation: glitch-anim-2 1.2s infinite linear alternate-reverse;
+}
+@keyframes glitch-anim-1 {
+    0% { clip: rect(10px, 9999px, 30px, 0); }
+    10% { clip: rect(65px, 9999px, 85px, 0); }
+    20% { clip: rect(30px, 9999px, 50px, 0); }
+    30% { clip: rect(90px, 9999px, 110px, 0); }
+    40% { clip: rect(15px, 9999px, 45px, 0); }
+    50% { clip: rect(70px, 9999px, 95px, 0); }
+    60% { clip: rect(40px, 9999px, 60px, 0); }
+    70% { clip: rect(80px, 9999px, 120px, 0); }
+    80% { clip: rect(25px, 9999px, 55px, 0); }
+    90% { clip: rect(50px, 9999px, 75px, 0); }
+    100% { clip: rect(5px, 9999px, 35px, 0); }
+}
+@keyframes glitch-anim-2 {
+    0% { clip: rect(75px, 9999px, 105px, 0); }
+    10% { clip: rect(15px, 9999px, 35px, 0); }
+    20% { clip: rect(85px, 9999px, 115px, 0); }
+    30% { clip: rect(45px, 9999px, 65px, 0); }
+    40% { clip: rect(95px, 9999px, 125px, 0); }
+    50% { clip: rect(20px, 9999px, 40px, 0); }
+    60% { clip: rect(60px, 9999px, 80px, 0); }
+    70% { clip: rect(110px, 9999px, 130px, 0); }
+    80% { clip: rect(35px, 9999px, 65px, 0); }
+    90% { clip: rect(90px, 9999px, 110px, 0); }
+    100% { clip: rect(55px, 9999px, 85px, 0); }
+}
+
 
 
 

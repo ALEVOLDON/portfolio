@@ -29,7 +29,7 @@ const About = ({ profile, readme, stats }) => {
             <div className="max-w-7xl mx-auto">
                 <div className="flex items-center gap-4 mb-16 reveal">
                     <div className="h-px bg-cyber-cyan w-12"></div>
-                    <h2 className="text-3xl font-black text-white uppercase tracking-widest font-cyber">System Analytics</h2>
+                    <h2 className="text-3xl font-black text-white uppercase tracking-widest font-cyber cyber-glitch" data-text="SYSTEM ANALYTICS">System Analytics</h2>
                     <div className="h-px bg-white/10 flex-grow"></div>
                 </div>
 
@@ -39,7 +39,7 @@ const About = ({ profile, readme, stats }) => {
                     <div className="lg:col-span-5 space-y-4">
 
                         {/* 1. Main Stats Panel (Visual Match to Screenshot) */}
-                        <div className="bg-cyber-dark border border-white/10 rounded-xl p-5 hover:border-cyber-purple/50 hover:shadow-[0_0_25px_rgba(168,85,247,0.15)] transition-all duration-300 reveal reveal-left">
+                        <div className="bg-cyber-dark border border-white/10 rounded-xl p-5 hover:border-cyber-purple/50 hover:shadow-[0_0_25px_rgba(168,85,247,0.15)] transition-all duration-300 reveal reveal-left tech-corners corners-purple">
                             <h3 className="text-sm font-bold text-cyber-purple mb-4 flex items-center gap-2 uppercase tracking-widest font-cyber">
                                 {profile?.name || "User"}'s GitHub Stats
                             </h3>
@@ -64,7 +64,7 @@ const About = ({ profile, readme, stats }) => {
                         </div>
 
                         {/* 2. Languages Panel (Visual Match to Screenshot) */}
-                        <div className="bg-cyber-dark border border-white/10 rounded-xl p-5 hover:border-cyber-cyan/50 hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition-all duration-300 reveal reveal-left" style={{ transitionDelay: '100ms' }}>
+                        <div className="bg-cyber-dark border border-white/10 rounded-xl p-5 hover:border-cyber-cyan/50 hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition-all duration-300 reveal reveal-left tech-corners corners-cyan" style={{ transitionDelay: '100ms' }}>
                             <h3 className="text-sm font-bold text-cyber-cyan mb-4 flex items-center gap-2 uppercase tracking-widest font-cyber">
                                 Most Used Languages
                             </h3>
@@ -80,7 +80,7 @@ const About = ({ profile, readme, stats }) => {
                                             <div key={index} className="flex items-center gap-2 text-xs">
                                                 <span className="w-2 h-2 rounded-full" style={{ backgroundColor: langColors[lang.name] || langColors['Other'] }}></span>
                                                 <span className="text-gray-300">{lang.name}</span>
-                                                <span className="text-gray-500 ml-auto font-cyber">{lang.percent}%</span>
+                                                <span className="text-zinc-400 ml-auto font-cyber">{lang.percent}%</span>
                                             </div>
                                         ))}
                                     </div>
@@ -91,13 +91,13 @@ const About = ({ profile, readme, stats }) => {
                         </div>
 
                         {/* 3. Activity/Streaks Panel (Visual Match to Screenshot) */}
-                        <div className="bg-cyber-dark border border-white/10 rounded-xl p-6 hover:border-pink-500/50 hover:shadow-[0_0_25px_rgba(236,72,153,0.15)] transition-all duration-300 flex items-center justify-between reveal reveal-left font-display" style={{ transitionDelay: '200ms' }}>
+                        <div className="bg-cyber-dark border border-white/10 rounded-xl p-6 hover:border-pink-500/50 hover:shadow-[0_0_25px_rgba(236,72,153,0.15)] transition-all duration-300 flex items-center justify-between reveal reveal-left font-display tech-corners corners-pink" style={{ transitionDelay: '200ms' }}>
                             <div className="text-center">
                                 <div className="text-2xl font-bold text-pink-500 mb-1 font-cyber">
                                     {stats?.totalSize > 1024 ? `${(stats.totalSize / 1024).toFixed(1)}MB` : `${stats.totalSize}KB`}
                                 </div>
                                 <div className="text-[10px] text-gray-400 uppercase tracking-widest font-display">Total Code Volume</div>
-                                <div className="text-[10px] text-gray-600 mt-1">Estimated size</div>
+                                <div className="text-[10px] text-zinc-500 mt-1">Estimated size</div>
                             </div>
 
                             <div className="flex flex-col items-center">
@@ -110,13 +110,13 @@ const About = ({ profile, readme, stats }) => {
                                     <div className="absolute text-2xl font-black text-white font-cyber">{getYearsActive(profile?.created_at)}</div>
                                 </div>
                                 <div className="text-xs font-bold text-cyber-cyan uppercase tracking-wider font-display">Years Active</div>
-                                <div className="text-[10px] text-gray-500">Since {profile?.created_at ? new Date(profile.created_at).getFullYear() : 'Unknown'}</div>
+                                <div className="text-[10px] text-zinc-400">Since {profile?.created_at ? new Date(profile.created_at).getFullYear() : 'Unknown'}</div>
                             </div>
 
                             <div className="text-center">
                                 <div className="text-2xl font-bold text-pink-500 mb-1 font-cyber">{profile?.public_repos || 0}</div>
                                 <div className="text-[10px] text-gray-400 uppercase tracking-widest font-display">Public Projects</div>
-                                <div className="text-[10px] text-gray-600 mt-1">Open Source</div>
+                                <div className="text-[10px] text-zinc-500 mt-1">Open Source</div>
                             </div>
                         </div>
 
@@ -124,7 +124,7 @@ const About = ({ profile, readme, stats }) => {
 
                     {/* RIGHT COLUMN: README */}
                     <div className="lg:col-span-7 reveal reveal-right" style={{ transitionDelay: '300ms' }}>
-                        <div className="h-full p-8 bg-cyber-dark/80 border border-white/10 hover:border-white/20 hover:shadow-[0_0_30px_rgba(255,255,255,0.02)] rounded-xl relative overflow-hidden group min-h-[500px] transition-all duration-300">
+                        <div className="h-full p-8 bg-cyber-dark/80 border border-white/10 hover:border-white/20 hover:shadow-[0_0_30px_rgba(255,255,255,0.02)] rounded-xl relative overflow-hidden group min-h-[500px] transition-all duration-300 tech-corners corners-white">
                             <div className="absolute -right-10 -top-10 opacity-5 group-hover:opacity-10 transition-opacity transform rotate-12">
                                 <Icon name="file-code" size={300} />
                             </div>

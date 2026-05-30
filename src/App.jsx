@@ -167,13 +167,14 @@ const App = () => {
   }, [loading]);
 
   return (
-    <div className="relative w-full">
+    <div className={`relative w-full theme-${bgConfig.theme}`}>
       <CustomCursor />
       <BackgroundControls bgConfig={bgConfig} setBgConfig={setBgConfig} setShowSynth={setShowSynth} />
       {showSynth && <ModularSynth onClose={() => setShowSynth(false)} />}
       <Suspense fallback={<StaticBackground />}>
         {showBackground ? <ThreeBackground {...bgConfig} /> : <StaticBackground />}
       </Suspense>
+      <div className="cyber-grid-overlay" />
       <Navbar activeSection={activeSection} scrollTo={scrollTo} />
       <SpotifyPlayer />
       <main>

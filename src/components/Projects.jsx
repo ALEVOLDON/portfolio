@@ -117,10 +117,10 @@ const Projects = ({ repos, loading }) => {
         <section id="projects" className="py-24 px-6 relative z-10">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16 reveal">
-                    <h2 className="text-4xl md:text-6xl font-black mb-4 font-cyber tracking-widest">
+                    <h2 className="text-4xl md:text-6xl font-black mb-4 font-cyber tracking-widest cyber-glitch" data-text="SELECTED WORKS">
                         SELECTED <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyber-purple to-cyber-cyan">WORKS</span>
                     </h2>
-                    <p className="text-gray-500 font-display uppercase tracking-widest text-xs mb-8">Exploring the repository matrix</p>
+                    <p className="text-zinc-400 font-display uppercase tracking-widest text-xs mb-8">Exploring the repository matrix</p>
 
                     {/* Filter Bar */}
                     <div className="flex flex-wrap justify-center gap-3">
@@ -182,7 +182,7 @@ const Projects = ({ repos, loading }) => {
                                                 target="_blank" 
                                                 rel="noopener noreferrer" 
                                                 onDragStart={(e) => e.preventDefault()}
-                                                className="group relative bg-cyber-dark border border-white/10 rounded-xl overflow-hidden hover:border-cyber-cyan/50 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] flex flex-col h-full select-none cursor-pointer"
+                                                className="group relative bg-cyber-dark border border-white/10 rounded-xl overflow-hidden hover:border-cyber-cyan/50 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] flex flex-col h-full select-none cursor-pointer tech-corners corners-cyan"
                                             >
                                                 <div className="w-full h-48 overflow-hidden border-b border-white/5 relative">
                                                     <GenerativeThumbnail seedStr={repo.name} />
@@ -195,7 +195,7 @@ const Projects = ({ repos, loading }) => {
                                                     </div>
                                                     <h3 className="text-lg font-black text-white mb-2 group-hover:text-cyber-cyan transition-colors font-cyber tracking-wide">{repo.name}</h3>
                                                     <p className="text-gray-400 text-sm mb-6 flex-grow line-clamp-3 font-sans leading-relaxed">{repo.description || "No description provided."}</p>
-                                                    <div className="flex items-center justify-between text-xs font-bold text-gray-500 pt-4 border-t border-white/5 mt-auto font-display tracking-wider uppercase">
+                                                    <div className="flex items-center justify-between text-xs font-bold text-zinc-400 pt-4 border-t border-white/5 mt-auto font-display tracking-wider uppercase">
                                                         <div className="flex items-center gap-2"><span className={`w-2 h-2 rounded-full ${getLangColor(repo.language)}`}></span>{repo.language || 'Code'}</div>
                                                         <div className="flex gap-4 font-cyber">
                                                             <span className="flex items-center gap-1 hover:text-yellow-400 transition-colors"><Icon name="star" size={12} /> {repo.stargazers_count}</span>

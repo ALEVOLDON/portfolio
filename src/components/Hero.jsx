@@ -21,10 +21,18 @@ const Hero = ({ profile, loading, scrollTo }) => {
                                 {profile?.bio || "Building the future of the web."}
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <button onClick={() => scrollTo('projects')} className="px-8 py-3 bg-cyber-cyan text-black font-bold rounded hover:bg-white transition hover:scale-105 shadow-[0_0_20px_rgba(34,211,238,0.3)] flex items-center justify-center gap-2 font-display tracking-wider uppercase text-xs md:text-sm">
+                                <button 
+                                    onClick={() => scrollTo('projects')} 
+                                    className="px-8 py-3 bg-cyber-cyan text-black font-bold rounded-full hover:bg-white transition-all duration-300 hover:scale-105 shadow-[0_0_20px_rgba(34,211,238,0.3)] hover:shadow-[0_0_25px_rgba(34,211,238,0.55)] flex items-center justify-center gap-2 font-display tracking-wider uppercase text-xs md:text-sm cursor-pointer"
+                                >
                                     <Icon name="terminal" size={20} /> View Projects
                                 </button>
-                                <a href={profile?.html_url} target="_blank" rel="noopener noreferrer" className="px-8 py-3 border border-white/20 rounded font-bold hover:bg-white/10 transition flex items-center justify-center gap-2 font-display tracking-wider uppercase text-xs md:text-sm">
+                                <a 
+                                    href={profile?.html_url} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="px-8 py-3 border border-white/20 hover:border-cyber-cyan text-white hover:text-cyber-cyan rounded-full font-bold hover:bg-cyber-cyan/10 hover:scale-105 hover:shadow-[0_0_20px_rgba(34,211,238,0.25)] transition-all duration-300 flex items-center justify-center gap-2 font-display tracking-wider uppercase text-xs md:text-sm"
+                                >
                                     <Icon name="github" size={20} /> GitHub Profile
                                 </a>
                             </div>

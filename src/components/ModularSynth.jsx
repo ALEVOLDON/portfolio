@@ -233,7 +233,7 @@ const ModularSynth = ({ onClose }) => {
                 <div className="flex gap-2">
                     <button
                         onClick={handleReset}
-                        className="px-2.5 py-1 rounded bg-white/5 hover:bg-white/10 text-neutral-400 hover:text-white border border-white/5 text-[9px] uppercase tracking-wider transition-colors cursor-pointer"
+                        className="px-2.5 py-1 rounded-full bg-white/5 hover:bg-white/10 text-neutral-400 hover:text-white border border-white/5 text-[9px] uppercase tracking-wider transition-colors cursor-pointer"
                         title="Restore visual theme default values"
                     >
                         Reset

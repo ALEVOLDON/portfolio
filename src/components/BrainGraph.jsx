@@ -899,7 +899,7 @@ const BrainGraph = () => {
             {/* Toggle tag nodes */}
             <button 
               onClick={() => setShowTags(prev => !prev)}
-              className={`px-4 py-2.5 border rounded-xl text-xs font-semibold backdrop-blur-md transition-all flex items-center gap-2 ${
+              className={`px-4 py-2.5 border rounded-full text-xs font-semibold backdrop-blur-md transition-all flex items-center gap-2 cursor-pointer ${
                 showTags 
                   ? 'bg-cyber-purple/10 border-cyber-purple/30 text-cyber-purple hover:bg-cyber-purple/20' 
                   : 'bg-cyber-dark/40 border-white/5 text-gray-400 hover:text-white hover:border-white/10'
@@ -912,7 +912,7 @@ const BrainGraph = () => {
             {/* Physics switch */}
             <button 
               onClick={() => setPhysicsEnabled(prev => !prev)}
-              className={`px-4 py-2.5 border rounded-xl text-xs font-semibold backdrop-blur-md transition-all ${
+              className={`px-4 py-2.5 border rounded-full text-xs font-semibold backdrop-blur-md transition-all cursor-pointer ${
                 physicsEnabled 
                   ? 'bg-cyber-cyan/10 border-cyber-cyan/30 text-cyber-cyan hover:bg-cyber-cyan/20' 
                   : 'bg-cyber-dark/40 border-white/5 text-gray-400 hover:text-white hover:border-white/10'
@@ -924,7 +924,7 @@ const BrainGraph = () => {
             {/* Recenter button */}
             <button 
               onClick={handleResetLayout}
-              className="p-2.5 bg-cyber-dark/40 hover:bg-cyber-dark/80 border border-white/5 hover:border-white/20 text-gray-400 hover:text-white rounded-xl transition-all"
+              className="p-2.5 bg-cyber-dark/40 hover:bg-cyber-dark/80 border border-white/5 hover:border-white/20 text-gray-400 hover:text-white rounded-full transition-all cursor-pointer"
               title="Recenter and stabilize"
             >
               <RotateCcw className="w-4 h-4" />
@@ -1043,7 +1043,7 @@ const BrainGraph = () => {
                               setSelectedTag(tag);
                               setSelectedPost(null);
                             }}
-                            className="text-[9px] font-medium bg-cyber-purple/10 hover:bg-cyber-purple/20 border border-cyber-purple/30 text-cyber-purple px-1.5 py-0.5 rounded"
+                            className="text-[9px] font-medium bg-cyber-purple/10 hover:bg-cyber-purple/20 border border-cyber-purple/30 text-cyber-purple px-2 py-0.5 rounded-full transition-colors cursor-pointer"
                           >
                             #{tag}
                           </button>
@@ -1060,7 +1060,7 @@ const BrainGraph = () => {
                     href={`https://t.me/c/${String(selectedPost.telegram_chat_id).replace('-100', '')}/${selectedPost.telegram_message_id}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full flex items-center justify-center gap-1.5 py-2.5 bg-cyber-cyan hover:bg-cyber-cyan/80 text-black text-xs font-black tracking-widest uppercase rounded-xl transition-all shadow-[0_0_10px_rgba(34,211,238,0.2)] hover:shadow-[0_0_15px_rgba(34,211,238,0.4)]"
+                    className="w-full flex items-center justify-center gap-1.5 py-2.5 bg-cyber-cyan hover:bg-cyber-cyan/80 text-black text-xs font-black tracking-widest uppercase rounded-full transition-all shadow-[0_0_10px_rgba(34,211,238,0.2)] hover:shadow-[0_0_15px_rgba(34,211,238,0.4)]"
                   >
                     <span>Open in Telegram</span>
                     <ExternalLink className="w-3.5 h-3.5" />

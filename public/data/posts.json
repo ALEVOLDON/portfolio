@@ -1,6 +1,92 @@
 {
   "posts": [
     {
+      "id": 2950,
+      "date": "2026-05-31T09:46:14.000Z",
+      "title": "🚨 Wi-Fi уже умеет видеть людей сквозь стены?",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 2950,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "ai",
+        "ии",
+        "wifi",
+        "технологии",
+        "esp32",
+        "smarthome",
+        "будущее",
+        "инновации",
+        "vibecoding",
+        "technews",
+        "wi-fi",
+        "или",
+        "sensing"
+      ],
+      "content": "# 🚨 Wi-Fi уже умеет видеть людей сквозь стены?\n\n🚨 Wi-Fi уже умеет видеть людей сквозь стены?\nЗвучит как сюжет из научной фантастики, но технология действительно существует.\nПредставьте: в комнате нет камер, датчиков движения или микрофонов. Только обычный Wi-Fi роутер.\nКогда человек двигается, дышит или даже просто стоит на месте, его тело изменяет распространение радиоволн. Современные алгоритмы анализируют эти изменения и могут определить:\n✅ Есть ли человек в помещении\n✅ Сколько людей находится в комнате\n✅ Двигаются они или стоят на месте\n✅ Частоту дыхания\n✅ В некоторых случаях даже пульс\nТехнология называется Wi-Fi Sensing или RF Sensing.\nСамое удивительное, что для экспериментов часто используют обычные платы ESP32, которые стоят несколько долларов. Уже существуют открытые проекты, позволяющие превратить домашний Wi-Fi в своеобразный «радар».\nПока это не волшебное приложение из TikTok, которое показывает соседей через бетонные стены. Для работы нужны специальные алгоритмы, обработка сигнала и настройка оборудования.\nНо индустрия движется именно в эту сторону. Новый стандарт IEEE 802.11bf официально добавляет поддержку Wi-Fi Sensing, а значит через несколько лет такие функции могут появиться в обычных роутерах и устройствах умного дома.\nБудущее может выглядеть так: ваш роутер понимает, что вы вошли в комнату, определяет падение человека, следит за дыханием во сне и делает это без единой камеры.\nКиберпанк наступил незаметно.\n#AI #ИИ #WiFi #Технологии #ESP32 #SmartHome #Будущее #Инновации #VibeCoding #TechNews\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACC4ZqHARqrEX48DGwJttntCtjoyhdVwACmBlrGzXt4EitVAVf5UmtMQEAAwIAA3kAAzsE\n\n## Tags\n\n#telegram-import #live-sync #ai #ии #wifi #технологии #esp32 #smarthome #будущее #инновации #vibecoding #technews #wi-fi #или #sensing"
+    },
+    {
+      "id": 2949,
+      "date": "2026-05-31T00:45:20.000Z",
+      "title": "llama.app - Official home for llama.cpp",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 2949,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "llama"
+      ],
+      "content": "# llama.app - Official home for llama.cpp\n\nllama.app - Official home for llama.cpp\nhttps://llama.app/\n\n## Links\n\n- https://llama.app/\n\n## Tags\n\n#telegram-import #live-sync #llama"
+    },
+    {
+      "id": 2948,
+      "date": "2026-05-31T00:20:59.000Z",
+      "title": "https://youtu.be/4h5n3WE5seo?is=okbuHDxNiOzmKje3",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 2948,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "youtube",
+        "video"
+      ],
+      "content": "# https://youtu.be/4h5n3WE5seo?is=okbuHDxNiOzmKje3\n\nhttps://youtu.be/4h5n3WE5seo?is=okbuHDxNiOzmKje3\n\n## Links\n\n- https://youtu.be/4h5n3WE5seo?is=okbuHDxNiOzmKje3\n\n## Tags\n\n#telegram-import #live-sync #youtube #video"
+    },
+    {
+      "id": 2947,
+      "date": "2026-05-31T00:20:10.000Z",
+      "title": "https://youtu.be/VuavfQ4N4jw?is=uD8yHsjB8oONwvkk",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 2947,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "youtube",
+        "video"
+      ],
+      "content": "# https://youtu.be/VuavfQ4N4jw?is=uD8yHsjB8oONwvkk\n\nhttps://youtu.be/VuavfQ4N4jw?is=uD8yHsjB8oONwvkk\n\n## Links\n\n- https://youtu.be/VuavfQ4N4jw?is=uD8yHsjB8oONwvkk\n\n## Tags\n\n#telegram-import #live-sync #youtube #video"
+    },
+    {
+      "id": 2946,
+      "date": "2026-05-30T20:00:23.000Z",
+      "title": "Open WebUI: Self-Hosted AI Platform",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 2946,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "design",
+        "ai",
+        "openwebui"
+      ],
+      "content": "# Open WebUI: Self-Hosted AI Platform\n\nOpen WebUI: Self-Hosted AI Platform\nhttps://openwebui.com/\n\n## Links\n\n- https://openwebui.com/\n\n## Tags\n\n#telegram-import #live-sync #design #ai #openwebui"
+    },
+    {
       "id": 2945,
       "date": "2026-05-30T11:38:26.000Z",
       "title": "Уставший IT-архитектор сидит перед огромной схемой продукта: AI-агенты, базы дан...",

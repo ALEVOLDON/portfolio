@@ -37,7 +37,7 @@ const Projects = ({ repos, loading, language = 'en' }) => {
         const list = repos || [];
         if (activeFilter === 'All') return list;
         return list.filter(repo => repo.language === activeFilter);
-    }, [projectMode, repos, activeFilter, language]);
+    }, [projectMode, repos, activeFilter, t.items]);
 
     // Handle responsiveness
     useEffect(() => {

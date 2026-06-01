@@ -1,21 +1,13 @@
 import React from 'react';
-import * as marked from 'marked';
-import DOMPurify from 'dompurify';
 import Icon from './Icon';
 import { translations } from '../data/translations';
 
-const About = ({ profile, readme, stats, language = 'en' }) => {
+const About = ({ profile, stats, language = 'en' }) => {
     const t = translations[language].about;
 
     const langColors = {
         'JavaScript': '#facc15', 'TypeScript': '#2563eb', 'HTML': '#f97316', 'CSS': '#3b82f6',
         'Python': '#eab308', 'Vue': '#22c55e', 'React': '#22d3ee', 'Go': '#06b6d4', 'Other': '#6b7280'
-    };
-
-    const createMarkup = (markdown) => {
-        if (!markdown) return { __html: "Loading README data..." };
-        const html = marked.parse(markdown);
-        return { __html: DOMPurify.sanitize(html, { USE_PROFILES: { html: true } }) };
     };
 
     // Calculate "Years Active"

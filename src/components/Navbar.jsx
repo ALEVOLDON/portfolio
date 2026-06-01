@@ -1,12 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Icon from './Icon';
 import AudioService from '../services/AudioService';
+import { translations } from '../data/translations';
 
-const Navbar = ({ activeSection, scrollTo }) => {
+const Navbar = ({ activeSection, scrollTo, language, setLanguage }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [audioMode, setAudioMode] = useState(AudioService.mode);
     const [prevActiveMode, setPrevActiveMode] = useState(localStorage.getItem('prevActiveAudioMode') || 'immersive');
-    const navItems = ['Home', 'About', 'Projects', 'Brain', 'Contact'];
+    const navItems = ['Home', 'Create', 'Projects', 'About', 'Brain', 'Contact'];
 
     const containerRef = useRef(null);
     const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0, height: 0, top: 0, opacity: 0 });
@@ -118,13 +119,13 @@ const Navbar = ({ activeSection, scrollTo }) => {
                                 data-active={activeSection === item.toLowerCase()}
                                 onClick={() => scrollTo(item.toLowerCase())}
                                 onMouseEnter={() => AudioService.playTick()}
-                                className={`hover:text-white transition-colors uppercase tracking-widest text-[10px] py-1.5 px-4 rounded-full z-10 relative ${
+                                className={`hover:text-white transition-colors uppercase tracking-widest text-[10px] py-1.5 px-4 rounded-full z-10 relative cursor-pointer ${
                                     activeSection === item.toLowerCase() 
                                         ? 'text-cyber-cyan font-semibold' 
                                         : 'text-gray-400 font-medium'
                                 }`}
                             >
-                                {item}
+                                {translations[language].nav[item.toLowerCase()]}
                             </button>
                         ))}
                     </div>
@@ -146,6 +147,20 @@ const Navbar = ({ activeSection, scrollTo }) => {
                                 {audioMode === 'silent' ? 'MUTE' : audioMode === 'ui' ? 'UI FX' : 'AMB'}
                             </span>
                         </button>
+
+                        <button
+                            onClick={() => {
+                                setLanguage(prev => prev === 'en' ? 'ru' : 'en');
+                                AudioService.playTick();
+                            }}
+                            onMouseEnter={() => AudioService.playTick()}
+                            className="p-1.5 px-3 rounded-full border border-white/10 text-zinc-400 hover:text-white hover:border-white/20 transition-all duration-300 flex items-center justify-center gap-1 hover:scale-105 cursor-pointer font-mono text-[9px] font-bold"
+                            title="Switch Language / Смена языка"
+                        >
+                            <span className={language === 'en' ? 'text-cyber-cyan animate-pulse' : 'text-zinc-600'}>EN</span>
+                            <span className="text-zinc-700">|</span>
+                            <span className={language === 'ru' ? 'text-cyber-cyan animate-pulse' : 'text-zinc-600'}>RU</span>
+                        </button>
                     </div>
 
                     {/* Mobile controls */}
@@ -161,6 +176,17 @@ const Navbar = ({ activeSection, scrollTo }) => {
                             title={audioMode !== 'silent' ? 'Mute Audio' : 'Unmute Audio'}
                         >
                             <Icon name={audioMode !== 'silent' ? "volume-2" : "volume-x"} size={14} />
+                        </button>
+
+                        <button
+                            onClick={() => {
+                                setLanguage(prev => prev === 'en' ? 'ru' : 'en');
+                                AudioService.playTick();
+                            }}
+                            className="p-2 rounded-full border border-white/10 text-zinc-400 hover:text-white hover:border-white/20 transition-all duration-300 flex items-center justify-center hover:scale-105 cursor-pointer font-mono text-[8px] font-bold"
+                            title="Switch Language"
+                        >
+                            {language === 'en' ? 'RU' : 'EN'}
                         </button>
 
                         <button
@@ -192,7 +218,7 @@ const Navbar = ({ activeSection, scrollTo }) => {
                                                 : 'text-gray-400 hover:text-white hover:bg-white/5'
                                         }`}
                                     >
-                                        {item}
+                                        {translations[language].nav[item.toLowerCase()]}
                                     </button>
                                 ))}
                             </div>

@@ -3,6 +3,7 @@ import CustomCursor from './components/CustomCursor';
 import BackgroundControls from './components/BackgroundControls';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import WhatICreate from './components/WhatICreate';
 import About from './components/About';
 import Projects from './components/Projects';
 import BrainGraph from './components/BrainGraph';
@@ -31,6 +32,7 @@ const StaticBackground = () => (
 
 const App = () => {
   const [activeSection, setActiveSection] = useState('home');
+  const [language, setLanguage] = useState('en');
   const [profile, setProfile] = useState(FALLBACK_PROFILE);
   const [repos, setRepos] = useState(FALLBACK_REPOS);
   const [readme, setReadme] = useState(FALLBACK_README);
@@ -156,7 +158,7 @@ const App = () => {
       });
     }, { threshold: 0.15 });
 
-    ['home', 'about', 'projects', 'brain', 'contact'].forEach((id) => {
+    ['home', 'create', 'projects', 'about', 'brain', 'contact'].forEach((id) => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
     });
@@ -175,14 +177,15 @@ const App = () => {
         {showBackground ? <ThreeBackground {...bgConfig} /> : <StaticBackground />}
       </Suspense>
       <div className="cyber-grid-overlay" />
-      <Navbar activeSection={activeSection} scrollTo={scrollTo} />
+      <Navbar activeSection={activeSection} scrollTo={scrollTo} language={language} setLanguage={setLanguage} />
       <SpotifyPlayer />
       <main>
-        <Hero profile={profile} loading={loading} scrollTo={scrollTo} />
-        <About profile={profile} readme={readme} stats={stats} />
-        <Projects repos={repos} loading={loading} />
-        <BrainGraph />
-        <Contact />
+        <Hero profile={profile} loading={loading} scrollTo={scrollTo} language={language} />
+        <WhatICreate language={language} />
+        <Projects repos={repos} loading={loading} language={language} />
+        <About profile={profile} readme={readme} stats={stats} language={language} />
+        <BrainGraph language={language} />
+        <Contact language={language} />
       </main>
       <ScrollToTop />
     </div>

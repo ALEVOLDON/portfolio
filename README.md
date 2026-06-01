@@ -24,9 +24,13 @@
 
 - ⚡ **React 19 + Vite 7** frontend for lightning-fast performance
 - 🎨 **Tailwind CSS v4** styling
+- 🌐 **Bilingual System (`EN | RU`)**: Full localization with English as the default landing language, offering a seamless toggle and structured translation files.
 - 🌌 **Three.js** animated, particle-based background
 - 🎛️ **Background Engine HUD Panel**: Floating diagnostics panel allowing users to adjust brightness, particle drift velocity, and morph colors between Cyber, Solar, Emerald, and Void themes over smooth LERP transitions.
-- 🔊 **Generative Sound Design & Modular Synth**: Real-time sound engine using native Web Audio API (ambient drone, UI ticks/clicks, and spatial graph audio) paired with a draggable virtual Eurorack Modular Synth console ("MODEL CZ-1") with custom rotary knobs (VCO, VCF, LFO, and Delay FX) that adapts as a bottom drawer on mobile.
+- 🔊 **Generative Sound & Eurorack Synth**: Real-time sound engine using native Web Audio API (ambient drone, UI ticks/clicks, and spatial graph audio) paired with a draggable virtual Eurorack Modular Synth console ("MODEL CZ-1") with custom rotary knobs, plus an **AI Preset Orchestrator** supporting custom presets (`Drone`, `Ambient`, `Acid`, etc.) and procedural text hashing.
+- 🛠️ **"What I Create" capabilities panel**: Interactive capability grid featuring real-time diagnostic terminal log effects on hover and sound tick integration.
+- 🎛️ **Dual-Mode Project Slider**: Toggle between high-impact featured projects (highlighting key outcomes) and live GitHub telemetry.
+- 📡 **Availability Radar**: Pulsing `AVAILABILITY_RADAR` component representing real-time collaboration status.
 - 💊 **Holographic Capsule Navbar**: Centered, floating glassmorphic nav bar with sub-pixel gradient borders and an elastic background highlight tracker that slides behind active links.
 - 🪐 **3D Planetary Ring Logo**: An interactive 3D spinning text logo representing a planetary orbit, displaying alternating text (like `ALEVOLDON` and `METAVERSE`) wrapped in 3D coordinates.
 - 🎵 **Spotify Soundtrack Sidebar Widget**: Global slide-out glass drawer containing a streaming Spotify playlist, triggered by an animated floating player button on the screen edge.
@@ -43,7 +47,7 @@
 - 🔍 **SEO Optimization**: Integrated robots.txt, sitemap.xml, and canonical meta configuration
 - ⚡ **Lighthouse Performance Optimizations**: Lazy-loaded WebGL background, deferred third-party tracking, and deferred font loading for optimal Core Web Vitals.
 - 🧬 **Volumetric 3D Cyber-Hologram Avatar**: Interactive Three.js WebGL avatar rendering a custom 3D head model (`stylized-head.glb`) with a dark cyber-glass core, a dynamic downsampled holographic particle cloud, shifting cyber-cyan/purple gradient colors, rotating gyroscopic orbital HUD rings, and cursor-tilt tracking.
-- 🧠 **Mind Vault & Knowledge Graph**: An interactive 2D Canvas force-directed graph view of personal Telegram channel posts (synced via Obsidian vault), allowing instant search, tag filtering, zoom/pan controls, and inline Markdown article reading.
+- 🧠 **Mind Vault & Knowledge Graph**: Force-directed 2D canvas visualization of personal posts, featuring search, zoom/pan controls, inline reader, and **category filter tags** (`ИИ`, `Дизайн`, `Звук`, `Разработка`) for instant graph trimming.
 
 ---
 
@@ -67,6 +71,10 @@
 ## 🚀 Features
 
 ### 🎨 Portfolio UI & UX
+- **Bilingual Core (EN | RU)**: English-first bilingual toggle that translates the entire application state on-the-fly without page reloads, maintaining consistent design alignment.
+- **What I Create Capabilities Grid**: A custom capabilities container featuring hover-activated diagnostics console logs simulating system terminal metrics, accompanied by subtle synth click highlights.
+- **Dual-Mode Project Slider**: Supports switching between curated featured projects with qualitative impact/tech callouts and real-time GitHub telemetry metrics cards.
+- **Availability Radar**: Pulsing network radar widget (`AVAILABILITY_RADAR`) built inside the About section indicating active collaboration availability.
 - **Interactive Ambient Engine**: Control panel widget for real-time background shader updates. Adjust brightness (0.2x to 2.0x), time velocity (0.0x to 2.5x to pause/speed drift), and smoothly transition color presets in the GPU loop.
 - **Holographic Capsule Navbar**: Centered, floating glassmorphic nav bar with sub-pixel gradient borders (cyan-to-purple) using CSS masking techniques. Features an elastic background highlight tracker that slides behind active links and is synced with Web Audio tick triggers on hover.
 - **3D Planetary Ring Logo**: Custom 3D spinning text logo representing a planetary orbit, displaying alternating text (like `ALEVOLDON` and `METAVERSE`) wrapped in 3D coordinates. Speeds up and glows brighter on hover.
@@ -83,6 +91,7 @@
 - **Tactile UI Sound Effects**: Responsive ticks on button/link hovers, and organic double-pulse click sounds.
 - **Spatial Graph Audio**: Hovering over Mind Vault graph nodes calculates their screen position and maps it to a `StereoPannerNode` (left-to-right panning). Posts sound warmer; tags sound like high-pitched chimes.
 - **Virtual Eurorack Console (MODEL CZ-1)**: Draggable floating modular synth casing with custom rotary knobs tracking mouse/touch drags to adjust VCO frequency, tuning intervals, VCF cutoff, resonance Q, LFO speed, depth, and Delay FX time/feedback.
+- **AI Preset Orchestrator**: Integrated preset matrix inside the modular synth drawer. Provides built-in styles (`Drone`, `Ambient`, `Acid`, `Cyberpunk`) and a text-based procedural input box that generates unique oscillator/filter configurations on the fly based on a text hash.
 - **Mobile Responsive Docking**: Docks as a compact bottom sheet on viewport widths $< 640px$, scaling down the knobs to `42px` to prevent screen crowding.
 
 ### 🧠 Mind Vault & Knowledge Graph
@@ -90,7 +99,7 @@
 - **Micro-Interaction Optimizations**: Employs sticky hover (hysteresis with a 6px buffer) to lock onto nodes without jitter, and nearest-node calculation to prevent overlap confusion.
 - **O(1) Performance Scaling**: Utilizes Map key-value lookups inside the requestAnimationFrame loop to bypass O(N) array scans, preserving a stable 60 FPS even with 250+ post nodes.
 - **Rich Document Reader**: Features an embedded Markdown parser (`marked` + `dompurify`) rendering fully stylized article views with Lucide metadata blocks and direct opening links to Telegram.
-- **Knowledge Controls**: HUD controls to dynamically restrict post limits, toggle tag visibility on/off, freeze/unfreeze simulation, and recenter/stabilize the layout.
+- **Knowledge Controls & Categories**: HUD controls to dynamically restrict post limits, toggle tag visibility on/off, freeze/unfreeze simulation, and recenter/stabilize the layout. Offers quick category filter buttons (`ИИ`, `Дизайн`, `Звук`, `Разработка`) to instantly filter graph nodes by core domain tags.
 
 ### 📨 Contact System
 - **Inline Form**: A sleek contact form completely replacing `mailto:`.

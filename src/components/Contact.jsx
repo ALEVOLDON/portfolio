@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Icon from './Icon';
+import { translations } from '../data/translations';
 
 const INITIAL_FORM = {
     name: '',
@@ -45,7 +46,8 @@ const loadTurnstile = () => {
     return turnstileLoader;
 };
 
-const Contact = () => {
+const Contact = ({ language = 'en' }) => {
+    const t = translations[language].contact;
     const [form, setForm] = useState(INITIAL_FORM);
     const [status, setStatus] = useState('idle');
     const [feedback, setFeedback] = useState('');
@@ -193,8 +195,37 @@ const Contact = () => {
         <section id="contact" className="py-16 md:py-32 px-6 bg-gradient-to-t from-black via-black to-transparent relative z-10">
             <div className="max-w-2xl mx-auto text-center reveal">
                 <div className="inline-block p-3 rounded-full bg-white/5 mb-4 md:mb-6 animate-bounce"><Icon name="mail" size={24} className="text-cyber-purple" /></div>
-                <h2 className="text-2xl md:text-4xl font-black mb-4 md:mb-6 text-white font-cyber tracking-widest uppercase cyber-glitch" data-text="INITIALIZE COMMUNICATION">Initialize Communication</h2>
-                <p className="text-gray-400 mb-6 md:mb-10 text-sm md:text-lg font-display tracking-wide">Ready to collaborate on the next big thing? <br />Send the brief here and I will get it in Telegram.</p>
+                <h2 className="text-2xl md:text-4xl font-black mb-4 md:mb-6 text-white font-cyber tracking-widest uppercase cyber-glitch" data-text={language === 'ru' ? 'НАЧАТЬ ОБЩЕНИЕ' : 'INITIALIZE COMMUNICATION'}>
+                    {language === 'ru' ? 'Начать общение' : 'Initialize Communication'}
+                </h2>
+                <p className="text-gray-400 mb-6 md:mb-10 text-sm md:text-lg font-display tracking-wide">{t.subheading}</p>
+                
+                {/* Direct CTA Contact Badges */}
+                <div className="flex flex-wrap justify-center gap-4 mb-10 font-display">
+                    <a
+                        href="https://t.me/AleVoldon"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-6 py-2.5 bg-[#24a1de]/10 hover:bg-[#24a1de]/20 border border-[#24a1de]/30 hover:border-[#24a1de] text-white hover:text-[#24a1de] rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 flex items-center gap-2 hover:shadow-[0_0_15px_rgba(36,161,222,0.3)] cursor-pointer"
+                    >
+                        <Icon name="send" size={14} /> Telegram
+                    </a>
+                    <a
+                        href="https://github.com/ALEVOLDON"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-6 py-2.5 bg-white/5 hover:bg-white/10 border border-white/15 hover:border-white text-white rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 flex items-center gap-2 hover:shadow-[0_0_15px_rgba(255,255,255,0.1)] cursor-pointer"
+                    >
+                        <Icon name="github" size={14} /> GitHub
+                    </a>
+                    <a
+                        href="mailto:alevoldon@gmail.com"
+                        className="px-6 py-2.5 bg-cyber-cyan/10 hover:bg-cyber-cyan/20 border border-cyber-cyan/30 hover:border-cyber-cyan text-white hover:text-cyber-cyan rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 flex items-center gap-2 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] cursor-pointer"
+                    >
+                        <Icon name="mail" size={14} /> Email
+                    </a>
+                </div>
+
                 <form onSubmit={submitForm} className="space-y-3 md:space-y-4 text-left">
                     <input
                         type="text"
@@ -208,7 +239,7 @@ const Contact = () => {
                     />
                     <div className="grid gap-4 sm:grid-cols-2">
                         <label className="block">
-                            <span className="mb-2 block text-[10px] font-bold font-display uppercase tracking-[0.25em] text-zinc-400">Name</span>
+                            <span className="mb-2 block text-[10px] font-bold font-display uppercase tracking-[0.25em] text-zinc-400">{t.nameLabel}</span>
                             <input
                                 type="text"
                                 name="name"
@@ -216,11 +247,11 @@ const Contact = () => {
                                 onChange={updateField}
                                 maxLength="80"
                                 className="w-full rounded border border-white/15 bg-white/5 px-3.5 py-2.5 md:px-4 md:py-3 text-white outline-none transition-all focus:border-cyber-cyan focus:bg-white/8 font-display"
-                                placeholder="Your name"
+                                placeholder={t.namePlaceholder}
                             />
                         </label>
                         <label className="block">
-                            <span className="mb-2 block text-[10px] font-bold font-display uppercase tracking-[0.25em] text-zinc-400">Email</span>
+                            <span className="mb-2 block text-[10px] font-bold font-display uppercase tracking-[0.25em] text-zinc-400">{t.emailLabel}</span>
                             <input
                                 type="email"
                                 name="email"
@@ -228,12 +259,12 @@ const Contact = () => {
                                 onChange={updateField}
                                 maxLength="120"
                                 className="w-full rounded border border-white/15 bg-white/5 px-3.5 py-2.5 md:px-4 md:py-3 text-white outline-none transition-all focus:border-cyber-cyan focus:bg-white/8 font-display"
-                                placeholder="you@example.com"
+                                placeholder={t.emailPlaceholder}
                             />
                         </label>
                     </div>
                     <label className="block">
-                        <span className="mb-2 block text-[10px] font-bold font-display uppercase tracking-[0.25em] text-zinc-400">Telegram</span>
+                        <span className="mb-2 block text-[10px] font-bold font-display uppercase tracking-[0.25em] text-zinc-400">{t.telegramLabel}</span>
                         <input
                             type="text"
                             name="telegram"
@@ -241,11 +272,11 @@ const Contact = () => {
                             onChange={updateField}
                             maxLength="64"
                             className="w-full rounded border border-white/15 bg-white/5 px-3.5 py-2.5 md:px-4 md:py-3 text-white outline-none transition-all focus:border-cyber-cyan focus:bg-white/8 font-display"
-                            placeholder="@yourusername (optional)"
+                            placeholder={t.telegramPlaceholder}
                         />
                     </label>
                     <label className="block">
-                        <span className="mb-2 block text-[10px] font-bold font-display uppercase tracking-[0.25em] text-zinc-400">Message</span>
+                        <span className="mb-2 block text-[10px] font-bold font-display uppercase tracking-[0.25em] text-zinc-400">{t.messageLabel}</span>
                         <textarea
                             name="message"
                             value={form.message}
@@ -253,14 +284,14 @@ const Contact = () => {
                             rows="6"
                             maxLength="2000"
                             className="h-24 md:h-40 w-full resize-none overflow-y-auto rounded border border-white/15 bg-white/5 px-3.5 py-2.5 md:px-4 md:py-3 text-white outline-none transition-all focus:border-cyber-cyan focus:bg-white/8 font-display"
-                            placeholder="Tell me about the project, timeline, and what you need."
+                            placeholder={t.messagePlaceholder}
                         />
                     </label>
                     {turnstileEnabled ? (
                         <div className="overflow-hidden rounded border border-white/10 bg-black/30 p-3">
                             <div ref={widgetRef} />
                             {!turnstileReady ? (
-                                <p className="mt-2 text-xs text-gray-500">Complete the spam check before sending.</p>
+                                <p className="mt-2 text-xs text-gray-500">{t.protectLabel}</p>
                             ) : null}
                         </div>
                     ) : null}
@@ -271,10 +302,22 @@ const Contact = () => {
                             className="flex items-center justify-center gap-2 rounded-full bg-cyber-cyan px-6 py-3 md:px-8 md:py-4 font-bold text-black transition-all duration-300 hover:bg-white hover:scale-[1.03] hover:shadow-[0_0_25px_rgba(34,211,238,0.45)] disabled:cursor-not-allowed disabled:opacity-70 tracking-wider uppercase text-xs md:text-sm cursor-pointer"
                         >
                             <Icon name={status === 'success' ? 'check' : 'send'} size={18} />
-                            {status === 'sending' ? 'Sending...' : 'Send Message'}
+                            {status === 'sending' ? t.btnSending : t.btnSend}
                         </button>
                         <p className={`text-sm ${status === 'error' ? 'text-red-400' : 'text-gray-400'}`}>
-                            {feedback || (turnstileEnabled ? 'Protected by Cloudflare Turnstile.' : 'Replies go straight to Telegram.')}
+                            {feedback ? (
+                                feedback === 'Message sent.' || feedback === 'Message sent. I will get it in Telegram.'
+                                    ? t.successMsg
+                                    : feedback === 'Spam protection failed to load. Refresh and try again.'
+                                        ? t.errorMsg
+                                        : feedback === 'Fill in name, email, and message.'
+                                            ? (language === 'ru' ? 'Заполните имя, email и сообщение.' : 'Fill in name, email, and message.')
+                                            : feedback === 'Complete the spam check before sending.'
+                                                ? t.protectLabel
+                                                : feedback
+                            ) : (
+                                turnstileEnabled ? t.turnstileProtected : (language === 'ru' ? 'Сообщения отправляются напрямую в Telegram.' : 'Replies go straight to Telegram.')
+                            )}
                         </p>
                     </div>
                 </form>

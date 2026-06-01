@@ -16,6 +16,118 @@ const ModularSynth = ({ onClose }) => {
 
     // Local state to keep track of knob readouts
     const [params, setParams] = useState({ ...AudioService.synthParams });
+    const [synthPrompt, setSynthPrompt] = useState('');
+    const [aiStatus, setAiStatus] = useState('');
+
+    const handleAiPreset = () => {
+        const query = synthPrompt.toLowerCase().trim();
+        if (!query) return;
+
+        setAiStatus('Synthesizing...');
+        AudioService.playTick();
+
+        setTimeout(() => {
+            let preset = null;
+            if (query.includes('drone') || query.includes('дроун') || query.includes('космос') || query.includes('space')) {
+                preset = {
+                    vcoTune: 60,
+                    vcoInterval: 1.5,
+                    vcfCutoff: 140,
+                    vcfReso: 4.5,
+                    lfoRate: 0.08,
+                    lfoDepth: 180,
+                    delayTime: 0.82,
+                    delayFeedback: 0.75
+                };
+                setAiStatus('Space Drone loaded');
+            } else if (query.includes('acid') || query.includes('кислот') || query.includes('bass') || query.includes('бас')) {
+                preset = {
+                    vcoTune: 110,
+                    vcoInterval: 1.01,
+                    vcfCutoff: 410,
+                    vcfReso: 6.2,
+                    lfoRate: 0.75,
+                    lfoDepth: 120,
+                    delayTime: 0.24,
+                    delayFeedback: 0.45
+                };
+                setAiStatus('Acid 303 Bass loaded');
+            } else if (query.includes('ambient') || query.includes('эмбиент') || query.includes('relax') || query.includes('релакс')) {
+                preset = {
+                    vcoTune: 80,
+                    vcoInterval: 1.25,
+                    vcfCutoff: 210,
+                    vcfReso: 2.2,
+                    lfoRate: 0.04,
+                    lfoDepth: 70,
+                    delayTime: 0.62,
+                    delayFeedback: 0.65
+                };
+                setAiStatus('Lush Ambient loaded');
+            } else if (query.includes('noise') || query.includes('шум') || query.includes('industrial') || query.includes('индастриал')) {
+                preset = {
+                    vcoTune: 145,
+                    vcoInterval: 1.95,
+                    vcfCutoff: 580,
+                    vcfReso: 5.8,
+                    lfoRate: 1.25,
+                    lfoDepth: 280,
+                    delayTime: 0.12,
+                    delayFeedback: 0.8
+                };
+                setAiStatus('Industrial Noise loaded');
+            } else if (query.includes('glitch') || query.includes('глитч')) {
+                preset = {
+                    vcoTune: 130,
+                    vcoInterval: 1.75,
+                    vcfCutoff: 290,
+                    vcfReso: 3.5,
+                    lfoRate: 1.45,
+                    lfoDepth: 240,
+                    delayTime: 0.05,
+                    delayFeedback: 0.25
+                };
+                setAiStatus('Micro-Glitch loaded');
+            } else {
+                // Procedural preset from string hash
+                let hash = 0;
+                for (let i = 0; i < query.length; i++) {
+                    hash = query.charCodeAt(i) + ((hash << 5) - hash);
+                }
+                const randVal = (min, max, offset) => {
+                    const r = Math.abs(Math.sin(hash + offset));
+                    return min + r * (max - min);
+                };
+                preset = {
+                    vcoTune: Math.round(randVal(50, 150, 1)),
+                    vcoInterval: Number(randVal(1.0, 2.0, 2).toFixed(2)),
+                    vcfCutoff: Math.round(randVal(80, 600, 3)),
+                    vcfReso: Number(randVal(0.5, 7.0, 4).toFixed(1)),
+                    lfoRate: Number(randVal(0.01, 1.5, 5).toFixed(2)),
+                    lfoDepth: Math.round(randVal(10, 300, 6)),
+                    delayTime: Number(randVal(0.0, 1.0, 7).toFixed(2)),
+                    delayFeedback: Number(randVal(0.0, 0.85, 8).toFixed(2))
+                };
+                setAiStatus(`Custom: "${query.slice(0, 10)}"`);
+            }
+
+            if (preset) {
+                AudioService.setVcoTune(preset.vcoTune);
+                AudioService.setVcoInterval(preset.vcoInterval);
+                AudioService.setVcfCutoff(preset.vcfCutoff);
+                AudioService.setVcfReso(preset.vcfReso);
+                AudioService.setLfoRate(preset.lfoRate);
+                AudioService.setLfoDepth(preset.lfoDepth);
+                AudioService.setDelayTime(preset.delayTime);
+                AudioService.setDelayFeedback(preset.delayFeedback);
+
+                setParams(preset);
+                
+                // Fire update event so AudioService synched components update
+                window.dispatchEvent(new CustomEvent('synthParamsUpdated'));
+            }
+        }, 400);
+    };
 
     // Handle screen resize to toggle mobile layout and update limits
     useEffect(() => {
@@ -223,6 +335,32 @@ const ModularSynth = ({ onClose }) => {
                     />
                 </div>
             </div>
+            
+            {/* AI Preset Panel */}
+            <div className="px-4 py-2.5 bg-zinc-950 border-t border-white/5 flex flex-col gap-1.5">
+                <div className="flex items-center justify-between text-[7px] text-zinc-500 uppercase tracking-widest font-cyber">
+                    <span>AI Preset Orchestrator</span>
+                    {aiStatus && <span className="text-cyber-cyan font-bold tracking-wider animate-pulse">{aiStatus}</span>}
+                </div>
+                <div className="relative flex items-center">
+                    <input
+                        type="text"
+                        value={synthPrompt}
+                        onChange={(e) => setSynthPrompt(e.target.value)}
+                        onKeyDown={(e) => {
+                            if (e.key === 'Enter') handleAiPreset();
+                        }}
+                        placeholder="drone, acid, ambient, space, noise..."
+                        className="w-full bg-black/40 border border-white/10 rounded-full pl-3 pr-14 py-1 text-[9px] text-gray-300 outline-none focus:border-cyber-cyan focus:bg-black/60 font-mono tracking-wide placeholder-zinc-700"
+                    />
+                    <button
+                        onClick={handleAiPreset}
+                        className="absolute right-1 px-2.5 py-0.5 rounded-full bg-cyber-cyan hover:bg-white text-black font-bold text-[8px] uppercase tracking-wider transition-colors cursor-pointer"
+                    >
+                        Apply
+                    </button>
+                </div>
+            </div>
 
             {/* Bottom Panel controls */}
             <div className="px-4 py-3 bg-zinc-950/80 border-t border-white/5 flex justify-between items-center">
@@ -232,7 +370,11 @@ const ModularSynth = ({ onClose }) => {
                 </div>
                 <div className="flex gap-2">
                     <button
-                        onClick={handleReset}
+                        onClick={() => {
+                            handleReset();
+                            setSynthPrompt('');
+                            setAiStatus('');
+                        }}
                         className="px-2.5 py-1 rounded-full bg-white/5 hover:bg-white/10 text-neutral-400 hover:text-white border border-white/5 text-[9px] uppercase tracking-wider transition-colors cursor-pointer"
                         title="Restore visual theme default values"
                     >

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { marked } from 'marked';
 import DOMPurify from 'dompurify';
 import AudioService from '../services/AudioService';
+import { translations } from '../data/translations';
 import { 
   Search, 
   RotateCcw, 
@@ -29,7 +30,8 @@ const seededRandom = (value) => {
   return (hash >>> 0) / 4294967295;
 };
 
-const BrainGraph = () => {
+const BrainGraph = ({ language = 'en' }) => {
+  const t = translations[language].brain;
   const [posts, setPosts] = useState([]);
   const [selectedPost, setSelectedPost] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -840,8 +842,7 @@ const BrainGraph = () => {
             Mind <span className="text-cyber-cyan">Vault</span> & Knowledge Graph
           </h2>
           <p className="text-gray-400 max-w-2xl text-sm md:text-base font-display">
-            Interactive graph of my Telegram channel posts. Each node represents a post or a tag. 
-            Drag nodes or pan to explore, pinch or use scroll wheel to zoom, and tap or click to read.
+            {t.subheading}. {language === 'ru' ? 'Каждый узел — это публикация или тег. Двигайте узлы для взаимодействия, используйте колесо мыши для масштабирования, кликайте для чтения.' : 'Each node represents a post or tag. Drag nodes or pan to explore, use scroll wheel to zoom, and click to read.'}
           </p>
         </div>
 
@@ -931,6 +932,37 @@ const BrainGraph = () => {
             </button>
           </div>
 
+        </div>
+
+        {/* Quick Filter Buttons */}
+        <div className="flex flex-wrap items-center gap-2 mb-6 reveal active">
+            <span className="text-[9px] font-mono uppercase tracking-[0.2em] text-zinc-500 mr-2">{t.quickFilters}</span>
+            <button
+                onClick={() => { setSelectedTag(null); AudioService.playTick(); }}
+                className={`px-3 py-1 rounded-full text-xs font-display tracking-wider border transition-all cursor-pointer ${
+                    !selectedTag
+                        ? 'bg-cyber-cyan text-black border-cyber-cyan shadow-[0_0_10px_rgba(34,211,238,0.3)] font-bold'
+                        : 'bg-transparent text-gray-400 border-white/5 hover:border-white/20 hover:text-white'
+                }`}
+            >
+                {t.filterAll}
+            </button>
+            {t.filters.map(item => (
+                <button
+                    key={item.tag}
+                    onClick={() => {
+                        setSelectedTag(item.tag);
+                        AudioService.playTick();
+                    }}
+                    className={`px-3 py-1 rounded-full text-xs font-display tracking-wider border transition-all cursor-pointer ${
+                        selectedTag === item.tag
+                            ? 'bg-cyber-purple text-white border-cyber-purple shadow-[0_0_10px_rgba(168,85,247,0.3)] font-bold'
+                            : 'bg-transparent text-gray-400 border-white/5 hover:border-white/20 hover:text-white'
+                    }`}
+                >
+                    {item.label}
+                </button>
+            ))}
         </div>
 
         {/* Dual-Column Main Workspace Container */}

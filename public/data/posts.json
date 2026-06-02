@@ -1,6 +1,55 @@
 {
   "posts": [
     {
+      "id": 2960,
+      "date": "2026-06-02T06:36:28.000Z",
+      "title": "🔥 Главные новости дня",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 2960,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "backend",
+        "ai",
+        "nvidia",
+        "для",
+        "ai-агентов"
+      ],
+      "content": "# 🔥 Главные новости дня\n\n🔥 Главные новости дня\n\n- Anthropic конфиденциально подала заявку на IPO, опередив OpenAI. Компания демонстрирует уверенный рост и институциональный интерес.\n- Nvidia активно продвигает AI на ПК: представлен новый чип для Windows-ноутбуков и десктопов с акцентом на AI-агентов. Партнёрства с Microsoft, Dell и HP нацелены на рынок CPU в $200 млрд.\n- Alphabet (Google) планирует привлечь $80 млрд через продажу акций для финансирования AI-инфраструктуры и выплаты налогов на опционы сотрудников.\n- Nvidia представила Nemotron 3 Ultra (550 млрд параметров) — мощную открытую модель для автономных AI-агентов, с акцентом на скорость и низкую стоимость.\n\n🪙 Крипта — важные события рынка\n\n- Bitcoin торгуется около $71–73 тыс., Ethereum — ниже $2000. Рынок начал июнь в красной зоне, несмотря на приток в ETF и сокращение резервов на биржах.\n- Robinhood завершил приобретение WonderFi за $180 млн и вошёл на канадский крипторынок.\n- Cardano Summit 2026 отменён после голосования сообщества против финансирования от Foundation. Это отражает напряжённость в экосистеме.\n- Продолжается фокус на реальные разработки: RWA-токенизация, Bitcoin L2 (Stacks, Rootstock) и институциональные stablecoin-проекты. Мем-коины остаются на периферии.\n\n🤖 AI и инструменты\n\n- Anthropic выпустила Claude Opus 4.8 — улучшения в кодинге, агентных задачах и честности модели. Доступна по прежней цене.\n- Продолжается тренд на AI-агентов: Nvidia Nemotron 3 Ultra и партнёрства Nvidia с производителями ПК ускоряют переход к персональным AI-агентам.\n- Open-source инструменты для агентов набирают популярность: фреймворки вроде LangGraph, CrewAI и OpenHands позволяют строить сложные workflow без больших затрат.\n\n🛠 Один инструмент дня\n\nNvidia Nemotron 3 Ultra\nЧто делает: Открытая модель (550B параметров) для создания автономных AI-агентов — планирование, кодинг, обработка длинного контекста. Работает быстрее и дешевле аналогов.\nКому полезен: Разработчикам, компаниям, строящим агентов и enterprise-решения; энтузиастам open-weights моделей.\nСсылка: Доступна через платформу Nvidia (weights, code и данные открыты).\n\n💡 Идея или инсайт дня\nПереход AI на персональные компьютеры (Nvidia + Microsoft/Dell/HP) открывает практическую автоматизацию. Начните тестировать локальных агентов для рутинных задач (анализ документов, код-ревью, персональные workflow). Это снижает зависимость от облачных API, экономит затраты и повышает приватность. Для фрилансеров и малого бизнеса — готовый способ масштабировать производительность без найма.\n\n📈 Что стоит наблюдать ближайшие 7–30 дней\n- Результаты Computex 2026 и новые AI-чипы/платформы от Nvidia и партнёров.\n- Динамика IPO Anthropic и дальнейшие шаги OpenAI/Google по привлечению капитала.\n- Реакцию крипторынка на макро-данные и возможное восстановление Bitcoin выше $75 тыс.\n- Прогресс в AI-агентах: новые релизы инструментов и enterprise-кейсы.\n\nОбзор основан на значимых событиях с акцентом на практическую ценность. Если новостей мало в определённой категории, фокус смещается на инструменты и исследования.\n\n## Tags\n\n#telegram-import #live-sync #backend #ai #nvidia #для #ai-агентов"
+    },
+    {
+      "id": 2959,
+      "date": "2026-06-01T17:46:02.000Z",
+      "title": "https://github.com/codecrafters-io/build-your-own-x",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 2959,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "design",
+        "github",
+        "code"
+      ],
+      "content": "# https://github.com/codecrafters-io/build-your-own-x\n\nhttps://github.com/codecrafters-io/build-your-own-x\n\n## Links\n\n- https://github.com/codecrafters-io/build-your-own-x\n\n## Tags\n\n#telegram-import #live-sync #design #github #code"
+    },
+    {
+      "id": 2958,
+      "date": "2026-06-01T16:45:06.000Z",
+      "title": "https://www.youtube.com/watch?v=1ha65hF7NS4",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 2958,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "video",
+        "youtube"
+      ],
+      "content": "# https://www.youtube.com/watch?v=1ha65hF7NS4\n\nhttps://www.youtube.com/watch?v=1ha65hF7NS4\n\n## Links\n\n- https://www.youtube.com/watch?v=1ha65hF7NS4\n\n## Tags\n\n#telegram-import #live-sync #video #youtube"
+    },
+    {
       "id": 2957,
       "date": "2026-06-01T13:47:28.000Z",
       "title": "🌌 Апдейт портфолио: AI Builder & Creative Technologist v1.5.0",

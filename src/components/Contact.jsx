@@ -200,31 +200,6 @@ const Contact = ({ language = 'en' }) => {
                 </h2>
                 <p className="text-gray-400 mb-6 md:mb-10 text-sm md:text-lg font-display tracking-wide">{t.subheading}</p>
                 
-                {/* Direct CTA Contact Badges */}
-                <div className="flex flex-wrap justify-center gap-4 mb-10 font-display">
-                    <a
-                        href="https://t.me/AleVoldon"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="px-6 py-2.5 bg-[#24a1de]/10 hover:bg-[#24a1de]/20 border border-[#24a1de]/30 hover:border-[#24a1de] text-white hover:text-[#24a1de] rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 flex items-center gap-2 hover:shadow-[0_0_15px_rgba(36,161,222,0.3)] cursor-pointer"
-                    >
-                        <Icon name="send" size={14} /> Telegram
-                    </a>
-                    <a
-                        href="https://github.com/ALEVOLDON"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="px-6 py-2.5 bg-white/5 hover:bg-white/10 border border-white/15 hover:border-white text-white rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 flex items-center gap-2 hover:shadow-[0_0_15px_rgba(255,255,255,0.1)] cursor-pointer"
-                    >
-                        <Icon name="github" size={14} /> GitHub
-                    </a>
-                    <a
-                        href="mailto:alevoldon@gmail.com"
-                        className="px-6 py-2.5 bg-cyber-cyan/10 hover:bg-cyber-cyan/20 border border-cyber-cyan/30 hover:border-cyber-cyan text-white hover:text-cyber-cyan rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 flex items-center gap-2 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] cursor-pointer"
-                    >
-                        <Icon name="mail" size={14} /> Email
-                    </a>
-                </div>
 
                 <form onSubmit={submitForm} className="space-y-3 md:space-y-4 text-left">
                     <input

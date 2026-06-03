@@ -1,6 +1,67 @@
 {
   "posts": [
     {
+      "id": 2963,
+      "date": "2026-06-03T06:14:12.000Z",
+      "title": "🔥 Главные новости дня (3 июня 2026)",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 2963,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "design",
+        "ai",
+        "для",
+        "scout",
+        "дня"
+      ],
+      "content": "# 🔥 Главные новости дня (3 июня 2026)\n\n🔥 Главные новости дня (3 июня 2026)\n\n- Microsoft Build 2026: Корпорация выкатила семейство моделей MAI (включая MAI-Thinking-1), а также Scout — своего рода AI-агента для бизнеса (зачем-то вдохновлён OpenClaw, но это их дело). Плюс куча инструментов, чтобы уйти от OpenAI. Фокус на enterprise и AI-железе. В общем, корпоративная машина жужжит.\n\n- SpaceX готовится к IPO: Целится в $135 за акцию и хочет вытянуть $75 млрд. Одно из самых жирных размещений в истории, если всё пойдёт по плану.\n\n- AI-индустрия: OpenAI запускает Codex-инструменты для white-collar задач (дизайн, банкинг — скучная работа для роботов). DeepSeek притянул $7 млрд в первом раунде, похоже, деньги льются рекой.\n\n- Крупные релизы: Nvidia выложила чип для Windows-ноутбуков в эпоху AI. Microsoft хвастается прогрессом в квантовых вычислениях: чип, созданный AI, и системы к 2029 году. Звучит как научная фантастика, но они делают.\n\n🪙 Крипта — важные события рынка\n\n- Bitcoin и Ethereum открыли июнь в красной зоне (BTC около $71–73k, ETH около $1,96k) на фоне геополитического напряжения (США–Иран). Рынок ищет дно, как обычно.\n\n- Фокус сместился на инфраструктуру: Hyperliquid (децентрализованные фьючерсы), Stacks, NEAR (обновление dynamic resharding в июне). Институты интересуются, но мем-коины пока не взлетели.\n\n- Прогнозы: 2026 год называют «рассветом институциональной эры» для крипты. Время больших денег.\n\n🤖 AI и инструменты\n\n- Новые модели: Microsoft MAI-серия (сильны в маке, кодинге и мультимодальности), обновления OpenAI Codex, Gemini 3.x и Claude Mythos Preview (расширение на 150 организаций).\n\n- Агенты и автоматизация: Scout от Microsoft, Gemini Spark (персональный агент 24/7), бум open-source стеков (LangGraph, AutoGen, CrewAI). Вайб кодинга сменяется вайбом управления агентами.\n\n- Что попробовать прямо сейчас: Инструменты Codex для рутины white-collar задач и Scout в экосистеме Microsoft 365.\n\n🛠 Один инструмент дня\n\nMicrosoft Scout  \nЧто делает: Персональный AI-агент для бизнеса, врезается в Teams, Outlook и другие сервисы Microsoft. Выполняет задачи, крутит документы, планирует и автоматизирует процессы.  \nКому полезен: Менеджерам, разработчикам и командам в корпоративной среде, которые устали от рутины.  \nСсылка: Доступен через Microsoft Build / Azure / Microsoft 365 (проверьте в аккаунте, вдруг уже есть).\n\n💡 Идея или инсайт дня  \nХватит просто «пользоваться моделями». Переходите к агентным workflow внутри своих инструментов (Microsoft 365, Google Workspace или open-source LangGraph). Один практический вывод: настройте агента на ежедневный анализ ваших данных/почты/задач — это даст 20–40% экономии времени на рутине уже сегодня. Начните с малого: автоматизация отчётов или код-ревью.\n\n📈 Что стоит наблюдать ближайшие 7–30 дней  \n- Реакция рынка на SpaceX IPO и AI-анонсы Microsoft.  \n- Динамика Bitcoin после коррекции и обновления NEAR.  \n- Запуск новых agentic-инструментов (Siri 2.0 на WWDC, новые релизы Codex/MAI).  \n- Прогресс в квантах и physical AI (тесты Airbus, чипы Nvidia).  \n\nОбзор сформирован на основе значимых событий 2–3 июня 2026. Фокус — практическая ценность и реальные изменения. Завтра — новый дайджест.\n\n## Tags\n\n#telegram-import #live-sync #design #ai #для #scout #дня"
+    },
+    {
+      "id": 2962,
+      "date": "2026-06-03T06:09:17.000Z",
+      "title": "🎵🤖 Кажется, Ableton только что открыл дверь в совершенно новый мир.",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 2962,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "ai",
+        "ableton",
+        "musictech",
+        "techno",
+        "aiagent",
+        "vibecoding",
+        "promptengineering",
+        "musicproduction",
+        "telegrambot",
+        "futureofmusic",
+        "telegram",
+        "tools",
+        "через",
+        "больше",
+        "для"
+      ],
+      "content": "# 🎵🤖 Кажется, Ableton только что открыл дверь в совершенно новый мир.\n\n🎵🤖 Кажется, Ableton только что открыл дверь в совершенно новый мир.\n\nНедавно показали Extensions SDK — новую систему расширений для Ableton Live. И чем больше я изучаю эту тему, тем больше понимаю: скоро мы будем не просто писать музыку, а управлять целой музыкальной студией через AI.\n\nПредставьте:\n\n📱 Пишешь в Telegram:\n\"Сделай техно 138 BPM в индустриальном стиле\"\n\n⚡ Через минуту Ableton:\n• создает новый проект\n• настраивает BPM\n• добавляет дорожки\n• генерирует MIDI-партии\n• собирает базовую аранжировку\n\nА дальше:\n\n\"Сделай бас мрачнее\"\n\"Добавь атмосферу заброшенного завода\"\n\"Усложни драм-партию\"\n\nИ проект меняется в реальном времени.\n\nФактически это уже не DAW, а музыкальный AI-агент.\n\nТеперь всерьез думаю над созданием Telegram-бота для управления Ableton через AI. Не просто генератор музыки, а полноценный виртуальный продюсер.\n\nБуду изучать SDK и экспериментировать.\n\nБудущее музыки выглядит очень интересно. 🚀\n\n#AI #Ableton #MusicTech #Techno #AIAgent #VibeCoding #PromptEngineering #MusicProduction #TelegramBot #FutureOfMusic\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACC5JqH8UMD49eT13N2-VAwuzKbO_FzwACnhtrGziG-UgIJELzBviqWAEAAwIAA3kAAzsE\n\n## Tags\n\n#telegram-import #live-sync #ai #ableton #musictech #techno #aiagent #vibecoding #promptengineering #musicproduction #telegrambot #futureofmusic #telegram #tools #через #больше #для"
+    },
+    {
+      "id": 2961,
+      "date": "2026-06-03T05:31:54.000Z",
+      "title": "After seeing them in action, I’m convinced that Ableton’s Extensions are going t...",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 2961,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "tools",
+        "musicradar"
+      ],
+      "content": "# After seeing them in action, I’m convinced that Ableton’s Extensions are going t...\n\nAfter seeing them in action, I’m convinced that Ableton’s Extensions are going to change how music-makers use Live forever | MusicRadar\nhttps://www.musicradar.com/music-tech/after-seeing-it-in-action-im-convinced-that-abletons-extensions-is-going-to-change-how-music-makers-use-live-forever\n\n## Links\n\n- https://www.musicradar.com/music-tech/after-seeing-it-in-action-im-convinced-that-abletons-extensions-is-going-to-change-how-music-makers-use-live-forever\n\n## Tags\n\n#telegram-import #live-sync #tools #musicradar"
+    },
+    {
       "id": 2960,
       "date": "2026-06-02T06:36:28.000Z",
       "title": "🔥 Главные новости дня",

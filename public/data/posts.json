@@ -1,6 +1,66 @@
 {
   "posts": [
     {
+      "id": 2966,
+      "date": "2026-06-04T05:49:55.000Z",
+      "title": "🔥 Главные новости дня (вайб-чек рынка)",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 2966,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "backend",
+        "ai",
+        "tools",
+        "для",
+        "near",
+        "ai-агентов"
+      ],
+      "content": "# 🔥 Главные новости дня (вайб-чек рынка)\n\n🔥 Главные новости дня (вайб-чек рынка)\n\n- Alphabet (Google) залил $85 млрд в AI-инфраструктуру. Это не просто инвестиции, а хардкорный деплой дата-центров, чтобы их модели не лагали под нагрузкой. Bitcoin держит коррекцию ($62–67k), капитал утекает в AI-акции. Институты всё ещё фанатеют от конвергенции AI + blockchain, несмотря на оттоки из ETF.\n- DeepSeek (Китай) анонсировал раунд на $7 млрд под модель V4. Конкурент западным LLM, который реально может выдать чистый код.\n- NEAR Protocol готовит динамический решардинг в июне 2026. Сеть будет авто-скейлиться под нагрузку — киллер-фича для AI-агентов.\n- Конвергенция AI и blockchain — это мейнстрим. Токенизация, стейблкоины и децентрализованные вычисления становятся базой для следующего цикла.\n\n🪙 Крипта — важные события (no hype)\n\n- Рынок смещается от мем-коинов к реальным продуктам: RWA, стейблкоины и инфраструктура для AI-агентов.\n- Bittensor (TAO) и NEAR лидируют в сегменте децентрализованного AI. Bittensor — рынок машинного интеллекта, NEAR — платформа для автономных агентов.\n- Mastercard активно интегрирует крипту (покупка BVNK), банки внедряют блокчейн в платежи и supply chain.\n- 2026 год — рассвет институциональной эры в крипте. Фокус на реальную полезность (utility), а не на памп и дампы.\n\n🤖 AI и инструменты (hardcore)\n\n- Open-weight модели на подъеме: MiniMax M3 (июнь 2026), DeepSeek V4, GLM-5.1, Kimi K2.6. Топ в coding-бенчмарках, длинный контекст и мультимодальность — мастхэв.\n- Ренессанс agentic AI: от простых копилаотов к автономным workflow. Open-source стек (LangGraph, AutoGen, OpenHands) позволяет строить надежных агентов без привязки к проприетарным API.\n- Google развивает агентную платформу: Google Vids (генерация видео) и Deep Research Max.\n\n🛠 Инструмент дня\n\nMiniMax M3\nЧто делает: фронтьер open-weight модель (июнь 2026). Убийственные результаты в coding, 1M контекст и мультимодальность. Топ в SWE-Bench Pro среди открытых моделей.\nКому полезен: разработчикам, инженерам, кто крутит AI-агентов, работает с длинными проектами и хочет self-hosted решение.\nСсылка: доступна на Hugging Face и зеркалах (Kilo Code).\n\n💡 Идея дня\nКонвергенция AI и blockchain открывает эру автономных экономических агентов. Это не фантастика: агенты, которые сами управляют капиталом, делают сделки и оптимизируют процессы через смарт-контракты. Начни эксперименты на NEAR или Bittensor + фреймворки (AutoGen/LangGraph). Прототип агента для своего проекта уже даст тебе конкурентное преимущество и реальную автоматизацию бизнеса.\n\n📈 Что следить (next 7–30 дней)\n- Обновление NEAR (dynamic resharding) и его влияние на перформанс AI-агентов.\n- Динамика оттоков из Bitcoin-ETF и переток капитала в AI-токены.\n- Релизы новых open-weight моделей (DeepSeek V4 и аналоги) и их adoption.\n- Регуляторные сигналы по стейблкоинам и RWA в США/Европе.\n\n*Обзор составлен на основе событий на 4 июня 2026. Фокус — практическая ценность и инсайты, без воды.*\n\n## Tags\n\n#telegram-import #live-sync #backend #ai #tools #для #near #ai-агентов"
+    },
+    {
+      "id": 2965,
+      "date": "2026-06-03T12:42:49.000Z",
+      "title": "Меня приняли в бета-тестирование Ableton Live 12.4.5. 🚀",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 2965,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "ableton",
+        "ai",
+        "musicproduction",
+        "musictech",
+        "techno",
+        "aiagents",
+        "vibecoding",
+        "promptengineering",
+        "telegram",
+        "tools",
+        "для",
+        "меня",
+        "это"
+      ],
+      "content": "# Меня приняли в бета-тестирование Ableton Live 12.4.5. 🚀\n\nМеня приняли в бета-тестирование Ableton Live 12.4.5. 🚀\n\nДля большинства это просто новая версия DAW.\n\nДля меня — возможность исследовать будущее музыки на стыке AI, автоматизации и творчества.\n\nСейчас больше всего интересует идея связки:\n\nTelegram → AI → Ableton Live\n\nПредставьте:\n\nПишешь боту:\n«Создай мрачный индустриальный техно-трек 138 BPM»\n\nА Ableton автоматически собирает проект, создает дорожки, генерирует MIDI и аранжировку.\n\nС появлением Extensions SDK это уже не выглядит фантастикой.\n\nПохоже, музыкальные AI-агенты становятся реальностью.\n\nВремя экспериментировать. 🎛🤖\n\n#Ableton #AI #MusicProduction #MusicTech #Techno #AIAgents #VibeCoding #PromptEngineering\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACC5VqICFJr1Ippe5c0JGKOhTG9BPt1AAC0x9rG8E1AAFJQ2QB_1NrpOABAAMCAAN5AAM7BA\n\n## Tags\n\n#telegram-import #live-sync #ableton #ai #musicproduction #musictech #techno #aiagents #vibecoding #promptengineering #telegram #tools #для #меня #это"
+    },
+    {
+      "id": 2964,
+      "date": "2026-06-03T12:13:36.000Z",
+      "title": "https://www.youtube.com/watch?v=LiXtOHsJZ6k",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 2964,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "video",
+        "youtube"
+      ],
+      "content": "# https://www.youtube.com/watch?v=LiXtOHsJZ6k\n\nhttps://www.youtube.com/watch?v=LiXtOHsJZ6k\n\n## Links\n\n- https://www.youtube.com/watch?v=LiXtOHsJZ6k\n\n## Tags\n\n#telegram-import #live-sync #video #youtube"
+    },
+    {
       "id": 2963,
       "date": "2026-06-03T06:14:12.000Z",
       "title": "🔥 Главные новости дня (3 июня 2026)",

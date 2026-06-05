@@ -1,6 +1,108 @@
 {
   "posts": [
     {
+      "id": 2972,
+      "date": "2026-06-05T14:15:38.000Z",
+      "title": "Новые ноутбуки ASUS ProArt P14 и P16 на базе суперчипа NVIDIA RTX Spark, предназ...",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 2972,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "asus",
+        "spark"
+      ],
+      "content": "# Новые ноутбуки ASUS ProArt P14 и P16 на базе суперчипа NVIDIA RTX Spark, предназ...\n\nНовые ноутбуки ASUS ProArt P14 и P16 на базе суперчипа NVIDIA RTX Spark, предназначенные для локального запуска ИИ-агентов, креативной работы и игр.\n\nRTX Spark включает 20-ядерный CPU Grace, GPU Blackwell с 6144 ядрами CUDA, до 128 ГБ unified memory и производительность ИИ до 1 петафлопс на Arm-архитектуре под Windows.\n\nМодели оснащены Lumina Pro OLED тачскринами (до 4K), ПО Creator Hub, StoryCube и MuseTree; тонкие корпуса (1.48–1.77 кг) ориентированы на профессиональных создателей контента.\n\nhttps://www.asus.com/blog/the-future-of-creation-why-asus-proart-p16-p14-stole-the-show-at-computex/?linkId=100000425041067\n\n## Links\n\n- https://www.asus.com/blog/the-future-of-creation-why-asus-proart-p16-p14-stole-the-show-at-computex/?linkId=100000425041067\n\n## Tags\n\n#telegram-import #live-sync #asus #spark"
+    },
+    {
+      "id": 2971,
+      "date": "2026-06-05T14:09:41.000Z",
+      "title": "ElevenLabs представила Flows Agent в ElevenCreative — ИИ-агент, который по описа...",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 2971,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "агент",
+        "видео",
+        "для"
+      ],
+      "content": "# ElevenLabs представила Flows Agent в ElevenCreative — ИИ-агент, который по описа...\n\nElevenLabs представила Flows Agent в ElevenCreative — ИИ-агент, который по описанию пользователя автоматически строит полный workflow, выбирая модели, создавая узлы и соединяя их для генерации контента.\n\nАгент работает с 50+ моделями изображений, видео, голоса, музыки и SFX, поддерживает итерации через чат и позволяет запускать генерацию в фоне с контролем затрат.\n\nВ демо-видео агент быстро собирает 10-секундную рекламную видео для кроссовок, включая визуалы, голос за кадром и финальную сборку.\n\n## Media\n\nVideo file_id: BAACAgIAAx0CT0EpfgACC5tqItil8DeJVIgFEc757sPGDPP3HwACRaMAAiEDGUlvb0uPKRSL5DsE\n\n## Tags\n\n#telegram-import #live-sync #агент #видео #для"
+    },
+    {
+      "id": 2970,
+      "date": "2026-06-05T14:04:23.000Z",
+      "title": "Омар Сансевьеро из Google DeepMind представил Magenta RealTime 2 — открытую моде...",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 2970,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "для",
+        "модель"
+      ],
+      "content": "# Омар Сансевьеро из Google DeepMind представил Magenta RealTime 2 — открытую моде...\n\nОмар Сансевьеро из Google DeepMind представил Magenta RealTime 2 — открытую модель с 2,4 млрд параметров для генерации живой музыки в реальном времени, оптимизированную для работы на устройстве.\n\nМодель поддерживает низкозадержочное управление через аудио, MIDI и текст, выпущена с приложениями для Mac, весами на Hugging Face и блог-постом.\n\nДемо показывает интерактивный интерфейс с визуализацией волн, где текстовые промпты смешивают стили вроде техно, глитча и фортепианных арпеджио, работая локально.\n\n## Media\n\nVideo file_id: BAACAgIAAx0CT0EpfgACC5pqItdnfvkd-G-ITVvd3d0sPm5C3gACN6MAAiEDGUm-WLCx9v0G5jsE\n\n## Tags\n\n#telegram-import #live-sync #для #модель"
+    },
+    {
+      "id": 2969,
+      "date": "2026-06-05T14:03:17.000Z",
+      "title": "NVIDIA выпустила Nemotron 3 Ultra — открытую 550B MoE-модель с гибридной архитек...",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 2969,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "агентных",
+        "для"
+      ],
+      "content": "# NVIDIA выпустила Nemotron 3 Ultra — открытую 550B MoE-модель с гибридной архитек...\n\nNVIDIA выпустила Nemotron 3 Ultra — открытую 550B MoE-модель с гибридной архитектурой Mamba-Transformer, специально оптимизированную для долгосрочных агентов ИИ.\n\nМодель обеспечивает 5-кратное ускорение инференса и снижение стоимости агентных задач до 30% по сравнению с другими открытыми frontier-моделями, показывая высокие результаты в кодировании, исследованиях и долгосрочном планировании.\n\nПолностью открыта (веса, данные, рецепты пост-тренинга) и доступна на Hugging Face, с поддержкой популярных агентных фреймворков для кастомизации под специализированные задачи.\n\n## Media\n\nVideo file_id: BAACAgIAAx0CT0EpfgACC5lqItck7D5ujL2YMBzBYLXWOqE8NQACMqMAAiEDGUkFWarLid_pRjsE\n\n## Tags\n\n#telegram-import #live-sync #агентных #для"
+    },
+    {
+      "id": 2968,
+      "date": "2026-06-05T07:17:48.000Z",
+      "title": "🧠 Ежедневный ИИ-дайджест",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 2968,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "ai",
+        "mcp",
+        "agents",
+        "opensource",
+        "vibecoding",
+        "futureofwork",
+        "tools",
+        "modelcontextprotocol",
+        "для",
+        "дня",
+        "что"
+      ],
+      "content": "# 🧠 Ежедневный ИИ-дайджест\n\n🧠 Ежедневный ИИ-дайджест\n\n📈 Тренды дня\n\n1. Микро-SaaS + ИИ: ренессанс нишевых решений\nЗабудьте про гигантские платформы. Сейчас в тренде узкоспециализированные AI-сервисы: генераторы описаний для товаров, legal-ассистенты, парсеры резюме, AI-тулзы для музыкантов и дизайнеров. Маленькие проекты с чётким фокусом часто круче универсальных монстров. Это и есть настоящий vibe coding — решаем одну задачу, но делаем это идеально.\n\n2. Локальные модели (Local LLMs) обгоняют облака\nМодели на 7–30 млрд параметров теперь тянут на обычных ПК. Всё больше людей собирают персональные AI-стеки, где sensitive data остаются в self-hosted среде. Никаких лишних запросов в облако, только твой хард и нейросеть. Это тот самый privacy-first подход, который мы ждали.\n\n---\n\n🛠 Инструмент дня\n\n[MCP Inspector](https://modelcontextprotocol.io/docs/tools/inspector?utm_source=chatgpt.com)\n\nОтладочный инструмент для экосистемы MCP (Model Context Protocol).\n\nЧто умеет:\n• тестировать MCP-серверы;\n• просматривать доступные инструменты;\n• проверять вызовы функций;\n• диагностировать ошибки интеграции.\n\nMust-have для всех, кто экспериментирует с AI-агентами и строит свои workflow.\n\n---\n\n💡 Практический кейс\n\nИИ для ревизии жизненного опыта\n\nСобери в кучу:\n• старые резюме;\n• заметки;\n• описания проектов;\n• дневниковые записи;\n• посты из соцсетей.\n\nЗатем попроси ИИ:\n• выделить повторяющиеся интересы;\n• найти твои сильные стороны;\n• показать навыки, которые ты недооцениваешь;\n• предложить новые направления деятельности на основе всей истории.\n\nИногда паттерны в твоей жизни видны только после того, как прогонишь большой датасет через нейросеть. Аналитика себя, но на стероидах.\n\n---\n\n😂 Факт дня\n\nВ начале 2020-х все паниковали, что ИИ заменит программистов.\nВ середине 2020-х оказалось, что программисты просто начали кодить ещё больше — теперь вместе с ИИ.\n🤖 Похоже, автоматизация автоматизировала создание автоматизации. Рекурсия на уровне индустрии.\n\n#AI #MCP #Agents #OpenSource #VibeCoding #FutureOfWork\n\n## Links\n\n- https://modelcontextprotocol.io/docs/tools/inspector?utm_source=chatgpt.com\n\n## Tags\n\n#telegram-import #live-sync #ai #mcp #agents #opensource #vibecoding #futureofwork #tools #modelcontextprotocol #для #дня #что"
+    },
+    {
+      "id": 2967,
+      "date": "2026-06-04T13:28:13.000Z",
+      "title": "Monako Glass — это первые в мире очки с полноценным компьютером на Linux, позвол...",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 2967,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "design",
+        "для",
+        "linux",
+        "monako"
+      ],
+      "content": "# Monako Glass — это первые в мире очки с полноценным компьютером на Linux, позвол...\n\nMonako Glass — это первые в мире очки с полноценным компьютером на Linux, позволяющие запускать ИИ-агенты для кодирования вроде Claude Code в любом месте.\n\nУстройство оснащено Buildroot Linux на Arm Cortex A7, NPU 0.5 TOPS для трекинга рук и YOLO, батареей 300 мАч с 4 часами работы экрана.\n\nСтартап Monako Research на стадии прототипов с переходом к литью под давлением; видео демонстрирует интеграцию в повседневную продуктивность как новый форм-фактор компьютера.\n\n## Media\n\nVideo file_id: BAACAgIAAx0CT0EpfgACC5dqIX1tDx5Jr1jfAocQJS3arcaYrQACr5cAAjiGCUm83Kefdq_CqDsE\n\n## Tags\n\n#telegram-import #live-sync #design #для #linux #monako"
+    },
+    {
       "id": 2966,
       "date": "2026-06-04T05:49:55.000Z",
       "title": "🔥 Главные новости дня (вайб-чек рынка)",

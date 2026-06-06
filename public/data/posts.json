@@ -1,6 +1,49 @@
 {
   "posts": [
     {
+      "id": 2975,
+      "date": "2026-06-06T13:26:09.000Z",
+      "title": "Как переехать на Vercel, но продолжать кормить Netlify своими кровью 💸",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 2975,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "dev",
+        "webdev",
+        "netlify",
+        "vercel",
+        "frontend",
+        "design",
+        "ваш",
+        "деплой",
+        "если"
+      ],
+      "content": "# Как переехать на Vercel, но продолжать кормить Netlify своими кровью 💸\n\nКак переехать на Vercel, но продолжать кормить Netlify своими кровью 💸\n\nЗнакомый вайб? Мигрировали проект на Vercel, наладили workflow, выдохнули и забыли. А через пару недель чекаете инбокс, а там Netlify с криком: *«Кредиты на нуле!»* 🤯\n\nЧто пошло не так?\nЕсли вы просто свистнули домен на Vercel, но забыли отвязать репозиторий в Netlify, то каждый ваш push триггерит двойной деплой. Вы кодите в Vercel, а Netlify в фоне жрёт ваши лимиты, пока вы этого не видите. Классический баг в матрице.\n\nПочему это больно именно сейчас?\nNetlify обновил тарифы: на бесплатном теперь всего 300 кредитов в месяц. Одна сборка в продакшн — это 15 кредитов. То есть 20 коммитов в месяц — и ваш аккаунт на Netlify сгорел под ноль. Абсурд, но факт.\n\nА на Vercel (Hobby) всё по-другому:\n* 100 ГБ трафика бесплатно.\n* 6 000 минут сборки.\n* До 100 деплоев в день.\n\nКак лечить этот ад?\nНе ленитесь, зайдите в Netlify и сделайте деплой в никуда:\n👉 *Site settings -> Build & deploy -> Continuous deployment -> Manage repository -> Unlink repository* (или просто *Stop builds*).\n\nИли удалите старую копию сайта, если она уже не нужна. Берегите свои кредиты, не давайте им умирать зря! 🫡\n\n#dev #webdev #netlify #vercel #frontend\n\n## Tags\n\n#telegram-import #live-sync #dev #webdev #netlify #vercel #frontend #design #ваш #деплой #если"
+    },
+    {
+      "id": 2974,
+      "date": "2026-06-06T12:56:00.000Z",
+      "title": "Генеральная уборка VS Code: свел с ~90 расширений до 57. Прошерстил статистику п...",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 2974,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "frontend",
+        "backend",
+        "design",
+        "ai",
+        "tools",
+        "что",
+        "code",
+        "после"
+      ],
+      "content": "# Генеральная уборка VS Code: свел с ~90 расширений до 57. Прошерстил статистику п...\n\nГенеральная уборка VS Code: свел с ~90 расширений до 57. Прошерстил статистику по папке и выгреб 20+ Dead weight с сентября 2024 года — они просто висят, не обновляются и дублируют встроенную функциональность.\n\nЧто выкинул:\n▫️ Старые snippets и хелперы (es7-react-js, django, codesnap, p5-vscode)\n▫️ Дубли встроенного функционала: auto-close/rename-tag (теперь это часть ядра VS Code), indent-rainbow, git-graph, babel\n▫️ Два live-server одновременно — оставил только ms-vscode версию\n▫️ rvest.vs-code-prettier-eslint — конфликтовал с prettier + eslint\n▫️ donjayamanne.python-extension-pack — кустарная обёртка, которая больше не нужна после обновления Microsoft Python\n\nЧто обновил:\n▫️ ms-python.python → v2026.4.0\n▫️ ms-python.vscode-pylance → v2026.2.1\n▫️ ms-python.isort + debugpy → v2026.6.0\n▫️ После обновления раскрепостился и удалил старый python-extension-pack\n\nНастраивать комфорт:\n▫️ Создал settings.json с автоформатированием (Prettier), bracket pair colorization, linked editing, breadcrumbs\n▫️ Включил GitLens: blame на текущей строке + code lens для коммитов\n▫️ Автосохранение через 1с после остановки ввода, trim trailing whitespace, LF line endings\n▫️ Synthwave '84 тема + vscode-icons (уже были установлены)\n▫️ Исключил node_modules/dist/build/.next/.nuxt из поиска\n\nЧто почистил в мусоре:\n▫️ Cache + CachedData в Roaming/Code\n▫️ .obsolete папка в extensions\n▫️ Две leftover директории с хэшами от удалённых расширений\n\nИтого: IDE стартует быстрее, меньше мертвого кода в extensions bar, все настройки аккуратные и под рукой. Оставил только нужное + AI-ассистенты для тестов (их 9 штук, периодически сравниваю, что лучше работает).\n\nКому было полезно — ставьте лайк, если есть вопросы по настройке — пишите в комментарии 👇\n\n## Tags\n\n#telegram-import #live-sync #frontend #backend #design #ai #tools #что #code #после"
+    },
+    {
       "id": 2973,
       "date": "2026-06-06T07:59:39.000Z",
       "title": "🔥 Топ событий: только хардкор и реальные цифры",

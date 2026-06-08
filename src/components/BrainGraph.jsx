@@ -30,7 +30,7 @@ const seededRandom = (value) => {
   return (hash >>> 0) / 4294967295;
 };
 
-const BrainGraph = ({ language = 'en' }) => {
+const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
   const t = translations[language].brain;
   const [posts, setPosts] = useState([]);
   const [selectedPost, setSelectedPost] = useState(null);
@@ -40,6 +40,53 @@ const BrainGraph = ({ language = 'en' }) => {
   const [selectedTag, setSelectedTag] = useState(null);
   const [physicsEnabled, setPhysicsEnabled] = useState(true);
   const [loadingData, setLoadingData] = useState(true);
+
+  const themeColors = useMemo(() => {
+    switch (theme) {
+      case 'solar':
+        return {
+          primary: '#f2994a',
+          secondary: '#eb5757',
+          primaryGlow: 'rgba(242, 153, 74, 0.8)',
+          secondaryGlow: 'rgba(235, 87, 87, 0.8)',
+          primaryRgb: '242, 153, 74',
+          secondaryRgb: '235, 87, 87'
+        };
+      case 'emerald':
+        return {
+          primary: '#22c55e',
+          secondary: '#0f766e',
+          primaryGlow: 'rgba(34, 197, 94, 0.8)',
+          secondaryGlow: 'rgba(15, 118, 110, 0.8)',
+          primaryRgb: '34, 197, 94',
+          secondaryRgb: '15, 118, 110'
+        };
+      case 'void':
+        return {
+          primary: '#d1d5db',
+          secondary: '#6b7280',
+          primaryGlow: 'rgba(209, 213, 219, 0.8)',
+          secondaryGlow: 'rgba(107, 114, 128, 0.8)',
+          primaryRgb: '209, 213, 219',
+          secondaryRgb: '107, 114, 128'
+        };
+      case 'cyber':
+      default:
+        return {
+          primary: '#22d3ee',
+          secondary: '#a855f7',
+          primaryGlow: 'rgba(34, 211, 238, 0.8)',
+          secondaryGlow: 'rgba(168, 85, 247, 0.8)',
+          primaryRgb: '34, 211, 238',
+          secondaryRgb: '168, 85, 247'
+        };
+    }
+  }, [theme]);
+
+  const themeColorsRef = useRef(themeColors);
+  useEffect(() => {
+    themeColorsRef.current = themeColors;
+  }, [themeColors]);
 
   const canvasRef = useRef(null);
   const containerRef = useRef(null);
@@ -133,8 +180,8 @@ const BrainGraph = ({ language = 'en' }) => {
         type: 'post',
         label: post.title,
         size: 7,
-        color: '#22d3ee', // cyber-cyan
-        glowColor: 'rgba(34, 211, 238, 0.8)',
+        color: themeColors.primary,
+        glowColor: themeColors.primaryGlow,
         data: post,
         x: seededRandom(`${post.id}:x`) * 500 - 250,
         y: seededRandom(`${post.id}:y`) * 500 - 250,
@@ -162,8 +209,8 @@ const BrainGraph = ({ language = 'en' }) => {
           type: 'tag',
           label: `#${tag}`,
           size: 9 + Math.min(tagPostsCount * 1.5, 15),
-          color: '#a855f7', // cyber-purple
-          glowColor: 'rgba(168, 85, 247, 0.8)',
+          color: themeColors.secondary,
+          glowColor: themeColors.secondaryGlow,
           data: tag,
           x: seededRandom(`${tag}:x`) * 500 - 250,
           y: seededRandom(`${tag}:y`) * 500 - 250,
@@ -205,7 +252,7 @@ const BrainGraph = ({ language = 'en' }) => {
     }
 
     return { nodes, links };
-  }, [filteredPosts, showTags]);
+  }, [filteredPosts, showTags, themeColors]);
 
   // Keep track of current nodes state for canvas animation loop
   const nodesRef = useRef([]);
@@ -417,6 +464,7 @@ const BrainGraph = ({ language = 'en' }) => {
         let opacity = 0.12;
         let color = 'rgba(255,255,255,';
 
+        const colors = themeColorsRef.current;
         const isHoveredSourceOrTarget = hoveredNodeRef.current && (hoveredNodeRef.current.id === source.id || hoveredNodeRef.current.id === target.id);
         const isSelectedSourceOrTarget = selectedPostRef.current && 
           ((source.type === 'post' && source.data.id === selectedPostRef.current.id) || 
@@ -424,10 +472,10 @@ const BrainGraph = ({ language = 'en' }) => {
 
         if (isHoveredSourceOrTarget) {
           opacity = 0.5;
-          color = target.type === 'tag' ? 'rgba(168, 85, 247,' : 'rgba(34, 211, 238,';
+          color = target.type === 'tag' ? `rgba(${colors.secondaryRgb},` : `rgba(${colors.primaryRgb},`;
         } else if (isSelectedSourceOrTarget) {
           opacity = 0.7;
-          color = 'rgba(34, 211, 238,';
+          color = `rgba(${colors.primaryRgb},`;
         }
 
         ctx.strokeStyle = `${color}${opacity})`;
@@ -465,9 +513,10 @@ const BrainGraph = ({ language = 'en' }) => {
 
         ctx.restore();
 
+        const colors = themeColorsRef.current;
         const showLabel = n.type === 'tag' || isHovered || isSelected || isCurrentTagFiltered;
         if (showLabel) {
-          ctx.fillStyle = isHovered ? '#ffffff' : (n.type === 'tag' ? '#c084fc' : '#e2e8f0');
+          ctx.fillStyle = isHovered ? '#ffffff' : (n.type === 'tag' ? colors.secondary : '#e2e8f0');
           ctx.font = n.type === 'tag' 
             ? `bold ${Math.max(10, 11 / transform.scale)}px Space Grotesk, sans-serif`
             : `${Math.max(9, 10 / transform.scale)}px Inter, sans-serif`;
@@ -941,7 +990,7 @@ const BrainGraph = ({ language = 'en' }) => {
                 onClick={() => { setSelectedTag(null); AudioService.playTick(); }}
                 className={`px-3 py-1 rounded-full text-xs font-display tracking-wider border transition-all cursor-pointer ${
                     !selectedTag
-                        ? 'bg-cyber-cyan text-black border-cyber-cyan shadow-[0_0_10px_rgba(34,211,238,0.3)] font-bold'
+                        ? 'bg-cyber-cyan text-black border-cyber-cyan shadow-[0_0_10px_rgba(var(--primary-color-rgb),0.3)] font-bold'
                         : 'bg-transparent text-gray-400 border-white/5 hover:border-white/20 hover:text-white'
                 }`}
             >
@@ -956,7 +1005,7 @@ const BrainGraph = ({ language = 'en' }) => {
                     }}
                     className={`px-3 py-1 rounded-full text-xs font-display tracking-wider border transition-all cursor-pointer ${
                         selectedTag === item.tag
-                            ? 'bg-cyber-purple text-white border-cyber-purple shadow-[0_0_10px_rgba(168,85,247,0.3)] font-bold'
+                            ? 'bg-cyber-purple text-white border-cyber-purple shadow-[0_0_10px_rgba(var(--secondary-color-rgb),0.3)] font-bold'
                             : 'bg-transparent text-gray-400 border-white/5 hover:border-white/20 hover:text-white'
                     }`}
                 >
@@ -974,12 +1023,12 @@ const BrainGraph = ({ language = 'en' }) => {
             {/* Legend and node counts overlay */}
             <div className="absolute left-4 top-4 z-10 bg-cyber-black/70 border border-white/5 backdrop-blur-md px-3 py-2.5 rounded-lg text-[10px] md:text-xs text-gray-400 space-y-1.5 pointer-events-none">
               <div className="flex items-center gap-2">
-                <span className="w-2 h-2 bg-cyber-cyan rounded-full shadow-[0_0_6px_#22d3ee]" />
+                <span className="w-2 h-2 bg-cyber-cyan rounded-full shadow-[0_0_6px_var(--primary-color)]" />
                 <span>Posts ({filteredPosts.length})</span>
               </div>
               {showTags && (
                 <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-cyber-purple rounded-full shadow-[0_0_6px_#a855f7]" />
+                  <span className="w-2 h-2 bg-cyber-purple rounded-full shadow-[0_0_6px_var(--secondary-color)]" />
                   <span>Tags ({graphData.nodes.filter(n => n.type === 'tag').length})</span>
                 </div>
               )}
@@ -999,7 +1048,7 @@ const BrainGraph = ({ language = 'en' }) => {
               />
               {loadingData && (
                 <div className="absolute inset-0 bg-cyber-dark/80 backdrop-blur-sm flex flex-col items-center justify-center space-y-4 z-10">
-                  <div className="w-12 h-12 border-4 border-cyber-cyan border-t-transparent rounded-full animate-spin shadow-[0_0_15px_rgba(34,211,238,0.2)]"></div>
+                  <div className="w-12 h-12 border-4 border-cyber-cyan border-t-transparent rounded-full animate-spin shadow-[0_0_15px_rgba(var(--primary-color-rgb),0.2)]"></div>
                   <div className="text-sm font-cyber uppercase tracking-widest text-cyber-cyan animate-pulse">Loading Knowledge Base...</div>
                 </div>
               )}
@@ -1092,7 +1141,7 @@ const BrainGraph = ({ language = 'en' }) => {
                     href={`https://t.me/c/${String(selectedPost.telegram_chat_id).replace('-100', '')}/${selectedPost.telegram_message_id}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full flex items-center justify-center gap-1.5 py-2.5 bg-cyber-cyan hover:bg-cyber-cyan/80 text-black text-xs font-black tracking-widest uppercase rounded-full transition-all shadow-[0_0_10px_rgba(34,211,238,0.2)] hover:shadow-[0_0_15px_rgba(34,211,238,0.4)]"
+                    className="w-full flex items-center justify-center gap-1.5 py-2.5 bg-cyber-cyan hover:bg-cyber-cyan/80 text-black text-xs font-black tracking-widest uppercase rounded-full transition-all shadow-[0_0_10px_rgba(var(--primary-color-rgb),0.2)] hover:shadow-[0_0_15px_rgba(var(--primary-color-rgb),0.4)]"
                   >
                     <span>Open in Telegram</span>
                     <ExternalLink className="w-3.5 h-3.5" />

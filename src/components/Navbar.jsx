@@ -103,7 +103,7 @@ const Navbar = ({ activeSection, scrollTo, language, setLanguage }) => {
                     <div ref={containerRef} className="hidden md:flex gap-1.5 items-center relative font-display">
                         {/* Sliding Highlight Background */}
                         <div
-                            className="absolute bg-cyber-cyan/10 rounded-full transition-all duration-300 ease-[cubic-bezier(0.25,1,0.5,1)] pointer-events-none border border-cyber-cyan/20 shadow-[0_0_12px_rgba(34,211,238,0.15)]"
+                            className="absolute bg-cyber-cyan/10 rounded-full transition-all duration-300 ease-[cubic-bezier(0.25,1,0.5,1)] pointer-events-none border border-cyber-cyan/20 shadow-[0_0_12px_rgba(var(--primary-color-rgb),0.15)]"
                             style={{
                                 left: indicatorStyle.left,
                                 width: indicatorStyle.width,
@@ -137,7 +137,7 @@ const Navbar = ({ activeSection, scrollTo, language, setLanguage }) => {
                             onMouseEnter={() => AudioService.playTick()}
                             className={`p-1.5 px-3 rounded-full border transition-all duration-300 flex items-center justify-center gap-1.5 hover:scale-105 cursor-pointer ${
                                 audioMode !== 'silent'
-                                    ? 'border-cyber-cyan/30 text-cyber-cyan bg-cyber-cyan/10 shadow-[0_0_12px_rgba(34,211,238,0.2)] animate-pulse'
+                                    ? 'border-cyber-cyan/30 text-cyber-cyan bg-cyber-cyan/10 shadow-[0_0_12px_rgba(var(--primary-color-rgb),0.2)] animate-pulse'
                                     : 'border-white/10 text-gray-500 hover:text-white hover:border-white/20'
                             }`}
                             title={audioMode !== 'silent' ? 'Mute Audio' : 'Unmute Audio'}
@@ -170,7 +170,7 @@ const Navbar = ({ activeSection, scrollTo, language, setLanguage }) => {
                             onMouseEnter={() => AudioService.playTick()}
                             className={`p-2 rounded-full border transition-all duration-300 flex items-center justify-center gap-1 hover:scale-105 cursor-pointer ${
                                 audioMode !== 'silent'
-                                    ? 'border-cyber-cyan/30 text-cyber-cyan bg-cyber-cyan/10 shadow-[0_0_10px_rgba(34,211,238,0.15)]'
+                                    ? 'border-cyber-cyan/30 text-cyber-cyan bg-cyber-cyan/10 shadow-[0_0_10px_rgba(var(--primary-color-rgb),0.15)]'
                                     : 'border-white/10 text-gray-500 hover:text-white hover:border-white/20'
                             }`}
                             title={audioMode !== 'silent' ? 'Mute Audio' : 'Unmute Audio'}

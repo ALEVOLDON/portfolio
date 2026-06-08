@@ -43,14 +43,16 @@ const ThreeBackground = ({ brightness = 1.0, speed = 1.0, theme = 'cyber' }) => 
             antialias: false,
             powerPreference: 'high-performance'
         });
-        renderer.setClearColor(0x030106, 1);
         mountEl.appendChild(renderer.domElement);
 
         const currentColors = {
             cyan: new THREE.Color(0x22d3ee),
             violet: new THREE.Color(0xa855f7),
-            blue: new THREE.Color(0x0e7490)
+            blue: new THREE.Color(0x0e7490),
+            bg: new THREE.Color(0x030106)
         };
+
+        renderer.setClearColor(currentColors.bg, 1);
 
         const backgroundMaterial = new THREE.ShaderMaterial({
             uniforms: {
@@ -342,28 +344,32 @@ const ThreeBackground = ({ brightness = 1.0, speed = 1.0, theme = 'cyber' }) => 
             pointerVelocity.current.y = easedPointer.current.y - lastY;
 
             // Map target theme colors for smooth interpolation
-            let targetCyan, targetViolet, targetBlue;
+            let targetCyan, targetViolet, targetBlue, targetBg;
             switch (configRef.current.theme) {
                 case 'solar':
                     targetCyan = new THREE.Color(0xf2994a); // Amber Gold
                     targetViolet = new THREE.Color(0xeb5757); // Warm Red
                     targetBlue = new THREE.Color(0x551100); // Deep Amber-Rust
+                    targetBg = new THREE.Color(0x080302); // Warm Black
                     break;
                 case 'emerald':
                     targetCyan = new THREE.Color(0x22c55e); // Neon Green
                     targetViolet = new THREE.Color(0x0f766e); // Teal
                     targetBlue = new THREE.Color(0x021c16); // Deep Emerald
+                    targetBg = new THREE.Color(0x020604); // Deep Green-Black
                     break;
                 case 'void':
                     targetCyan = new THREE.Color(0xd1d5db); // Light Silver
                     targetViolet = new THREE.Color(0x4b5563); // Cool Gray
                     targetBlue = new THREE.Color(0x0b0f19); // Ink Dark Gray
+                    targetBg = new THREE.Color(0x0a0c10); // Cool Grey-Black
                     break;
                 case 'cyber':
                 default:
                     targetCyan = new THREE.Color(0x22d3ee); // Cyan
                     targetViolet = new THREE.Color(0xa855f7); // Violet
                     targetBlue = new THREE.Color(0x0e7490); // Dark Blue
+                    targetBg = new THREE.Color(0x050505); // Cyber Black
                     break;
             }
 
@@ -372,6 +378,9 @@ const ThreeBackground = ({ brightness = 1.0, speed = 1.0, theme = 'cyber' }) => 
             currentColors.cyan.lerp(targetCyan, colorLerpSpeed);
             currentColors.violet.lerp(targetViolet, colorLerpSpeed);
             currentColors.blue.lerp(targetBlue, colorLerpSpeed);
+            currentColors.bg.lerp(targetBg, colorLerpSpeed);
+
+            renderer.setClearColor(currentColors.bg, 1);
 
             // Sync WebGL uniforms
             backgroundMaterial.uniforms.uTime.value = time;
@@ -444,7 +453,7 @@ const ThreeBackground = ({ brightness = 1.0, speed = 1.0, theme = 'cyber' }) => 
     }, []);
 
     return (
-        <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden bg-[#030106]">
+        <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden bg-cyber-black">
             <div ref={mountRef} className="absolute inset-0" />
             <div className="background-vignette" />
         </div>

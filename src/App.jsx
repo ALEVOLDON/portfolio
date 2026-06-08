@@ -25,7 +25,7 @@ import {
 const ThreeBackground = lazy(() => import('./components/ThreeBackground'));
 
 const StaticBackground = () => (
-  <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden bg-[#030106]">
+  <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden bg-cyber-black">
     <div className="background-vignette" />
   </div>
 );
@@ -76,9 +76,13 @@ const App = () => {
     };
   }, []);
 
-  // Sync theme changes with the audio service
+  // Sync theme changes with the audio service and document body class
   useEffect(() => {
     AudioService.setTheme(bgConfig.theme);
+    
+    const body = document.body;
+    body.className = body.className.replace(/\btheme-\S+/g, '');
+    body.classList.add(`theme-${bgConfig.theme}`);
   }, [bgConfig.theme]);
 
   useEffect(() => {
@@ -180,11 +184,11 @@ const App = () => {
       <Navbar activeSection={activeSection} scrollTo={scrollTo} language={language} setLanguage={setLanguage} />
       <SpotifyPlayer />
       <main>
-        <Hero profile={profile} loading={loading} scrollTo={scrollTo} language={language} />
+        <Hero theme={bgConfig.theme} profile={profile} loading={loading} scrollTo={scrollTo} language={language} />
         <WhatICreate language={language} />
         <Projects repos={repos} loading={loading} language={language} />
         <About profile={profile} readme={readme} stats={stats} language={language} />
-        <BrainGraph language={language} />
+        <BrainGraph theme={bgConfig.theme} language={language} />
         <Contact language={language} />
       </main>
       <ScrollToTop />

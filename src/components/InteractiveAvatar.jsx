@@ -4,29 +4,72 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import Icon from './Icon';
 
 // Helper to generate a soft circular glow texture for points/particles.
-const createDotTexture = () => {
-  const canvas = document.createElement('canvas');
-  canvas.width = 16;
-  canvas.height = 16;
-  const ctx = canvas.getContext('2d');
-  
-  const gradient = ctx.createRadialGradient(8, 8, 0, 8, 8, 8);
-  gradient.addColorStop(0, 'rgba(255, 255, 255, 1.0)');
-  gradient.addColorStop(0.3, 'rgba(34, 211, 238, 0.85)'); // Cyan core
-  gradient.addColorStop(0.7, 'rgba(168, 85, 247, 0.25)'); // Purple glow
-  gradient.addColorStop(1.0, 'rgba(0, 0, 0, 0)');
-  
-  ctx.fillStyle = gradient;
-  ctx.fillRect(0, 0, 16, 16);
-  
-  return new THREE.CanvasTexture(canvas);
-};
-
-const InteractiveAvatar = ({ profile, loading }) => {
+const InteractiveAvatar = ({ theme = 'cyber', profile, loading }) => {
   const containerRef = useRef(null);
   const [progress, setProgress] = useState(0);
   const [modelLoaded, setModelLoaded] = useState(false);
   const [loadError, setLoadError] = useState(false);
+
+  const themeColors = React.useMemo(() => {
+    switch (theme) {
+      case 'solar':
+        return {
+          primaryHex: 0xf2994a,
+          secondaryHex: 0xeb5757,
+          primaryStr: '#f2994a',
+          secondaryStr: '#eb5757',
+          primaryRgb: '242, 153, 74',
+          secondaryRgb: '235, 87, 87'
+        };
+      case 'emerald':
+        return {
+          primaryHex: 0x22c55e,
+          secondaryHex: 0x0f766e,
+          primaryStr: '#22c55e',
+          secondaryStr: '#0f766e',
+          primaryRgb: '34, 197, 94',
+          secondaryRgb: '15, 118, 110'
+        };
+      case 'void':
+        return {
+          primaryHex: 0xd1d5db,
+          secondaryHex: 0x6b7280,
+          primaryStr: '#d1d5db',
+          secondaryStr: '#6b7280',
+          primaryRgb: '209, 213, 219',
+          secondaryRgb: '107, 114, 128'
+        };
+      case 'cyber':
+      default:
+        return {
+          primaryHex: 0x22d3ee,
+          secondaryHex: 0xa855f7,
+          primaryStr: '#22d3ee',
+          secondaryStr: '#a855f7',
+          primaryRgb: '34, 211, 238',
+          secondaryRgb: '168, 85, 247'
+        };
+    }
+  }, [theme]);
+
+  // Helper to generate a soft circular glow texture for points/particles.
+  const createDotTexture = (colors) => {
+    const canvas = document.createElement('canvas');
+    canvas.width = 16;
+    canvas.height = 16;
+    const ctx = canvas.getContext('2d');
+    
+    const gradient = ctx.createRadialGradient(8, 8, 0, 8, 8, 8);
+    gradient.addColorStop(0, 'rgba(255, 255, 255, 1.0)');
+    gradient.addColorStop(0.3, `rgba(${colors.primaryRgb}, 0.85)`); // Theme core
+    gradient.addColorStop(0.7, `rgba(${colors.secondaryRgb}, 0.25)`); // Theme glow
+    gradient.addColorStop(1.0, 'rgba(0, 0, 0, 0)');
+    
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, 16, 16);
+    
+    return new THREE.CanvasTexture(canvas);
+  };
 
   useEffect(() => {
     if (loading) return;
@@ -75,12 +118,12 @@ const InteractiveAvatar = ({ profile, loading }) => {
       scene.add(ambientLight);
 
       // Key light - Cyan from top-front-right
-      keyLight = new THREE.DirectionalLight(0x22d3ee, 1.8);
+      keyLight = new THREE.DirectionalLight(themeColors.primaryHex, 1.8);
       keyLight.position.set(4, 4, 3);
       scene.add(keyLight);
 
       // Fill light - Purple/Magenta from front-left to catch the other side
-      fillLight = new THREE.DirectionalLight(0xa855f7, 1.2);
+      fillLight = new THREE.DirectionalLight(themeColors.secondaryHex, 1.2);
       fillLight.position.set(-4, 2, 2);
       scene.add(fillLight);
 
@@ -97,7 +140,7 @@ const InteractiveAvatar = ({ profile, loading }) => {
       // 5. Outer HUD rings (gyroscopic orbital scanning rings)
       const ringGeom = new THREE.RingGeometry(1.42, 1.44, 64);
       const ringMat = new THREE.MeshBasicMaterial({
-        color: 0x22d3ee,
+        color: themeColors.primaryHex,
         transparent: true,
         opacity: 0.45,
         side: THREE.DoubleSide
@@ -109,7 +152,7 @@ const InteractiveAvatar = ({ profile, loading }) => {
       // Technical dotted ring
       const dotRingGeom = new THREE.RingGeometry(1.50, 1.51, 32);
       const dotRingMat = new THREE.MeshBasicMaterial({
-        color: 0xa855f7,
+        color: themeColors.secondaryHex,
         transparent: true,
         opacity: 0.35,
         wireframe: true,
@@ -122,7 +165,7 @@ const InteractiveAvatar = ({ profile, loading }) => {
       // Thin outermost scan ring
       const scanRingGeom = new THREE.RingGeometry(1.58, 1.59, 64);
       const scanRingMat = new THREE.MeshBasicMaterial({
-        color: 0x22d3ee,
+        color: themeColors.primaryHex,
         transparent: true,
         opacity: 0.25,
         side: THREE.DoubleSide
@@ -166,7 +209,7 @@ const InteractiveAvatar = ({ profile, loading }) => {
           modelContainer.position.y = -0.25;
 
           // Create the glowing dot texture
-          const dotTexture = createDotTexture();
+          const dotTexture = createDotTexture(themeColors);
 
           // Traverse model and apply hybrid cyberpunk rendering (cyber-glass + glowing particles)
           const meshes = [];
@@ -208,7 +251,7 @@ const InteractiveAvatar = ({ profile, loading }) => {
 
             // Holographic glowing particle overlay using downsampled geometry to reduce density
             const pointsMat = new THREE.PointsMaterial({
-              color: 0x22d3ee,
+              color: themeColors.primaryHex,
               size: 0.02, // Slightly larger particles for better visibility with lower density
               sizeAttenuation: true,
               transparent: true,
@@ -310,9 +353,9 @@ const InteractiveAvatar = ({ profile, loading }) => {
 
         // Dynamic color transition between cyan and purple (oscillates at 0.8 rad/s)
         const colorWeight = (Math.sin(time * 0.8) + 1.0) / 2.0;
-        const cyanColor = new THREE.Color(0x22d3ee);
-        const purpleColor = new THREE.Color(0xa855f7);
-        const currentColor = cyanColor.clone().lerp(purpleColor, colorWeight);
+        const primaryColor = new THREE.Color(themeColors.primaryHex);
+        const secondaryColor = new THREE.Color(themeColors.secondaryHex);
+        const currentColor = primaryColor.clone().lerp(secondaryColor, colorWeight);
 
         activePointsMaterials.forEach((mat) => {
           mat.color.copy(currentColor);
@@ -398,7 +441,7 @@ const InteractiveAvatar = ({ profile, loading }) => {
       }
       if (renderer) renderer.dispose();
     };
-  }, [loading]);
+  }, [loading, theme, themeColors]);
 
   if (loadError) {
     // Elegant fallback to avatar image if GLB load fails
@@ -425,7 +468,7 @@ const InteractiveAvatar = ({ profile, loading }) => {
       <div className="relative w-64 h-64 rounded-full overflow-hidden border border-cyber-cyan/30 bg-cyber-black/80 flex items-center justify-center">
         {/* Holographic scanner line overlay */}
         <div className="absolute inset-0 pointer-events-none z-20 overflow-hidden rounded-full">
-          <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-cyber-cyan to-transparent shadow-[0_0_8px_#22d3ee] animate-scanline opacity-60"></div>
+          <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-cyber-cyan to-transparent shadow-[0_0_8px_var(--primary-color)] animate-scanline opacity-60"></div>
         </div>
 
         {/* Diagnostic HUD text */}
@@ -461,7 +504,7 @@ const InteractiveAvatar = ({ profile, loading }) => {
             {/* Progress bar */}
             <div className="w-36 h-1 bg-cyber-cyan/10 rounded-full mt-3 overflow-hidden border border-cyber-cyan/20">
               <div 
-                className="h-full bg-gradient-to-r from-cyber-cyan to-cyber-purple transition-all duration-300 shadow-[0_0_8px_#22d3ee]"
+                className="h-full bg-gradient-to-r from-cyber-cyan to-cyber-purple transition-all duration-300 shadow-[0_0_8px_var(--primary-color)]"
                 style={{ width: `${progress}%` }}
               ></div>
             </div>

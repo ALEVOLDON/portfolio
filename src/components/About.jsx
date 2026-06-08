@@ -36,7 +36,7 @@ const About = ({ profile, stats, language = 'en' }) => {
                     <div className="lg:col-span-5 space-y-4">
 
                         {/* 1. Main Stats Panel (Visual Match to Screenshot) */}
-                        <div className="bg-cyber-dark border border-white/10 rounded-xl p-5 hover:border-cyber-purple/50 hover:shadow-[0_0_25px_rgba(168,85,247,0.15)] transition-all duration-300 reveal reveal-left tech-corners corners-purple">
+                        <div className="bg-cyber-dark border border-white/10 rounded-xl p-5 hover:border-cyber-purple/50 hover:shadow-[0_0_25px_rgba(var(--secondary-color-rgb),0.15)] transition-all duration-300 reveal reveal-left tech-corners corners-purple">
                             <h3 className="text-sm font-bold text-cyber-purple mb-4 flex items-center gap-2 uppercase tracking-widest font-cyber">
                                 {t.gitTitle}
                             </h3>
@@ -53,7 +53,7 @@ const About = ({ profile, stats, language = 'en' }) => {
                                 <div className="relative w-24 h-24 flex items-center justify-center">
                                     <svg className="w-full h-full" viewBox="0 0 100 100">
                                         <circle cx="50" cy="50" r="45" fill="none" stroke="#333" strokeWidth="8" />
-                                        <circle cx="50" cy="50" r="45" fill="none" stroke="#a855f7" strokeWidth="8" strokeDasharray="283" strokeDashoffset="40" strokeLinecap="round" transform="rotate(-90 50 50)" />
+                                        <circle cx="50" cy="50" r="45" fill="none" stroke="var(--color-cyber-purple)" strokeWidth="8" strokeDasharray="283" strokeDashoffset="40" strokeLinecap="round" transform="rotate(-90 50 50)" />
                                     </svg>
                                     <div className="absolute text-3xl font-black text-white font-cyber">{stats?.grade || 'B+'}</div>
                                 </div>
@@ -61,7 +61,7 @@ const About = ({ profile, stats, language = 'en' }) => {
                         </div>
 
                         {/* 2. Languages Panel (Visual Match to Screenshot) */}
-                        <div className="bg-cyber-dark border border-white/10 rounded-xl p-5 hover:border-cyber-cyan/50 hover:shadow-[0_0_25px_rgba(34,211,238,0.15)] transition-all duration-300 reveal reveal-left tech-corners corners-cyan" style={{ transitionDelay: '100ms' }}>
+                        <div className="bg-cyber-dark border border-white/10 rounded-xl p-5 hover:border-cyber-cyan/50 hover:shadow-[0_0_25px_rgba(var(--primary-color-rgb),0.15)] transition-all duration-300 reveal reveal-left tech-corners corners-cyan" style={{ transitionDelay: '100ms' }}>
                             <h3 className="text-sm font-bold text-cyber-cyan mb-4 flex items-center gap-2 uppercase tracking-widest font-cyber">
                                 {t.gitLangs}
                             </h3>
@@ -145,7 +145,7 @@ const About = ({ profile, stats, language = 'en' }) => {
                                 
                                 <div className="border-t border-white/5 pt-6">
                                     <h4 className="text-xs uppercase tracking-[0.2em] text-zinc-500 mb-4 font-mono">{t.radarHeader}</h4>
-                                    <div className="bg-[#0a080f]/90 border border-cyber-purple/30 rounded-xl p-5 relative overflow-hidden tech-corners corners-purple">
+                                    <div className="bg-cyber-dark/40 border border-cyber-purple/30 rounded-xl p-5 relative overflow-hidden tech-corners corners-purple">
                                         {/* Status indicator */}
                                         <div className="flex items-center gap-3 mb-4">
                                             <span className="relative flex h-2 w-2">

@@ -147,7 +147,7 @@ const Projects = ({ repos, loading, language = 'en' }) => {
                             }}
                             className={`flex-1 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer ${
                                 projectMode === 'featured'
-                                    ? 'bg-cyber-cyan text-black shadow-[0_0_15px_rgba(34,211,238,0.3)]'
+                                    ? 'bg-cyber-cyan text-black shadow-[0_0_15px_rgba(var(--primary-color-rgb),0.3)]'
                                     : 'text-zinc-400 hover:text-white bg-transparent'
                             }`}
                         >
@@ -163,7 +163,7 @@ const Projects = ({ repos, loading, language = 'en' }) => {
                             }}
                             className={`flex-1 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer ${
                                 projectMode === 'telemetry'
-                                    ? 'bg-cyber-purple text-white shadow-[0_0_15px_rgba(168,85,247,0.3)]'
+                                    ? 'bg-cyber-purple text-white shadow-[0_0_15px_rgba(var(--secondary-color-rgb),0.3)]'
                                     : 'text-zinc-400 hover:text-white bg-transparent'
                             }`}
                         >
@@ -185,7 +185,7 @@ const Projects = ({ repos, loading, language = 'en' }) => {
                                         setCurrentIndex(0);
                                     }}
                                     className={`px-4 py-2 rounded-full text-xs font-display uppercase tracking-wider border transition-all duration-300 cursor-pointer ${activeFilter === lang
-                                        ? 'bg-cyber-purple text-black border-cyber-purple shadow-[0_0_12px_rgba(168,85,247,0.3)]'
+                                        ? 'bg-cyber-purple text-black border-cyber-purple shadow-[0_0_12px_rgba(var(--secondary-color-rgb),0.3)]'
                                         : 'bg-transparent text-gray-400 border-white/10 hover:border-cyber-purple/50 hover:text-white'
                                         }`}
                                 >
@@ -238,8 +238,8 @@ const Projects = ({ repos, loading, language = 'en' }) => {
                                                 onDragStart={(e) => e.preventDefault()}
                                                 className={`group relative bg-cyber-dark border border-white/10 rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] flex flex-col h-full select-none cursor-pointer tech-corners ${
                                                     projectMode === 'featured' 
-                                                        ? 'hover:border-cyber-cyan/50 hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] corners-cyan' 
-                                                        : 'hover:border-cyber-purple/50 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] corners-purple'
+                                                        ? 'hover:border-cyber-cyan/50 hover:shadow-[0_0_30px_rgba(var(--primary-color-rgb),0.15)] corners-cyan' 
+                                                        : 'hover:border-cyber-purple/50 hover:shadow-[0_0_30px_rgba(var(--secondary-color-rgb),0.15)] corners-purple'
                                                 }`}
                                             >
                                                 <div className="w-full h-44 overflow-hidden border-b border-white/5 relative">
@@ -293,8 +293,8 @@ const Projects = ({ repos, loading, language = 'en' }) => {
                                     disabled={currentIndex === 0}
                                     className={`absolute -left-2 md:-left-12 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full border bg-cyber-dark/80 disabled:opacity-25 disabled:pointer-events-none transition-all duration-300 backdrop-blur-md cursor-pointer hidden md:flex ${
                                         projectMode === 'featured' 
-                                            ? 'border-cyber-cyan/20 text-cyber-cyan hover:border-cyber-cyan hover:shadow-[0_0_15px_rgba(34,211,238,0.4)]'
-                                            : 'border-cyber-purple/20 text-cyber-purple hover:border-cyber-purple hover:shadow-[0_0_15px_rgba(168,85,247,0.4)]'
+                                            ? 'border-cyber-cyan/20 text-cyber-cyan hover:border-cyber-cyan hover:shadow-[0_0_15px_rgba(var(--primary-color-rgb),0.4)]'
+                                            : 'border-cyber-purple/20 text-cyber-purple hover:border-cyber-purple hover:shadow-[0_0_15px_rgba(var(--secondary-color-rgb),0.4)]'
                                     }`}
                                     aria-label="Previous slide"
                                 >
@@ -305,8 +305,8 @@ const Projects = ({ repos, loading, language = 'en' }) => {
                                     disabled={safeCurrentIndex === maxIndex}
                                     className={`absolute -right-2 md:-right-12 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full border bg-cyber-dark/80 disabled:opacity-25 disabled:pointer-events-none transition-all duration-300 backdrop-blur-md cursor-pointer hidden md:flex ${
                                         projectMode === 'featured' 
-                                            ? 'border-cyber-cyan/20 text-cyber-cyan hover:border-cyber-cyan hover:shadow-[0_0_15px_rgba(34,211,238,0.4)]'
-                                            : 'border-cyber-purple/20 text-cyber-purple hover:border-cyber-purple hover:shadow-[0_0_15px_rgba(168,85,247,0.4)]'
+                                            ? 'border-cyber-cyan/20 text-cyber-cyan hover:border-cyber-cyan hover:shadow-[0_0_15px_rgba(var(--primary-color-rgb),0.4)]'
+                                            : 'border-cyber-purple/20 text-cyber-purple hover:border-cyber-purple hover:shadow-[0_0_15px_rgba(var(--secondary-color-rgb),0.4)]'
                                     }`}
                                     aria-label="Next slide"
                                 >
@@ -325,8 +325,8 @@ const Projects = ({ repos, loading, language = 'en' }) => {
                                         className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
                                             safeCurrentIndex === idx 
                                                 ? projectMode === 'featured'
-                                                    ? 'w-6 bg-cyber-cyan shadow-[0_0_10px_rgba(34,211,238,0.5)]' 
-                                                    : 'w-6 bg-cyber-purple shadow-[0_0_10px_rgba(168,85,247,0.5)]'
+                                                    ? 'w-6 bg-cyber-cyan shadow-[0_0_10px_rgba(var(--primary-color-rgb),0.5)]' 
+                                                    : 'w-6 bg-cyber-purple shadow-[0_0_10px_rgba(var(--secondary-color-rgb),0.5)]'
                                                 : 'w-2 bg-white/20 hover:bg-white/40'
                                         }`}
                                         aria-label={`Go to slide ${idx + 1}`}

@@ -46,7 +46,7 @@
 - 📊 **Modern Analytics**: Vercel Analytics (privacy-focused) & Microsoft Clarity (heatmaps & session recordings)
 - 🔍 **SEO Optimization**: Integrated robots.txt, sitemap.xml, and canonical meta configuration
 - ⚡ **Lighthouse Performance Optimizations**: Lazy-loaded WebGL background, deferred third-party tracking, and deferred font loading for optimal Core Web Vitals.
-- 🧬 **Volumetric 3D Cyber-Hologram Avatar**: Interactive Three.js WebGL avatar rendering a custom 3D head model (`stylized-head.glb`) with a dark cyber-glass core, a dynamic downsampled holographic particle cloud, shifting cyber-cyan/purple gradient colors, rotating gyroscopic orbital HUD rings, and cursor-tilt tracking.
+- 🧬 **Volumetric 3D Cyber-Hologram Avatar & Thought Stream**: Interactive Three.js WebGL avatar with cursor-tilt tracking. Features a 2D canvas-based **Thought Stream particle emitter** that radiates ambient technical words and interactive multilingual quotes (from Alan Turing, Richard Feynman, Claude Shannon, etc.) upon user click or automatically over time.
 - 🧠 **Mind Vault & Knowledge Graph**: Force-directed 2D canvas visualization of personal posts, featuring search, zoom/pan controls, inline reader, and **category filter tags** (`ИИ`, `Дизайн`, `Звук`, `Разработка`) for instant graph trimming.
 
 ---
@@ -84,6 +84,7 @@
 - **Neomorphic Glows**: Custom interactive neon shadows that project from GitHub stats cards on hover.
 - **Modern Layout**: Responsive viewport grid with sticky navigation and automatic highlight observers.
 - **Volumetric 3D Avatar Hologram**: Renders a custom 3D head model with a hybrid material stack consisting of a dark semi-transparent glass base (acting as depth occlusion) and a downsampled glowing holographic point cloud (reducing vertex density for a matrix-like effect), complete with three independent gyroscopic scanner rings.
+- **Thought Stream & Interactive Quotes**: A 2D overlay canvas attached to the 3D Avatar that spawns floating technical keywords (e.g. entropy, recursion, quantum) drifting upwards. Clicking the avatar or waiting for the timer triggers a stylized neon quote capsule containing quotes from famous computer scientists and physicists, with bilingual support (EN/RU).
 
 ### 🔊 Interactive Sound Design & Eurorack Synth
 - **Generative Audio Engine**: Zero-dependency Web Audio API implementation synthesizing audio on the fly with no asset footprint (0 KB).
@@ -149,12 +150,14 @@ src/
 │   ├── ScrollToTop.jsx
 │   ├── SpotifyPlayer.jsx      # Global slide-out Spotify player widget
 │   └── ThreeBackground.jsx    # WebGL background and particle shaders
+├── data/                # Static & runtime data configurations
+│   └── quotes.js        # Multilingual database of ambient keywords and quotes for the avatar
 ├── services/            # API integrations
 │   ├── AudioService.js        # Web Audio API synthesizers & delay loop
 │   └── github.js        # GitHub data fetching & caching
 ├── App.jsx              # Main application layout
 ├── index.css            # Tailwind directives and global styles
-└── main.jsx             # React entry point
+├── main.jsx             # React entry point
 
 api/
 └── contact.js           # Serverless function for Telegram messaging

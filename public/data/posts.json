@@ -1,6 +1,36 @@
 {
   "posts": [
     {
+      "id": 2988,
+      "date": "2026-06-10T13:03:21.000Z",
+      "title": "🚀 Релиз v1.6.0: Запустили «Thought Stream» для 3D-аватара",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 2988,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "update",
+        "portfolio",
+        "design",
+        "react",
+        "threejs",
+        "webdev",
+        "frontend",
+        "backend",
+        "security",
+        "video",
+        "3d",
+        "alevoldon",
+        "github",
+        "code",
+        "для",
+        "цитат",
+        "quotes"
+      ],
+      "content": "# 🚀 Релиз v1.6.0: Запустили «Thought Stream» для 3D-аватара\n\n🚀 Релиз v1.6.0: Запустили «Thought Stream» для 3D-аватара\n\nСегодня выкатили крупное обновление для портфолио (https://alevoldon.com) и официально выпустили версию v1.6.0 на GitHub. Основной фокус релиза — добавление «потока мыслей» и интерактивности для нашей объемной 3D-голограммы.\n\nЧто нового:\n 🧠 Thought Stream (Поток мыслей): Поверх трехмерного WebGL-аватара теперь работает 2D-холст с анимацией частиц. Из головы аватара генерируются и уплывают вверх ключевые термины («энтропия», «рекурсия», «кибернетика», «кванты»).\n💬 Интерактивный генератор цитат: При клике на аватар (или автоматически каждые 12 секунд) генерируется стилизованная неоновая капсула с цитатами великих ученых (Алан Тьюринг, Ричард Фейнман, Клод Шеннон, Никола Тесла и др.).\n🌐 Bilingual Quotes: Подготовили мультиязычный словарь цитат и терминов ([quotes.js](file:///d:/_CODE_2026_/portfolio-clone/src/data/quotes.js)) с полной поддержкой переключения языков (RU/EN).\n🎨 Theme Sync: Вся графика и свечение цитат автоматически подстраиваются под текущую тему оформления HUD-панели (Cyber, Solar, Emerald или Void).\n\nТехнический стек под капотом:\n React 19 + Vite 7\n HTML5 Canvas API (отрисовка динамических капсул, рендеринг текста, размытие и свечение теней)\n RequestAnimationFrame для плавной 60 FPS физики частиц с защитой от перекрытий.\n\n📦 Исходный код и детали релиза уже на GitHub: \n[github.com/ALEVOLDON/portfolio/releases/tag/v1.6.0](https://github.com/ALEVOLDON/portfolio/releases/tag/v1.6.0)\n\n#update #portfolio #design #react #threejs #webdev\n\n## Links\n\n- https://alevoldon.com\n- https://github.com/ALEVOLDON/portfolio/releases/tag/v1.6.0\n\n## Tags\n\n#telegram-import #live-sync #update #portfolio #design #react #threejs #webdev #frontend #backend #security #video #3d #alevoldon #github #code #для #цитат #quotes"
+    },
+    {
       "id": 2987,
       "date": "2026-06-10T11:25:54.000Z",
       "title": "https://www.youtube.com/watch?v=ur6tHVgdYak",

@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": 2989,
+      "date": "2026-06-10T15:52:17.000Z",
+      "title": "https://www.youtube.com/watch?v=aPpvAYp0xDc",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 2989,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "video",
+        "youtube"
+      ],
+      "content": "# https://www.youtube.com/watch?v=aPpvAYp0xDc\n\nhttps://www.youtube.com/watch?v=aPpvAYp0xDc\n\n## Links\n\n- https://www.youtube.com/watch?v=aPpvAYp0xDc\n\n## Tags\n\n#telegram-import #live-sync #video #youtube"
+    },
+    {
       "id": 2988,
       "date": "2026-06-10T13:03:21.000Z",
       "title": "🚀 Релиз v1.6.0: Запустили «Thought Stream» для 3D-аватара",

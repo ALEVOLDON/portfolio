@@ -29,7 +29,12 @@ import {
     Waves,
     Sparkles,
     Headphones,
-    Disc
+    Disc,
+    Clock,
+    RefreshCw,
+    Lock,
+    Sun,
+    Moon
 } from 'lucide-react';
 
 const icons = {
@@ -62,7 +67,12 @@ const icons = {
     waves: Waves,
     sparkles: Sparkles,
     headphones: Headphones,
-    disc: Disc
+    disc: Disc,
+    clock: Clock,
+    'refresh-cw': RefreshCw,
+    lock: Lock,
+    sun: Sun,
+    moon: Moon
 };
 
 const Icon = ({ name, size = 24, className = '' }) => {

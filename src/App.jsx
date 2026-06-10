@@ -30,6 +30,15 @@ const StaticBackground = () => (
   </div>
 );
 
+const themeOrder = ['solar', 'emerald', 'cyber', 'void'];
+
+const getChronoTheme = (hour) => {
+  if (hour >= 6 && hour < 12) return 'solar';     // Morning (6 AM - 12 PM)
+  if (hour >= 12 && hour < 18) return 'emerald';  // Afternoon (12 PM - 6 PM)
+  if (hour >= 18 && hour < 24) return 'cyber';    // Evening (6 PM - 12 AM)
+  return 'void';                                  // Night (12 AM - 6 AM)
+};
+
 const App = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [language, setLanguage] = useState('en');
@@ -39,12 +48,84 @@ const App = () => {
   const loading = false;
   const [stats, setStats] = useState(FALLBACK_STATS);
   const [showBackground, setShowBackground] = useState(false);
-  const [bgConfig, setBgConfig] = useState({
-    brightness: 1.0,
-    speed: 1.0,
-    theme: 'cyber'
+  const [bgConfig, setBgConfig] = useState(() => {
+    const storedTheme = localStorage.getItem('theme') || 'solar';
+    const storedBrightness = localStorage.getItem('themeBrightness') ? parseFloat(localStorage.getItem('themeBrightness')) : 1.0;
+    const storedSpeed = localStorage.getItem('themeSpeed') ? parseFloat(localStorage.getItem('themeSpeed')) : 1.0;
+    return {
+      brightness: storedBrightness,
+      speed: storedSpeed,
+      theme: storedTheme
+    };
   });
+  const [themeMode, setThemeMode] = useState(() => {
+    return localStorage.getItem('themeMode') || 'manual';
+  });
+  const [cycleProgress, setCycleProgress] = useState(0);
   const [showSynth, setShowSynth] = useState(false);
+
+  // Persistence hooks
+  useEffect(() => {
+    localStorage.setItem('theme', bgConfig.theme);
+  }, [bgConfig.theme]);
+
+  useEffect(() => {
+    localStorage.setItem('themeBrightness', bgConfig.brightness);
+  }, [bgConfig.brightness]);
+
+  useEffect(() => {
+    localStorage.setItem('themeSpeed', bgConfig.speed);
+  }, [bgConfig.speed]);
+
+  useEffect(() => {
+    localStorage.setItem('themeMode', themeMode);
+  }, [themeMode]);
+
+  // Chrono Sync logic
+  useEffect(() => {
+    if (themeMode !== 'chrono') return;
+
+    const updateChronoTheme = () => {
+      const hour = new Date().getHours();
+      const currentTheme = getChronoTheme(hour);
+      if (bgConfig.theme !== currentTheme) {
+        setBgConfig(prev => ({ ...prev, theme: currentTheme }));
+      }
+    };
+
+    updateChronoTheme();
+    const interval = setInterval(updateChronoTheme, 10000); // Check every 10 seconds
+
+    return () => clearInterval(interval);
+  }, [themeMode, bgConfig.theme]);
+
+  // Matrix Cycle logic
+  useEffect(() => {
+    if (themeMode !== 'cycle') {
+      setCycleProgress(0);
+      return;
+    }
+
+    const intervalTime = 100; // Increment every 100ms for smooth progress bar animation
+    const duration = 45000; // 45s
+    const step = (intervalTime / duration) * 100;
+
+    const timer = setInterval(() => {
+      setCycleProgress((prev) => {
+        if (prev >= 100) {
+          setBgConfig((prevBg) => {
+            const currentIndex = themeOrder.indexOf(prevBg.theme);
+            const nextIndex = (currentIndex + 1) % themeOrder.length;
+            return { ...prevBg, theme: themeOrder[nextIndex] };
+          });
+          return 0;
+        }
+        return prev + step;
+      });
+    }, intervalTime);
+
+    return () => clearInterval(timer);
+  }, [themeMode]);
 
   useEffect(() => {
     const enableBackground = () => setShowBackground(true);
@@ -175,7 +256,14 @@ const App = () => {
   return (
     <div className={`relative w-full theme-${bgConfig.theme}`}>
       <CustomCursor />
-      <BackgroundControls bgConfig={bgConfig} setBgConfig={setBgConfig} setShowSynth={setShowSynth} />
+      <BackgroundControls 
+        bgConfig={bgConfig} 
+        setBgConfig={setBgConfig} 
+        setShowSynth={setShowSynth} 
+        themeMode={themeMode}
+        setThemeMode={setThemeMode}
+        cycleProgress={cycleProgress}
+      />
       {showSynth && <ModularSynth onClose={() => setShowSynth(false)} />}
       <Suspense fallback={<StaticBackground />}>
         {showBackground ? <ThreeBackground {...bgConfig} /> : <StaticBackground />}

@@ -13,7 +13,7 @@ const Hero = ({ theme = 'cyber', profile, loading, scrollTo, language = 'en' }) 
                 ) : (
                     <div className="reveal reveal-scale">
                         <div className="animate-float">
-                            <InteractiveAvatar theme={theme} profile={profile} loading={loading} />
+                            <InteractiveAvatar theme={theme} profile={profile} loading={loading} language={language} />
                             <h1 className="text-3xl md:text-5xl font-black mb-6 tracking-widest leading-tight font-cyber">
                                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyber-cyan via-white to-cyber-purple animate-gradient-x">
                                     {t.title}

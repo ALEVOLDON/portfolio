@@ -2,10 +2,113 @@ import React, { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import Icon from './Icon';
+import { quotesData } from '../data/quotes';
 
-// Helper to generate a soft circular glow texture for points/particles.
-const InteractiveAvatar = ({ theme = 'cyber', profile, loading }) => {
+// Helper to wrap text for the canvas
+const wrapText = (ctx, text, maxWidth) => {
+  const words = text.split(' ');
+  const lines = [];
+  let currentLine = words[0] || '';
+
+  for (let i = 1; i < words.length; i++) {
+    const word = words[i];
+    const width = ctx.measureText(currentLine + " " + word).width;
+    if (width < maxWidth) {
+      currentLine += " " + word;
+    } else {
+      lines.push(currentLine);
+      currentLine = word;
+    }
+  }
+  lines.push(currentLine);
+  return lines;
+};
+
+// Helper to draw a glowing word particle
+const drawWord = (ctx, text, x, y, alpha, colors, fontSize, colorType) => {
+  ctx.save();
+  ctx.globalAlpha = alpha;
+  
+  ctx.font = `500 ${fontSize}px "Fira Code", monospace`;
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+
+  const rgb = colorType === 'primary' ? colors.primaryRgb : colors.secondaryRgb;
+  ctx.shadowColor = `rgba(${rgb}, 0.55)`;
+  ctx.shadowBlur = 4;
+  ctx.fillStyle = `rgba(${rgb}, 0.95)`;
+  
+  ctx.fillText(text, x, y);
+  ctx.restore();
+};
+
+// Helper to draw a stylized quote capsule
+const drawQuoteCapsule = (ctx, lines, author, x, y, colors, alpha) => {
+  ctx.save();
+  ctx.globalAlpha = alpha;
+
+  ctx.font = 'bold 11px "Space Grotesk", sans-serif';
+  let maxLineWidth = 0;
+  lines.forEach(line => {
+    const w = ctx.measureText(line).width;
+    if (w > maxLineWidth) maxLineWidth = w;
+  });
+
+  ctx.font = '9px "Fira Code", monospace';
+  const authorWidth = ctx.measureText(`— ${author}`).width;
+
+  const contentWidth = Math.max(maxLineWidth, authorWidth);
+  const capsuleWidth = Math.min(270, contentWidth + 24);
+  
+  const quoteLineHeight = 14;
+  const authorLineHeight = 12;
+  const paddingY = 16;
+  const capsuleHeight = lines.length * quoteLineHeight + authorLineHeight + paddingY;
+
+  const rectX = x - capsuleWidth / 2;
+  const rectY = y - capsuleHeight / 2;
+  const radius = 8;
+
+  ctx.shadowColor = `rgba(${colors.primaryRgb}, 0.45)`;
+  ctx.shadowBlur = 12;
+  ctx.strokeStyle = `rgba(${colors.primaryRgb}, 0.75)`;
+  ctx.lineWidth = 1.5;
+
+  ctx.fillStyle = 'rgba(5, 8, 17, 0.92)';
+  ctx.beginPath();
+  if (ctx.roundRect) {
+    ctx.roundRect(rectX, rectY, capsuleWidth, capsuleHeight, radius);
+  } else {
+    ctx.rect(rectX, rectY, capsuleWidth, capsuleHeight);
+  }
+  ctx.fill();
+  ctx.stroke();
+
+  ctx.shadowBlur = 0;
+
+  ctx.fillStyle = 'rgba(255, 255, 255, 0.95)';
+  ctx.font = 'bold 11px "Space Grotesk", sans-serif';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'top';
+
+  lines.forEach((line, index) => {
+    const lineY = rectY + 10 + index * quoteLineHeight;
+    ctx.fillText(line, x, lineY);
+  });
+
+  ctx.fillStyle = `rgba(${colors.secondaryRgb}, 0.95)`;
+  ctx.font = '9px "Fira Code", monospace';
+  const authorY = rectY + 10 + lines.length * quoteLineHeight + 2;
+  ctx.fillText(`— ${author}`, x, authorY);
+
+  ctx.restore();
+};
+
+const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' }) => {
   const containerRef = useRef(null);
+  const emitterCanvasRef = useRef(null);
+  const triggerQuoteRef = useRef(null);
+  const lastQuoteIndexRef = useRef(-1);
   const [progress, setProgress] = useState(0);
   const [modelLoaded, setModelLoaded] = useState(false);
   const [loadError, setLoadError] = useState(false);
@@ -443,6 +546,165 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading }) => {
     };
   }, [loading, theme, themeColors]);
 
+  // 2D Emitter Canvas Animation Loop
+  useEffect(() => {
+    if (loading) return;
+
+    const canvas = emitterCanvasRef.current;
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    let animationId;
+    let lastSpawnTime = 0;
+    let lastQuoteSpawnTime = performance.now();
+    let particles = [];
+
+    const ambientWords = quotesData[language]?.ambientWords || [];
+    const quotes = quotesData[language]?.quotes || [];
+
+    const spawnParticle = (text, type = 'word', customVel = null) => {
+      const isQuote = type === 'quote';
+      const lifeSpan = isQuote ? 7000 : 3000 + Math.random() * 1500;
+      
+      const p = {
+        id: Math.random(),
+        type,
+        text: isQuote ? text.quote : text,
+        author: isQuote ? text.author : null,
+        // Spawn near the top/center of the 3D head
+        x: 160 + (isQuote ? 0 : (Math.random() - 0.5) * 30),
+        y: 210 + (isQuote ? 0 : (Math.random() - 0.5) * 15),
+        vx: customVel ? customVel.x : (isQuote ? 0 : (Math.random() - 0.5) * 0.4),
+        vy: customVel ? customVel.y : (isQuote ? -0.4 : -0.8 - Math.random() * 0.6),
+        seed: Math.random() * 100,
+        driftAmp: isQuote ? 0 : 8 + Math.random() * 12,
+        driftFreq: isQuote ? 0 : 0.0015 + Math.random() * 0.0015,
+        fontSize: isQuote ? 11 : 9 + Math.floor(Math.random() * 4),
+        colorType: Math.random() > 0.45 ? 'primary' : 'secondary',
+        maxAlpha: isQuote ? 0.95 : 0.45 + Math.random() * 0.25,
+        createdAt: performance.now(),
+        lifeSpan
+      };
+      
+      if (isQuote) {
+        // Remove existing quotes to avoid overlapping
+        particles = particles.filter(pt => pt.type !== 'quote');
+      }
+      particles.push(p);
+    };
+
+    // Expose the manual trigger function
+    triggerQuoteRef.current = () => {
+      if (quotes.length === 0) return;
+
+      // 1. Pick a quote
+      let index = Math.floor(Math.random() * quotes.length);
+      if (quotes.length > 1 && index === lastQuoteIndexRef.current) {
+        index = (index + 1) % quotes.length;
+      }
+      lastQuoteIndexRef.current = index;
+      
+      spawnParticle(quotes[index], 'quote');
+
+      // 2. Spawn a mini burst of 5 ambient words around it
+      if (ambientWords.length > 0) {
+        for (let i = 0; i < 5; i++) {
+          const word = ambientWords[Math.floor(Math.random() * ambientWords.length)];
+          const angle = (Math.PI * 2 / 5) * i + (Math.random() - 0.5) * 0.3;
+          const speed = 0.8 + Math.random() * 0.5;
+          spawnParticle(word, 'word', {
+            x: Math.cos(angle) * speed,
+            y: -1.0 - Math.random() * 0.4
+          });
+        }
+      }
+      
+      // Reset auto timer
+      lastQuoteSpawnTime = performance.now();
+    };
+
+    const animate = (time) => {
+      animationId = requestAnimationFrame(animate);
+
+      // Clear canvas
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Spawn ambient words
+      if (time - lastSpawnTime > 1500) {
+        if (ambientWords.length > 0) {
+          const word = ambientWords[Math.floor(Math.random() * ambientWords.length)];
+          spawnParticle(word, 'word');
+        }
+        lastSpawnTime = time;
+      }
+
+      // Auto spawn quotes every 12 seconds
+      if (time - lastQuoteSpawnTime > 12000) {
+        if (triggerQuoteRef.current) {
+          triggerQuoteRef.current();
+        }
+      }
+
+      // Update and draw particles
+      particles = particles.filter((p) => {
+        const elapsed = time - p.createdAt;
+        const progress = elapsed / p.lifeSpan;
+
+        if (progress >= 1.0) return false;
+
+        // Position update
+        let currentX = p.x + p.vx * (elapsed / 16);
+        let currentY = p.y + p.vy * (elapsed / 16);
+
+        // Apply drift
+        if (p.type === 'word') {
+          currentX += Math.sin(time * p.driftFreq + p.seed) * p.driftAmp * 0.05;
+        }
+
+        // Calculate opacity
+        let alpha = p.maxAlpha;
+        if (p.type === 'quote') {
+          if (progress < 0.15) {
+            alpha = (progress / 0.15) * p.maxAlpha;
+          } else if (progress > 0.7) {
+            alpha = ((1.0 - progress) / 0.3) * p.maxAlpha;
+          }
+        } else {
+          if (progress < 0.2) {
+            alpha = (progress / 0.2) * p.maxAlpha;
+          } else if (progress > 0.6) {
+            alpha = ((1.0 - progress) / 0.4) * p.maxAlpha;
+          }
+        }
+
+        alpha = Math.max(0, Math.min(alpha, 1.0));
+
+        // Draw particle
+        if (p.type === 'quote') {
+          ctx.font = 'bold 11px "Space Grotesk", sans-serif';
+          const lines = wrapText(ctx, p.text, 220);
+          drawQuoteCapsule(ctx, lines, p.author, currentX, currentY, themeColors, alpha);
+        } else {
+          drawWord(ctx, p.text, currentX, currentY, alpha, themeColors, p.fontSize, p.colorType);
+        }
+
+        return true;
+      });
+    };
+
+    animationId = requestAnimationFrame(animate);
+
+    return () => {
+      cancelAnimationFrame(animationId);
+    };
+  }, [language, themeColors, loading]);
+
+  const handleAvatarClick = () => {
+    if (triggerQuoteRef.current) {
+      triggerQuoteRef.current();
+    }
+  };
+
   if (loadError) {
     // Elegant fallback to avatar image if GLB load fails
     return (
@@ -460,9 +722,21 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading }) => {
   }
 
   return (
-    <div className="relative inline-block mb-8 group cursor-pointer select-none">
+    <div 
+      onClick={handleAvatarClick}
+      className="relative inline-block mb-8 group cursor-pointer select-none"
+    >
       {/* Outer pulsing glow */}
       <div className="absolute -inset-2 bg-gradient-to-r from-cyber-cyan via-cyber-purple to-cyber-cyan rounded-full blur-md opacity-30 group-hover:opacity-70 transition duration-500 animate-pulse"></div>
+
+      {/* Thought Stream Emitter Canvas Overlay */}
+      <canvas
+        ref={emitterCanvasRef}
+        className="absolute bottom-0 left-1/2 transform -translate-x-1/2 pointer-events-none z-30"
+        style={{ width: '320px', height: '384px' }}
+        width={320}
+        height={384}
+      />
 
       {/* Main container */}
       <div className="relative w-64 h-64 rounded-full overflow-hidden border border-cyber-cyan/30 bg-cyber-black/80 flex items-center justify-center">

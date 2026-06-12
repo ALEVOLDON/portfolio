@@ -49,7 +49,7 @@ const App = () => {
   const [stats, setStats] = useState(FALLBACK_STATS);
   const [showBackground, setShowBackground] = useState(false);
   const [bgConfig, setBgConfig] = useState(() => {
-    const storedTheme = localStorage.getItem('theme') || 'solar';
+    const storedTheme = localStorage.getItem('theme') || 'cyber';
     const storedBrightness = localStorage.getItem('themeBrightness') ? parseFloat(localStorage.getItem('themeBrightness')) : 1.0;
     const storedSpeed = localStorage.getItem('themeSpeed') ? parseFloat(localStorage.getItem('themeSpeed')) : 1.0;
     return {

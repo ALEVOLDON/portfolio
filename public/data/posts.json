@@ -1,6 +1,493 @@
 {
   "posts": [
     {
+      "id": 3026,
+      "date": "2026-06-14T17:22:02.000Z",
+      "title": "Я обновил параметры llm модели бота, давай проверим на что ты способен сейчас?",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3026,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "ai"
+      ],
+      "content": "# Я обновил параметры llm модели бота, давай проверим на что ты способен сейчас?\n\nЯ обновил параметры llm модели бота, давай проверим на что ты способен сейчас?\n\n## Tags\n\n#telegram-import #live-sync #ai"
+    },
+    {
+      "id": 3025,
+      "date": "2026-06-14T14:33:50.000Z",
+      "title": "Админы привет как новые обновления в ТГ?",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3025,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "post",
+        "archive"
+      ],
+      "content": "# Админы привет как новые обновления в ТГ?\n\nАдмины привет как новые обновления в ТГ?\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
+    },
+    {
+      "id": 3024,
+      "date": "2026-06-14T14:28:37.000Z",
+      "title": "Тест с Tmpfiles Картинкой",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3024,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "design",
+        "картинкой"
+      ],
+      "content": "# Тест с Tmpfiles Картинкой\n\n# Тест с Tmpfiles Картинкой\n\nЭто один пост с картинкой сверху и таблицей снизу!\n\n![Photo](file_id:AgACAgQAAxUAAWouupXEodpJ60Ybnr0PYvjzIuXyAAIzDmsbzGt9UaohNfW-lWJBAQADAgADeAADPAQ)\n\n| Таблица | Статус |\n|  :---  |  :---  |\n| Данные | Работают! |\n\nКонец теста.\n\n## Media\n\nPhoto file_id: AgACAgQAAxUAAWouupXEodpJ60Ybnr0PYvjzIuXyAAIzDmsbzGt9UaohNfW-lWJBAQADAgADeAADPAQ\n\n## Tags\n\n#telegram-import #live-sync #design #картинкой"
+    },
+    {
+      "id": 3023,
+      "date": "2026-06-14T14:28:35.000Z",
+      "title": "Temporary photo",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3023,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "post",
+        "archive"
+      ],
+      "content": "# Temporary photo\n\nTemporary photo\n\n## Media\n\nPhoto file_id: AgACAgQAAx0CT0EpfgACC8FqLrSZAuYlvwV8XyOUZQv4aOtfBwACIgxrG5_mLFDYezcU13LzFgEAAwIAA3gAAzwE\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
+    },
+    {
+      "id": 3022,
+      "date": "2026-06-14T14:27:03.000Z",
+      "title": "Post 3022",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3022,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "post",
+        "archive"
+      ],
+      "content": "# Post 3022\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
+    },
+    {
+      "id": 3021,
+      "date": "2026-06-14T14:27:02.000Z",
+      "title": "Temporary photo",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3021,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "post",
+        "archive"
+      ],
+      "content": "# Temporary photo\n\nTemporary photo\n\n## Media\n\nPhoto file_id: AgACAgQAAx0CT0EpfgACC8FqLrSZAuYlvwV8XyOUZQv4aOtfBwACIgxrG5_mLFDYezcU13LzFgEAAwIAA3gAAzwE\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
+    },
+    {
+      "id": 3020,
+      "date": "2026-06-14T14:26:33.000Z",
+      "title": "Post 3020",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3020,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "post",
+        "archive"
+      ],
+      "content": "# Post 3020\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
+    },
+    {
+      "id": 3019,
+      "date": "2026-06-14T14:26:30.000Z",
+      "title": "Temporary photo",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3019,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "post",
+        "archive"
+      ],
+      "content": "# Temporary photo\n\nTemporary photo\n\n## Media\n\nPhoto file_id: AgACAgQAAx0CT0EpfgACC8FqLrSZAuYlvwV8XyOUZQv4aOtfBwACIgxrG5_mLFDYezcU13LzFgEAAwIAA3gAAzwE\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
+    },
+    {
+      "id": 3018,
+      "date": "2026-06-14T14:23:37.000Z",
+      "title": "🧪 Тестируем новые Rich Messages в Telegram",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3018,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "telegram",
+        "botapi",
+        "ai",
+        "backend",
+        "код",
+        "таблицы",
+        "цитаты"
+      ],
+      "content": "# 🧪 Тестируем новые Rich Messages в Telegram\n\n🧪 Тестируем новые Rich Messages в Telegram\n\nПроверяем, как бот отображает таблицы, код и цитаты.\n\nТаблица элементов:\n\nЭлемент   | Статус\n------------------\nТаблицы   |  ✅\nКод       |  ✅\nЦитаты    |  ✅\nСпойлеры  |  ✅\nLaTeX     |  ✅\n\n\nЕсли всё отображается красиво, значит интеграция прошла успешно.\n\nconsole.log(\"Hello, Telegram!\");\n\nСекретное сообщение 😄\n\n🚀 Telegram постепенно становится полноценной платформой для публикаций.\n\n#Telegram #BotAPI #AI\n\n## Media\n\nPhoto file_id: AgACAgQAAxUAAWouuWmMi5cc8X7KKgXRX1aWrBHiAAJ1DmsbOJl0UXwTfuZx6WsbAQADAgADeQADPAQ\n\n## Tags\n\n#telegram-import #live-sync #telegram #botapi #ai #backend #код #таблицы #цитаты"
+    },
+    {
+      "id": 3017,
+      "date": "2026-06-14T14:19:09.000Z",
+      "title": "Post 3017",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3017,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "post",
+        "archive"
+      ],
+      "content": "# Post 3017\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
+    },
+    {
+      "id": 3016,
+      "date": "2026-06-14T14:19:07.000Z",
+      "title": "Temporary photo",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3016,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "post",
+        "archive"
+      ],
+      "content": "# Temporary photo\n\nTemporary photo\n\n## Media\n\nPhoto file_id: AgACAgQAAx0CT0EpfgACC8FqLrSZAuYlvwV8XyOUZQv4aOtfBwACIgxrG5_mLFDYezcU13LzFgEAAwIAA3gAAzwE\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
+    },
+    {
+      "id": 3015,
+      "date": "2026-06-14T14:18:59.000Z",
+      "title": "Temporary photo",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3015,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "post",
+        "archive"
+      ],
+      "content": "# Temporary photo\n\nTemporary photo\n\n## Media\n\nPhoto file_id: AgACAgQAAx0CT0EpfgACC8FqLrSZAuYlvwV8XyOUZQv4aOtfBwACIgxrG5_mLFDYezcU13LzFgEAAwIAA3gAAzwE\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
+    },
+    {
+      "id": 3014,
+      "date": "2026-06-14T14:18:44.000Z",
+      "title": "Temporary photo",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3014,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "post",
+        "archive"
+      ],
+      "content": "# Temporary photo\n\nTemporary photo\n\n## Media\n\nPhoto file_id: AgACAgQAAx0CT0EpfgACC8FqLrSZAuYlvwV8XyOUZQv4aOtfBwACIgxrG5_mLFDYezcU13LzFgEAAwIAA3gAAzwE\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
+    },
+    {
+      "id": 3012,
+      "date": "2026-06-14T14:14:34.000Z",
+      "title": "Post 3012",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3012,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "post",
+        "archive"
+      ],
+      "content": "# Post 3012\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACC8RqLrdKWLVf0UYuZK2D9AABB5hftAADux5rG_7UcEmxtA8QDg769QEAAwIAA3kAAzwE\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
+    },
+    {
+      "id": 3013,
+      "date": "2026-06-14T14:14:34.000Z",
+      "title": "🧪 ,[object Object]",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3013,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "telegram",
+        "object",
+        "hello",
+        "новые"
+      ],
+      "content": "# 🧪 ,[object Object]\n\n🧪 ,[object Object]\n\nСегодня обновил своего ИИ-бота и решил проверить, как работают новые Rich Messages.\n\n### Что уже поддерживается\n\n| Функция | Статус | Комментарий |\n|  :---  |  :---:  |  :---  |\n| [object Object] | ✅ | Работает |\n| [object Object] | ✅ | Новый формат |\n| [object Object] | ✅ | Подсветка языков |\n| [object Object] | ✅ | Вложенные цитаты |\n| [object Object] | ✅ | Скрытие текста |\n| [object Object] | ✅ | Формулы и выражения |\n| [object Object] | ✅ | Красивое оформление |\n\n---\n\n### Маркированный список\n\n- \n- \n- \n- \n- \n\n### Нумерованный список\n\n- \n- \n- \n- \n\n---\n\n### Код\n\ndef hello():\n    print(\"Hello Telegram!\")\n\nhello()\n\n---\n\n### Цитаты\n\n---\n\n### Спойлер\n\n[object Object]\n\n---\n\n### Формулы\n\nСтрочная формула: ,[object Object]\n\nБлочная формула:\n\n\n---\n\n### Мини-таблица производительности\n\n| Модель | Размер | Скорость |\n|  :---  |  :---:  |  :---:  |\n| Gemma 4 12B | 12B | ⚡⚡⚡ |\n| Qwen3 32B | 32B | ⚡⚡ |\n| Kimi K2 | 1T+ | ⚡ |\n\n---\n\n### Ссылки\n\n- \n- \n- \n\n---\n\n🔥 Если всё отображается правильно, значит новые функции интегрированы успешно.\n\n[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object]\n\n## Tags\n\n#telegram-import #live-sync #telegram #object #hello #новые"
+    },
+    {
+      "id": 3011,
+      "date": "2026-06-14T14:04:42.000Z",
+      "title": "Temporary photo to get file_id",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3011,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "post",
+        "archive"
+      ],
+      "content": "# Temporary photo to get file_id\n\nTemporary photo to get file_id\n\n## Media\n\nPhoto file_id: AgACAgQAAx0CT0EpfgACC8FqLrSZAuYlvwV8XyOUZQv4aOtfBwACIgxrG5_mLFDYezcU13LzFgEAAwIAA3gAAzwE\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
+    },
+    {
+      "id": 3010,
+      "date": "2026-06-14T14:03:36.000Z",
+      "title": "Temporary photo to get file_id",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3010,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "post",
+        "archive"
+      ],
+      "content": "# Temporary photo to get file_id\n\nTemporary photo to get file_id\n\n## Media\n\nPhoto file_id: AgACAgQAAx0CT0EpfgACC8FqLrSZAuYlvwV8XyOUZQv4aOtfBwACIgxrG5_mLFDYezcU13LzFgEAAwIAA3gAAzwE\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
+    },
+    {
+      "id": 3009,
+      "date": "2026-06-14T14:03:05.000Z",
+      "title": "Temporary photo to get file_id",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3009,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "post",
+        "archive"
+      ],
+      "content": "# Temporary photo to get file_id\n\nTemporary photo to get file_id\n\n## Media\n\nPhoto file_id: AgACAgQAAx0CT0EpfgACC8FqLrSZAuYlvwV8XyOUZQv4aOtfBwACIgxrG5_mLFDYezcU13LzFgEAAwIAA3gAAzwE\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
+    },
+    {
+      "id": 3008,
+      "date": "2026-06-14T14:02:34.000Z",
+      "title": "Post 3008",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3008,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "post",
+        "archive"
+      ],
+      "content": "# Post 3008\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
+    },
+    {
+      "id": 3007,
+      "date": "2026-06-14T13:35:24.000Z",
+      "title": "🤖 Научили ИИ-ассистента говорить таблицами и LaTeX",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3007,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "ai",
+        "telegram",
+        "telegrambotapi",
+        "llm",
+        "gemini",
+        "automation",
+        "vibecoding",
+        "frontend",
+        "backend",
+        "всё",
+        "для",
+        "добавили"
+      ],
+      "content": "# 🤖 Научили ИИ-ассистента говорить таблицами и LaTeX\n\n🤖 Научили ИИ-ассистента говорить таблицами и LaTeX\nНедавно Telegram представил Rich Messages, а мы решили не ждать, пока все разберутся, и сразу внедрили новые возможности в нашего ИИ-ассистента в комментариях.\n🛠 Что изменилось\n• Перевели бота на новый формат сообщений sendRichMessage.\n• Научили его преобразовывать Markdown от Gemini 2.5 Flash в расширенный HTML, который понимает Telegram.\n• Добавили fallback для старых версий Telegram — если Rich Messages не поддерживаются, пользователь увидит обычный текст.\n🧩 Какие сюрпризы нас ждали\n⚡️ grammY и прокси\nВызов через .callApi() упирался в странное поведение JS-прокси. В итоге всё заработало через:\nctx.api.raw.sendRichMessage()\n⚡️ Убийца переносов строк\nСтарая функция очистки текста склеивала всё в одну строку и уничтожала форматирование таблиц. Пришлось переписать обработку ответов.\n⚡️ Слишком скромный Gemini\nВ системном промпте было правило:\n«Пиши кратко: 1–2 предложения»\nИз-за этого модель отказывалась делать таблицы и предлагала вынести их в отдельный пост. Добавили исключение для явных запросов пользователя.\n📊 Итог\nТеперь в комментариях бот умеет:\n✓ нативные таблицы Telegram\n✓ списки и структурированные блоки\n✓ формулы LaTeX\n✓ автоматическую совместимость со старыми клиентами\nКод обновлён, протестирован и уже отправился на GitHub. 🚀\n#AI #Telegram #TelegramBotAPI #LLM #Gemini #Automation #VibeCoding\n\n## Tags\n\n#telegram-import #live-sync #ai #telegram #telegrambotapi #llm #gemini #automation #vibecoding #frontend #backend #всё #для #добавили"
+    },
+    {
+      "id": 3006,
+      "date": "2026-06-14T13:34:08.000Z",
+      "title": "🤖 Задеплоили Telegram Bot API 10.1: Как мы научили AI-ассистента говорить табли...",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3006,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "ai",
+        "telegram",
+        "api",
+        "llm",
+        "gemini",
+        "automation",
+        "vibecoding",
+        "frontend",
+        "backend",
+        "метод",
+        "таблицы",
+        "теперь"
+      ],
+      "content": "# 🤖 Задеплоили Telegram Bot API 10.1: Как мы научили AI-ассистента говорить табли...\n\n🤖 Задеплоили Telegram Bot API 10.1: Как мы научили AI-ассистента говорить табличками и LaTeX\n\nПомните свежее обновление Rich Messages в Telegram? Мы решили не кидать теорию в долгий ящик, а сразу прокатили нашего AI-ассистента в комментариях, чтобы протестировать новые фичи в живую.\n\n### 🛠 Что мы закатили в production:\n1. Перевели бота на Rich Messages: Теперь он отвечает через нативный метод sendRichMessage — никаких костылей.\n2. Внедрили парсер `marked`: Telegram API теперь принимает сложные блоки (таблицы, списки) через расширенный HTML. Мы научили бота лету конвертировать входящий Markdown от LLM (Gemini 2.5 Flash) в HTML.\n3. Сохраняем backward compatibility (fallback): Если у подписчика старая версия Telegram, бот автоматически переключится на классический текстовый ответ — никто не останется без инфы.\n\n### 🧩 Грабли, на которые наступили (и как их обошли):\n* Проксирование в grammY: Попытка вызвать метод через .callApi() приводила к ошибке. JS-прокси grammY перехватывал его неверно. Решение: вызывать метод напрямую — ctx.api.raw.sendRichMessage().\n* «Убийца переносов строк»: Старая функция очистки в коде склеивала весь текст в одну строку, ломая Markdown-разметку таблиц. Переписали обработку trimReply, сохранив переносы строк.\n* Скромность ИИ: В системном промпте стояло жесткое правило *«Пиши кратко: 1-2 предложения»*. Из-за этого Gemini отказывался генерировать таблицы, предлагая «сделать это отдельным постом». Добавили в промпт исключение для явных запросов пользователя.\n\n### 📊 Результат:\nТеперь в обсуждениях бот умеет выводить аккуратные нативные таблицы сравнения, списки и формулы LaTeX. Попробовать можно прямо в комментариях под этим постом!\n\nКод обновлен, протестирован, закоммичен и уже улетел на GitHub. 🚀\n\n#AI #Telegram #API #LLM #Gemini #Automation #VibeCoding\n\n## Tags\n\n#telegram-import #live-sync #ai #telegram #api #llm #gemini #automation #vibecoding #frontend #backend #метод #таблицы #теперь"
+    },
+    {
+      "id": 3005,
+      "date": "2026-06-14T13:22:06.000Z",
+      "title": "Краткое сравнение LLM для Telegram-ботов: Gemini 2.5 Flash vs GPT-4o Mini 🤖",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3005,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "ai",
+        "telegram",
+        "для",
+        "какую",
+        "минусы"
+      ],
+      "content": "# Краткое сравнение LLM для Telegram-ботов: Gemini 2.5 Flash vs GPT-4o Mini 🤖\n\nКраткое сравнение LLM для Telegram-ботов: Gemini 2.5 Flash vs GPT-4o Mini 🤖\n\nКакую модель выбрать для разработки?\n1. Gemini 2.5 Flash:\n   - Плюсы: Молниеносная скорость ответов, огромный контекст, низкая стоимость.\n   - Минусы: Редкие галлюцинации в сложных логических задачах.\n\n2. GPT-4o Mini:\n   - Плюсы: Идеально следует системным инструкциям, отлично генерирует структурированный JSON.\n   - Минусы: Меньший размер контекста, чуть дороже.\n\nДавайте посмотрим, какую выжимку-сравнение сделает наш ИИ-помощник в комментариях под этим постом!\n\n## Tags\n\n#telegram-import #live-sync #ai #telegram #для #какую #минусы"
+    },
+    {
+      "id": 3004,
+      "date": "2026-06-14T13:02:36.000Z",
+      "title": "Тестовый пост №2: Проверка нативного форматирования Telegram Bot API 10.1!",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3004,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "backend",
+        "telegram"
+      ],
+      "content": "# Тестовый пост №2: Проверка нативного форматирования Telegram Bot API 10.1!\n\nТестовый пост №2: Проверка нативного форматирования Telegram Bot API 10.1!\n\nПроверяем исправленную версию отправки сообщений Rich Messages напрямую.\n\nОжидаем автоматический первый комментарий-выжимку в Rich-формате от нашего ИИ-помощника в обсуждениях этого поста.\n\n## Tags\n\n#telegram-import #live-sync #backend #telegram"
+    },
+    {
+      "id": 3003,
+      "date": "2026-06-14T13:01:18.000Z",
+      "title": "Тестовый пост для проверки новых функций Telegram Bot API 10.1!",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3003,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "backend",
+        "telegram"
+      ],
+      "content": "# Тестовый пост для проверки новых функций Telegram Bot API 10.1!\n\nТестовый пост для проверки новых функций Telegram Bot API 10.1!\n\nВстречайте нативное форматирование Rich Messages:\n- Теперь бот-ассистент умеет присылать таблицы в комментариях!\n- Также поддерживаются сноски, раскрывающиеся блоки и формулы LaTeX.\n\nПроверим, как сработает автоматический первый комментарий-выжимка от нашего ИИ-помощника под этим постом.\n\n## Tags\n\n#telegram-import #live-sync #backend #telegram"
+    },
+    {
+      "id": 3002,
+      "date": "2026-06-14T12:37:22.000Z",
+      "title": "🤖 DUMP",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3002,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "ai",
+        "telegram",
+        "agents",
+        "vibecoding",
+        "что",
+        "медиа",
+        "сайт"
+      ],
+      "content": "# 🤖 DUMP\n\n🤖 DUMP\nКоротко о будущем.\n\n⚡️ Что происходит?\nTelegram становится платформой для публикаций. Теперь боты могут отправлять сообщения с заголовками, таблицами, списками, цитатами, спойлерами и медиа.\n\n🚀 Почему это интересно?\nРаньше посты были простым текстом. Теперь канал можно превратить в полноценный мини-блог или тех. журнал.\n\n🛠 Что это даёт?\n\nВозможность       | Было | Стало\n--------------------------------\nЗаголовки         |  ❌  |  ✅\nТаблицы           |  ❌  |  ✅\nБлоки кода        |  ⚠️  |  ✅\nСпойлеры          |  ✅  |  ✅\nСворачиваемые сек.|  ❌  |  ✅\nМедиа внутри поста|  ⚠️  |  ✅\n\n\n💡 Что я хочу попробовать?\nСоздать автоматический AI-канал:\n1. LLM пишет пост ➔ 2. n8n собирает инфо ➔ 3. Бот публикует ➔ 4. Сайт делает базу знаний.\n\n\npost ➔ Telegram ➔ Сайт ➔ Архив\n\n\nКажется, мы возвращаемся к эпохе независимых блогов. Вместо CMS и FTP достаточно Telegram и пары AI-автоматизаций.\n\nБудущее становится всё более персональным.\n\n#AI #Telegram #Agents #VibeCoding\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACC7pqLqCBPjmFSGldut1Itvqr11U4awACCB5rGwABrHlJOpkP1NSlCFkBAAMCAAN5AAM8BA\n\n## Tags\n\n#telegram-import #live-sync #ai #telegram #agents #vibecoding #что #медиа #сайт"
+    },
+    {
+      "id": 3001,
+      "date": "2026-06-14T12:22:29.000Z",
+      "title": "🖥 Don't be surprised if you see tables, nested lists, inline media, formulas, h...",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3001,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "design",
+        "telegram"
+      ],
+      "content": "# 🖥 Don't be surprised if you see tables, nested lists, inline media, formulas, h...\n\n🖥 Don't be surprised if you see tables, nested lists, inline media, formulas, headers and more in Telegram messages.\n\n📖 We now support rich formatting for all chatbots.\n\n🔨 Start building! Docs for chatbot devs →\n\n## Media\n\nDocument: Rich Text.mp4 | file_id: CgACAgIAAx0CT0EpfgACC7lqLp0FWxIj2p3j_qLYczHSVWhsvQACuqEAAkOaaEnv2APpVG1RRTwE\nAnimation file_id: CgACAgIAAx0CT0EpfgACC7lqLp0FWxIj2p3j_qLYczHSVWhsvQACuqEAAkOaaEnv2APpVG1RRTwE\n\n## Tags\n\n#telegram-import #live-sync #design #telegram"
+    },
+    {
+      "id": 3000,
+      "date": "2026-06-14T12:03:03.000Z",
+      "title": "https://www.youtube.com/watch?v=_p6Qll5Mqcs",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3000,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "video",
+        "youtube"
+      ],
+      "content": "# https://www.youtube.com/watch?v=_p6Qll5Mqcs\n\nhttps://www.youtube.com/watch?v=_p6Qll5Mqcs\n\n## Links\n\n- https://www.youtube.com/watch?v=_p6Qll5Mqcs\n\n## Tags\n\n#telegram-import #live-sync #video #youtube"
+    },
+    {
+      "id": 2999,
+      "date": "2026-06-14T11:57:37.000Z",
+      "title": "https://www.youtube.com/watch?v=RrNZOL79Upw",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 2999,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "video",
+        "youtube"
+      ],
+      "content": "# https://www.youtube.com/watch?v=RrNZOL79Upw\n\nhttps://www.youtube.com/watch?v=RrNZOL79Upw\n\n## Links\n\n- https://www.youtube.com/watch?v=RrNZOL79Upw\n\n## Tags\n\n#telegram-import #live-sync #video #youtube"
+    },
+    {
+      "id": 2998,
+      "date": "2026-06-14T04:47:45.000Z",
+      "title": "🎹 Нашёл интересную штуку для любителей музыки, кодинга и ИИ — Protoplug",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 2998,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "ai",
+        "музыка",
+        "sounddesign",
+        "vst",
+        "midi",
+        "lua",
+        "generativemusic",
+        "vibecoding",
+        "musicproduction",
+        "opensource",
+        "protoplug",
+        "ableton",
+        "reaper",
+        "flstudio",
+        "design",
+        "github",
+        "code",
+        "для",
+        "event",
+        "генеративные"
+      ],
+      "content": "# 🎹 Нашёл интересную штуку для любителей музыки, кодинга и ИИ — Protoplug\n\n🎹 Нашёл интересную штуку для любителей музыки, кодинга и ИИ — Protoplug\n\nЭто VST-плагин, внутри которого можно писать скрипты на языке Lua и создавать собственные:\n\n• арпеджиаторы; • MIDI-генераторы; • гармонизаторы; • секвенсоры; • генеративные инструменты; • необычные аудиоэффекты.\n\nСамое интересное, что для этого не нужен C++ — достаточно нескольких строк кода.\n\nНапример, такой скрипт будет играть случайные ноты в пределах одной октавы:\nmath.randomseed(os.time())\n\nfunction processMidi(event)\n    if event:isNoteOn() then\n        event.note = math.random(60, 72)\n    end\n    event:send()\nend\nА теперь представьте связку:\n\n🧠 ChatGPT / Claude / Gemini ⬇ ✍️ Генерация Lua-кода ⬇ 🎹 Protoplug ⬇ 🎛 Ableton, Reaper, FL Studio и другие DAW\n\nПолучается настоящий vibe coding для музыкантов и саунд-дизайнеров. Можно описывать идеи словами и почти мгновенно получать собственные MIDI-плагины и генеративные инструменты.\n\nGitHub: https://github.com/subhankardas15071992-cloud/protoplug\n\nВыглядит как отличный инструмент для экспериментов с генеративной музыкой и AI-assisted sound design.\n\n#AI #Музыка #SoundDesign #VST #MIDI #Lua #GenerativeMusic #VibeCoding #MusicProduction #OpenSource #Protoplug #Ableton #Reaper #FLStudio\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACC7ZqLjJxgzhC1wWD6U3oJN4KzzfiFwACRR5rGwABrHFJ8nzwP1Pmr-0BAAMCAAN5AAM8BA\n\n## Links\n\n- https://github.com/subhankardas15071992-cloud/protoplug\n\n## Tags\n\n#telegram-import #live-sync #ai #музыка #sounddesign #vst #midi #lua #generativemusic #vibecoding #musicproduction #opensource #protoplug #ableton #reaper #flstudio #design #github #code #для #event #генеративные"
+    },
+    {
       "id": 2996,
       "date": "2026-06-12T04:44:11.000Z",
       "title": "Post 2996",

@@ -1,6 +1,195 @@
 {
   "posts": [
     {
+      "id": 3036,
+      "date": "2026-06-15T23:44:25.000Z",
+      "title": "https://youtube.com/shorts/fJU1eP34YFs?is=WGrdGPmRYae2ojXM",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3036,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "video",
+        "youtube"
+      ],
+      "content": "# https://youtube.com/shorts/fJU1eP34YFs?is=WGrdGPmRYae2ojXM\n\nhttps://youtube.com/shorts/fJU1eP34YFs?is=WGrdGPmRYae2ojXM\n\n## Links\n\n- https://youtube.com/shorts/fJU1eP34YFs?is=WGrdGPmRYae2ojXM\n\n## Tags\n\n#telegram-import #live-sync #video #youtube"
+    },
+    {
+      "id": 3035,
+      "date": "2026-06-15T22:34:44.000Z",
+      "title": "https://github.com/reconurge/flowsint",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3035,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "github",
+        "code"
+      ],
+      "content": "# https://github.com/reconurge/flowsint\n\nhttps://github.com/reconurge/flowsint\n\n## Links\n\n- https://github.com/reconurge/flowsint\n\n## Tags\n\n#telegram-import #live-sync #github #code"
+    },
+    {
+      "id": 3034,
+      "date": "2026-06-15T14:12:25.000Z",
+      "title": "Тест с Tmpfiles Картинкой",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3034,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "картинкой"
+      ],
+      "content": "# Тест с Tmpfiles Картинкой\n\n# Тест с Tmpfiles Картинкой\n\nЭто один пост с картинкой сверху и таблицей снизу!\n\n![Photo](file_id:AgACAgQAAxUAAWowCEk2bbMT-6yVVHo4ZmddW-t-AAJlDmsbJSeFUcw_BlTc_7AFAQADAgADeAADPAQ)\n\n| Таблица | Статус |\n|  :---  |  :---  |\n| Данные | Работают! |\n\nКонец теста.\n\n## Media\n\nPhoto file_id: AgACAgQAAxUAAWowCEk2bbMT-6yVVHo4ZmddW-t-AAJlDmsbJSeFUcw_BlTc_7AFAQADAgADeAADPAQ\n\n## Tags\n\n#telegram-import #live-sync #картинкой"
+    },
+    {
+      "id": 3033,
+      "date": "2026-06-15T14:12:23.000Z",
+      "title": "Temporary photo",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3033,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "post",
+        "archive"
+      ],
+      "content": "# Temporary photo\n\nTemporary photo\n\n## Media\n\nPhoto file_id: AgACAgQAAx0CT0EpfgACC8FqLrSZAuYlvwV8XyOUZQv4aOtfBwACIgxrG5_mLFDYezcU13LzFgEAAwIAA3gAAzwE\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
+    },
+    {
+      "id": 3032,
+      "date": "2026-06-15T13:58:17.000Z",
+      "title": "🚀 Dump-Assistant-Bot v0.2.0 — большое обновление",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3032,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "telegram",
+        "bot",
+        "ai",
+        "gemini",
+        "openai",
+        "ollama",
+        "nodejs",
+        "javascript",
+        "markdown",
+        "telegrambot",
+        "dumpassistantbot",
+        "vibecoding",
+        "frontend",
+        "backend",
+        "github",
+        "code",
+        "бот",
+        "dump-assistant-bot",
+        "автоматически"
+      ],
+      "content": "# 🚀 Dump-Assistant-Bot v0.2.0 — большое обновление\n\n🚀 Dump-Assistant-Bot v0.2.0 — большое обновление\nОт простого чат-бота до полноценного ИИ-ассистента для Telegram-каналов и групп. В версии 0.2.0 появилось много новых возможностей.\n✍️ Rich-посты прямо из личного чата\nТеперь не нужно заходить в админку или использовать сторонние инструменты.\nДостаточно отправить боту:\n/post <Markdown-текст>\nМожно прикрепить изображение, и бот автоматически:\n• загрузит его на хостинг;\n• встроит в публикацию;\n• отправит всё в канал одним Rich-сообщением;\n• вернёт ссылку на опубликованный пост.\n📊 Telegram Bot API 10.1\nБот научился работать с новыми Rich Messages:\n✅ списки\n✅ таблицы\n✅ формулы LaTeX\n✅ расширенное HTML-оформление\nЕсли у пользователя старый клиент Telegram, бот автоматически переключится на обычный текст.\n🧠 Gemini 2.5 Flash по умолчанию\nПолностью перешли на облачный режим.\nПлюсы:\n⚡️ более быстрые ответы;\n☁️ больше не нужна мощная видеокарта;\n📦 простая установка;\n📝 Structured Outputs.\nПри желании можно переключиться на:\n• OpenAI;\n• локальную Ollama.\n🛡 Безопасность\nДобавлена защита от:\n• SSRF-атак;\n• DNS Rebinding;\n• обращений к локальным IP-адресам.\nТакже появилась безопасная система обратной связи:\n📨 пользователи пишут боту;\n↩️ владелец отвечает обычным Reply;\n🔒 ID пользователей скрываются в логах.\n🌐 Новый сайт проекта\nСделали отдельный лендинг на Vite + Tailwind CSS.\nНа сайте доступны:\n• RU и EN версии;\n• описание возможностей;\n• настройки .env;\n• FAQ и документация.\n👉 https://ALEVOLDON.github.io/Dump-Assistant-Bot/\n⚙️ Обновление\ngit pull\nnpm install\nnpm start\nНе забудьте настроить новые переменные:\nBOT_USERNAME\nALLOWED_CHAT_IDS\nOWNER_USER_IDS\n🔗 Исходный код\nGitHub:\nhttps://github.com/ALEVOLDON/Dump-Assistant-Bot\nВерсия 0.2.0 получилась действительно крупной. Бот постепенно превращается из обычного Telegram-бота в полноценную платформу для ведения каналов и общения с аудиторией.\nХэштеги:\n#Telegram #Bot #AI #Gemini #OpenAI #Ollama #NodeJS #JavaScript #Markdown #TelegramBot #DumpAssistantBot #VibeCoding\n\n## Links\n\n- https://ALEVOLDON.github.io/Dump-Assistant-Bot/\n- https://github.com/ALEVOLDON/Dump-Assistant-Bot\n\n## Tags\n\n#telegram-import #live-sync #telegram #bot #ai #gemini #openai #ollama #nodejs #javascript #markdown #telegrambot #dumpassistantbot #vibecoding #frontend #backend #github #code #бот #dump-assistant-bot #автоматически"
+    },
+    {
+      "id": 3031,
+      "date": "2026-06-15T13:57:22.000Z",
+      "title": "🚀 Dump-Assistant-Bot v0.2.0 — большое обновление",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3031,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "telegram",
+        "bot",
+        "ai",
+        "gemini",
+        "openai",
+        "ollama",
+        "nodejs",
+        "javascript",
+        "markdown",
+        "telegrambot",
+        "dumpassistantbot",
+        "vibecoding",
+        "frontend",
+        "backend",
+        "github",
+        "code",
+        "бот",
+        "для",
+        "dump-assistant-bot"
+      ],
+      "content": "# 🚀 Dump-Assistant-Bot v0.2.0 — большое обновление\n\n🚀 Dump-Assistant-Bot v0.2.0 — большое обновление\nОт простого чат-бота до полноценного ИИ-ассистента для Telegram-каналов и групп. В версии 0.2.0 появилось много новых возможностей.\n✍️ Rich-посты прямо из личного чата\nТеперь не нужно заходить в админку или использовать сторонние инструменты.\nДостаточно отправить боту:\n/post <Markdown-текст>\nМожно прикрепить изображение, и бот автоматически:\n• загрузит его на хостинг;\n• встроит в публикацию;\n• отправит всё в канал одним Rich-сообщением;\n• вернёт ссылку на опубликованный пост.\n📊 Telegram Bot API 10.1\nБот научился работать с новыми Rich Messages:\n✅ списки\n✅ таблицы\n✅ формулы LaTeX\n✅ расширенное HTML-оформление\nЕсли у пользователя старый клиент Telegram, бот автоматически переключится на обычный текст.\n🧠 Gemini 2.5 Flash по умолчанию\nПолностью перешли на облачный режим.\nПлюсы:\n⚡️ более быстрые ответы;\n☁️ больше не нужна мощная видеокарта;\n📦 простая установка;\n📝 Structured Outputs.\nПри желании можно переключиться на:\n• OpenAI;\n• локальную Ollama.\n🛡 Безопасность\nДобавлена защита от:\n• SSRF-атак;\n• DNS Rebinding;\n• обращений к локальным IP-адресам.\nТакже появилась безопасная система обратной связи:\n📨 пользователи пишут боту;\n↩️ владелец отвечает обычным Reply;\n🔒 ID пользователей скрываются в логах.\n🌐 Новый сайт проекта\nСделали отдельный лендинг на Vite + Tailwind CSS.\nНа сайте доступны:\n• RU и EN версии;\n• описание возможностей;\n• настройки .env;\n• FAQ и документация.\n👉 https://ALEVOLDON.github.io/Dump-Assistant-Bot/\n⚙️ Обновление\ngit pull\nnpm install\nnpm start\nНе забудьте настроить новые переменные:\nBOT_USERNAME\nALLOWED_CHAT_IDS\nOWNER_USER_IDS\n🔗 Исходный код\nGitHub:\nhttps://github.com/ALEVOLDON/Dump-Assistant-Bot\nВерсия 0.2.0 получилась действительно крупной. Бот постепенно превращается из обычного Telegram-бота в полноценную платформу для ведения каналов и общения с аудиторией.\n\nДля Telegram я бы немного переписал текст. Сейчас он слишком похож на changelog для GitHub. Для канала лучше сделать его более живым, компактным и с акцентом на то, что изменилось для пользователя.\nНиже вариант в стиле D.U.M.P. с хорошей структурой и эмодзи.\nПеред текстом можно поставить изображение с логотипом или скриншотом бота.\n🚀 Dump-Assistant-Bot v0.2.0 — большое обновление\nОт простого чат-бота до полноценного ИИ-ассистента для Telegram-каналов и групп. В версии 0.2.0 появилось много новых возможностей.\n✍️ Rich-посты прямо из личного чата\nТеперь не нужно заходить в админку или использовать сторонние инструменты.\nДостаточно отправить боту:\n/post <Markdown-текст>\nМожно прикрепить изображение, и бот автоматически:\n• загрузит его на хостинг;\n• встроит в публикацию;\n• отправит всё в канал одним Rich-сообщением;\n• вернёт ссылку на опубликованный пост.\n📊 Telegram Bot API 10.1\nБот научился работать с новыми Rich Messages:\n✅ списки\n✅ таблицы\n✅ формулы LaTeX\n✅ расширенное HTML-оформление\nЕсли у пользователя старый клиент Telegram, бот автоматически переключится на обычный текст.\n🧠 Gemini 2.5 Flash по умолчанию\nПолностью перешли на облачный режим.\nПлюсы:\n⚡️ более быстрые ответы;\n☁️ больше не нужна мощная видеокарта;\n📦 простая установка;\n📝 Structured Outputs.\nПри желании можно переключиться на:\n• OpenAI;\n• локальную Ollama.\n🛡 Безопасность\nДобавлена защита от:\n• SSRF-атак;\n• DNS Rebinding;\n• обращений к локальным IP-адресам.\nТакже появилась безопасная система обратной связи:\n📨 пользователи пишут боту;\n↩️ владелец отвечает обычным Reply;\n🔒 ID пользователей скрываются в логах.\n🌐 Новый сайт проекта\nСделали отдельный лендинг на Vite + Tailwind CSS.\nНа сайте доступны:\n• RU и EN версии;\n• описание возможностей;\n• настройки .env;\n• FAQ и документация.\n👉 https://ALEVOLDON.github.io/Dump-Assistant-Bot/\n⚙️ Обновление\ngit pull\nnpm install\nnpm start\nНе забудьте настроить новые переменные:\nBOT_USERNAME\nALLOWED_CHAT_IDS\nOWNER_USER_IDS\n🔗 Исходный код\nGitHub:\nhttps://github.com/ALEVOLDON/Dump-Assistant-Bot\nВерсия 0.2.0 получилась действительно крупной. Бот постепенно превращается из обычного Telegram-бота в полноценную платформу для ведения каналов и общения с аудиторией.\nХэштеги:\n#Telegram #Bot #AI #Gemini #OpenAI #Ollama #NodeJS #JavaScript #Markdown #TelegramBot #DumpAssistantBot #VibeCoding\n\n## Links\n\n- https://ALEVOLDON.github.io/Dump-Assistant-Bot/\n- https://github.com/ALEVOLDON/Dump-Assistant-Bot\n\n## Tags\n\n#telegram-import #live-sync #telegram #bot #ai #gemini #openai #ollama #nodejs #javascript #markdown #telegrambot #dumpassistantbot #vibecoding #frontend #backend #github #code #бот #для #dump-assistant-bot"
+    },
+    {
+      "id": 3030,
+      "date": "2026-06-15T13:55:41.000Z",
+      "title": "🚀 Dump-Assistant-Bot v0.2.0 — большое обновление От простого чат-бота до полноц...",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3030,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "frontend",
+        "backend",
+        "ai",
+        "telegram",
+        "object",
+        "бот",
+        "для"
+      ],
+      "content": "# 🚀 Dump-Assistant-Bot v0.2.0 — большое обновление От простого чат-бота до полноц...\n\n🚀 Dump-Assistant-Bot v0.2.0 — большое обновление От простого чат-бота до полноценного ИИ-ассистента для Telegram-каналов и групп. В версии 0.2.0 появилось много новых возможностей. ✍️ Rich-посты прямо из личного чата Теперь не нужно заходить в админку или использовать сторонние инструменты. Достаточно отправить боту: ,[object Object], <Markdown-текст> Можно прикрепить изображение, и бот автоматически: • загрузит его на хостинг; • встроит в публикацию; • отправит всё в канал одним Rich-сообщением; • вернёт ссылку на опубликованный пост. 📊 Telegram Bot API 10.1 Бот научился работать с новыми Rich Messages: ✅ списки ✅ таблицы ✅ формулы LaTeX ✅ расширенное HTML-оформление Если у пользователя старый клиент Telegram, бот автоматически переключится на обычный текст. 🧠 Gemini 2.5 Flash по умолчанию Полностью перешли на облачный режим. Плюсы: ⚡️ более быстрые ответы; ☁️ больше не нужна мощная видеокарта; 📦 простая установка; 📝 Structured Outputs. При желании можно переключиться на: • OpenAI; • локальную Ollama. 🛡 Безопасность Добавлена защита от: • SSRF-атак; • DNS Rebinding; • обращений к локальным IP-адресам. Также появилась безопасная система обратной связи: 📨 пользователи пишут боту; ↩️ владелец отвечает обычным Reply; 🔒 ID пользователей скрываются в логах. 🌐 Новый сайт проекта Сделали отдельный лендинг на Vite + Tailwind CSS. На сайте доступны: • RU и EN версии; • описание возможностей; • настройки .env; • FAQ и документация. 👉 ,[object Object], ⚙️ Обновление git pull npm install npm start Не забудьте настроить новые переменные: BOT_USERNAME ALLOWED_CHAT_IDS OWNER_USER_IDS 🔗 Исходный код GitHub: ,[object Object], Версия 0.2.0 получилась действительно крупной. Бот постепенно превращается из обычного Telegram-бота в полноценную платформу для ведения каналов и общения с аудиторией.\n\nДля Telegram я бы немного переписал текст. Сейчас он слишком похож на changelog для GitHub. Для канала лучше сделать его более живым, компактным и с акцентом на то, что изменилось для пользователя. Ниже вариант в стиле D.U.M.P. с хорошей структурой и эмодзи. Перед текстом можно поставить изображение с логотипом или скриншотом бота. 🚀 Dump-Assistant-Bot v0.2.0 — большое обновление От простого чат-бота до полноценного ИИ-ассистента для Telegram-каналов и групп. В версии 0.2.0 появилось много новых возможностей. ✍️ Rich-посты прямо из личного чата Теперь не нужно заходить в админку или использовать сторонние инструменты. Достаточно отправить боту: ,[object Object], <Markdown-текст> Можно прикрепить изображение, и бот автоматически: • загрузит его на хостинг; • встроит в публикацию; • отправит всё в канал одним Rich-сообщением; • вернёт ссылку на опубликованный пост. 📊 Telegram Bot API 10.1 Бот научился работать с новыми Rich Messages: ✅ списки ✅ таблицы ✅ формулы LaTeX ✅ расширенное HTML-оформление Если у пользователя старый клиент Telegram, бот автоматически переключится на обычный текст. 🧠 Gemini 2.5 Flash по умолчанию Полностью перешли на облачный режим. Плюсы: ⚡️ более быстрые ответы; ☁️ больше не нужна мощная видеокарта; 📦 простая установка; 📝 Structured Outputs. При желании можно переключиться на: • OpenAI; • локальную Ollama. 🛡 Безопасность Добавлена защита от: • SSRF-атак; • DNS Rebinding; • обращений к локальным IP-адресам. Также появилась безопасная система обратной связи: 📨 пользователи пишут боту; ↩️ владелец отвечает обычным Reply; 🔒 ID пользователей скрываются в логах. 🌐 Новый сайт проекта Сделали отдельный лендинг на Vite + Tailwind CSS. На сайте доступны: • RU и EN версии; • описание возможностей; • настройки .env; • FAQ и документация. 👉 ,[object Object], ⚙️ Обновление git pull npm install npm start Не забудьте настроить новые переменные: BOT_USERNAME ALLOWED_CHAT_IDS OWNER_USER_IDS 🔗 Исходный код GitHub: ,[object Object], Версия 0.2.0 получилась действительно крупной. Бот постепенно превращается из обычного Telegram-бота в полноценную платформу для ведения каналов и общения с аудиторией. Хэштеги:\n\n# Telegram ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object]\n\n## Tags\n\n#telegram-import #live-sync #frontend #backend #ai #telegram #object #бот #для"
+    },
+    {
+      "id": 3029,
+      "date": "2026-06-15T11:10:19.000Z",
+      "title": "Тулси Габбард в должности директора национальной разведки опубликовала рассекреч...",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3029,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "как",
+        "сша"
+      ],
+      "content": "# Тулси Габбард в должности директора национальной разведки опубликовала рассекреч...\n\nТулси Габбард в должности директора национальной разведки опубликовала рассекреченные данные о финансировании США более 120 биолабораторий в 30+ странах, включая Украину, в поддержку указа Трампа о прекращении федерального финансирования опасных исследований gain-of-function.\n\nЭто заявление возрождает дискуссии 2022 года, когда утверждения России о биолабораториях в Украине отвергались официальными лицами США как дезинформация, а теперь подаются как подтверждение прошлой нехватки прозрачности.\n\nВыпуск документов направлен на повышение подотчетности и идентификацию патогенов; реакции разделены между поддержкой большей открытости и критикой качества представленных материалов (графики и таблицы без детальных доказательств).\n\n## Media\n\nVideo file_id: BAACAgIAAx0CT0EpfgACC9VqL92ayEuYl9OrpxUo1OLnYh4XygACGqIAAiwTgUlOLBbplMIDcDwE\n\n## Tags\n\n#telegram-import #live-sync #как #сша"
+    },
+    {
+      "id": 3028,
+      "date": "2026-06-15T10:31:39.000Z",
+      "title": "Арнольд Шварценеггер: \\\"Знаешь, почему большинство талантливых людей так и остают...",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3028,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "это",
+        "людей",
+        "мир"
+      ],
+      "content": "# Арнольд Шварценеггер: \"Знаешь, почему большинство талантливых людей так и остают...\n\nАрнольд Шварценеггер: \"Знаешь, почему большинство талантливых людей так и остаются никем? Они включают фальшивую скромность. Они говорят: «Я творец, я просто делаю свою работу. Пускай мир сам меня заметит».\n\nЭто чушь. Ты можешь быть гением, создавать лучшие продукты или писать шедевры. Но если люди об этом не знают, у тебя ничего нет. Абсолютный ноль. Твой талант просто умрёт вместе с тобой.\n\nУмение продавать, продвигать себя. Доносить свою ценность до других и убеждать — это не грязное ремесло. Это величайшее искусство, без которого ты никто.\n\nЧем больше людей узнают о том, на что ты способен, тем ближе ты к вершине. Перестань прятаться в тени. Выходи и учись заявлять о себе на весь мир. Твой успех зависит только от этого\"\n\n## Media\n\nVideo file_id: BAACAgIAAx0CT0EpfgACC9RqL9SL-S9MDgABcfo9f4fQZkWHqBsAAtKhAAIsE4FJ4z9Eic5KaX88BA\n\n## Tags\n\n#telegram-import #live-sync #это #людей #мир"
+    },
+    {
+      "id": 3027,
+      "date": "2026-06-14T20:19:02.000Z",
+      "title": "Превращаем несколько моделей в суперинтеллект:",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3027,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "ai",
+        "моделей"
+      ],
+      "content": "# Превращаем несколько моделей в суперинтеллект:\n\nПревращаем несколько моделей в суперинтеллект: \nOpenRouter запустили Model Fusion — создает «совет» из нескольких нейронок под любые задачи.\n\nМожно промтить дуэт GPT-5.5 + Opus 4.8 или другие комбинации моделей. Вместе они будут умнее даже топовой Claude Fable 5, но в разы быстрее и дешевле.\n\nТестим по ссылке.\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACC9NqLwy2EowbOsC9VDyOx-R7dz44FwACaCBrG-yweUneBqc9sA2T-QEAAwIAA3kAAzwE\n\n## Tags\n\n#telegram-import #live-sync #ai #моделей"
+    },
+    {
       "id": 3026,
       "date": "2026-06-14T17:22:02.000Z",
       "title": "Я обновил параметры llm модели бота, давай проверим на что ты способен сейчас?",

@@ -18,6 +18,76 @@ import {
   ChevronRight
 } from 'lucide-react';
 
+const normalizeHeadingText = (value) =>
+  String(value || '')
+    .replace(/^#+\s+/, '')
+    .replace(/\*\*|__|\*|_/g, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .toLowerCase();
+
+const headingsMatch = (left, right) => {
+  const a = normalizeHeadingText(left);
+  const b = normalizeHeadingText(right);
+  if (!a || !b) return false;
+
+  const minLen = Math.min(a.length, b.length, 48);
+  return a.slice(0, minLen) === b.slice(0, minLen);
+};
+
+const collapseBlankLines = (content) =>
+  String(content || '')
+    .replace(/\n{3,}/g, '\n\n')
+    .trim();
+
+const stripLeadingPlainTitleRepeat = (content, title) => {
+  const lines = String(content || '').split(/\r?\n/);
+  let start = 0;
+
+  while (start < lines.length && !lines[start].trim()) start += 1;
+  if (start >= lines.length) return collapseBlankLines(content);
+
+  const first = lines[start].trim();
+
+  if (/^#{1,6}\s+/.test(first)) {
+    const headingText = first.replace(/^#{1,6}\s+/, '').trim();
+    let next = start + 1;
+
+    while (next < lines.length && !lines[next].trim()) next += 1;
+    if (next >= lines.length) return collapseBlankLines(content);
+
+    const candidate = lines[next].trim();
+    if (
+      /^#{1,6}\s+/.test(candidate) ||
+      (!headingsMatch(candidate, headingText) && !headingsMatch(candidate, title))
+    ) {
+      return collapseBlankLines(content);
+    }
+
+    lines.splice(next, 1);
+    return collapseBlankLines(lines.join('\n'));
+  }
+
+  if (!headingsMatch(first, title)) return collapseBlankLines(content);
+
+  lines.splice(start, 1);
+  return collapseBlankLines(lines.join('\n'));
+};
+
+const stripHeadingMatchingTitle = (content, title) => {
+  let body = String(content || '').trim();
+  const firstLine = body
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .find(Boolean);
+
+  if (firstLine && /^#{1,6}\s+/.test(firstLine) && headingsMatch(firstLine, title)) {
+    body = body.replace(/^#{1,6}\s+[^\n]+\n*/, '').trimStart();
+  }
+
+  return stripLeadingPlainTitleRepeat(body, title);
+};
+
 const seededRandom = (value) => {
   const text = String(value);
   let hash = 2166136261;
@@ -295,7 +365,11 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
   const parsedMarkdown = useMemo(() => {
     if (!selectedPost) return '';
     try {
-      const rawHtml = marked.parse(selectedPost.content || '');
+      const displayContent = stripHeadingMatchingTitle(
+        selectedPost.content || '',
+        selectedPost.title || ''
+      );
+      const rawHtml = marked.parse(displayContent);
       return DOMPurify.sanitize(rawHtml);
     } catch {
       return selectedPost.content || '';

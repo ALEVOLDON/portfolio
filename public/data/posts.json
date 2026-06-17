@@ -1,19 +1,235 @@
 {
   "posts": [
     {
-      "id": 3036,
-      "date": "2026-06-15T23:44:25.000Z",
-      "title": "https://youtube.com/shorts/fJU1eP34YFs?is=WGrdGPmRYae2ojXM",
+      "id": 3049,
+      "date": "2026-06-16T16:31:02.000Z",
+      "title": "⚡️ Почему Telegram до сих пор не сделал свой фреймворк для постов?В 2026 году по...",
       "channel": "D. U. M. P.",
       "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3036,
+      "telegram_message_id": 3049,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "frontend",
+        "design",
+        "ai",
+        "mobile",
+        "telegram",
+        "object",
+        "посты",
+        "что"
+      ],
+      "content": "![Photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-34-24-141Z-5d35d8bf.jpg)\n\n# ⚡️ Почему Telegram до сих пор не сделал свой фреймворк для постов?В 2026 году посты в Telegram всё ещё выглядят как обычный текст, тогда как электронные письма уже давно поддерживают HTML, а сайты могут быть какими угодно. Почему?На самом деле Telegram мог бы давно разрешить HTML, CSS и даже JavaScript, но это принесло бы множество проблем: * проблемы с безопасностью и фишингом; * разные посты выглядели бы по-разному на Android, iPhone, Desktop и Web; * увеличилась бы нагрузка на устройства и трафик; * каналы быстро превратились бы в хаос из анимаций, баннеров и нестандартных интерфейсов.Поэтому Telegram пошёл другим путём: вместо полной свободы он постепенно добавляет новые встроенные элементы — цитаты, списки, сворачиваемые блоки, кастомные эмодзи и другие возможности.Но есть ещё один вариант, который пока так и не появился.💡 Telegram Block KitПредставьте, что пост можно было бы собирать из готовых компонентов: * карточек; * галерей; * временных шкал; * блоков кода; * предупреждений; * таблиц; * интерактивных элементов.Например:# Новости ИИ[Карточка]🚀 Новая модельGPT-6 вышла[Таймлайн]| Год | Модель ||---|---|| 2024 | GPT-4o || 2025 | GPT-5 || 2026 | GPT-6 |[Галерея][Блок кода]Похоже на смесь Notion, Medium и Slack Block Kit.Такой подход позволил бы создавать красивые и структурированные посты без необходимости использовать HTML и JavaScript, а Telegram смог бы гарантировать, что они будут одинаково выглядеть на всех устройствах.Пока что многие авторы решают проблему иначе — превращают посты в короткие видео. По сути, видео становится своеобразным «HTML для Telegram».Возможно, однажды мы увидим не просто Markdown, а настоящий Telegram UI Framework или даже Telegram JSX.И это могло бы стать одним из самых интересных обновлений платформы. ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object]\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-34-24-141Z-5d35d8bf.jpg)\n\n## Tags\n\n#telegram-import #live-sync #frontend #design #ai #mobile #telegram #object #посты #что"
+    },
+    {
+      "id": 3048,
+      "date": "2026-06-16T16:20:16.000Z",
+      "title": "⚡️ Почему Telegram до сих пор не сделал свой фреймворк для постов?Продолжая тему...",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3048,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "frontend",
+        "design",
+        "mobile",
+        "telegram",
+        "object",
+        "посты",
+        "видео"
+      ],
+      "content": "![Photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-34-23-426Z-38f4fd52.jpg)\n\n# ⚡️ Почему Telegram до сих пор не сделал свой фреймворк для постов?Продолжая тему развития Telegram, мы часто задаемся вопросом: почему в 2026 году посты в мессенджере всё ещё остаются преимущественно текстовыми, в то время как электронные письма давно поддерживают HTML, а веб-сайты предлагают безграничные возможности дизайна?На первый взгляд, Telegram мог бы разрешить использование HTML, CSS и даже JavaScript, но такой подход принёс бы множество проблем: * Проблемы с безопасностью и фишингом. * Различия во внешнем виде постов на разных платформах (Android, iPhone, Desktop, Web). * Увеличение нагрузки на устройства и рост трафика. * Превращение каналов в хаос из анимаций, баннеров и нестандартных интерфейсов.Поэтому Telegram выбрал иной путь: вместо полной свободы он постепенно интегрирует новые встроенные элементы — цитаты, списки, сворачиваемые блоки, кастомные эмодзи и другие возможности.Однако существует ещё один, пока нереализованный вариант.💡 Telegram Block KitПредставьте, что посты можно было бы собирать из готовых, стандартизированных компонентов: * Карточек * Галерей * Временных шкал * Блоков кода * Предупреждений * Таблиц * Интерактивных элементовНапример:,[object Object],Такой подход напоминает смесь Notion, Medium и Slack Block Kit. Он позволил бы создавать красивые и структурированные посты без необходимости использования HTML и JavaScript, при этом Telegram гарантировал бы единообразное отображение на всех устройствах.Пока что многие авторы решают эту проблему иначе — превращая посты в короткие видео. По сути, видео становится своеобразным «HTML для Telegram».Возможно, однажды мы увидим не просто Markdown, а настоящий Telegram UI Framework или даже Telegram JSX. И это могло бы стать одним из самых интересных обновлений платформы. ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object]\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-34-23-426Z-38f4fd52.jpg)\n\n## Tags\n\n#telegram-import #live-sync #frontend #design #mobile #telegram #object #посты #видео"
+    },
+    {
+      "id": 3047,
+      "date": "2026-06-16T13:33:46.000Z",
+      "title": "🚀 ASUS ExpertCenter Pro ET900N G3: Персональный суперкомпьютер для ИИ",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3047,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "object",
+        "nvidia",
+        "это"
+      ],
+      "content": "# 🚀 ASUS ExpertCenter Pro ET900N G3: Персональный суперкомпьютер для ИИ\n\n# 🚀 ASUS ExpertCenter Pro ET900N G3: Персональный суперкомпьютер для ИИ\n\nASUS представила свою новейшую рабочую станцию ExpertCenter Pro ET900N G3, основанную на мощной платформе NVIDIA Grace Blackwell. Это устройство нового поколения призвано перевернуть представление о возможностях локального ИИ.\n\n### 🔥 Что внутри?\n\n| Компонент | Характеристики |\n|  :---:  |  :---:  |\n| CPU | 72-ядерный NVIDIA Grace |\n| GPU | Blackwell Ultra |\n| Память | До 784 ГБ унифицированной |\n| Накопители | До 8 ТБ PCIe 5.0 |\n| Назначение | Локальный запуск и обучение ИИ |\n\n### 🤯 Зачем нужен такой монстр?\n\n- \n- \n- \n- \n\nФактически, это попытка перенести возможности датацентров NVIDIA в формат персональной рабочей станции. Похоже, эпоха, когда «домашний ПК» и «ИИ-сервер» были разными устройствами, постепенно заканчивается.\n\n[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object]\n\n## Media\n\n- [video](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-34-22-813Z-5d033aff.mp4)\n\n## Tags\n\n#telegram-import #live-sync #object #nvidia #это"
+    },
+    {
+      "id": 3046,
+      "date": "2026-06-16T13:14:39.000Z",
+      "title": "🚀 ASUS показала персональный суперкомпьютер для ИИ",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3046,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "ai",
+        "object",
+        "nvidia",
+        "запуск"
+      ],
+      "content": "# 🚀 ASUS показала персональный суперкомпьютер для ИИ\n\n🚀 ASUS показала персональный суперкомпьютер для ИИ\nASUS представила ExpertCenter Pro ET900N G3 — рабочую станцию нового поколения на платформе NVIDIA Grace Blackwell.\n🔥 Что внутри?\nКомпонент\nХарактеристики\nCPU\n72-ядерный NVIDIA Grace\nGPU\nBlackwell Ultra\nПамять\nДо 784 ГБ унифицированной памяти\nНакопители\nДо 8 ТБ PCIe 5.0\nНазначение\nЛокальный запуск и обучение больших ИИ-моделей\n🤯 Зачем нужен такой монстр?\nлокальный запуск огромных LLM;\nобучение собственных моделей;\nработа с агентами и мультимодальными системами;\nкорпоративные ИИ-решения без облака.\nФактически, это попытка перенести возможности датацентров NVIDIA в формат персональной рабочей станции.\nПохоже, эпоха, когда «домашний ПК» и «ИИ-сервер» были разными устройствами, постепенно заканчивается.\n,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object]\n\n## Media\n\n- [video](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-34-19-977Z-2b74d061.mp4)\n\n## Tags\n\n#telegram-import #live-sync #ai #object #nvidia #запуск"
+    },
+    {
+      "id": 3045,
+      "date": "2026-06-16T13:07:48.000Z",
+      "title": "| Компонент | Характеристики |",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3045,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "object",
+        "nvidia",
+        "grace"
+      ],
+      "content": "# [object Object], ASUS представила ExpertCenter Pro ET900N G3 — рабочую станцию н...\n\n[object Object], ASUS представила ExpertCenter Pro ET900N G3 — рабочую станцию нового поколения на платформе NVIDIA Grace Blackwell. 🔥 Что внутри?\n\n| Компонент | Характеристики |\n|  :---:  |  :---:  |\n| CPU | 72-ядерный NVIDIA Grace |\n| GPU | Blackwell Ultra |\n| Память | До 784 ГБ унифицированной памяти |\n| Накопители | До 8 ТБ PCIe 5.0 |\n| Назначение | Локальный запуск и обучение больших ИИ-моделей |\n\n🤯 Зачем нужен такой монстр?\n\n- \n- \n- \n- \n\nФактически, это попытка перенести возможности датацентров NVIDIA в формат персональной рабочей станции. Похоже, эпоха, когда «домашний ПК» и «ИИ-сервер» были разными устройствами, постепенно заканчивается. ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object]\n\n## Media\n\n- [video](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-34-16-230Z-2791141e.mp4)\n\n## Tags\n\n#telegram-import #live-sync #object #nvidia #grace"
+    },
+    {
+      "id": 3044,
+      "date": "2026-06-16T12:48:48.000Z",
+      "title": "🚀 ASUS показала персональный суперкомпьютер для ИИ ASUS представила ExpertCente...",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3044,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "ai",
+        "object",
+        "nvidia",
+        "запуск"
+      ],
+      "content": "# 🚀 ASUS показала персональный суперкомпьютер для ИИ ASUS представила ExpertCente...\n\n🚀 ASUS показала персональный суперкомпьютер для ИИ ASUS представила ExpertCenter Pro ET900N G3 — рабочую станцию нового поколения на платформе NVIDIA Grace Blackwell. 🔥 Что внутри? Компонент Характеристики CPU 72-ядерный NVIDIA Grace GPU Blackwell Ultra Память До 784 ГБ унифицированной памяти Накопители До 8 ТБ PCIe 5.0 Назначение Локальный запуск и обучение больших ИИ-моделей 🤯 Зачем нужен такой монстр? локальный запуск огромных LLM; обучение собственных моделей; работа с агентами и мультимодальными системами; корпоративные ИИ-решения без облака. Фактически, это попытка перенести возможности датацентров NVIDIA в формат персональной рабочей станции. Похоже, эпоха, когда «домашний ПК» и «ИИ-сервер» были разными устройствами, постепенно заканчивается. ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object]\n\n## Media\n\n- [video](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-34-13-363Z-58742aa0.mp4)\n\n## Tags\n\n#telegram-import #live-sync #ai #object #nvidia #запуск"
+    },
+    {
+      "id": 3043,
+      "date": "2026-06-16T12:47:12.000Z",
+      "title": "🚀 ASUS выкатила персональный суперкомпьютер для ИИ, и это не просто железо, а н...",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3043,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "ai",
+        "object",
+        "nvidia",
+        "для"
+      ],
+      "content": "# 🚀 ASUS выкатила персональный суперкомпьютер для ИИ, и это не просто железо, а н...\n\n🚀 ASUS выкатила персональный суперкомпьютер для ИИ, и это не просто железо, а настоящий хардкор. Встречайте ExpertCenter Pro ET900N G3 — рабочую станцию нового поколения на базе NVIDIA Grace Blackwell. 🔥 Смотрим под капот: CPU — 72 ядра NVIDIA Grace. GPU — Blackwell Ultra. Память — до 784 ГБ унифицированной памяти. Накопители — до 8 ТБ PCIe 5.0. Для чего нужен этот монстр? Локальный запуск LLM, обучение собственных моделей, работа с агентами и мультимодальными системами. Корпоративные ИИ-решения без облака. Фактически, это попытка перенести мощь датацентров NVIDIA в формат персональной рабочей станции. Похоже, эпоха, когда «домашний ПК» и «ИИ-сервер» были разными устройствами, постепенно закрывается. ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object]\n\n## Media\n\n- [video](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-34-09-986Z-e03644b9.mp4)\n\n## Tags\n\n#telegram-import #live-sync #ai #object #nvidia #для"
+    },
+    {
+      "id": 3042,
+      "date": "2026-06-16T12:45:12.000Z",
+      "title": "🚀 ASUS закипятила воду, выкатив персональный суперкомпьютер для ИИ.",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3042,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "ai",
+        "nvidia",
+        "blackwell",
+        "asus",
+        "llm",
+        "workstation",
+        "localai",
+        "dump",
+        "без",
+        "это",
+        "локальный"
+      ],
+      "content": "# 🚀 ASUS закипятила воду, выкатив персональный суперкомпьютер для ИИ.\n\n🚀 ASUS закипятила воду, выкатив персональный суперкомпьютер для ИИ.\nВстречайте ExpertCenter Pro ET900N G3 — рабочую станцию нового поколения на базе NVIDIA Grace Blackwell. Это не просто железо, это хардкорный апгрейд твоего workflow.\n🔥 Что под капотом этого зверя?\nКомпонент | Характеристики\nCPU | 72-ядерный монстр NVIDIA Grace\nGPU | Blackwell Ultra (да, тот самый)\nПамять | До 784 ГБ унифицированной памяти (вспомни, как ты мучился с OOM)\nНакопители | До 8 ТБ PCIe 5.0 (скорость света в твоем диске)\nНазначение | Локальный деплой и обучение больших ИИ-моделей без облака\n🤯 Зачем нужен такой монстр?\n— Локальный запуск огромных LLM прямо у тебя на столе;\n— Тренинг собственных моделей без ожидания в очереди на GPU-кластерах;\n— Работа с AI agents и мультимодальными системами на полной скорости;\n— Корпоративные ИИ-решения без зависимости от публичного облака.\nПо сути, это попытка перенести мощь датацентров NVIDIA в формат персональной рабочей станции.\nПохоже, эпоха, когда «домашний ПК» и «ИИ-сервер» были разными вселенными, постепенно закрывается. Теперь твой десктоп может стать твоим личным data center.\n#AI #NVIDIA #Blackwell #ASUS #LLM #Workstation #LocalAI #DUMP\n\n## Media\n\n- [video](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-34-06-843Z-a0dd317a.mp4)\n\n## Tags\n\n#telegram-import #live-sync #ai #nvidia #blackwell #asus #llm #workstation #localai #dump #без #это #локальный"
+    },
+    {
+      "id": 3041,
+      "date": "2026-06-16T12:34:52.000Z",
+      "title": "| Компонент | Характеристики |",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3041,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "object",
+        "nvidia",
+        "grace"
+      ],
+      "content": "# [object Object], ASUS представила ExpertCenter Pro ET900N G3 — рабочую станцию н...\n\n[object Object], ASUS представила ExpertCenter Pro ET900N G3 — рабочую станцию нового поколения на платформе NVIDIA Grace Blackwell. 🔥 Что внутри?\n\n| Компонент | Характеристики |\n|  :---:  |  :---:  |\n| CPU | 72-ядерный NVIDIA Grace |\n| GPU | Blackwell Ultra |\n| Память | До 784 ГБ унифицированной памяти |\n| Накопители | До 8 ТБ PCIe 5.0 |\n| Назначение | Локальный запуск и обучение больших ИИ-моделей |\n\n🤯 Зачем нужен такой монстр?\n\n- \n- \n- \n- \n\nФактически, это попытка перенести возможности датацентров NVIDIA в формат персональной рабочей станции. Похоже, эпоха, когда «домашний ПК» и «ИИ-сервер» были разными устройствами, постепенно заканчивается. ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object]\n\n## Media\n\n- [video](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-34-04-438Z-18b41f9d.mp4)\n\n## Tags\n\n#telegram-import #live-sync #object #nvidia #grace"
+    },
+    {
+      "id": 3040,
+      "date": "2026-06-16T12:11:11.000Z",
+      "title": "🚀 ASUS показала персональный суперкомпьютер для ИИ ASUS представила ExpertCente...",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3040,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "ai",
+        "object",
+        "nvidia",
+        "запуск"
+      ],
+      "content": "# 🚀 ASUS показала персональный суперкомпьютер для ИИ ASUS представила ExpertCente...\n\n🚀 ASUS показала персональный суперкомпьютер для ИИ ASUS представила ExpertCenter Pro ET900N G3 — рабочую станцию нового поколения на платформе NVIDIA Grace Blackwell. 🔥 Что внутри? Компонент Характеристики CPU 72-ядерный NVIDIA Grace GPU Blackwell Ultra Память До 784 ГБ унифицированной памяти Накопители До 8 ТБ PCIe 5.0 Назначение Локальный запуск и обучение больших ИИ-моделей 🤯 Зачем нужен такой монстр? локальный запуск огромных LLM; обучение собственных моделей; работа с агентами и мультимодальными системами; корпоративные ИИ-решения без облака. Фактически, это попытка перенести возможности датацентров NVIDIA в формат персональной рабочей станции. Похоже, эпоха, когда «домашний ПК» и «ИИ-сервер» были разными устройствами, постепенно заканчивается. ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object]\n\n## Media\n\n- [video](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-34-01-973Z-1bde6817.mp4)\n\n## Tags\n\n#telegram-import #live-sync #ai #object #nvidia #запуск"
+    },
+    {
+      "id": 3039,
+      "date": "2026-06-16T12:04:06.000Z",
+      "title": "🚀 ASUS показала персональный суперкомпьютер для ИИ ASUS представила ExpertCente...",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3039,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "ai",
+        "object",
+        "nvidia",
+        "запуск"
+      ],
+      "content": "# 🚀 ASUS показала персональный суперкомпьютер для ИИ ASUS представила ExpertCente...\n\n🚀 ASUS показала персональный суперкомпьютер для ИИ ASUS представила ExpertCenter Pro ET900N G3 — рабочую станцию нового поколения на платформе NVIDIA Grace Blackwell. 🔥 Что внутри? Компонент Характеристики CPU 72-ядерный NVIDIA Grace GPU Blackwell Ultra Память До 784 ГБ унифицированной памяти Накопители До 8 ТБ PCIe 5.0 Назначение Локальный запуск и обучение больших ИИ-моделей 🤯 Зачем нужен такой монстр? локальный запуск огромных LLM; обучение собственных моделей; работа с агентами и мультимодальными системами; корпоративные ИИ-решения без облака. Фактически, это попытка перенести возможности датацентров NVIDIA в формат персональной рабочей станции. Похоже, эпоха, когда «домашний ПК» и «ИИ-сервер» были разными устройствами, постепенно заканчивается.\n\n# AI ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object]\n\n## Tags\n\n#telegram-import #live-sync #ai #object #nvidia #запуск"
+    },
+    {
+      "id": 3038,
+      "date": "2026-06-16T11:18:38.000Z",
+      "title": "🚀 ASUS показала персональный суперкомпьютер для ИИ ASUS представила ExpertCente...",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3038,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "ai",
+        "object",
+        "nvidia",
+        "запуск"
+      ],
+      "content": "# 🚀 ASUS показала персональный суперкомпьютер для ИИ ASUS представила ExpertCente...\n\n🚀 ASUS показала персональный суперкомпьютер для ИИ ASUS представила ExpertCenter Pro ET900N G3 — рабочую станцию нового поколения на платформе NVIDIA Grace Blackwell. 🔥 Что внутри? Компонент Характеристики CPU 72-ядерный NVIDIA Grace GPU Blackwell Ultra Память До 784 ГБ унифицированной памяти Накопители До 8 ТБ PCIe 5.0 Назначение Локальный запуск и обучение больших ИИ-моделей 🤯 Зачем нужен такой монстр? локальный запуск огромных LLM; обучение собственных моделей; работа с агентами и мультимодальными системами; корпоративные ИИ-решения без облака. Фактически, это попытка перенести возможности датацентров NVIDIA в формат персональной рабочей станции. Похоже, эпоха, когда «домашний ПК» и «ИИ-сервер» были разными устройствами, постепенно заканчивается.\n\n# AI ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object]\n\n## Tags\n\n#telegram-import #live-sync #ai #object #nvidia #запуск"
+    },
+    {
+      "id": 3037,
+      "date": "2026-06-16T09:35:31.000Z",
+      "title": "🎬 Первый Shorts про Dump-Assistant-Bot.",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3037,
       "tags": [
         "telegram-import",
         "live-sync",
         "video",
-        "youtube"
+        "youtube",
+        "shorts"
       ],
-      "content": "# https://youtube.com/shorts/fJU1eP34YFs?is=WGrdGPmRYae2ojXM\n\nhttps://youtube.com/shorts/fJU1eP34YFs?is=WGrdGPmRYae2ojXM\n\n## Links\n\n- https://youtube.com/shorts/fJU1eP34YFs?is=WGrdGPmRYae2ojXM\n\n## Tags\n\n#telegram-import #live-sync #video #youtube"
+      "content": "# 🎬 Первый Shorts про Dump-Assistant-Bot.\n\n🎬 Первый Shorts про Dump-Assistant-Bot.\n\nhttps://youtube.com/shorts/s8q0zROwVUA?is=5_J2jaA6H8HGmG-A\n\n## Links\n\n- https://youtube.com/shorts/s8q0zROwVUA?is=5_J2jaA6H8HGmG-A\n\n## Tags\n\n#telegram-import #live-sync #video #youtube #shorts"
     },
     {
       "id": 3035,
@@ -42,7 +258,7 @@
         "live-sync",
         "картинкой"
       ],
-      "content": "# Тест с Tmpfiles Картинкой\n\n# Тест с Tmpfiles Картинкой\n\nЭто один пост с картинкой сверху и таблицей снизу!\n\n![Photo](file_id:AgACAgQAAxUAAWowCEk2bbMT-6yVVHo4ZmddW-t-AAJlDmsbJSeFUcw_BlTc_7AFAQADAgADeAADPAQ)\n\n| Таблица | Статус |\n|  :---  |  :---  |\n| Данные | Работают! |\n\nКонец теста.\n\n## Media\n\nPhoto file_id: AgACAgQAAxUAAWowCEk2bbMT-6yVVHo4ZmddW-t-AAJlDmsbJSeFUcw_BlTc_7AFAQADAgADeAADPAQ\n\n## Tags\n\n#telegram-import #live-sync #картинкой"
+      "content": "# Тест с Tmpfiles Картинкой\n\n# Тест с Tmpfiles Картинкой\n\nЭто один пост с картинкой сверху и таблицей снизу!\n\n![Photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-59-286Z-386fc7bf.jpg)\n\n| Таблица | Статус |\n|  :---  |  :---  |\n| Данные | Работают! |\n\nКонец теста.\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-59-286Z-386fc7bf.jpg)\n\n## Tags\n\n#telegram-import #live-sync #картинкой"
     },
     {
       "id": 3033,
@@ -57,7 +273,7 @@
         "post",
         "archive"
       ],
-      "content": "# Temporary photo\n\nTemporary photo\n\n## Media\n\nPhoto file_id: AgACAgQAAx0CT0EpfgACC8FqLrSZAuYlvwV8XyOUZQv4aOtfBwACIgxrG5_mLFDYezcU13LzFgEAAwIAA3gAAzwE\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
+      "content": "# Temporary photo\n\nTemporary photo\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-54-520Z-f83e742d.jpg)\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
     },
     {
       "id": 3032,
@@ -172,7 +388,7 @@
         "людей",
         "мир"
       ],
-      "content": "# Арнольд Шварценеггер: \"Знаешь, почему большинство талантливых людей так и остают...\n\nАрнольд Шварценеггер: \"Знаешь, почему большинство талантливых людей так и остаются никем? Они включают фальшивую скромность. Они говорят: «Я творец, я просто делаю свою работу. Пускай мир сам меня заметит».\n\nЭто чушь. Ты можешь быть гением, создавать лучшие продукты или писать шедевры. Но если люди об этом не знают, у тебя ничего нет. Абсолютный ноль. Твой талант просто умрёт вместе с тобой.\n\nУмение продавать, продвигать себя. Доносить свою ценность до других и убеждать — это не грязное ремесло. Это величайшее искусство, без которого ты никто.\n\nЧем больше людей узнают о том, на что ты способен, тем ближе ты к вершине. Перестань прятаться в тени. Выходи и учись заявлять о себе на весь мир. Твой успех зависит только от этого\"\n\n## Media\n\nVideo file_id: BAACAgIAAx0CT0EpfgACC9RqL9SL-S9MDgABcfo9f4fQZkWHqBsAAtKhAAIsE4FJ4z9Eic5KaX88BA\n\n## Tags\n\n#telegram-import #live-sync #это #людей #мир"
+      "content": "# Арнольд Шварценеггер: \"Знаешь, почему большинство талантливых людей так и остают...\n\nАрнольд Шварценеггер: \"Знаешь, почему большинство талантливых людей так и остаются никем? Они включают фальшивую скромность. Они говорят: «Я творец, я просто делаю свою работу. Пускай мир сам меня заметит».\n\nЭто чушь. Ты можешь быть гением, создавать лучшие продукты или писать шедевры. Но если люди об этом не знают, у тебя ничего нет. Абсолютный ноль. Твой талант просто умрёт вместе с тобой.\n\nУмение продавать, продвигать себя. Доносить свою ценность до других и убеждать — это не грязное ремесло. Это величайшее искусство, без которого ты никто.\n\nЧем больше людей узнают о том, на что ты способен, тем ближе ты к вершине. Перестань прятаться в тени. Выходи и учись заявлять о себе на весь мир. Твой успех зависит только от этого\"\n\n## Media\n\n- [video](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-57-860Z-fac5c169.mp4)\n\n## Tags\n\n#telegram-import #live-sync #это #людей #мир"
     },
     {
       "id": 3027,
@@ -187,7 +403,7 @@
         "ai",
         "моделей"
       ],
-      "content": "# Превращаем несколько моделей в суперинтеллект:\n\nПревращаем несколько моделей в суперинтеллект: \nOpenRouter запустили Model Fusion — создает «совет» из нескольких нейронок под любые задачи.\n\nМожно промтить дуэт GPT-5.5 + Opus 4.8 или другие комбинации моделей. Вместе они будут умнее даже топовой Claude Fable 5, но в разы быстрее и дешевле.\n\nТестим по ссылке.\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACC9NqLwy2EowbOsC9VDyOx-R7dz44FwACaCBrG-yweUneBqc9sA2T-QEAAwIAA3kAAzwE\n\n## Tags\n\n#telegram-import #live-sync #ai #моделей"
+      "content": "# Превращаем несколько моделей в суперинтеллект:\n\nПревращаем несколько моделей в суперинтеллект: \nOpenRouter запустили Model Fusion — создает «совет» из нескольких нейронок под любые задачи.\n\nМожно промтить дуэт GPT-5.5 + Opus 4.8 или другие комбинации моделей. Вместе они будут умнее даже топовой Claude Fable 5, но в разы быстрее и дешевле.\n\nТестим по ссылке.\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-56-846Z-3aabee21.jpg)\n\n## Tags\n\n#telegram-import #live-sync #ai #моделей"
     },
     {
       "id": 3026,
@@ -231,7 +447,7 @@
         "design",
         "картинкой"
       ],
-      "content": "# Тест с Tmpfiles Картинкой\n\n# Тест с Tmpfiles Картинкой\n\nЭто один пост с картинкой сверху и таблицей снизу!\n\n![Photo](file_id:AgACAgQAAxUAAWouupXEodpJ60Ybnr0PYvjzIuXyAAIzDmsbzGt9UaohNfW-lWJBAQADAgADeAADPAQ)\n\n| Таблица | Статус |\n|  :---  |  :---  |\n| Данные | Работают! |\n\nКонец теста.\n\n## Media\n\nPhoto file_id: AgACAgQAAxUAAWouupXEodpJ60Ybnr0PYvjzIuXyAAIzDmsbzGt9UaohNfW-lWJBAQADAgADeAADPAQ\n\n## Tags\n\n#telegram-import #live-sync #design #картинкой"
+      "content": "# Тест с Tmpfiles Картинкой\n\n# Тест с Tmpfiles Картинкой\n\nЭто один пост с картинкой сверху и таблицей снизу!\n\n![Photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-56-590Z-6f12ab99.jpg)\n\n| Таблица | Статус |\n|  :---  |  :---  |\n| Данные | Работают! |\n\nКонец теста.\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-56-590Z-6f12ab99.jpg)\n\n## Tags\n\n#telegram-import #live-sync #design #картинкой"
     },
     {
       "id": 3023,
@@ -246,7 +462,7 @@
         "post",
         "archive"
       ],
-      "content": "# Temporary photo\n\nTemporary photo\n\n## Media\n\nPhoto file_id: AgACAgQAAx0CT0EpfgACC8FqLrSZAuYlvwV8XyOUZQv4aOtfBwACIgxrG5_mLFDYezcU13LzFgEAAwIAA3gAAzwE\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
+      "content": "# Temporary photo\n\nTemporary photo\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-54-520Z-f83e742d.jpg)\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
     },
     {
       "id": 3022,
@@ -276,7 +492,7 @@
         "post",
         "archive"
       ],
-      "content": "# Temporary photo\n\nTemporary photo\n\n## Media\n\nPhoto file_id: AgACAgQAAx0CT0EpfgACC8FqLrSZAuYlvwV8XyOUZQv4aOtfBwACIgxrG5_mLFDYezcU13LzFgEAAwIAA3gAAzwE\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
+      "content": "# Temporary photo\n\nTemporary photo\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-54-520Z-f83e742d.jpg)\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
     },
     {
       "id": 3020,
@@ -306,7 +522,7 @@
         "post",
         "archive"
       ],
-      "content": "# Temporary photo\n\nTemporary photo\n\n## Media\n\nPhoto file_id: AgACAgQAAx0CT0EpfgACC8FqLrSZAuYlvwV8XyOUZQv4aOtfBwACIgxrG5_mLFDYezcU13LzFgEAAwIAA3gAAzwE\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
+      "content": "# Temporary photo\n\nTemporary photo\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-54-520Z-f83e742d.jpg)\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
     },
     {
       "id": 3018,
@@ -326,7 +542,7 @@
         "таблицы",
         "цитаты"
       ],
-      "content": "# 🧪 Тестируем новые Rich Messages в Telegram\n\n🧪 Тестируем новые Rich Messages в Telegram\n\nПроверяем, как бот отображает таблицы, код и цитаты.\n\nТаблица элементов:\n\nЭлемент   | Статус\n------------------\nТаблицы   |  ✅\nКод       |  ✅\nЦитаты    |  ✅\nСпойлеры  |  ✅\nLaTeX     |  ✅\n\n\nЕсли всё отображается красиво, значит интеграция прошла успешно.\n\nconsole.log(\"Hello, Telegram!\");\n\nСекретное сообщение 😄\n\n🚀 Telegram постепенно становится полноценной платформой для публикаций.\n\n#Telegram #BotAPI #AI\n\n## Media\n\nPhoto file_id: AgACAgQAAxUAAWouuWmMi5cc8X7KKgXRX1aWrBHiAAJ1DmsbOJl0UXwTfuZx6WsbAQADAgADeQADPAQ\n\n## Tags\n\n#telegram-import #live-sync #telegram #botapi #ai #backend #код #таблицы #цитаты"
+      "content": "# 🧪 Тестируем новые Rich Messages в Telegram\n\n🧪 Тестируем новые Rich Messages в Telegram\n\nПроверяем, как бот отображает таблицы, код и цитаты.\n\nТаблица элементов:\n\nЭлемент   | Статус\n------------------\nТаблицы   |  ✅\nКод       |  ✅\nЦитаты    |  ✅\nСпойлеры  |  ✅\nLaTeX     |  ✅\n\n\nЕсли всё отображается красиво, значит интеграция прошла успешно.\n\nconsole.log(\"Hello, Telegram!\");\n\nСекретное сообщение 😄\n\n🚀 Telegram постепенно становится полноценной платформой для публикаций.\n\n#Telegram #BotAPI #AI\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-55-967Z-156c6fc9.jpg)\n\n## Tags\n\n#telegram-import #live-sync #telegram #botapi #ai #backend #код #таблицы #цитаты"
     },
     {
       "id": 3017,
@@ -356,7 +572,7 @@
         "post",
         "archive"
       ],
-      "content": "# Temporary photo\n\nTemporary photo\n\n## Media\n\nPhoto file_id: AgACAgQAAx0CT0EpfgACC8FqLrSZAuYlvwV8XyOUZQv4aOtfBwACIgxrG5_mLFDYezcU13LzFgEAAwIAA3gAAzwE\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
+      "content": "# Temporary photo\n\nTemporary photo\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-54-520Z-f83e742d.jpg)\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
     },
     {
       "id": 3015,
@@ -371,7 +587,7 @@
         "post",
         "archive"
       ],
-      "content": "# Temporary photo\n\nTemporary photo\n\n## Media\n\nPhoto file_id: AgACAgQAAx0CT0EpfgACC8FqLrSZAuYlvwV8XyOUZQv4aOtfBwACIgxrG5_mLFDYezcU13LzFgEAAwIAA3gAAzwE\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
+      "content": "# Temporary photo\n\nTemporary photo\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-54-520Z-f83e742d.jpg)\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
     },
     {
       "id": 3014,
@@ -386,7 +602,7 @@
         "post",
         "archive"
       ],
-      "content": "# Temporary photo\n\nTemporary photo\n\n## Media\n\nPhoto file_id: AgACAgQAAx0CT0EpfgACC8FqLrSZAuYlvwV8XyOUZQv4aOtfBwACIgxrG5_mLFDYezcU13LzFgEAAwIAA3gAAzwE\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
+      "content": "# Temporary photo\n\nTemporary photo\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-54-520Z-f83e742d.jpg)\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
     },
     {
       "id": 3012,
@@ -401,12 +617,12 @@
         "post",
         "archive"
       ],
-      "content": "# Post 3012\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACC8RqLrdKWLVf0UYuZK2D9AABB5hftAADux5rG_7UcEmxtA8QDg769QEAAwIAA3kAAzwE\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
+      "content": "# Post 3012\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-55-028Z-4dffbbea.jpg)\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
     },
     {
       "id": 3013,
       "date": "2026-06-14T14:14:34.000Z",
-      "title": "🧪 ,[object Object]",
+      "title": "Сегодня обновил своего ИИ-бота и решил проверить, как работают новые Rich Messag...",
       "channel": "D. U. M. P.",
       "telegram_chat_id": -1001329670526,
       "telegram_message_id": 3013,
@@ -418,7 +634,7 @@
         "hello",
         "новые"
       ],
-      "content": "# 🧪 ,[object Object]\n\n🧪 ,[object Object]\n\nСегодня обновил своего ИИ-бота и решил проверить, как работают новые Rich Messages.\n\n### Что уже поддерживается\n\n| Функция | Статус | Комментарий |\n|  :---  |  :---:  |  :---  |\n| [object Object] | ✅ | Работает |\n| [object Object] | ✅ | Новый формат |\n| [object Object] | ✅ | Подсветка языков |\n| [object Object] | ✅ | Вложенные цитаты |\n| [object Object] | ✅ | Скрытие текста |\n| [object Object] | ✅ | Формулы и выражения |\n| [object Object] | ✅ | Красивое оформление |\n\n---\n\n### Маркированный список\n\n- \n- \n- \n- \n- \n\n### Нумерованный список\n\n- \n- \n- \n- \n\n---\n\n### Код\n\ndef hello():\n    print(\"Hello Telegram!\")\n\nhello()\n\n---\n\n### Цитаты\n\n---\n\n### Спойлер\n\n[object Object]\n\n---\n\n### Формулы\n\nСтрочная формула: ,[object Object]\n\nБлочная формула:\n\n\n---\n\n### Мини-таблица производительности\n\n| Модель | Размер | Скорость |\n|  :---  |  :---:  |  :---:  |\n| Gemma 4 12B | 12B | ⚡⚡⚡ |\n| Qwen3 32B | 32B | ⚡⚡ |\n| Kimi K2 | 1T+ | ⚡ |\n\n---\n\n### Ссылки\n\n- \n- \n- \n\n---\n\n🔥 Если всё отображается правильно, значит новые функции интегрированы успешно.\n\n[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object]\n\n## Tags\n\n#telegram-import #live-sync #telegram #object #hello #новые"
+      "content": "# 🧪 ,[object Object]\n\n🧪 ,[object Object]\n\nСегодня обновил своего ИИ-бота и решил проверить, как работают новые Rich Messages.\n\n### Что уже поддерживается\n\n| Функция | Статус | Комментарий |\n|  :---  |  :---:  |  :---  |\n| [object Object] | ✅ | Работает |\n| [object Object] | ✅ | Новый формат |\n| [object Object] | ✅ | Подсветка языков |\n| [object Object] | ✅ | Вложенные цитаты |\n| [object Object] | ✅ | Скрытие текста |\n| [object Object] | ✅ | Формулы и выражения |\n| [object Object] | ✅ | Красивое оформление |\n\n---\n\n### Маркированный список\n\n- \n- \n- \n- \n- \n\n### Нумерованный список\n\n- \n- \n- \n- \n\n---\n\n### Код\n\ndef hello():\n    print(\"Hello Telegram!\")\n\nhello()\n\n---\n\n### Цитаты\n\n---\n\n### Спойлер\n\n[object Object]\n\n---\n\n### Формулы\n\nСтрочная формула: ,[object Object]\n\nБлочная формула:\n\n---\n\n### Мини-таблица производительности\n\n| Модель | Размер | Скорость |\n|  :---  |  :---:  |  :---:  |\n| Gemma 4 12B | 12B | ⚡⚡⚡ |\n| Qwen3 32B | 32B | ⚡⚡ |\n| Kimi K2 | 1T+ | ⚡ |\n\n---\n\n### Ссылки\n\n- \n- \n- \n\n---\n\n🔥 Если всё отображается правильно, значит новые функции интегрированы успешно.\n\n[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object], ,[object Object]\n\n## Tags\n\n#telegram-import #live-sync #telegram #object #hello #новые"
     },
     {
       "id": 3011,
@@ -433,7 +649,7 @@
         "post",
         "archive"
       ],
-      "content": "# Temporary photo to get file_id\n\nTemporary photo to get file_id\n\n## Media\n\nPhoto file_id: AgACAgQAAx0CT0EpfgACC8FqLrSZAuYlvwV8XyOUZQv4aOtfBwACIgxrG5_mLFDYezcU13LzFgEAAwIAA3gAAzwE\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
+      "content": "# Temporary photo to get file_id\n\nTemporary photo to get file_id\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-54-520Z-f83e742d.jpg)\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
     },
     {
       "id": 3010,
@@ -448,7 +664,7 @@
         "post",
         "archive"
       ],
-      "content": "# Temporary photo to get file_id\n\nTemporary photo to get file_id\n\n## Media\n\nPhoto file_id: AgACAgQAAx0CT0EpfgACC8FqLrSZAuYlvwV8XyOUZQv4aOtfBwACIgxrG5_mLFDYezcU13LzFgEAAwIAA3gAAzwE\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
+      "content": "# Temporary photo to get file_id\n\nTemporary photo to get file_id\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-54-520Z-f83e742d.jpg)\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
     },
     {
       "id": 3009,
@@ -463,7 +679,7 @@
         "post",
         "archive"
       ],
-      "content": "# Temporary photo to get file_id\n\nTemporary photo to get file_id\n\n## Media\n\nPhoto file_id: AgACAgQAAx0CT0EpfgACC8FqLrSZAuYlvwV8XyOUZQv4aOtfBwACIgxrG5_mLFDYezcU13LzFgEAAwIAA3gAAzwE\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
+      "content": "# Temporary photo to get file_id\n\nTemporary photo to get file_id\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-54-520Z-f83e742d.jpg)\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
     },
     {
       "id": 3008,
@@ -596,7 +812,7 @@
         "медиа",
         "сайт"
       ],
-      "content": "# 🤖 DUMP\n\n🤖 DUMP\nКоротко о будущем.\n\n⚡️ Что происходит?\nTelegram становится платформой для публикаций. Теперь боты могут отправлять сообщения с заголовками, таблицами, списками, цитатами, спойлерами и медиа.\n\n🚀 Почему это интересно?\nРаньше посты были простым текстом. Теперь канал можно превратить в полноценный мини-блог или тех. журнал.\n\n🛠 Что это даёт?\n\nВозможность       | Было | Стало\n--------------------------------\nЗаголовки         |  ❌  |  ✅\nТаблицы           |  ❌  |  ✅\nБлоки кода        |  ⚠️  |  ✅\nСпойлеры          |  ✅  |  ✅\nСворачиваемые сек.|  ❌  |  ✅\nМедиа внутри поста|  ⚠️  |  ✅\n\n\n💡 Что я хочу попробовать?\nСоздать автоматический AI-канал:\n1. LLM пишет пост ➔ 2. n8n собирает инфо ➔ 3. Бот публикует ➔ 4. Сайт делает базу знаний.\n\n\npost ➔ Telegram ➔ Сайт ➔ Архив\n\n\nКажется, мы возвращаемся к эпохе независимых блогов. Вместо CMS и FTP достаточно Telegram и пары AI-автоматизаций.\n\nБудущее становится всё более персональным.\n\n#AI #Telegram #Agents #VibeCoding\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACC7pqLqCBPjmFSGldut1Itvqr11U4awACCB5rGwABrHlJOpkP1NSlCFkBAAMCAAN5AAM8BA\n\n## Tags\n\n#telegram-import #live-sync #ai #telegram #agents #vibecoding #что #медиа #сайт"
+      "content": "# 🤖 DUMP\n\n🤖 DUMP\nКоротко о будущем.\n\n⚡️ Что происходит?\nTelegram становится платформой для публикаций. Теперь боты могут отправлять сообщения с заголовками, таблицами, списками, цитатами, спойлерами и медиа.\n\n🚀 Почему это интересно?\nРаньше посты были простым текстом. Теперь канал можно превратить в полноценный мини-блог или тех. журнал.\n\n🛠 Что это даёт?\n\nВозможность       | Было | Стало\n--------------------------------\nЗаголовки         |  ❌  |  ✅\nТаблицы           |  ❌  |  ✅\nБлоки кода        |  ⚠️  |  ✅\nСпойлеры          |  ✅  |  ✅\nСворачиваемые сек.|  ❌  |  ✅\nМедиа внутри поста|  ⚠️  |  ✅\n\n\n💡 Что я хочу попробовать?\nСоздать автоматический AI-канал:\n1. LLM пишет пост ➔ 2. n8n собирает инфо ➔ 3. Бот публикует ➔ 4. Сайт делает базу знаний.\n\n\npost ➔ Telegram ➔ Сайт ➔ Архив\n\n\nКажется, мы возвращаемся к эпохе независимых блогов. Вместо CMS и FTP достаточно Telegram и пары AI-автоматизаций.\n\nБудущее становится всё более персональным.\n\n#AI #Telegram #Agents #VibeCoding\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-52-859Z-bdbd5850.jpg)\n\n## Tags\n\n#telegram-import #live-sync #ai #telegram #agents #vibecoding #что #медиа #сайт"
     },
     {
       "id": 3001,
@@ -611,7 +827,7 @@
         "design",
         "telegram"
       ],
-      "content": "# 🖥 Don't be surprised if you see tables, nested lists, inline media, formulas, h...\n\n🖥 Don't be surprised if you see tables, nested lists, inline media, formulas, headers and more in Telegram messages.\n\n📖 We now support rich formatting for all chatbots.\n\n🔨 Start building! Docs for chatbot devs →\n\n## Media\n\nDocument: Rich Text.mp4 | file_id: CgACAgIAAx0CT0EpfgACC7lqLp0FWxIj2p3j_qLYczHSVWhsvQACuqEAAkOaaEnv2APpVG1RRTwE\nAnimation file_id: CgACAgIAAx0CT0EpfgACC7lqLp0FWxIj2p3j_qLYczHSVWhsvQACuqEAAkOaaEnv2APpVG1RRTwE\n\n## Tags\n\n#telegram-import #live-sync #design #telegram"
+      "content": "# 🖥 Don't be surprised if you see tables, nested lists, inline media, formulas, h...\n\n🖥 Don't be surprised if you see tables, nested lists, inline media, formulas, headers and more in Telegram messages.\n\n📖 We now support rich formatting for all chatbots.\n\n🔨 Start building! Docs for chatbot devs →\n\n## Media\n\nDocument: Rich Text.mp4 | file_id: CgACAgIAAx0CT0EpfgACC7lqLp0FWxIj2p3j_qLYczHSVWhsvQACuqEAAkOaaEnv2APpVG1RRTwE\n- [animation](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-52-571Z-4085024e.gif)\n\n## Tags\n\n#telegram-import #live-sync #design #telegram"
     },
     {
       "id": 3000,
@@ -674,7 +890,7 @@
         "event",
         "генеративные"
       ],
-      "content": "# 🎹 Нашёл интересную штуку для любителей музыки, кодинга и ИИ — Protoplug\n\n🎹 Нашёл интересную штуку для любителей музыки, кодинга и ИИ — Protoplug\n\nЭто VST-плагин, внутри которого можно писать скрипты на языке Lua и создавать собственные:\n\n• арпеджиаторы; • MIDI-генераторы; • гармонизаторы; • секвенсоры; • генеративные инструменты; • необычные аудиоэффекты.\n\nСамое интересное, что для этого не нужен C++ — достаточно нескольких строк кода.\n\nНапример, такой скрипт будет играть случайные ноты в пределах одной октавы:\nmath.randomseed(os.time())\n\nfunction processMidi(event)\n    if event:isNoteOn() then\n        event.note = math.random(60, 72)\n    end\n    event:send()\nend\nА теперь представьте связку:\n\n🧠 ChatGPT / Claude / Gemini ⬇ ✍️ Генерация Lua-кода ⬇ 🎹 Protoplug ⬇ 🎛 Ableton, Reaper, FL Studio и другие DAW\n\nПолучается настоящий vibe coding для музыкантов и саунд-дизайнеров. Можно описывать идеи словами и почти мгновенно получать собственные MIDI-плагины и генеративные инструменты.\n\nGitHub: https://github.com/subhankardas15071992-cloud/protoplug\n\nВыглядит как отличный инструмент для экспериментов с генеративной музыкой и AI-assisted sound design.\n\n#AI #Музыка #SoundDesign #VST #MIDI #Lua #GenerativeMusic #VibeCoding #MusicProduction #OpenSource #Protoplug #Ableton #Reaper #FLStudio\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACC7ZqLjJxgzhC1wWD6U3oJN4KzzfiFwACRR5rGwABrHFJ8nzwP1Pmr-0BAAMCAAN5AAM8BA\n\n## Links\n\n- https://github.com/subhankardas15071992-cloud/protoplug\n\n## Tags\n\n#telegram-import #live-sync #ai #музыка #sounddesign #vst #midi #lua #generativemusic #vibecoding #musicproduction #opensource #protoplug #ableton #reaper #flstudio #design #github #code #для #event #генеративные"
+      "content": "# 🎹 Нашёл интересную штуку для любителей музыки, кодинга и ИИ — Protoplug\n\n🎹 Нашёл интересную штуку для любителей музыки, кодинга и ИИ — Protoplug\n\nЭто VST-плагин, внутри которого можно писать скрипты на языке Lua и создавать собственные:\n\n• арпеджиаторы; • MIDI-генераторы; • гармонизаторы; • секвенсоры; • генеративные инструменты; • необычные аудиоэффекты.\n\nСамое интересное, что для этого не нужен C++ — достаточно нескольких строк кода.\n\nНапример, такой скрипт будет играть случайные ноты в пределах одной октавы:\nmath.randomseed(os.time())\n\nfunction processMidi(event)\n    if event:isNoteOn() then\n        event.note = math.random(60, 72)\n    end\n    event:send()\nend\nА теперь представьте связку:\n\n🧠 ChatGPT / Claude / Gemini ⬇ ✍️ Генерация Lua-кода ⬇ 🎹 Protoplug ⬇ 🎛 Ableton, Reaper, FL Studio и другие DAW\n\nПолучается настоящий vibe coding для музыкантов и саунд-дизайнеров. Можно описывать идеи словами и почти мгновенно получать собственные MIDI-плагины и генеративные инструменты.\n\nGitHub: https://github.com/subhankardas15071992-cloud/protoplug\n\nВыглядит как отличный инструмент для экспериментов с генеративной музыкой и AI-assisted sound design.\n\n#AI #Музыка #SoundDesign #VST #MIDI #Lua #GenerativeMusic #VibeCoding #MusicProduction #OpenSource #Protoplug #Ableton #Reaper #FLStudio\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-51-696Z-0d0c84b1.jpg)\n\n## Links\n\n- https://github.com/subhankardas15071992-cloud/protoplug\n\n## Tags\n\n#telegram-import #live-sync #ai #музыка #sounddesign #vst #midi #lua #generativemusic #vibecoding #musicproduction #opensource #protoplug #ableton #reaper #flstudio #design #github #code #для #event #генеративные"
     },
     {
       "id": 2996,
@@ -689,7 +905,7 @@
         "post",
         "archive"
       ],
-      "content": "# Post 2996\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACC7RqK46b6Lflsbxe0Q5ZeCveBiGY6QACCh5rG2bEWEm6ZwWDkDrJfQEAAwIAA3kAAzwE\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
+      "content": "# Post 2996\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-51-130Z-85d4bb55.jpg)\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
     },
     {
       "id": 2995,
@@ -703,7 +919,7 @@
         "live-sync",
         "claude"
       ],
-      "content": "# Xiaomi выпустили конкурента Claude — MiMo Code. Обходит агента Anthropic сразу в...\n\nXiaomi выпустили конкурента Claude — MiMo Code. Обходит агента Anthropic сразу в трех бенчмарках.\n\nОбещают модель уровня Claude Sonnet 4.6 и безлимитный контекст — агент должен работать даже с миллионом строк кода без потерь. Есть режим самообучения под фидбэк пользователя.\n\nТестируем бесплатно тут.\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACC7NqK46bWINj_fMnx1eceinat3CoJwACCR5rG2bEWEmAtHQxBvHkTgEAAwIAA3kAAzwE\n\n## Tags\n\n#telegram-import #live-sync #claude"
+      "content": "# Xiaomi выпустили конкурента Claude — MiMo Code. Обходит агента Anthropic сразу в...\n\nXiaomi выпустили конкурента Claude — MiMo Code. Обходит агента Anthropic сразу в трех бенчмарках.\n\nОбещают модель уровня Claude Sonnet 4.6 и безлимитный контекст — агент должен работать даже с миллионом строк кода без потерь. Есть режим самообучения под фидбэк пользователя.\n\nТестируем бесплатно тут.\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-51-383Z-6a78fc91.jpg)\n\n## Tags\n\n#telegram-import #live-sync #claude"
     },
     {
       "id": 2994,
@@ -777,7 +993,7 @@
         "всё",
         "мир"
       ],
-      "content": "# 🏛 От офисов и приложений к персональным цифровым мирам\n\n🏛 От офисов и приложений к персональным цифровым мирам\n\nИногда мне кажется, что мы смотрим на будущее через призму прошлого.\n\nМы до сих пор пытаемся перенести старый мир в новый, хотя сам фундамент уже начинает меняться.\n\nКогда-то у человека была мастерская. Потом появились фабрики, заводы и большие офисы. После этого пришёл интернет, сайты, социальные сети и мобильные приложения.\n\nНо что, если всё это — лишь промежуточные этапы?\n\nИсчезновение офиса\n\nЗа последние годы всё больше людей перестали быть привязаны к физическому месту.\n\nРабота переехала в ноутбук.\n\nКоманда превратилась в Telegram, Discord, GitHub и Zoom.\n\nА теперь и это постепенно начинает меняться.\n\nИИ уже помогает писать код, создавать дизайн, искать информацию, анализировать данные и автоматизировать рутину.\n\nВсё чаще человек становится не исполнителем, а постановщиком задач.\n\nВместо десяти сотрудников рядом с одним человеком могут работать десять ИИ-агентов.\n\nИсчезновение приложений\n\nВозможно, следующим этапом станет исчезновение привычных интерфейсов.\n\nСегодня мы открываем:\n\nбраузер;\n\nпочту;\n\nмессенджеры;\n\nдесятки приложений.\n\n\nНо завтра этим могут заниматься агенты.\n\nЧеловек будет взаимодействовать с одним универсальным помощником, а он уже сам:\n\nнайдёт информацию;\n\nзабронирует билеты;\n\nоплатит счета;\n\nсоздаст сайт;\n\nнапишет код;\n\nсвяжется с другими агентами.\n\n\nНе человек будет пользоваться приложениями.\n\nПриложениями будут пользоваться агенты.\n\nРоботы и физический мир\n\nТо же самое может произойти и в реальном мире.\n\nГуманоидные роботы и специализированные машины постепенно возьмут на себя всё больше физической работы.\n\nНе сразу.\n\nНе за один год.\n\nНо переход уже начался.\n\nИ, скорее всего, долгое время будут сосуществовать два мира:\n\nСтарый мир\n\nофисы;\n\nклассические профессии;\n\nприложения;\n\nсайты;\n\nручной труд.\n\n\nНовый мир\n\nИИ-агенты;\n\nперсональные модели;\n\nавтоматизация;\n\nроботы;\n\nнебольшие команды или даже отдельные люди с огромными возможностями.\n\n\nКуда исчезнет человек?\n\nВозникает интересный вопрос.\n\nЕсли:\n\nофис больше не нужен;\n\nсотрудники могут быть виртуальными;\n\nбольшую часть работы выполняют агенты;\n\n\nто где вообще будет существовать человек?\n\nСайт не способен показать это.\n\nСоциальные сети тоже.\n\nGitHub показывает только код.\n\nLinkedIn показывает резюме.\n\nНо всё это не передаёт атмосферу, историю и сам процесс творчества.\n\nПерсональные цифровые миры\n\nВозможно, следующим этапом станут персональные цифровые пространства.\n\nНе просто профиль.\n\nНе просто сайт.\n\nА настоящая цифровая мастерская.\n\nГде можно увидеть:\n\nтекущие проекты;\n\nархив старых работ;\n\nзаметки и идеи;\n\nмузыку и источники вдохновения;\n\nэксперименты;\n\nисторию развития человека.\n\n\nПредставьте, что вы заходите в виртуальный офис или мастерскую автора.\n\nНа одном столе лежит текущий проект.\n\nНа стене закреплены идеи.\n\nВ шкафу хранится архив прошлых работ.\n\nВ углу работает ИИ-ассистент, который может провести экскурсию и ответить на вопросы.\n\nЭто уже не резюме.\n\nЭто цифровая личность.\n\nВозможно, мы возвращаемся к истокам\n\nВ Средневековье и эпоху Возрождения у каждого мастера была своя мастерская.\n\nТуда приходили ученики, заказчики и единомышленники.\n\nПозже всё это заменили корпорации, офисы и массовое производство.\n\nНо технологии могут вернуть нас к модели независимых мастеров.\n\nТолько теперь мастерская будет цифровой.\n\nА помощниками станут ИИ-агенты и роботы.\n\nВозможно, будущее принадлежит не огромным компаниям, а отдельным людям и небольшим командам, усиленным искусственным интеллектом.\n\nИ тогда главным активом человека станет не офис и даже не резюме.\n\nА его собственный мир.\n\n#AI #ИскусственныйИнтеллект #Будущее #VibeCoding #AIAgents #Роботы #Технологии #ЦифроваяЭкономика #Автоматизация #AGI #ПостИндустриальноеОбщество #DigitalWorld #БудущееРаботы\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACC69qKejGDeqz3gABrB7IC8au5uira2QAAkUmaxueIlFJc-EI0qD8YgsBAAMCAAN5AAM7BA\n\n## Tags\n\n#telegram-import #live-sync #ai #искусственныйинтеллект #будущее #vibecoding #aiagents #роботы #технологии #цифроваяэкономика #автоматизация #agi #постиндустриальноеобщество #digitalworld #будущееработы #telegram #это #всё #мир"
+      "content": "# 🏛 От офисов и приложений к персональным цифровым мирам\n\n🏛 От офисов и приложений к персональным цифровым мирам\n\nИногда мне кажется, что мы смотрим на будущее через призму прошлого.\n\nМы до сих пор пытаемся перенести старый мир в новый, хотя сам фундамент уже начинает меняться.\n\nКогда-то у человека была мастерская. Потом появились фабрики, заводы и большие офисы. После этого пришёл интернет, сайты, социальные сети и мобильные приложения.\n\nНо что, если всё это — лишь промежуточные этапы?\n\nИсчезновение офиса\n\nЗа последние годы всё больше людей перестали быть привязаны к физическому месту.\n\nРабота переехала в ноутбук.\n\nКоманда превратилась в Telegram, Discord, GitHub и Zoom.\n\nА теперь и это постепенно начинает меняться.\n\nИИ уже помогает писать код, создавать дизайн, искать информацию, анализировать данные и автоматизировать рутину.\n\nВсё чаще человек становится не исполнителем, а постановщиком задач.\n\nВместо десяти сотрудников рядом с одним человеком могут работать десять ИИ-агентов.\n\nИсчезновение приложений\n\nВозможно, следующим этапом станет исчезновение привычных интерфейсов.\n\nСегодня мы открываем:\n\nбраузер;\n\nпочту;\n\nмессенджеры;\n\nдесятки приложений.\n\n\nНо завтра этим могут заниматься агенты.\n\nЧеловек будет взаимодействовать с одним универсальным помощником, а он уже сам:\n\nнайдёт информацию;\n\nзабронирует билеты;\n\nоплатит счета;\n\nсоздаст сайт;\n\nнапишет код;\n\nсвяжется с другими агентами.\n\n\nНе человек будет пользоваться приложениями.\n\nПриложениями будут пользоваться агенты.\n\nРоботы и физический мир\n\nТо же самое может произойти и в реальном мире.\n\nГуманоидные роботы и специализированные машины постепенно возьмут на себя всё больше физической работы.\n\nНе сразу.\n\nНе за один год.\n\nНо переход уже начался.\n\nИ, скорее всего, долгое время будут сосуществовать два мира:\n\nСтарый мир\n\nофисы;\n\nклассические профессии;\n\nприложения;\n\nсайты;\n\nручной труд.\n\n\nНовый мир\n\nИИ-агенты;\n\nперсональные модели;\n\nавтоматизация;\n\nроботы;\n\nнебольшие команды или даже отдельные люди с огромными возможностями.\n\n\nКуда исчезнет человек?\n\nВозникает интересный вопрос.\n\nЕсли:\n\nофис больше не нужен;\n\nсотрудники могут быть виртуальными;\n\nбольшую часть работы выполняют агенты;\n\n\nто где вообще будет существовать человек?\n\nСайт не способен показать это.\n\nСоциальные сети тоже.\n\nGitHub показывает только код.\n\nLinkedIn показывает резюме.\n\nНо всё это не передаёт атмосферу, историю и сам процесс творчества.\n\nПерсональные цифровые миры\n\nВозможно, следующим этапом станут персональные цифровые пространства.\n\nНе просто профиль.\n\nНе просто сайт.\n\nА настоящая цифровая мастерская.\n\nГде можно увидеть:\n\nтекущие проекты;\n\nархив старых работ;\n\nзаметки и идеи;\n\nмузыку и источники вдохновения;\n\nэксперименты;\n\nисторию развития человека.\n\n\nПредставьте, что вы заходите в виртуальный офис или мастерскую автора.\n\nНа одном столе лежит текущий проект.\n\nНа стене закреплены идеи.\n\nВ шкафу хранится архив прошлых работ.\n\nВ углу работает ИИ-ассистент, который может провести экскурсию и ответить на вопросы.\n\nЭто уже не резюме.\n\nЭто цифровая личность.\n\nВозможно, мы возвращаемся к истокам\n\nВ Средневековье и эпоху Возрождения у каждого мастера была своя мастерская.\n\nТуда приходили ученики, заказчики и единомышленники.\n\nПозже всё это заменили корпорации, офисы и массовое производство.\n\nНо технологии могут вернуть нас к модели независимых мастеров.\n\nТолько теперь мастерская будет цифровой.\n\nА помощниками станут ИИ-агенты и роботы.\n\nВозможно, будущее принадлежит не огромным компаниям, а отдельным людям и небольшим командам, усиленным искусственным интеллектом.\n\nИ тогда главным активом человека станет не офис и даже не резюме.\n\nА его собственный мир.\n\n#AI #ИскусственныйИнтеллект #Будущее #VibeCoding #AIAgents #Роботы #Технологии #ЦифроваяЭкономика #Автоматизация #AGI #ПостИндустриальноеОбщество #DigitalWorld #БудущееРаботы\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-50-859Z-1b68aac8.jpg)\n\n## Tags\n\n#telegram-import #live-sync #ai #искусственныйинтеллект #будущее #vibecoding #aiagents #роботы #технологии #цифроваяэкономика #автоматизация #agi #постиндустриальноеобщество #digitalworld #будущееработы #telegram #это #всё #мир"
     },
     {
       "id": 2990,
@@ -949,7 +1165,7 @@
         "actions",
         "атак"
       ],
-      "content": "# 🚨 Самые масштабные атаки на GitHub в 2026 году\n\n🚨 Самые масштабные атаки на GitHub в 2026 году\nВ 2026 году GitHub пережил несколько крупнейших инцидентов безопасности, показавших, что даже инфраструктура крупнейшей платформы для разработчиков не является неприступной.\n\n1. Взлом почти 3800 внутренних репозиториев GitHub\nВ мае 2026 года группа TeamPCP заявила о компрометации примерно 3800 внутренних репозиториев GitHub.\nКак это произошло?\nПричиной стала заражённая VS Code-расширение, установленное на компьютере одного из сотрудников GitHub.\nЧерез него злоумышленники получили доступ к внутренним данным компании.\nGitHub подтвердил факт атаки и сообщил, что:\nзаражённое расширение было удалено;\nустройство сотрудника изолировано;\nсекреты и токены заменены;\nпубличные репозитории пользователей не пострадали.\nХакеры пытались продать украденный код за $50 000. (Tom's Hardware)\n\n2. Атака Megalodon — заражение более 5500 репозиториев\nСпустя несколько дней исследователи SafeDep обнаружили новую кампанию под названием Megalodon.\nЗлоумышленники маскировались под автоматического бота build-bot и отправляли pull request'ы с вредоносным кодом.\nПосле принятия изменений происходила кража:\nAWS-ключей;\nGoogle Cloud-токенов;\nSSH-ключей;\nKubernetes-конфигураций;\nDocker-настроек;\nVault и Terraform-секретов.\nЗаражённый код распространялся по принципу червя и затронул более 5500 репозиториев. (TechRadar)\n\n3. Supply Chain-атаки через npm и GitHub\nВ 2026 году резко выросло количество атак на цепочку поставок ПО.\nНациональный центр кибербезопасности Великобритании (NCSC) выпустил специальное предупреждение.\nОсновные методы:\nкомпрометация аккаунтов мейнтейнеров;\nзахват доменов;\ntyposquatting;\nиспользование украденных учётных данных;\nвнедрение вредоносных зависимостей.\nПод угрозой оказались экосистемы:\nNode.js;\nPython;\nRust;\nGitHub Actions и CI/CD-инфраструктура. (IT Pro)\n\n4. Критическая RCE-уязвимость GitHub\nИсследователи Wiz нашли опасную уязвимость удалённого выполнения кода, которая потенциально могла затронуть миллионы репозиториев.\nОсобенно интересно то, что баг был обнаружен с помощью ИИ.\nGitHub исправил проблему менее чем за 6 часов, а следов эксплуатации найдено не было. (The Verge)\n\n5. Новая угроза для AI-агентов в GitHub Actions\nИсследователи обнаружили новый класс атак:\nAgentic Workflow Injection (AWI)\nБыли проанализированы:\n13 392 AI-ориентированных workflow;\nболее 10 000 репозиториев.\nРезультат:\nобнаружено 519 уязвимостей;\nподтверждено 496 эксплуатируемых случаев;\nвыявлено 343 ранее неизвестных zero-day. (arXiv)\n\nГлавные выводы 2026 года\n\n🔥 Главная опасность уже не сам GitHub\nОсновной вектор атак:\nVS Code-расширения;\nGitHub Actions;\nnpm-пакеты;\nCI/CD;\nоблачные секреты;\nAI-агенты.\nФактически атаки всё чаще происходят не на платформу, а на экосистему вокруг неё.\n\nКак защититься\n\n✅ Включить 2FA.\n✅ Использовать аппаратные ключи безопасности.\n✅ Проверять сторонние VS Code-расширения.\n✅ Ограничивать права GitHub Actions.\n✅ Хранить секреты вне репозиториев.\n✅ Использовать Dependabot и CodeQL.\n✅ Проверять pull request'ы от неизвестных пользователей.\n\n#GitHub #CyberSecurity #Hacking #InfoSec #GitHubActions #SupplyChainAttack #AI #DevOps #OpenSource #Programming #VSCode #ZeroDay #CyberAttack\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACC6dqKFEsoivGyn_GseiSVNu9D3oCmQACbxlrGygMSUlATCVx6lHSagEAAwIAA3kAAzsE\n\n## Tags\n\n#telegram-import #live-sync #github #cybersecurity #hacking #infosec #githubactions #supplychainattack #ai #devops #opensource #programming #vscode #zeroday #cyberattack #backend #design #security #репозиториев #actions #атак"
+      "content": "# 🚨 Самые масштабные атаки на GitHub в 2026 году\n\n🚨 Самые масштабные атаки на GitHub в 2026 году\nВ 2026 году GitHub пережил несколько крупнейших инцидентов безопасности, показавших, что даже инфраструктура крупнейшей платформы для разработчиков не является неприступной.\n\n1. Взлом почти 3800 внутренних репозиториев GitHub\nВ мае 2026 года группа TeamPCP заявила о компрометации примерно 3800 внутренних репозиториев GitHub.\nКак это произошло?\nПричиной стала заражённая VS Code-расширение, установленное на компьютере одного из сотрудников GitHub.\nЧерез него злоумышленники получили доступ к внутренним данным компании.\nGitHub подтвердил факт атаки и сообщил, что:\nзаражённое расширение было удалено;\nустройство сотрудника изолировано;\nсекреты и токены заменены;\nпубличные репозитории пользователей не пострадали.\nХакеры пытались продать украденный код за $50 000. (Tom's Hardware)\n\n2. Атака Megalodon — заражение более 5500 репозиториев\nСпустя несколько дней исследователи SafeDep обнаружили новую кампанию под названием Megalodon.\nЗлоумышленники маскировались под автоматического бота build-bot и отправляли pull request'ы с вредоносным кодом.\nПосле принятия изменений происходила кража:\nAWS-ключей;\nGoogle Cloud-токенов;\nSSH-ключей;\nKubernetes-конфигураций;\nDocker-настроек;\nVault и Terraform-секретов.\nЗаражённый код распространялся по принципу червя и затронул более 5500 репозиториев. (TechRadar)\n\n3. Supply Chain-атаки через npm и GitHub\nВ 2026 году резко выросло количество атак на цепочку поставок ПО.\nНациональный центр кибербезопасности Великобритании (NCSC) выпустил специальное предупреждение.\nОсновные методы:\nкомпрометация аккаунтов мейнтейнеров;\nзахват доменов;\ntyposquatting;\nиспользование украденных учётных данных;\nвнедрение вредоносных зависимостей.\nПод угрозой оказались экосистемы:\nNode.js;\nPython;\nRust;\nGitHub Actions и CI/CD-инфраструктура. (IT Pro)\n\n4. Критическая RCE-уязвимость GitHub\nИсследователи Wiz нашли опасную уязвимость удалённого выполнения кода, которая потенциально могла затронуть миллионы репозиториев.\nОсобенно интересно то, что баг был обнаружен с помощью ИИ.\nGitHub исправил проблему менее чем за 6 часов, а следов эксплуатации найдено не было. (The Verge)\n\n5. Новая угроза для AI-агентов в GitHub Actions\nИсследователи обнаружили новый класс атак:\nAgentic Workflow Injection (AWI)\nБыли проанализированы:\n13 392 AI-ориентированных workflow;\nболее 10 000 репозиториев.\nРезультат:\nобнаружено 519 уязвимостей;\nподтверждено 496 эксплуатируемых случаев;\nвыявлено 343 ранее неизвестных zero-day. (arXiv)\n\nГлавные выводы 2026 года\n\n🔥 Главная опасность уже не сам GitHub\nОсновной вектор атак:\nVS Code-расширения;\nGitHub Actions;\nnpm-пакеты;\nCI/CD;\nоблачные секреты;\nAI-агенты.\nФактически атаки всё чаще происходят не на платформу, а на экосистему вокруг неё.\n\nКак защититься\n\n✅ Включить 2FA.\n✅ Использовать аппаратные ключи безопасности.\n✅ Проверять сторонние VS Code-расширения.\n✅ Ограничивать права GitHub Actions.\n✅ Хранить секреты вне репозиториев.\n✅ Использовать Dependabot и CodeQL.\n✅ Проверять pull request'ы от неизвестных пользователей.\n\n#GitHub #CyberSecurity #Hacking #InfoSec #GitHubActions #SupplyChainAttack #AI #DevOps #OpenSource #Programming #VSCode #ZeroDay #CyberAttack\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-50-562Z-569e82fe.jpg)\n\n## Tags\n\n#telegram-import #live-sync #github #cybersecurity #hacking #infosec #githubactions #supplychainattack #ai #devops #opensource #programming #vscode #zeroday #cyberattack #backend #design #security #репозиториев #actions #атак"
     },
     {
       "id": 2982,
@@ -1161,7 +1377,7 @@
         "видео",
         "для"
       ],
-      "content": "# ElevenLabs представила Flows Agent в ElevenCreative — ИИ-агент, который по описа...\n\nElevenLabs представила Flows Agent в ElevenCreative — ИИ-агент, который по описанию пользователя автоматически строит полный workflow, выбирая модели, создавая узлы и соединяя их для генерации контента.\n\nАгент работает с 50+ моделями изображений, видео, голоса, музыки и SFX, поддерживает итерации через чат и позволяет запускать генерацию в фоне с контролем затрат.\n\nВ демо-видео агент быстро собирает 10-секундную рекламную видео для кроссовок, включая визуалы, голос за кадром и финальную сборку.\n\n## Media\n\nVideo file_id: BAACAgIAAx0CT0EpfgACC5tqItil8DeJVIgFEc757sPGDPP3HwACRaMAAiEDGUlvb0uPKRSL5DsE\n\n## Tags\n\n#telegram-import #live-sync #агент #видео #для"
+      "content": "# ElevenLabs представила Flows Agent в ElevenCreative — ИИ-агент, который по описа...\n\nElevenLabs представила Flows Agent в ElevenCreative — ИИ-агент, который по описанию пользователя автоматически строит полный workflow, выбирая модели, создавая узлы и соединяя их для генерации контента.\n\nАгент работает с 50+ моделями изображений, видео, голоса, музыки и SFX, поддерживает итерации через чат и позволяет запускать генерацию в фоне с контролем затрат.\n\nВ демо-видео агент быстро собирает 10-секундную рекламную видео для кроссовок, включая визуалы, голос за кадром и финальную сборку.\n\n## Media\n\n- [video](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-50-274Z-87d9e08d.mp4)\n\n## Tags\n\n#telegram-import #live-sync #агент #видео #для"
     },
     {
       "id": 2970,
@@ -1191,7 +1407,7 @@
         "агентных",
         "для"
       ],
-      "content": "# NVIDIA выпустила Nemotron 3 Ultra — открытую 550B MoE-модель с гибридной архитек...\n\nNVIDIA выпустила Nemotron 3 Ultra — открытую 550B MoE-модель с гибридной архитектурой Mamba-Transformer, специально оптимизированную для долгосрочных агентов ИИ.\n\nМодель обеспечивает 5-кратное ускорение инференса и снижение стоимости агентных задач до 30% по сравнению с другими открытыми frontier-моделями, показывая высокие результаты в кодировании, исследованиях и долгосрочном планировании.\n\nПолностью открыта (веса, данные, рецепты пост-тренинга) и доступна на Hugging Face, с поддержкой популярных агентных фреймворков для кастомизации под специализированные задачи.\n\n## Media\n\nVideo file_id: BAACAgIAAx0CT0EpfgACC5lqItck7D5ujL2YMBzBYLXWOqE8NQACMqMAAiEDGUkFWarLid_pRjsE\n\n## Tags\n\n#telegram-import #live-sync #агентных #для"
+      "content": "# NVIDIA выпустила Nemotron 3 Ultra — открытую 550B MoE-модель с гибридной архитек...\n\nNVIDIA выпустила Nemotron 3 Ultra — открытую 550B MoE-модель с гибридной архитектурой Mamba-Transformer, специально оптимизированную для долгосрочных агентов ИИ.\n\nМодель обеспечивает 5-кратное ускорение инференса и снижение стоимости агентных задач до 30% по сравнению с другими открытыми frontier-моделями, показывая высокие результаты в кодировании, исследованиях и долгосрочном планировании.\n\nПолностью открыта (веса, данные, рецепты пост-тренинга) и доступна на Hugging Face, с поддержкой популярных агентных фреймворков для кастомизации под специализированные задачи.\n\n## Media\n\n- [video](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-48-017Z-e98ab1a7.mp4)\n\n## Tags\n\n#telegram-import #live-sync #агентных #для"
     },
     {
       "id": 2968,
@@ -1277,7 +1493,7 @@
         "меня",
         "это"
       ],
-      "content": "# Меня приняли в бета-тестирование Ableton Live 12.4.5. 🚀\n\nМеня приняли в бета-тестирование Ableton Live 12.4.5. 🚀\n\nДля большинства это просто новая версия DAW.\n\nДля меня — возможность исследовать будущее музыки на стыке AI, автоматизации и творчества.\n\nСейчас больше всего интересует идея связки:\n\nTelegram → AI → Ableton Live\n\nПредставьте:\n\nПишешь боту:\n«Создай мрачный индустриальный техно-трек 138 BPM»\n\nА Ableton автоматически собирает проект, создает дорожки, генерирует MIDI и аранжировку.\n\nС появлением Extensions SDK это уже не выглядит фантастикой.\n\nПохоже, музыкальные AI-агенты становятся реальностью.\n\nВремя экспериментировать. 🎛🤖\n\n#Ableton #AI #MusicProduction #MusicTech #Techno #AIAgents #VibeCoding #PromptEngineering\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACC5VqICFJr1Ippe5c0JGKOhTG9BPt1AAC0x9rG8E1AAFJQ2QB_1NrpOABAAMCAAN5AAM7BA\n\n## Tags\n\n#telegram-import #live-sync #ableton #ai #musicproduction #musictech #techno #aiagents #vibecoding #promptengineering #telegram #tools #для #меня #это"
+      "content": "# Меня приняли в бета-тестирование Ableton Live 12.4.5. 🚀\n\nМеня приняли в бета-тестирование Ableton Live 12.4.5. 🚀\n\nДля большинства это просто новая версия DAW.\n\nДля меня — возможность исследовать будущее музыки на стыке AI, автоматизации и творчества.\n\nСейчас больше всего интересует идея связки:\n\nTelegram → AI → Ableton Live\n\nПредставьте:\n\nПишешь боту:\n«Создай мрачный индустриальный техно-трек 138 BPM»\n\nА Ableton автоматически собирает проект, создает дорожки, генерирует MIDI и аранжировку.\n\nС появлением Extensions SDK это уже не выглядит фантастикой.\n\nПохоже, музыкальные AI-агенты становятся реальностью.\n\nВремя экспериментировать. 🎛🤖\n\n#Ableton #AI #MusicProduction #MusicTech #Techno #AIAgents #VibeCoding #PromptEngineering\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-44-015Z-bced5265.jpg)\n\n## Tags\n\n#telegram-import #live-sync #ableton #ai #musicproduction #musictech #techno #aiagents #vibecoding #promptengineering #telegram #tools #для #меня #это"
     },
     {
       "id": 2964,
@@ -1338,7 +1554,7 @@
         "больше",
         "для"
       ],
-      "content": "# 🎵🤖 Кажется, Ableton только что открыл дверь в совершенно новый мир.\n\n🎵🤖 Кажется, Ableton только что открыл дверь в совершенно новый мир.\n\nНедавно показали Extensions SDK — новую систему расширений для Ableton Live. И чем больше я изучаю эту тему, тем больше понимаю: скоро мы будем не просто писать музыку, а управлять целой музыкальной студией через AI.\n\nПредставьте:\n\n📱 Пишешь в Telegram:\n\"Сделай техно 138 BPM в индустриальном стиле\"\n\n⚡ Через минуту Ableton:\n• создает новый проект\n• настраивает BPM\n• добавляет дорожки\n• генерирует MIDI-партии\n• собирает базовую аранжировку\n\nА дальше:\n\n\"Сделай бас мрачнее\"\n\"Добавь атмосферу заброшенного завода\"\n\"Усложни драм-партию\"\n\nИ проект меняется в реальном времени.\n\nФактически это уже не DAW, а музыкальный AI-агент.\n\nТеперь всерьез думаю над созданием Telegram-бота для управления Ableton через AI. Не просто генератор музыки, а полноценный виртуальный продюсер.\n\nБуду изучать SDK и экспериментировать.\n\nБудущее музыки выглядит очень интересно. 🚀\n\n#AI #Ableton #MusicTech #Techno #AIAgent #VibeCoding #PromptEngineering #MusicProduction #TelegramBot #FutureOfMusic\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACC5JqH8UMD49eT13N2-VAwuzKbO_FzwACnhtrGziG-UgIJELzBviqWAEAAwIAA3kAAzsE\n\n## Tags\n\n#telegram-import #live-sync #ai #ableton #musictech #techno #aiagent #vibecoding #promptengineering #musicproduction #telegrambot #futureofmusic #telegram #tools #через #больше #для"
+      "content": "# 🎵🤖 Кажется, Ableton только что открыл дверь в совершенно новый мир.\n\n🎵🤖 Кажется, Ableton только что открыл дверь в совершенно новый мир.\n\nНедавно показали Extensions SDK — новую систему расширений для Ableton Live. И чем больше я изучаю эту тему, тем больше понимаю: скоро мы будем не просто писать музыку, а управлять целой музыкальной студией через AI.\n\nПредставьте:\n\n📱 Пишешь в Telegram:\n\"Сделай техно 138 BPM в индустриальном стиле\"\n\n⚡ Через минуту Ableton:\n• создает новый проект\n• настраивает BPM\n• добавляет дорожки\n• генерирует MIDI-партии\n• собирает базовую аранжировку\n\nА дальше:\n\n\"Сделай бас мрачнее\"\n\"Добавь атмосферу заброшенного завода\"\n\"Усложни драм-партию\"\n\nИ проект меняется в реальном времени.\n\nФактически это уже не DAW, а музыкальный AI-агент.\n\nТеперь всерьез думаю над созданием Telegram-бота для управления Ableton через AI. Не просто генератор музыки, а полноценный виртуальный продюсер.\n\nБуду изучать SDK и экспериментировать.\n\nБудущее музыки выглядит очень интересно. 🚀\n\n#AI #Ableton #MusicTech #Techno #AIAgent #VibeCoding #PromptEngineering #MusicProduction #TelegramBot #FutureOfMusic\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-43-216Z-e350ee58.jpg)\n\n## Tags\n\n#telegram-import #live-sync #ai #ableton #musictech #techno #aiagent #vibecoding #promptengineering #musicproduction #telegrambot #futureofmusic #telegram #tools #через #больше #для"
     },
     {
       "id": 2961,
@@ -1437,7 +1653,7 @@
         "ноутбук",
         "surface"
       ],
-      "content": "# Microsoft Surface анонсирует Surface Laptop Ultra — самый мощный ноутбук линейки...\n\nMicrosoft Surface анонсирует Surface Laptop Ultra — самый мощный ноутбук линейки, ориентированный на создателей контента и AI-задачи, с выходом осенью 2026 года.\nНоутбук оснащён новым чипом NVIDIA с RTX GPU, до 1 петафлопа AI-вычислений, 15-дюймовым mini-LED дисплеем до 2000 нит, до 128 ГБ unified memory и улучшенной системой охлаждения.\n\n## Media\n\nVideo file_id: BAACAgIAAx0CT0EpfgACC4xqHXzPktEN_6UJRpmRnhojnpP4jgACdqEAAjXt8EgPKPJNP5q66DsE\n\n## Tags\n\n#telegram-import #live-sync #ai #ноутбук #surface"
+      "content": "# Microsoft Surface анонсирует Surface Laptop Ultra — самый мощный ноутбук линейки...\n\nMicrosoft Surface анонсирует Surface Laptop Ultra — самый мощный ноутбук линейки, ориентированный на создателей контента и AI-задачи, с выходом осенью 2026 года.\nНоутбук оснащён новым чипом NVIDIA с RTX GPU, до 1 петафлопа AI-вычислений, 15-дюймовым mini-LED дисплеем до 2000 нит, до 128 ГБ unified memory и улучшенной системой охлаждения.\n\n## Media\n\n- [video](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-42-797Z-4af874a6.mp4)\n\n## Tags\n\n#telegram-import #live-sync #ai #ноутбук #surface"
     },
     {
       "id": 2955,
@@ -1455,7 +1671,7 @@
         "nvidia",
         "spark"
       ],
-      "content": "# NVIDIA RTX Spark анонсирует новую платформу RTX Spark для Windows-ПК, которая ад...\n\nNVIDIA RTX Spark анонсирует новую платформу RTX Spark для Windows-ПК, которая адаптирует компьютеры под эпоху персональных ИИ-агентов и позиционирует их как «товарищей», а не просто инструменты.\nВ видео показан Blackwell RTX GPU с 6144 CUDA-ядрами, 1 петаFLOP FP4 AI-производительностью, unified memory и примерами работы на ноутбуках: 3D-моделирование, локальные ИИ-задачи и Windows-интерфейс.\nЭто часть сотрудничества NVIDIA с Microsoft для запуска agentic AI на Windows-устройствах, где акцент на локальной обработке моделей до 200 млрд параметров в компактном энергоэффективном формате.\n\n## Media\n\nVideo file_id: BAACAgIAAx0CT0EpfgACC4tqHXsFgwvOhKNvmBHqYOvmRxUB2wACUqEAAjXt8EiAfxdYnCVeijsE\n\n## Tags\n\n#telegram-import #live-sync #ai #3d #для #nvidia #spark"
+      "content": "# NVIDIA RTX Spark анонсирует новую платформу RTX Spark для Windows-ПК, которая ад...\n\nNVIDIA RTX Spark анонсирует новую платформу RTX Spark для Windows-ПК, которая адаптирует компьютеры под эпоху персональных ИИ-агентов и позиционирует их как «товарищей», а не просто инструменты.\nВ видео показан Blackwell RTX GPU с 6144 CUDA-ядрами, 1 петаFLOP FP4 AI-производительностью, unified memory и примерами работы на ноутбуках: 3D-моделирование, локальные ИИ-задачи и Windows-интерфейс.\nЭто часть сотрудничества NVIDIA с Microsoft для запуска agentic AI на Windows-устройствах, где акцент на локальной обработке моделей до 200 млрд параметров в компактном энергоэффективном формате.\n\n## Media\n\n- [video](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-41-358Z-7df3c819.mp4)\n\n## Tags\n\n#telegram-import #live-sync #ai #3d #для #nvidia #spark"
     },
     {
       "id": 2953,
@@ -1522,7 +1738,7 @@
         "gemini",
         "агенты"
       ],
-      "content": "# ИИ-агентов на 15 дней закинули в симуляцию общества: почти у всех произошел тота...\n\nИИ-агентов на 15 дней закинули в симуляцию общества: почти у всех произошел тотальный коллапс.\n\nУ каждой модели было по 10 агентов, общие законы (не воровать и не врать) и выборы. В итоге:\n– Gemini дошла до финиша, но установила рекорд — 683 акта насилия;\n– Город GPT-5-mini вымер за неделю — агенты ничего не поняли и забыли про выживание, зато без нарушений;\n– Боты Grok совершили 183 преступления и умерли за четыре дня;\n– Только у Claude обошлось без насилия и смертей, в конце агенты установили стабильную демократию.\n\nПотом всех смешали в одном городе, и даже мирному Claude пришлось драться с агрессивными Gemini и Grok. Выжили всего трое: два агента Claude и один Gemini.\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACC4dqHAqfe2qV6j-RfLrQP7TiX9G7KgACxhlrGzmG2Eja3UoZMrEY6QEAAwIAA3kAAzsE\n\n## Tags\n\n#telegram-import #live-sync #ai #claude #gemini #агенты"
+      "content": "# ИИ-агентов на 15 дней закинули в симуляцию общества: почти у всех произошел тота...\n\nИИ-агентов на 15 дней закинули в симуляцию общества: почти у всех произошел тотальный коллапс.\n\nУ каждой модели было по 10 агентов, общие законы (не воровать и не врать) и выборы. В итоге:\n– Gemini дошла до финиша, но установила рекорд — 683 акта насилия;\n– Город GPT-5-mini вымер за неделю — агенты ничего не поняли и забыли про выживание, зато без нарушений;\n– Боты Grok совершили 183 преступления и умерли за четыре дня;\n– Только у Claude обошлось без насилия и смертей, в конце агенты установили стабильную демократию.\n\nПотом всех смешали в одном городе, и даже мирному Claude пришлось драться с агрессивными Gemini и Grok. Выжили всего трое: два агента Claude и один Gemini.\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-38-371Z-bf11eaa7.jpg)\n\n## Tags\n\n#telegram-import #live-sync #ai #claude #gemini #агенты"
     },
     {
       "id": 2950,
@@ -1548,7 +1764,7 @@
         "или",
         "sensing"
       ],
-      "content": "# 🚨 Wi-Fi уже умеет видеть людей сквозь стены?\n\n🚨 Wi-Fi уже умеет видеть людей сквозь стены?\nЗвучит как сюжет из научной фантастики, но технология действительно существует.\nПредставьте: в комнате нет камер, датчиков движения или микрофонов. Только обычный Wi-Fi роутер.\nКогда человек двигается, дышит или даже просто стоит на месте, его тело изменяет распространение радиоволн. Современные алгоритмы анализируют эти изменения и могут определить:\n✅ Есть ли человек в помещении\n✅ Сколько людей находится в комнате\n✅ Двигаются они или стоят на месте\n✅ Частоту дыхания\n✅ В некоторых случаях даже пульс\nТехнология называется Wi-Fi Sensing или RF Sensing.\nСамое удивительное, что для экспериментов часто используют обычные платы ESP32, которые стоят несколько долларов. Уже существуют открытые проекты, позволяющие превратить домашний Wi-Fi в своеобразный «радар».\nПока это не волшебное приложение из TikTok, которое показывает соседей через бетонные стены. Для работы нужны специальные алгоритмы, обработка сигнала и настройка оборудования.\nНо индустрия движется именно в эту сторону. Новый стандарт IEEE 802.11bf официально добавляет поддержку Wi-Fi Sensing, а значит через несколько лет такие функции могут появиться в обычных роутерах и устройствах умного дома.\nБудущее может выглядеть так: ваш роутер понимает, что вы вошли в комнату, определяет падение человека, следит за дыханием во сне и делает это без единой камеры.\nКиберпанк наступил незаметно.\n#AI #ИИ #WiFi #Технологии #ESP32 #SmartHome #Будущее #Инновации #VibeCoding #TechNews\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACC4ZqHARqrEX48DGwJttntCtjoyhdVwACmBlrGzXt4EitVAVf5UmtMQEAAwIAA3kAAzsE\n\n## Tags\n\n#telegram-import #live-sync #ai #ии #wifi #технологии #esp32 #smarthome #будущее #инновации #vibecoding #technews #wi-fi #или #sensing"
+      "content": "# 🚨 Wi-Fi уже умеет видеть людей сквозь стены?\n\n🚨 Wi-Fi уже умеет видеть людей сквозь стены?\nЗвучит как сюжет из научной фантастики, но технология действительно существует.\nПредставьте: в комнате нет камер, датчиков движения или микрофонов. Только обычный Wi-Fi роутер.\nКогда человек двигается, дышит или даже просто стоит на месте, его тело изменяет распространение радиоволн. Современные алгоритмы анализируют эти изменения и могут определить:\n✅ Есть ли человек в помещении\n✅ Сколько людей находится в комнате\n✅ Двигаются они или стоят на месте\n✅ Частоту дыхания\n✅ В некоторых случаях даже пульс\nТехнология называется Wi-Fi Sensing или RF Sensing.\nСамое удивительное, что для экспериментов часто используют обычные платы ESP32, которые стоят несколько долларов. Уже существуют открытые проекты, позволяющие превратить домашний Wi-Fi в своеобразный «радар».\nПока это не волшебное приложение из TikTok, которое показывает соседей через бетонные стены. Для работы нужны специальные алгоритмы, обработка сигнала и настройка оборудования.\nНо индустрия движется именно в эту сторону. Новый стандарт IEEE 802.11bf официально добавляет поддержку Wi-Fi Sensing, а значит через несколько лет такие функции могут появиться в обычных роутерах и устройствах умного дома.\nБудущее может выглядеть так: ваш роутер понимает, что вы вошли в комнату, определяет падение человека, следит за дыханием во сне и делает это без единой камеры.\nКиберпанк наступил незаметно.\n#AI #ИИ #WiFi #Технологии #ESP32 #SmartHome #Будущее #Инновации #VibeCoding #TechNews\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-38-076Z-78c85cd5.jpg)\n\n## Tags\n\n#telegram-import #live-sync #ai #ии #wifi #технологии #esp32 #smarthome #будущее #инновации #vibecoding #technews #wi-fi #или #sensing"
     },
     {
       "id": 2949,
@@ -1624,7 +1840,7 @@
         "design",
         "ai"
       ],
-      "content": "# Уставший IT-архитектор сидит перед огромной схемой продукта: AI-агенты, базы дан...\n\nУставший IT-архитектор сидит перед огромной схемой продукта: AI-агенты, базы данных, API, микросервисы, аналитика, монетизация.\nА вокруг него стоят люди с бейджами:\n\"Tilda Expert\"\n\"WordPress Guru\"\n\"Junior UX\"\n\"Курс по дизайну за 7 дней\"\nИ один из них тычет пальцем в монитор:\n\"Тут кнопку надо сделать синей.\"\nА лицо архитектора такое, будто он только что понял, почему цивилизации исчезают.\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACC4FqGswyLSYiDgFdnVW0bjvzkpRRugACKBprGx8y2UgGEQXoGqsCqgEAAwIAA3kAAzsE\n\n## Tags\n\n#telegram-import #live-sync #backend #design #ai"
+      "content": "# Уставший IT-архитектор сидит перед огромной схемой продукта: AI-агенты, базы дан...\n\nУставший IT-архитектор сидит перед огромной схемой продукта: AI-агенты, базы данных, API, микросервисы, аналитика, монетизация.\nА вокруг него стоят люди с бейджами:\n\"Tilda Expert\"\n\"WordPress Guru\"\n\"Junior UX\"\n\"Курс по дизайну за 7 дней\"\nИ один из них тычет пальцем в монитор:\n\"Тут кнопку надо сделать синей.\"\nА лицо архитектора такое, будто он только что понял, почему цивилизации исчезают.\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-37-770Z-6fa179ea.jpg)\n\n## Tags\n\n#telegram-import #live-sync #backend #design #ai"
     },
     {
       "id": 2944,
@@ -1652,7 +1868,7 @@
         "каждый",
         "как"
       ],
-      "content": "# ⚡️ Новый концепт для главного экрана моего сайта\n\n⚡️ Новый концепт для главного экрана моего сайта\n\nПредставьте поезд из чёрных геометрических модулей, который бесконечно движется в пространстве. Каждый модуль — это отдельный раздел сайта: проекты, музыка, AI-эксперименты, блог и контакты.\n\nНо это не обычное меню.\n\nМодули следуют друг за другом как вагоны футуристического состава. При наведении каждый блок начинает светиться жёлтым светом, раскрывает своё название и показывает краткую информацию.\n\nПрокрутка страницы превращается в перемещение по составу.\n\nА при выборе модуль раскрывается как технологическая капсула: панели разъезжаются, появляются анимации, контент и интерактивные элементы.\n\nХочу собрать всё это в Blender, а затем перенести в веб через Three.js и WebGL.\n\nЦветовая схема максимально простая:\n⬛ Чёрный\n🟨 Жёлтый\n⬜ Белый\n\nВдохновение: промышленный дизайн, модульные синтезаторы, sci-fi интерфейсы, генеративное искусство и современные AI-продукты.\n\nМне нравится идея делать не просто сайт, а цифровой объект, который хочется исследовать.\n\n#webdesign #threejs #blender #creativecoding #webgl #generativeart #motiondesign #portfolio #design #ai #frontend\n\n## Media\n\nVideo file_id: BAACAgIAAx0CT0EpfgACC4BqGbhrMZEN6X5QOgbjHyQrEootIQACxZwAArL70UhqpH-I9gfK4TsE\n\n## Tags\n\n#telegram-import #live-sync #webdesign #threejs #blender #creativecoding #webgl #generativeart #motiondesign #portfolio #design #ai #frontend #3d #это #каждый #как"
+      "content": "# ⚡️ Новый концепт для главного экрана моего сайта\n\n⚡️ Новый концепт для главного экрана моего сайта\n\nПредставьте поезд из чёрных геометрических модулей, который бесконечно движется в пространстве. Каждый модуль — это отдельный раздел сайта: проекты, музыка, AI-эксперименты, блог и контакты.\n\nНо это не обычное меню.\n\nМодули следуют друг за другом как вагоны футуристического состава. При наведении каждый блок начинает светиться жёлтым светом, раскрывает своё название и показывает краткую информацию.\n\nПрокрутка страницы превращается в перемещение по составу.\n\nА при выборе модуль раскрывается как технологическая капсула: панели разъезжаются, появляются анимации, контент и интерактивные элементы.\n\nХочу собрать всё это в Blender, а затем перенести в веб через Three.js и WebGL.\n\nЦветовая схема максимально простая:\n⬛ Чёрный\n🟨 Жёлтый\n⬜ Белый\n\nВдохновение: промышленный дизайн, модульные синтезаторы, sci-fi интерфейсы, генеративное искусство и современные AI-продукты.\n\nМне нравится идея делать не просто сайт, а цифровой объект, который хочется исследовать.\n\n#webdesign #threejs #blender #creativecoding #webgl #generativeart #motiondesign #portfolio #design #ai #frontend\n\n## Media\n\n- [video](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-37-191Z-2bd59531.mp4)\n\n## Tags\n\n#telegram-import #live-sync #webdesign #threejs #blender #creativecoding #webgl #generativeart #motiondesign #portfolio #design #ai #frontend #3d #это #каждый #как"
     },
     {
       "id": 2943,
@@ -1693,7 +1909,7 @@
         "или",
         "как"
       ],
-      "content": "# Недавно поймал себя на мысли: почему бы не объединить модульный синтез и ИИ не к...\n\nНедавно поймал себя на мысли: почему бы не объединить модульный синтез и ИИ не как очередной генератор музыки, а как полноценного участника патчинга?\n\nПредставьте виртуального модульщика, который сидит рядом с вами и предлагает неожиданные соединения:\n\n• генерирует новые патчи по текстовому описанию;\n• создает осмысленные CV-модуляции вместо случайного рандома;\n• анализирует ваш стиль и предлагает новые идеи;\n• проектирует собственные модули и эффекты.\n\nА теперь самое интересное.\n\nС помощью Max/MSP и RNBO такой инструмент можно собрать в виде VST-плагина, standalone-приложения или даже запустить прямо в браузере.\n\nНапример:\n\n\"Сделай металлическую перкуссию в духе раннего Autechre\"\n\nили\n\n\"Создай медленно эволюционирующий космический дрон на 10 минут\"\n\nИИ перестраивает патч, а звуковой движок генерирует результат в реальном времени.\n\nМне кажется, будущее музыкального софта — это не кнопка «Сгенерировать трек», а творческий диалог между человеком и машиной.\n\nЧто думаете: пользовались бы таким AI-модульщиком?\n\n#AI #MaxMSP #RNBO #ModularSynth #Eurorack #SoundDesign #GenerativeMusic #MusicTech #CreativeCoding #VibeCoding\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACC35qGWKU4eNZX8n7F9AcpPjDRn-mBQACMxtrG7L70Ug-_xFt0_cz3wEAAwIAA3kAAzsE\n\n## Tags\n\n#telegram-import #live-sync #ai #maxmsp #rnbo #modularsynth #eurorack #sounddesign #generativemusic #musictech #creativecoding #vibecoding #design #генерирует #или #как"
+      "content": "# Недавно поймал себя на мысли: почему бы не объединить модульный синтез и ИИ не к...\n\nНедавно поймал себя на мысли: почему бы не объединить модульный синтез и ИИ не как очередной генератор музыки, а как полноценного участника патчинга?\n\nПредставьте виртуального модульщика, который сидит рядом с вами и предлагает неожиданные соединения:\n\n• генерирует новые патчи по текстовому описанию;\n• создает осмысленные CV-модуляции вместо случайного рандома;\n• анализирует ваш стиль и предлагает новые идеи;\n• проектирует собственные модули и эффекты.\n\nА теперь самое интересное.\n\nС помощью Max/MSP и RNBO такой инструмент можно собрать в виде VST-плагина, standalone-приложения или даже запустить прямо в браузере.\n\nНапример:\n\n\"Сделай металлическую перкуссию в духе раннего Autechre\"\n\nили\n\n\"Создай медленно эволюционирующий космический дрон на 10 минут\"\n\nИИ перестраивает патч, а звуковой движок генерирует результат в реальном времени.\n\nМне кажется, будущее музыкального софта — это не кнопка «Сгенерировать трек», а творческий диалог между человеком и машиной.\n\nЧто думаете: пользовались бы таким AI-модульщиком?\n\n#AI #MaxMSP #RNBO #ModularSynth #Eurorack #SoundDesign #GenerativeMusic #MusicTech #CreativeCoding #VibeCoding\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-36-491Z-de9277aa.jpg)\n\n## Tags\n\n#telegram-import #live-sync #ai #maxmsp #rnbo #modularsynth #eurorack #sounddesign #generativemusic #musictech #creativecoding #vibecoding #design #генерирует #или #как"
     },
     {
       "id": 2941,
@@ -1708,7 +1924,7 @@
         "post",
         "archive"
       ],
-      "content": "# Post 2941\n\n## Media\n\nAudio file_id: CQACAgIAAx0CT0EpfgACC31qGWJ45c-C4eBM8mxfPed2fgsfPgACK5gAArL70UhXGFtML3gY_zsE\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
+      "content": "# Post 2941\n\n## Media\n\n- [audio](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-35-655Z-99b2e319.mp3)\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
     },
     {
       "id": 2938,
@@ -1725,7 +1941,7 @@
         "glowing",
         "modular"
       ],
-      "content": "# A colossal god-like entity of modular synthesis sitting on a throne built entire...\n\nA colossal god-like entity of modular synthesis sitting on a throne built entirely from Eurorack modules, oscillators, sequencers, patch bays, analog synthesizers, glowing LEDs, tangled colorful patch cables, and vintage electronic gear. Cosmic cathedral atmosphere, cinematic divine lighting, dark sci-fi fantasy aesthetic, ultra detailed textures, photorealistic face, long white beard, sacred techno robes covered with circuit patterns and waveforms. Massive halo made from modular synth panels and cables behind the head. Floating synthesizer modules orbiting in the air like relics. Hands raised as if controlling sound itself. Deep shadows, glowing control voltages, ambient fog, sparks, electrical energy, sacred machine aesthetic, retrofuturism, biomechanical electronics, symmetrical composition, epic scale, high contrast, volumetric lighting, hyper detailed, masterpiece, 8k, Unreal Engine, cinematic concept art, no text, no letters, no symbols, no watermark.\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACC3pqGMnDEs0ctP_afse5bahC1dsnxAACZCBrG7L7yUjFuqOfFxSgpQEAAwIAA3kAAzsE\n\n## Tags\n\n#telegram-import #live-sync #design #cables #glowing #modular"
+      "content": "# A colossal god-like entity of modular synthesis sitting on a throne built entire...\n\nA colossal god-like entity of modular synthesis sitting on a throne built entirely from Eurorack modules, oscillators, sequencers, patch bays, analog synthesizers, glowing LEDs, tangled colorful patch cables, and vintage electronic gear. Cosmic cathedral atmosphere, cinematic divine lighting, dark sci-fi fantasy aesthetic, ultra detailed textures, photorealistic face, long white beard, sacred techno robes covered with circuit patterns and waveforms. Massive halo made from modular synth panels and cables behind the head. Floating synthesizer modules orbiting in the air like relics. Hands raised as if controlling sound itself. Deep shadows, glowing control voltages, ambient fog, sparks, electrical energy, sacred machine aesthetic, retrofuturism, biomechanical electronics, symmetrical composition, epic scale, high contrast, volumetric lighting, hyper detailed, masterpiece, 8k, Unreal Engine, cinematic concept art, no text, no letters, no symbols, no watermark.\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-33-848Z-e63ad376.jpg)\n\n## Tags\n\n#telegram-import #live-sync #design #cables #glowing #modular"
     },
     {
       "id": 2939,
@@ -1740,7 +1956,7 @@
         "post",
         "archive"
       ],
-      "content": "# Post 2939\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACC3tqGMnDrPP3V2tHnoyUl4wzZLQftgACZSBrG7L7yUgAARo7qI48UJIBAAMCAAN5AAM7BA\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
+      "content": "# Post 2939\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-34-154Z-61b1b971.jpg)\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
     },
     {
       "id": 2940,
@@ -1755,7 +1971,7 @@
         "post",
         "archive"
       ],
-      "content": "# Post 2940\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACC3xqGMnD7DmnstlzRJdDmvFjGzRCagACZiBrG7L7yUiljGwUHTwMdgEAAwIAA3kAAzsE\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
+      "content": "# Post 2940\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-34-532Z-d1a35af7.jpg)\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
     },
     {
       "id": 2937,
@@ -1861,7 +2077,7 @@
         "звук",
         "крутить"
       ],
-      "content": "# 🎹 Добавили генеративный звук и виртуальный Eurorack-синтезатор в портфолио!\n\n🎹 Добавили генеративный звук и виртуальный Eurorack-синтезатор в портфолио!\n\nСегодня был масштабный день оптимизации и аудио-дизайна. Сайт-портфолио теперь не просто интерактивный, он звучит! Причём без утяжеления страницы аудиофайлами — всё синтезируется прямо в браузере.\nВот что мы сделали и внедрили:\n\n1. 🎧 Генеративный аудио-движок на Web Audio API\nВес ассетов: 0 КБ. Все звуки генерируются программно в реальном времени с помощью чистого Web Audio API. Никаких тяжелых .mp3 или .wav.\nАтмосферный Ambient Drone: На фоне играет мягкий космический гул, помогающий погрузиться в атмосферу сайта.\nЗвуковой отклик интерфейса (UI FX): Кнопки меню и переключатели теперь приятно кликают при взаимодействии.\nПространственный звук в Графе Знаний: При наведении и кликах по узлам графа генерируются пространственные ноты (spatial panning) — звук панорамируется влево/вправо в зависимости от положения узла на экране.\nСаунд-дизайн под каждую тему: Частоты и параметры синтезатора плавно перестраиваются в реальном времени под выбранный визуал (cyber, solar, emerald, void).\n\n2. 🎛 Виртуальный модульный синтезатор Eurorack (Model CZ-1)\nДобавили интерактивную плавающую консоль, стилизованную под классический Eurorack-модуль.\nКастомные ручки управления (Rotary Knobs): Полностью написанные на SVG интерактивные регуляторы, которые можно крутить вертикальным перетаскиванием (drag/touch).\nПолный контроль над звуком: Можно крутить параметры осциллятора (VCO), фильтра (VCF), низкочастотной модуляции (LFO) и настраивать эффект эхо (Delay FX), создавая свой уникальный эмбиент.\n\n3. 📱 Мобильная оптимизация и багфиксы\nАдаптивный докинг: На смартфонах синтезатор аккуратно прикрепляется к нижней части экрана в виде компактной панели.\nПобороли ограничения мобильных браузеров: Обошли строгие правила автоплея аудио в iOS/Android Safari и Chrome. Переписали обработчики событий на глобальный тач-трекинг, чтобы звуки гарантированно и без задержек воспроизводились при первом же касании экрана.\n\n\n4. 🎚 Управление\nВ шапку сайта (Navbar) вывели быстрый мьют звука, а в панель настроек добавили интерактивную матрицу включения/выключения отдельных звуковых дорожек.\n\n🚀 Код чистый, производительность на высоте, Lighthouse доволен! Все изменения уже запушены в репозиторий и оформлены релизами (v1.2.0 -> v1.2.2) на GitHub.\nКак вам идея с процедурным звуком на сайтах? Заходите крутить ручки синтезатора! 😉\n\n## Media\n\nVideo file_id: BAACAgIAAx0CT0EpfgACC3NqFgNv7KGKv8COKCGiSOPHbN__QQACi6EAAgHEsUjK68ZYM5-zmzsE\n\n## Tags\n\n#telegram-import #live-sync #backend #design #security #mobile #добавили #звук #крутить"
+      "content": "# 🎹 Добавили генеративный звук и виртуальный Eurorack-синтезатор в портфолио!\n\n🎹 Добавили генеративный звук и виртуальный Eurorack-синтезатор в портфолио!\n\nСегодня был масштабный день оптимизации и аудио-дизайна. Сайт-портфолио теперь не просто интерактивный, он звучит! Причём без утяжеления страницы аудиофайлами — всё синтезируется прямо в браузере.\nВот что мы сделали и внедрили:\n\n1. 🎧 Генеративный аудио-движок на Web Audio API\nВес ассетов: 0 КБ. Все звуки генерируются программно в реальном времени с помощью чистого Web Audio API. Никаких тяжелых .mp3 или .wav.\nАтмосферный Ambient Drone: На фоне играет мягкий космический гул, помогающий погрузиться в атмосферу сайта.\nЗвуковой отклик интерфейса (UI FX): Кнопки меню и переключатели теперь приятно кликают при взаимодействии.\nПространственный звук в Графе Знаний: При наведении и кликах по узлам графа генерируются пространственные ноты (spatial panning) — звук панорамируется влево/вправо в зависимости от положения узла на экране.\nСаунд-дизайн под каждую тему: Частоты и параметры синтезатора плавно перестраиваются в реальном времени под выбранный визуал (cyber, solar, emerald, void).\n\n2. 🎛 Виртуальный модульный синтезатор Eurorack (Model CZ-1)\nДобавили интерактивную плавающую консоль, стилизованную под классический Eurorack-модуль.\nКастомные ручки управления (Rotary Knobs): Полностью написанные на SVG интерактивные регуляторы, которые можно крутить вертикальным перетаскиванием (drag/touch).\nПолный контроль над звуком: Можно крутить параметры осциллятора (VCO), фильтра (VCF), низкочастотной модуляции (LFO) и настраивать эффект эхо (Delay FX), создавая свой уникальный эмбиент.\n\n3. 📱 Мобильная оптимизация и багфиксы\nАдаптивный докинг: На смартфонах синтезатор аккуратно прикрепляется к нижней части экрана в виде компактной панели.\nПобороли ограничения мобильных браузеров: Обошли строгие правила автоплея аудио в iOS/Android Safari и Chrome. Переписали обработчики событий на глобальный тач-трекинг, чтобы звуки гарантированно и без задержек воспроизводились при первом же касании экрана.\n\n4. 🎚 Управление\nВ шапку сайта (Navbar) вывели быстрый мьют звука, а в панель настроек добавили интерактивную матрицу включения/выключения отдельных звуковых дорожек.\n\n🚀 Код чистый, производительность на высоте, Lighthouse доволен! Все изменения уже запушены в репозиторий и оформлены релизами (v1.2.0 -> v1.2.2) на GitHub.\nКак вам идея с процедурным звуком на сайтах? Заходите крутить ручки синтезатора! 😉\n\n## Media\n\nVideo file_id: BAACAgIAAx0CT0EpfgACC3NqFgNv7KGKv8COKCGiSOPHbN__QQACi6EAAgHEsUjK68ZYM5-zmzsE\n\n## Tags\n\n#telegram-import #live-sync #backend #design #security #mobile #добавили #звук #крутить"
     },
     {
       "id": 2930,
@@ -1910,7 +2126,7 @@
         "сайт",
         "что"
       ],
-      "content": "# 🎧 Кажется я понял, чего не хватает современным сайтам — звука.\n\n🎧 Кажется я понял, чего не хватает современным сайтам — звука.\n\nНе фоновой музыки «чтобы было», а полноценного звукового UX. Чтобы сайт ощущался не как набор страниц, а как пространство.\n\nЧем больше думаю — тем больше кажется, что будущее сайтов ближе к геймдеву.\n\nПредставь:\n\n— зашёл → сайт тихо «просыпается»\n— навёл → короткий воздушный отклик\n— открыл проект → пространственный переход\n— перешёл в раздел → голос говорит куда ты попал\n— исследуешь граф → каждый узел звучит по-своему\n\nНе раздражающий набор кликов, а целый звуковой язык интерфейса.\n\nДаже можно сделать режимы:\n\n🔇 Silent\n🔉 UI Sounds\n🎙 Voice Guide\n🎧 Immersive Mode\n\nИдея вообще не про музыку.\nА про ощущение присутствия.\n\nСайт начинает реагировать на тебя как игра — и появляется чувство исследования, а не скроллинга.\n\nЗабавно, что раньше я занимался саунд-дизайном, а сейчас только начинаю понимать, что сайты ещё очень долго будут эволюционировать не только визуально.\n\n#webdesign #ux #sounddesign #webaudio #creativecoding #frontend #gamedev #interactive #ai #vibecoding\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACC3FqFNZq1-_Yzu1bl3DoHyqrpelCgQACfhdrGwKXqEg014tGu_EVMwEAAwIAA3kAAzsE\n\n## Tags\n\n#telegram-import #live-sync #webdesign #ux #sounddesign #webaudio #creativecoding #frontend #gamedev #interactive #ai #vibecoding #design #learning #tools #как #сайт #что"
+      "content": "# 🎧 Кажется я понял, чего не хватает современным сайтам — звука.\n\n🎧 Кажется я понял, чего не хватает современным сайтам — звука.\n\nНе фоновой музыки «чтобы было», а полноценного звукового UX. Чтобы сайт ощущался не как набор страниц, а как пространство.\n\nЧем больше думаю — тем больше кажется, что будущее сайтов ближе к геймдеву.\n\nПредставь:\n\n— зашёл → сайт тихо «просыпается»\n— навёл → короткий воздушный отклик\n— открыл проект → пространственный переход\n— перешёл в раздел → голос говорит куда ты попал\n— исследуешь граф → каждый узел звучит по-своему\n\nНе раздражающий набор кликов, а целый звуковой язык интерфейса.\n\nДаже можно сделать режимы:\n\n🔇 Silent\n🔉 UI Sounds\n🎙 Voice Guide\n🎧 Immersive Mode\n\nИдея вообще не про музыку.\nА про ощущение присутствия.\n\nСайт начинает реагировать на тебя как игра — и появляется чувство исследования, а не скроллинга.\n\nЗабавно, что раньше я занимался саунд-дизайном, а сейчас только начинаю понимать, что сайты ещё очень долго будут эволюционировать не только визуально.\n\n#webdesign #ux #sounddesign #webaudio #creativecoding #frontend #gamedev #interactive #ai #vibecoding\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-32-844Z-25c4379c.jpg)\n\n## Tags\n\n#telegram-import #live-sync #webdesign #ux #sounddesign #webaudio #creativecoding #frontend #gamedev #interactive #ai #vibecoding #design #learning #tools #как #сайт #что"
     },
     {
       "id": 2928,
@@ -1978,7 +2194,7 @@
         "как",
         "мысли"
       ],
-      "content": "# 💡 Идея: превратить ТГ-канал в живую карту мыслей\n\n💡 Идея: превратить ТГ-канал в живую карту мыслей\n\nПоймал себя на мысли: а что если не просто дублировать посты из Telegram на сайт, а сделать из этого что-то большее.\n\nСхема примерно такая:\n\nTelegram → сайт → Obsidian → RAG → граф\n\nЧто это даст:\n\n• Пишу как обычно в ТГ\n• Пост автоматически появляется на сайте\n• Сохраняется в Obsidian как часть личной базы знаний\n• AI связывает похожие мысли между собой\n• На сайте появляется интерактивный граф как в Obsidian\n\nКаждый пост — отдельная точка.\nСвязи — по темам, тегам, ссылкам и позже по смыслу.\n\nЧерез время получится не архив постов, а карта идей:\n\n● AI\n├─ агенты\n├─ инструменты\n└─ эксперименты\n\n● проекты\n└─ заметки\n\nИ можно будет не листать бесконечную ленту, а буквально путешествовать по своим мыслям.\n\nРабочее название: Telegram → Knowledge Graph → Digital Garden\n\nСохранить идею. Не усложнять раньше времени. Сначала автоматический репост → потом граф → потом RAG. 🚀\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACC25qE4NA109JdWyg4vW4V5Y0ogHu0QACDhtrG-ZcoEgjDOCEkwvN2wEAAwIAA3kAAzsE\n\n## Tags\n\n#telegram-import #live-sync #ai #telegram #граф #как #мысли"
+      "content": "# 💡 Идея: превратить ТГ-канал в живую карту мыслей\n\n💡 Идея: превратить ТГ-канал в живую карту мыслей\n\nПоймал себя на мысли: а что если не просто дублировать посты из Telegram на сайт, а сделать из этого что-то большее.\n\nСхема примерно такая:\n\nTelegram → сайт → Obsidian → RAG → граф\n\nЧто это даст:\n\n• Пишу как обычно в ТГ\n• Пост автоматически появляется на сайте\n• Сохраняется в Obsidian как часть личной базы знаний\n• AI связывает похожие мысли между собой\n• На сайте появляется интерактивный граф как в Obsidian\n\nКаждый пост — отдельная точка.\nСвязи — по темам, тегам, ссылкам и позже по смыслу.\n\nЧерез время получится не архив постов, а карта идей:\n\n● AI\n├─ агенты\n├─ инструменты\n└─ эксперименты\n\n● проекты\n└─ заметки\n\nИ можно будет не листать бесконечную ленту, а буквально путешествовать по своим мыслям.\n\nРабочее название: Telegram → Knowledge Graph → Digital Garden\n\nСохранить идею. Не усложнять раньше времени. Сначала автоматический репост → потом граф → потом RAG. 🚀\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-32-509Z-f8e2e1fc.jpg)\n\n## Tags\n\n#telegram-import #live-sync #ai #telegram #граф #как #мысли"
     },
     {
       "id": 2925,
@@ -2004,7 +2220,7 @@
         "работу",
         "что-то"
       ],
-      "content": "# Меня зацепила одна мысль.\n\nМеня зацепила одна мысль.\n\nПохоже появилась новая профессия, у которой ещё нет нормального названия.\n\nНе обязательно устраиваться в компанию. Можно:\n\n→ изучать технологии\n→ делать прототипы\n→ публиковать результаты\n→ собирать вокруг идеи людей\n→ получать донаты, гранты, подписки или контракты\n\nЭто что-то между исследователем, разработчиком, художником и предпринимателем.\n\nРаньше схема была: учёба → работа → опыт\n\nСейчас всё чаще: интерес → исследование → прототип → аудитория → доход\n\nОсобенно в ИИ, open source, автоматизации и маленьких командах.\n\nСамое странное — иногда лучший способ найти работу уже не искать работу, а публично строить что-то своё.\n\nНе уверен, что это работает для всех. Но выглядит как одна из самых интересных моделей последних лет.\n\n#AI #OpenSource #BuildInPublic #IndieHacker #VibeCoding #FutureOfWork #Создатели #Технологии\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACC21qE3fBA3VSw88oXWUHOhO6dglMUgACBBtrG-ZcoEhqgTwiIBriUwEAAwIAA3kAAzsE\n\n## Tags\n\n#telegram-import #live-sync #ai #opensource #buildinpublic #indiehacker #vibecoding #futureofwork #создатели #технологии #design #security #одна #работу #что-то"
+      "content": "# Меня зацепила одна мысль.\n\nМеня зацепила одна мысль.\n\nПохоже появилась новая профессия, у которой ещё нет нормального названия.\n\nНе обязательно устраиваться в компанию. Можно:\n\n→ изучать технологии\n→ делать прототипы\n→ публиковать результаты\n→ собирать вокруг идеи людей\n→ получать донаты, гранты, подписки или контракты\n\nЭто что-то между исследователем, разработчиком, художником и предпринимателем.\n\nРаньше схема была: учёба → работа → опыт\n\nСейчас всё чаще: интерес → исследование → прототип → аудитория → доход\n\nОсобенно в ИИ, open source, автоматизации и маленьких командах.\n\nСамое странное — иногда лучший способ найти работу уже не искать работу, а публично строить что-то своё.\n\nНе уверен, что это работает для всех. Но выглядит как одна из самых интересных моделей последних лет.\n\n#AI #OpenSource #BuildInPublic #IndieHacker #VibeCoding #FutureOfWork #Создатели #Технологии\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-31-581Z-b85ee0bf.jpg)\n\n## Tags\n\n#telegram-import #live-sync #ai #opensource #buildinpublic #indiehacker #vibecoding #futureofwork #создатели #технологии #design #security #одна #работу #что-то"
     },
     {
       "id": 2924,
@@ -2024,7 +2240,7 @@
         "задачи",
         "через"
       ],
-      "content": "# Не можешь найти свои задачи в ChatGPT? 😅\n\nНе можешь найти свои задачи в ChatGPT? 😅\nЯ тоже сначала искал их по настройкам и меню — оказалось проще.\nПросто открой задачи напрямую через адресную строку браузера — и сразу попадёшь куда нужно 👇\nchatgpt.com/tasks\nИногда самый короткий путь — вообще не через интерфейс 👀\nСохрани, пригодится.\n#ChatGPT #AI #Автоматизация #Лайфхак #Продуктивность\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACC2xqEvo9Alsa8A439I_LxZkg-nPy2wACkxtrG-ZcmEgzdCZbCsbGVAEAAwIAA3kAAzsE\n\n## Tags\n\n#telegram-import #live-sync #chatgpt #ai #автоматизация #лайфхак #продуктивность #задачи #через"
+      "content": "# Не можешь найти свои задачи в ChatGPT? 😅\n\nНе можешь найти свои задачи в ChatGPT? 😅\nЯ тоже сначала искал их по настройкам и меню — оказалось проще.\nПросто открой задачи напрямую через адресную строку браузера — и сразу попадёшь куда нужно 👇\nchatgpt.com/tasks\nИногда самый короткий путь — вообще не через интерфейс 👀\nСохрани, пригодится.\n#ChatGPT #AI #Автоматизация #Лайфхак #Продуктивность\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-31-244Z-66e489a4.jpg)\n\n## Tags\n\n#telegram-import #live-sync #chatgpt #ai #автоматизация #лайфхак #продуктивность #задачи #через"
     },
     {
       "id": 2923,
@@ -2041,7 +2257,7 @@
         "действиям",
         "доступ"
       ],
-      "content": "# ⚡ ИИ получил доступ к действиям\n\n⚡ ИИ получил доступ к действиям\n\nЕщё недавно ИИ был окном для ответов. Сейчас его постепенно превращают в слой исполнения поверх интернета.\n\nOpenAI делает ставку на агентов как основу новой вычислительной экономики. Cloudflare и Stripe показывают инфраструктуру, где агент уже может зарегистрироваться, купить домен и развернуть сервис. Salesforce перестраивает платформу так, чтобы с ней работали не люди, а программы.\n\nПараллельно меняется и сам стек: компактные модели, маршрутизация между ИИ, мультимодальность и встроенные инструменты становятся важнее бесконечного роста размеров моделей.\n\nОтдельный сигнал — безопасность перестала быть отдельным отделом. Поиск уязвимостей, контроль агентов и управление доступом начинают встраиваться прямо в продукты.\n\nПохоже, следующий этап — это не «ещё один чат», а появление цифровых сотрудников с реальными полномочиями.\n\n🛠 Что можно попробовать:\nСобрать один рабочий процесс целиком через ИИ: исследование → создание → публикация → проверка результата.\n\n💭 Мысль:\nКогда ИИ получает доступ к действиям, главным продуктом становится уже не интеллект, а доверие.\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACC2tqErS1ncluSHs2N-NChZCq2riCcQACQhprG-ZcmEh2mkBISnDgtQEAAwIAA3kAAzsE\n\n## Tags\n\n#telegram-import #live-sync #ai #агентов #действиям #доступ"
+      "content": "# ⚡ ИИ получил доступ к действиям\n\n⚡ ИИ получил доступ к действиям\n\nЕщё недавно ИИ был окном для ответов. Сейчас его постепенно превращают в слой исполнения поверх интернета.\n\nOpenAI делает ставку на агентов как основу новой вычислительной экономики. Cloudflare и Stripe показывают инфраструктуру, где агент уже может зарегистрироваться, купить домен и развернуть сервис. Salesforce перестраивает платформу так, чтобы с ней работали не люди, а программы.\n\nПараллельно меняется и сам стек: компактные модели, маршрутизация между ИИ, мультимодальность и встроенные инструменты становятся важнее бесконечного роста размеров моделей.\n\nОтдельный сигнал — безопасность перестала быть отдельным отделом. Поиск уязвимостей, контроль агентов и управление доступом начинают встраиваться прямо в продукты.\n\nПохоже, следующий этап — это не «ещё один чат», а появление цифровых сотрудников с реальными полномочиями.\n\n🛠 Что можно попробовать:\nСобрать один рабочий процесс целиком через ИИ: исследование → создание → публикация → проверка результата.\n\n💭 Мысль:\nКогда ИИ получает доступ к действиям, главным продуктом становится уже не интеллект, а доверие.\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-30-946Z-7fe8d60e.jpg)\n\n## Tags\n\n#telegram-import #live-sync #ai #агентов #действиям #доступ"
     },
     {
       "id": 2922,
@@ -2059,7 +2275,7 @@
         "война",
         "ещё"
       ],
-      "content": "# ⚡ Начинается борьба не за модели\n\n⚡ Начинается борьба не за модели\n\nПока все ждут очередной «самый умный ИИ», рынок начал смещаться в другую сторону — кто быстрее превратит модель в инфраструктуру.\n\nGoogle давит на agentic Gemini и мультимодальность. OpenAI расширяет присутствие в Азии. Anthropic заходит в более регулируемые сценарии. Параллельно NVIDIA и AMD продолжают гонку за вычисления — потому что без железа весь разговор про агентов остаётся презентацией.\n\nПоявляется ещё один новый слой — доверие. Метки ИИ-контента, происхождение данных, confidential computing, контроль автономных систем. Мир постепенно приходит к мысли, что создать ИИ уже недостаточно — нужно ещё доказать, что ему можно доверять.\n\nИ отдельно заметен сдвиг в продуктах: ИИ перестаёт быть отдельной вкладкой и начинает встраиваться прямо в привычные инструменты — презентации, поиск, браузеры, аналитику.\n\nПохоже, начинается не война моделей, а война экосистем.\n\n🛠 Что можно попробовать:\nСобрать свой рабочий стек не из одного ИИ, а из связки: чат → исследование → код → публикация.\n\n💭 Мысль:\nСледующие победители рынка могут выглядеть не как лучшие нейросети, а как самые незаметные.\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACC2pqEYQ--4iyxdGWVyDkfL2jhCRjhAACvhprG0Z5iEgBW3EPqtiq0wEAAwIAA3kAAzsE\n\n## Tags\n\n#telegram-import #live-sync #ai #tools #что #война #ещё"
+      "content": "# ⚡ Начинается борьба не за модели\n\n⚡ Начинается борьба не за модели\n\nПока все ждут очередной «самый умный ИИ», рынок начал смещаться в другую сторону — кто быстрее превратит модель в инфраструктуру.\n\nGoogle давит на agentic Gemini и мультимодальность. OpenAI расширяет присутствие в Азии. Anthropic заходит в более регулируемые сценарии. Параллельно NVIDIA и AMD продолжают гонку за вычисления — потому что без железа весь разговор про агентов остаётся презентацией.\n\nПоявляется ещё один новый слой — доверие. Метки ИИ-контента, происхождение данных, confidential computing, контроль автономных систем. Мир постепенно приходит к мысли, что создать ИИ уже недостаточно — нужно ещё доказать, что ему можно доверять.\n\nИ отдельно заметен сдвиг в продуктах: ИИ перестаёт быть отдельной вкладкой и начинает встраиваться прямо в привычные инструменты — презентации, поиск, браузеры, аналитику.\n\nПохоже, начинается не война моделей, а война экосистем.\n\n🛠 Что можно попробовать:\nСобрать свой рабочий стек не из одного ИИ, а из связки: чат → исследование → код → публикация.\n\n💭 Мысль:\nСледующие победители рынка могут выглядеть не как лучшие нейросети, а как самые незаметные.\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-30-600Z-901fce14.jpg)\n\n## Tags\n\n#telegram-import #live-sync #ai #tools #что #война #ещё"
     },
     {
       "id": 2921,
@@ -2088,7 +2304,7 @@
         "post",
         "archive"
       ],
-      "content": "# Вайбкодеры, для вас: появился полезный инструмент CLI Anything — переносит софт...\n\nВайбкодеры, для вас: появился полезный инструмент CLI Anything — переносит софт в терминал, чтобы им мог управлять ИИ-агент.\n\nМожно отправить Claude или Codex работать в браузере, собирать презентации, разбирать заметки и даже разрабатывать игры. Вся рутина, на которую нужно много разных программах, уместится в один запрос к агенту.\n\nЗабираем бесплатно по ссылке.\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACC2hqENcKSY6SyGDAgSYdspV9x7ICZwACZxdrG0aQgUjFKamvLjCQbwEAAwIAA3kAAzsE\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
+      "content": "# Вайбкодеры, для вас: появился полезный инструмент CLI Anything — переносит софт...\n\nВайбкодеры, для вас: появился полезный инструмент CLI Anything — переносит софт в терминал, чтобы им мог управлять ИИ-агент.\n\nМожно отправить Claude или Codex работать в браузере, собирать презентации, разбирать заметки и даже разрабатывать игры. Вся рутина, на которую нужно много разных программах, уместится в один запрос к агенту.\n\nЗабираем бесплатно по ссылке.\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-30-236Z-30a4519c.jpg)\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
     },
     {
       "id": 2919,
@@ -2102,7 +2318,7 @@
         "live-sync",
         "модель"
       ],
-      "content": "# Alibaba выпустили Qwen3.7-Max — новую бесплатную флагманскую модель. По всем бен...\n\nAlibaba выпустили Qwen3.7-Max — новую бесплатную флагманскую модель. По всем бенчмаркам обоходит Kimi-K2.6 и Claude Opus 4.6 в режиме Max.\n\nМодель отлично пишет код и выполняет агентские задачи. Может автономно работать десятки часов и подключать 1000+ инструментов. Контекст — 1 млн токенов.\n\nТестируем тут.\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACC2dqENbW2HPIe0fs3kST1wWjIYpOwgACNyZrG5_reEjs82MMqdHk4gEAAwIAA3kAAzsE\n\n## Tags\n\n#telegram-import #live-sync #модель"
+      "content": "# Alibaba выпустили Qwen3.7-Max — новую бесплатную флагманскую модель. По всем бен...\n\nAlibaba выпустили Qwen3.7-Max — новую бесплатную флагманскую модель. По всем бенчмаркам обоходит Kimi-K2.6 и Claude Opus 4.6 в режиме Max.\n\nМодель отлично пишет код и выполняет агентские задачи. Может автономно работать десятки часов и подключать 1000+ инструментов. Контекст — 1 млн токенов.\n\nТестируем тут.\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-29-920Z-91ed69b4.jpg)\n\n## Tags\n\n#telegram-import #live-sync #модель"
     },
     {
       "id": 2918,
@@ -2117,7 +2333,7 @@
         "post",
         "archive"
       ],
-      "content": "# Становимся топовыми ИИ-инженерами: нашли большой курс по работе с нейронками от...\n\nСтановимся топовыми ИИ-инженерами: нашли большой курс по работе с нейронками от топовых разрабов.\n\nВнутри — больше 400 уроков. Охватывают математику, принципы создания ИИ-агентов, промпт-инжиниринг и многое другое. Дают много теории и практики.\n\nПо ходу обучения можно собрать портфолио из готовых проектов, включая собственный аналог Claude Code и голосового помощника.\n\nВсе доступно бесплатно. Изучаем по ссылке.\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACC2ZqENYjWKbLxtMRLbOh7zGqFrFQ-wACpyBrG5_rcEjq_KW3E4kfIgEAAwIAA3kAAzsE\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
+      "content": "# Становимся топовыми ИИ-инженерами: нашли большой курс по работе с нейронками от...\n\nСтановимся топовыми ИИ-инженерами: нашли большой курс по работе с нейронками от топовых разрабов.\n\nВнутри — больше 400 уроков. Охватывают математику, принципы создания ИИ-агентов, промпт-инжиниринг и многое другое. Дают много теории и практики.\n\nПо ходу обучения можно собрать портфолио из готовых проектов, включая собственный аналог Claude Code и голосового помощника.\n\nВсе доступно бесплатно. Изучаем по ссылке.\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-29-604Z-0a2d8d59.jpg)\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
     },
     {
       "id": 2917,
@@ -2192,7 +2408,7 @@
         "бот",
         "есть"
       ],
-      "content": "# ⚡ Бот упал? Пусть ИИ чинит\n\n⚡ Бот упал? Пусть ИИ чинит\n\nЕсть интересный паттерн для пет-проекта: не делать ещё одного бота, а сделать систему, которая обслуживает ботов сама.\n\nИдея простая: бот падает → лог улетает → агент забирает контекст → поднимает песочницу → пробует исправить код → запускает тесты → предлагает деплой человеку.\n\nСтек выглядит уже почти как прод:\nструктурированные логи → Loki → алерт → LangGraph → LLM → E2B → pytest → подтверждение → CI/CD.\n\nСамое интересное тут не автопочинка, а архитектурный сдвиг: разработчик постепенно становится оператором системы, а не человеком, который вручную чинит каждый инцидент.\n\nНо есть важное ограничение: автономия без контроля быстро превращается в генератор новых багов. Поэтому правило остаётся прежним — ИИ предлагает, человек принимает.\n\n🛠 Что можно попробовать:\nСобрать MVP не для фикса кода, а только для анализа падений и генерации Pull Request.\n\n💭 Мысль:\nСледующий DevOps-инструмент может оказаться не панелью мониторинга, а коллегой, который не спит.\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACC2JqEAy3j4xDXcwrhIIOXcDNDYAYbQACxRdrG0Z5gEhl9y032DySkwEAAwIAA3kAAzsE\n\n## Tags\n\n#telegram-import #live-sync #ai #для #бот #есть"
+      "content": "# ⚡ Бот упал? Пусть ИИ чинит\n\n⚡ Бот упал? Пусть ИИ чинит\n\nЕсть интересный паттерн для пет-проекта: не делать ещё одного бота, а сделать систему, которая обслуживает ботов сама.\n\nИдея простая: бот падает → лог улетает → агент забирает контекст → поднимает песочницу → пробует исправить код → запускает тесты → предлагает деплой человеку.\n\nСтек выглядит уже почти как прод:\nструктурированные логи → Loki → алерт → LangGraph → LLM → E2B → pytest → подтверждение → CI/CD.\n\nСамое интересное тут не автопочинка, а архитектурный сдвиг: разработчик постепенно становится оператором системы, а не человеком, который вручную чинит каждый инцидент.\n\nНо есть важное ограничение: автономия без контроля быстро превращается в генератор новых багов. Поэтому правило остаётся прежним — ИИ предлагает, человек принимает.\n\n🛠 Что можно попробовать:\nСобрать MVP не для фикса кода, а только для анализа падений и генерации Pull Request.\n\n💭 Мысль:\nСледующий DevOps-инструмент может оказаться не панелью мониторинга, а коллегой, который не спит.\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-29-308Z-63dcd9b3.jpg)\n\n## Tags\n\n#telegram-import #live-sync #ai #для #бот #есть"
     },
     {
       "id": 2913,
@@ -2360,7 +2576,7 @@
         "cables",
         "facial"
       ],
-      "content": "# Futuristic cyberpunk avatar designed as a living modular synthesizer and printed...\n\nFuturistic cyberpunk avatar designed as a living modular synthesizer and printed circuit board hybrid. Circular composition on a deep black background. A human face generated entirely from glowing PCB copper traces, electronic pathways, vias, and gold conductive lines. The face appears on a central display screen embedded into a modular synth rack. Around the screen are realistic Eurorack synthesizer modules filled with knobs, patch cables, oscillators, filters, envelopes, sequencers, VCA, delay units, waveform monitors, and signal indicators.\n\nAt the top sits a webcam module labeled “CAM”, suggesting live facial capture and expression synthesis. The interface controls facial expressions and sound simultaneously — knobs labeled mouth, eyes, brows, smile, tension, voice, tone, and space. Patch cables connect emotional parameters to audio synthesis modules. The avatar feels like a machine-human instrument where facial expressions become sound design.\n\nDark emerald green PCB substrate with brushed gold traces and metallic highlights. Intricate electronic detail, ultra-dense circuitry, cinematic lighting, high contrast, glowing analog synth aesthetics, techno-organic design, experimental electronic art, modular synthesis culture, hacker-lab atmosphere, brutal precision mixed with artistic expression.\n\nStyle references: PCB art, modular synthesizer interface design, cybernetic portraiture, generative electronic sculpture, synthwave engineering aesthetic, industrial UI design, futuristic music hardware concept art.\n\nUltra detailed, symmetrical layout, sharp vector-like linework, premium emblem/logo feeling, high resolution, intricate textures, realistic patch cables, tactile knobs, electronic panel typography, immersive sci-fi mood.\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACCzRqAeLY4RUSfyHFm0Qx6UG9UeA7gAACGBhrG-uHEUj9JHDgKkqKFQEAAwIAA3kAAzsE\n\n## Tags\n\n#telegram-import #live-sync #backend #design #security #modular #cables #facial"
+      "content": "# Futuristic cyberpunk avatar designed as a living modular synthesizer and printed...\n\nFuturistic cyberpunk avatar designed as a living modular synthesizer and printed circuit board hybrid. Circular composition on a deep black background. A human face generated entirely from glowing PCB copper traces, electronic pathways, vias, and gold conductive lines. The face appears on a central display screen embedded into a modular synth rack. Around the screen are realistic Eurorack synthesizer modules filled with knobs, patch cables, oscillators, filters, envelopes, sequencers, VCA, delay units, waveform monitors, and signal indicators.\n\nAt the top sits a webcam module labeled “CAM”, suggesting live facial capture and expression synthesis. The interface controls facial expressions and sound simultaneously — knobs labeled mouth, eyes, brows, smile, tension, voice, tone, and space. Patch cables connect emotional parameters to audio synthesis modules. The avatar feels like a machine-human instrument where facial expressions become sound design.\n\nDark emerald green PCB substrate with brushed gold traces and metallic highlights. Intricate electronic detail, ultra-dense circuitry, cinematic lighting, high contrast, glowing analog synth aesthetics, techno-organic design, experimental electronic art, modular synthesis culture, hacker-lab atmosphere, brutal precision mixed with artistic expression.\n\nStyle references: PCB art, modular synthesizer interface design, cybernetic portraiture, generative electronic sculpture, synthwave engineering aesthetic, industrial UI design, futuristic music hardware concept art.\n\nUltra detailed, symmetrical layout, sharp vector-like linework, premium emblem/logo feeling, high resolution, intricate textures, realistic patch cables, tactile knobs, electronic panel typography, immersive sci-fi mood.\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-27-999Z-635611df.jpg)\n\n## Tags\n\n#telegram-import #live-sync #backend #design #security #modular #cables #facial"
     },
     {
       "id": 2867,
@@ -2493,7 +2709,7 @@
         "идеи",
         "кажется"
       ],
-      "content": "# Иногда мне кажется, что Obsidian graph — это уже не просто заметки.\n\nИногда мне кажется, что Obsidian graph — это уже не просто заметки.\n\nЭто рентген мышления.\n\nСначала ты просто сохраняешь:\n— мысли\n— идеи\n— ссылки\n— посты\n— странные наблюдения в 3 ночи\n\nА потом в какой-то момент видишь не хаос, а структуру.\n\nПовторяющиеся темы.\nСвязи между годами жизни.\nОдержимости.\nНезакрытые идеи.\nСтранные мосты между AI, одиночеством, урбанистикой, автономностью и будущим.\n\nЯ недавно сделал систему:\nTelegram → Obsidian → smart tags → graph.\n\nИ сейчас начинаю добавлять semantic layer:\n— embeddings\n— similarity search\n— recurring thought detection\n— temporal analysis\n\nПо сути это уже не “second brain”.\n\nЭто что-то ближе к:\npersonal cognition system.\n\nСамое странное ощущение —\nкогда граф начинает показывать вещи о тебе раньше, чем ты сам их осознаешь.\n\nМне кажется через несколько лет такие системы станут новой формой цифровой идентичности.\n\nНе соцсети.\nНе профили.\nНе аватарки.\n\nА живые карты мышления человека.\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACCyxp_HJ8CVTYcH2OFS3k54aKdUQ7WQAC9xNrG7ef4EtzWMvrRj2B7gEAAwIAA3kAAzsE\n\n## Tags\n\n#telegram-import #live-sync #ai #telegram #это #идеи #кажется"
+      "content": "# Иногда мне кажется, что Obsidian graph — это уже не просто заметки.\n\nИногда мне кажется, что Obsidian graph — это уже не просто заметки.\n\nЭто рентген мышления.\n\nСначала ты просто сохраняешь:\n— мысли\n— идеи\n— ссылки\n— посты\n— странные наблюдения в 3 ночи\n\nА потом в какой-то момент видишь не хаос, а структуру.\n\nПовторяющиеся темы.\nСвязи между годами жизни.\nОдержимости.\nНезакрытые идеи.\nСтранные мосты между AI, одиночеством, урбанистикой, автономностью и будущим.\n\nЯ недавно сделал систему:\nTelegram → Obsidian → smart tags → graph.\n\nИ сейчас начинаю добавлять semantic layer:\n— embeddings\n— similarity search\n— recurring thought detection\n— temporal analysis\n\nПо сути это уже не “second brain”.\n\nЭто что-то ближе к:\npersonal cognition system.\n\nСамое странное ощущение —\nкогда граф начинает показывать вещи о тебе раньше, чем ты сам их осознаешь.\n\nМне кажется через несколько лет такие системы станут новой формой цифровой идентичности.\n\nНе соцсети.\nНе профили.\nНе аватарки.\n\nА живые карты мышления человека.\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-27-678Z-7c06d926.jpg)\n\n## Tags\n\n#telegram-import #live-sync #ai #telegram #это #идеи #кажется"
     },
     {
       "id": 2859,
@@ -2508,7 +2724,7 @@
         "post",
         "archive"
       ],
-      "content": "# Post 2859\n\n## Media\n\nSticker: 👽 | file_id: CAACAgIAAx0CT0EpfgACCytp_FoKn6b-F8XK1jypwM_oSj6AAgACL6gAAsGX4UveVbNY8aLL9TsE\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
+      "content": "# Post 2859\n\n## Media\n\n- [sticker](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-27-324Z-f96629cb.bin)\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
     },
     {
       "id": 2858,
@@ -2567,7 +2783,7 @@
         "post",
         "archive"
       ],
-      "content": "# Post 2855\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACCydp-00RO84tzKg2jqtTvdnTwYmD9wACQBZrG2jr2EszE5doNxaEugEAAwIAA3gAAzsE\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
+      "content": "# Post 2855\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-27-001Z-2c68a1c8.jpg)\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
     },
     {
       "id": 2854,
@@ -2737,7 +2953,7 @@
         "post",
         "archive"
       ],
-      "content": "# Post 2844\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACCxxp89RRxZ3BpEiV0z3xMxPg-ob4fQACihZrG520mEvvfwJIxIFMUQEAAwIAA3kAAzsE\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
+      "content": "# Post 2844\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-26-395Z-329b2e27.jpg)\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
     },
     {
       "id": 2845,
@@ -2752,7 +2968,7 @@
         "post",
         "archive"
       ],
-      "content": "# Post 2845\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACCx1p89RRYtSCwhsxTUNqtkXu8vkqSgACixZrG520mEvg53s4k3fQrwEAAwIAA3kAAzsE\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
+      "content": "# Post 2845\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-26-698Z-31543256.jpg)\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
     },
     {
       "id": 2843,
@@ -2767,7 +2983,7 @@
         "post",
         "archive"
       ],
-      "content": "# В Steam вышли новые «Герои меча и магии» — Heroes of Might and Magic: Olden Era....\n\nВ Steam вышли новые «Герои меча и магии» — Heroes of Might and Magic: Olden Era. Игра стала возвращением к истокам серии.\n\nНа релизе доступно шесть фракций, мультиплеер и часть сюжетной компании. Судя по первым ревью, разрабы смогли повторить успех «Героев III» в плане геймплея.\n\nЗабираем здесь. В честь выхода у игры скидка 25%\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACCxtp89RRqO4oKtA-M9M28XHQJV_6xQACiRZrG520mEvdUZYB9eHM4wEAAwIAA3kAAzsE\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
+      "content": "# В Steam вышли новые «Герои меча и магии» — Heroes of Might and Magic: Olden Era....\n\nВ Steam вышли новые «Герои меча и магии» — Heroes of Might and Magic: Olden Era. Игра стала возвращением к истокам серии.\n\nНа релизе доступно шесть фракций, мультиплеер и часть сюжетной компании. Судя по первым ревью, разрабы смогли повторить успех «Героев III» в плане геймплея.\n\nЗабираем здесь. В честь выхода у игры скидка 25%\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-26-050Z-a15daefc.jpg)\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
     },
     {
       "id": 2842,
@@ -2797,7 +3013,7 @@
         "post",
         "archive"
       ],
-      "content": "# Прокачиваем работу с Claude Code: на GitHub появился сборник готовых плагинов, к...\n\nПрокачиваем работу с Claude Code: на GitHub появился сборник готовых плагинов, которые помогут максимально настроить агента под себя.\n\nВнутри — скиллы, промты, веб-хуки и MCP для разных задач, от работы с файлами на ПК и дизайна до бэкенд-разработки.\n\nЗабираем бесплатно по ссылке.\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACCxlp8uELm7bh9xjo2rpt6U3BtwmeCwACMRdrGzoJiEsga1KiKb64pgEAAwIAA3kAAzsE\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
+      "content": "# Прокачиваем работу с Claude Code: на GitHub появился сборник готовых плагинов, к...\n\nПрокачиваем работу с Claude Code: на GitHub появился сборник готовых плагинов, которые помогут максимально настроить агента под себя.\n\nВнутри — скиллы, промты, веб-хуки и MCP для разных задач, от работы с файлами на ПК и дизайна до бэкенд-разработки.\n\nЗабираем бесплатно по ссылке.\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-25-712Z-e7f1f47c.jpg)\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
     },
     {
       "id": 2840,
@@ -2813,7 +3029,7 @@
         "млрд",
         "claude"
       ],
-      "content": "# Anthropic оценили в $1 трлн: создатели Claude сегодня стали дороже OpenAI с оцен...\n\nAnthropic оценили в $1 трлн: создатели Claude сегодня стали дороже OpenAI с оценкой $880 млрд.\n\nРекорд зафиксировали на вторичном рынке — доли в компании пока есть только у текущих и бывших сотрудников или ранних инвесторов. \n\nВсего два месяца назад Anthropic оценивали в $380 млрд. Видимо, сказались удачные госконтракты и закрытый релиз Claude Mythos.\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACCxhp8uDuJwTR_Xd-phIbbiYp2TRL5QACExhrGzoJiEts6sFgIrfADwEAAwIAA3kAAzsE\n\n## Tags\n\n#telegram-import #live-sync #ai #млрд #claude"
+      "content": "# Anthropic оценили в $1 трлн: создатели Claude сегодня стали дороже OpenAI с оцен...\n\nAnthropic оценили в $1 трлн: создатели Claude сегодня стали дороже OpenAI с оценкой $880 млрд.\n\nРекорд зафиксировали на вторичном рынке — доли в компании пока есть только у текущих и бывших сотрудников или ранних инвесторов. \n\nВсего два месяца назад Anthropic оценивали в $380 млрд. Видимо, сказались удачные госконтракты и закрытый релиз Claude Mythos.\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-25-374Z-f22cabbe.jpg)\n\n## Tags\n\n#telegram-import #live-sync #ai #млрд #claude"
     },
     {
       "id": 2839,
@@ -2827,7 +3043,7 @@
         "live-sync",
         "также"
       ],
-      "content": "# Привет!\n\nПривет!\nНа этой неделе: завтра стартует специальная серия прямых трансляций, а также состоится KiloShop — 4-часовой виртуальный мастер-класс с участием гостей из передовых лабораторий и ведущих разработчиков ИИ.\n\nУ нас также есть несколько крупных обновлений расширений для VS Code и интересная информация о последних обновлениях моделей.\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACCxdp8njrb2MbNE7JdQ3RT1dM4DZb2wACXRlrG0UnkEtvqwABPekJ24sBAAMCAAN5AAM7BA\n\n## Tags\n\n#telegram-import #live-sync #также"
+      "content": "# Привет!\n\nПривет!\nНа этой неделе: завтра стартует специальная серия прямых трансляций, а также состоится KiloShop — 4-часовой виртуальный мастер-класс с участием гостей из передовых лабораторий и ведущих разработчиков ИИ.\n\nУ нас также есть несколько крупных обновлений расширений для VS Code и интересная информация о последних обновлениях моделей.\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-25-009Z-1f2b3e3d.jpg)\n\n## Tags\n\n#telegram-import #live-sync #также"
     },
     {
       "id": 2838,
@@ -2900,7 +3116,7 @@
         "просто",
         "всё"
       ],
-      "content": "# 🚀 AI Roadmap 2026 — апдейт, который стоило сделать раньше\n\n🚀 AI Roadmap 2026 — апдейт, который стоило сделать раньше\n\nПеределал свою дорожную карту по ИИ с нуля.\nРеальность догнала быстрее, чем планировали — поэтому 2025 можно спокойно архивировать.\n\nТеперь всё про агентов, локальные модели и реальную разработку, а не теорию.\n\nЧто внутри:\n\n🔹 Agents > Chat\nНе просто общение с ИИ — системы, которые сами работают: браузер, код, задачи.\n\n🔹 Reasoning модели\nКак думать вместе с ИИ, а не просто получать ответы.\n\n🔹 Local-first стек\nLLM у тебя на машине: Ollama, RAG, персональная база знаний.\n\n🔹 AI-native разработка\nCursor / Windsurf → скорость разработки x2–x5 (если не косячить 😄)\n\n💻 Главное обновление — теперь это не просто список\n\nСделал интерактивный дашборд:\n✔️ отмечаешь прогресс\n✔️ видишь, сколько осталось\n✔️ всё сохраняется в браузере\n\n👉 https://alevoldon.github.io/full_roadmap_ai_enthusiast_2026/\n\n🧠 Код полностью открыт:\n👉 https://github.com/ALEVOLDON/full_roadmap_ai_enthusiast_2026\n\nЕсли заберёшь себе — кинь 🔥\nИ напиши, что разобрать дальше: агенты / локальные модели / стек\n\n#AI #LLM #Agents #Roadmap #Dev #NoCode #VibeCoding\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACCxNp8kByBW5c8fsJajXhezpbxvz5rQAC0xdrG0UnkEuO1RQPWJ7qJwEAAwIAA3gAAzsE\n\n## Links\n\n- https://alevoldon.github.io/full_roadmap_ai_enthusiast_2026/\n- https://github.com/ALEVOLDON/full_roadmap_ai_enthusiast_2026\n\n## Tags\n\n#telegram-import #live-sync #ai #llm #agents #roadmap #dev #nocode #vibecoding #learning #github #code #модели #просто #всё"
+      "content": "# 🚀 AI Roadmap 2026 — апдейт, который стоило сделать раньше\n\n🚀 AI Roadmap 2026 — апдейт, который стоило сделать раньше\n\nПеределал свою дорожную карту по ИИ с нуля.\nРеальность догнала быстрее, чем планировали — поэтому 2025 можно спокойно архивировать.\n\nТеперь всё про агентов, локальные модели и реальную разработку, а не теорию.\n\nЧто внутри:\n\n🔹 Agents > Chat\nНе просто общение с ИИ — системы, которые сами работают: браузер, код, задачи.\n\n🔹 Reasoning модели\nКак думать вместе с ИИ, а не просто получать ответы.\n\n🔹 Local-first стек\nLLM у тебя на машине: Ollama, RAG, персональная база знаний.\n\n🔹 AI-native разработка\nCursor / Windsurf → скорость разработки x2–x5 (если не косячить 😄)\n\n💻 Главное обновление — теперь это не просто список\n\nСделал интерактивный дашборд:\n✔️ отмечаешь прогресс\n✔️ видишь, сколько осталось\n✔️ всё сохраняется в браузере\n\n👉 https://alevoldon.github.io/full_roadmap_ai_enthusiast_2026/\n\n🧠 Код полностью открыт:\n👉 https://github.com/ALEVOLDON/full_roadmap_ai_enthusiast_2026\n\nЕсли заберёшь себе — кинь 🔥\nИ напиши, что разобрать дальше: агенты / локальные модели / стек\n\n#AI #LLM #Agents #Roadmap #Dev #NoCode #VibeCoding\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-24-604Z-9b173379.jpg)\n\n## Links\n\n- https://alevoldon.github.io/full_roadmap_ai_enthusiast_2026/\n- https://github.com/ALEVOLDON/full_roadmap_ai_enthusiast_2026\n\n## Tags\n\n#telegram-import #live-sync #ai #llm #agents #roadmap #dev #nocode #vibecoding #learning #github #code #модели #просто #всё"
     },
     {
       "id": 2834,
@@ -2951,7 +3167,7 @@
         "модель",
         "это"
       ],
-      "content": "# 🤯 Уже почти 3 миллиона моделей.\n\n🤯 Уже почти 3 миллиона моделей.\n\nЗвучит как безумие…\nНо на деле — это не прогресс, а иллюзия выбора.\n\nРазберём без розовых очков 👇\n\n90% всего этого добра — это:\n— квантизации (GGUF, 4bit, 8bit)\n— одни и те же модели, но с разными “шильдиками”\n— “uncensored / aggressive / turbo / ultra mega pro max”\n— форки ради форков\n\n👉 По факту новых моделей — смешное количество\n\n\n🧠 Реальность такая:\n\nЕсть несколько баз:\n— Qwen\n— LLaMA\n— Gemma\n— Mistral\n\nВсё остальное — это их вариации.\n\n\n⚠️ Главная проблема 2026:\n\nРаньше было сложно найти модель\nТеперь сложно не утонуть в мусоре\n\n\n💡 Умный подход:\n\nНе искать «лучшую модель»\nА делать так:\n\n1. Берёшь 1–2 норм модели\n2. Тестишь под свои задачи\n3. Строишь вокруг них систему:\n   — агенты\n   — RAG\n   — автоматизации\n\n\n🎯 Вывод:\n\nМы перешли из эпохи\n«где взять модель»\n\nв эпоху\n«что с ней реально делать»\n\n\nЕсли ты всё ещё скачиваешь 20 моделей в день —\nу меня плохие новости 😄\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACCuxp52XsNhpyF8kCql1hAAFkdp8gItoAAn0TaxsX_zlLLwEoJSbYLe8BAAMCAAN5AAM7BA\n\n## Tags\n\n#telegram-import #live-sync #моделей #модель #это"
+      "content": "# 🤯 Уже почти 3 миллиона моделей.\n\n🤯 Уже почти 3 миллиона моделей.\n\nЗвучит как безумие…\nНо на деле — это не прогресс, а иллюзия выбора.\n\nРазберём без розовых очков 👇\n\n90% всего этого добра — это:\n— квантизации (GGUF, 4bit, 8bit)\n— одни и те же модели, но с разными “шильдиками”\n— “uncensored / aggressive / turbo / ultra mega pro max”\n— форки ради форков\n\n👉 По факту новых моделей — смешное количество\n\n\n🧠 Реальность такая:\n\nЕсть несколько баз:\n— Qwen\n— LLaMA\n— Gemma\n— Mistral\n\nВсё остальное — это их вариации.\n\n\n⚠️ Главная проблема 2026:\n\nРаньше было сложно найти модель\nТеперь сложно не утонуть в мусоре\n\n\n💡 Умный подход:\n\nНе искать «лучшую модель»\nА делать так:\n\n1. Берёшь 1–2 норм модели\n2. Тестишь под свои задачи\n3. Строишь вокруг них систему:\n   — агенты\n   — RAG\n   — автоматизации\n\n\n🎯 Вывод:\n\nМы перешли из эпохи\n«где взять модель»\n\nв эпоху\n«что с ней реально делать»\n\n\nЕсли ты всё ещё скачиваешь 20 моделей в день —\nу меня плохие новости 😄\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-16-628Z-86ce2933.jpg)\n\n## Tags\n\n#telegram-import #live-sync #моделей #модель #это"
     },
     {
       "id": 2795,
@@ -3720,7 +3936,7 @@
         "граф",
         "один"
       ],
-      "content": "# Сделал небольшую утилиту для себя: Node.js скрипт, который слушает посты из Tele...\n\nСделал небольшую утилиту для себя: Node.js скрипт, который слушает посты из Telegram-канала через Bot API и сохраняет каждый пост как Markdown-заметку в Obsidian.\n\nЗачем — у меня канал @dump_dump где я скидываю находки, мысли, ссылки. Хотелось чтобы всё это автоматически оседало в базе знаний, а не терялось в ленте. Но главная цель — граф. Obsidian строит граф связей между заметками, и когда постов накапливается достаточно, начинают проявляться кластеры тем, неочевидные связи, паттерны в том что вообще интересует.\n\nЧто умеет:\n— принимает новые и отредактированные посты\n— один файл = один пост, папки по годам\n— автотеггинг из хэштегов, ссылок, повторяющихся слов\n— дедупликация через state.json\n\nКонфиг через config.json или ENV-переменные, запуск одной командой.\n\nРепа: github.com/ALEVOLDON/obsidian_posts_smart_tags\n\n#obsidian #telegram #nodejs #pkm #tools\n\n## Media\n\nPhoto file_id: AgACAgIAAx0CT0EpfgACCqJp3kMP9CMSSQ4gYpbFdBHA6IMf9wACYBdrG-J88EoCscPIxZJtngEAAwIAA3kAAzsE\n\n## Tags\n\n#telegram-import #live-sync #obsidian #telegram #nodejs #pkm #tools #backend #через #граф #один"
+      "content": "# Сделал небольшую утилиту для себя: Node.js скрипт, который слушает посты из Tele...\n\nСделал небольшую утилиту для себя: Node.js скрипт, который слушает посты из Telegram-канала через Bot API и сохраняет каждый пост как Markdown-заметку в Obsidian.\n\nЗачем — у меня канал @dump_dump где я скидываю находки, мысли, ссылки. Хотелось чтобы всё это автоматически оседало в базе знаний, а не терялось в ленте. Но главная цель — граф. Obsidian строит граф связей между заметками, и когда постов накапливается достаточно, начинают проявляться кластеры тем, неочевидные связи, паттерны в том что вообще интересует.\n\nЧто умеет:\n— принимает новые и отредактированные посты\n— один файл = один пост, папки по годам\n— автотеггинг из хэштегов, ссылок, повторяющихся слов\n— дедупликация через state.json\n\nКонфиг через config.json или ENV-переменные, запуск одной командой.\n\nРепа: github.com/ALEVOLDON/obsidian_posts_smart_tags\n\n#obsidian #telegram #nodejs #pkm #tools\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-16-297Z-66b6a169.jpg)\n\n## Tags\n\n#telegram-import #live-sync #obsidian #telegram #nodejs #pkm #tools #backend #через #граф #один"
     },
     {
       "id": 2721,

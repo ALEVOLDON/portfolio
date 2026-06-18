@@ -8,13 +8,23 @@ export const translations = {
             brain: "Brain",
             contact: "Contact"
         },
+        meta: {
+            title: "ALEVOLDON | AI Builder & Creative Technologist",
+            description: "Creating digital products at the intersection of AI, design, and engineering."
+        },
         hero: {
             title: "Vladimir",
             subtitle: "AI Builder & Creative Technologist",
             description: "Creating digital products at the intersection of AI, design, and engineering.",
             viewProjects: "View Projects",
             workWithMe: "Work With Me",
-            connect: "Get In Touch"
+            connect: "Get In Touch",
+            scrollDown: "Scroll Down"
+        },
+        spotify: {
+            buttonTitle: "System Soundtrack",
+            iframeTitle: "Spotify playlist soundtrack",
+            soundtrack: "SOUNDTRACK"
         },
         create: {
             heading: "What I Create",
@@ -150,7 +160,30 @@ export const translations = {
             gitLangs: "Most Used Languages"
         },
         brain: {
-            subheading: "Interactive archive of thoughts & notes (RU)",
+            badge: "Mind Vault",
+            heading: "Mind",
+            headingAccent: "Vault",
+            headingSuffix: "& Knowledge Graph",
+            subheading: "Interactive archive of thoughts & notes",
+            hint: "Each node represents a post or tag. Drag nodes or pan to explore, use scroll wheel to zoom, and click to read.",
+            loading: "Loading Knowledge Base...",
+            backToFeed: "Back to Feed",
+            searchPlaceholder: "Search posts, tags, or links...",
+            limit: "Limit",
+            hideTags: "Hide Tags",
+            showTags: "Show Tags",
+            freeze: "Freeze",
+            simulate: "Simulate",
+            recenterTitle: "Recenter and stabilize",
+            posts: "Posts",
+            tags: "Tags",
+            links: "Links",
+            postFeed: "Post Feed",
+            clearFilter: "Clear Filter",
+            date: "Date",
+            tagsHeading: "Tags",
+            noPostsFound: "No posts found",
+            noPostsHint: "Try clearing tags or changing search query.",
             quickFilters: "Knowledge Base:",
             filterAll: "All",
             filters: [
@@ -188,13 +221,23 @@ export const translations = {
             brain: "Мысли",
             contact: "Контакты"
         },
+        meta: {
+            title: "ALEVOLDON | AI Builder & Creative Technologist",
+            description: "Создаю цифровые продукты на стыке ИИ, дизайна и разработки."
+        },
         hero: {
             title: "Владимир",
             subtitle: "AI Builder & Creative Technologist",
             description: "Создаю цифровые продукты на стыке ИИ, дизайна и разработки.",
             viewProjects: "Посмотреть проекты",
             workWithMe: "Работать со мной",
-            connect: "Связаться"
+            connect: "Связаться",
+            scrollDown: "Прокрутить вниз"
+        },
+        spotify: {
+            buttonTitle: "Системный саундтрек",
+            iframeTitle: "Плейлист Spotify",
+            soundtrack: "САУНДТРЕК"
         },
         create: {
             heading: "Что я создаю",
@@ -329,7 +372,30 @@ export const translations = {
             gitLangs: "Основные языки кода"
         },
         brain: {
+            badge: "Хранилище мыслей",
+            heading: "Mind",
+            headingAccent: "Vault",
+            headingSuffix: "и граф знаний",
             subheading: "Интерактивный архив мыслей и заметок",
+            hint: "Каждый узел — это публикация или тег. Двигайте узлы для взаимодействия, используйте колесо мыши для масштабирования, кликайте для чтения.",
+            loading: "Загрузка базы знаний...",
+            backToFeed: "Назад к ленте",
+            searchPlaceholder: "Поиск постов, тегов или ссылок...",
+            limit: "Лимит",
+            hideTags: "Скрыть теги",
+            showTags: "Показать теги",
+            freeze: "Заморозить",
+            simulate: "Симуляция",
+            recenterTitle: "Центрировать и стабилизировать",
+            posts: "Посты",
+            tags: "Теги",
+            links: "Связи",
+            postFeed: "Лента постов",
+            clearFilter: "Сбросить фильтр",
+            date: "Дата",
+            tagsHeading: "Теги",
+            noPostsFound: "Посты не найдены",
+            noPostsHint: "Попробуйте сбросить теги или изменить поисковый запрос.",
             quickFilters: "База знаний:",
             filterAll: "Все",
             filters: [

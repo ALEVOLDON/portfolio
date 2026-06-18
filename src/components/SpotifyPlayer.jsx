@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import Icon from './Icon';
 import AudioService from '../services/AudioService';
+import { translations } from '../data/translations';
 
-const SpotifyPlayer = () => {
+const SpotifyPlayer = ({ language = 'en' }) => {
+    const t = translations[language].spotify;
     const [isOpen, setIsOpen] = useState(false);
 
     const togglePlayer = () => {
@@ -18,7 +20,8 @@ const SpotifyPlayer = () => {
                 className={`flex items-center justify-center w-12 h-12 rounded-full glass-panel border border-white/10 text-cyber-cyan hover:text-white hover:border-cyber-cyan/50 hover:shadow-[0_0_20px_rgba(34,211,238,0.3)] transition-all duration-300 hover:scale-105 cursor-pointer relative ${
                     isOpen ? 'bg-cyber-cyan/10 text-white border-cyber-cyan/30 shadow-[0_0_15px_rgba(34,211,238,0.2)]' : ''
                 }`}
-                title="System Soundtrack"
+                title={t.buttonTitle}
+                aria-label={t.buttonTitle}
             >
                 {isOpen ? (
                     <Icon name="x" size={20} />
@@ -43,7 +46,7 @@ const SpotifyPlayer = () => {
                 <div className="flex justify-between items-center mb-3 pb-2 border-b border-white/5">
                     <div className="flex items-center gap-1.5">
                         <span className="w-1.5 h-1.5 rounded-full bg-cyber-cyan animate-pulse"></span>
-                        <h4 className="text-[10px] font-black text-white uppercase tracking-widest font-cyber">SOUNDTRACK</h4>
+                        <h4 className="text-[10px] font-black text-white uppercase tracking-widest font-cyber">{t.soundtrack}</h4>
                     </div>
                     <span className="text-[7px] font-mono text-cyber-cyan/70 tracking-widest">SYS_STREAM_OK</span>
                 </div>
@@ -52,6 +55,7 @@ const SpotifyPlayer = () => {
                 <div className="relative rounded-xl overflow-hidden border border-white/5 bg-black/40 shadow-inner">
                     <iframe
                         data-testid="embed-iframe"
+                        title={t.iframeTitle}
                         style={{ borderRadius: '12px', display: 'block' }}
                         src="https://open.spotify.com/embed/playlist/37i9dQZEVXcIaHKy3iJexd?utm_source=generator&theme=0"
                         width="100%"

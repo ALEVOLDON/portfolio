@@ -102,6 +102,7 @@ const seededRandom = (value) => {
 
 const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
   const t = translations[language].brain;
+  const dateLocale = language === 'ru' ? 'ru-RU' : 'en-US';
   const [posts, setPosts] = useState([]);
   const [selectedPost, setSelectedPost] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -959,13 +960,13 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
         {/* Header */}
         <div className="mb-10 text-center md:text-left reveal reveal-scale active">
           <div className="inline-block px-3 py-1 bg-cyber-purple/10 border border-cyber-purple/20 text-cyber-purple text-xs font-black tracking-widest uppercase rounded-full mb-3">
-            Mind Vault
+            {t.badge}
           </div>
           <h2 className="text-3xl md:text-5xl font-black tracking-wider uppercase mb-4">
-            Mind <span className="text-cyber-cyan">Vault</span> & Knowledge Graph
+            {t.heading} <span className="text-cyber-cyan">{t.headingAccent}</span> {t.headingSuffix}
           </h2>
           <p className="text-gray-400 max-w-2xl text-sm md:text-base font-display">
-            {t.subheading}. {language === 'ru' ? 'Каждый узел — это публикация или тег. Двигайте узлы для взаимодействия, используйте колесо мыши для масштабирования, кликайте для чтения.' : 'Each node represents a post or tag. Drag nodes or pan to explore, use scroll wheel to zoom, and click to read.'}
+            {t.subheading}. {t.hint}
           </p>
         </div>
 
@@ -977,7 +978,7 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 w-4 h-4" />
             <input 
               type="text"
-              placeholder="Search posts, tags, or links..."
+              placeholder={t.searchPlaceholder}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full bg-cyber-dark/80 border border-white/10 hover:border-cyber-cyan/50 focus:border-cyber-cyan text-white text-sm pl-10 pr-4 py-3 rounded-xl backdrop-blur-md outline-none transition-all"
@@ -1008,7 +1009,7 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
             {/* Post limit slider */}
             <div className="flex items-center gap-2 px-4 py-2.5 bg-cyber-dark/60 border border-white/5 rounded-xl text-xs text-gray-400 backdrop-blur-md">
               <Sliders className="w-3.5 h-3.5 text-cyber-cyan" />
-              <span>Limit: {limit}</span>
+              <span>{t.limit}: {limit}</span>
               <input 
                 type="range"
                 min="20"
@@ -1030,7 +1031,7 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
               }`}
             >
               <Hash className="w-3.5 h-3.5" />
-              <span>{showTags ? 'Hide Tags' : 'Show Tags'}</span>
+              <span>{showTags ? t.hideTags : t.showTags}</span>
             </button>
 
             {/* Physics switch */}
@@ -1042,14 +1043,15 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
                   : 'bg-cyber-dark/40 border-white/5 text-gray-400 hover:text-white hover:border-white/10'
               }`}
             >
-              <span>{physicsEnabled ? 'Freeze' : 'Simulate'}</span>
+              <span>{physicsEnabled ? t.freeze : t.simulate}</span>
             </button>
 
             {/* Recenter button */}
             <button 
               onClick={handleResetLayout}
               className="p-2.5 bg-cyber-dark/40 hover:bg-cyber-dark/80 border border-white/5 hover:border-white/20 text-gray-400 hover:text-white rounded-full transition-all cursor-pointer"
-              title="Recenter and stabilize"
+              title={t.recenterTitle}
+              aria-label={t.recenterTitle}
             >
               <RotateCcw className="w-4 h-4" />
             </button>
@@ -1098,16 +1100,16 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
             <div className="absolute left-4 top-4 z-10 bg-cyber-black/70 border border-white/5 backdrop-blur-md px-3 py-2.5 rounded-lg text-[10px] md:text-xs text-gray-400 space-y-1.5 pointer-events-none">
               <div className="flex items-center gap-2">
                 <span className="w-2 h-2 bg-cyber-cyan rounded-full shadow-[0_0_6px_var(--primary-color)]" />
-                <span>Posts ({filteredPosts.length})</span>
+                <span>{t.posts} ({filteredPosts.length})</span>
               </div>
               {showTags && (
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 bg-cyber-purple rounded-full shadow-[0_0_6px_var(--secondary-color)]" />
-                  <span>Tags ({graphData.nodes.filter(n => n.type === 'tag').length})</span>
+                  <span>{t.tags} ({graphData.nodes.filter(n => n.type === 'tag').length})</span>
                 </div>
               )}
               <div className="border-t border-white/5 my-1" />
-              <div className="text-[10px] text-gray-500">Links: {graphData.links.length}</div>
+              <div className="text-[10px] text-gray-500">{t.links}: {graphData.links.length}</div>
             </div>
 
             {/* Canvas wrapper */}
@@ -1123,7 +1125,7 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
               {loadingData && (
                 <div className="absolute inset-0 bg-cyber-dark/80 backdrop-blur-sm flex flex-col items-center justify-center space-y-4 z-10">
                   <div className="w-12 h-12 border-4 border-cyber-cyan border-t-transparent rounded-full animate-spin shadow-[0_0_15px_rgba(var(--primary-color-rgb),0.2)]"></div>
-                  <div className="text-sm font-cyber uppercase tracking-widest text-cyber-cyan animate-pulse">Loading Knowledge Base...</div>
+                  <div className="text-sm font-cyber uppercase tracking-widest text-cyber-cyan animate-pulse">{t.loading}</div>
                 </div>
               )}
             </div>
@@ -1142,7 +1144,7 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
                     className="flex items-center gap-1.5 text-xs text-cyber-cyan font-bold uppercase tracking-wider hover:text-white transition-colors"
                   >
                     <ArrowLeft className="w-3.5 h-3.5" />
-                    <span>Back to Feed</span>
+                    <span>{t.backToFeed}</span>
                   </button>
                   <span className="text-[10px] text-gray-500 font-cyber">#{selectedPost.id}</span>
                 </div>
@@ -1154,10 +1156,10 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
                   <div className="grid grid-cols-2 gap-2">
                     <div className="bg-white/5 px-2.5 py-2 rounded-lg border border-white/5 flex flex-col">
                       <span className="text-[9px] uppercase text-gray-500 font-semibold mb-0.5 flex items-center gap-1">
-                        <Calendar className="w-3 h-3" /> Date
+                        <Calendar className="w-3 h-3" /> {t.date}
                       </span>
                       <span className="text-[11px] text-white">
-                        {new Date(selectedPost.date).toLocaleDateString('en-US', {
+                        {new Date(selectedPost.date).toLocaleDateString(dateLocale, {
                           year: 'numeric',
                           month: 'short',
                           day: 'numeric'
@@ -1189,7 +1191,7 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
                   {/* Tags */}
                   {selectedPost.tags && selectedPost.tags.length > 0 && (
                     <div className="pt-3 border-t border-white/5">
-                      <div className="text-[9px] uppercase text-gray-500 font-semibold mb-1.5">Tags</div>
+                      <div className="text-[9px] uppercase text-gray-500 font-semibold mb-1.5">{t.tagsHeading}</div>
                       <div className="flex flex-wrap gap-1">
                         {selectedPost.tags.map(tag => (
                           <button 
@@ -1230,14 +1232,14 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
                 <div className="p-4 border-b border-white/10 flex justify-between items-center bg-cyber-black/40">
                   <div className="flex items-center gap-1.5 text-xs text-cyber-purple font-black uppercase tracking-wider">
                     <BookOpen className="w-3.5 h-3.5 text-cyber-purple" />
-                    <span>Post Feed ({filteredPosts.length})</span>
+                    <span>{t.postFeed} ({filteredPosts.length})</span>
                   </div>
                   {selectedTag && (
                     <button 
                       onClick={() => setSelectedTag(null)}
                       className="text-[9px] text-gray-500 hover:text-white uppercase font-bold"
                     >
-                      Clear Filter
+                      {t.clearFilter}
                     </button>
                   )}
                 </div>
@@ -1254,7 +1256,7 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
                         <div>
                           <div className="flex justify-between items-start gap-2 mb-1.5">
                             <span className="text-[9px] text-gray-500">
-                              {new Date(post.date).toLocaleDateString('en-US', {
+                              {new Date(post.date).toLocaleDateString(dateLocale, {
                                 month: 'short',
                                 day: 'numeric',
                                 year: 'numeric'
@@ -1283,9 +1285,9 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
                   ) : (
                     <div className="flex flex-col items-center justify-center h-full text-gray-500 space-y-2 py-10">
                       <Search className="w-6 h-6 opacity-30 text-cyber-purple" />
-                      <span className="text-xs uppercase tracking-wider font-semibold">No posts found</span>
+                      <span className="text-xs uppercase tracking-wider font-semibold">{t.noPostsFound}</span>
                       <span className="text-[10px] text-center text-gray-600 max-w-[180px]">
-                        Try clearing tags or changing search query.
+                        {t.noPostsHint}
                       </span>
                     </div>
                   )}

@@ -12,6 +12,7 @@ import ScrollToTop from './components/ScrollToTop';
 import SpotifyPlayer from './components/SpotifyPlayer';
 import AudioService from './services/AudioService';
 import ModularSynth from './components/ModularSynth';
+import { translations } from './data/translations';
 import {
   FALLBACK_PROFILE,
   FALLBACK_REPOS,
@@ -159,6 +160,15 @@ const App = () => {
 
   // Sync theme changes with the audio service and document body class
   useEffect(() => {
+    const meta = translations[language].meta;
+    if (meta) {
+      document.title = meta.title;
+      const description = document.querySelector('meta[name="description"]');
+      if (description) description.setAttribute('content', meta.description);
+    }
+  }, [language]);
+
+  useEffect(() => {
     AudioService.setTheme(bgConfig.theme);
     
     const body = document.body;
@@ -270,7 +280,7 @@ const App = () => {
       </Suspense>
       <div className="cyber-grid-overlay" />
       <Navbar activeSection={activeSection} scrollTo={scrollTo} language={language} setLanguage={setLanguage} />
-      <SpotifyPlayer />
+      <SpotifyPlayer language={language} />
       <main>
         <Hero theme={bgConfig.theme} profile={profile} loading={loading} scrollTo={scrollTo} language={language} />
         <WhatICreate language={language} />

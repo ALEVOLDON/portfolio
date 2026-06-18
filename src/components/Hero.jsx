@@ -56,7 +56,7 @@ const Hero = ({ theme = 'cyber', profile, loading, scrollTo, language = 'en' }) 
             
             {/* Scroll Down Indicator */}
             <div className="absolute bottom-12 left-0 right-0 mx-auto w-fit hidden md:flex flex-col items-center gap-2 text-gray-500 font-mono text-[10px] uppercase tracking-widest pointer-events-none opacity-60 hover:opacity-100 transition-opacity duration-300">
-                <span>Scroll Down</span>
+                <span>{t.scrollDown}</span>
                 <div className="w-5 h-8 border-2 border-gray-500 rounded-full flex justify-center p-1">
                     <div className="w-1.5 h-1.5 bg-cyber-cyan rounded-full animate-bounce"></div>
                 </div>

@@ -28,7 +28,10 @@ const loadTurnstile = () => {
 
             if (existing) {
                 existing.addEventListener('load', () => resolve(window.turnstile), { once: true });
-                existing.addEventListener('error', () => reject(new Error('Failed to load Turnstile.')), { once: true });
+                existing.addEventListener('error', () => {
+                    turnstileLoader = null;
+                    reject(new Error('Failed to load Turnstile.'));
+                }, { once: true });
                 return;
             }
 
@@ -38,7 +41,11 @@ const loadTurnstile = () => {
             script.async = true;
             script.defer = true;
             script.onload = () => resolve(window.turnstile);
-            script.onerror = () => reject(new Error('Failed to load Turnstile.'));
+            script.onerror = () => {
+                turnstileLoader = null;
+                script.remove();
+                reject(new Error('Failed to load Turnstile.'));
+            };
             document.head.appendChild(script);
         });
     }
@@ -53,6 +60,8 @@ const Contact = ({ language = 'en' }) => {
     const [feedback, setFeedback] = useState('');
     const [turnstileToken, setTurnstileToken] = useState('');
     const [turnstileReady, setTurnstileReady] = useState(false);
+    const [turnstileError, setTurnstileError] = useState(null);
+    const [retryCount, setRetryCount] = useState(0);
     const widgetRef = useRef(null);
     const widgetIdRef = useRef(null);
     const siteKey = import.meta.env.VITE_TURNSTILE_SITE_KEY;
@@ -82,24 +91,31 @@ const Contact = ({ language = 'en' }) => {
                     callback: (token) => {
                         setTurnstileToken(token);
                         setTurnstileReady(true);
+                        setTurnstileError(null);
+                        if (status === 'error') {
+                            setStatus('idle');
+                            setFeedback('');
+                        }
                     },
                     'expired-callback': () => {
                         setTurnstileToken('');
                         setTurnstileReady(false);
                     },
-                    'error-callback': () => {
+                    'error-callback': (code) => {
+                        console.error('Turnstile error code:', code);
                         setTurnstileToken('');
                         setTurnstileReady(false);
+                        setTurnstileError(code || 'unknown');
                         setStatus('error');
-                        setFeedback('Spam protection failed to load. Refresh and try again.');
                     }
                 });
             })
-            .catch(() => {
+            .catch((err) => {
+                console.error('Turnstile load error:', err);
                 if (!cancelled) {
                     setTurnstileReady(false);
+                    setTurnstileError('load-failed');
                     setStatus('error');
-                    setFeedback('Spam protection failed to load. Refresh and try again.');
                 }
             });
 
@@ -110,15 +126,24 @@ const Contact = ({ language = 'en' }) => {
                 widgetIdRef.current = null;
             }
         };
-    }, [siteKey, turnstileEnabled]);
+    }, [siteKey, turnstileEnabled, retryCount]);
 
     const resetTurnstile = () => {
         setTurnstileToken('');
         setTurnstileReady(false);
+        setTurnstileError(null);
+        setStatus('idle');
+        setFeedback('');
 
         if (window.turnstile && widgetIdRef.current !== null) {
-            window.turnstile.reset(widgetIdRef.current);
+            try {
+                window.turnstile.reset(widgetIdRef.current);
+            } catch (err) {
+                console.error('Failed to reset Turnstile widget:', err);
+            }
         }
+
+        setRetryCount((prev) => prev + 1);
     };
 
     const updateField = (event) => {
@@ -280,7 +305,18 @@ const Contact = ({ language = 'en' }) => {
                             {status === 'sending' ? t.btnSending : t.btnSend}
                         </button>
                         <p className={`text-sm ${status === 'error' ? 'text-red-400' : 'text-gray-400'}`}>
-                            {feedback ? (
+                            {status === 'error' && turnstileError ? (
+                                <span>
+                                    {t.errorMsg} (Code: {turnstileError})
+                                    <button
+                                        type="button"
+                                        onClick={resetTurnstile}
+                                        className="ml-2 underline hover:text-white cursor-pointer font-bold transition-colors"
+                                    >
+                                        {language === 'ru' ? 'Повторить' : 'Retry'}
+                                    </button>
+                                </span>
+                            ) : feedback ? (
                                 feedback === 'Message sent.' || feedback === 'Message sent. I will get it in Telegram.'
                                     ? t.successMsg
                                     : feedback === 'Spam protection failed to load. Refresh and try again.'

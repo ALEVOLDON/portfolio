@@ -110,9 +110,6 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
   const [modelLoaded, setModelLoaded] = useState(false);
   const [loadError, setLoadError] = useState(false);
 
-  const avatarSrc = profile?.avatar_url || '/avatar-320.jpg';
-  const avatarAlt = profile?.name || 'Vladimir Rybalsky';
-
   const themeColors = React.useMemo(() => {
     switch (theme) {
       case 'solar':
@@ -741,18 +738,16 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
       />
 
       {/* Main container */}
-      <div className="relative w-64 h-64 rounded-full overflow-hidden border border-cyber-cyan/30 bg-cyber-black/80 flex items-center justify-center">
-        <img
-          src={avatarSrc}
-          alt={avatarAlt}
-          width={256}
-          height={256}
-          fetchPriority="high"
-          decoding="async"
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 z-0 ${
-            modelLoaded && !loadError ? 'opacity-0' : 'opacity-100'
-          }`}
-        />
+      <div className="relative w-64 h-64 rounded-full overflow-hidden border border-cyber-cyan/30 bg-cyber-black flex items-center justify-center">
+        {loadError && (
+          <img
+            src={profile?.avatar_url || '/avatar-320.jpg'}
+            alt={profile?.name || 'Avatar'}
+            width={256}
+            height={256}
+            className="absolute inset-0 w-full h-full object-cover z-0"
+          />
+        )}
 
         {/* Holographic scanner line overlay */}
         {!loadError && (

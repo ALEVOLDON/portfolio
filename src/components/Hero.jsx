@@ -15,7 +15,7 @@ const Hero = ({ theme = 'cyber', profile, loading, scrollTo, language = 'en' }) 
                 ) : (
                     <div className="reveal reveal-scale">
                         <div className="animate-float">
-                            <Suspense fallback={<AvatarStatic profile={profile} />}>
+                            <Suspense fallback={<AvatarStatic />}>
                                 <InteractiveAvatar theme={theme} profile={profile} loading={loading} language={language} />
                             </Suspense>
                             <h1 className="text-3xl md:text-5xl font-black mb-6 tracking-widest leading-tight font-cyber">

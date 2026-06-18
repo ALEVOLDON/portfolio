@@ -1,7 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-import * as THREE from 'three';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-import Icon from './Icon';
 import { quotesData } from '../data/quotes';
 
 // Helper to wrap text for the canvas
@@ -113,6 +110,9 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
   const [modelLoaded, setModelLoaded] = useState(false);
   const [loadError, setLoadError] = useState(false);
 
+  const avatarSrc = profile?.avatar_url || '/avatar-320.jpg';
+  const avatarAlt = profile?.name || 'Vladimir Rybalsky';
+
   const themeColors = React.useMemo(() => {
     switch (theme) {
       case 'solar':
@@ -155,27 +155,8 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
     }
   }, [theme]);
 
-  // Helper to generate a soft circular glow texture for points/particles.
-  const createDotTexture = (colors) => {
-    const canvas = document.createElement('canvas');
-    canvas.width = 16;
-    canvas.height = 16;
-    const ctx = canvas.getContext('2d');
-    
-    const gradient = ctx.createRadialGradient(8, 8, 0, 8, 8, 8);
-    gradient.addColorStop(0, 'rgba(255, 255, 255, 1.0)');
-    gradient.addColorStop(0.3, `rgba(${colors.primaryRgb}, 0.85)`); // Theme core
-    gradient.addColorStop(0.7, `rgba(${colors.secondaryRgb}, 0.25)`); // Theme glow
-    gradient.addColorStop(1.0, 'rgba(0, 0, 0, 0)');
-    
-    ctx.fillStyle = gradient;
-    ctx.fillRect(0, 0, 16, 16);
-    
-    return new THREE.CanvasTexture(canvas);
-  };
-
   useEffect(() => {
-    if (loading) return;
+    if (loading || loadError) return;
 
     let isMounted = true;
     let renderer, scene, camera;
@@ -189,7 +170,25 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
     const mouse = { x: 0, y: 0, targetX: 0, targetY: 0 };
     let isHovered = false;
 
-    const initThree = () => {
+    const createDotTexture = (THREE, colors) => {
+      const canvas = document.createElement('canvas');
+      canvas.width = 16;
+      canvas.height = 16;
+      const ctx = canvas.getContext('2d');
+
+      const gradient = ctx.createRadialGradient(8, 8, 0, 8, 8, 8);
+      gradient.addColorStop(0, 'rgba(255, 255, 255, 1.0)');
+      gradient.addColorStop(0.3, `rgba(${colors.primaryRgb}, 0.85)`);
+      gradient.addColorStop(0.7, `rgba(${colors.secondaryRgb}, 0.25)`);
+      gradient.addColorStop(1.0, 'rgba(0, 0, 0, 0)');
+
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, 16, 16);
+
+      return new THREE.CanvasTexture(canvas);
+    };
+
+    const initThree = (THREE, GLTFLoader) => {
       if (!containerRef.current) return;
 
       const width = 256;
@@ -312,7 +311,7 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
           modelContainer.position.y = -0.25;
 
           // Create the glowing dot texture
-          const dotTexture = createDotTexture(themeColors);
+          const dotTexture = createDotTexture(THREE, themeColors);
 
           // Traverse model and apply hybrid cyberpunk rendering (cyber-glass + glowing particles)
           const meshes = [];
@@ -471,62 +470,26 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
       animate();
     };
 
-    initThree();
-
-    const container = containerRef.current;
-    if (!container) return;
-
-    const handleMouseMove = (e) => {
-      isHovered = true;
-      const rect = container.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-
-      // Normalize between -0.5 and 0.5
-      const normX = (x / rect.width) - 0.5;
-      const normY = (y / rect.height) - 0.5;
-
-      // Set mouse target values
-      mouse.x = normX;
-      mouse.y = normY;
-
-      // Move point light to track cursor for glossy reflections
-      if (pointLight) {
-        pointLight.position.x = normX * 3.5;
-        pointLight.position.y = -normY * 3.5;
-      }
-    };
-
-    const handleMouseLeave = () => {
-      isHovered = false;
-    };
-
-    container.addEventListener('mousemove', handleMouseMove);
-    container.addEventListener('mouseleave', handleMouseLeave);
-
-    return () => {
+    const disposeThreeScene = () => {
       isMounted = false;
       cancelAnimationFrame(animationFrameId);
+
+      const container = containerRef.current;
       if (container) {
-        container.removeEventListener('mousemove', handleMouseMove);
-        container.removeEventListener('mouseleave', handleMouseLeave);
         container.innerHTML = '';
       }
-      
-      // Dispose of scene resources without duplicating or missing shared objects
+
       if (scene) {
         const disposedGeometries = new Set();
         const disposedMaterials = new Set();
         const disposedTextures = new Set();
 
         scene.traverse((object) => {
-          // Dispose geometry (shared between mesh and points)
           if (object.geometry && !disposedGeometries.has(object.geometry)) {
             object.geometry.dispose();
             disposedGeometries.add(object.geometry);
           }
 
-          // Dispose materials and textures
           if (object.material) {
             const materials = Array.isArray(object.material) ? object.material : [object.material];
             materials.forEach((mat) => {
@@ -542,9 +505,64 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
           }
         });
       }
+
       if (renderer) renderer.dispose();
     };
-  }, [loading, theme, themeColors]);
+
+    let container = null;
+    let handleMouseMove = null;
+    let handleMouseLeave = null;
+
+    Promise.all([
+      import('three'),
+      import('three/examples/jsm/loaders/GLTFLoader.js')
+    ])
+      .then(([THREE, gltfModule]) => {
+        const { GLTFLoader } = gltfModule;
+        if (!isMounted || !containerRef.current) return;
+
+        initThree(THREE, GLTFLoader);
+
+        container = containerRef.current;
+        if (!container) return;
+
+        handleMouseMove = (e) => {
+          isHovered = true;
+          const rect = container.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const normX = (x / rect.width) - 0.5;
+          const normY = (y / rect.height) - 0.5;
+
+          mouse.x = normX;
+          mouse.y = normY;
+
+          if (pointLight) {
+            pointLight.position.x = normX * 3.5;
+            pointLight.position.y = -normY * 3.5;
+          }
+        };
+
+        handleMouseLeave = () => {
+          isHovered = false;
+        };
+
+        container.addEventListener('mousemove', handleMouseMove);
+        container.addEventListener('mouseleave', handleMouseLeave);
+      })
+      .catch((error) => {
+        console.error('Failed to load 3D avatar runtime:', error);
+        if (isMounted) setLoadError(true);
+      });
+
+    return () => {
+      if (container && handleMouseMove && handleMouseLeave) {
+        container.removeEventListener('mousemove', handleMouseMove);
+        container.removeEventListener('mouseleave', handleMouseLeave);
+      }
+      disposeThreeScene();
+    };
+  }, [loading, loadError, theme, themeColors]);
 
   // 2D Emitter Canvas Animation Loop
   useEffect(() => {
@@ -705,22 +723,6 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
     }
   };
 
-  if (loadError) {
-    // Elegant fallback to avatar image if GLB load fails
-    return (
-      <div className="relative inline-block mb-8 group cursor-pointer">
-        <div className="absolute -inset-1 bg-gradient-to-r from-cyber-cyan to-cyber-purple rounded-full blur opacity-50 group-hover:opacity-100 transition duration-500"></div>
-        <img
-          src={profile?.avatar_url || '/avatar-320.jpg'}
-          alt="Avatar Fallback"
-          width="256"
-          height="256"
-          className="relative w-64 h-64 rounded-full border-2 border-black object-cover"
-        />
-      </div>
-    );
-  }
-
   return (
     <div 
       onClick={handleAvatarClick}
@@ -740,24 +742,42 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
 
       {/* Main container */}
       <div className="relative w-64 h-64 rounded-full overflow-hidden border border-cyber-cyan/30 bg-cyber-black/80 flex items-center justify-center">
-        {/* Holographic scanner line overlay */}
-        <div className="absolute inset-0 pointer-events-none z-20 overflow-hidden rounded-full">
-          <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-cyber-cyan to-transparent shadow-[0_0_8px_var(--primary-color)] animate-scanline opacity-60"></div>
-        </div>
-
-        {/* Diagnostic HUD text */}
-        <div className="absolute top-2 left-1/2 transform -translate-x-1/2 font-mono text-[7px] text-cyber-cyan/60 tracking-widest z-10 uppercase pointer-events-none group-hover:text-cyber-cyan transition-colors">
-          GLB_3D_SECURE
-        </div>
-
-        {/* WebGL Canvas */}
-        <div
-          ref={containerRef}
-          className="w-64 h-64 flex items-center justify-center"
+        <img
+          src={avatarSrc}
+          alt={avatarAlt}
+          width={256}
+          height={256}
+          fetchPriority="high"
+          decoding="async"
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 z-0 ${
+            modelLoaded && !loadError ? 'opacity-0' : 'opacity-100'
+          }`}
         />
 
+        {/* Holographic scanner line overlay */}
+        {!loadError && (
+          <div className="absolute inset-0 pointer-events-none z-20 overflow-hidden rounded-full">
+            <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-cyber-cyan to-transparent shadow-[0_0_8px_var(--primary-color)] animate-scanline opacity-60"></div>
+          </div>
+        )}
+
+        {/* Diagnostic HUD text */}
+        {!loadError && (
+          <div className="absolute top-2 left-1/2 transform -translate-x-1/2 font-mono text-[7px] text-cyber-cyan/60 tracking-widest z-10 uppercase pointer-events-none group-hover:text-cyber-cyan transition-colors">
+            GLB_3D_SECURE
+          </div>
+        )}
+
+        {/* WebGL Canvas */}
+        {!loadError && (
+          <div
+            ref={containerRef}
+            className="absolute inset-0 w-full h-full flex items-center justify-center z-10"
+          />
+        )}
+
         {/* Loading Progress */}
-        {!modelLoaded && (
+        {!loadError && !modelLoaded && (
           <div className="absolute inset-0 flex flex-col items-center justify-center bg-cyber-black/95 z-30 pointer-events-none">
             <div className="relative w-32 h-32 flex items-center justify-center">
               {/* Outer spinning tech ring */}

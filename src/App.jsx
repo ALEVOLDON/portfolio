@@ -6,7 +6,7 @@ import Hero from './components/Hero';
 import WhatICreate from './components/WhatICreate';
 import About from './components/About';
 import Projects from './components/Projects';
-import BrainGraph from './components/BrainGraph';
+import DeferredBrainGraph from './components/DeferredBrainGraph';
 import Contact from './components/Contact';
 import ScrollToTop from './components/ScrollToTop';
 import SpotifyPlayer from './components/SpotifyPlayer';
@@ -276,7 +276,7 @@ const App = () => {
         <WhatICreate language={language} />
         <Projects repos={repos} loading={loading} language={language} />
         <About profile={profile} readme={readme} stats={stats} language={language} />
-        <BrainGraph theme={bgConfig.theme} language={language} />
+        <DeferredBrainGraph theme={bgConfig.theme} language={language} />
         <Contact language={language} />
       </main>
       <ScrollToTop />

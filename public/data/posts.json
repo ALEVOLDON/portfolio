@@ -1,6 +1,27 @@
 {
   "posts": [
     {
+      "id": 3066,
+      "date": "2026-06-18T11:54:18.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/06/2026-06-18T11-54-18-4...",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3066,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "lmstudio",
+        "apple",
+        "kimik26",
+        "wwdc",
+        "ai",
+        "studio",
+        "iphone",
+        "kimi"
+      ],
+      "content": "🚀 LM Studio и Apple: Kimi K2.6 на Mac Studio\n\nLM Studio совместно с Apple запустила 1T-параметровую модель Kimi K2.6 на кластере из четырёх Mac Studio с помощью preview-версии своего ПО для демонстрации на WWDC.\n\nПоказан безопасный удалённый доступ к модели с MacBook Neo и iPhone через LM Link, обеспечивающий приватный frontier-scale ИИ на потребительском оборудовании.\n\nНа фото изображён физический кластер устройств и интерфейс приложения на iPhone с 1,51 ТБ unified memory, подключёнными Mac Studio и загруженными моделями.\n\n#LMStudio #Apple #KimiK26 #WWDC #AI\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-18T11-54-18-458Z-5683dced.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/06/2026-06-18T11-54-18-458Z-5683dced.jpg\n\n## Tags\n\n#telegram-import #live-sync #lmstudio #apple #kimik26 #wwdc #ai #studio #iphone #kimi"
+    },
+    {
       "id": 3065,
       "date": "2026-06-18T10:18:09.000Z",
       "title": "🎵 Полноценная AI-студия музыки теперь запускается локально в один клик",

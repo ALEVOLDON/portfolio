@@ -184,6 +184,7 @@ export const translations = {
             tagsHeading: "Tags",
             noPostsFound: "No posts found",
             noPostsHint: "Try clearing tags or changing search query.",
+            untitledPost: "Untitled post",
             quickFilters: "Knowledge Base:",
             filterAll: "All",
             filters: [
@@ -396,6 +397,7 @@ export const translations = {
             tagsHeading: "Теги",
             noPostsFound: "Посты не найдены",
             noPostsHint: "Попробуйте сбросить теги или изменить поисковый запрос.",
+            untitledPost: "Без названия",
             quickFilters: "База знаний:",
             filterAll: "Все",
             filters: [

@@ -88,6 +88,59 @@ const stripHeadingMatchingTitle = (content, title) => {
   return stripLeadingPlainTitleRepeat(body, title);
 };
 
+const stripInlineMarkdown = (value) =>
+  String(value || '')
+    .replace(/!\[([^\]]*)\]\([^)]+\)/g, '$1')
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    .replace(/\*\*|__|\*|_/g, '')
+    .replace(/^#+\s+/, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+const isBrokenPostTitle = (title) => {
+  const value = String(title || '').trim();
+  if (!value) return true;
+  // Cover image markdown — including truncated sync values ending in "..."
+  if (/^!\[/i.test(value)) return true;
+  if (/^https?:\/\//i.test(value)) return true;
+  if (/^\[[^\]]+\]\(https?:\/\//i.test(value)) return true;
+  if (/^\[[^\]]+\]\([^)]+\)$/.test(value)) return true;
+  if (/\]\(https?:\/\/\S+\.{3}$/.test(value)) return true;
+  return false;
+};
+
+const extractTitleFromContent = (content) => {
+  for (const line of String(content || '').split(/\r?\n/)) {
+    const trimmed = line.trim();
+    if (!trimmed) continue;
+    if (/^##\s+(Media|Links|Tags)\b/i.test(trimmed)) break;
+    if (/^#{1,6}\s+/.test(trimmed)) {
+      return stripInlineMarkdown(trimmed);
+    }
+    if (/^[-*]\s+\[?(photo|video|image|audio)\]?/i.test(trimmed)) continue;
+
+    const cleaned = stripInlineMarkdown(trimmed);
+    if (cleaned.length > 3) return cleaned;
+  }
+  return '';
+};
+
+const resolvePostTitle = (post, fallback = 'Untitled post') => {
+  const raw = String(post?.title || '').trim();
+  if (!isBrokenPostTitle(raw)) return stripInlineMarkdown(raw);
+
+  const fromContent = extractTitleFromContent(post?.content);
+  if (fromContent) return fromContent;
+
+  return fallback;
+};
+
+const stripSyncMetadata = (content) => {
+  const body = String(content || '');
+  const match = body.search(/\n## (Media|Links|Tags)\s*\n/i);
+  return (match === -1 ? body : body.slice(0, match)).trim();
+};
+
 const seededRandom = (value) => {
   const text = String(value);
   let hash = 2166136261;
@@ -227,7 +280,7 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
     if (searchQuery.trim()) {
       const q = searchQuery.toLowerCase();
       result = result.filter(p => 
-        p.title.toLowerCase().includes(q) || 
+        resolvePostTitle(p).toLowerCase().includes(q) || 
         p.content.toLowerCase().includes(q) ||
         p.tags.some(t => t.toLowerCase().includes(q))
       );
@@ -249,7 +302,7 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
       const node = {
         id: `post-${post.id}`,
         type: 'post',
-        label: post.title,
+        label: resolvePostTitle(post, t.untitledPost),
         size: 7,
         color: themeColors.primary,
         glowColor: themeColors.primaryGlow,
@@ -366,16 +419,16 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
   const parsedMarkdown = useMemo(() => {
     if (!selectedPost) return '';
     try {
-      const displayContent = stripHeadingMatchingTitle(
-        selectedPost.content || '',
-        selectedPost.title || ''
+      const displayTitle = resolvePostTitle(selectedPost, t.untitledPost);
+      const displayContent = stripSyncMetadata(
+        stripHeadingMatchingTitle(selectedPost.content || '', displayTitle)
       );
       const rawHtml = marked.parse(displayContent);
       return DOMPurify.sanitize(rawHtml);
     } catch {
       return selectedPost.content || '';
     }
-  }, [selectedPost]);
+  }, [selectedPost, t.untitledPost]);
 
   // Main Render & Physics simulation loop (runs on mount only, using refs to avoid tearing down the canvas)
   useEffect(() => {
@@ -1179,7 +1232,7 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
 
                   {/* Title */}
                   <h3 className="text-lg font-black text-white leading-snug border-b border-white/5 pb-3">
-                    {selectedPost.title}
+                    {resolvePostTitle(selectedPost, t.untitledPost)}
                   </h3>
 
                   {/* Body Content */}
@@ -1265,7 +1318,7 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
                             <ChevronRight className="w-3.5 h-3.5 text-gray-600 group-hover:text-cyber-cyan transition-colors" />
                           </div>
                           <h4 className="text-xs md:text-sm font-bold text-white group-hover:text-cyber-cyan line-clamp-2 transition-colors">
-                            {post.title}
+                            {resolvePostTitle(post, t.untitledPost)}
                           </h4>
                         </div>
                         {post.tags && post.tags.length > 0 && (

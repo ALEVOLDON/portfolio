@@ -32,3 +32,9 @@ dist-ssr
 
 # Local scratch/debug directories
 scratch/
+
+# Lighthouse and local audit reports (generated during dev)
+lighthouse*.json
+
+# Cursor agent terminal session logs (created in workspace during dev)
+terminals/

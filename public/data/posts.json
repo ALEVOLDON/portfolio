@@ -1,6 +1,66 @@
 {
   "posts": [
     {
+      "id": 3081,
+      "date": "2026-06-20T12:17:13.000Z",
+      "title": "Посмотрел интервью «I built a $250M AI Company in under 3 Months» и поймал себя...",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3081,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "ai",
+        "aiagents",
+        "automation",
+        "startups",
+        "futureofwork",
+        "vibecoding",
+        "artificialintelligence",
+        "nocode",
+        "aicompanies",
+        "design",
+        "возможно",
+        "десятки",
+        "или"
+      ],
+      "content": "Компания с оценкой $250 млн, созданная за три месяца, привлекла десятки миллионов инвестиций и при этом делает ставку не на огромный штат сотрудников, а на ИИ и автоматизацию.\n\nНе знаю, насколько оправдаются все эти громкие заявления, но сама идея кажется любопытной.\n\nРаньше, чтобы построить серьезный бизнес, нужны были десятки или сотни людей. Сегодня всё чаще появляются команды из нескольких человек, которые с помощью AI-агентов, автоматизации и новых инструментов способны делать то, для чего раньше требовались целые отделы.\n\nМне кажется, что ближайшие годы будут временем микрокомпаний — небольших команд или даже одиночек, которые смогут создавать продукты и конкурировать с гораздо более крупными игроками.\n\nИ, возможно, главный вопрос уже не «Сколько у вас сотрудников?», а «Насколько эффективно вы умеете работать вместе с ИИ?».\n\nИнтересное время. Похоже, правила игры снова меняются.\n\n#AI #AIAgents #Automation #Startups #FutureOfWork #VibeCoding #ArtificialIntelligence #NoCode #AICompanies\n\n## Tags\n\n#telegram-import #live-sync #ai #aiagents #automation #startups #futureofwork #vibecoding #artificialintelligence #nocode #aicompanies #design #возможно #десятки #или"
+    },
+    {
+      "id": 3069,
+      "date": "2026-06-19T05:38:18.000Z",
+      "title": "🔥 Главные новости дня (19 июня 2026)",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3069,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "frontend",
+        "ai",
+        "security",
+        "для",
+        "агентов",
+        "вокруг"
+      ],
+      "content": "- NVIDIA Blackwell доминирует в MLPerf Training v6.0: Платформа с Blackwell Ultra (GB300 NVL72) показала рекордные результаты по всем бенчмаркам, включая новые тесты на MoE-моделях (например, DeepSeek-V3 на 8192 GPU). Это подтверждает лидерство NVIDIA в масштабируемом обучении ИИ.\n\n- Trump объявил о сотрудничестве Apple и Intel по производству чипов в США, что вызвало рост акций Intel. Это часть усилий по укреплению отечественной полупроводниковой отрасли на фоне AI-бумa.\n\n- Snap выделил AI-видео команду в отдельную компанию Dotmo из-за высоких затрат; Elastic приобретает DeductiveAI. AI-инференс стартап Baseten привлекает $1.5B. Рынок продолжает консолидацию вокруг эффективных решений.\n\n- Конвергенция AI и блокчейна: Рост интереса к tokenized RWA (реальные активы) и AI-агентам на блокчейне. Токенизированные commodities превысили $6B.\n\n🪙 Крипта — важные события рынка\n\n- Bitcoin держится около $63–65k с оттоком из ETF (значительные выводы в мае–июне), но институциональный интерес к инфраструктуре сохраняется. Рынок фокусируется на реальной полезности, а не мемах.\n\n- Крупные банки (JPMorgan, Citi и др.) развивают shared tokenized deposit network для реального времени расчётов — ключевой шаг институционального adoption блокчейна, запуск ожидается в 2027.\n\n- AI-crypto токены (FET/ASI, RNDR, TAO) остаются в фокусе благодаря инфраструктуре агентов и compute. Общий тренд: переход от спекуляций к инфраструктуре и RWA.\n\n🤖 AI и инструменты\n\n- Новые модели и бенчмарки: NVIDIA Blackwell ускоряет обучение больших MoE-моделей. Продолжается развитие reasoning-моделей (Microsoft MAI-Thinking-1) и агентов.\n\n- Автономные агенты: Microsoft Scout для M365 — всегда активный агент для координации задач в экосистеме. Open-source фреймворки (LangGraph, CrewAI, AutoGen, Haystack) maturing для production.\n\n- Полезные обновления: Интеграции Codex/OpenAI в ChatGPT, фокус на enterprise-агентах и cost-efficient моделях.\n\n🛠 Один инструмент дня\n\nVercel Eve\nЧто делает: «Next.js для AI-агентов» — упрощает создание, развертывание и управление автономными агентами с durable workflows, sandbox, human-in-the-loop и тестированием.\nКому полезен: Разработчикам и командам, строящим production-ready AI-агентов на базе Next.js.\nСсылка: vercel.com/eve (или поиск по Vercel Eve).\n\n💡 Идея или инсайт дня\nИспользуйте тренд на agentic AI и open-source фреймворки для автоматизации рутинных рабочих процессов (анализ данных, кодинг, отчеты). Начните с простого агента на LangGraph или Eve — это даст measurable прирост продуктивности уже в ближайшие недели, особенно в комбинации с локальными/эффективными моделями на Blackwell-подобном hardware.\n\n📈 Что стоит наблюдать ближайшие 7–30 дней\n- Результаты внедрения MLPerf-оптимизаций в реальные AI-продукты и влияние на стоимость обучения.\n- Прогресс tokenized RWA и банковских blockchain-сетей.\n- Регуляторные и корпоративные анонсы вокруг AI-security (executive orders) и новых агентов.\n- Динамика Bitcoin вокруг $60–70k уровней в контексте macro-данных и ETF-флоу.\n\nОбзор основан на значимых событиях с акцентом на практическую ценность. Если новостей мало, фокус смещается на инструменты и исследования. Следующий обзор — завтра.\n\n## Tags\n\n#telegram-import #live-sync #frontend #ai #security #для #агентов #вокруг"
+    },
+    {
+      "id": 3068,
+      "date": "2026-06-18T22:26:08.000Z",
+      "title": "https://telegra.ph/Mnogoagentnye-AI-sistemy-ot-komandy-v-chate-k-production-read...",
+      "channel": "D. U. M. P.",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3068,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "ai",
+        "telegra"
+      ],
+      "content": "## Links\n\n- https://telegra.ph/Mnogoagentnye-AI-sistemy-ot-komandy-v-chate-k-production-ready-arhitekture-06-18\n\n## Tags\n\n#telegram-import #live-sync #ai #telegra"
+    },
+    {
       "id": 3066,
       "date": "2026-06-18T11:54:18.000Z",
       "title": "![Post cover](https://alevoldon.com/media/telegram/2026/06/2026-06-18T11-54-18-4...",
@@ -295,36 +355,6 @@
       "content": "Проверяем, как бот отображает таблицы, код и цитаты.\n\nТаблица элементов:\n\nЭлемент   | Статус\n------------------\nТаблицы   |  ✅\nКод       |  ✅\nЦитаты    |  ✅\nСпойлеры  |  ✅\nLaTeX     |  ✅\n\nЕсли всё отображается красиво, значит интеграция прошла успешно.\n\nconsole.log(\"Hello, Telegram!\");\n\nСекретное сообщение 😄\n\n🚀 Telegram постепенно становится полноценной платформой для публикаций.\n\n#Telegram #BotAPI #AI\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-55-967Z-156c6fc9.jpg)\n\n## Tags\n\n#telegram-import #live-sync #telegram #botapi #ai #backend #код #таблицы #цитаты"
     },
     {
-      "id": 3017,
-      "date": "2026-06-14T14:19:09.000Z",
-      "title": "Post 3017",
-      "channel": "D. U. M. P.",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3017,
-      "tags": [
-        "telegram-import",
-        "live-sync",
-        "post",
-        "archive"
-      ],
-      "content": "## Tags\n\n#telegram-import #live-sync #post #archive"
-    },
-    {
-      "id": 3012,
-      "date": "2026-06-14T14:14:34.000Z",
-      "title": "Post 3012",
-      "channel": "D. U. M. P.",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3012,
-      "tags": [
-        "telegram-import",
-        "live-sync",
-        "post",
-        "archive"
-      ],
-      "content": "## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/06/2026-06-17T17-33-55-028Z-4dffbbea.jpg)\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
-    },
-    {
       "id": 3013,
       "date": "2026-06-14T14:14:34.000Z",
       "title": "🧪 🧪 Сегодня обновил своего ИИ-бота и решил проверить, как работают новые Rich...",
@@ -339,21 +369,6 @@
         "новые"
       ],
       "content": "### Что уже поддерживается\n\n| Функция | Статус | Комментарий |\n| :--- | :---: | :--- |\n| | ✅ | Работает |\n| | ✅ | Новый формат |\n| | ✅ | Подсветка языков |\n| | ✅ | Вложенные цитаты |\n| | ✅ | Скрытие текста |\n| | ✅ | Формулы и выражения |\n| | ✅ | Красивое оформление |\n\n---\n\n### Маркированный список\n\n### Нумерованный список\n\n---\n\n### Код\n\ndef hello():\n print(\"Hello Telegram!\")\n\nhello()\n\n---\n\n### Цитаты\n\n---\n\n### Спойлер ---\n\n### Формулы\n\nСтрочная формула: Блочная формула:\n\n---\n\n### Мини-таблица производительности\n\n| Модель | Размер | Скорость |\n| :--- | :---: | :---: |\n| Gemma 4 12B | 12B | ⚡⚡⚡ |\n| Qwen3 32B | 32B | ⚡⚡ |\n| Kimi K2 | 1T+ | ⚡ |\n\n---\n\n### Ссылки\n\n---\n\n🔥 Если всё отображается правильно, значит новые функции интегрированы успешно. ## Tags\n\n#telegram-import #live-sync #telegram #object #hello #новые"
-    },
-    {
-      "id": 3008,
-      "date": "2026-06-14T14:02:34.000Z",
-      "title": "Post 3008",
-      "channel": "D. U. M. P.",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3008,
-      "tags": [
-        "telegram-import",
-        "live-sync",
-        "post",
-        "archive"
-      ],
-      "content": "## Tags\n\n#telegram-import #live-sync #post #archive"
     },
     {
       "id": 3007,

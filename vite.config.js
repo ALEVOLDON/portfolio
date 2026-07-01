@@ -14,7 +14,8 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
-          three: ['three']
+          three: ['three'],
+          p5: ['p5']
         }
       }
     }

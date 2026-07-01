@@ -41,6 +41,13 @@ const BackgroundControls = ({
         { id: 'immersive', label: 'Ambient', icon: 'waves', desc: 'Full drone & spatial audio' }
     ];
 
+    const qualityProfiles = [
+        { id: 'high', label: 'High', desc: 'Full quality, 1.35x resolution scale, max octaves' },
+        { id: 'balanced', label: 'Bal', desc: 'Balanced, 1.0x resolution scale, 60 FPS cap' },
+        { id: 'eco', label: 'Eco', desc: 'Eco friendly, 0.75x resolution scale, 30 FPS cap' },
+        { id: 'static', label: 'Static', desc: 'Render background once, freeze animations, 0% GPU load' }
+    ];
+
     const themes = [
         { id: 'cyber', label: 'Cyber', colors: ['#22d3ee', '#a855f7'], desc: 'Cyan + Purple' },
         { id: 'solar', label: 'Solar', colors: ['#f2994a', '#eb5757'], desc: 'Gold + Red' },
@@ -57,6 +64,10 @@ const BackgroundControls = ({
 
     const handleSliderChange = (name, value) => {
         setBgConfig(prev => ({ ...prev, [name]: parseFloat(value) }));
+    };
+
+    const handleQualityChange = (qualityId) => {
+        setBgConfig(prev => ({ ...prev, quality: qualityId }));
     };
 
     // Helper to get sun/moon icon for Chrono sync
@@ -204,6 +215,27 @@ const BackgroundControls = ({
                                 >
                                     <Icon name={m.icon} size={16} className={audioMode === m.id ? 'text-cyber-cyan' : 'text-neutral-400 group-hover:text-white'} />
                                     <span className="uppercase tracking-wider text-[8px] font-mono">{m.label}</span>
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Performance Profile */}
+                    <div className="mb-4">
+                        <span className="block text-[9px] text-gray-400 uppercase tracking-[0.2em] mb-2 font-display">PERFORMANCE PROFILE</span>
+                        <div className="grid grid-cols-4 gap-1">
+                            {qualityProfiles.map(p => (
+                                <button
+                                    key={p.id}
+                                    onClick={() => handleQualityChange(p.id)}
+                                    className={`py-1.5 px-0.5 rounded text-center border text-[9px] transition-all duration-300 flex flex-col items-center justify-center font-display font-medium gap-0.5 cursor-pointer ${
+                                        bgConfig.quality === p.id
+                                            ? 'border-cyber-cyan bg-cyber-cyan/10 text-white shadow-[0_0_15px_rgba(var(--primary-color-rgb),0.15)]'
+                                            : 'border-white/10 bg-transparent text-gray-400 hover:border-white/20 hover:text-white'
+                                    }`}
+                                    title={p.desc}
+                                >
+                                    <span className="uppercase tracking-wider text-[8px] font-mono leading-none">{p.label}</span>
                                 </button>
                             ))}
                         </div>

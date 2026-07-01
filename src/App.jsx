@@ -53,10 +53,12 @@ const App = () => {
     const storedTheme = localStorage.getItem('theme') || 'cyber';
     const storedBrightness = localStorage.getItem('themeBrightness') ? parseFloat(localStorage.getItem('themeBrightness')) : 1.0;
     const storedSpeed = localStorage.getItem('themeSpeed') ? parseFloat(localStorage.getItem('themeSpeed')) : 1.0;
+    const storedQuality = localStorage.getItem('themeQuality') || 'high';
     return {
       brightness: storedBrightness,
       speed: storedSpeed,
-      theme: storedTheme
+      theme: storedTheme,
+      quality: storedQuality
     };
   });
   const [themeMode, setThemeMode] = useState(() => {
@@ -77,6 +79,10 @@ const App = () => {
   useEffect(() => {
     localStorage.setItem('themeSpeed', bgConfig.speed);
   }, [bgConfig.speed]);
+
+  useEffect(() => {
+    localStorage.setItem('themeQuality', bgConfig.quality);
+  }, [bgConfig.quality]);
 
   useEffect(() => {
     localStorage.setItem('themeMode', themeMode);

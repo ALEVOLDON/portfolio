@@ -350,7 +350,7 @@ const ThreeBackground = ({ brightness = 1.0, speed = 1.0, theme = 'cyber', quali
             const height = window.innerHeight;
             
             const q = configRef.current.quality || 'high';
-            let maxPixelRatio = 1.35;
+            let maxPixelRatio = 1.15;
             if (q === 'balanced') maxPixelRatio = 1.0;
             if (q === 'eco' || q === 'static') maxPixelRatio = 0.75;
             
@@ -391,10 +391,12 @@ const ThreeBackground = ({ brightness = 1.0, speed = 1.0, theme = 'cyber', quali
 
             // FPS Throttling
             let fpsInterval = 0;
-            if (q === 'eco') {
-                fpsInterval = 1000 / 30; // 30 FPS
-            } else if (q === 'balanced') {
+            if (q === 'high') {
                 fpsInterval = 1000 / 60; // 60 FPS
+            } else if (q === 'eco') {
+                fpsInterval = 1000 / 24; // 24 FPS
+            } else if (q === 'balanced') {
+                fpsInterval = 1000 / 45; // 45 FPS
             }
 
             if (fpsInterval > 0 && timestamp) {

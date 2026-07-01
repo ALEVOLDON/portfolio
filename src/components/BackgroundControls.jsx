@@ -42,9 +42,9 @@ const BackgroundControls = ({
     ];
 
     const qualityProfiles = [
-        { id: 'high', label: 'High', desc: 'Full quality, 1.35x resolution scale, max octaves' },
-        { id: 'balanced', label: 'Bal', desc: 'Balanced, 1.0x resolution scale, 60 FPS cap' },
-        { id: 'eco', label: 'Eco', desc: 'Eco friendly, 0.75x resolution scale, 30 FPS cap' },
+        { id: 'high', label: 'High', desc: 'High quality, 1.15x resolution scale, 60 FPS cap' },
+        { id: 'balanced', label: 'Bal', desc: 'Balanced, 1.0x resolution scale, 45 FPS cap' },
+        { id: 'eco', label: 'Eco', desc: 'Eco friendly, 0.75x resolution scale, 24 FPS cap' },
         { id: 'static', label: 'Static', desc: 'Render background once, freeze animations, 0% GPU load' }
     ];
 

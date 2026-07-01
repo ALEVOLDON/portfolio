@@ -47,7 +47,8 @@ const GenerativeThumbnail = ({ seedStr }) => {
         const createSketch = () => (p) => {
             let particles = [];
             let hueBase;
-            const numParticles = 60; // Keep it low for performance since there are multiple cards
+            const numParticles = 36; // Multiple cards can be visible at once
+            let frameCount = 0;
 
             p.setup = () => {
                 // Determine base color mapping from the seed string
@@ -72,6 +73,7 @@ const GenerativeThumbnail = ({ seedStr }) => {
             };
 
             p.draw = () => {
+                frameCount += 1;
                 // Clear background with semi-transparent dark shade for trail effect
                 p.background(10, 10, 10, 50);
 
@@ -92,6 +94,10 @@ const GenerativeThumbnail = ({ seedStr }) => {
                             p.line(particles[i].pos.x, particles[i].pos.y, particles[j].pos.x, particles[j].pos.y);
                         }
                     }
+                }
+
+                if (frameCount > 180) {
+                    p.noLoop();
                 }
             };
 
@@ -114,9 +120,12 @@ const GenerativeThumbnail = ({ seedStr }) => {
 
         if (sketchRef.current) {
             observer = new IntersectionObserver((entries) => {
-                if (entries.some((entry) => entry.isIntersecting)) {
+                const isVisible = entries.some((entry) => entry.isIntersecting);
+                if (isVisible) {
                     startSketch();
-                    observer?.disconnect();
+                    p5Instance.current?.loop();
+                } else {
+                    p5Instance.current?.noLoop();
                 }
             }, { rootMargin: '250px 0px' });
 

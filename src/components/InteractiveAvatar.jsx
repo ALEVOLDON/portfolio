@@ -407,17 +407,25 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
 
       // 7. Animation Loop
       clock = new THREE.Clock();
+      let lastRenderTime = 0;
+      const frameInterval = 1000 / 30;
 
       // Pre-allocated color objects — reused every frame to avoid GC pressure
       const _primaryColor   = new THREE.Color();
       const _secondaryColor = new THREE.Color();
       const _currentColor   = new THREE.Color();
 
-      animate = () => {
+      animate = (timestamp = 0) => {
         if (!isMounted) return;
         if (!isVisible) return;
 
         animationFrameId = requestAnimationFrame(animate);
+
+        if (timestamp) {
+          const elapsed = timestamp - lastRenderTime;
+          if (elapsed < frameInterval) return;
+          lastRenderTime = timestamp - (elapsed % frameInterval);
+        }
 
         const time = clock.getElapsedTime();
 
@@ -542,7 +550,7 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
           if (isVisible && !wasVisible) {
             cancelAnimationFrame(animationFrameId);
             clock.getDelta();
-            animate();
+            animate(performance.now());
           }
         }, { threshold: 0.01 });
         intersectionObserver.observe(container);
@@ -663,10 +671,18 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
     };
 
     let isVisible = false;
+    let lastFrameTime = 0;
+    const frameInterval = 1000 / 24;
 
     const animate = (time) => {
       if (!isVisible) return;
       animationId = requestAnimationFrame(animate);
+
+      if (time) {
+        const elapsed = time - lastFrameTime;
+        if (elapsed < frameInterval) return;
+        lastFrameTime = time - (elapsed % frameInterval);
+      }
 
       // Clear canvas
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -743,8 +759,9 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
         cancelAnimationFrame(animationId);
         lastQuoteSpawnTime = performance.now();
         lastSpawnTime = performance.now();
+        lastFrameTime = performance.now();
         particles = []; // clear particles on resume for a clean slate
-        animate(performance.now());
+        animate(lastFrameTime);
       }
     }, { threshold: 0.01 });
 

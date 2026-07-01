@@ -117,7 +117,17 @@ const CustomCursor = () => {
 
         // Easing Loop
         let animationFrameId;
-        const tick = () => {
+        let lastFrameTime = 0;
+        const frameInterval = 1000 / 30;
+        const tick = (timestamp = 0) => {
+            animationFrameId = requestAnimationFrame(tick);
+
+            if (timestamp) {
+                const elapsed = timestamp - lastFrameTime;
+                if (elapsed < frameInterval) return;
+                lastFrameTime = timestamp - (elapsed % frameInterval);
+            }
+
             const ease = 0.15; // Smooth trailing delay factor
             
             ringPosRef.current.x += (mouseRef.current.x - ringPosRef.current.x) * ease;
@@ -130,8 +140,6 @@ const CustomCursor = () => {
             if (ringRef.current) {
                 ringRef.current.style.transform = `translate3d(${ringPosRef.current.x}px, ${ringPosRef.current.y}px, 0)`;
             }
-
-            animationFrameId = requestAnimationFrame(tick);
         };
         tick();
 

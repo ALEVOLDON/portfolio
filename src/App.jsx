@@ -53,7 +53,7 @@ const App = () => {
     const storedTheme = localStorage.getItem('theme') || 'cyber';
     const storedBrightness = localStorage.getItem('themeBrightness') ? parseFloat(localStorage.getItem('themeBrightness')) : 1.0;
     const storedSpeed = localStorage.getItem('themeSpeed') ? parseFloat(localStorage.getItem('themeSpeed')) : 1.0;
-    const storedQuality = localStorage.getItem('themeQuality') || 'high';
+    const storedQuality = localStorage.getItem('themeQuality') || 'balanced';
     return {
       brightness: storedBrightness,
       speed: storedSpeed,
@@ -109,7 +109,6 @@ const App = () => {
   // Matrix Cycle logic
   useEffect(() => {
     if (themeMode !== 'cycle') {
-      setCycleProgress(0);
       return;
     }
 

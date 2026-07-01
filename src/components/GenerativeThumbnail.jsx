@@ -1,152 +1,169 @@
 import React, { useEffect, useRef } from 'react';
 
-class Particle {
-    constructor(p, hueBase) {
-        this.p = p;
-        this.pos = p.createVector(p.random(p.width), p.random(p.height));
-        this.vel = p.createVector(p.random(-1, 1), p.random(-1, 1));
-        this.acc = p.createVector(0, 0);
-        this.maxSpeed = p.random(0.5, 1.5);
-        this.colorHue = hueBase + p.random(-20, 20);
+const hashString = (value) => {
+    let hash = 2166136261;
+    const text = String(value || '');
+
+    for (let i = 0; i < text.length; i++) {
+        hash ^= text.charCodeAt(i);
+        hash = Math.imul(hash, 16777619);
     }
 
-    update() {
-        const angle = this.p.noise(this.pos.x * 0.01, this.pos.y * 0.01, this.p.frameCount * 0.005) * this.p.TWO_PI * 4;
-        const force = this.p.constructor.Vector.fromAngle(angle);
-        force.setMag(0.1);
+    return hash >>> 0;
+};
 
-        this.acc.add(force);
-        this.vel.add(this.acc);
-        this.vel.limit(this.maxSpeed);
-        this.pos.add(this.vel);
-        this.acc.mult(0);
-    }
-
-    display() {
-        this.p.noStroke();
-        this.p.fill(this.colorHue, 200, 255, 150);
-        this.p.ellipse(this.pos.x, this.pos.y, 3, 3);
-    }
-
-    checkEdges() {
-        if (this.pos.x > this.p.width) this.pos.x = 0;
-        if (this.pos.x < 0) this.pos.x = this.p.width;
-        if (this.pos.y > this.p.height) this.pos.y = 0;
-        if (this.pos.y < 0) this.pos.y = this.p.height;
-    }
-}
+const createRandom = (seed) => {
+    let state = seed || 1;
+    return () => {
+        state = Math.imul(1664525, state) + 1013904223;
+        return (state >>> 0) / 4294967296;
+    };
+};
 
 const GenerativeThumbnail = ({ seedStr }) => {
-    const sketchRef = useRef(null);
-    const p5Instance = useRef(null);
+    const canvasRef = useRef(null);
 
     useEffect(() => {
-        let cancelled = false;
-        let observer = null;
+        const canvas = canvasRef.current;
+        if (!canvas) return undefined;
 
-        const createSketch = () => (p) => {
-            let particles = [];
-            let hueBase;
-            const numParticles = 36; // Multiple cards can be visible at once
-            let frameCount = 0;
+        const ctx = canvas.getContext('2d', { alpha: false });
+        if (!ctx) return undefined;
 
-            p.setup = () => {
-                // Determine base color mapping from the seed string
-                let hash = 0;
-                for (let i = 0; i < seedStr.length; i++) {
-                    hash = seedStr.charCodeAt(i) + ((hash << 5) - hash);
-                }
-                p.randomSeed(hash);
-                p.noiseSeed(hash);
+        const seed = hashString(seedStr);
+        const random = createRandom(seed);
+        const hueBase = 180 + (seed % 70);
+        const particles = [];
+        const particleCount = 32;
+        let animationFrameId = 0;
+        let frameCount = 0;
+        let isVisible = false;
+        let observer;
 
-                // Canvas size matching the card header aspect ratio
-                p.createCanvas(sketchRef.current.offsetWidth, sketchRef.current.offsetHeight);
-                p.colorMode(p.HSB, 255);
+        const resize = () => {
+            const rect = canvas.getBoundingClientRect();
+            const pixelRatio = Math.min(window.devicePixelRatio || 1, 1.5);
+            const width = Math.max(1, Math.floor(rect.width * pixelRatio));
+            const height = Math.max(1, Math.floor(rect.height * pixelRatio));
 
-                // Map the hash to a cyber-ish hue (cyan/purple range is around 180 to 220)
-                hueBase = p.map(Math.abs(hash) % 100, 0, 100, 160, 240);
-
-                // Initialize random particles
-                for (let i = 0; i < numParticles; i++) {
-                    particles.push(new Particle(p, hueBase));
-                }
-            };
-
-            p.draw = () => {
-                frameCount += 1;
-                // Clear background with semi-transparent dark shade for trail effect
-                p.background(10, 10, 10, 50);
-
-                particles.forEach(particle => {
-                    particle.update();
-                    particle.display();
-                    particle.checkEdges();
-                });
-
-                // Connect particles with lines if they are close
-                for (let i = 0; i < particles.length; i++) {
-                    for (let j = i + 1; j < particles.length; j++) {
-                        let d = p.dist(particles[i].pos.x, particles[i].pos.y, particles[j].pos.x, particles[j].pos.y);
-                        if (d < 50) {
-                            let alpha = p.map(d, 0, 50, 255, 0);
-                            p.stroke(particles[i].colorHue, 200, 255, alpha);
-                            p.strokeWeight(1);
-                            p.line(particles[i].pos.x, particles[i].pos.y, particles[j].pos.x, particles[j].pos.y);
-                        }
-                    }
-                }
-
-                if (frameCount > 180) {
-                    p.noLoop();
-                }
-            };
-
-            p.windowResized = () => {
-                if (sketchRef.current) {
-                    p.resizeCanvas(sketchRef.current.offsetWidth, sketchRef.current.offsetHeight);
-                }
-            };
-
+            if (canvas.width !== width || canvas.height !== height) {
+                canvas.width = width;
+                canvas.height = height;
+            }
         };
 
-        const startSketch = () => {
-            if (!sketchRef.current || p5Instance.current) return;
+        resize();
 
-            import('p5').then(({ default: p5 }) => {
-                if (cancelled || !sketchRef.current) return;
-                p5Instance.current = new p5(createSketch(), sketchRef.current);
+        for (let i = 0; i < particleCount; i++) {
+            particles.push({
+                x: random(),
+                y: random(),
+                vx: (random() - 0.5) * 0.0028,
+                vy: (random() - 0.5) * 0.0028,
+                hue: hueBase + (random() - 0.5) * 34,
+                size: 1.8 + random() * 2.2
             });
-        };
-
-        if (sketchRef.current) {
-            observer = new IntersectionObserver((entries) => {
-                const isVisible = entries.some((entry) => entry.isIntersecting);
-                if (isVisible) {
-                    startSketch();
-                    p5Instance.current?.loop();
-                } else {
-                    p5Instance.current?.noLoop();
-                }
-            }, { rootMargin: '250px 0px' });
-
-            observer.observe(sketchRef.current);
         }
 
-        return () => {
-            cancelled = true;
-            observer?.disconnect();
-            if (p5Instance.current) {
-                p5Instance.current.remove();
-                p5Instance.current = null;
+        const draw = () => {
+            if (!isVisible) return;
+            animationFrameId = requestAnimationFrame(draw);
+            frameCount += 1;
+
+            const width = canvas.width;
+            const height = canvas.height;
+            ctx.fillStyle = 'rgb(10, 10, 10)';
+            ctx.fillRect(0, 0, width, height);
+
+            const gradient = ctx.createRadialGradient(
+                width * 0.5,
+                height * 0.45,
+                0,
+                width * 0.5,
+                height * 0.45,
+                Math.max(width, height) * 0.72
+            );
+            gradient.addColorStop(0, `hsla(${hueBase}, 85%, 18%, 0.55)`);
+            gradient.addColorStop(1, 'rgba(7, 7, 12, 1)');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, width, height);
+
+            particles.forEach((particle) => {
+                particle.x += particle.vx;
+                particle.y += particle.vy;
+
+                if (particle.x < 0 || particle.x > 1) particle.vx *= -1;
+                if (particle.y < 0 || particle.y > 1) particle.vy *= -1;
+                particle.x = Math.max(0, Math.min(1, particle.x));
+                particle.y = Math.max(0, Math.min(1, particle.y));
+            });
+
+            for (let i = 0; i < particles.length; i++) {
+                const a = particles[i];
+                const ax = a.x * width;
+                const ay = a.y * height;
+
+                for (let j = i + 1; j < particles.length; j++) {
+                    const b = particles[j];
+                    const bx = b.x * width;
+                    const by = b.y * height;
+                    const dx = ax - bx;
+                    const dy = ay - by;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    const threshold = Math.min(width, height) * 0.22;
+
+                    if (distance < threshold) {
+                        const alpha = (1 - distance / threshold) * 0.36;
+                        ctx.strokeStyle = `hsla(${a.hue}, 95%, 62%, ${alpha})`;
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();
+                        ctx.moveTo(ax, ay);
+                        ctx.lineTo(bx, by);
+                        ctx.stroke();
+                    }
+                }
             }
+
+            particles.forEach((particle) => {
+                ctx.fillStyle = `hsla(${particle.hue}, 95%, 62%, 0.78)`;
+                ctx.beginPath();
+                ctx.arc(particle.x * width, particle.y * height, particle.size, 0, Math.PI * 2);
+                ctx.fill();
+            });
+
+            if (frameCount > 150) {
+                cancelAnimationFrame(animationFrameId);
+            }
+        };
+
+        observer = new IntersectionObserver((entries) => {
+            const wasVisible = isVisible;
+            isVisible = entries.some((entry) => entry.isIntersecting);
+
+            if (isVisible && !wasVisible) {
+                resize();
+                cancelAnimationFrame(animationFrameId);
+                draw();
+            } else if (!isVisible) {
+                cancelAnimationFrame(animationFrameId);
+            }
+        }, { rootMargin: '250px 0px' });
+
+        observer.observe(canvas);
+        window.addEventListener('resize', resize);
+
+        return () => {
+            observer?.disconnect();
+            window.removeEventListener('resize', resize);
+            cancelAnimationFrame(animationFrameId);
         };
     }, [seedStr]);
 
     return (
-        <div
-            ref={sketchRef}
+        <canvas
+            ref={canvasRef}
             className="w-full h-full absolute inset-0 bg-cyber-dark"
-            style={{ overflow: 'hidden' }}
+            aria-hidden="true"
         />
     );
 };

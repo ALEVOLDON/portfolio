@@ -223,6 +223,8 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
   const selectedPostRef = useRef(null);
   const selectedTagRef = useRef(null);
   const physicsEnabledRef = useRef(physicsEnabled);
+  // Pre-built node lookup map — built once after data loads, not on every frame
+  const nodeMapRef = useRef(new Map());
 
   // Touch gesture state refs
   const touchStartDistRef = useRef(0);
@@ -405,6 +407,9 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
     
     linksRef.current = graphData.links;
 
+    // Rebuild the lookup map whenever nodes change
+    nodeMapRef.current = new Map(nodesRef.current.map(n => [n.id, n]));
+
     // Clear hovered node if it's no longer in the active nodes list
     if (hoveredNodeRef.current) {
       const stillExists = nodesRef.current.some(n => n.id === hoveredNodeRef.current.id);
@@ -480,8 +485,8 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
       const nodes = nodesRef.current;
       const links = linksRef.current;
       
-      // Fast lookup node Map for O(1) searches per frame, dramatically reducing computation lag
-      const nodeMap = new Map(nodes.map(n => [n.id, n]));
+      // Use pre-built O(1) node lookup — rebuilt only when data changes, not every frame
+      const nodeMap = nodeMapRef.current;
 
       if (physicsEnabledRef.current) {
         // Centering force: pull gently to center (0, 0)

@@ -12,7 +12,7 @@ class Particle {
 
     update() {
         const angle = this.p.noise(this.pos.x * 0.01, this.pos.y * 0.01, this.p.frameCount * 0.005) * this.p.TWO_PI * 4;
-        const force = this.p.constructor.Vector.fromAngle(angle);
+        const force = this.p.createVector(Math.cos(angle), Math.sin(angle));
         force.setMag(0.1);
 
         this.acc.add(force);

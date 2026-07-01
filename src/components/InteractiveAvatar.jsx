@@ -281,7 +281,20 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
       loader.load(
         '/stylized-head.glb',
         (gltf) => {
-          if (!isMounted) return;
+          if (!isMounted) {
+            // Clean up the loaded resources to prevent memory leaks if we unmounted during load
+            gltf.scene.traverse((child) => {
+              if (child.geometry) child.geometry.dispose();
+              if (child.material) {
+                const materials = Array.isArray(child.material) ? child.material : [child.material];
+                materials.forEach((mat) => {
+                  if (mat.map) mat.map.dispose();
+                  mat.dispose();
+                });
+              }
+            });
+            return;
+          }
 
           const model = gltf.scene;
 

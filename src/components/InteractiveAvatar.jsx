@@ -156,7 +156,9 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
     if (loading || loadError) return;
 
     let isMounted = true;
-    let renderer, scene, camera;
+    let isVisible = false;
+    let intersectionObserver;
+    let renderer, scene, camera, clock, animate;
     let modelContainer, avatarGroup;
     let keyLight, fillLight, rimLight, pointLight;
     let hudRing, dotRing, scanRing;
@@ -404,10 +406,16 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
       );
 
       // 7. Animation Loop
-      const clock = new THREE.Clock();
+      clock = new THREE.Clock();
 
-      const animate = () => {
+      // Pre-allocated color objects — reused every frame to avoid GC pressure
+      const _primaryColor   = new THREE.Color();
+      const _secondaryColor = new THREE.Color();
+      const _currentColor   = new THREE.Color();
+
+      animate = () => {
         if (!isMounted) return;
+        if (!isVisible) return;
 
         animationFrameId = requestAnimationFrame(animate);
 
@@ -452,12 +460,12 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
 
         // Dynamic color transition between cyan and purple (oscillates at 0.8 rad/s)
         const colorWeight = (Math.sin(time * 0.8) + 1.0) / 2.0;
-        const primaryColor = new THREE.Color(themeColors.primaryHex);
-        const secondaryColor = new THREE.Color(themeColors.secondaryHex);
-        const currentColor = primaryColor.clone().lerp(secondaryColor, colorWeight);
+        _primaryColor.set(themeColors.primaryHex);
+        _secondaryColor.set(themeColors.secondaryHex);
+        _currentColor.copy(_primaryColor).lerp(_secondaryColor, colorWeight);
 
         activePointsMaterials.forEach((mat) => {
-          mat.color.copy(currentColor);
+          mat.color.copy(_currentColor);
         });
 
         // Render scene
@@ -470,6 +478,9 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
     const disposeThreeScene = () => {
       isMounted = false;
       cancelAnimationFrame(animationFrameId);
+      if (intersectionObserver) {
+        intersectionObserver.disconnect();
+      }
 
       const container = containerRef.current;
       if (container) {
@@ -522,6 +533,19 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
 
         container = containerRef.current;
         if (!container) return;
+
+        intersectionObserver = new IntersectionObserver((entries) => {
+          const entry = entries[0];
+          const wasVisible = isVisible;
+          isVisible = entry.isIntersecting;
+
+          if (isVisible && !wasVisible) {
+            cancelAnimationFrame(animationFrameId);
+            clock.getDelta();
+            animate();
+          }
+        }, { threshold: 0.01 });
+        intersectionObserver.observe(container);
 
         handleMouseMove = (e) => {
           isHovered = true;
@@ -638,7 +662,10 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
       lastQuoteSpawnTime = performance.now();
     };
 
+    let isVisible = false;
+
     const animate = (time) => {
+      if (!isVisible) return;
       animationId = requestAnimationFrame(animate);
 
       // Clear canvas
@@ -707,10 +734,25 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
       });
     };
 
-    animationId = requestAnimationFrame(animate);
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      const wasVisible = isVisible;
+      isVisible = entry.isIntersecting;
+
+      if (isVisible && !wasVisible) {
+        cancelAnimationFrame(animationId);
+        lastQuoteSpawnTime = performance.now();
+        lastSpawnTime = performance.now();
+        particles = []; // clear particles on resume for a clean slate
+        animate(performance.now());
+      }
+    }, { threshold: 0.01 });
+
+    observer.observe(canvas);
 
     return () => {
       cancelAnimationFrame(animationId);
+      observer.disconnect();
     };
   }, [language, themeColors, loading]);
 

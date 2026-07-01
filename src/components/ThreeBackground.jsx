@@ -3,19 +3,31 @@ import * as THREE from 'three';
 
 const isSmallViewport = () => window.innerWidth < 768 || window.innerHeight < 620;
 
-const ThreeBackground = ({ brightness = 1.0, speed = 1.0, theme = 'cyber' }) => {
+const ThreeBackground = ({ brightness = 1.0, speed = 1.0, theme = 'cyber', quality = 'high' }) => {
     const mountRef = useRef(null);
     const pointer = useRef({ x: 0, y: 0 });
     const easedPointer = useRef({ x: 0, y: 0 });
     const pointerVelocity = useRef({ x: 0, y: 0 });
     
-    const configRef = useRef({ brightness, speed, theme });
+    const configRef = useRef({ brightness, speed, theme, quality });
     const timeAccumulator = useRef(0);
+    const setRendererSizeRef = useRef(null);
+    const triggerRestartRef = useRef(null);
 
     // Sync React props to WebGL animation loop without re-instantiating WebGL
     useEffect(() => {
-        configRef.current = { brightness, speed, theme };
-    }, [brightness, speed, theme]);
+        const prevQuality = configRef.current.quality;
+        configRef.current = { brightness, speed, theme, quality };
+        
+        if (prevQuality !== quality) {
+            if (setRendererSizeRef.current) {
+                setRendererSizeRef.current();
+            }
+            if (quality !== 'static' && prevQuality === 'static' && triggerRestartRef.current) {
+                triggerRestartRef.current();
+            }
+        }
+    }, [brightness, speed, theme, quality]);
 
     useEffect(() => {
         const handlePointerMove = (event) => {
@@ -63,7 +75,8 @@ const ThreeBackground = ({ brightness = 1.0, speed = 1.0, theme = 'cyber' }) => 
                 uColorCyan: { value: currentColors.cyan.clone() },
                 uColorViolet: { value: currentColors.violet.clone() },
                 uColorBlue: { value: currentColors.blue.clone() },
-                uBrightness: { value: configRef.current.brightness }
+                uBrightness: { value: configRef.current.brightness },
+                uQualityLevel: { value: 2 }
             },
             vertexShader: `
                 varying vec2 vUv;
@@ -84,6 +97,7 @@ const ThreeBackground = ({ brightness = 1.0, speed = 1.0, theme = 'cyber' }) => 
                 uniform vec3 uColorViolet;
                 uniform vec3 uColorBlue;
                 uniform float uBrightness;
+                uniform int uQualityLevel;
                 varying vec2 vUv;
 
                 vec3 mod289(vec3 x) { return x - floor(x * (1.0 / 289.0)) * 289.0; }
@@ -150,10 +164,20 @@ const ThreeBackground = ({ brightness = 1.0, speed = 1.0, theme = 'cyber' }) => 
                     return 42.0 * dot(m * m, vec4(dot(p0, x0), dot(p1, x1), dot(p2, x2), dot(p3, x3)));
                 }
 
-                float fbm(vec3 p) {
+                float fbm(vec3 p, int octaves) {
                     float value = 0.0;
                     float amplitude = 0.5;
+                    
+                    int activeOctaves = octaves;
+                    if (uQualityLevel == 0) {
+                        activeOctaves = 1;
+                    } else if (uQualityLevel == 1) {
+                        activeOctaves = octaves - 1;
+                        if (activeOctaves < 1) activeOctaves = 1;
+                    }
+
                     for (int i = 0; i < 4; i++) {
+                        if (i >= activeOctaves) break;
                         value += amplitude * snoise(p);
                         p = p * 2.03 + vec3(11.7, 4.2, 8.1);
                         amplitude *= 0.5;
@@ -167,14 +191,14 @@ const ThreeBackground = ({ brightness = 1.0, speed = 1.0, theme = 'cyber' }) => 
 
                     vec2 pointerField = uPointer * vec2(0.16, 0.10);
                     vec2 slowDrift = vec2(
-                        fbm(vec3(centered * 0.65 + pointerField, time * 0.025)),
-                        fbm(vec3(centered * 0.72 - pointerField.yx, time * 0.022 + 8.0))
+                        fbm(vec3(centered * 0.65 + pointerField, time * 0.025), 2),
+                        fbm(vec3(centered * 0.72 - pointerField.yx, time * 0.022 + 8.0), 2)
                     );
 
                     vec2 warped = centered + slowDrift * 0.22;
-                    float nebulaA = fbm(vec3(warped * 1.25 + vec2(-0.18, 0.12), time * 0.035));
-                    float nebulaB = fbm(vec3(warped * 1.85 + vec2(2.8, -1.4), time * -0.028));
-                    float veil = fbm(vec3(warped * 3.4 + slowDrift * 0.55, time * 0.018 + 4.0));
+                    float nebulaA = fbm(vec3(warped * 1.25 + vec2(-0.18, 0.12), time * 0.035), 3);
+                    float nebulaB = fbm(vec3(warped * 1.85 + vec2(2.8, -1.4), time * -0.028), 2);
+                    float veil = fbm(vec3(warped * 3.4 + slowDrift * 0.55, time * 0.018 + 4.0), 3);
 
                     float field = smoothstep(-0.25, 0.72, nebulaA * 0.72 + nebulaB * 0.38);
                     float filament = pow(smoothstep(0.08, 0.78, abs(veil)), 2.5);
@@ -310,11 +334,27 @@ const ThreeBackground = ({ brightness = 1.0, speed = 1.0, theme = 'cyber' }) => 
 
         let frameId = 0;
         let visible = true;
+        let loopRunning = true;
+        let lastFrameTime = 0;
+
+        // Pre-allocated target color objects — reused every frame to avoid GC pressure
+        const targetColors = {
+            cyan:   new THREE.Color(),
+            violet: new THREE.Color(),
+            blue:   new THREE.Color(),
+            bg:     new THREE.Color()
+        };
 
         const setRendererSize = () => {
             const width = window.innerWidth;
             const height = window.innerHeight;
-            const pixelRatio = Math.min(window.devicePixelRatio || 1, isSmallViewport() ? 1 : 1.35);
+            
+            const q = configRef.current.quality || 'high';
+            let maxPixelRatio = 1.35;
+            if (q === 'balanced') maxPixelRatio = 1.0;
+            if (q === 'eco' || q === 'static') maxPixelRatio = 0.75;
+            
+            const pixelRatio = Math.min(window.devicePixelRatio || 1, isSmallViewport() ? 1 : maxPixelRatio);
 
             renderer.setPixelRatio(pixelRatio);
             renderer.setSize(width, height);
@@ -323,11 +363,45 @@ const ThreeBackground = ({ brightness = 1.0, speed = 1.0, theme = 'cyber' }) => 
 
             particleCamera.aspect = width / height;
             particleCamera.updateProjectionMatrix();
+
+            if (!loopRunning) {
+                renderer.autoClear = true;
+                renderer.render(backgroundScene, camera);
+                renderer.autoClear = false;
+                renderer.render(particleScene, particleCamera);
+            }
         };
 
-        const animate = () => {
+        setRendererSizeRef.current = setRendererSize;
+
+        const animate = (timestamp) => {
+            if (!loopRunning) return;
             frameId = requestAnimationFrame(animate);
             if (!visible) return;
+
+            const q = configRef.current.quality;
+            if (q === 'static') {
+                loopRunning = false;
+                renderer.autoClear = true;
+                renderer.render(backgroundScene, camera);
+                renderer.autoClear = false;
+                renderer.render(particleScene, particleCamera);
+                return;
+            }
+
+            // FPS Throttling
+            let fpsInterval = 0;
+            if (q === 'eco') {
+                fpsInterval = 1000 / 30; // 30 FPS
+            } else if (q === 'balanced') {
+                fpsInterval = 1000 / 60; // 60 FPS
+            }
+
+            if (fpsInterval > 0 && timestamp) {
+                const elapsed = timestamp - lastFrameTime;
+                if (elapsed < fpsInterval) return;
+                lastFrameTime = timestamp - (elapsed % fpsInterval);
+            }
 
             const delta = clock.getDelta();
             // Accrue time driven by dynamic speed configuration
@@ -343,33 +417,33 @@ const ThreeBackground = ({ brightness = 1.0, speed = 1.0, theme = 'cyber' }) => 
             pointerVelocity.current.x = easedPointer.current.x - lastX;
             pointerVelocity.current.y = easedPointer.current.y - lastY;
 
-            // Map target theme colors for smooth interpolation
+            // Map target theme colors for smooth interpolation — using pre-allocated objects
             let targetCyan, targetViolet, targetBlue, targetBg;
             switch (configRef.current.theme) {
                 case 'solar':
-                    targetCyan = new THREE.Color(0xf2994a); // Amber Gold
-                    targetViolet = new THREE.Color(0xeb5757); // Warm Red
-                    targetBlue = new THREE.Color(0x551100); // Deep Amber-Rust
-                    targetBg = new THREE.Color(0x080302); // Warm Black
+                    targetCyan   = targetColors.cyan.set(0xf2994a);   // Amber Gold
+                    targetViolet = targetColors.violet.set(0xeb5757); // Warm Red
+                    targetBlue   = targetColors.blue.set(0x551100);   // Deep Amber-Rust
+                    targetBg     = targetColors.bg.set(0x080302);     // Warm Black
                     break;
                 case 'emerald':
-                    targetCyan = new THREE.Color(0x22c55e); // Neon Green
-                    targetViolet = new THREE.Color(0x0f766e); // Teal
-                    targetBlue = new THREE.Color(0x021c16); // Deep Emerald
-                    targetBg = new THREE.Color(0x020604); // Deep Green-Black
+                    targetCyan   = targetColors.cyan.set(0x22c55e);   // Neon Green
+                    targetViolet = targetColors.violet.set(0x0f766e); // Teal
+                    targetBlue   = targetColors.blue.set(0x021c16);   // Deep Emerald
+                    targetBg     = targetColors.bg.set(0x020604);     // Deep Green-Black
                     break;
                 case 'void':
-                    targetCyan = new THREE.Color(0xd1d5db); // Light Silver
-                    targetViolet = new THREE.Color(0x4b5563); // Cool Gray
-                    targetBlue = new THREE.Color(0x0b0f19); // Ink Dark Gray
-                    targetBg = new THREE.Color(0x0a0c10); // Cool Grey-Black
+                    targetCyan   = targetColors.cyan.set(0xd1d5db);   // Light Silver
+                    targetViolet = targetColors.violet.set(0x4b5563); // Cool Gray
+                    targetBlue   = targetColors.blue.set(0x0b0f19);   // Ink Dark Gray
+                    targetBg     = targetColors.bg.set(0x0a0c10);     // Cool Grey-Black
                     break;
                 case 'cyber':
                 default:
-                    targetCyan = new THREE.Color(0x22d3ee); // Cyan
-                    targetViolet = new THREE.Color(0xa855f7); // Violet
-                    targetBlue = new THREE.Color(0x0e7490); // Dark Blue
-                    targetBg = new THREE.Color(0x050505); // Cyber Black
+                    targetCyan   = targetColors.cyan.set(0x22d3ee);   // Cyan
+                    targetViolet = targetColors.violet.set(0xa855f7); // Violet
+                    targetBlue   = targetColors.blue.set(0x0e7490);   // Dark Blue
+                    targetBg     = targetColors.bg.set(0x050505);     // Cyber Black
                     break;
             }
 
@@ -383,6 +457,11 @@ const ThreeBackground = ({ brightness = 1.0, speed = 1.0, theme = 'cyber' }) => 
             renderer.setClearColor(currentColors.bg, 1);
 
             // Sync WebGL uniforms
+            let qualityVal = 2; // high
+            if (q === 'balanced') qualityVal = 1;
+            if (q === 'eco' || q === 'static') qualityVal = 0;
+            backgroundMaterial.uniforms.uQualityLevel.value = qualityVal;
+
             backgroundMaterial.uniforms.uTime.value = time;
             backgroundMaterial.uniforms.uPointer.value.set(easedPointer.current.x, easedPointer.current.y);
             backgroundMaterial.uniforms.uBrightness.value = configRef.current.brightness;
@@ -423,6 +502,15 @@ const ThreeBackground = ({ brightness = 1.0, speed = 1.0, theme = 'cyber' }) => 
             renderer.render(backgroundScene, camera);
             renderer.autoClear = false;
             renderer.render(particleScene, particleCamera);
+        };
+
+        triggerRestartRef.current = () => {
+            if (!loopRunning) {
+                loopRunning = true;
+                clock.getDelta();
+                lastFrameTime = performance.now();
+                animate(performance.now());
+            }
         };
 
         const handleVisibilityChange = () => {

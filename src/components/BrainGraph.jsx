@@ -437,6 +437,8 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
 
     const ctx = canvas.getContext('2d');
     let animationFrameId;
+    let isVisible = false;
+    let intersectionObserver;
 
     const resizeObserver = new ResizeObserver((entries) => {
       for (const entry of entries) {
@@ -459,6 +461,7 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
     }
 
     const tick = () => {
+      if (!isVisible) return;
       const nodes = nodesRef.current;
       const links = linksRef.current;
       
@@ -664,10 +667,26 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
       animationFrameId = requestAnimationFrame(tick);
     };
 
-    tick();
+    intersectionObserver = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      const wasVisible = isVisible;
+      isVisible = entry.isIntersecting;
+
+      if (isVisible && !wasVisible) {
+        cancelAnimationFrame(animationFrameId);
+        tick();
+      }
+    }, { threshold: 0.01 });
+
+    if (containerRef.current) {
+      intersectionObserver.observe(containerRef.current);
+    }
 
     return () => {
       resizeObserver.disconnect();
+      if (intersectionObserver) {
+        intersectionObserver.disconnect();
+      }
       cancelAnimationFrame(animationFrameId);
     };
   }, []); // Run once on mount!

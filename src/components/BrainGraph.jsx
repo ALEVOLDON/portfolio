@@ -153,13 +153,15 @@ const seededRandom = (value) => {
   return (hash >>> 0) / 4294967295;
 };
 
+const MAX_VISIBLE_TAG_NODES = 64;
+
 const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
   const t = translations[language].brain;
   const dateLocale = language === 'ru' ? 'ru-RU' : 'en-US';
   const [posts, setPosts] = useState([]);
   const [selectedPost, setSelectedPost] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
-  const [limit, setLimit] = useState(80); // Default to last 80 posts for performance and clarity
+  const [limit, setLimit] = useState(50); // Keep the graph light enough for low-power GPUs
   const [showTags, setShowTags] = useState(true);
   const [selectedTag, setSelectedTag] = useState(null);
   const [physicsEnabled, setPhysicsEnabled] = useState(true);
@@ -295,7 +297,7 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
     const nodes = [];
     const links = [];
     const nodeMap = new Map();
-    const tagsSet = new Set();
+    const tagCounts = new Map();
 
     // 1. Create Post Nodes
     filteredPosts.forEach(post => {
@@ -317,15 +319,18 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
 
       if (showTags && post.tags) {
         post.tags.forEach(tag => {
-          tagsSet.add(tag);
+          tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1);
         });
       }
     });
 
     // 2. Create Tag Nodes & Links
     if (showTags) {
-      tagsSet.forEach(tag => {
-        const tagPostsCount = filteredPosts.filter(p => p.tags.includes(tag)).length;
+      const visibleTags = Array.from(tagCounts.entries())
+        .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+        .slice(0, MAX_VISIBLE_TAG_NODES);
+
+      visibleTags.forEach(([tag, tagPostsCount]) => {
         if (tagPostsCount === 0) return;
 
         const tagNode = {
@@ -376,7 +381,7 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
     }
 
     return { nodes, links };
-  }, [filteredPosts, showTags, themeColors]);
+  }, [filteredPosts, showTags, themeColors, t.untitledPost]);
 
   // Keep track of current nodes state for canvas animation loop
   const nodesRef = useRef([]);
@@ -439,6 +444,8 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
     let animationFrameId;
     let isVisible = false;
     let intersectionObserver;
+    let lastFrameTime = 0;
+    const frameInterval = 1000 / 30;
 
     const resizeObserver = new ResizeObserver((entries) => {
       for (const entry of entries) {
@@ -460,8 +467,16 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
       resizeObserver.observe(containerRef.current);
     }
 
-    const tick = () => {
+    const tick = (timestamp = 0) => {
       if (!isVisible) return;
+      animationFrameId = requestAnimationFrame(tick);
+
+      if (timestamp) {
+        const elapsed = timestamp - lastFrameTime;
+        if (elapsed < frameInterval) return;
+        lastFrameTime = timestamp - (elapsed % frameInterval);
+      }
+
       const nodes = nodesRef.current;
       const links = linksRef.current;
       
@@ -664,7 +679,6 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
       });
 
       ctx.restore();
-      animationFrameId = requestAnimationFrame(tick);
     };
 
     intersectionObserver = new IntersectionObserver((entries) => {
@@ -674,7 +688,8 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
 
       if (isVisible && !wasVisible) {
         cancelAnimationFrame(animationFrameId);
-        tick();
+        lastFrameTime = performance.now();
+        tick(lastFrameTime);
       }
     }, { threshold: 0.01 });
 

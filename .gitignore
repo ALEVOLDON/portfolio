@@ -38,3 +38,7 @@ lighthouse*.json
 
 # Cursor agent terminal session logs (created in workspace during dev)
 terminals/
+
+# Telegram synced media
+public/media/telegram/
+

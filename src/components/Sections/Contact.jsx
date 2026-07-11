@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
-import Icon from './Icon';
-import { translations } from '../data/translations';
+import Icon from '../UI/Icon';
+import { translations } from '../../data/translations';
 
 const INITIAL_FORM = {
     name: '',

@@ -1,9 +1,9 @@
 import React, { Suspense, lazy } from 'react';
-import Icon from './Icon';
-import AvatarStatic from './AvatarStatic';
-import { translations } from '../data/translations';
+import Icon from '../UI/Icon';
+import AvatarStatic from '../Three/AvatarStatic';
+import { translations } from '../../data/translations';
 
-const InteractiveAvatar = lazy(() => import('./InteractiveAvatar'));
+const InteractiveAvatar = lazy(() => import('../Three/InteractiveAvatar'));
 
 const Hero = ({ theme = 'cyber', profile, loading, scrollTo, language = 'en' }) => {
     const t = translations[language].hero;

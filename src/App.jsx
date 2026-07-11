@@ -1,29 +1,21 @@
 import React, { Suspense, lazy, useState, useEffect } from 'react';
-import CustomCursor from './components/CustomCursor';
-import BackgroundControls from './components/BackgroundControls';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import WhatICreate from './components/WhatICreate';
-import About from './components/About';
-import Projects from './components/Projects';
-import DeferredBrainGraph from './components/DeferredBrainGraph';
-import Contact from './components/Contact';
-import ScrollToTop from './components/ScrollToTop';
-import SpotifyPlayer from './components/SpotifyPlayer';
+import CustomCursor from './components/UI/CustomCursor';
+import BackgroundControls from './components/UI/BackgroundControls';
+import Navbar from './components/UI/Navbar';
+import Hero from './components/Sections/Hero';
+import WhatICreate from './components/Sections/WhatICreate';
+import About from './components/Sections/About';
+import Projects from './components/Sections/Projects';
+import DeferredBrainGraph from './components/Sections/DeferredBrainGraph';
+import Contact from './components/Sections/Contact';
+import ScrollToTop from './components/UI/ScrollToTop';
+import SpotifyPlayer from './components/UI/SpotifyPlayer';
 import AudioService from './services/AudioService';
-import ModularSynth from './components/ModularSynth';
+import ModularSynth from './components/Synth/ModularSynth';
 import { translations } from './data/translations';
-import {
-  FALLBACK_PROFILE,
-  FALLBACK_REPOS,
-  FALLBACK_STATS,
-  FALLBACK_README,
-  getCachedPortfolioData,
-  isCachedPortfolioFresh,
-  fetchPortfolioData
-} from './services/github';
+import { usePortfolioData } from './hooks/usePortfolioData';
 
-const ThreeBackground = lazy(() => import('./components/ThreeBackground'));
+const ThreeBackground = lazy(() => import('./components/Three/ThreeBackground'));
 
 const StaticBackground = () => (
   <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden bg-cyber-black">
@@ -41,13 +33,9 @@ const getChronoTheme = (hour) => {
 };
 
 const App = () => {
+  const { profile, repos, stats, readme, loading } = usePortfolioData();
   const [activeSection, setActiveSection] = useState('home');
   const [language, setLanguage] = useState('en');
-  const [profile, setProfile] = useState(FALLBACK_PROFILE);
-  const [repos, setRepos] = useState(FALLBACK_REPOS);
-  const [readme, setReadme] = useState(FALLBACK_README);
-  const loading = false;
-  const [stats, setStats] = useState(FALLBACK_STATS);
   const [showBackground, setShowBackground] = useState(false);
   const [bgConfig, setBgConfig] = useState(() => {
     const storedTheme = localStorage.getItem('theme') || 'cyber';
@@ -181,61 +169,7 @@ const App = () => {
     body.classList.add(`theme-${bgConfig.theme}`);
   }, [bgConfig.theme]);
 
-  useEffect(() => {
-    let cancelled = false;
 
-    const applyData = (data) => {
-      setProfile(data.profile);
-      setRepos(data.repos);
-      setStats(data.stats);
-      setReadme(data.readme);
-    };
-
-    const loadPortfolio = async () => {
-      const username = 'ALEVOLDON';
-      const cached = getCachedPortfolioData();
-
-      if (cached) {
-        applyData(cached);
-        if (isCachedPortfolioFresh(cached)) return;
-      }
-
-      try {
-        const { data, rateLimited } = await fetchPortfolioData(username, cached);
-        if (cancelled) return;
-        applyData(data);
-        if (rateLimited) {
-          console.warn('GitHub API rate limit reached. Using cached/fallback data where needed.');
-        }
-      } catch (error) {
-        console.error('Critical Fetch Error', error);
-        if (!cancelled && !cached) {
-          applyData({
-            profile: FALLBACK_PROFILE,
-            repos: FALLBACK_REPOS,
-            stats: FALLBACK_STATS,
-            readme: FALLBACK_README
-          });
-        }
-      }
-    };
-
-    const scheduleSync = () => {
-      if (cancelled) return;
-      loadPortfolio();
-    };
-
-    window.addEventListener('pointermove', scheduleSync, { once: true, passive: true });
-    window.addEventListener('scroll', scheduleSync, { once: true, passive: true });
-    window.addEventListener('keydown', scheduleSync, { once: true });
-
-    return () => {
-      cancelled = true;
-      window.removeEventListener('pointermove', scheduleSync);
-      window.removeEventListener('scroll', scheduleSync);
-      window.removeEventListener('keydown', scheduleSync);
-    };
-  }, []);
 
   const scrollTo = (id) => {
     const el = document.getElementById(id);

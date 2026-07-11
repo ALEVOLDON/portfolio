@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { quotesData } from '../data/quotes';
+import { quotesData } from '../../data/quotes';
 
 // Helper to wrap text for the canvas
 const wrapText = (ctx, text, maxWidth) => {

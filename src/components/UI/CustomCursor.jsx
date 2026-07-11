@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import AudioService from '../services/AudioService';
+import AudioService from '../../services/AudioService';
 
 const CustomCursor = () => {
     const dotRef = useRef(null);

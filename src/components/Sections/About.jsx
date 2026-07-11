@@ -1,6 +1,6 @@
 import React from 'react';
-import Icon from './Icon';
-import { translations } from '../data/translations';
+import Icon from '../UI/Icon';
+import { translations } from '../../data/translations';
 
 const About = ({ profile, stats, language = 'en' }) => {
     const t = translations[language].about;

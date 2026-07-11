@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
-import Icon from './Icon';
+import Icon from '../UI/Icon';
 import GenerativeThumbnail from './GenerativeThumbnail';
-import { translations } from '../data/translations';
+import { translations } from '../../data/translations';
 
 const Projects = ({ repos, loading, language = 'en' }) => {
     const [projectMode, setProjectMode] = useState('featured'); // 'featured' or 'telemetry'

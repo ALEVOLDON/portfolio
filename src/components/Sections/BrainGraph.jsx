@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { marked } from 'marked';
 import DOMPurify from 'dompurify';
-import AudioService from '../services/AudioService';
-import { translations } from '../data/translations';
+import AudioService from '../../services/AudioService';
+import { translations } from '../../data/translations';
 import { 
   Search, 
   RotateCcw, 

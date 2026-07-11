@@ -133,28 +133,14 @@ public/
 └── data/
     └── posts.json       # Compiled static database of Obsidian vault posts
 src/
-├── components/          # UI components
-│   ├── About.jsx
-│   ├── BackgroundControls.jsx # HUD widget for background settings
-│   ├── BrainGraph.jsx         # Obsidian-style interactive force-directed canvas graph
-│   ├── Contact.jsx
-│   ├── CustomCursor.jsx       # Smooth mouse trail pointer
-│   ├── GenerativeThumbnail.jsx
-│   ├── Hero.jsx
-│   ├── Icon.jsx
-│   ├── InteractiveAvatar.jsx  # 3D WebGL face-scan hologram
-│   ├── ModularSynth.jsx       # Draggable Eurorack modular synth widget
-│   ├── Navbar.jsx
-│   ├── Projects.jsx
-│   ├── RotaryKnob.jsx         # Mouse/touch vertical drag dial
-│   ├── ScrollToTop.jsx
-│   ├── SpotifyPlayer.jsx      # Global slide-out Spotify player widget
-│   └── ThreeBackground.jsx    # WebGL background and particle shaders
-├── data/                # Static & runtime data configurations
-│   └── quotes.js        # Multilingual database of ambient keywords and quotes for the avatar
-├── services/            # API integrations
-│   ├── AudioService.js        # Web Audio API synthesizers & delay loop
-│   └── github.js        # GitHub data fetching & caching
+├── components/          # React UI components
+│   ├── UI/              # Floating widgets & interactive controls (Navbar, Cursor, HUD panel, Spotify)
+│   ├── Three/           # 3D WebGL canvas renders, particle shaders, and holographic avatar
+│   ├── Synth/           # Eurorack virtual modular synth console
+│   └── Sections/        # Main landing sections (Hero, About, Projects, Contact, BrainGraph)
+├── hooks/               # Custom React hooks (usePortfolioData lazy caching and fetch logic)
+├── data/                # Static & runtime data configurations (quotes, translations)
+├── services/            # API & audio integrations (AudioService synthesis, GitHub client)
 ├── App.jsx              # Main application layout
 ├── index.css            # Tailwind directives and global styles
 ├── main.jsx             # React entry point

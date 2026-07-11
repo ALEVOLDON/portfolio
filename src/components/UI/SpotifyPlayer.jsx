@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Icon from './Icon';
-import AudioService from '../services/AudioService';
-import { translations } from '../data/translations';
+import AudioService from '../../services/AudioService';
+import { translations } from '../../data/translations';
 
 const SpotifyPlayer = ({ language = 'en' }) => {
     const t = translations[language].spotify;

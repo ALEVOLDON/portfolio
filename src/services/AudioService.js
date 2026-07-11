@@ -415,6 +415,10 @@ class AudioService {
         if (this.mode === 'silent') return;
         if (!this.initialized || !this.ctx) return;
         
+        if (this.ctx.state === 'suspended') {
+            this.ctx.resume().catch(e => console.warn("AudioService: Auto-resume failed in playTick:", e));
+        }
+        
         console.log("AudioService: playTick execution started.");
         const now = this.ctx.currentTime;
         const params = this.getThemeParams();
@@ -444,6 +448,10 @@ class AudioService {
     playClick() {
         if (this.mode === 'silent') return;
         if (!this.initialized || !this.ctx) return;
+        
+        if (this.ctx.state === 'suspended') {
+            this.ctx.resume().catch(e => console.warn("AudioService: Auto-resume failed in playClick:", e));
+        }
         
         console.log("AudioService: playClick execution started.");
         const now = this.ctx.currentTime;
@@ -496,6 +504,10 @@ class AudioService {
     playSpatialNode(nodeType, xRatio) {
         if (this.mode === 'silent') return;
         if (!this.initialized || !this.ctx) return;
+        
+        if (this.ctx.state === 'suspended') {
+            this.ctx.resume().catch(e => console.warn("AudioService: Auto-resume failed in playSpatialNode:", e));
+        }
         
         console.log(`AudioService: playSpatialNode execution. Node: ${nodeType}, Pan: ${xRatio.toFixed(2)}`);
         const now = this.ctx.currentTime;

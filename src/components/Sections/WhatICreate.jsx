@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Icon from './Icon';
-import AudioService from '../services/AudioService';
-import { translations } from '../data/translations';
+import Icon from '../UI/Icon';
+import AudioService from '../../services/AudioService';
+import { translations } from '../../data/translations';
 
 const iconsList = ["sparkles", "code", "terminal", "sliders", "headphones", "file-code"];
 

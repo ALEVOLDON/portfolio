@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Icon from './Icon';
-import AudioService from '../services/AudioService';
+import AudioService from '../../services/AudioService';
 
 const BackgroundControls = ({ 
     bgConfig, 

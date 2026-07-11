@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import AudioService from '../services/AudioService';
-import RotaryKnob from './RotaryKnob';
+import AudioService from '../../services/AudioService';
+import RotaryKnob from '../UI/RotaryKnob';
 
 const ModularSynth = ({ onClose }) => {
     const [isMobile, setIsMobile] = useState(window.innerWidth < 640);

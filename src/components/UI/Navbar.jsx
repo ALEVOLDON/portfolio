@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Icon from './Icon';
-import AudioService from '../services/AudioService';
-import { translations } from '../data/translations';
+import AudioService from '../../services/AudioService';
+import { translations } from '../../data/translations';
 
 const Navbar = ({ activeSection, scrollTo, language, setLanguage }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);

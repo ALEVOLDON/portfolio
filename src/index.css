@@ -86,6 +86,143 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+/* ==========================================================================
+   Premium Glassmorphic Buttons (2026 Glassmorphism System)
+   ========================================================================== */
+
+/* Base Glass Button style */
+.btn-glass {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-radius: 9999px; /* full rounded */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/* Subtle gloss sheen overlay using pseudo-element */
+.btn-glass::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.12),
+        transparent
+    );
+    transform: skewX(-25deg);
+    transition: none;
+}
+
+.btn-glass:hover::before {
+    left: 150%;
+    transition: left 0.8s ease-in-out;
+}
+
+/* Primary Glass Button (Cyan-themed) */
+.btn-glass-primary {
+    background: linear-gradient(135deg, rgba(var(--primary-color-rgb), 0.12) 0%, rgba(var(--primary-color-rgb), 0.04) 100%);
+    border: 1px solid rgba(var(--primary-color-rgb), 0.3);
+    color: var(--color-cyber-cyan);
+    box-shadow: 
+        0 4px 15px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(var(--primary-color-rgb), 0.25),
+        0 0 0 rgba(var(--primary-color-rgb), 0);
+    text-shadow: 0 0 8px rgba(var(--primary-color-rgb), 0.3);
+}
+
+.btn-glass-primary:hover {
+    background: linear-gradient(135deg, rgba(var(--primary-color-rgb), 0.22) 0%, rgba(var(--primary-color-rgb), 0.08) 100%);
+    border-color: rgba(var(--primary-color-rgb), 0.6);
+    color: #ffffff;
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 
+        0 8px 25px rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(var(--primary-color-rgb), 0.4),
+        0 0 20px rgba(var(--primary-color-rgb), 0.4);
+    text-shadow: 0 0 12px rgba(var(--primary-color-rgb), 0.5);
+}
+
+.btn-glass-primary:active {
+    transform: translateY(0) scale(0.98);
+    box-shadow: 
+        0 2px 10px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(var(--primary-color-rgb), 0.2),
+        0 0 10px rgba(var(--primary-color-rgb), 0.2);
+}
+
+/* Secondary Glass Button (Purple-themed) */
+.btn-glass-secondary {
+    background: linear-gradient(135deg, rgba(var(--secondary-color-rgb), 0.12) 0%, rgba(var(--secondary-color-rgb), 0.04) 100%);
+    border: 1px solid rgba(var(--secondary-color-rgb), 0.3);
+    color: var(--color-cyber-purple);
+    box-shadow: 
+        0 4px 15px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(var(--secondary-color-rgb), 0.25),
+        0 0 0 rgba(var(--secondary-color-rgb), 0);
+    text-shadow: 0 0 8px rgba(var(--secondary-color-rgb), 0.3);
+}
+
+.btn-glass-secondary:hover {
+    background: linear-gradient(135deg, rgba(var(--secondary-color-rgb), 0.22) 0%, rgba(var(--secondary-color-rgb), 0.08) 100%);
+    border-color: rgba(var(--secondary-color-rgb), 0.6);
+    color: #ffffff;
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 
+        0 8px 25px rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(var(--secondary-color-rgb), 0.4),
+        0 0 20px rgba(var(--secondary-color-rgb), 0.4);
+    text-shadow: 0 0 12px rgba(var(--secondary-color-rgb), 0.5);
+}
+
+.btn-glass-secondary:active {
+    transform: translateY(0) scale(0.98);
+    box-shadow: 
+        0 2px 10px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(var(--secondary-color-rgb), 0.2),
+        0 0 10px rgba(var(--secondary-color-rgb), 0.2);
+}
+
+/* Neutral/White Glass Button */
+.btn-glass-white {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.8);
+    box-shadow: 
+        0 4px 15px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.btn-glass-white:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.04) 100%);
+    border-color: rgba(255, 255, 255, 0.35);
+    color: #ffffff;
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 
+        0 8px 25px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        0 0 15px rgba(255, 255, 255, 0.15);
+}
+
+.btn-glass-white:active {
+    transform: translateY(0) scale(0.98);
+    box-shadow: 
+        0 2px 10px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+
 .background-vignette {
     position: absolute;
     inset: 0;

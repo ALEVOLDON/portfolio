@@ -299,7 +299,7 @@ const Contact = ({ language = 'en' }) => {
                         <button
                             type="submit"
                             disabled={status === 'sending'}
-                            className="flex items-center justify-center gap-2 rounded-full bg-cyber-cyan px-6 py-3 md:px-8 md:py-4 font-bold text-black transition-all duration-300 hover:bg-white hover:scale-[1.03] hover:shadow-[0_0_25px_rgba(var(--primary-color-rgb),0.45)] disabled:cursor-not-allowed disabled:opacity-70 tracking-wider uppercase text-xs md:text-sm cursor-pointer"
+                            className="btn-glass btn-glass-primary px-6 py-3 md:px-8 md:py-4 flex items-center justify-center gap-2 transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-70 tracking-wider uppercase text-xs md:text-sm cursor-pointer"
                         >
                             <Icon name={status === 'success' ? 'check' : 'send'} size={18} />
                             {status === 'sending' ? t.btnSending : t.btnSend}

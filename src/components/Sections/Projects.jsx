@@ -139,13 +139,13 @@ const Projects = ({ repos, loading, language = 'en' }) => {
                     <p className="text-zinc-400 font-display uppercase tracking-widest text-xs mb-8">{t.subheading}</p>
 
                     {/* Mode Toggle Switch */}
-                    <div className="flex flex-col sm:flex-row justify-center gap-3 mb-6 max-w-lg mx-auto p-1 bg-cyber-dark/45 backdrop-blur-md border border-white/10 rounded-full font-display">
+                    <div className="flex flex-col sm:flex-row justify-center gap-3 mb-6 max-w-lg mx-auto p-1 bg-cyber-dark/45 backdrop-blur-md border border-white/10 rounded-2xl sm:rounded-full font-display">
                         <button
                             onClick={() => {
                                 setProjectMode('featured');
                                 setCurrentIndex(0);
                             }}
-                            className={`flex-1 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer border ${
+                            className={`flex-1 px-5 py-2.5 rounded-xl sm:rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer border ${
                                 projectMode === 'featured'
                                     ? 'bg-cyber-cyan/15 text-cyber-cyan border-cyber-cyan/30 shadow-[0_0_15px_rgba(var(--primary-color-rgb),0.25)]'
                                     : 'text-zinc-400 hover:text-white bg-transparent border-transparent'
@@ -161,7 +161,7 @@ const Projects = ({ repos, loading, language = 'en' }) => {
                                 setProjectMode('telemetry');
                                 setCurrentIndex(0);
                             }}
-                            className={`flex-1 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer border ${
+                            className={`flex-1 px-5 py-2.5 rounded-xl sm:rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer border ${
                                 projectMode === 'telemetry'
                                     ? 'bg-cyber-purple/15 text-cyber-purple border-cyber-purple/30 shadow-[0_0_15px_rgba(var(--secondary-color-rgb),0.25)]'
                                     : 'text-zinc-400 hover:text-white bg-transparent border-transparent'

@@ -28,21 +28,6 @@
       "content": "Если вы пишите Telegram/Discord ботов, парсеры, AI-агентов или фоновые скрипты, вы наверняка сталкивались с кучей открытых чёрных окон cmd на рабочем столе.\n\nЧтобы избавиться от этого хаоса, я написал Bot Launchpad — удобную веб-панель управления и запуска процессов в реальном времени. Теперь проект официально опубликован на GitHub! 🎉\n\n🔥 Что умеет Bot Launchpad?\n\n• 🔹 Управление в 1 клик: Запуск, остановка и перезапуск любых ботов и батников прямо из браузера или оконного десктоп-приложения.\n• 🔹 Живые логи в реальном времени: Трансляция вывода stdout / stderr через WebSockets с автопрокруткой, поиском и скачиванием логов.\n• 🔹 Защита от крашей (Auto-Restart): Панель автоматически поднимет упавший сервис и предотвратит бесконечный цикл перезапуска при фатальной ошибке.\n• 🔹 Алерты в Telegram/Discord: Мгновенные Webhook-уведомления, если сервис закрашился.\n• 🔹 Фоновый запуск без консолей: Готовые VBS-скрипты и PowerShell-генератор ярлыков на Рабочий стол и Панель задач.\n• 🔹 Двуязычный интерфейс (EN/RU): Переключение языка приложения в один клик.\n\n🛠 Стек: Node.js, Express, WebSockets, Vanilla JS & CSS (без тяжёлых фреймворков и Docker).\n\n📂 Исходный код и инструкция по установке:\n👉 https://github.com/ALEVOLDON/bot-manager-dashboard\n\n⭐ Если проект вам пригодится или понравится идеей — буду рад вашей звёздочке на GitHub! Буду рад обратной связи и вашим пулл-реквестам.\n\n#OpenSource #GitHub #BotLaunchpad #NodeJS #DevTools\n\n## Links\n\n- https://github.com/ALEVOLDON/bot-manager-dashboard\n\n## Tags\n\n#telegram-import #live-sync #opensource #github #botlaunchpad #nodejs #devtools #frontend #backend #ai #telegram #tools #code #если #или #без"
     },
     {
-      "id": 3212,
-      "date": "2026-07-31T11:11:15.000Z",
-      "title": "Post 3212",
-      "channel": "D. U. M. P.",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3212,
-      "tags": [
-        "telegram-import",
-        "live-sync",
-        "post",
-        "archive"
-      ],
-      "content": "## Tags\n\n#telegram-import #live-sync #post #archive"
-    },
-    {
       "id": 3211,
       "date": "2026-07-31T10:57:57.000Z",
       "title": "DeepSeek запустила публичный бета-тест API для DeepSeek-V4-Flash",

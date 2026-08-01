@@ -86,14 +86,14 @@ const Navbar = ({ activeSection, scrollTo, language, setLanguage }) => {
             {/* Overlay для закрытия мобильного меню */}
             {isMenuOpen && (
                 <div
-                    className="fixed inset-0 z-40 bg-black/10 backdrop-blur-[2px] md:hidden"
+                    className="fixed inset-0 z-[99] bg-black/40 backdrop-blur-[2px] md:hidden"
                     onClick={() => setIsMenuOpen(false)}
                 />
             )}
-            <nav className={`fixed top-3 sm:top-4 left-0 right-0 mx-auto w-[calc(100%-2rem)] max-w-5xl z-50 px-6 rounded-full capsule-panel capsule-border-glow transition-all duration-300 ${
+            <nav className={`fixed top-3 sm:top-4 left-0 right-0 mx-auto w-[calc(100%-2rem)] max-w-5xl z-[100] px-6 rounded-full capsule-panel capsule-border-glow transition-all duration-300 ${
                 isScrolled
-                    ? 'py-2 bg-[#06040a]/90 backdrop-blur-2xl border-white/20 shadow-[0_15px_40px_rgba(0,0,0,0.85)]'
-                    : 'py-2.5 bg-[#050505]/45 backdrop-blur-xl border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.5)]'
+                    ? 'py-2 bg-[#09070f]/95 backdrop-blur-2xl border-white/25 shadow-[0_15px_40px_rgba(0,0,0,0.9),0_0_20px_rgba(var(--primary-color-rgb),0.2)]'
+                    : 'py-2.5 bg-[#07050b]/60 backdrop-blur-xl border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.5)]'
             }`}>
                 <div className="flex justify-between items-center">
                     <div 

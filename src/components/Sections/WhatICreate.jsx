@@ -10,12 +10,21 @@ const WhatICreate = ({ language = 'en' }) => {
     const t = translations[language].create;
 
     const handleMouseEnter = (idx) => {
-        setHoveredIdx(idx);
-        AudioService.playTick();
+        if (window.matchMedia('(hover: hover)').matches) {
+            setHoveredIdx(idx);
+            AudioService.playTick();
+        }
     };
 
     const handleMouseLeave = () => {
-        setHoveredIdx(null);
+        if (window.matchMedia('(hover: hover)').matches) {
+            setHoveredIdx(null);
+        }
+    };
+
+    const handleClick = (idx) => {
+        setHoveredIdx((prev) => (prev === idx ? null : idx));
+        AudioService.playTick();
     };
 
     return (
@@ -40,7 +49,8 @@ const WhatICreate = ({ language = 'en' }) => {
                                 key={idx}
                                 onMouseEnter={() => handleMouseEnter(idx)}
                                 onMouseLeave={handleMouseLeave}
-                                className="group relative bg-[#0a080f]/90 border border-white/10 hover:border-cyber-cyan/50 hover:shadow-[0_0_20px_rgba(34,211,238,0.15)] rounded-xl p-6 transition-all duration-300 flex flex-col justify-between h-[360px] tech-corners corners-cyan select-none"
+                                onClick={() => handleClick(idx)}
+                                className="group relative bg-[#0a080f]/90 border border-white/10 hover:border-cyber-cyan/50 hover:shadow-[0_0_20px_rgba(34,211,238,0.15)] rounded-xl p-6 transition-all duration-300 flex flex-col justify-between h-[360px] tech-corners corners-cyan select-none cursor-pointer"
                             >
                                 <div>
                                     {/* Icon & Title */}

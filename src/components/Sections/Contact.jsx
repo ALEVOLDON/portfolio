@@ -92,10 +92,13 @@ const Contact = ({ language = 'en' }) => {
                         setTurnstileToken(token);
                         setTurnstileReady(true);
                         setTurnstileError(null);
-                        if (status === 'error') {
-                            setStatus('idle');
-                            setFeedback('');
-                        }
+                        setStatus((prevStatus) => {
+                            if (prevStatus === 'error') {
+                                setFeedback('');
+                                return 'idle';
+                            }
+                            return prevStatus;
+                        });
                     },
                     'expired-callback': () => {
                         setTurnstileToken('');

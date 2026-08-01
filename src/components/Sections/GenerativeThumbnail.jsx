@@ -48,8 +48,6 @@ const GenerativeThumbnail = ({ seedStr }) => {
             let particles = [];
             let hueBase;
             const numParticles = 36; // Multiple cards can be visible at once
-            let frameCount = 0;
-
             p.setup = () => {
                 // Determine base color mapping from the seed string
                 let hash = 0;
@@ -73,7 +71,6 @@ const GenerativeThumbnail = ({ seedStr }) => {
             };
 
             p.draw = () => {
-                frameCount += 1;
                 // Clear background with semi-transparent dark shade for trail effect
                 p.background(10, 10, 10, 50);
 
@@ -96,9 +93,7 @@ const GenerativeThumbnail = ({ seedStr }) => {
                     }
                 }
 
-                if (frameCount > 180) {
-                    p.noLoop();
-                }
+
             };
 
             p.windowResized = () => {

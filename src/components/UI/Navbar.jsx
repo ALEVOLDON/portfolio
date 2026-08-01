@@ -241,36 +241,6 @@ const Navbar = ({ activeSection, scrollTo, language, setLanguage }) => {
                     </div>
                 </div>
             </nav>
-
-            {/* Mobile Bottom Floating Dock (< 768px) */}
-            <div className="md:hidden fixed bottom-3 left-1/2 -translate-x-1/2 z-[100] w-[calc(100%-2rem)] max-w-sm px-2 py-1.5 rounded-full capsule-panel border border-white/20 bg-[#07050b]/90 backdrop-blur-2xl shadow-[0_10px_30px_rgba(0,0,0,0.85),0_0_20px_rgba(var(--primary-color-rgb),0.15)] flex justify-around items-center font-display">
-                {navItems.map(item => {
-                    const id = item.toLowerCase();
-                    const isActive = activeSection === id;
-                    const navIcons = {
-                        home: 'home',
-                        create: 'sparkles',
-                        projects: 'folder-git',
-                        about: 'user',
-                        brain: 'book-open',
-                        contact: 'mail'
-                    };
-                    return (
-                        <button
-                            key={item}
-                            onClick={() => handleNavClick(item)}
-                            className={`flex flex-col items-center gap-0.5 px-2 py-1 rounded-full transition-all duration-300 cursor-pointer ${
-                                isActive
-                                    ? 'text-cyber-cyan font-bold scale-110'
-                                    : 'text-zinc-400 hover:text-white'
-                            }`}
-                        >
-                            <Icon name={navIcons[id] || 'code'} size={15} />
-                            <span className="text-[7px] uppercase tracking-wider">{translations[language].nav[id]}</span>
-                        </button>
-                    );
-                })}
-            </div>
         </>
     );
 };

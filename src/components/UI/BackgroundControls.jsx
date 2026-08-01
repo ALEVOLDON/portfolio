@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Icon from './Icon';
 import AudioService from '../../services/AudioService';
+import { translations } from '../../data/translations';
 
 const BackgroundControls = ({ 
     bgConfig, 
@@ -8,8 +9,10 @@ const BackgroundControls = ({
     setShowSynth,
     themeMode = 'manual',
     setThemeMode,
-    cycleProgress = 0
+    cycleProgress = 0,
+    language = 'en'
 }) => {
+    const t = translations[language]?.controls || translations.en.controls;
     const [isOpen, setIsOpen] = useState(false);
     const [audioMode, setAudioMode] = useState(AudioService.mode);
     const [currentTime, setCurrentTime] = useState(new Date());
@@ -36,16 +39,16 @@ const BackgroundControls = ({
     };
 
     const audioModes = [
-        { id: 'silent', label: 'Silent', icon: 'volume-x', desc: 'Mute all sounds' },
-        { id: 'ui', label: 'UI FX', icon: 'sliders', desc: 'Hover & click feedback' },
-        { id: 'immersive', label: 'Ambient', icon: 'waves', desc: 'Full drone & spatial audio' }
+        { id: 'silent', label: t.audioModes.silent.label, icon: 'volume-x', desc: t.audioModes.silent.desc },
+        { id: 'ui', label: t.audioModes.ui.label, icon: 'sliders', desc: t.audioModes.ui.desc },
+        { id: 'immersive', label: t.audioModes.immersive.label, icon: 'waves', desc: t.audioModes.immersive.desc }
     ];
 
     const qualityProfiles = [
-        { id: 'high', label: 'High', desc: 'High quality, 1.15x resolution scale, 60 FPS cap' },
-        { id: 'balanced', label: 'Bal', desc: 'Balanced, 1.0x resolution scale, 45 FPS cap' },
-        { id: 'eco', label: 'Eco', desc: 'Eco friendly, 0.75x resolution scale, 24 FPS cap' },
-        { id: 'static', label: 'Static', desc: 'Render background once, freeze animations, 0% GPU load' }
+        { id: 'high', label: t.quality.high.label, desc: t.quality.high.desc },
+        { id: 'balanced', label: t.quality.balanced.label, desc: t.quality.balanced.desc },
+        { id: 'eco', label: t.quality.eco.label, desc: t.quality.eco.desc },
+        { id: 'static', label: t.quality.static.label, desc: t.quality.static.desc }
     ];
 
     const themes = [
@@ -83,7 +86,7 @@ const BackgroundControls = ({
                 <button
                     onClick={() => setIsOpen(true)}
                     className="flex items-center justify-center w-12 h-12 rounded-full glass-panel border border-white/10 text-cyber-cyan hover:text-white hover:border-cyber-cyan/50 hover:shadow-[0_0_20px_rgba(var(--primary-color-rgb),0.3)] transition-all duration-300 hover:scale-105 cursor-pointer"
-                    title="Configure Background Engine"
+                    title={t.title}
                 >
                     <Icon name="sliders" size={20} className="animate-pulse" />
                 </button>
@@ -96,7 +99,7 @@ const BackgroundControls = ({
                     <div className="flex justify-between items-center mb-4 pb-2 border-b border-white/5">
                         <div className="flex items-center gap-2">
                             <span className="w-2 h-2 rounded-full bg-cyber-cyan animate-pulse"></span>
-                            <h4 className="text-xs font-black text-white uppercase tracking-widest font-cyber">AMBIENT ENGINE</h4>
+                            <h4 className="text-xs font-black text-white uppercase tracking-widest font-cyber">{t.title}</h4>
                         </div>
                         <button
                             onClick={() => setIsOpen(false)}
@@ -108,20 +111,20 @@ const BackgroundControls = ({
 
                     {/* Diagnostics (Sci-fi decoration) */}
                     <div className="grid grid-cols-2 gap-2 text-[9px] text-gray-500 mb-4 bg-black/30 p-2 rounded border border-white/5">
-                        <div>ENGINE: <span className="text-green-400 font-bold">READY</span></div>
-                        <div>PALETTE: <span className="text-cyber-cyan uppercase">{bgConfig.theme}</span></div>
-                        <div>MODE: <span className="text-cyber-purple uppercase">{themeMode}</span></div>
-                        <div>LOAD: <span className="text-white">NOMINAL</span></div>
+                        <div>{t.engine}: <span className="text-green-400 font-bold">{t.ready}</span></div>
+                        <div>{t.palette}: <span className="text-cyber-cyan uppercase">{bgConfig.theme}</span></div>
+                        <div>{t.mode}: <span className="text-cyber-purple uppercase">{themeMode}</span></div>
+                        <div>{t.load}: <span className="text-white">{t.nominal}</span></div>
                     </div>
 
                     {/* Theme System Mode */}
                     <div className="mb-4">
-                        <span className="block text-[9px] text-gray-400 uppercase tracking-[0.2em] mb-2 font-display">SYSTEM OPER. MODE</span>
+                        <span className="block text-[9px] text-gray-400 uppercase tracking-[0.2em] mb-2 font-display">{t.sysMode}</span>
                         <div className="grid grid-cols-3 gap-1.5 font-sans">
                             {[
-                                { id: 'manual', label: 'Manual Lock', icon: 'lock', desc: 'Fix theme to selected palette' },
-                                { id: 'chrono', label: 'Chrono Sync', icon: 'clock', desc: 'Sync theme with local hour' },
-                                { id: 'cycle', label: 'Matrix Cycle', icon: 'refresh-cw', desc: 'Cycle themes automatically' }
+                                { id: 'manual', label: t.manualLock, icon: 'lock', desc: t.manualLockDesc },
+                                { id: 'chrono', label: t.chronoSync, icon: 'clock', desc: t.chronoSyncDesc },
+                                { id: 'cycle', label: t.matrixCycle, icon: 'refresh-cw', desc: t.matrixCycleDesc }
                             ].map(m => (
                                 <button
                                     key={m.id}
@@ -150,7 +153,7 @@ const BackgroundControls = ({
                                     size={14} 
                                     className="text-amber-400 animate-pulse" 
                                 />
-                                <span className="text-[9px] text-gray-400 uppercase tracking-wider">CHRONO STATUS</span>
+                                <span className="text-[9px] text-gray-400 uppercase tracking-wider">{t.chronoStatus}</span>
                             </div>
                             <span className="text-cyber-cyan font-bold font-cyber tracking-widest">
                                 {currentTime.toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit', second: '2-digit' })}
@@ -162,7 +165,7 @@ const BackgroundControls = ({
                     {themeMode === 'cycle' && (
                         <div className="mb-4 bg-black/40 p-2.5 rounded border border-white/5 animate-fadeIn">
                             <div className="flex justify-between text-[8px] text-gray-400 font-mono mb-1.5">
-                                <span>NEXT DRIFT CYCLE</span>
+                                <span>{t.nextCycle}</span>
                                 <span className="text-cyber-cyan font-bold">{Math.round(45 * (1 - cycleProgress / 100))}s</span>
                             </div>
                             <div className="w-full h-1 bg-white/5 rounded-full overflow-hidden">
@@ -176,22 +179,22 @@ const BackgroundControls = ({
 
                     {/* Theme Selectors */}
                     <div className="mb-4">
-                        <span className="block text-[9px] text-gray-400 uppercase tracking-[0.2em] mb-2 font-display">MATRIX PALETTE</span>
+                        <span className="block text-[9px] text-gray-400 uppercase tracking-[0.2em] mb-2 font-display">{t.matrixPalette}</span>
                         <div className="grid grid-cols-2 gap-2">
-                            {themes.map(t => (
+                            {themes.map(tTheme => (
                                 <button
-                                    key={t.id}
-                                    onClick={() => handleThemeChange(t.id)}
+                                    key={tTheme.id}
+                                    onClick={() => handleThemeChange(tTheme.id)}
                                     className={`p-2 rounded text-left border text-xs transition-all duration-300 flex items-center justify-between font-display font-medium cursor-pointer ${
-                                        bgConfig.theme === t.id
+                                        bgConfig.theme === tTheme.id
                                             ? 'border-cyber-cyan bg-cyber-cyan/10 text-white shadow-[0_0_15px_rgba(var(--primary-color-rgb),0.1)]'
                                             : 'border-white/10 bg-transparent text-gray-400 hover:border-white/20 hover:text-white'
                                     }`}
                                 >
-                                    <span>{t.label}</span>
+                                    <span>{tTheme.label}</span>
                                     <div className="flex gap-0.5">
-                                        <span className="w-2 h-2 rounded-full" style={{ backgroundColor: t.colors[0] }} />
-                                        <span className="w-2 h-2 rounded-full" style={{ backgroundColor: t.colors[1] }} />
+                                        <span className="w-2 h-2 rounded-full" style={{ backgroundColor: tTheme.colors[0] }} />
+                                        <span className="w-2 h-2 rounded-full" style={{ backgroundColor: tTheme.colors[1] }} />
                                     </div>
                                 </button>
                             ))}
@@ -200,7 +203,7 @@ const BackgroundControls = ({
 
                     {/* Audio Matrix */}
                     <div className="mb-4">
-                        <span className="block text-[9px] text-gray-400 uppercase tracking-[0.2em] mb-2 font-display">AUDIO MATRIX</span>
+                        <span className="block text-[9px] text-gray-400 uppercase tracking-[0.2em] mb-2 font-display">{t.audioMatrix}</span>
                         <div className="grid grid-cols-3 gap-1.5">
                             {audioModes.map(m => (
                                 <button
@@ -222,7 +225,7 @@ const BackgroundControls = ({
 
                     {/* Performance Profile */}
                     <div className="mb-4">
-                        <span className="block text-[9px] text-gray-400 uppercase tracking-[0.2em] mb-2 font-display">PERFORMANCE PROFILE</span>
+                        <span className="block text-[9px] text-gray-400 uppercase tracking-[0.2em] mb-2 font-display">{t.perfProfile}</span>
                         <div className="grid grid-cols-4 gap-1">
                             {qualityProfiles.map(p => (
                                 <button
@@ -246,7 +249,7 @@ const BackgroundControls = ({
                         {/* Brightness */}
                         <div>
                              <div className="flex justify-between text-[9px] text-gray-400 uppercase tracking-[0.2em] mb-1 font-display font-medium">
-                                <span>BRIGHTNESS</span>
+                                <span>{t.brightness}</span>
                                 <span className="text-cyber-cyan font-cyber font-bold">{bgConfig.brightness.toFixed(1)}x</span>
                             </div>
                             <input
@@ -263,7 +266,7 @@ const BackgroundControls = ({
                         {/* Speed */}
                         <div>
                              <div className="flex justify-between text-[9px] text-gray-400 uppercase tracking-[0.2em] mb-1 font-display font-medium">
-                                <span>DRIFT VELOCITY</span>
+                                <span>{t.driftVelocity}</span>
                                 <span className="text-cyber-cyan font-cyber font-bold">{bgConfig.speed.toFixed(1)}x</span>
                             </div>
                             <input
@@ -282,12 +285,12 @@ const BackgroundControls = ({
                     <button
                         onClick={() => {
                             setShowSynth(prev => !prev);
-                            setIsOpen(false); // Close drawer to keep screen tidy
+                            setIsOpen(false);
                         }}
                         className="w-full mt-4 py-2 bg-gradient-to-r from-zinc-900 to-zinc-950 border border-white/10 hover:border-cyber-cyan/50 text-white hover:text-cyber-cyan text-xs font-cyber font-bold tracking-widest uppercase rounded-lg transition-all cursor-pointer flex items-center justify-center gap-1.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] hover:shadow-[0_0_10px_rgba(var(--primary-color-rgb),0.15)]"
                     >
                         <Icon name="sliders" size={14} className="animate-pulse" />
-                        <span>Patch Console</span>
+                        <span>{t.patchConsole}</span>
                     </button>
                 </div>
             )}

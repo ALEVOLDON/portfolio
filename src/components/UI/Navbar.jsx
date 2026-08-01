@@ -114,11 +114,11 @@ const Navbar = ({ activeSection, scrollTo, language, setLanguage }) => {
                         </div>
                     </div>
                     
-                    {/* Nav Items (Always Visible across Desktop & Mobile) */}
-                    <div ref={containerRef} className="flex gap-1 sm:gap-1.5 items-center relative font-display overflow-x-auto no-scrollbar max-w-full py-0.5">
+                    {/* Desktop Nav Items */}
+                    <div ref={containerRef} className="hidden md:flex gap-1.5 items-center relative font-display">
                         {/* Sliding Highlight Background */}
                         <div
-                            className="absolute bg-cyber-cyan/10 rounded-full transition-all duration-300 ease-[cubic-bezier(0.25,1,0.5,1)] pointer-events-none border border-cyber-cyan/20 shadow-[0_0_12px_rgba(var(--primary-color-rgb),0.15)] hidden sm:block"
+                            className="absolute bg-cyber-cyan/10 rounded-full transition-all duration-300 ease-[cubic-bezier(0.25,1,0.5,1)] pointer-events-none border border-cyber-cyan/20 shadow-[0_0_12px_rgba(var(--primary-color-rgb),0.15)]"
                             style={{
                                 left: indicatorStyle.left,
                                 width: indicatorStyle.width,
@@ -134,9 +134,9 @@ const Navbar = ({ activeSection, scrollTo, language, setLanguage }) => {
                                 data-active={activeSection === item.toLowerCase()}
                                 onClick={() => scrollTo(item.toLowerCase())}
                                 onMouseEnter={() => AudioService.playTick()}
-                                className={`hover:text-white transition-colors uppercase tracking-widest text-[9px] sm:text-[10px] py-1 px-2.5 sm:px-4 rounded-full z-10 relative cursor-pointer whitespace-nowrap ${
+                                className={`hover:text-white transition-colors uppercase tracking-widest text-[10px] py-1.5 px-4 rounded-full z-10 relative cursor-pointer ${
                                     activeSection === item.toLowerCase() 
-                                        ? 'text-cyber-cyan font-semibold bg-cyber-cyan/15 sm:bg-transparent border border-cyber-cyan/30 sm:border-transparent' 
+                                        ? 'text-cyber-cyan font-semibold' 
                                         : 'text-gray-400 font-medium'
                                 }`}
                             >

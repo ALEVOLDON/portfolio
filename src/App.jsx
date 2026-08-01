@@ -212,6 +212,7 @@ const App = () => {
         themeMode={themeMode}
         setThemeMode={setThemeMode}
         cycleProgress={cycleProgress}
+        language={language}
       />
       {showSynth && <ModularSynth onClose={() => setShowSynth(false)} />}
       <Suspense fallback={<StaticBackground />}>

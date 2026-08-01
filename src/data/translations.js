@@ -247,6 +247,41 @@ export const translations = {
             successMsg: "Message sent. I will get it in Telegram.",
             errorMsg: "Spam protection failed to load. Refresh and try again.",
             turnstileProtected: "Protected by Cloudflare Turnstile."
+        },
+        controls: {
+            title: "AMBIENT ENGINE",
+            sysMode: "SYSTEM OPER. MODE",
+            manualLock: "Manual Lock",
+            manualLockDesc: "Fix theme to selected palette",
+            chronoSync: "Chrono Sync",
+            chronoSyncDesc: "Sync theme with local hour",
+            matrixCycle: "Matrix Cycle",
+            matrixCycleDesc: "Cycle themes automatically",
+            chronoStatus: "CHRONO STATUS",
+            nextCycle: "NEXT DRIFT CYCLE",
+            matrixPalette: "MATRIX PALETTE",
+            audioMatrix: "AUDIO MATRIX",
+            perfProfile: "PERFORMANCE PROFILE",
+            brightness: "BRIGHTNESS",
+            driftVelocity: "DRIFT VELOCITY",
+            patchConsole: "Patch Console",
+            ready: "READY",
+            nominal: "NOMINAL",
+            engine: "ENGINE",
+            palette: "PALETTE",
+            mode: "MODE",
+            load: "LOAD",
+            audioModes: {
+                silent: { label: "Silent", desc: "Mute all sounds" },
+                ui: { label: "UI FX", desc: "Hover & click feedback" },
+                immersive: { label: "Ambient", desc: "Full drone & spatial audio" }
+            },
+            quality: {
+                high: { label: "High", desc: "High quality, 1.15x resolution scale, 60 FPS cap" },
+                balanced: { label: "Bal", desc: "Balanced, 1.0x resolution scale, 45 FPS cap" },
+                eco: { label: "Eco", desc: "Eco friendly, 0.75x resolution scale, 24 FPS cap" },
+                static: { label: "Static", desc: "Render background once, freeze animations, 0% GPU load" }
+            }
         }
     },
     ru: {
@@ -496,6 +531,41 @@ export const translations = {
             successMsg: "Сообщение отправлено. Я получу его в Telegram.",
             errorMsg: "Проверка на спам не загрузилась. Обновите страницу.",
             turnstileProtected: "Защищено Cloudflare Turnstile."
+        },
+        controls: {
+            title: "ДВИЖОК ЭМБИЕНТА",
+            sysMode: "РЕЖИМ СИСТЕМЫ",
+            manualLock: "Ручной режим",
+            manualLockDesc: "Фиксация выбранной палитры темы",
+            chronoSync: "Хроно-синхрон",
+            chronoSyncDesc: "Синхронизация темы с вашим временем",
+            matrixCycle: "Цикл матрицы",
+            matrixCycleDesc: "Автоматическая смена тем",
+            chronoStatus: "СТАТУС ХРОНО",
+            nextCycle: "СЛЕДУЮЩИЙ ЦИКЛ",
+            matrixPalette: "ПАЛИТРА МАТРИЦЫ",
+            audioMatrix: "АУДИО МАТРИЦА",
+            perfProfile: "ПРОФИЛЬ ПРОИЗВОДИТЕЛЬНОСТИ",
+            brightness: "ЯРКОСТЬ",
+            driftVelocity: "СКОРОСТЬ ДРЕЙФА",
+            patchConsole: "Консоль синтеза",
+            ready: "ГОТОВ",
+            nominal: "НОРМА",
+            engine: "ДВИЖОК",
+            palette: "ПАЛИТРА",
+            mode: "РЕЖИМ",
+            load: "НАГРУЗКА",
+            audioModes: {
+                silent: { label: "Тишина", desc: "Выключить все звуки" },
+                ui: { label: "UI FX", desc: "Звуковой отклик кликов и наведения" },
+                immersive: { label: "Эмбиент", desc: "Полное аудио-погружение и пространственный звук" }
+            },
+            quality: {
+                high: { label: "Макс", desc: "Высокое качество, 1.15x разрешение, до 60 FPS" },
+                balanced: { label: "Бал", desc: "Сбалансированное, 1.0x разрешение, до 45 FPS" },
+                eco: { label: "Эко", desc: "Энергосберегающее, 0.75x разрешение, до 24 FPS" },
+                static: { label: "Статик", desc: "Статичный фон, заморозка анимаций, 0% GPU" }
+            }
         }
     }
 };

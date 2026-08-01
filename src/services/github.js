@@ -34,8 +34,21 @@ const REPO_IMAGE_MAP = {
 const isRateLimited = (response) => {
   if (!response) return false;
   if (response.status === 429) return true;
+  if (response.status === 403) return true;
   const remaining = response.headers.get('x-ratelimit-remaining');
-  return response.status === 403 && remaining === '0';
+  return remaining === '0';
+};
+
+const getFetchOptions = () => {
+  try {
+    const token = typeof import.meta !== 'undefined' && import.meta?.env ? import.meta.env.VITE_GITHUB_TOKEN : null;
+    if (token) {
+      return { headers: { Authorization: `token ${token}` } };
+    }
+  } catch {
+    // Ignore environment lookup failures
+  }
+  return undefined;
 };
 
 const normalizeProfile = (profileData) => ({
@@ -152,8 +165,10 @@ export const fetchPortfolioData = async (username, cachedData = null) => {
   let reposForStats = [];
   let pinnedRepos = [];
 
+  const fetchOpts = getFetchOptions();
+
   try {
-    const profileRes = await fetch(`https://api.github.com/users/${username}`);
+    const profileRes = await fetch(`https://api.github.com/users/${username}`, fetchOpts);
     if (profileRes.ok) {
       profileData = await profileRes.json();
     } else if (isRateLimited(profileRes)) {
@@ -164,7 +179,7 @@ export const fetchPortfolioData = async (username, cachedData = null) => {
   }
 
   try {
-    const statsRes = await fetch(`https://api.github.com/users/${username}/repos?sort=pushed&per_page=100`);
+    const statsRes = await fetch(`https://api.github.com/users/${username}/repos?sort=pushed&per_page=100`, fetchOpts);
     if (statsRes.ok) {
       reposForStats = await statsRes.json();
       // Dynamically select the 6 most recently active original repositories (excluding forks and profile README repo)

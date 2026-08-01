@@ -5,12 +5,23 @@ import { translations } from '../../data/translations';
 
 const Navbar = ({ activeSection, scrollTo, language, setLanguage }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
     const [audioMode, setAudioMode] = useState(AudioService.mode);
     const [prevActiveMode, setPrevActiveMode] = useState(localStorage.getItem('prevActiveAudioMode') || 'immersive');
     const navItems = ['Home', 'Create', 'Projects', 'About', 'Brain', 'Contact'];
 
     const containerRef = useRef(null);
     const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0, height: 0, top: 0, opacity: 0 });
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 20);
+        };
+
+        handleScroll();
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     useEffect(() => {
         const handleModeChange = (e) => {
@@ -79,7 +90,11 @@ const Navbar = ({ activeSection, scrollTo, language, setLanguage }) => {
                     onClick={() => setIsMenuOpen(false)}
                 />
             )}
-            <nav className="fixed top-4 left-0 right-0 mx-auto w-[calc(100%-2rem)] max-w-5xl z-50 px-6 py-2.5 rounded-full capsule-panel capsule-border-glow transition-all duration-300">
+            <nav className={`fixed top-3 sm:top-4 left-0 right-0 mx-auto w-[calc(100%-2rem)] max-w-5xl z-50 px-6 rounded-full capsule-panel capsule-border-glow transition-all duration-300 ${
+                isScrolled
+                    ? 'py-2 bg-[#06040a]/90 backdrop-blur-2xl border-white/20 shadow-[0_15px_40px_rgba(0,0,0,0.85)]'
+                    : 'py-2.5 bg-[#050505]/45 backdrop-blur-xl border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.5)]'
+            }`}>
                 <div className="flex justify-between items-center">
                     <div 
                         className="cylinder-logo-container cursor-pointer select-none" 

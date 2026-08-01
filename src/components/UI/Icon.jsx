@@ -34,10 +34,16 @@ import {
     RefreshCw,
     Lock,
     Sun,
-    Moon
+    Moon,
+    Home,
+    User,
+    BookOpen
 } from 'lucide-react';
 
 const icons = {
+    home: Home,
+    user: User,
+    'book-open': BookOpen,
     'arrow-up': ArrowUp,
     check: Check,
     code: Code,

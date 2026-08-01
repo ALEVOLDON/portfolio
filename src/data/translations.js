@@ -111,9 +111,45 @@ export const translations = {
                     language: "JavaScript"
                 },
                 {
+                    name: "bot-manager-dashboard",
+                    description: "Windows Process Launcher & Live Control Panel for Telegram/Discord bots, scripts, and background services.",
+                    result: "Automated bot management and logging with real-time WebSockets & auto-restart.",
+                    language: "JavaScript"
+                },
+                {
+                    name: "WindyCheck_bot",
+                    description: "Asynchronous Telegram bot for real-time wind tracking, weather forecasts, and automated alerts for windsurfers and sailors.",
+                    result: "Delivers automated real-time wind alerts, wind rose charts, and forecast telemetry.",
+                    language: "Python"
+                },
+                {
+                    name: "portfolio",
+                    description: "Generative portfolio website featuring live GitHub telemetry, Three.js backgrounds, and serverless contact flow.",
+                    result: "Created an interactive high-performance portfolio hub.",
+                    language: "JavaScript"
+                },
+                {
+                    name: "UPS-ExeGate-SpecialPro-UNB-1200",
+                    description: "Python telemetry reader & monitoring service for ExeGate SpecialPro UNB-1200 UPS systems.",
+                    result: "Provides automated power stability monitoring and status alerts.",
+                    language: "Python"
+                },
+                {
                     name: "Dump-Assistant-Bot",
                     description: "Smart Telegram bot managing smart comments templates inside channels using LLM-assisted context extraction.",
                     result: "Automated the moderation and template selection flow, reducing manual overhead by 80%.",
+                    language: "JavaScript"
+                },
+                {
+                    name: "obsidian_posts_smart_tags",
+                    description: "Node.js sync utility pulling Telegram channel posts into Obsidian Markdown notes with automatic AI smart tagging.",
+                    result: "Streamlined note archiving and knowledge graph creation.",
+                    language: "JavaScript"
+                },
+                {
+                    name: "full_roadmap_ai_enthusiast_2026",
+                    description: "Interactive AI Developer Roadmap 2026: building autonomous agents, MCP servers, and micro-SaaS applications.",
+                    result: "Structured a comprehensive study map for modern AI engineering.",
                     language: "JavaScript"
                 },
                 {
@@ -324,9 +360,45 @@ export const translations = {
                     language: "JavaScript"
                 },
                 {
+                    name: "bot-manager-dashboard",
+                    description: "Панель управления и запуска процессов в реальном времени для Telegram/Discord ботов, скриптов и туннелей.",
+                    result: "Автоматизирован менеджмент процессов с живой трансляцией логов через WebSockets и автоперезапуском.",
+                    language: "JavaScript"
+                },
+                {
+                    name: "WindyCheck_bot",
+                    description: "Асинхронный Telegram-бот для мониторинга скорости ветра, порывов, прогнозов погоды и автоматических алертов для кайтсерферов и яхтсменов.",
+                    result: "Автоматизировал выдачу графиков розы ветров и мгновенных алертов о ветре.",
+                    language: "Python"
+                },
+                {
+                    name: "portfolio",
+                    description: "Интерактивный веб-сайт портфолио с живой телеметрией GitHub, 3D-фоном Three.js и отправкой сообщений в Telegram.",
+                    result: "Создан высокопроизводительный интерактивный генеративный веб-хаб.",
+                    language: "JavaScript"
+                },
+                {
+                    name: "UPS-ExeGate-SpecialPro-UNB-1200",
+                    description: "Скрипт мониторинга и съема телеметрии для источников бесперебойного питания ExeGate UNB-1200.",
+                    result: "Обеспечивает автоматический контроль стабильности питания и оповещения при сбоях.",
+                    language: "Python"
+                },
+                {
                     name: "Dump-Assistant-Bot",
                     description: "Умный Telegram-бот для управления шаблонами комментариев в каналах с использованием контекстного извлечения (context extraction) на базе LLM.",
                     result: "Автоматизирован процесс фильтрации и подбора ответов, сократив время модерации на 80%.",
+                    language: "JavaScript"
+                },
+                {
+                    name: "obsidian_posts_smart_tags",
+                    description: "Скрипт синхронизации постов Telegram в заметки Obsidian с автоматическим тегированием и обработкой на базе ИИ.",
+                    result: "Автоматизировал архивацию постов в единую структурированную базу знаний.",
+                    language: "JavaScript"
+                },
+                {
+                    name: "full_roadmap_ai_enthusiast_2026",
+                    description: "Интерактивная дорожная карта ИИ-разработчика 2026: создание автономных агентов, MCP-серверов и micro-SaaS приложений.",
+                    result: "Сформировал структурный план обучения продвинутому AI-инжинирингу.",
                     language: "JavaScript"
                 },
                 {

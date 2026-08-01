@@ -34,9 +34,17 @@ const Projects = ({ repos, loading, language = 'en' }) => {
                 forks_count: 0
             }));
         }
-        const list = repos || [];
-        if (activeFilter === 'All') return list;
-        return list.filter(repo => repo.language === activeFilter);
+        const rawList = repos || [];
+        const translatedList = rawList.map(repo => {
+            const match = t.items.find(item => item.name.toLowerCase() === repo.name.toLowerCase());
+            return {
+                ...repo,
+                description: match?.description || repo.description,
+                result: match?.result || repo.result
+            };
+        });
+        if (activeFilter === 'All') return translatedList;
+        return translatedList.filter(repo => repo.language === activeFilter);
     }, [projectMode, repos, activeFilter, t.items]);
 
     // Handle responsiveness

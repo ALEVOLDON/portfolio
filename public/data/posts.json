@@ -1,6 +1,88 @@
 {
   "posts": [
     {
+      "id": 3218,
+      "date": "2026-08-01T14:44:41.000Z",
+      "title": "Post 3218",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3218,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "post",
+        "archive"
+      ],
+      "content": "## Tags\n\n#telegram-import #live-sync #post #archive"
+    },
+    {
+      "id": 3217,
+      "date": "2026-08-01T14:44:32.000Z",
+      "title": "Post 3217",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3217,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "post",
+        "archive"
+      ],
+      "content": "## Tags\n\n#telegram-import #live-sync #post #archive"
+    },
+    {
+      "id": 3216,
+      "date": "2026-08-01T14:43:27.000Z",
+      "title": "⚡️ UPS Monitor — современный мониторинг ИБП ExeGate SpecialPro UNB-1200",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3216,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "ups",
+        "ибп",
+        "exegate",
+        "python",
+        "opensource",
+        "windows",
+        "мониторинг",
+        "homelab",
+        "backend",
+        "github",
+        "code",
+        "полностью",
+        "как"
+      ],
+      "content": "Сделал полностью бесплатное и открытое приложение, которое превращает обычный ИБП в умный щит для вашего ПК.\n\nЧто умеет:\n\n• Реал-тайм мониторинг напряжения, нагрузки, температуры и заряда АКБ\n• Автоматическое безопасное выключение Windows при разряде батареи (с таймером и отменой)\n• Иконка в системном трее с живым статусом\n• Нативные Windows Toast-уведомления\n• Полностью двуязычный интерфейс (RU / EN) — переключается в 1 клик\n• Интерактивная карта 4-х розеток + журнал событий + экспорт в CSV\n• Красивые неоновые gauges и схема потока мощности\n• Работает как desktop-приложение и как веб-сервер\n\nВсё на Python + FastAPI + WebSockets + pywebview + pystray.\n\nПроект полностью open-source (MIT).\n\n🔗 GitHub: https://github.com/ALEVOLDON/UPS-ExeGate-SpecialPro-UNB-1200\n\nСтавьте ⭐️, если понравилось!\nБуду рад фидбеку и идеям 🔥\n\n#UPS #ИБП #ExeGate #Python #OpenSource #Windows #Мониторинг #HomeLab\n\n## Media\n\n- [video](https://alevoldon.com/media/telegram/2026/08/2026-08-02T03-20-55-134Z-aa357d27.mp4)\n\n## Links\n\n- https://github.com/ALEVOLDON/UPS-ExeGate-SpecialPro-UNB-1200\n\n## Tags\n\n#telegram-import #live-sync #ups #ибп #exegate #python #opensource #windows #мониторинг #homelab #backend #github #code #полностью #как"
+    },
+    {
+      "id": 3215,
+      "date": "2026-08-01T07:04:29.000Z",
+      "title": "Grok обновил модель Imagine Video 1.5: генерация по тексту, референсы голоса и н...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3215,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "ai",
+        "grok",
+        "xai",
+        "videoai",
+        "generativeai",
+        "technews",
+        "imaginevideo",
+        "video",
+        "tools",
+        "x",
+        "для",
+        "генерация",
+        "нативное"
+      ],
+      "content": "xAI представила масштабное обновление для своей видеомодели Imagine Video 1.5. Инструмент, первоначально отличавшийся улучшенной физикой движений и звуковым сопровождением, получил функции, необходимыe для полноценного производства видеоконтента.\n\nКлючевые новшества апдейта:\n• Text-to-video: полноценная генерация ролика напрямую из текстового промпта.\n• Мультимодальные референсы: возможность задавать не только визуальный стиль с помощью картинок, но и использовать голосовые референсы.\n• Нативное 1080p: поддержка высокого разрешения без сторонних апскейлеров.\n• Улучшенная синхронизация: более реалистичное сочетание движения объектов и аудиоряда.\n\nКонтекст\nДобавление голосовых и визуальных референсов превращает Imagine Video 1.5 из простого генератора коротких гифок в гибкий инструмент для креаторов и маркетологов. Нативное Full HD и генерация по тексту позволяют создавать готовые сцены с персонажами в один клик прямо внутри экосистемы Grok, что усиливает конкуренцию с Sora, Runway и Pika.\n\nЗаключение\nxAI продолжает быстрыми темпами развивать мультимодальные возможности своих моделей, постепенно превращая Grok в универсальный комбайн для работы с текстом, кодом, изображениями и видео.\n\nИсточник:\nhttps://x.com/elonmusk/status/2083356782693380350?s=20\n\n#AI #Grok #xAI #VideoAI #GenerativeAI #TechNews #ImagineVideo\n\n## Links\n\n- https://x.com/elonmusk/status/2083356782693380350?s=20\n\n## Tags\n\n#telegram-import #live-sync #ai #grok #xai #videoai #generativeai #technews #imaginevideo #video #tools #x #для #генерация #нативное"
+    },
+    {
       "id": 3214,
       "date": "2026-07-31T21:21:02.000Z",
       "title": "![Post cover](https://alevoldon.com/media/telegram/2026/08/2026-08-01T05-26-59-6...",
@@ -5818,21 +5900,6 @@
       "content": "## Tags\n\n#telegram-import #live-sync #post #archive"
     },
     {
-      "id": 2794,
-      "date": "2026-04-21T00:21:51.000Z",
-      "title": "Post 2794",
-      "channel": "D. U. M. P.",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 2794,
-      "tags": [
-        "telegram-import",
-        "live-sync",
-        "post",
-        "archive"
-      ],
-      "content": "## Tags\n\n#telegram-import #live-sync #post #archive"
-    },
-    {
       "id": 2784,
       "date": "2026-04-20T19:45:33.000Z",
       "title": "🔥 Собрал себе ИИ-ассистента для Telegram-канала (локально, бесплатно, без боли)",
@@ -6036,51 +6103,6 @@
       "content": "Это уже не просто DAW. Это конструктор звука.\n\nЧто это вообще:\nThe Grid — встроенная модульная система, где ты сам собираешь:\n— синты\n— эффекты\n— генеративные штуки\n\nКак это ощущается:\nТы не выбираешь пресет — ты создаёшь инструмент под задачу.\n\nТипа:\nOscillator → Filter → Amp\nLFO → Cutoff\nRandom → Pitch\n\nИ всё это соединяется напрямую, как в модульном синте.\n\nПочему это мощно:\n— любые сигналы можно направить куда угодно\n— можно собрать свой синт с нуля\n— звук получается не “как у всех”\n\nНо честно:\nМожно залипнуть и забыть, что ты вообще хотел написать трек 😄\n\nКак буду заходить:\n— не с нуля\n— беру готовый пресет\n— меняю по одному элементу\n— слушаю, что происходит\n\nЕсли коротко:\nThe Grid — это момент, где ты переходишь от “пользователя DAW” к “создателю звука”\n\nhttps://www.bitwig.com/the-grid/\n\nЕсли ты уже трогал Grid — расскажи, что у тебя получилось 👇\n\n## Links\n\n- https://www.bitwig.com/the-grid/\n\n## Tags\n\n#telegram-import #dump-channel #это #grid #как"
     },
     {
-      "id": 2705,
-      "date": "2026-04-12T00:04:27",
-      "title": "Post 2705",
-      "channel": "D. U. M. P.",
-      "telegram_chat_id": "",
-      "telegram_message_id": 2705,
-      "tags": [
-        "telegram-import",
-        "dump-channel",
-        "post",
-        "archive"
-      ],
-      "content": "## Media\n\nAttachment missing from export: 11.04.2026_19.21.03_REC.mp4\n\n## Tags\n\n#telegram-import #dump-channel #post #archive"
-    },
-    {
-      "id": 2704,
-      "date": "2026-04-11T15:53:00",
-      "title": "Post 2704",
-      "channel": "D. U. M. P.",
-      "telegram_chat_id": "",
-      "telegram_message_id": 2704,
-      "tags": [
-        "telegram-import",
-        "dump-channel",
-        "post",
-        "archive"
-      ],
-      "content": "## Media\n\nAttachment missing from export: 0k6eQBwdqqzAY86u.mp4\n\n## Tags\n\n#telegram-import #dump-channel #post #archive"
-    },
-    {
-      "id": 2703,
-      "date": "2026-04-11T15:51:50",
-      "title": "Post 2703",
-      "channel": "D. U. M. P.",
-      "telegram_chat_id": "",
-      "telegram_message_id": 2703,
-      "tags": [
-        "telegram-import",
-        "dump-channel",
-        "post",
-        "archive"
-      ],
-      "content": "## Media\n\nAttachment missing from export: gLbFxIkUbhkn11kj.mp4\n\n## Tags\n\n#telegram-import #dump-channel #post #archive"
-    },
-    {
       "id": 2699,
       "date": "2026-04-11T01:36:43",
       "title": "Everyday life of a developer",
@@ -6093,51 +6115,6 @@
         "life"
       ],
       "content": "## Media\n\n## Tags\n\n#telegram-import #dump-channel #life"
-    },
-    {
-      "id": 2700,
-      "date": "2026-04-11T01:36:43",
-      "title": "Post 2700",
-      "channel": "D. U. M. P.",
-      "telegram_chat_id": "",
-      "telegram_message_id": 2700,
-      "tags": [
-        "telegram-import",
-        "dump-channel",
-        "post",
-        "archive"
-      ],
-      "content": "## Media\n\n## Tags\n\n#telegram-import #dump-channel #post #archive"
-    },
-    {
-      "id": 2701,
-      "date": "2026-04-11T01:36:43",
-      "title": "Post 2701",
-      "channel": "D. U. M. P.",
-      "telegram_chat_id": "",
-      "telegram_message_id": 2701,
-      "tags": [
-        "telegram-import",
-        "dump-channel",
-        "post",
-        "archive"
-      ],
-      "content": "## Media\n\n## Tags\n\n#telegram-import #dump-channel #post #archive"
-    },
-    {
-      "id": 2702,
-      "date": "2026-04-11T01:36:43",
-      "title": "Post 2702",
-      "channel": "D. U. M. P.",
-      "telegram_chat_id": "",
-      "telegram_message_id": 2702,
-      "tags": [
-        "telegram-import",
-        "dump-channel",
-        "post",
-        "archive"
-      ],
-      "content": "## Media\n\n## Tags\n\n#telegram-import #dump-channel #post #archive"
     },
     {
       "id": 2696,
@@ -6539,36 +6516,6 @@
       "content": "## Media\n\n## Tags\n\n#telegram-import #dump-channel #time"
     },
     {
-      "id": 2673,
-      "date": "2026-04-02T13:18:10",
-      "title": "Post 2673",
-      "channel": "D. U. M. P.",
-      "telegram_chat_id": "",
-      "telegram_message_id": 2673,
-      "tags": [
-        "telegram-import",
-        "dump-channel",
-        "post",
-        "archive"
-      ],
-      "content": "## Media\n\n## Tags\n\n#telegram-import #dump-channel #post #archive"
-    },
-    {
-      "id": 2671,
-      "date": "2026-04-02T12:12:53",
-      "title": "Post 2671",
-      "channel": "D. U. M. P.",
-      "telegram_chat_id": "",
-      "telegram_message_id": 2671,
-      "tags": [
-        "telegram-import",
-        "dump-channel",
-        "post",
-        "archive"
-      ],
-      "content": "## Media\n\nAttachment missing from export: Архитектура_автономных_ИИ_агентов_и_машинных_корпораций.m4a\n\n## Tags\n\n#telegram-import #dump-channel #post #archive"
-    },
-    {
       "id": 2668,
       "date": "2026-04-02T12:11:34",
       "title": "Сортавала: От паркета до промптов 🌲💻",
@@ -6583,21 +6530,6 @@
         "дом"
       ],
       "content": "Решил устроить небольшой цифровой ретрит по местам «боевой славы» в Карелии через Google Maps. Оказалось, что мои старые адреса — это не просто точки на карте, а целый учебник истории архитектуры и индустрии.\n\nЧто в архиве:\n\n🏭 Хелюля (Helylän Tehtaat): Место, где я долго работал. Бывший паркетный цех на берегу капризной Тохмайоки. Когда-то тут делали всё: от школьных парт до легендарных лыж «Karelia». Настоящая индустриальная мощь, вписанная в скалы.\n\n🏰 Дом Сиитонена (ул. Карельская, 42): Мой старый офис. Финский национальный романтизм, окна-стрелы и дух старой типографии. Работать в здании 1904 года, где десятилетиями печатали главную газету города — это особый вайб. Воздух там до сих пор будто пропитан историей и свинцом.\n\n🏢 Функционализм на Ленина, 26: Мой дом. Лаконичный финский дизайн 30-х годов. Минимум декора, максимум света и эргономики. Кажется, именно там я подсознательно полюбил минимализм, который сейчас переношу в код.\n\nЭксперимент:\n\nВесь этот диалог с ИИ про историю зданий, мои воспоминания о производстве и архитектурные стили я решил скормить NotebookLM.\n\nХочу посмотреть, какой аудио-пересказ (Deep Dive) соберет гугловская нейронка из этого личного контекста. Получится такой «подкаст-экскурсия» по моему прошлому, сгенерированный технологиями будущего.\n\nКак вам обложка? Собрал промптом всё воедино: от карельских лыж до типографских станков. 🎙👇\n\n## Media\n\nMedia: photo not included in export.\n\n## Tags\n\n#telegram-import #dump-channel #всё #где #дом"
-    },
-    {
-      "id": 2667,
-      "date": "2026-04-01T00:51:53",
-      "title": "Hi, how are you?",
-      "channel": "D. U. M. P.",
-      "telegram_chat_id": "",
-      "telegram_message_id": 2667,
-      "tags": [
-        "telegram-import",
-        "dump-channel",
-        "post",
-        "archive"
-      ],
-      "content": "## Tags\n\n#telegram-import #dump-channel #post #archive"
     },
     {
       "id": 2666,
@@ -6886,111 +6818,6 @@
       "content": "Я начал проект, который давно хотел сделать.\nИдея простая:\nсоздать полный open-source курс, который проведёт человека\nот первого осциллятора → до генеративного аудиовизуального перформанса.\nПричём использовать только бесплатные инструменты.\nСтек проекта:\n🎛 VCV Rack — модульный синтез и генеративные патчи\n🎹 Ableton Live Lite — секвенсор и запись\n🌀 Blender / Three.js — аудиореактивная графика\n🔌 BlackHole / VB-Cable — виртуальный роутинг\nВнутри курса:\n— 40+ уроков\n— библиотека генеративных патчей\n— схемы и архитектуры систем\n— hybrid workflow modular + DAW\n— создание аудиовизуальных перформансов\nФинальная цель — система примерно такого вида:\n\nLaunchkey MIDI\n↓\nAbleton\n↓\nVCV Rack\n↓\nGenerative Music Engine\n↓\nVisual Engine\n↓\nAudiovisual Performance\n\nТо есть музыка становится живым алгоритмом, а не просто треком.\nПроект будет полностью open-source на GitHub.\nЛюбой сможет:\n— изучать\n— форкать\n— добавлять свои патчи\n— развивать базу знаний.\nЭто будет не просто курс, а лаборатория генеративного искусства.\nЕсли тема интересна — напишите в комментариях.\nПокажу дальше:\nпервый generative patch\nструктуру репозитория\nи прототип сайта проекта.\n\n## Media\n\nMedia: photo not included in export.\n\n## Tags\n\n#telegram-import #dump-channel #3d #курс #modular #ableton"
     },
     {
-      "id": 2645,
-      "date": "2026-03-13T07:06:00",
-      "title": "Post 2645",
-      "channel": "D. U. M. P.",
-      "telegram_chat_id": "",
-      "telegram_message_id": 2645,
-      "tags": [
-        "telegram-import",
-        "dump-channel",
-        "post",
-        "archive"
-      ],
-      "content": "## Media\n\n## Tags\n\n#telegram-import #dump-channel #post #archive"
-    },
-    {
-      "id": 2646,
-      "date": "2026-03-13T07:06:00",
-      "title": "Post 2646",
-      "channel": "D. U. M. P.",
-      "telegram_chat_id": "",
-      "telegram_message_id": 2646,
-      "tags": [
-        "telegram-import",
-        "dump-channel",
-        "post",
-        "archive"
-      ],
-      "content": "## Media\n\n## Tags\n\n#telegram-import #dump-channel #post #archive"
-    },
-    {
-      "id": 2647,
-      "date": "2026-03-13T07:06:00",
-      "title": "Post 2647",
-      "channel": "D. U. M. P.",
-      "telegram_chat_id": "",
-      "telegram_message_id": 2647,
-      "tags": [
-        "telegram-import",
-        "dump-channel",
-        "post",
-        "archive"
-      ],
-      "content": "## Media\n\n## Tags\n\n#telegram-import #dump-channel #post #archive"
-    },
-    {
-      "id": 2648,
-      "date": "2026-03-13T07:06:00",
-      "title": "Post 2648",
-      "channel": "D. U. M. P.",
-      "telegram_chat_id": "",
-      "telegram_message_id": 2648,
-      "tags": [
-        "telegram-import",
-        "dump-channel",
-        "post",
-        "archive"
-      ],
-      "content": "## Media\n\n## Tags\n\n#telegram-import #dump-channel #post #archive"
-    },
-    {
-      "id": 2649,
-      "date": "2026-03-13T07:06:00",
-      "title": "Post 2649",
-      "channel": "D. U. M. P.",
-      "telegram_chat_id": "",
-      "telegram_message_id": 2649,
-      "tags": [
-        "telegram-import",
-        "dump-channel",
-        "post",
-        "archive"
-      ],
-      "content": "## Media\n\n## Tags\n\n#telegram-import #dump-channel #post #archive"
-    },
-    {
-      "id": 2650,
-      "date": "2026-03-13T07:06:00",
-      "title": "Post 2650",
-      "channel": "D. U. M. P.",
-      "telegram_chat_id": "",
-      "telegram_message_id": 2650,
-      "tags": [
-        "telegram-import",
-        "dump-channel",
-        "post",
-        "archive"
-      ],
-      "content": "## Media\n\n## Tags\n\n#telegram-import #dump-channel #post #archive"
-    },
-    {
-      "id": 2651,
-      "date": "2026-03-13T07:06:00",
-      "title": "Post 2651",
-      "channel": "D. U. M. P.",
-      "telegram_chat_id": "",
-      "telegram_message_id": 2651,
-      "tags": [
-        "telegram-import",
-        "dump-channel",
-        "post",
-        "archive"
-      ],
-      "content": "## Media\n\n## Tags\n\n#telegram-import #dump-channel #post #archive"
-    },
-    {
       "id": 2643,
       "date": "2026-03-13T06:04:21",
       "title": "🚀 Хочу сделать открытый курс по генеративной музыке и модульному синтезу (100%....",
@@ -7053,51 +6880,6 @@
         "blob"
       ],
       "content": "Друзья, только что залил мощное обновление репозитория.\n\nТеперь это не просто procedural point-cloud в Blender, а полноценный **светящийся органический blob**, который:\n\n- Генерируется полностью из Python (`bpy`) + Geometry Nodes  \n- Имеет шикарный **Eevee Bloom** + градиентный emissive материал (синий → магента)  \n- Анимируется плавным 72-кадровым лупом (вращение + масштаб + шум)  \n- **И самое крутое** — в браузере теперь полноценный интерактивный опыт: Three.js + GLSL + Web Audio API  \n\n**Что можно делать в браузере:**\n- Реал-тайм реакция на музыку (blob дышит под бас)\n- Менять цвета градиента, шум, размер точек, скорость, силу bloom\n- Два трека *Digital Bloom*, автокроссфейд, визуализатор спектра\n- Работает на телефоне (красивая мобильная версия с bottom-sheet)\n\n**Живые превью:**\n\n- Анимированный луп → https://alevoldon.github.io/point-cloud-surface/\n- Интерактивный WebGL + звук → https://alevoldon.github.io/point-cloud-surface/interactive.html (открывай и играйся!)\n\nРепозиторий: https://github.com/ALEVOLDON/point-cloud-surface\n\nВсё готово из коробки:\n- Один PowerShell-команда — и у тебя .blend + рендер + анимация\n- Полная документация (UI-вариант, полный гайд, портфолио-тексты на русском и английском)\n- MIT-лицензия\n\nКто делает procedural art, motion design или просто любит красивые 3D-эксперименты — забирайте, это один из самых вкусных блендер-проектов, что я делал 🔥\n\n#Blender #GeometryNodes #ProceduralArt #PointCloud #WebGL #CreativeCoding\n\n## Links\n\n- https://alevoldon.github.io/point-cloud-surface/\n- https://alevoldon.github.io/point-cloud-surface/interactive.html\n- https://github.com/ALEVOLDON/point-cloud-surface\n\n## Tags\n\n#telegram-import #dump-channel #blender #geometrynodes #proceduralart #pointcloud #webgl #creativecoding #frontend #backend #design #3d #github #point-cloud-surface #blob"
-    },
-    {
-      "id": 2638,
-      "date": "2026-03-10T16:51:08",
-      "title": "Post 2638",
-      "channel": "D. U. M. P.",
-      "telegram_chat_id": "",
-      "telegram_message_id": 2638,
-      "tags": [
-        "telegram-import",
-        "dump-channel",
-        "post",
-        "archive"
-      ],
-      "content": "## Media\n\nAttachment missing from export: 0001-0072.mp4\n\n## Tags\n\n#telegram-import #dump-channel #post #archive"
-    },
-    {
-      "id": 2639,
-      "date": "2026-03-10T16:51:08",
-      "title": "Post 2639",
-      "channel": "D. U. M. P.",
-      "telegram_chat_id": "",
-      "telegram_message_id": 2639,
-      "tags": [
-        "telegram-import",
-        "dump-channel",
-        "post",
-        "archive"
-      ],
-      "content": "## Media\n\nAttachment missing from export: Digital Bloom 2.mp3\n\n## Tags\n\n#telegram-import #dump-channel #post #archive"
-    },
-    {
-      "id": 2640,
-      "date": "2026-03-10T16:51:08",
-      "title": "Post 2640",
-      "channel": "D. U. M. P.",
-      "telegram_chat_id": "",
-      "telegram_message_id": 2640,
-      "tags": [
-        "telegram-import",
-        "dump-channel",
-        "post",
-        "archive"
-      ],
-      "content": "## Media\n\nAttachment missing from export: Digital Bloom 1.mp3\n\n## Tags\n\n#telegram-import #dump-channel #post #archive"
     },
     {
       "id": 2637,
@@ -7412,21 +7194,6 @@
         "youtube"
       ],
       "content": "## Links\n\n- https://www.youtube.com/watch?v=qeCYi0pwi3I\n\n## Tags\n\n#telegram-import #dump-channel #video #youtube"
-    },
-    {
-      "id": 2617,
-      "date": "2026-02-27T23:52:16",
-      "title": "Post 2617",
-      "channel": "D. U. M. P.",
-      "telegram_chat_id": "",
-      "telegram_message_id": 2617,
-      "tags": [
-        "telegram-import",
-        "dump-channel",
-        "post",
-        "archive"
-      ],
-      "content": "## Media\n\n## Tags\n\n#telegram-import #dump-channel #post #archive"
     },
     {
       "id": 2616,
@@ -7750,21 +7517,6 @@
         "плохо"
       ],
       "content": "Мне выдали 74 балла — B1.\nИ первое ощущение всё равно знакомое:\n«Да я ж ни хрена не говорю нормально…»\n\nСпойлер: это не провал.\nЭто B1-ловушка.\n\nТы уже: — понимаешь смысл\n— читаешь и слушаешь\n— знаешь слова\n\nНо: — говоришь медленно\n— думаешь по-русски\n— в голове фразы есть, а во рту нет\n\nПроблема не в знании.\nПроблема в автоматизме.\n\nА дальше есть три пути:\n\n1️⃣ Забить\nПонимать интерфейсы, видосы, статьи.\nРазговор так и останется «через боль».\n\n2️⃣ Курсы / уровни / B2\nБудет больше правил.\nГоворить легче — не станет.\n\n3️⃣ Перестать учить язык\nИ начать жить в нём\nОдин контекст, 300 рабочих фраз, разговор каждый день — хоть с ИИ, хоть с самим собой.\n\nАнглийский — это не знание.\nЭто навык, как вождение или музыка.\n\nЕсли тебе кажется, что ты «плохо знаешь английский» —\nскорее всего, ты просто дошёл до честного уровня.\n\nДальше уже начинается настоящее.\n\n🦉📈\n\n## Media\n\nMedia: photo not included in export.\n\n## Tags\n\n#telegram-import #dump-channel #английский #это #плохо"
-    },
-    {
-      "id": 2596,
-      "date": "2026-02-17T23:28:15",
-      "title": "Post 2596",
-      "channel": "D. U. M. P.",
-      "telegram_chat_id": "",
-      "telegram_message_id": 2596,
-      "tags": [
-        "telegram-import",
-        "dump-channel",
-        "post",
-        "archive"
-      ],
-      "content": "## Media\n\n## Tags\n\n#telegram-import #dump-channel #post #archive"
     },
     {
       "id": 2594,
@@ -8663,66 +8415,6 @@
       "content": "Post-Human Form\n\nA study of synthetic beauty ✨\nLight, tension, and intention 🖤\nGenerated with AI, shaped by instinct \n\nNot the future — the present.\n\n#AIart #DigitalArt #PostHuman #SyntheticBeauty #Aesthetics\n#NewMediaArt #FutureVisuals #VisualCulture\n#AIVisual #ConceptArt #ExperimentalArt #ContemporaryArt\n\n## Media\n\nAttachment missing from export: Fire baby!.mp4\n\n## Tags\n\n#telegram-import #dump-channel #aiart #digitalart #posthuman #syntheticbeauty #aesthetics #newmediaart #futurevisuals #visualculture #aivisual #conceptart #experimentalart #contemporaryart #ai #baby #fire"
     },
     {
-      "id": 2539,
-      "date": "2026-01-24T20:39:09",
-      "title": "Post 2539",
-      "channel": "D. U. M. P.",
-      "telegram_chat_id": "",
-      "telegram_message_id": 2539,
-      "tags": [
-        "telegram-import",
-        "dump-channel",
-        "post",
-        "archive"
-      ],
-      "content": "## Media\n\n## Tags\n\n#telegram-import #dump-channel #post #archive"
-    },
-    {
-      "id": 2540,
-      "date": "2026-01-24T20:39:09",
-      "title": "Post 2540",
-      "channel": "D. U. M. P.",
-      "telegram_chat_id": "",
-      "telegram_message_id": 2540,
-      "tags": [
-        "telegram-import",
-        "dump-channel",
-        "post",
-        "archive"
-      ],
-      "content": "## Media\n\n## Tags\n\n#telegram-import #dump-channel #post #archive"
-    },
-    {
-      "id": 2541,
-      "date": "2026-01-24T20:39:09",
-      "title": "Post 2541",
-      "channel": "D. U. M. P.",
-      "telegram_chat_id": "",
-      "telegram_message_id": 2541,
-      "tags": [
-        "telegram-import",
-        "dump-channel",
-        "post",
-        "archive"
-      ],
-      "content": "## Media\n\n## Tags\n\n#telegram-import #dump-channel #post #archive"
-    },
-    {
-      "id": 2542,
-      "date": "2026-01-24T20:39:09",
-      "title": "Post 2542",
-      "channel": "D. U. M. P.",
-      "telegram_chat_id": "",
-      "telegram_message_id": 2542,
-      "tags": [
-        "telegram-import",
-        "dump-channel",
-        "post",
-        "archive"
-      ],
-      "content": "## Media\n\n## Tags\n\n#telegram-import #dump-channel #post #archive"
-    },
-    {
       "id": 2535,
       "date": "2026-01-24T10:44:27",
       "title": "Futuristic female android performer, chrome and liquid metal body, glossy reflec...",
@@ -8744,81 +8436,6 @@
       "content": "## Media\n\nThumbnail: not included in export.\n\n## Tags\n\n#telegram-import #dump-channel #design #security #3d #mobile #tools #body #android #chrome"
     },
     {
-      "id": 2536,
-      "date": "2026-01-24T10:44:27",
-      "title": "Post 2536",
-      "channel": "D. U. M. P.",
-      "telegram_chat_id": "",
-      "telegram_message_id": 2536,
-      "tags": [
-        "telegram-import",
-        "dump-channel",
-        "post",
-        "archive"
-      ],
-      "content": "## Media\n\nThumbnail: not included in export.\n\n## Tags\n\n#telegram-import #dump-channel #post #archive"
-    },
-    {
-      "id": 2533,
-      "date": "2026-01-24T10:42:47",
-      "title": "Post 2533",
-      "channel": "D. U. M. P.",
-      "telegram_chat_id": "",
-      "telegram_message_id": 2533,
-      "tags": [
-        "telegram-import",
-        "dump-channel",
-        "post",
-        "archive"
-      ],
-      "content": "## Media\n\nThumbnail: not included in export.\n\n## Tags\n\n#telegram-import #dump-channel #post #archive"
-    },
-    {
-      "id": 2534,
-      "date": "2026-01-24T10:42:47",
-      "title": "Post 2534",
-      "channel": "D. U. M. P.",
-      "telegram_chat_id": "",
-      "telegram_message_id": 2534,
-      "tags": [
-        "telegram-import",
-        "dump-channel",
-        "post",
-        "archive"
-      ],
-      "content": "## Media\n\nThumbnail: not included in export.\n\n## Tags\n\n#telegram-import #dump-channel #post #archive"
-    },
-    {
-      "id": 2531,
-      "date": "2026-01-24T10:37:35",
-      "title": "Post 2531",
-      "channel": "D. U. M. P.",
-      "telegram_chat_id": "",
-      "telegram_message_id": 2531,
-      "tags": [
-        "telegram-import",
-        "dump-channel",
-        "post",
-        "archive"
-      ],
-      "content": "## Media\n\nThumbnail: not included in export.\n\n## Tags\n\n#telegram-import #dump-channel #post #archive"
-    },
-    {
-      "id": 2532,
-      "date": "2026-01-24T10:37:35",
-      "title": "Post 2532",
-      "channel": "D. U. M. P.",
-      "telegram_chat_id": "",
-      "telegram_message_id": 2532,
-      "tags": [
-        "telegram-import",
-        "dump-channel",
-        "post",
-        "archive"
-      ],
-      "content": "## Media\n\nThumbnail: not included in export.\n\n## Tags\n\n#telegram-import #dump-channel #post #archive"
-    },
-    {
       "id": 2529,
       "date": "2026-01-24T10:21:32",
       "title": "Futuristic female android performer, chrome and liquid metal body, glossy reflec...",
@@ -8837,37 +8454,6 @@
         "chrome"
       ],
       "content": "## Media\n\nThumbnail: not included in export.\n\n## Tags\n\n#telegram-import #dump-channel #design #security #3d #mobile #android #body #chrome"
-    },
-    {
-      "id": 2530,
-      "date": "2026-01-24T10:21:32",
-      "title": "Post 2530",
-      "channel": "D. U. M. P.",
-      "telegram_chat_id": "",
-      "telegram_message_id": 2530,
-      "tags": [
-        "telegram-import",
-        "dump-channel",
-        "post",
-        "archive"
-      ],
-      "content": "## Media\n\nThumbnail: not included in export.\n\n## Tags\n\n#telegram-import #dump-channel #post #archive"
-    },
-    {
-      "id": 2528,
-      "date": "2026-01-24T09:48:53",
-      "title": "https://t.me/boost/dumpdump",
-      "channel": "D. U. M. P.",
-      "telegram_chat_id": "",
-      "telegram_message_id": 2528,
-      "tags": [
-        "telegram-import",
-        "dump-channel",
-        "telegram",
-        "boost",
-        "dump_dump"
-      ],
-      "content": "## Links\n\n- https://t.me/boost/dump_dump\n\n## Tags\n\n#telegram-import #dump-channel #telegram #boost #dump_dump"
     },
     {
       "id": 2527,
@@ -8937,21 +8523,6 @@
         "бесконечного"
       ],
       "content": "Ключевые возможности: AI-генерация экранов, экспорт в код (HTML/CSS/React), открытый формат файлов для Git и импорт из Figma, что ускоряет совместную работу дизайнеров и разработчиков.\nРеакция сообщества положительная: пользователи отмечают переход к \"пространственным рабочим пространствам\" как следующий этап AI-инструментов, с энтузиазмом по поводу потенциала автоматизации повседневных задач.\n\n## Media\n\nAttachment missing from export: Uaj5dHHwj4treC4a.mp4\n\n## Tags\n\n#telegram-import #dump-channel #frontend #design #ai #tools #для #pencil #бесконечного"
-    },
-    {
-      "id": 2522,
-      "date": "2026-01-22T19:24:47",
-      "title": "Post 2522",
-      "channel": "D. U. M. P.",
-      "telegram_chat_id": "",
-      "telegram_message_id": 2522,
-      "tags": [
-        "telegram-import",
-        "dump-channel",
-        "post",
-        "archive"
-      ],
-      "content": "## Media\n\nAttachment missing from export: round_2026-01-22_19-24-44.mp4\n\n## Tags\n\n#telegram-import #dump-channel #post #archive"
     },
     {
       "id": 2521,
@@ -9107,21 +8678,6 @@
         "github"
       ],
       "content": "Это open-source инструмент, где ты: — кликаешь по интерфейсу\n— меняешь компоненты и стили визуально\n— и всё это сразу отражается в реальном React-коде\n\nНе макеты.\nНе «потом сверстаем».\nНе Figma → страдания → прод.\n\nOnlook — это попытка наконец-то соединить: дизайн, разработку и AI в одном потоке.\n\nПод капотом: • React / Next\n• Tailwind\n• AI-ассист\n• локальный запуск\n• полный контроль над кодом\n\nЭто не замена IDE.\nЭто ускоритель мышления и прототипирования.\n\nЕсли фронтенд — твой инструмент, стоит хотя бы посмотреть.\n\nGitHub → https://github.com/onlook-dev/onlook\n\nБудущее UI делается прямо в коде.\n\n## Links\n\n- https://github.com/onlook-dev/onlook\n\n## Tags\n\n#telegram-import #dump-channel #frontend #design #ai #tools #onlook #это #github"
-    },
-    {
-      "id": 2512,
-      "date": "2026-01-13T17:25:01",
-      "title": "Post 2512",
-      "channel": "D. U. M. P.",
-      "telegram_chat_id": "",
-      "telegram_message_id": 2512,
-      "tags": [
-        "telegram-import",
-        "dump-channel",
-        "post",
-        "archive"
-      ],
-      "content": "## Media\n\n## Tags\n\n#telegram-import #dump-channel #post #archive"
     },
     {
       "id": 2511,

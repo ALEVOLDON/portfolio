@@ -33,6 +33,12 @@ dist-ssr
 # Local scratch/debug directories
 scratch/
 
+# Raw Imagine/Grok source dumps dropped in project root (use compressed public/* assets)
+/grok-*.mp4
+/grok-*.jpg
+/grok-*.png
+/flowing plasma streams*.txt
+
 # Lighthouse and local audit reports (generated during dev)
 lighthouse*.json
 

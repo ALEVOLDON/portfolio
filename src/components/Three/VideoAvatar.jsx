@@ -73,7 +73,6 @@ const VideoAvatar = ({ theme = 'cyber', profile, language = 'en' }) => {
             poster="/avatar-320.jpg"
           >
             <source src="/avatar-head.mp4" type="video/mp4" />
-            <source src="/avatar-head.webm" type="video/webm" />
           </video>
         )}
 

@@ -22,6 +22,8 @@
   --font-mono: 'Fira Code', monospace;
   --font-cyber: 'Orbitron', sans-serif;
   --font-display: 'Space Grotesk', sans-serif;
+  /* 2030 minimal display — clean geometric, product/future UI */
+  --font-hero: 'Outfit', 'Inter', sans-serif;
 
   --animate-gradient-x: gradient-x 3s ease infinite;
   --animate-float: float 6s ease-in-out infinite;
@@ -48,6 +50,30 @@
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-20px); }
   }
+
+  @keyframes hero-shimmer {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+}
+
+/* Iridescent hero name — smooth cyan → white → purple loop */
+.hero-title-shimmer {
+  background-image: linear-gradient(
+    110deg,
+    var(--primary-color) 0%,
+    #ffffff 22%,
+    var(--secondary-color) 45%,
+    #ffffff 68%,
+    var(--primary-color) 100%
+  );
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: hero-shimmer 12s ease-in-out infinite;
 }
 
 body {

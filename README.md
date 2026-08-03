@@ -14,7 +14,7 @@
   </p>
 
   <p>
-    <em>A sleek, generative portfolio with live GitHub data integration, Three.js backgrounds, and a serverless Telegram contact flow.</em>
+    <em>A generative portfolio with dual avatar modes, plasma shader / video backgrounds, live GitHub telemetry, and a serverless Telegram contact flow.</em>
   </p>
 </div>
 
@@ -24,30 +24,24 @@
 
 - ⚡ **React 19 + Vite 7** frontend for lightning-fast performance
 - 🎨 **Tailwind CSS v4** styling
-- 🌐 **Bilingual System (`EN | RU`)**: Full localization with English as the default landing language, offering a seamless toggle and structured translation files.
-- 🌌 **Three.js** animated, particle-based background
-- 🎛️ **Background Engine HUD Panel**: Floating diagnostics panel featuring **Solar** as the default visual theme, allowing users to adjust brightness, particle drift velocity, and select between three theme system modes: **Manual Lock** (to freeze a selected palette), **Chrono Sync** (real-time synchronization with the user's local hour), and **Matrix Cycle** (continuous automatic theme transitions every 45s with a holographic progress timer).
-- 🔊 **Generative Sound & Eurorack Synth**: Real-time sound engine using native Web Audio API (ambient drone, UI ticks/clicks, and spatial graph audio) paired with a draggable virtual Eurorack Modular Synth console ("MODEL CZ-1") with custom rotary knobs, plus an **AI Preset Orchestrator** supporting custom presets (`Drone`, `Ambient`, `Acid`, etc.) and procedural text hashing.
-- 🛠️ **"What I Create" capabilities panel**: Interactive capability grid featuring real-time diagnostic terminal log effects on hover and sound tick integration.
-- 🎛️ **Dual-Mode Project Slider**: Toggle between high-impact featured projects (highlighting key outcomes) and live GitHub telemetry.
-- 📡 **Availability Radar**: Pulsing `AVAILABILITY_RADAR` component representing real-time collaboration status.
-- 💊 **Holographic Capsule Navbar**: Centered, floating glassmorphic nav bar with sub-pixel gradient borders and an elastic background highlight tracker that slides behind active links.
-- 🪐 **3D Planetary Ring Logo**: An interactive 3D spinning text logo representing a planetary orbit, displaying alternating text (like `ALEVOLDON` and `METAVERSE`) wrapped in 3D coordinates.
-- 🎵 **Spotify Soundtrack Sidebar Widget**: Global slide-out glass drawer containing a streaming Spotify playlist, triggered by an animated floating player button on the screen edge.
-- 🖱️ **Hardware-Accelerated Custom Cursor**: Dual-layer pointer with trail effects, interactive scaling, and hover mixing modes.
-- 🔠 **Futuristic Typography**: Customized Google Fonts configuration utilizing Orbitron for titles/technical HUD displays and Space Grotesk for labels/interactive controls.
-- 🎬 **Cubic-Bezier Scroll Reveals**: Responsive slide-ins, staggered grid reveals, and neomorphic hover glows on metrics cards.
-- 🖼️ **p5.js** generative thumbnails for project cards
-- 🐙 **Live GitHub** profile, repository, and README data fetching
-- 🗄️ **Local caching** and fallback data for GitHub API resilience
-- 🚀 **Vercel deployment** with a serverless contact endpoint
-- 📱 **Telegram notifications** for incoming contact requests
-- 🤖 **Cloudflare Turnstile** spam protection
-- 📊 **Modern Analytics**: Vercel Analytics (privacy-focused) & Microsoft Clarity (heatmaps & session recordings)
-- 🔍 **SEO Optimization**: Integrated robots.txt, sitemap.xml, and canonical meta configuration
-- ⚡ **Lighthouse Performance Optimizations**: Lazy-loaded WebGL background, deferred third-party tracking, and deferred font loading for optimal Core Web Vitals.
-- 🧬 **Volumetric 3D Cyber-Hologram Avatar & Thought Stream**: Interactive Three.js WebGL avatar with cursor-tilt tracking. Features a 2D canvas-based **Thought Stream particle emitter** that radiates ambient technical words and interactive multilingual quotes (from Alan Turing, Richard Feynman, Claude Shannon, etc.) upon user click or automatically over time.
-- 🧠 **Mind Vault & Knowledge Graph**: Force-directed 2D canvas visualization of personal posts, featuring search, zoom/pan controls, inline reader, and **category filter tags** (`ИИ`, `Дизайн`, `Звук`, `Разработка`) for instant graph trimming.
+- 🌐 **Bilingual System (`EN | RU`)**: Full localization with English as the default landing language, seamless toggle, and structured translation files
+- 🌌 **Dual background engine**: live **WebGL plasma shader** (streams, orbs, digital rain) **or** compressed looping **video plate** — switchable in Ambient Engine
+- 🎛️ **Background Engine HUD Panel**: floating diagnostics for brightness, drift velocity, palette (**cyber / solar / emerald / void**), quality profiles, and theme modes: **Manual Lock**, **Chrono Sync**, **Matrix Cycle**
+- 🧬 **Dual hero avatar (A/B)**: **3D GLB** obsidian-diamond glass head *or* compressed **video head** — same glass frame, gyro HUD rings, and Thought Stream; toggle persists in `localStorage`
+- 💭 **Thought Stream**: shared 2D overlay of ambient tech words + multilingual glowing quotes (click or timed) on both avatar modes
+- 🔊 **Generative Sound & Eurorack Synth**: Web Audio drone/UI/spatial audio + draggable MODEL CZ-1 modular console with AI preset orchestrator
+- 🛠️ **"What I Create" capabilities panel** with terminal-style hover diagnostics
+- 🎛️ **Dual-Mode Project Slider**: featured outcomes vs live GitHub telemetry
+- 💊 **Holographic Capsule Navbar** + elastic active-link tracker
+- 🪐 **3D Planetary Ring Logo** (`ALEVOLDON` / `METAVERSE` orbit text)
+- 🎵 **Spotify Soundtrack** slide-out widget
+- 🖱️ **Custom cursor** with trail (desktop)
+- 🔠 **Typography**: **Outfit** (hero), Orbitron (section/HUD), Space Grotesk (UI), Inter + Fira Code
+- 🖼️ **p5.js** generative project thumbnails
+- 🐙 **Live GitHub** profile / repos / README with local cache + fallbacks
+- 🚀 **Vercel** deploy + serverless contact → **Telegram** + Turnstile
+- 📊 **Analytics**: Vercel Analytics + Microsoft Clarity
+- 🧠 **Mind Vault** force-directed knowledge graph of vault posts
 
 ---
 
@@ -57,8 +51,8 @@
 | --- | --- |
 | **Frontend** | React 19, Vite 7 |
 | **Styling** | Tailwind CSS v4 |
-| **Typography** | Google Fonts (Orbitron, Space Grotesk, Inter, Fira Code) |
-| **3D / Visuals** | Three.js (WebGL), p5.js |
+| **Typography** | Google Fonts (Outfit, Orbitron, Space Grotesk, Inter, Fira Code) |
+| **3D / Visuals** | Three.js (WebGL plasma + avatar), compressed hero/bg video loops, p5.js |
 | **Content** | GitHub REST API, `marked` |
 | **Icons** | `lucide-react` |
 | **Hosting** | Vercel |
@@ -75,16 +69,15 @@
 - **What I Create Capabilities Grid**: A custom capabilities container featuring hover-activated diagnostics console logs simulating system terminal metrics, accompanied by subtle synth click highlights.
 - **Dual-Mode Project Slider**: Supports switching between curated featured projects with qualitative impact/tech callouts and real-time GitHub telemetry metrics cards.
 - **Availability Radar**: Pulsing network radar widget (`AVAILABILITY_RADAR`) built inside the About section indicating active collaboration availability.
-- **Interactive Ambient Engine**: Control panel widget for real-time background shader updates. Adjust brightness (0.2x to 2.0x), drift velocity (0.0x to 2.5x to pause/speed drift), and configure the theme operation mode: **Manual Lock**, **Chrono Sync** (aligns colors with the time of day: Solar for morning, Emerald for afternoon, Cyber for evening, Void for night), or **Matrix Cycle** (hypnotic automatic rotation with a running progress countdown bar). Defaults to the warm Solar palette.
-- **Holographic Capsule Navbar**: Centered, floating glassmorphic nav bar with sub-pixel gradient borders (cyan-to-purple) using CSS masking techniques. Features an elastic background highlight tracker that slides behind active links and is synced with Web Audio tick triggers on hover.
-- **3D Planetary Ring Logo**: Custom 3D spinning text logo representing a planetary orbit, displaying alternating text (like `ALEVOLDON` and `METAVERSE`) wrapped in 3D coordinates. Speeds up and glows brighter on hover.
-- **Spotify Soundtrack Sidebar Widget**: Global slide-out glass drawer containing a streaming Spotify playlist, triggered by an animated floating player button on the screen edge. Includes a spinning record icon, pulsing neon indicator, and closed overlay click handler.
-- **Lag-Free Cursor Trails**: Hardware-accelerated custom cursor dot and trail ring that rescales on hover and auto-disables on touchscreen devices.
-- **Staggered Animations**: Directional scroll reveals driven by CSS cubic-bezier transitions as page sections come into view.
-- **Neomorphic Glows**: Custom interactive neon shadows that project from GitHub stats cards on hover.
-- **Modern Layout**: Responsive viewport grid with sticky navigation and automatic highlight observers.
-- **Volumetric 3D Avatar Hologram**: Renders a custom 3D head model with a hybrid material stack consisting of a dark semi-transparent glass base (acting as depth occlusion) and a downsampled glowing holographic point cloud (reducing vertex density for a matrix-like effect), complete with three independent gyroscopic scanner rings.
-- **Thought Stream & Interactive Quotes**: A 2D overlay canvas attached to the 3D Avatar that spawns floating technical keywords (e.g. entropy, recursion, quantum) drifting upwards. Clicking the avatar or waiting for the timer triggers a stylized neon quote capsule containing quotes from famous computer scientists and physicists, with bilingual support (EN/RU).
+- **Interactive Ambient Engine**: HUD for background type (**SHADER** WebGL plasma vs **VIDEO** loop), brightness, drift velocity, palette, quality (`high` / `balanced` / `eco` / `static`), and theme modes: **Manual Lock**, **Chrono Sync** (Solar morning → Emerald afternoon → Cyber evening → Void night), **Matrix Cycle** (~45s auto-rotate with progress bar). Preference stored in `localStorage`.
+- **Hero avatar A/B modes**: Toggle **3D GLB** (obsidian/black-diamond `MeshPhysicalMaterial`, cinematic lighting, gyro rings, mouse-tilt) vs **VIDEO** (compressed loop `public/avatar-head.mp4`, same glass frame + shared HUD rings). Selection persists via `heroAvatarMode`.
+- **Thought Stream & Quotes**: Shared canvas overlay on both avatar modes — ambient tech words drift upward; click or timer spawns bilingual glowing quotes (no rectangular capsule). Keywords/quotes live in `src/data/quotes.js`.
+- **Holographic Capsule Navbar**: Centered glass nav with cyan→purple edges and elastic active-link highlight, synced with UI audio ticks.
+- **3D Planetary Ring Logo**: Orbit text logo (`ALEVOLDON` / `METAVERSE`) with hover speed/glow.
+- **Spotify Soundtrack Sidebar**: Slide-out glass drawer with embedded playlist widget.
+- **Custom Cursor**: Hardware-accelerated dual-layer pointer (desktop only).
+- **Staggered scroll reveals** and neomorphic card glows.
+- **2030-minimal hero type**: Outfit display font with slow cyan↔purple shimmer on the name.
 
 ### 🔊 Interactive Sound Design & Eurorack Synth
 - **Generative Audio Engine**: Zero-dependency Web Audio API implementation synthesizing audio on the fly with no asset footprint (0 KB).
@@ -118,7 +111,8 @@
 - **SEO Readiness**: Canonical link tags, Open Graph meta-tags, standard-compliant `sitemap.xml`, and optimized crawling via `robots.txt`.
 
 ### ⚡ Performance & Optimization
-- **Dynamic Asset Deferral**: Deferred loading of Google Fonts (`media="print"` onload technique) and late initialization of the Three.js WebGL canvas (rendered only after first user movement, scroll, or keystroke) to achieve a near-perfect Google Lighthouse score.
+- **Dynamic Asset Deferral**: Deferred Google Fonts (`media="print"` onload) and late start of animated backgrounds / WebGL (after first pointer, scroll, or key) for better LCP and Lighthouse scores.
+- **Compressed media**: Hero video and plasma plate are pre-encoded for the web (`public/avatar-head.mp4` ~1 MB, `public/bg-plasma.mp4` ~1.5 MB); raw Imagine/Grok dumps are gitignored from the repo root.
 - **Lazy API Fetching**: Delayed GitHub profile data fetch until active user interaction, avoiding blockages during critical initial paint ticks.
 - **Resource Preloading**: High-priority preloading for the profile avatar (`fetchpriority="high"`) to eliminate LCP (Largest Contentful Paint) delays.
 - **Asynchronous Analytics**: Microsoft Clarity tracking script is queued via `requestIdleCallback` to run during idle browser cycles, and Vercel Analytics is integrated directly via lightweight client-side injection.
@@ -128,25 +122,31 @@
 ## 📁 Project Structure
 
 ```text
-ANALYTICS_GUIDE.md       # Detailed guide on tracking website stats
+ANALYTICS_GUIDE.md
+docs/
+└── plasma-background-notes.md   # Shader / plasma design notes
 public/
+├── avatar-head.mp4              # Compressed video avatar loop
+├── bg-plasma.mp4                # Compressed video background loop
+├── bg-plasma-reference.jpg      # Visual reference for plasma look
+├── stylized-head.glb            # 3D head model for GLB avatar mode
 └── data/
-    └── posts.json       # Compiled static database of Obsidian vault posts
+    └── posts.json               # Mind Vault posts (Obsidian / Telegram sync)
 src/
-├── components/          # React UI components
-│   ├── UI/              # Floating widgets & interactive controls (Navbar, Cursor, HUD panel, Spotify)
-│   ├── Three/           # 3D WebGL canvas renders, particle shaders, and holographic avatar
-│   ├── Synth/           # Eurorack virtual modular synth console
-│   └── Sections/        # Main landing sections (Hero, About, Projects, Contact, BrainGraph)
-├── hooks/               # Custom React hooks (usePortfolioData lazy caching and fetch logic)
-├── data/                # Static & runtime data configurations (quotes, translations)
-├── services/            # API & audio integrations (AudioService synthesis, GitHub client)
-├── App.jsx              # Main application layout
-├── index.css            # Tailwind directives and global styles
-├── main.jsx             # React entry point
-
+├── components/
+│   ├── UI/                      # Navbar, cursor, Ambient Engine, Spotify, etc.
+│   ├── Three/                   # PlasmaBackground, VideoBackground, InteractiveAvatar,
+│   │                            # VideoAvatar, AvatarHudRings, ThoughtStreamOverlay
+│   ├── Synth/                   # Eurorack MODEL CZ-1 console
+│   └── Sections/                # Hero, About, Projects, Contact, BrainGraph, …
+├── hooks/                       # usePortfolioData
+├── data/                        # quotes.js, translations.js
+├── services/                    # AudioService, GitHub client
+├── App.jsx
+├── index.css
+└── main.jsx
 api/
-└── contact.js           # Serverless function for Telegram messaging
+└── contact.js                   # Serverless Telegram contact
 ```
 
 ---

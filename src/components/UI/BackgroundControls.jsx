@@ -160,8 +160,8 @@ const BackgroundControls = ({
                             </button>
                         </div>
 
-                        {/* Scrollable body */}
-                        <div className="flex-1 min-h-0 overflow-y-auto overscroll-contain px-4 py-4 md:px-5 touch-pan-y">
+                        {/* Scrollable body — extra bottom padding so Patch Console is easy to tap above home bar */}
+                        <div className="flex-1 min-h-0 overflow-y-auto overscroll-contain px-4 pt-4 pb-8 md:px-5 md:pb-6 touch-pan-y">
                             {/* Diagnostics */}
                             <div className="grid grid-cols-2 gap-2 text-[9px] text-gray-500 mb-4 bg-black/30 p-2 rounded border border-white/5">
                                 <div>{t.engine}: <span className="text-green-400 font-bold">{t.ready}</span></div>
@@ -361,7 +361,7 @@ const BackgroundControls = ({
                                     setShowSynth(prev => !prev);
                                     close();
                                 }}
-                                className="w-full mt-4 py-2 bg-gradient-to-r from-zinc-900 to-zinc-950 border border-white/10 hover:border-cyber-cyan/50 text-white hover:text-cyber-cyan text-xs font-cyber font-bold tracking-widest uppercase rounded-lg transition-all cursor-pointer flex items-center justify-center gap-1.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] hover:shadow-[0_0_10px_rgba(var(--primary-color-rgb),0.15)]"
+                                className="w-full mt-4 mb-6 py-2.5 bg-gradient-to-r from-zinc-900 to-zinc-950 border border-white/10 hover:border-cyber-cyan/50 text-white hover:text-cyber-cyan text-xs font-cyber font-bold tracking-widest uppercase rounded-lg transition-all cursor-pointer flex items-center justify-center gap-1.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] hover:shadow-[0_0_10px_rgba(var(--primary-color-rgb),0.15)]"
                             >
                                 <Icon name="sliders" size={14} className="animate-pulse" />
                                 <span>{t.patchConsole}</span>

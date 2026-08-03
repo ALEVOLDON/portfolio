@@ -101,12 +101,9 @@ const BackgroundControls = ({
 
     return (
         <>
-            {/* Floating open button — safe area on notched phones */}
+            {/* Floating open button — raised on mobile so browser chrome / home bar never covers it */}
             {!isOpen && (
-                <div
-                    className="fixed z-40 font-mono left-4 md:left-8"
-                    style={{ bottom: 'max(1rem, env(safe-area-inset-bottom, 0px))' }}
-                >
+                <div className="fixed z-40 font-mono left-4 bottom-20 md:left-8 md:bottom-8">
                     <button
                         type="button"
                         onClick={() => setIsOpen(true)}
@@ -130,16 +127,16 @@ const BackgroundControls = ({
                     />
 
                     {/*
-                      Mobile: bottom sheet, full-width, max-height + scroll, sticky header with X always visible.
-                      Desktop: bottom-left card, same height constraints.
+                      Mobile: inset bottom sheet (side + bottom margins), not edge-to-edge.
+                      Desktop: bottom-left card.
                     */}
                     <div
                         role="dialog"
                         aria-modal="true"
                         aria-labelledby="ambient-engine-title"
-                        className="fixed z-50 font-mono left-0 right-0 bottom-0 md:left-8 md:right-auto md:bottom-8 md:w-80 flex flex-col max-h-[min(88dvh,720px)] md:max-h-[min(85dvh,640px)] rounded-t-2xl md:rounded-xl glass-panel border border-white/10 shadow-2xl animate-fadeIn overflow-hidden"
+                        className="fixed z-50 font-mono left-3 right-3 bottom-3 md:left-8 md:right-auto md:bottom-8 md:w-80 flex flex-col max-h-[min(78dvh,640px)] md:max-h-[min(85dvh,640px)] rounded-2xl glass-panel border border-white/10 shadow-2xl animate-fadeIn overflow-hidden"
                         style={{
-                            paddingBottom: 'env(safe-area-inset-bottom, 0px)',
+                            marginBottom: 'env(safe-area-inset-bottom, 0px)',
                         }}
                     >
                         {/* Sticky header — always on screen */}

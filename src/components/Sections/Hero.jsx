@@ -1,12 +1,31 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useEffect, useState } from 'react';
 import Icon from '../UI/Icon';
 import AvatarStatic from '../Three/AvatarStatic';
 import { translations } from '../../data/translations';
 
 const InteractiveAvatar = lazy(() => import('../Three/InteractiveAvatar'));
+const VideoAvatar = lazy(() => import('../Three/VideoAvatar'));
+
+const AVATAR_MODE_KEY = 'heroAvatarMode';
 
 const Hero = ({ theme = 'cyber', profile, loading, scrollTo, language = 'en' }) => {
     const t = translations[language].hero;
+    const [avatarMode, setAvatarMode] = useState(() => {
+        try {
+            return localStorage.getItem(AVATAR_MODE_KEY) || 'video';
+        } catch {
+            return 'video';
+        }
+    });
+
+    useEffect(() => {
+        try {
+            localStorage.setItem(AVATAR_MODE_KEY, avatarMode);
+        } catch {
+            /* ignore */
+        }
+    }, [avatarMode]);
+
     return (
         <section id="home" className="min-h-screen md:h-screen flex items-center justify-center px-6 pt-20 relative overflow-hidden">
             {/* Slight lift so hero sits a bit higher than pure vertical center */}
@@ -17,8 +36,45 @@ const Hero = ({ theme = 'cyber', profile, loading, scrollTo, language = 'en' }) 
                     <div className="reveal reveal-scale">
                         <div className="animate-float">
                             <Suspense fallback={<AvatarStatic />}>
-                                <InteractiveAvatar theme={theme} profile={profile} loading={loading} language={language} />
+                                {avatarMode === 'video' ? (
+                                    <VideoAvatar theme={theme} profile={profile} language={language} />
+                                ) : (
+                                    <InteractiveAvatar theme={theme} profile={profile} loading={loading} language={language} />
+                                )}
                             </Suspense>
+
+                            {/* A/B switch: keep both avatars, compare easily */}
+                            <div className="flex justify-center mb-6 -mt-2">
+                                <div
+                                    className="inline-flex p-0.5 rounded-full border border-white/10 bg-black/40 backdrop-blur-md font-display text-[10px] uppercase tracking-widest"
+                                    role="group"
+                                    aria-label="Avatar mode"
+                                >
+                                    <button
+                                        type="button"
+                                        onClick={() => setAvatarMode('3d')}
+                                        className={`px-3 py-1.5 rounded-full transition-all cursor-pointer ${
+                                            avatarMode === '3d'
+                                                ? 'bg-cyber-cyan/20 text-cyber-cyan border border-cyber-cyan/40'
+                                                : 'text-zinc-500 hover:text-zinc-300 border border-transparent'
+                                        }`}
+                                    >
+                                        3D GLB
+                                    </button>
+                                    <button
+                                        type="button"
+                                        onClick={() => setAvatarMode('video')}
+                                        className={`px-3 py-1.5 rounded-full transition-all cursor-pointer ${
+                                            avatarMode === 'video'
+                                                ? 'bg-cyber-cyan/20 text-cyber-cyan border border-cyber-cyan/40'
+                                                : 'text-zinc-500 hover:text-zinc-300 border border-transparent'
+                                        }`}
+                                    >
+                                        VIDEO
+                                    </button>
+                                </div>
+                            </div>
+
                             <h1 className="font-hero mb-6 leading-[1.05]">
                                 <span className="hero-title-shimmer block text-4xl md:text-6xl font-semibold tracking-[-0.03em]">
                                     {t.title}

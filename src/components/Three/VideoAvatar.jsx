@@ -24,6 +24,8 @@ const VideoAvatar = ({ theme = 'cyber', profile, language = 'en' }) => {
 
     video.muted = true;
     video.playsInline = true;
+    // Slower, smoother turn — original clip spins a bit fast at 1x
+    video.playbackRate = 0.55;
     video.play().catch(() => {
       /* autoplay blocked — first frame still shows */
     });

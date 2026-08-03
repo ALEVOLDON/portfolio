@@ -16,12 +16,15 @@ import { translations } from './data/translations';
 import { usePortfolioData } from './hooks/usePortfolioData';
 
 const PlasmaBackground = lazy(() => import('./components/Three/PlasmaBackground'));
+const VideoBackground = lazy(() => import('./components/Three/VideoBackground'));
 
 const StaticBackground = () => (
   <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden bg-cyber-black">
     <div className="background-vignette" />
   </div>
 );
+
+const BG_MODE_KEY = 'bgMode';
 
 const themeOrder = ['solar', 'emerald', 'cyber', 'void'];
 
@@ -37,6 +40,13 @@ const App = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [language, setLanguage] = useState('en');
   const [showBackground, setShowBackground] = useState(false);
+  const [bgMode, setBgMode] = useState(() => {
+    try {
+      return localStorage.getItem(BG_MODE_KEY) || 'video';
+    } catch {
+      return 'video';
+    }
+  });
   const [bgConfig, setBgConfig] = useState(() => {
     const storedTheme = localStorage.getItem('theme') || 'cyber';
     const storedBrightness = localStorage.getItem('themeBrightness') ? parseFloat(localStorage.getItem('themeBrightness')) : 1.0;
@@ -71,6 +81,14 @@ const App = () => {
   useEffect(() => {
     localStorage.setItem('themeQuality', bgConfig.quality);
   }, [bgConfig.quality]);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(BG_MODE_KEY, bgMode);
+    } catch {
+      /* ignore */
+    }
+  }, [bgMode]);
 
   useEffect(() => {
     localStorage.setItem('themeMode', themeMode);
@@ -207,7 +225,9 @@ const App = () => {
       <CustomCursor />
       <BackgroundControls 
         bgConfig={bgConfig} 
-        setBgConfig={setBgConfig} 
+        setBgConfig={setBgConfig}
+        bgMode={bgMode}
+        setBgMode={setBgMode}
         setShowSynth={setShowSynth} 
         themeMode={themeMode}
         setThemeMode={setThemeMode}
@@ -216,7 +236,15 @@ const App = () => {
       />
       {showSynth && <ModularSynth onClose={() => setShowSynth(false)} />}
       <Suspense fallback={<StaticBackground />}>
-        {showBackground ? <PlasmaBackground {...bgConfig} /> : <StaticBackground />}
+        {showBackground ? (
+          bgMode === 'video' ? (
+            <VideoBackground brightness={bgConfig.brightness} />
+          ) : (
+            <PlasmaBackground {...bgConfig} />
+          )
+        ) : (
+          <StaticBackground />
+        )}
       </Suspense>
       <div className="cyber-grid-overlay" />
       <Navbar activeSection={activeSection} scrollTo={scrollTo} language={language} setLanguage={setLanguage} />

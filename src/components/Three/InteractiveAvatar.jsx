@@ -376,21 +376,21 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
         const time = clock.getElapsedTime();
         const breathe = 0.5 + 0.5 * Math.sin(time * 0.9);
 
-        // Gyroscope / orbital rotations (production site style)
+        // Gyroscope rings — slightly slower so they feel calmer with the head
         if (hudRing) {
-          hudRing.rotation.x = time * 0.15;
-          hudRing.rotation.y = time * 0.3;
-          hudRing.rotation.z = time * 0.1;
+          hudRing.rotation.x = time * 0.09;
+          hudRing.rotation.y = time * 0.16;
+          hudRing.rotation.z = time * 0.06;
         }
         if (dotRing) {
-          dotRing.rotation.x = time * -0.2;
-          dotRing.rotation.y = time * 0.1;
-          dotRing.rotation.z = time * -0.4;
+          dotRing.rotation.x = time * -0.12;
+          dotRing.rotation.y = time * 0.06;
+          dotRing.rotation.z = time * -0.22;
         }
         if (scanRing) {
-          scanRing.rotation.x = time * 0.25;
-          scanRing.rotation.y = time * -0.2;
-          scanRing.rotation.z = time * 0.15;
+          scanRing.rotation.x = time * 0.14;
+          scanRing.rotation.y = time * -0.11;
+          scanRing.rotation.z = time * 0.08;
         }
 
         // Soft pulse — diamond “fire” without tinting the body
@@ -406,13 +406,14 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
         }
 
         if (!isHovered) {
-          mouse.targetX = time * 0.18;
-          mouse.targetY = Math.sin(time * 0.42) * 0.045;
+          // 3D mode: faster continuous spin (video mode stays slow via playbackRate)
+          mouse.targetX = time * 0.28;
+          mouse.targetY = Math.sin(time * 0.5) * 0.05;
 
           // Specular crawls facets like a jewelry turntable light
-          pointLight.position.x = Math.sin(time * 0.62) * 1.55;
-          pointLight.position.y = 1.4 + Math.cos(time * 0.48) * 0.7;
-          pointLight.position.z = 2.05 + Math.sin(time * 0.35) * 0.4;
+          pointLight.position.x = Math.sin(time * 0.45) * 1.55;
+          pointLight.position.y = 1.4 + Math.cos(time * 0.35) * 0.7;
+          pointLight.position.z = 2.05 + Math.sin(time * 0.28) * 0.4;
           pointLight.intensity = pointBaseIntensity * (0.85 + breathe * 0.25);
         } else {
           const baseRotationY = Math.round(avatarGroup.rotation.y / (Math.PI * 2)) * (Math.PI * 2);
@@ -421,8 +422,8 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
           pointLight.intensity = pointBaseIntensity * 1.35;
         }
 
-        // Slightly snappier tracking when hovered
-        const lerp = isHovered ? 0.12 : 0.065;
+        // Follow spin target; a bit snappier so faster idle rotation stays smooth
+        const lerp = isHovered ? 0.12 : 0.07;
         avatarGroup.rotation.y += (mouse.targetX - avatarGroup.rotation.y) * lerp;
         avatarGroup.rotation.x += (mouse.targetY - avatarGroup.rotation.x) * lerp;
 

@@ -5,7 +5,9 @@ import { translations } from '../../data/translations';
 
 const BackgroundControls = ({ 
     bgConfig, 
-    setBgConfig, 
+    setBgConfig,
+    bgMode = 'video',
+    setBgMode,
     setShowSynth,
     themeMode = 'manual',
     setThemeMode,
@@ -115,6 +117,31 @@ const BackgroundControls = ({
                         <div>{t.palette}: <span className="text-cyber-cyan uppercase">{bgConfig.theme}</span></div>
                         <div>{t.mode}: <span className="text-cyber-purple uppercase">{themeMode}</span></div>
                         <div>{t.load}: <span className="text-white">{t.nominal}</span></div>
+                    </div>
+
+                    {/* Background type: shader vs video (same idea as avatar 3D/VIDEO) */}
+                    <div className="mb-4">
+                        <span className="block text-[9px] text-gray-400 uppercase tracking-[0.2em] mb-2 font-display">{t.bgType}</span>
+                        <div className="grid grid-cols-2 gap-1.5">
+                            {[
+                                { id: 'shader', label: t.bgShader, desc: t.bgShaderDesc },
+                                { id: 'video', label: t.bgVideo, desc: t.bgVideoDesc },
+                            ].map((m) => (
+                                <button
+                                    key={m.id}
+                                    type="button"
+                                    onClick={() => setBgMode && setBgMode(m.id)}
+                                    className={`py-2 px-2 rounded text-center border text-[10px] transition-all duration-300 flex flex-col items-center justify-center font-display font-medium gap-1 cursor-pointer ${
+                                        bgMode === m.id
+                                            ? 'border-cyber-cyan bg-cyber-cyan/10 text-white shadow-[0_0_15px_rgba(var(--primary-color-rgb),0.15)]'
+                                            : 'border-white/10 bg-transparent text-gray-400 hover:border-white/20 hover:text-white'
+                                    }`}
+                                    title={m.desc}
+                                >
+                                    <span className="uppercase tracking-wider text-[9px] font-mono">{m.label}</span>
+                                </button>
+                            ))}
+                        </div>
                     </div>
 
                     {/* Theme System Mode */}

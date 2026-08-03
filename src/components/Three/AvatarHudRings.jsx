@@ -114,20 +114,21 @@ const AvatarHudRings = ({ theme = 'cyber' }) => {
         if (scanRing?.material) scanRing.material.color.setHex(live.primary);
 
         const time = clock.getElapsedTime();
+        // Match slowed InteractiveAvatar ring rates
         if (hudRing) {
-          hudRing.rotation.x = time * 0.15;
-          hudRing.rotation.y = time * 0.3;
-          hudRing.rotation.z = time * 0.1;
+          hudRing.rotation.x = time * 0.09;
+          hudRing.rotation.y = time * 0.16;
+          hudRing.rotation.z = time * 0.06;
         }
         if (dotRing) {
-          dotRing.rotation.x = time * -0.2;
-          dotRing.rotation.y = time * 0.1;
-          dotRing.rotation.z = time * -0.4;
+          dotRing.rotation.x = time * -0.12;
+          dotRing.rotation.y = time * 0.06;
+          dotRing.rotation.z = time * -0.22;
         }
         if (scanRing) {
-          scanRing.rotation.x = time * 0.25;
-          scanRing.rotation.y = time * -0.2;
-          scanRing.rotation.z = time * 0.15;
+          scanRing.rotation.x = time * 0.14;
+          scanRing.rotation.y = time * -0.11;
+          scanRing.rotation.z = time * 0.08;
         }
 
         renderer.render(scene, camera);

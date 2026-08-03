@@ -251,6 +251,11 @@ export const translations = {
         controls: {
             title: "AMBIENT ENGINE",
             sysMode: "SYSTEM OPER. MODE",
+            bgType: "BACKGROUND TYPE",
+            bgShader: "SHADER",
+            bgShaderDesc: "Live WebGL plasma streams",
+            bgVideo: "VIDEO",
+            bgVideoDesc: "Looping plasma plate video",
             manualLock: "Manual Lock",
             manualLockDesc: "Fix theme to selected palette",
             chronoSync: "Chrono Sync",
@@ -535,6 +540,11 @@ export const translations = {
         controls: {
             title: "ДВИЖОК ЭМБИЕНТА",
             sysMode: "РЕЖИМ СИСТЕМЫ",
+            bgType: "ТИП ФОНА",
+            bgShader: "ШЕЙДЕР",
+            bgShaderDesc: "Живая WebGL-плазма",
+            bgVideo: "ВИДЕО",
+            bgVideoDesc: "Зацикленное видео-полотно",
             manualLock: "Ручной режим",
             manualLockDesc: "Фиксация выбранной палитры темы",
             chronoSync: "Хроно-синхрон",

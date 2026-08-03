@@ -181,7 +181,9 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
 
       // Slightly longer lens, camera a touch high for a heroic head angle
       camera = new THREE.PerspectiveCamera(34, 1, 0.1, 100);
-      camera.position.set(0, 0.12, 3.85);
+      // Pull camera back so a larger CSS circle doesn't enlarge the head
+      // (circle w-72 vs former w-64 → 72/64 zoom compensation)
+      camera.position.set(0, 0.12, 4.33);
       camera.lookAt(0, -0.05, 0);
 
       renderer = new THREE.WebGLRenderer({
@@ -294,41 +296,47 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
         if (obj.material) obj.material.dispose();
       });
 
-      // --- Orbitals: elegant, thin, dual-tone ---
-      const ringY = -0.12;
-      const ringMatOpts = { transparent: true, depthWrite: false };
+      // --- HUD rings (same style as live site): flat RingGeometry, gyro spin ---
+      const ringY = -0.22;
 
-      hudRing = new THREE.Mesh(
-        new THREE.TorusGeometry(1.36, 0.007, 8, 128),
-        new THREE.MeshBasicMaterial({ ...ringMatOpts, color: themeColors.secondaryHex, opacity: 0.88 })
-      );
+      const ringGeom = new THREE.RingGeometry(1.42, 1.44, 64);
+      const ringMat = new THREE.MeshBasicMaterial({
+        color: themeColors.primaryHex,
+        transparent: true,
+        opacity: 0.45,
+        side: THREE.DoubleSide,
+        depthWrite: false,
+      });
+      hudRing = new THREE.Mesh(ringGeom, ringMat);
       hudRing.position.set(0, ringY, 0);
-      hudRing.rotation.y = 0.4;
       avatarGroup.add(hudRing);
 
-      dotRing = new THREE.Mesh(
-        new THREE.TorusGeometry(1.32, 0.006, 8, 128),
-        new THREE.MeshBasicMaterial({ ...ringMatOpts, color: 0xe879f9, opacity: 0.55 })
-      );
+      // Technical dotted / wireframe ring
+      const dotRingGeom = new THREE.RingGeometry(1.5, 1.51, 32);
+      const dotRingMat = new THREE.MeshBasicMaterial({
+        color: themeColors.secondaryHex,
+        transparent: true,
+        opacity: 0.35,
+        wireframe: true,
+        side: THREE.DoubleSide,
+        depthWrite: false,
+      });
+      dotRing = new THREE.Mesh(dotRingGeom, dotRingMat);
       dotRing.position.set(0, ringY, 0);
-      dotRing.rotation.y = -0.65;
       avatarGroup.add(dotRing);
 
-      scanRing = new THREE.Mesh(
-        new THREE.TorusGeometry(1.4, 0.01, 8, 128),
-        new THREE.MeshBasicMaterial({ ...ringMatOpts, color: themeColors.primaryHex, opacity: 0.85 })
-      );
+      // Thin outermost scan ring
+      const scanRingGeom = new THREE.RingGeometry(1.58, 1.59, 64);
+      const scanRingMat = new THREE.MeshBasicMaterial({
+        color: themeColors.primaryHex,
+        transparent: true,
+        opacity: 0.25,
+        side: THREE.DoubleSide,
+        depthWrite: false,
+      });
+      scanRing = new THREE.Mesh(scanRingGeom, scanRingMat);
       scanRing.position.set(0, ringY, 0);
-      scanRing.rotation.x = Math.PI / 2;
       avatarGroup.add(scanRing);
-
-      const innerGuide = new THREE.Mesh(
-        new THREE.TorusGeometry(1.22, 0.0035, 6, 96),
-        new THREE.MeshBasicMaterial({ ...ringMatOpts, color: themeColors.primaryHex, opacity: 0.28 })
-      );
-      innerGuide.position.set(0, ringY, 0);
-      innerGuide.rotation.x = Math.PI / 2;
-      avatarGroup.add(innerGuide);
 
       // 6. Load GLTF model
       const loader = new GLTFLoader();
@@ -470,18 +478,21 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
         const time = clock.getElapsedTime();
         const breathe = 0.5 + 0.5 * Math.sin(time * 0.9);
 
-        // Slow, deliberate orbital precession
+        // Gyroscope / orbital rotations (production site style)
         if (hudRing) {
-          hudRing.rotation.y = 0.4 + time * 0.18;
-          hudRing.rotation.z = Math.sin(time * 0.12) * 0.08;
+          hudRing.rotation.x = time * 0.15;
+          hudRing.rotation.y = time * 0.3;
+          hudRing.rotation.z = time * 0.1;
         }
         if (dotRing) {
-          dotRing.rotation.y = -0.65 - time * 0.14;
-          dotRing.rotation.z = Math.cos(time * 0.14) * 0.07;
+          dotRing.rotation.x = time * -0.2;
+          dotRing.rotation.y = time * 0.1;
+          dotRing.rotation.z = time * -0.4;
         }
         if (scanRing) {
-          scanRing.rotation.x = Math.PI / 2 + Math.sin(time * 0.15) * 0.04;
-          scanRing.rotation.z = time * 0.05;
+          scanRing.rotation.x = time * 0.25;
+          scanRing.rotation.y = time * -0.2;
+          scanRing.rotation.z = time * 0.15;
         }
 
         // Soft pulse — diamond “fire” without tinting the body
@@ -664,8 +675,8 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
         text: isQuote ? text.quote : text,
         author: isQuote ? text.author : null,
         // Spawn near the top/center of the 3D head
-        x: 160 + (isQuote ? 0 : (Math.random() - 0.5) * 30),
-        y: 210 + (isQuote ? 0 : (Math.random() - 0.5) * 15),
+        x: 180 + (isQuote ? 0 : (Math.random() - 0.5) * 30),
+        y: 230 + (isQuote ? 0 : (Math.random() - 0.5) * 15),
         vx: customVel ? customVel.x : (isQuote ? 0 : (Math.random() - 0.5) * 0.4),
         vy: customVel ? customVel.y : (isQuote ? -0.4 : -0.8 - Math.random() * 0.6),
         seed: Math.random() * 100,
@@ -829,28 +840,26 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
       onClick={handleAvatarClick}
       className="relative inline-block mb-8 group cursor-pointer select-none"
     >
-      {/* Frame: soft outer bloom + crisp neon ring */}
-      <div className="absolute -inset-4 rounded-full bg-cyber-cyan/15 blur-2xl opacity-60 group-hover:opacity-90 group-hover:bg-cyber-cyan/25 transition duration-700" />
-      <div className="absolute -inset-[2px] rounded-full bg-gradient-to-br from-cyber-cyan via-fuchsia-500/50 to-cyber-cyan opacity-70 group-hover:opacity-100 transition duration-500 blur-[0.5px]" />
-      <div className="absolute inset-0 rounded-full ring-1 ring-cyber-cyan/50 shadow-[0_0_24px_rgba(34,211,238,0.35)] pointer-events-none group-hover:shadow-[0_0_36px_rgba(34,211,238,0.55)] transition duration-500" />
+      {/* Soft outer bloom (like button ambient glow) */}
+      <div className="absolute -inset-4 rounded-full bg-cyber-cyan/12 blur-2xl opacity-50 group-hover:opacity-80 group-hover:bg-cyber-cyan/20 transition duration-700 pointer-events-none" />
 
       {/* Thought Stream Emitter Canvas Overlay */}
       <canvas
         ref={emitterCanvasRef}
         className="absolute bottom-0 left-1/2 transform -translate-x-1/2 pointer-events-none z-30"
-        style={{ width: '320px', height: '384px' }}
-        width={320}
-        height={384}
+        style={{ width: '360px', height: '420px' }}
+        width={360}
+        height={420}
       />
 
-      {/* Main container */}
-      <div className="relative w-64 h-64 rounded-full overflow-hidden border border-cyber-cyan/80 bg-black flex items-center justify-center shadow-[inset_0_0_48px_rgba(10,0,20,0.85)]">
+      {/* Main container — larger circle; head kept same size via camera distance */}
+      <div className="relative w-72 h-72 rounded-full overflow-hidden bg-black flex items-center justify-center border border-[rgba(var(--primary-color-rgb),0.3)] shadow-[0_4px_15px_rgba(0,0,0,0.25),inset_0_1px_0_rgba(var(--primary-color-rgb),0.25),0_0_18px_rgba(var(--primary-color-rgb),0.12)] transition-all duration-500 group-hover:border-[rgba(var(--primary-color-rgb),0.55)] group-hover:shadow-[0_8px_25px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(var(--primary-color-rgb),0.35),0_0_22px_rgba(var(--primary-color-rgb),0.28)]">
         {loadError && (
           <img
             src={profile?.avatar_url || '/avatar-320.jpg'}
             alt={profile?.name || 'Avatar'}
-            width={256}
-            height={256}
+            width={288}
+            height={288}
             className="absolute inset-0 w-full h-full object-cover z-0"
           />
         )}

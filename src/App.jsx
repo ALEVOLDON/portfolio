@@ -15,7 +15,7 @@ import ModularSynth from './components/Synth/ModularSynth';
 import { translations } from './data/translations';
 import { usePortfolioData } from './hooks/usePortfolioData';
 
-const ThreeBackground = lazy(() => import('./components/Three/ThreeBackground'));
+const PlasmaBackground = lazy(() => import('./components/Three/PlasmaBackground'));
 
 const StaticBackground = () => (
   <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden bg-cyber-black">
@@ -216,7 +216,7 @@ const App = () => {
       />
       {showSynth && <ModularSynth onClose={() => setShowSynth(false)} />}
       <Suspense fallback={<StaticBackground />}>
-        {showBackground ? <ThreeBackground {...bgConfig} /> : <StaticBackground />}
+        {showBackground ? <PlasmaBackground {...bgConfig} /> : <StaticBackground />}
       </Suspense>
       <div className="cyber-grid-overlay" />
       <Navbar activeSection={activeSection} scrollTo={scrollTo} language={language} setLanguage={setLanguage} />

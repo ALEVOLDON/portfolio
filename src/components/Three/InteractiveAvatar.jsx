@@ -39,64 +39,33 @@ const drawWord = (ctx, text, x, y, alpha, colors, fontSize, colorType) => {
   ctx.restore();
 };
 
-// Helper to draw a stylized quote capsule
+// Quote text only — soft glow, no rectangular capsule/border
 const drawQuoteCapsule = (ctx, lines, author, x, y, colors, alpha) => {
   ctx.save();
   ctx.globalAlpha = alpha;
-
-  ctx.font = 'bold 11px "Space Grotesk", sans-serif';
-  let maxLineWidth = 0;
-  lines.forEach(line => {
-    const w = ctx.measureText(line).width;
-    if (w > maxLineWidth) maxLineWidth = w;
-  });
-
-  ctx.font = '9px "Fira Code", monospace';
-  const authorWidth = ctx.measureText(`— ${author}`).width;
-
-  const contentWidth = Math.max(maxLineWidth, authorWidth);
-  const capsuleWidth = Math.min(270, contentWidth + 24);
-  
-  const quoteLineHeight = 14;
-  const authorLineHeight = 12;
-  const paddingY = 16;
-  const capsuleHeight = lines.length * quoteLineHeight + authorLineHeight + paddingY;
-
-  const rectX = x - capsuleWidth / 2;
-  const rectY = y - capsuleHeight / 2;
-  const radius = 8;
-
-  ctx.shadowColor = `rgba(${colors.primaryRgb}, 0.45)`;
-  ctx.shadowBlur = 12;
-  ctx.strokeStyle = `rgba(${colors.primaryRgb}, 0.75)`;
-  ctx.lineWidth = 1.5;
-
-  ctx.fillStyle = 'rgba(5, 8, 17, 0.92)';
-  ctx.beginPath();
-  if (ctx.roundRect) {
-    ctx.roundRect(rectX, rectY, capsuleWidth, capsuleHeight, radius);
-  } else {
-    ctx.rect(rectX, rectY, capsuleWidth, capsuleHeight);
-  }
-  ctx.fill();
-  ctx.stroke();
-
-  ctx.shadowBlur = 0;
-
-  ctx.fillStyle = 'rgba(255, 255, 255, 0.95)';
-  ctx.font = 'bold 11px "Space Grotesk", sans-serif';
   ctx.textAlign = 'center';
-  ctx.textBaseline = 'top';
+  ctx.textBaseline = 'middle';
 
-  lines.forEach((line, index) => {
-    const lineY = rectY + 10 + index * quoteLineHeight;
+  const quoteLineHeight = 15;
+  const authorLineHeight = 14;
+  const blockHeight = lines.length * quoteLineHeight + authorLineHeight;
+  let lineY = y - blockHeight / 2 + quoteLineHeight / 2;
+
+  ctx.font = 'bold 11px "Space Grotesk", sans-serif';
+  ctx.shadowColor = `rgba(${colors.primaryRgb}, 0.55)`;
+  ctx.shadowBlur = 10;
+  ctx.fillStyle = 'rgba(255, 255, 255, 0.95)';
+
+  lines.forEach((line) => {
     ctx.fillText(line, x, lineY);
+    lineY += quoteLineHeight;
   });
 
+  ctx.shadowColor = `rgba(${colors.secondaryRgb}, 0.5)`;
+  ctx.shadowBlur = 8;
   ctx.fillStyle = `rgba(${colors.secondaryRgb}, 0.95)`;
   ctx.font = '9px "Fira Code", monospace';
-  const authorY = rectY + 10 + lines.length * quoteLineHeight + 2;
-  ctx.fillText(`— ${author}`, x, authorY);
+  ctx.fillText(`— ${author}`, x, lineY + 2);
 
   ctx.restore();
 };

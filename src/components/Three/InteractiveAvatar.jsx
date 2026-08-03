@@ -163,29 +163,10 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
     let keyLight, fillLight, rimLight, pointLight;
     let hudRing, dotRing, scanRing;
     let animationFrameId;
-    const activePointsMaterials = [];
 
     // Mouse interpolation state
     const mouse = { x: 0, y: 0, targetX: 0, targetY: 0 };
     let isHovered = false;
-
-    const createDotTexture = (THREE, colors) => {
-      const canvas = document.createElement('canvas');
-      canvas.width = 16;
-      canvas.height = 16;
-      const ctx = canvas.getContext('2d');
-
-      const gradient = ctx.createRadialGradient(8, 8, 0, 8, 8, 8);
-      gradient.addColorStop(0, 'rgba(255, 255, 255, 1.0)');
-      gradient.addColorStop(0.3, `rgba(${colors.primaryRgb}, 0.85)`);
-      gradient.addColorStop(0.7, `rgba(${colors.secondaryRgb}, 0.25)`);
-      gradient.addColorStop(1.0, 'rgba(0, 0, 0, 0)');
-
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, 16, 16);
-
-      return new THREE.CanvasTexture(canvas);
-    };
 
     const initThree = (THREE, GLTFLoader) => {
       if (!containerRef.current) return;
@@ -197,15 +178,17 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
       scene = new THREE.Scene();
 
       // 2. Camera setup - PerspectiveCamera is perfect for volumetric 3D depth
-      camera = new THREE.PerspectiveCamera(40, 1, 0.1, 100);
-      camera.position.z = 4.2;
+      camera = new THREE.PerspectiveCamera(36, 1, 0.1, 100);
+      camera.position.set(0, 0.05, 4.0);
 
-      // 3. Renderer setup
+      // 3. Renderer — filmic look for black liquid-glass + hard speculars (ref look)
       renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: "high-performance" });
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
       renderer.setSize(width, height);
-      renderer.shadowMap.enabled = true;
-      renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+      renderer.shadowMap.enabled = false;
+      renderer.toneMapping = THREE.ACESFilmicToneMapping;
+      renderer.toneMappingExposure = 1.15;
+      renderer.outputColorSpace = THREE.SRGBColorSpace;
       
       containerRef.current.innerHTML = '';
       containerRef.current.appendChild(renderer.domElement);
@@ -213,67 +196,141 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
       avatarGroup = new THREE.Group();
       scene.add(avatarGroup);
 
-      // 4. Lighting Config for Cyberpunk / Tech aesthetics
-      // Soft ambient light
-      const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+      // 4. Reference lighting: pure black body + purple rims + white crown glints
+      const ambientLight = new THREE.AmbientLight(0x0a0612, 0.04);
       scene.add(ambientLight);
 
-      // Key light - Cyan from top-front-right
-      keyLight = new THREE.DirectionalLight(themeColors.primaryHex, 1.8);
-      keyLight.position.set(4, 4, 3);
+      const hemiLight = new THREE.HemisphereLight(0x2a1048, 0x000000, 0.18);
+      scene.add(hemiLight);
+
+      // KEY — mostly from above so face stays dark, crown catches glass
+      keyLight = new THREE.DirectionalLight(0xffffff, 1.8);
+      keyLight.position.set(1.8, 6.0, 2.0);
       scene.add(keyLight);
 
-      // Fill light - Purple/Magenta from front-left to catch the other side
-      fillLight = new THREE.DirectionalLight(themeColors.secondaryHex, 1.2);
-      fillLight.position.set(-4, 2, 2);
+      // FILL — purple only, kept low so face/neck fall into pure black like the ref
+      fillLight = new THREE.DirectionalLight(0xc026d3, 0.65);
+      fillLight.position.set(-4.0, 2.0, 3.0);
       scene.add(fillLight);
 
-      // Rim light - White from behind-top to create nice edge glow
-      rimLight = new THREE.DirectionalLight(0xffffff, 1.5);
-      rimLight.position.set(0, 5, -5);
+      // RIM — hot magenta edge
+      rimLight = new THREE.DirectionalLight(0xe879f9, 4.8);
+      rimLight.position.set(-3.5, 2.8, -4.2);
       scene.add(rimLight);
 
-      // Point Light for Specular Glare (mouse tracking)
-      pointLight = new THREE.PointLight(0xffffff, 4.0, 10);
-      pointLight.position.set(0, 0, 2.5);
+      // Soft opposite rim (very dim cyan, just a thin edge cue)
+      const rimCyan = new THREE.DirectionalLight(0x67e8f9, 0.7);
+      rimCyan.position.set(4.2, 0.5, -2.5);
+      scene.add(rimCyan);
+
+      // Crown kick — hard white streak on top of skull
+      const crownLight = new THREE.DirectionalLight(0xffffff, 6.5);
+      crownLight.position.set(0.4, 7.0, -1.2);
+      scene.add(crownLight);
+
+      // Moving specular hot-spot
+      pointLight = new THREE.PointLight(0xffffff, 10.0, 8, 2);
+      pointLight.position.set(0.5, 1.7, 2.2);
       scene.add(pointLight);
 
-      // 5. Outer HUD rings (gyroscopic orbital scanning rings)
-      const ringGeom = new THREE.RingGeometry(1.42, 1.44, 64);
-      const ringMat = new THREE.MeshBasicMaterial({
-        color: themeColors.primaryHex,
-        transparent: true,
-        opacity: 0.45,
-        side: THREE.DoubleSide
-      });
-      hudRing = new THREE.Mesh(ringGeom, ringMat);
-      hudRing.position.set(0, -0.25, 0); // Center around the head
-      avatarGroup.add(hudRing);
+      // Purple caustic pool
+      const purplePoint = new THREE.PointLight(0xd946ef, 6.0, 10, 2);
+      purplePoint.position.set(-1.6, 0.6, 1.8);
+      scene.add(purplePoint);
 
-      // Technical dotted ring
-      const dotRingGeom = new THREE.RingGeometry(1.50, 1.51, 32);
-      const dotRingMat = new THREE.MeshBasicMaterial({
+      // Tight white glint on crown
+      const glint = new THREE.PointLight(0xffffff, 14.0, 3.8, 2.8);
+      glint.position.set(0.25, 1.85, 1.1);
+      scene.add(glint);
+
+      // Env: mostly black + white strips + purple (minimal cyan so body stays black)
+      const pmrem = new THREE.PMREMGenerator(renderer);
+      const envScene = new THREE.Scene();
+      envScene.background = new THREE.Color(0x000000);
+      const addEnvPanel = (color, x, y, z, w, h) => {
+        const panel = new THREE.Mesh(
+          new THREE.PlaneGeometry(w, h),
+          new THREE.MeshBasicMaterial({ color, side: THREE.DoubleSide })
+        );
+        panel.position.set(x, y, z);
+        panel.lookAt(0, 0, 0);
+        envScene.add(panel);
+      };
+      addEnvPanel(0xffffff, 0, 7.5, 1, 16, 1.6);
+      addEnvPanel(0xffffff, 3.5, 5.5, -2, 2.2, 7);
+      addEnvPanel(0xf8fafc, -2.5, 6, 2, 1.8, 5);
+      addEnvPanel(0xa855f7, -6, 2, 1, 8, 10);
+      addEnvPanel(0xd946ef, 5.5, 1.5, -3, 6, 8);
+      addEnvPanel(0x7c3aed, 0, 2, -6, 8, 6);
+      addEnvPanel(0x000000, 0, -5, 0, 18, 10);
+      addEnvPanel(0x000000, 0, 0, 7, 14, 10);
+      const envMap = pmrem.fromScene(envScene, 0.015).texture;
+      scene.environment = envMap;
+      if ('environmentIntensity' in scene) {
+        scene.environmentIntensity = 1.75;
+      }
+      pmrem.dispose();
+      envScene.traverse((obj) => {
+        if (obj.geometry) obj.geometry.dispose();
+        if (obj.material) obj.material.dispose();
+      });
+
+      // 5. Orbital rings matching the ref: purple meridians + cyan equator
+      // Torus default lies in XY (vertical ring). Meridians stay vertical; equator flips to XZ.
+      const ringY = -0.15;
+
+      // Purple vertical meridian A
+      const ringGeom = new THREE.TorusGeometry(1.38, 0.009, 8, 128);
+      const ringMat = new THREE.MeshBasicMaterial({
         color: themeColors.secondaryHex,
         transparent: true,
-        opacity: 0.35,
-        wireframe: true,
-        side: THREE.DoubleSide
+        opacity: 0.95,
+        depthWrite: false,
+      });
+      hudRing = new THREE.Mesh(ringGeom, ringMat);
+      hudRing.position.set(0, ringY, 0);
+      hudRing.rotation.y = 0.35;
+      avatarGroup.add(hudRing);
+
+      // Purple vertical meridian B (offset yaw)
+      const dotRingGeom = new THREE.TorusGeometry(1.34, 0.008, 8, 128);
+      const dotRingMat = new THREE.MeshBasicMaterial({
+        color: 0xe879f9,
+        transparent: true,
+        opacity: 0.8,
+        depthWrite: false,
       });
       dotRing = new THREE.Mesh(dotRingGeom, dotRingMat);
-      dotRing.position.set(0, -0.25, 0);
+      dotRing.position.set(0, ringY, 0);
+      dotRing.rotation.y = -0.55;
       avatarGroup.add(dotRing);
 
-      // Thin outermost scan ring
-      const scanRingGeom = new THREE.RingGeometry(1.58, 1.59, 64);
+      // Cyan horizontal equator
+      const scanRingGeom = new THREE.TorusGeometry(1.42, 0.012, 8, 128);
       const scanRingMat = new THREE.MeshBasicMaterial({
         color: themeColors.primaryHex,
         transparent: true,
-        opacity: 0.25,
-        side: THREE.DoubleSide
+        opacity: 0.9,
+        depthWrite: false,
       });
       scanRing = new THREE.Mesh(scanRingGeom, scanRingMat);
-      scanRing.position.set(0, -0.25, 0);
+      scanRing.position.set(0, ringY, 0);
+      scanRing.rotation.x = Math.PI / 2;
       avatarGroup.add(scanRing);
+
+      // Thin inner cyan guide ring
+      const dashRing = new THREE.Mesh(
+        new THREE.TorusGeometry(1.26, 0.004, 6, 96),
+        new THREE.MeshBasicMaterial({
+          color: themeColors.primaryHex,
+          transparent: true,
+          opacity: 0.35,
+          depthWrite: false,
+        })
+      );
+      dashRing.position.set(0, ringY, 0);
+      dashRing.rotation.x = Math.PI / 2;
+      avatarGroup.add(dashRing);
 
       // 6. Load GLTF model
       const loader = new GLTFLoader();
@@ -322,10 +379,7 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
           // out of the circle frame and clipped by overflow-hidden
           modelContainer.position.y = -0.25;
 
-          // Create the glowing dot texture
-          const dotTexture = createDotTexture(THREE, themeColors);
-
-          // Traverse model and apply hybrid cyberpunk rendering (cyber-glass + glowing particles)
+          // Traverse model — black liquid-glass material (matches ref: solid glossy mesh, no particles)
           const meshes = [];
           model.traverse((node) => {
             if (node.isMesh) {
@@ -334,26 +388,38 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
           });
 
           meshes.forEach((mesh) => {
-            // Restore the dark glass base mesh to occlude back-face particles and provide structure
             mesh.visible = true;
-            mesh.castShadow = true;
-            mesh.receiveShadow = true;
+            mesh.castShadow = false;
+            mesh.receiveShadow = false;
 
-            // Semi-transparent dark glass material with depth writing and polygon offset to prevent depth fighting
-            const cyberGlassMat = new THREE.MeshStandardMaterial({
-              color: 0x050811,
-              roughness: 0.15,
-              metalness: 0.9,
-              transparent: true,
-              opacity: 0.45,
-              side: THREE.DoubleSide,
-              depthWrite: true,
-              polygonOffset: true,
-              polygonOffsetFactor: 1,
-              polygonOffsetUnits: 1
+            // Smooth normals help organic/wrinkled glass catch speculars like the ref
+            if (mesh.geometry && !mesh.geometry.attributes.normal) {
+              mesh.geometry.computeVertexNormals();
+            }
+
+            // Pure black liquid glass — reflections carry the purple/white, body stays black
+            const cyberGlassMat = new THREE.MeshPhysicalMaterial({
+              color: 0x020106,
+              roughness: 0.06,
+              metalness: 1.0,
+              clearcoat: 1.0,
+              clearcoatRoughness: 0.02,
+              reflectivity: 1.0,
+              ior: 2.2,
+              transparent: false,
+              opacity: 1.0,
+              side: THREE.FrontSide,
+              envMapIntensity: 2.6,
+              emissive: new THREE.Color(0x0a0218),
+              emissiveIntensity: 0.08,
+              iridescence: 0.25,
+              iridescenceIOR: 1.3,
+              iridescenceThicknessRange: [180, 380],
+              sheen: 0.2,
+              sheenRoughness: 0.35,
+              sheenColor: new THREE.Color(0xc026d3),
             });
 
-            // Dispose of the original material
             if (mesh.material) {
               if (Array.isArray(mesh.material)) {
                 mesh.material.forEach((mat) => mat.dispose());
@@ -362,42 +428,6 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
               }
             }
             mesh.material = cyberGlassMat;
-
-            // Holographic glowing particle overlay using downsampled geometry to reduce density
-            const pointsMat = new THREE.PointsMaterial({
-              color: themeColors.primaryHex,
-              size: 0.02, // Slightly larger particles for better visibility with lower density
-              sizeAttenuation: true,
-              transparent: true,
-              opacity: 0.85,
-              blending: THREE.AdditiveBlending,
-              map: dotTexture,
-              depthWrite: false,
-            });
-            activePointsMaterials.push(pointsMat);
-
-            let pointsGeometry;
-            const positionAttr = mesh.geometry.attributes.position;
-            if (positionAttr) {
-              pointsGeometry = new THREE.BufferGeometry();
-              const originalPositions = positionAttr.array;
-              const step = 2; // Keep every 2nd vertex (gives ~31k points) for a refined look
-              const newPositions = [];
-              for (let i = 0; i < originalPositions.length; i += 3 * step) {
-                newPositions.push(originalPositions[i], originalPositions[i + 1], originalPositions[i + 2]);
-              }
-              pointsGeometry.setAttribute('position', new THREE.Float32BufferAttribute(newPositions, 3));
-            } else {
-              pointsGeometry = mesh.geometry;
-            }
-
-            const pointCloud = new THREE.Points(pointsGeometry, pointsMat);
-            // Sync local transform
-            pointCloud.position.copy(mesh.position);
-            pointCloud.rotation.copy(mesh.rotation);
-            pointCloud.scale.copy(mesh.scale);
-
-            mesh.parent.add(pointCloud);
           });
 
           avatarGroup.add(modelContainer);
@@ -423,11 +453,6 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
       let lastRenderTime = 0;
       const frameInterval = 1000 / 30;
 
-      // Pre-allocated color objects — reused every frame to avoid GC pressure
-      const _primaryColor   = new THREE.Color();
-      const _secondaryColor = new THREE.Color();
-      const _currentColor   = new THREE.Color();
-
       animate = (timestamp = 0) => {
         if (!isMounted) return;
         if (!isVisible) return;
@@ -442,52 +467,38 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
 
         const time = clock.getElapsedTime();
 
-        // Gyroscope/orbital rotations on different axes for a 3D scan sphere effect
+        // Purple meridians slowly precess; cyan equator barely drifts
         if (hudRing) {
-          hudRing.rotation.x = time * 0.15;
-          hudRing.rotation.y = time * 0.3;
-          hudRing.rotation.z = time * 0.1;
+          hudRing.rotation.y = 0.35 + time * 0.28;
+          hudRing.rotation.z = Math.sin(time * 0.15) * 0.12;
         }
         if (dotRing) {
-          dotRing.rotation.x = time * -0.2;
-          dotRing.rotation.y = time * 0.1;
-          dotRing.rotation.z = time * -0.4;
+          dotRing.rotation.y = -0.55 - time * 0.22;
+          dotRing.rotation.z = Math.cos(time * 0.18) * 0.1;
         }
         if (scanRing) {
-          scanRing.rotation.x = time * 0.25;
-          scanRing.rotation.y = time * -0.2;
-          scanRing.rotation.z = time * 0.15;
+          // Keep nearly horizontal; slight roll for life
+          scanRing.rotation.x = Math.PI / 2 + Math.sin(time * 0.2) * 0.06;
+          scanRing.rotation.z = time * 0.08;
         }
 
         if (!isHovered) {
-          // Idle state: Smooth continuous Y-axis rotation (spin the model)
-          // Also apply a subtle nodding motion
-          mouse.targetX = time * 0.35;
-          mouse.targetY = Math.sin(time * 0.8) * 0.08;
+          // Idle: slow head turn + subtle nod (ref-like presentation)
+          mouse.targetX = time * 0.28;
+          mouse.targetY = Math.sin(time * 0.6) * 0.06;
 
-          // Light tracks a path
-          pointLight.position.x = Math.sin(time) * 1.5;
-          pointLight.position.y = Math.cos(time) * 1.5;
+          // Specular highlight sweeps across the glossy surface
+          pointLight.position.x = Math.sin(time * 0.7) * 1.6;
+          pointLight.position.y = 1.4 + Math.cos(time * 0.55) * 0.9;
+          pointLight.position.z = 2.2 + Math.sin(time * 0.4) * 0.5;
         } else {
-          // Hover state: Align Y rotation to match mouse tilt
           const baseRotationY = Math.round(avatarGroup.rotation.y / (Math.PI * 2)) * (Math.PI * 2);
-          mouse.targetX = baseRotationY + (mouse.x * 0.65); // target yaw
-          mouse.targetY = mouse.y * 0.45;                   // target pitch
+          mouse.targetX = baseRotationY + (mouse.x * 0.65);
+          mouse.targetY = mouse.y * 0.45;
         }
 
-        // Apply smooth interpolation (lerp)
         avatarGroup.rotation.y += (mouse.targetX - avatarGroup.rotation.y) * 0.08;
         avatarGroup.rotation.x += (mouse.targetY - avatarGroup.rotation.x) * 0.08;
-
-        // Dynamic color transition between cyan and purple (oscillates at 0.8 rad/s)
-        const colorWeight = (Math.sin(time * 0.8) + 1.0) / 2.0;
-        _primaryColor.set(themeColors.primaryHex);
-        _secondaryColor.set(themeColors.secondaryHex);
-        _currentColor.copy(_primaryColor).lerp(_secondaryColor, colorWeight);
-
-        activePointsMaterials.forEach((mat) => {
-          mat.color.copy(_currentColor);
-        });
 
         // Render scene
         renderer.render(scene, camera);
@@ -580,8 +591,9 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
           mouse.y = normY;
 
           if (pointLight) {
-            pointLight.position.x = normX * 3.5;
-            pointLight.position.y = -normY * 3.5;
+            pointLight.position.x = normX * 3.2;
+            pointLight.position.y = -normY * 2.8 + 0.3;
+            pointLight.position.z = 3.0;
           }
         };
 
@@ -797,8 +809,10 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
       onClick={handleAvatarClick}
       className="relative inline-block mb-8 group cursor-pointer select-none"
     >
-      {/* Outer pulsing glow */}
-      <div className="absolute -inset-2 bg-gradient-to-r from-cyber-cyan via-cyber-purple to-cyber-cyan rounded-full blur-md opacity-30 group-hover:opacity-70 transition duration-500 animate-pulse"></div>
+      {/* Outer neon cyan ring glow (matches ref frame) */}
+      <div className="absolute -inset-[3px] rounded-full bg-gradient-to-b from-cyber-cyan via-cyber-cyan/40 to-cyber-cyan opacity-80 blur-[1px] group-hover:opacity-100 transition duration-500"></div>
+      <div className="absolute -inset-3 bg-cyber-cyan/25 rounded-full blur-xl opacity-50 group-hover:opacity-80 transition duration-500"></div>
+      <div className="absolute -inset-1 rounded-full border border-cyber-cyan/80 shadow-[0_0_18px_rgba(34,211,238,0.55)] pointer-events-none"></div>
 
       {/* Thought Stream Emitter Canvas Overlay */}
       <canvas
@@ -810,7 +824,7 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
       />
 
       {/* Main container */}
-      <div className="relative w-64 h-64 rounded-full overflow-hidden border border-cyber-cyan/30 bg-cyber-black flex items-center justify-center">
+      <div className="relative w-64 h-64 rounded-full overflow-hidden border-2 border-cyber-cyan/70 bg-black flex items-center justify-center shadow-[inset_0_0_40px_rgba(34,211,238,0.12)]">
         {loadError && (
           <img
             src={profile?.avatar_url || '/avatar-320.jpg'}
@@ -821,18 +835,23 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
           />
         )}
 
-        {/* Holographic scanner line overlay */}
+        {/* Subtle scanline (very soft so it doesn't break the glass look) */}
         {!loadError && (
           <div className="absolute inset-0 pointer-events-none z-20 overflow-hidden rounded-full">
-            <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-cyber-cyan to-transparent shadow-[0_0_8px_var(--primary-color)] animate-scanline opacity-60"></div>
+            <div className="w-full h-px bg-gradient-to-r from-transparent via-cyber-cyan/50 to-transparent shadow-[0_0_6px_var(--primary-color)] animate-scanline opacity-40"></div>
           </div>
         )}
 
-        {/* Diagnostic HUD text */}
+        {/* Ref-style HUD labels */}
         {!loadError && (
-          <div className="absolute top-2 left-1/2 transform -translate-x-1/2 font-mono text-[7px] text-cyber-cyan/60 tracking-widest z-10 uppercase pointer-events-none group-hover:text-cyber-cyan transition-colors">
-            GLB_3D_SECURE
-          </div>
+          <>
+            <div className="absolute top-1 left-1/2 -translate-x-1/2 font-mono text-[10px] text-fuchsia-400/95 tracking-[0.4em] z-20 lowercase pointer-events-none drop-shadow-[0_0_10px_rgba(232,121,249,0.9)]">
+              matrix
+            </div>
+            <div className="absolute top-5 left-1/2 -translate-x-1/2 font-mono text-[7px] text-cyber-cyan/85 tracking-widest z-10 uppercase pointer-events-none group-hover:text-cyber-cyan transition-colors drop-shadow-[0_0_6px_rgba(34,211,238,0.75)]">
+              GLB_3D_SECURE
+            </div>
+          </>
         )}
 
         {/* WebGL Canvas */}

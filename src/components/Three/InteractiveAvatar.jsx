@@ -840,18 +840,6 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
           </div>
         )}
 
-        {/* HUD labels */}
-        {!loadError && (
-          <>
-            <div className="absolute top-1.5 left-1/2 -translate-x-1/2 font-mono text-[9px] text-fuchsia-400/90 tracking-[0.42em] z-20 lowercase pointer-events-none drop-shadow-[0_0_8px_rgba(232,121,249,0.85)]">
-              matrix
-            </div>
-            <div className="absolute top-5 left-1/2 -translate-x-1/2 font-mono text-[6.5px] text-cyber-cyan/75 tracking-[0.28em] z-10 uppercase pointer-events-none group-hover:text-cyber-cyan transition-colors drop-shadow-[0_0_5px_rgba(34,211,238,0.6)]">
-              GLB_3D_SECURE
-            </div>
-          </>
-        )}
-
         {/* WebGL Canvas */}
         {!loadError && (
           <div

@@ -9,10 +9,6 @@ const AvatarStatic = () => (
                 <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-cyber-cyan to-transparent shadow-[0_0_8px_var(--primary-color)] animate-scanline opacity-60" />
             </div>
 
-            <div className="absolute top-2 left-1/2 transform -translate-x-1/2 font-mono text-[7px] text-cyber-cyan/60 tracking-widest z-10 uppercase pointer-events-none">
-                GLB_3D_SECURE
-            </div>
-
             <div className="absolute inset-0 flex flex-col items-center justify-center bg-cyber-black z-30 pointer-events-none">
                 <div className="relative w-32 h-32 flex items-center justify-center">
                     <div className="absolute inset-0 border border-dashed border-cyber-cyan/30 rounded-full animate-[spin_8s_linear_infinite]" />

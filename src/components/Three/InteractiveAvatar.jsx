@@ -193,8 +193,8 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
       renderer.setSize(width, height);
       renderer.shadowMap.enabled = false;
       renderer.toneMapping = THREE.ACESFilmicToneMapping;
-      // Richer blacks, speculars still punch through ACES
-      renderer.toneMappingExposure = 1.08;
+      // Slightly lower exposure keeps body black; hard speculars still punch
+      renderer.toneMappingExposure = 1.0;
       renderer.outputColorSpace = THREE.SRGBColorSpace;
 
       containerRef.current.innerHTML = '';
@@ -207,55 +207,59 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
       avatarGroup = new THREE.Group();
       scene.add(avatarGroup);
 
-      // --- Lighting: black glass body + thin site-color rims (not a purple wash) ---
-      scene.add(new THREE.AmbientLight(0x0a0c12, 0.08));
-      scene.add(new THREE.HemisphereLight(0x1a2030, 0x000000, 0.2));
+      // --- Lighting: obsidian body + black-diamond facet sparkles ---
+      scene.add(new THREE.AmbientLight(0x06080e, 0.05));
+      scene.add(new THREE.HemisphereLight(0x141824, 0x000000, 0.14));
 
-      // Neutral key — sculpts form without tinting the glass
-      keyLight = new THREE.DirectionalLight(0xf5f7fb, 2.4);
-      keyLight.position.set(2.2, 5.0, 3.6);
+      // Soft key — form only, keeps body dark
+      keyLight = new THREE.DirectionalLight(0xf2f5fa, 1.7);
+      keyLight.position.set(2.0, 4.6, 3.4);
       scene.add(keyLight);
 
-      // Soft cool fill (near-white) so the dark side still reads as glass, not ink
-      fillLight = new THREE.DirectionalLight(0xc8d4e8, 0.45);
-      fillLight.position.set(-3.2, 1.2, 2.8);
+      fillLight = new THREE.DirectionalLight(0xa8b4c8, 0.28);
+      fillLight.position.set(-3.0, 1.0, 2.6);
       scene.add(fillLight);
 
-      // Site-color rims stay thin — only edge “отливы”, not body tint
-      rimBaseIntensity = 1.35;
+      // Thin site-color rims (edge fire, not body tint)
+      rimBaseIntensity = 1.15;
       rimLight = new THREE.DirectionalLight(themeColors.secondaryHex, rimBaseIntensity);
-      rimLight.position.set(-3.0, 2.4, -4.2);
+      rimLight.position.set(-3.2, 2.6, -4.0);
       scene.add(rimLight);
 
-      const rimPrimary = new THREE.DirectionalLight(themeColors.primaryHex, 1.25);
-      rimPrimary.position.set(3.6, 1.4, -2.8);
+      const rimPrimary = new THREE.DirectionalLight(themeColors.primaryHex, 1.05);
+      rimPrimary.position.set(3.8, 1.2, -2.6);
       scene.add(rimPrimary);
 
-      // White crown streak for crisp glass highlights
-      crownLight = new THREE.DirectionalLight(0xffffff, 4.8);
-      crownLight.position.set(0.3, 6.6, -0.6);
+      // Hard crown kick — diamond facet streak
+      crownLight = new THREE.DirectionalLight(0xffffff, 6.0);
+      crownLight.position.set(0.25, 7.2, -0.4);
       scene.add(crownLight);
 
-      // Moving white specular
-      pointBaseIntensity = 6.2;
-      pointLight = new THREE.PointLight(0xffffff, pointBaseIntensity, 10, 2);
-      pointLight.position.set(0.45, 1.55, 2.35);
+      // Moving specular “sparkle” across facets
+      pointBaseIntensity = 8.5;
+      pointLight = new THREE.PointLight(0xffffff, pointBaseIntensity, 7.5, 2.2);
+      pointLight.position.set(0.5, 1.6, 2.2);
       scene.add(pointLight);
 
-      // Tiny dual-tone edge glints
-      accentPoint = new THREE.PointLight(themeColors.primaryHex, 0.9, 9, 2);
-      accentPoint.position.set(1.2, 0.6, 1.8);
+      // Tiny colored edge fire (primary / secondary)
+      accentPoint = new THREE.PointLight(themeColors.primaryHex, 0.7, 8, 2.2);
+      accentPoint.position.set(1.35, 0.7, 1.6);
       scene.add(accentPoint);
 
-      const secondaryGlint = new THREE.PointLight(themeColors.secondaryHex, 0.85, 9, 2);
-      secondaryGlint.position.set(-1.3, 0.5, 1.7);
+      const secondaryGlint = new THREE.PointLight(themeColors.secondaryHex, 0.65, 8, 2.2);
+      secondaryGlint.position.set(-1.35, 0.55, 1.5);
       scene.add(secondaryGlint);
 
-      const glint = new THREE.PointLight(0xffffff, 9.5, 3.4, 2.5);
-      glint.position.set(0.2, 1.75, 1.2);
+      // Tight white diamond glints (short range = hard sparkles)
+      const glint = new THREE.PointLight(0xffffff, 14.0, 2.8, 2.8);
+      glint.position.set(0.15, 1.85, 1.05);
       scene.add(glint);
 
-      // Env: mostly black + white + small site-color panels (reflections = color cast)
+      const glint2 = new THREE.PointLight(0xffffff, 9.0, 2.4, 2.6);
+      glint2.position.set(-0.55, 1.35, 1.4);
+      scene.add(glint2);
+
+      // Jewelry-studio env: thin white strips + tiny site-color panels
       const pmrem = new THREE.PMREMGenerator(renderer);
       const envScene = new THREE.Scene();
       envScene.background = new THREE.Color(0x000000);
@@ -268,18 +272,21 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
         panel.lookAt(0, 0, 0);
         envScene.add(panel);
       };
-      // White dominates reflections; site colors only as small panels
-      addEnvPanel(0xffffff, 0, 7.2, 1.2, 14, 1.3);
-      addEnvPanel(0xffffff, 4.0, 5.0, -1.5, 1.6, 6);
-      addEnvPanel(0xe8eef8, -3.0, 5.5, 1.5, 1.2, 4);
-      addEnvPanel(themeColors.primaryHex, 5.8, 1.2, 2.4, 2.2, 3.2);
-      addEnvPanel(themeColors.secondaryHex, -5.8, 1.5, 1.2, 2.2, 3.2);
+      // Sharp white “studio bars” → diamond facet reflections
+      addEnvPanel(0xffffff, 0, 7.5, 1, 12, 0.7);
+      addEnvPanel(0xffffff, 3.8, 5.5, -1.2, 0.7, 7);
+      addEnvPanel(0xffffff, -2.8, 4.8, 2, 0.55, 5);
+      addEnvPanel(0xf8fafc, 1.5, 6.2, -3, 4, 0.5);
+      addEnvPanel(0xffffff, -4.5, 2, -2, 0.5, 3);
+      // Small site-color fire in the reflections only
+      addEnvPanel(themeColors.primaryHex, 5.6, 1.5, 2.0, 1.6, 2.4);
+      addEnvPanel(themeColors.secondaryHex, -5.6, 1.8, 1.0, 1.6, 2.4);
       addEnvPanel(0x000000, 0, -5, 0, 18, 10);
-      addEnvPanel(0x000000, 0, 0, 7.5, 14, 10);
-      const envMap = pmrem.fromScene(envScene, 0.03).texture;
+      addEnvPanel(0x000000, 0, 0, 8, 14, 10);
+      const envMap = pmrem.fromScene(envScene, 0.018).texture;
       scene.environment = envMap;
       if ('environmentIntensity' in scene) {
-        scene.environmentIntensity = 1.2;
+        scene.environmentIntensity = 1.65;
       }
       pmrem.dispose();
       envScene.traverse((obj) => {
@@ -379,34 +386,39 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
               mesh.geometry.computeVertexNormals();
             }
 
-            // Smoked black glass: dark transparent body; site colors only as specular/rim
-            // (opacity-based — transmission was flooding the volume with cyan/purple)
+            // Between black diamond & obsidian:
+            // deep black body (obsidian) + hard facet speculars / high IOR (diamond)
             const cyberGlassMat = new THREE.MeshPhysicalMaterial({
-              color: 0x05070c,
-              metalness: 0.55,
-              roughness: 0.12,
+              color: 0x020306,
+              metalness: 0.42,
+              roughness: 0.07,
               transparent: true,
-              opacity: 0.52,
+              opacity: 0.78,
               depthWrite: true,
               side: THREE.FrontSide,
+              // Hard outer polish — diamond clearcoat
               clearcoat: 1.0,
-              clearcoatRoughness: 0.04,
-              ior: 1.5,
+              clearcoatRoughness: 0.015,
+              // Gem-like refraction (glass 1.5 → diamond ~2.4; sweet spot ~2.0)
+              ior: 2.05,
               reflectivity: 1.0,
-              envMapIntensity: 1.55,
-              transmission: 0.15,
-              thickness: 0.6,
+              envMapIntensity: 2.05,
+              // Slight internal depth without washing color through the volume
+              transmission: 0.32,
+              thickness: 1.15,
+              attenuationColor: new THREE.Color(0x010104),
+              attenuationDistance: 0.28,
               emissive: new THREE.Color(0x000000),
               emissiveIntensity: 0,
-              sheen: 0.08,
-              sheenRoughness: 0.65,
+              // Obsidian oil-slick at grazing angles only
+              sheen: 0.05,
+              sheenRoughness: 0.7,
               sheenColor: new THREE.Color(0xffffff),
-              iridescence: 0.06,
-              iridescenceIOR: 1.25,
-              iridescenceThicknessRange: [280, 420],
+              iridescence: 0.16,
+              iridescenceIOR: 1.6,
+              iridescenceThicknessRange: [140, 320],
               specularIntensity: 1.0,
               specularColor: new THREE.Color(0xffffff),
-              // Keep alpha crisp against the black disc
               premultipliedAlpha: false,
             });
 
@@ -472,32 +484,32 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
           scanRing.rotation.z = time * 0.05;
         }
 
-        // Subtle pulse on rims / accents — never flood the glass
+        // Soft pulse — diamond “fire” without tinting the body
         if (rimLight) {
-          rimLight.intensity = rimBaseIntensity * (0.9 + breathe * 0.15);
+          rimLight.intensity = rimBaseIntensity * (0.92 + breathe * 0.12);
         }
         if (accentPoint) {
-          accentPoint.intensity = 0.75 + breathe * 0.35;
+          accentPoint.intensity = 0.55 + breathe * 0.35;
         }
         if (crownLight) {
-          crownLight.intensity = 4.2 + breathe * 0.8;
+          // Occasional brighter crown sparkle
+          crownLight.intensity = 5.2 + breathe * 1.4 + Math.max(0, Math.sin(time * 2.1)) * 1.2;
         }
 
         if (!isHovered) {
-          // Slow turntable + micro-nod — gallery feel, not fidget spinner
-          mouse.targetX = time * 0.2;
-          mouse.targetY = Math.sin(time * 0.45) * 0.05;
+          mouse.targetX = time * 0.18;
+          mouse.targetY = Math.sin(time * 0.42) * 0.045;
 
-          // Specular sweeps a wide lazy arc across the skull
-          pointLight.position.x = Math.sin(time * 0.55) * 1.7;
-          pointLight.position.y = 1.35 + Math.cos(time * 0.4) * 0.75;
-          pointLight.position.z = 2.15 + Math.sin(time * 0.32) * 0.45;
-          pointLight.intensity = pointBaseIntensity * (0.9 + breathe * 0.15);
+          // Specular crawls facets like a jewelry turntable light
+          pointLight.position.x = Math.sin(time * 0.62) * 1.55;
+          pointLight.position.y = 1.4 + Math.cos(time * 0.48) * 0.7;
+          pointLight.position.z = 2.05 + Math.sin(time * 0.35) * 0.4;
+          pointLight.intensity = pointBaseIntensity * (0.85 + breathe * 0.25);
         } else {
           const baseRotationY = Math.round(avatarGroup.rotation.y / (Math.PI * 2)) * (Math.PI * 2);
           mouse.targetX = baseRotationY + mouse.x * 0.7;
           mouse.targetY = mouse.y * 0.48;
-          pointLight.intensity = pointBaseIntensity * 1.25;
+          pointLight.intensity = pointBaseIntensity * 1.35;
         }
 
         // Slightly snappier tracking when hovered

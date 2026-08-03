@@ -1,8 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import ThoughtStreamOverlay from './ThoughtStreamOverlay';
+import AvatarHudRings from './AvatarHudRings';
 
 /**
- * Video head avatar — same glass circle frame as InteractiveAvatar.
+ * Video head avatar — same glass circle frame + gyro rings as InteractiveAvatar.
  * Source: /avatar-head.mp4 (compressed 512² loop). Original 3D GLB kept separately.
  */
 const VideoAvatar = ({ theme = 'cyber', profile, language = 'en' }) => {
@@ -73,6 +74,9 @@ const VideoAvatar = ({ theme = 'cyber', profile, language = 'en' }) => {
             <source src="/avatar-head.webm" type="video/webm" />
           </video>
         )}
+
+        {/* Same HUD rings as 3D mode (gyro spin) */}
+        {!failed && <AvatarHudRings theme={theme} />}
 
         {!failed && (
           <div className="absolute inset-0 pointer-events-none z-20 overflow-hidden rounded-full mix-blend-screen">

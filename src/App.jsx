@@ -39,7 +39,7 @@ const App = () => {
   const { profile, repos, stats, readme, loading } = usePortfolioData();
   const [activeSection, setActiveSection] = useState('home');
   const [language, setLanguage] = useState('en');
-  const [showBackground, setShowBackground] = useState(false);
+  const [showBackground, setShowBackground] = useState(true);
   const [bgMode, setBgMode] = useState(() => {
     try {
       return localStorage.getItem(BG_MODE_KEY) || 'video';
@@ -139,19 +139,7 @@ const App = () => {
     return () => clearInterval(timer);
   }, [themeMode]);
 
-  useEffect(() => {
-    const enableBackground = () => setShowBackground(true);
-
-    window.addEventListener('pointermove', enableBackground, { once: true, passive: true });
-    window.addEventListener('scroll', enableBackground, { once: true, passive: true });
-    window.addEventListener('keydown', enableBackground, { once: true });
-
-    return () => {
-      window.removeEventListener('pointermove', enableBackground);
-      window.removeEventListener('scroll', enableBackground);
-      window.removeEventListener('keydown', enableBackground);
-    };
-  }, []);
+  // Removed pointermove/scroll listeners so background loads immediately
 
   // Setup global interaction listeners for AudioContext activation and click sounds
   useEffect(() => {

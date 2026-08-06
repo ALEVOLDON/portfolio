@@ -1,13 +1,14 @@
 import React, { useEffect, useRef } from 'react';
 
 class Particle {
-    constructor(p, hueBase) {
+    constructor(p, hueBase, sat = 200) {
         this.p = p;
         this.pos = p.createVector(p.random(p.width), p.random(p.height));
         this.vel = p.createVector(p.random(-1, 1), p.random(-1, 1));
         this.acc = p.createVector(0, 0);
         this.maxSpeed = p.random(0.5, 1.5);
-        this.colorHue = hueBase + p.random(-20, 20);
+        this.colorHue = hueBase + p.random(-15, 15);
+        this.sat = sat;
     }
 
     update() {
@@ -24,7 +25,7 @@ class Particle {
 
     display() {
         this.p.noStroke();
-        this.p.fill(this.colorHue, 200, 255, 150);
+        this.p.fill(this.colorHue, this.sat, 255, 150);
         this.p.ellipse(this.pos.x, this.pos.y, 3, 3);
     }
 
@@ -36,7 +37,33 @@ class Particle {
     }
 }
 
-const GenerativeThumbnail = ({ seedStr }) => {
+const getThemeHueAndSat = (themeName, hash, p) => {
+    switch (themeName) {
+        case 'solar':
+            return {
+                hue: p.map(Math.abs(hash) % 100, 0, 100, 10, 45),
+                sat: 220
+            };
+        case 'emerald':
+            return {
+                hue: p.map(Math.abs(hash) % 100, 0, 100, 75, 120),
+                sat: 210
+            };
+        case 'void':
+            return {
+                hue: p.map(Math.abs(hash) % 100, 0, 100, 140, 160),
+                sat: 40
+            };
+        case 'cyber':
+        default:
+            return {
+                hue: p.map(Math.abs(hash) % 100, 0, 100, 160, 230),
+                sat: 200
+            };
+    }
+};
+
+const GenerativeThumbnail = ({ seedStr, theme = 'cyber' }) => {
     const sketchRef = useRef(null);
     const p5Instance = useRef(null);
 
@@ -46,10 +73,8 @@ const GenerativeThumbnail = ({ seedStr }) => {
 
         const createSketch = () => (p) => {
             let particles = [];
-            let hueBase;
-            const numParticles = 36; // Multiple cards can be visible at once
+            const numParticles = 36;
             p.setup = () => {
-                // Determine base color mapping from the seed string
                 let hash = 0;
                 for (let i = 0; i < seedStr.length; i++) {
                     hash = seedStr.charCodeAt(i) + ((hash << 5) - hash);
@@ -57,21 +82,17 @@ const GenerativeThumbnail = ({ seedStr }) => {
                 p.randomSeed(hash);
                 p.noiseSeed(hash);
 
-                // Canvas size matching the card header aspect ratio
                 p.createCanvas(sketchRef.current.offsetWidth, sketchRef.current.offsetHeight);
                 p.colorMode(p.HSB, 255);
 
-                // Map the hash to a cyber-ish hue (cyan/purple range is around 180 to 220)
-                hueBase = p.map(Math.abs(hash) % 100, 0, 100, 160, 240);
+                const { hue: hueBase, sat } = getThemeHueAndSat(theme, hash, p);
 
-                // Initialize random particles
                 for (let i = 0; i < numParticles; i++) {
-                    particles.push(new Particle(p, hueBase));
+                    particles.push(new Particle(p, hueBase, sat));
                 }
             };
 
             p.draw = () => {
-                // Clear background with semi-transparent dark shade for trail effect
                 p.background(10, 10, 10, 50);
 
                 particles.forEach(particle => {
@@ -80,20 +101,17 @@ const GenerativeThumbnail = ({ seedStr }) => {
                     particle.checkEdges();
                 });
 
-                // Connect particles with lines if they are close
                 for (let i = 0; i < particles.length; i++) {
                     for (let j = i + 1; j < particles.length; j++) {
                         let d = p.dist(particles[i].pos.x, particles[i].pos.y, particles[j].pos.x, particles[j].pos.y);
                         if (d < 50) {
                             let alpha = p.map(d, 0, 50, 255, 0);
-                            p.stroke(particles[i].colorHue, 200, 255, alpha);
+                            p.stroke(particles[i].colorHue, particles[i].sat, 255, alpha);
                             p.strokeWeight(1);
                             p.line(particles[i].pos.x, particles[i].pos.y, particles[j].pos.x, particles[j].pos.y);
                         }
                     }
                 }
-
-
             };
 
             p.windowResized = () => {
@@ -135,7 +153,7 @@ const GenerativeThumbnail = ({ seedStr }) => {
                 p5Instance.current = null;
             }
         };
-    }, [seedStr]);
+    }, [seedStr, theme]);
 
     return (
         <div

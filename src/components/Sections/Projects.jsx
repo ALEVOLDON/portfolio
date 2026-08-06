@@ -3,7 +3,7 @@ import Icon from '../UI/Icon';
 import GenerativeThumbnail from './GenerativeThumbnail';
 import { translations } from '../../data/translations';
 
-const Projects = ({ repos, loading, language = 'en' }) => {
+const Projects = ({ theme = 'cyber', repos, loading, language = 'en' }) => {
     const [projectMode, setProjectMode] = useState('featured'); // 'featured' or 'telemetry'
     const [activeFilter, setActiveFilter] = useState('All');
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -251,7 +251,7 @@ const Projects = ({ repos, loading, language = 'en' }) => {
                                                 }`}
                                             >
                                                 <div className="w-full h-44 overflow-hidden border-b border-white/5 relative">
-                                                    <GenerativeThumbnail seedStr={repo.name} />
+                                                    <GenerativeThumbnail theme={theme} seedStr={repo.name} />
                                                     <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity z-10 mix-blend-overlay ${
                                                         projectMode === 'featured' ? 'bg-cyber-cyan/20' : 'bg-cyber-purple/20'
                                                     }`}></div>

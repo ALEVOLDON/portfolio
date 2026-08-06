@@ -272,7 +272,7 @@ const App = () => {
       <main>
         <Hero theme={bgConfig.theme} profile={profile} loading={loading} scrollTo={scrollTo} language={language} avatarMode={avatarMode} setAvatarMode={setAvatarMode} />
         <WhatICreate language={language} />
-        <Projects repos={repos} loading={loading} language={language} />
+        <Projects theme={bgConfig.theme} repos={repos} loading={loading} language={language} />
         <About profile={profile} readme={readme} stats={stats} language={language} />
         <DeferredBrainGraph theme={bgConfig.theme} language={language} />
         <Contact language={language} />

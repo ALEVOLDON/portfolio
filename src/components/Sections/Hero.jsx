@@ -8,9 +8,17 @@ const VideoAvatar = lazy(() => import('../Three/VideoAvatar'));
 
 const AVATAR_MODE_KEY = 'heroAvatarMode';
 
-const Hero = ({ theme = 'cyber', profile, loading, scrollTo, language = 'en' }) => {
+const Hero = ({
+    theme = 'cyber',
+    profile,
+    loading,
+    scrollTo,
+    language = 'en',
+    avatarMode: propAvatarMode,
+    setAvatarMode: propSetAvatarMode
+}) => {
     const t = translations[language].hero;
-    const [avatarMode, setAvatarMode] = useState(() => {
+    const [localAvatarMode, setLocalAvatarMode] = useState(() => {
         try {
             return localStorage.getItem(AVATAR_MODE_KEY) || 'video';
         } catch {
@@ -18,13 +26,18 @@ const Hero = ({ theme = 'cyber', profile, loading, scrollTo, language = 'en' }) 
         }
     });
 
+    const avatarMode = propAvatarMode !== undefined ? propAvatarMode : localAvatarMode;
+    const setAvatarMode = propSetAvatarMode || setLocalAvatarMode;
+
     useEffect(() => {
-        try {
-            localStorage.setItem(AVATAR_MODE_KEY, avatarMode);
-        } catch {
-            /* ignore */
+        if (propAvatarMode === undefined) {
+            try {
+                localStorage.setItem(AVATAR_MODE_KEY, localAvatarMode);
+            } catch {
+                /* ignore */
+            }
         }
-    }, [avatarMode]);
+    }, [localAvatarMode, propAvatarMode]);
 
     return (
         <section id="home" className="min-h-screen md:h-screen flex items-center justify-center px-6 pt-20 relative overflow-hidden">
@@ -39,7 +52,7 @@ const Hero = ({ theme = 'cyber', profile, loading, scrollTo, language = 'en' }) 
                                 {avatarMode === 'video' ? (
                                     <VideoAvatar theme={theme} profile={profile} language={language} />
                                 ) : (
-                                    <InteractiveAvatar theme={theme} profile={profile} loading={loading} language={language} />
+                                    <InteractiveAvatar key={theme} theme={theme} profile={profile} loading={loading} language={language} />
                                 )}
                             </Suspense>
 

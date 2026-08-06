@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, useState, useEffect } from 'react';
+import React, { Suspense, lazy, useState, useEffect, useRef } from 'react';
 import CustomCursor from './components/UI/CustomCursor';
 import BackgroundControls from './components/UI/BackgroundControls';
 import Navbar from './components/UI/Navbar';
@@ -25,6 +25,7 @@ const StaticBackground = () => (
 );
 
 const BG_MODE_KEY = 'bgMode';
+const AVATAR_MODE_KEY = 'heroAvatarMode';
 
 const themeOrder = ['solar', 'emerald', 'cyber', 'void'];
 
@@ -47,6 +48,13 @@ const App = () => {
       return 'video';
     }
   });
+  const [avatarMode, setAvatarMode] = useState(() => {
+    try {
+      return localStorage.getItem(AVATAR_MODE_KEY) || 'video';
+    } catch {
+      return 'video';
+    }
+  });
   const [bgConfig, setBgConfig] = useState(() => {
     const storedTheme = localStorage.getItem('theme') || 'cyber';
     const storedBrightness = localStorage.getItem('themeBrightness') ? parseFloat(localStorage.getItem('themeBrightness')) : 1.0;
@@ -64,6 +72,9 @@ const App = () => {
   });
   const [cycleProgress, setCycleProgress] = useState(0);
   const [showSynth, setShowSynth] = useState(false);
+
+  const isFirstThemeRender = useRef(true);
+  const prevThemeRef = useRef(bgConfig.theme);
 
   // Persistence hooks
   useEffect(() => {
@@ -91,8 +102,22 @@ const App = () => {
   }, [bgMode]);
 
   useEffect(() => {
+    try {
+      localStorage.setItem(AVATAR_MODE_KEY, avatarMode);
+    } catch {
+      /* ignore */
+    }
+  }, [avatarMode]);
+
+  useEffect(() => {
     localStorage.setItem('themeMode', themeMode);
   }, [themeMode]);
+
+  // When theme changes, switch background mode to shader and avatar mode to 3d
+  useEffect(() => {
+    setBgMode('shader');
+    setAvatarMode('3d');
+  }, [bgConfig.theme]);
 
   // Chrono Sync logic
   useEffect(() => {
@@ -228,7 +253,7 @@ const App = () => {
           bgMode === 'video' ? (
             <VideoBackground brightness={bgConfig.brightness} />
           ) : (
-            <PlasmaBackground {...bgConfig} />
+            <PlasmaBackground key={bgConfig.theme} {...bgConfig} />
           )
         ) : (
           <StaticBackground />
@@ -238,7 +263,7 @@ const App = () => {
       <Navbar activeSection={activeSection} scrollTo={scrollTo} language={language} setLanguage={setLanguage} />
       <SpotifyPlayer language={language} />
       <main>
-        <Hero theme={bgConfig.theme} profile={profile} loading={loading} scrollTo={scrollTo} language={language} />
+        <Hero theme={bgConfig.theme} profile={profile} loading={loading} scrollTo={scrollTo} language={language} avatarMode={avatarMode} setAvatarMode={setAvatarMode} />
         <WhatICreate language={language} />
         <Projects repos={repos} loading={loading} language={language} />
         <About profile={profile} readme={readme} stats={stats} language={language} />

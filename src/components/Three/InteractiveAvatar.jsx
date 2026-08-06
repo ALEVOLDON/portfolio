@@ -4,6 +4,7 @@ import ThoughtStreamOverlay from './ThoughtStreamOverlay';
 const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' }) => {
   const containerRef = useRef(null);
   const thoughtRef = useRef(null);
+  const themeObjectsRef = useRef({});
   const [progress, setProgress] = useState(0);
   const [modelLoaded, setModelLoaded] = useState(false);
   const [loadError, setLoadError] = useState(false);
@@ -49,6 +50,18 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
         };
     }
   }, [theme]);
+
+  // Live theme color updater — updates Three.js lights & materials without scene disposal
+  useEffect(() => {
+    const objs = themeObjectsRef.current;
+    if (objs.rimLight) objs.rimLight.color.set(themeColors.secondaryHex);
+    if (objs.rimPrimary) objs.rimPrimary.color.set(themeColors.primaryHex);
+    if (objs.accentPoint) objs.accentPoint.color.set(themeColors.primaryHex);
+    if (objs.secondaryGlint) objs.secondaryGlint.color.set(themeColors.secondaryHex);
+    if (objs.hudRing?.material) objs.hudRing.material.color.set(themeColors.primaryHex);
+    if (objs.dotRing?.material) objs.dotRing.material.color.set(themeColors.secondaryHex);
+    if (objs.scanRing?.material) objs.scanRing.material.color.set(themeColors.primaryHex);
+  }, [themeColors]);
 
   useEffect(() => {
     if (loading || loadError) return;
@@ -235,6 +248,16 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
       scanRing = new THREE.Mesh(scanRingGeom, scanRingMat);
       scanRing.position.set(0, ringY, 0);
       avatarGroup.add(scanRing);
+
+      themeObjectsRef.current = {
+        rimLight,
+        rimPrimary,
+        accentPoint,
+        secondaryGlint,
+        hudRing,
+        dotRing,
+        scanRing,
+      };
 
       // 6. Load GLTF model
       const loader = new GLTFLoader();
@@ -546,7 +569,7 @@ const InteractiveAvatar = ({ theme = 'cyber', profile, loading, language = 'en' 
       }
       disposeThreeScene();
     };
-  }, [loading, loadError, theme, themeColors]);
+  }, [loading, loadError]);
 
   const handleAvatarClick = () => {
     if (thoughtRef.current?.triggerQuote) {

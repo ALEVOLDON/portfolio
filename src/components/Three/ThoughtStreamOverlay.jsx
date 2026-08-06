@@ -88,6 +88,10 @@ const ThoughtStreamOverlay = forwardRef(function ThoughtStreamOverlay(
   const triggerQuoteRef = useRef(null);
   const lastQuoteIndexRef = useRef(-1);
   const themeColors = useMemo(() => themeToColors(theme), [theme]);
+  const themeColorsRef = useRef(themeColors);
+  useEffect(() => {
+    themeColorsRef.current = themeColors;
+  }, [themeColors]);
 
   useImperativeHandle(ref, () => ({
     triggerQuote: () => {
@@ -215,9 +219,9 @@ const ThoughtStreamOverlay = forwardRef(function ThoughtStreamOverlay(
         if (p.type === 'quote') {
           ctx.font = 'bold 11px "Space Grotesk", sans-serif';
           const lines = wrapText(ctx, p.text, 220);
-          drawQuote(ctx, lines, p.author, currentX, currentY, themeColors, alpha);
+          drawQuote(ctx, lines, p.author, currentX, currentY, themeColorsRef.current, alpha);
         } else {
-          drawWord(ctx, p.text, currentX, currentY, alpha, themeColors, p.fontSize, p.colorType);
+          drawWord(ctx, p.text, currentX, currentY, alpha, themeColorsRef.current, p.fontSize, p.colorType);
         }
         return true;
       });
@@ -247,7 +251,7 @@ const ThoughtStreamOverlay = forwardRef(function ThoughtStreamOverlay(
       observer.disconnect();
       triggerQuoteRef.current = null;
     };
-  }, [language, themeColors, enabled]);
+  }, [language, enabled]);
 
   if (!enabled) return null;
 

@@ -79,6 +79,9 @@ const BackgroundControls = ({
 
     const handleThemeChange = (themeId) => {
         setBgConfig(prev => ({ ...prev, theme: themeId }));
+        if (setBgMode) {
+            setBgMode('shader');
+        }
         if (setThemeMode) {
             setThemeMode('manual');
         }

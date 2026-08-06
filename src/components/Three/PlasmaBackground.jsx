@@ -11,22 +11,44 @@ const PlasmaBackground = ({
   theme = 'cyber',
   quality = 'high',
 }) => {
+  const getThemePalette = (name) => {
+    switch (name) {
+      case 'solar':
+        return { c1: 0xf2994a, c2: 0xeb5757, bg: 0x080302 };
+      case 'emerald':
+        return { c1: 0x22c55e, c2: 0x0f766e, bg: 0x020604 };
+      case 'void':
+        return { c1: 0xd1d5db, c2: 0x6b7280, bg: 0x0a0c10 };
+      case 'cyber':
+      default:
+        return { c1: 0x22d3ee, c2: 0xa855f7, bg: 0x030106 };
+    }
+  };
+
+  const initialPalette = getThemePalette(theme);
   const mountRef = useRef(null);
   const configRef = useRef({ brightness, speed, theme, quality });
   const materialRef = useRef(null);
   const colorsRef = useRef({
-    c1: new THREE.Color(0x22d3ee),
-    c2: new THREE.Color(0xa855f7),
-    bg: new THREE.Color(0x030106),
+    c1: new THREE.Color(initialPalette.c1),
+    c2: new THREE.Color(initialPalette.c2),
+    bg: new THREE.Color(initialPalette.bg),
   });
   const targetsRef = useRef({
-    c1: new THREE.Color(0x22d3ee),
-    c2: new THREE.Color(0xa855f7),
-    bg: new THREE.Color(0x030106),
+    c1: new THREE.Color(initialPalette.c1),
+    c2: new THREE.Color(initialPalette.c2),
+    bg: new THREE.Color(initialPalette.bg),
   });
 
   useEffect(() => {
     configRef.current = { brightness, speed, theme, quality };
+    const palette = getThemePalette(theme);
+    targetsRef.current.c1.set(palette.c1);
+    targetsRef.current.c2.set(palette.c2);
+    targetsRef.current.bg.set(palette.bg);
+    colorsRef.current.c1.set(palette.c1);
+    colorsRef.current.c2.set(palette.c2);
+    colorsRef.current.bg.set(palette.bg);
   }, [brightness, speed, theme, quality]);
 
   useEffect(() => {
@@ -284,7 +306,7 @@ const PlasmaBackground = ({
       themeTargets(configRef.current.theme);
       const cur = colorsRef.current;
       const tgt = targetsRef.current;
-      const lerp = 0.05;
+      const lerp = 0.25;
       cur.c1.lerp(tgt.c1, lerp);
       cur.c2.lerp(tgt.c2, lerp);
       cur.bg.lerp(tgt.bg, lerp);

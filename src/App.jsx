@@ -113,10 +113,17 @@ const App = () => {
     localStorage.setItem('themeMode', themeMode);
   }, [themeMode]);
 
-  // When theme changes, switch background mode to shader and avatar mode to 3d
+  // When theme changes:
+  // - Cyber theme: switch background mode to 'video' and avatar mode to 'video'
+  // - Other themes (solar, emerald, void): switch background mode to 'shader' and avatar mode to '3d'
   useEffect(() => {
-    setBgMode('shader');
-    setAvatarMode('3d');
+    if (bgConfig.theme === 'cyber') {
+      setBgMode('video');
+      setAvatarMode('video');
+    } else {
+      setBgMode('shader');
+      setAvatarMode('3d');
+    }
   }, [bgConfig.theme]);
 
   // Chrono Sync logic

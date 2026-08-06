@@ -80,7 +80,7 @@ const BackgroundControls = ({
     const handleThemeChange = (themeId) => {
         setBgConfig(prev => ({ ...prev, theme: themeId }));
         if (setBgMode) {
-            setBgMode('shader');
+            setBgMode(themeId === 'cyber' ? 'video' : 'shader');
         }
         if (setThemeMode) {
             setThemeMode('manual');

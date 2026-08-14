@@ -1,6 +1,137 @@
 {
   "posts": [
     {
+      "id": 3283,
+      "date": "2026-08-14T03:25:05.000Z",
+      "title": "🚀 Gemini 3.7 Flash в Google Antigravity",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3283,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "google",
+        "gemini",
+        "ai",
+        "developertools",
+        "machinelearning",
+        "technews",
+        "learning",
+        "tools",
+        "flash",
+        "для",
+        "агентов"
+      ],
+      "content": "📌 TL;DR: Google интегрировала свою новую модель Gemini 3.7 Flash в платформу Google Antigravity для ускорения разработки и работы агентов.\n\nКомпания Google объявила о запуске Gemini 3.7 Flash в экосистеме Google Antigravity. Модель позиционируется как ключевой инструмент для написания кода и создания автономных агентов, предлагая повышенную производительность и скорость обработки задач.\n\nОбновление ориентировано на разработчиков, которым важна отзывчивость интерфейсов и точность генерации программного кода. Платформа уже доступна для скачивания и обновления до актуальной версии.\n\n• 🔹 Интеграция модели Gemini 3.7 Flash\n• 🔹 Оптимизация под задачи программирования\n• 🔹 Поддержка работы ИИ-агентов\n\n💡 Почему это важно: Новая версия рабочей лошадки от Google упрощает повседневные задачи разработчиков, объединяя передовые языковые модели со специализированной средой.\n\n🔗 Источник\n\n#Google #Gemini #AI #DeveloperTools #MachineLearning #TechNews\n\n## Tags\n\n#telegram-import #live-sync #google #gemini #ai #developertools #machinelearning #technews #learning #tools #flash #для #агентов"
+    },
+    {
+      "id": 3282,
+      "date": "2026-08-14T03:24:54.000Z",
+      "title": "🚀 Релиз DeepSeek-V4-Pro",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3282,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "deepseek",
+        "ai",
+        "llm",
+        "devtools",
+        "opensource",
+        "technews",
+        "backend",
+        "tools",
+        "для",
+        "агентских",
+        "модель"
+      ],
+      "content": "📌 TL;DR: Команда DeepSeek представила модель V4-Pro с настраиваемой глубиной рассуждений, поддержкой OpenAI Responses API и новыми тарифными сетками.\n\nКомпания DeepSeek объявила о запуске новой языковой модели DeepSeek-V4-Pro вместе с версией V4-Flash. Обновление ориентировано на повышение производительности в автономных агентских сценариях и интеграцию с существующей инфраструктурой разработчиков.\n\nГлавным нововведением стала функция гибкой настройки усилий на рассуждение (reasoning effort). Пользователи могут переключаться между режимами: низким для простых задач, средним для повседневных рабочих процессов агентов и максимальным для сложных многоэтапных вычислений.\n\n• 🔹 Серьозные улучшения агентских возможностей для продакшн-сред.\n• 🔹 Нативная поддержка OpenAI Responses API с оптимизацией под Codex.\n• 🔹 Введение пиковых и внепиковых тарифов со скидкой до 50% в нечасовые пики.\n\n💡 Почему это важно: Модель уже доступна в веб-интерфейсе через «Expert Mode» и по API, позволяя разработчикам гибко оптимизировать затраты на вычисления за счет дифференцированной тарификации.\n\n🔗 Источник\n\n#DeepSeek #AI #LLM #DevTools #OpenSource #TechNews\n\n## Tags\n\n#telegram-import #live-sync #deepseek #ai #llm #devtools #opensource #technews #backend #tools #для #агентских #модель"
+    },
+    {
+      "id": 3281,
+      "date": "2026-08-14T03:24:47.000Z",
+      "title": "🧩 DeepSeek Harness v0.1: modular architecture for AI agents",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3281,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "deepseek",
+        "ai",
+        "opensource",
+        "agents",
+        "devtools",
+        "machinelearning",
+        "design",
+        "learning",
+        "tools",
+        "harness",
+        "modular",
+        "cordis"
+      ],
+      "content": "📌 TL;DR: DeepSeek released DeepSeek Harness v0.1 in developer preview, offering an open-source, fully modular agent framework built on the Cordis meta-framework.\n\nDeepSeek continues to expand its ecosystem with the release of DeepSeek Harness v0.1. The project is now available in Developer Preview, and its codebase is fully open-sourced under the MIT license, giving developers worldwide complete freedom to build, modify, and scale autonomous AI agents.\n\nThe core philosophy of the new framework is radical modularity, where every component functions as a plugin. This design allows developers to effortlessly swap out foundational models, execution tools, sandboxes, and orchestration loops without rewriting core logic.\n\n• 🔹 MIT-licensed open-source codebase for global developers\n• 🔹 Powered by the modular Cordis meta-framework\n• 🔹 \"Everything is a plugin\" architecture for models, tools, and UI\n• 🔹 Flexible mixing, matching, and extension of execution loops and sandboxes\n\n💡 Почему это важно: Модульная архитектура позволяет разработчикам кастомизировать агентские среды под любые задачи, минимизируя зависимость от проприетарных экосистем.\n\n🔗 Источник\n\n#DeepSeek #AI #OpenSource #Agents #DevTools #MachineLearning\n\n## Tags\n\n#telegram-import #live-sync #deepseek #ai #opensource #agents #devtools #machinelearning #design #learning #tools #harness #modular #cordis"
+    },
+    {
+      "id": 3280,
+      "date": "2026-08-13T19:31:52.000Z",
+      "title": "https://x.com/i/status/2087953243552743525",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3280,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "x"
+      ],
+      "content": "## Links\n\n- https://x.com/i/status/2087953243552743525\n\n## Tags\n\n#telegram-import #live-sync #x"
+    },
+    {
+      "id": 3279,
+      "date": "2026-08-13T17:36:16.000Z",
+      "title": "⚡️ ИИ-автомат с характером",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3279,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "ии",
+        "технологии",
+        "будущее",
+        "юмор",
+        "донбасс",
+        "искусственныйинтеллект",
+        "просто",
+        "автомат",
+        "воду"
+      ],
+      "content": "Пошёл во двор за водой, а там — новая форма цифровизации: автомат с ИИ.\n\nБезнал не принимает. Сдачу не даёт. Зато разговаривает на весь двор, пока ты пытаешься просто набрать воды. Причём, судя по интонации, искусственный интеллект уже успел устать от человечества.\n\nПолучается прекрасный технологический симбиоз: ты приносишь наличку, она выдаёт воду и заодно читает тебе лекцию.\n\nСледующий апгрейд — чтобы ещё могла сама решить, достаточно ли ты сегодня выпил воды. 😐\n\n🛠 Что можно попробовать: внедрять ИИ туда, где он действительно помогает, а не просто громче всех разговаривает.\n\n💭 Мысль: иногда самый умный автомат — тот, который просто молча наливает воду.\n\n#ИИ #технологии #будущее #юмор #Донбасс #искусственныйинтеллект\n\n## Media\n\n- [video](https://alevoldon.com/media/telegram/2026/08/2026-08-13T17-46-50-576Z-97ce81b7.mp4)\n\n## Tags\n\n#telegram-import #live-sync #ии #технологии #будущее #юмор #донбасс #искусственныйинтеллект #просто #автомат #воду"
+    },
+    {
+      "id": 3278,
+      "date": "2026-08-13T06:09:14.000Z",
+      "title": "🚀 Эффективная разработка ПО с помощью искусственного интеллекта",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3278,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "ai",
+        "devtools",
+        "softwareengineering",
+        "programming",
+        "workflow",
+        "tools",
+        "для",
+        "кода",
+        "написания"
+      ],
+      "content": "📌 TL;DR: Практический видеотуториал от Traversy Media по построению современного воркфлоу разработки с использованием AI-инструментов.\n\nСовременный ландшафт разработки стремительно меняется благодаря внедрению ассистентов на базе больших языковых моделей. В новом руководстве на канале Traversy Media разбирается актуальный подход к созданию программного обеспечения, где AI выступает не просто игрушкой для генерации простого кода, а полноценным напарником на всех этапах жизненного цикла проекта.\n\nАвтор демонстрирует реальные сценарии интеграции нейросетей в повседневные задачи: от проектирования архитектуры и написания бойлерплейта до отладки сложных багов и рефакторинга. Такой подход позволяет существенно сократить время рутинной работы и сосредоточиться на бизнес-логике.\n\n• 🔹 Интеграция AI-инструментов в реальные рабочие процессы\n• 🔹 Практические паттерны промптинга для разработчиков\n• 🔹 Методы ускорения написания и тестирования кода\n\n💡 Почему это важно: Освоение правильных паттернов работы с AI позволяет разработчикам кратно повысить личную продуктивность и быстрее доставлять готовый продукт до релиза.\n\n🔗 Источник\n\n#AI #DevTools #SoftwareEngineering #Programming #Workflow\n\n## Tags\n\n#telegram-import #live-sync #ai #devtools #softwareengineering #programming #workflow #tools #для #кода #написания"
+    },
+    {
       "id": 3277,
       "date": "2026-08-13T05:51:43.000Z",
       "title": "📱 Termux",

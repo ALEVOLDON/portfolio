@@ -1,6 +1,161 @@
 {
   "posts": [
     {
+      "id": 3422,
+      "date": "2026-09-05T23:17:59.000Z",
+      "title": "🚀 Генерация живых 3D-миров с помощью GPT-6 Astra и Three.js",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3422,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "ai",
+        "threejs",
+        "typescript",
+        "webdev",
+        "3d",
+        "generativeai",
+        "frontend",
+        "astra",
+        "gpt-6",
+        "three"
+      ],
+      "content": "📌 TL;DR: Эволюция ИИ дошла до создания полностью интерактивных 3D-сцен «на лету» прямо в браузере без использования привычных файлов моделей.\n\nВ новом впечатляющем демо автор показал связку GPT-6 Astra и библиотеки Three.js. Забудьте про тяжелые статические 3D-модели — теперь цифровые миры буквально пишутся кодом в реальном времени. Все элементы, включая поезда, их геометрию, параметры и профили, генерируются «с нуля» на TypeScript.\n\nИнтересно, что вся логика движений, включая вращение колес и сложнейшую анимацию сборки-разборки объектов, полностью управляется кодом. При этом производительность остается на высоте, а вся сцена плавно работает внутри обычного веб-браузера.\n\n• 🔹 Генерация 3D-геометрии и окружения на лету силами ИИ\n• 🔹 Отсутствие традиционных файлов моделей (GLTF, OBJ и т.д.)\n• 🔹 Полная программная анимация движения и трансформации\n• 🔹 Высокая производительность и плавный рендеринг в браузере\n\n💡 Почему это важно: Такой подход открывает эру процедурной генерации сложных интерактивных сред в веб-разработке и геймдеве, где окружение может адаптироваться под пользователя мгновенно.\n\n🔗 Источник\n\n#AI #ThreeJS #TypeScript #WebDev #3D #GenerativeAI\n\n## Tags\n\n#telegram-import #live-sync #ai #threejs #typescript #webdev #3d #generativeai #frontend #astra #gpt-6 #three"
+    },
+    {
+      "id": 3421,
+      "date": "2026-09-05T23:16:31.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/09/2026-09-05T23-16-31-6...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3421,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "ai",
+        "llm",
+        "api",
+        "technews",
+        "opensource",
+        "devtools",
+        "backend",
+        "tools",
+        "без",
+        "запуск",
+        "тяжелые"
+      ],
+      "content": "💸 Самый доступный провайдер ИИ\n\n📌 TL;DR: Запуск платформы CheaperInference обещает скидки до 81% на популярные языковые модели.\n\nНа рынке ИИ-услуг появляется всё больше альтернативных провайдеров, стремящихся снизить порог входа для разработчиков и энтузиастов. Новый сервис CheaperInference предлагает значительное сокращение расходов на запуск LLM, снижая привычные прайсы до 81% за счет оптимизации инфраструктуры.\n\nПлатформа ориентирована на тех, кто активно экспериментирует с агентскими системами или разворачивает тяжелые пайплайны и хочет существенно сократить ежемесячные косты на API без потери в качестве генерации.\n\n💡 Почему это важно: Снижение стоимости инференса позволяет запускать масштабные автономные воркфлоу и тестировать тяжелые архитектуры без риска исчерпать бюджет на ранних этапах разработки.\n\n🔗 Источник\n\n#AI #LLM #API #TechNews #OpenSource #DevTools\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/09/2026-09-05T23-16-31-672Z-2f34ec2f.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/09/2026-09-05T23-16-31-672Z-2f34ec2f.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #llm #api #technews #opensource #devtools #backend #tools #без #запуск #тяжелые"
+    },
+    {
+      "id": 3420,
+      "date": "2026-09-05T23:13:02.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/09/2026-09-05T23-13-01-8...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3420,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "ai",
+        "llm",
+        "aiagents",
+        "openrouter",
+        "deepseek",
+        "gemini",
+        "huggingface",
+        "aistudio",
+        "aiinfrastructure",
+        "machinelearning",
+        "learning",
+        "как",
+        "подписки",
+        "подход"
+      ],
+      "content": "📰 Инфраструктурный подход к AI: Как перестать платить за подписки и собирать свой AI-стек\n\nВ современной разработке стандартная схема использования нейросетей быстро бьет по карману. Подписки на ChatGPT, Claude, Cursor и сопутствующие сервисы легко суммарно выливаются в $60–100+ ежемесячно, привязывая вас к конкретным экосистемам.\n\nВ этой статье мы разберем принципиально иной подход: как рассматривать AI-модели не как потребительский софт по подписке, а как гибкую инфраструктуру. Вы узнаете, как построить собственную систему маршрутизации моделей, оптимизировать затраты и создать автономную AI-студию нового поколения.\n\n👉 Читать полностью в Instant View ⚡️\n\n#AI #LLM #AIAgents #OpenRouter #DeepSeek #Gemini #HuggingFace #AIStudio #AIInfrastructure #MachineLearning\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/09/2026-09-05T23-13-01-832Z-d560beb0.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/09/2026-09-05T23-13-01-832Z-d560beb0.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #llm #aiagents #openrouter #deepseek #gemini #huggingface #aistudio #aiinfrastructure #machinelearning #learning #как #подписки #подход"
+    },
+    {
+      "id": 3419,
+      "date": "2026-09-05T22:21:18.000Z",
+      "title": "Post 3419",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3419,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "post",
+        "archive"
+      ],
+      "content": "## Tags\n\n#telegram-import #live-sync #post #archive"
+    },
+    {
+      "id": 3418,
+      "date": "2026-09-05T22:16:03.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/09/2026-09-05T22-16-03-0...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3418,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "ai",
+        "multiagent",
+        "machinelearning",
+        "devops",
+        "tech",
+        "architecture",
+        "learning"
+      ],
+      "content": "📰 Эволюция AI Studio: План создания универсальной Multi-Agent платформы\n\nСоздание современных систем на базе искусственного интеллекта требует перехода от простых чат-ботов к автономным многоагентным платформам. Главная цель текущего этапа — превратить узкоспециализированное решение в универсальную AI-студию, способную самостоятельно проектировать, разрабатывать и тестировать проекты любого типа, оптимизируя затраты и ресурсы.\n\n👉 Читать полностью в Instant View ⚡️\n\n#AI #MultiAgent #MachineLearning #DevOps #Tech #Architecture\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/09/2026-09-05T22-16-03-091Z-ae3e0a3e.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/09/2026-09-05T22-16-03-091Z-ae3e0a3e.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #multiagent #machinelearning #devops #tech #architecture #learning"
+    },
+    {
+      "id": 3417,
+      "date": "2026-09-05T21:17:16.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/09/2026-09-05T21-17-16-9...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3417,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "ai",
+        "autonomousagents",
+        "python",
+        "pygame",
+        "devtools",
+        "machinelearning",
+        "learning",
+        "tools",
+        "архитектурные",
+        "какие",
+        "токены"
+      ],
+      "content": "📰 Как мы учили AI-студию писать игры: разбор ошибок, копеечные токены и архитектурные инсайты\n\nСегодня мы провели хардкорный стресс-тест автономной AI Team Studio, состоящей из агентов: Архитектора, Кодера, Тестировщика и Ревьюера. В качестве реальной задачи мы выбрали создание полноценного клона легендарных танчиков Battle City на Python/Pygame с нуля.\n\nВ этой статье мы подробно разберем, на какие грабли наступили разработчики, куда утекли бюджеты на токены и какие архитектурные выводы были сделаны для создания надежных мультиагентных систем.\n\n👉 Читать полностью в Instant View ⚡️\n\n#AI #AutonomousAgents #Python #Pygame #DevTools #MachineLearning\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/09/2026-09-05T21-17-16-987Z-55968e17.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/09/2026-09-05T21-17-16-987Z-55968e17.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #autonomousagents #python #pygame #devtools #machinelearning #learning #tools #архитектурные #какие #токены"
+    },
+    {
+      "id": 3416,
+      "date": "2026-09-05T12:21:45.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/09/2026-09-05T12-21-44-4...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3416,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "ai",
+        "agents",
+        "deepseek",
+        "python",
+        "tech",
+        "opensource",
+        "автономных",
+        "виртуальных",
+        "разработчиков"
+      ],
+      "content": "📰 ИИ-студия автономных разработчиков: как я создал команду виртуальных агентов\n\nПоследние дни были посвящены созданию собственной студии автономных ИИ-агентов. Проект получил название AI-Team — это не просто стандартный чат-бот для копирования кода, а полноценная команда виртуальных разработчиков, работающая в отдельном десктопном приложении.\n\nВ этой статье мы подробно разберем внутреннюю архитектуру системы, экономику использования облачных LLM через OpenRouter, а также новые фичи, добавленные в студию прямо сегодня.\n\n👉 Читать полностью в Instant View ⚡️\n\n#AI #Agents #DeepSeek #Python #Tech #OpenSource\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/09/2026-09-05T12-21-44-452Z-b975abce.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/09/2026-09-05T12-21-44-452Z-b975abce.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #agents #deepseek #python #tech #opensource #автономных #виртуальных #разработчиков"
+    },
+    {
       "id": 3415,
       "date": "2026-09-04T22:10:24.000Z",
       "title": "🤖 Гибридный робот-манипулятор из Китая",

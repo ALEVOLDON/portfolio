@@ -1,6 +1,68 @@
 {
   "posts": [
     {
+      "id": 3425,
+      "date": "2026-09-06T23:09:44.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/09/2026-09-06T23-09-47-2...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3425,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "ai",
+        "music",
+        "techhistory",
+        "personalbrand",
+        "diy",
+        "futuretech",
+        "как",
+        "музыкальный",
+        "псевдоним"
+      ],
+      "content": "📰 Опережая время: Как мой музыкальный псевдоним из 2012 года стал AI-компанией\n\nВ этой личной и немного сюрреалистичной заметке автор делится неожиданным открытием: его старый музыкальный псевдоним 14-летней давности внезапно материализовался в названии современной AI-компании. Читатель узнает, как переплетаются прошлое и будущее, музыка и технологии, а также почему не стоит спешить тратить деньги на дорогие домены.\n\n👉 Читать полностью в Instant View ⚡️\n\n#AI #Music #TechHistory #PersonalBrand #DIY #FutureTech\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/09/2026-09-06T23-09-47-275Z-59d6f91c.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/09/2026-09-06T23-09-47-275Z-59d6f91c.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #music #techhistory #personalbrand #diy #futuretech #как #музыкальный #псевдоним"
+    },
+    {
+      "id": 3424,
+      "date": "2026-09-06T13:26:29.000Z",
+      "title": "GPT-6 Astra устроила тотальный рикролл прямо в Ableton Live 🕺🤖",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3424,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "ai",
+        "ableton",
+        "рикролл"
+      ],
+      "content": "Тимы, выкатившие демо новой модели, показали уровень прома, достойный отдельного мема. Через агентский интерфейс Computer Use нейросеть залезла в Ableton Live 12 и начала сборку проекта с лицом сурового продюсера.\nНа мониторе — чистый киберпанк-вайб:\n12 дорожек, идеальная группировка по цветам;\nЖесткие секции: Ignition, Pressure, Chrome Fever, Second Strike, Engine Off;\nСочный саб-бас, перки, текстуры, MIDI и темп 123 BPM.\nА на 0:31 стартует плейбек, и вся эта «мрачная индустриальная архитектура» превращается в... легендарный «Never Gonna Give You Up» Рика Эстли.\nНейросети осваивают не только сложный софт и продакшен-пайплайны, но и главное искусство интернета — виртуозный рикролл в реальном времени.\n\n## Media\n\n- [video](https://alevoldon.com/media/telegram/2026/09/2026-09-06T13-26-35-861Z-924ec32d.mp4)\n\n## Tags\n\n#telegram-import #live-sync #ai #ableton #рикролл"
+    },
+    {
+      "id": 3423,
+      "date": "2026-09-06T07:41:10.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/09/2026-09-06T07-41-10-1...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3423,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "ai",
+        "telegram",
+        "serverless",
+        "aicoding",
+        "vibecoding",
+        "miniapps",
+        "aiagents",
+        "developers",
+        "ботов",
+        "для",
+        "разработки"
+      ],
+      "content": "📰 Telegram фактически превращает ботов в полноценные serverless-приложения\n\nTelegram представил новое решение для разработчиков — Serverless для ботов и Mini Apps. На первый взгляд это может показаться еще одним облачным сервисом, но на практике это мощный шаг к созданию автономных приложений прямо внутри мессенджера.\n\nВ этой статье мы разберем, что изменилось в архитектуре разработки, какие инструменты теперь доступны из коробки и почему эта новинка особенно интересна в эпоху AI-driven разработки.\n\n👉 Читать полностью в Instant View ⚡️\n\n#AI #Telegram #Serverless #AIcoding #VibeCoding #MiniApps #AIAgents #Developers\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/09/2026-09-06T07-41-10-179Z-6ff1014f.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/09/2026-09-06T07-41-10-179Z-6ff1014f.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #telegram #serverless #aicoding #vibecoding #miniapps #aiagents #developers #ботов #для #разработки"
+    },
+    {
       "id": 3422,
       "date": "2026-09-05T23:17:59.000Z",
       "title": "🚀 Генерация живых 3D-миров с помощью GPT-6 Astra и Three.js",

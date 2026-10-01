@@ -1,6 +1,142 @@
 {
   "posts": [
     {
+      "id": 3530,
+      "date": "2026-09-30T21:51:35.000Z",
+      "title": "🚀 Google DeepMind анонсировала Gemini 4 Argon",
+      "channel": "Telegram Channel",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3530,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "google",
+        "gemini",
+        "ai",
+        "machinelearning",
+        "cybersecurity",
+        "devtools",
+        "learning",
+        "security",
+        "tools",
+        "для",
+        "argon",
+        "задач"
+      ],
+      "content": "📌 TL;DR: Google представила Gemini 4 Argon — новую передовую frontier-модель, созданную для сложных рабочих процессов в сфере программирования, корпоративных знаний и кибербезопасности.\n\nGoogle DeepMind продолжает расширять границу возможностей искусственного интеллекта. Новая модель Gemini 4 Argon спроектирована специально для решения ресурсоемких и комплексных задач, с которыми сталкиваются современные разработчики и корпоративные системы.\n\nНа первом этапе модель доступна ограниченному кругу доверенных тестировщиков в рамках специальной программы Fairwind Program. Широкий релиз ожидается позже по мере завершения проверок на безопасность и стабильность.\n\n* 🔹 Фокус на разработку: улучшенная генерация и анализ кода\n* 🔹 Интеграция в корпоративные процессы: эффективная обработка больших объемов внутренних знаний\n* 🔹 Кибербезопасность: расширенные возможности для защиты инфраструктуры и анализа угроз\n💡 Почему это важно: Появление новых frontier-моделей задает стандарт для всей индустрии, смещая фокус с простых текстовых задач на глубокую автоматизацию сложной инженерной и аналитической работы.\n\n🔗 Источник\n\n#Google #Gemini #AI #MachineLearning #CyberSecurity #DevTools\n\n## Tags\n\n#telegram-import #live-sync #google #gemini #ai #machinelearning #cybersecurity #devtools #learning #security #tools #для #argon #задач"
+    },
+    {
+      "id": 3529,
+      "date": "2026-09-30T20:23:50.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/09/2026-09-30T20-23-49-1...",
+      "channel": "Telegram Channel",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3529,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "ai",
+        "multiagent",
+        "development",
+        "python",
+        "llm",
+        "devtools",
+        "tools"
+      ],
+      "content": "📰 Ловушка мультиагентности: почему 5 AI-агентов хуже одного разработчика\n\nВ 2024–2026 годах индустрия массово наступила на грабли автономных мультиагентных систем. Идея собрать «компанию из 5 AI: Архитектор, Дизайнер, Кодер, Тестировщик и Рецензент» шикарно выглядит на слайдах, но на практике в ней заложен фундаментальный дефект: умножение бюрократии и потеря заземления.\n\n👉 Читать полностью в Instant View ⚡️\n\n#AI #MultiAgent #Development #Python #LLM #DevTools\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/09/2026-09-30T20-23-49-103Z-7799e34b.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/09/2026-09-30T20-23-49-103Z-7799e34b.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #multiagent #development #python #llm #devtools #tools"
+    },
+    {
+      "id": 3528,
+      "date": "2026-09-30T19:12:37.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/09/2026-09-30T19-12-36-2...",
+      "channel": "Telegram Channel",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3528,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "ai",
+        "devlog",
+        "llm",
+        "automation",
+        "python",
+        "softwarearchitecture",
+        "день",
+        "как"
+      ],
+      "content": "📰 DevLog: Как мы 2 дня заставляли AI-агентов писать код без багов\n\nКажется, что в 2026 году запустить команду автономных агентов (Архитектор, Кодер, Тестер, Ревьюер, Sentry) — дело техники. Дал промпт, поставил лимит в $1, нажал Start и пошёл пить кофе.\n\nНа практике мы сегодня провели полноценный рабочий день (и второй день суммарно), раскапывая самые нетривиальные грабли мультиагентных систем на реальном проекте (`auto_code_reviewer` — сервис авторевью кода). Ниже — честный разбор скрытых архитектурных ловушек и того, как мы в итоге перестроили ядро студии.\n\n👉 Читать полностью в Instant View ⚡️\n\n#AI #DevLog #LLM #Automation #Python #SoftwareArchitecture\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/09/2026-09-30T19-12-36-284Z-2354dc01.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/09/2026-09-30T19-12-36-284Z-2354dc01.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #devlog #llm #automation #python #softwarearchitecture #день #как"
+    },
+    {
+      "id": 3527,
+      "date": "2026-09-30T09:34:11.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/09/2026-09-30T09-34-10-8...",
+      "channel": "Telegram Channel",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3527,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "ai",
+        "llm",
+        "hardware",
+        "deepseek",
+        "tech",
+        "machinelearning",
+        "backend",
+        "learning",
+        "генерации",
+        "как",
+        "локального"
+      ],
+      "content": "📰 Как получить скорость генерации 50–80 токенов/сек дома на своём ПК\n\nВ эпоху развития локального ИИ многие разработчики и энтузиасты задаются вопросом: как заставить языковые модели работать быстро прямо на домашнем ПК? В этой статье мы разберем главные технические ограничения локального железа, узнаем, почему скорость генерации зависит вовсе не от гигагерц процессора, и посчитаем, что выгоднее — покупать мощную видеокарту или использовать облачные API.\n\n👉 Читать полностью в Instant View ⚡️\n\n#AI #LLM #Hardware #DeepSeek #Tech #MachineLearning\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/09/2026-09-30T09-34-10-861Z-a0d01b49.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/09/2026-09-30T09-34-10-861Z-a0d01b49.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #llm #hardware #deepseek #tech #machinelearning #backend #learning #генерации #как #локального"
+    },
+    {
+      "id": 3526,
+      "date": "2026-09-30T06:53:57.000Z",
+      "title": "🚀 ИИ-ассистент для животноводства от Higgsfield AI",
+      "channel": "Telegram Channel",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3526,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "ai",
+        "agtech",
+        "gpt6",
+        "machinelearning",
+        "automation",
+        "opensource",
+        "learning",
+        "для",
+        "gpt-6",
+        "времени"
+      ],
+      "content": "📌 TL;DR: Экспериментальный ИИ-прототип на базе GPT-6.1 Sol превращает обычные видео с дронов в систему мониторинга стада в реальном времени.\n\nКоманда Higgsfield AI представила любопытный пример применения мультимодальных моделей для автоматизации сельского хозяйства. Разработанный прототип способен анализировать съемку с беспилотников, вести подсчет животных и отслеживать их перемещения без участия человека.\n\nСистема не просто считает поголовье, но и умеет мгновенно фиксировать внештатные ситуации. Если какая-то особь покидает границы безопасной зоны или отстает от стада, фермер получает автоматическое уведомление.\n\n* 🔹 Анализ видеопотока с дронов в реальном времени\n* 🔹 Автоматический подсчет и трекинг голов скота\n* 🔹 Система умных алертов при уходе животных из зоны контроля\n* 🔹 Интеграция с языковой моделью GPT-6.1 Sol для логики принятия решений\n💡 Почему это важно: Проект показывает, как передовые LLM и агентичие системы находят применение в традиционных отраслях, снижая операционные расходы и минимизируя человеческий фактор.\n\n🔗 Источник\n\n#AI #AgTech #GPT6 #MachineLearning #Automation #OpenSource\n\n## Tags\n\n#telegram-import #live-sync #ai #agtech #gpt6 #machinelearning #automation #opensource #learning #для #gpt-6 #времени"
+    },
+    {
+      "id": 3525,
+      "date": "2026-09-30T06:48:02.000Z",
+      "title": "🚀 Ollama добавляет поддержку локальных моделей принятия решений",
+      "channel": "Telegram Channel",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3525,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "ollama",
+        "localai",
+        "devtools",
+        "automation",
+        "opensource",
+        "backend",
+        "tools",
+        "решений",
+        "без",
+        "для"
+      ],
+      "content": "📌 TL;DR: Теперь в Ollama можно запускать локальные модели для быстрых и автономных решений прямо на своем устройстве.\n\nКоманда Ollama объявила о поддержке моделей принятия решений, работающих полностью локально. Такие инструменты, как Nimble, теперь доступны для запуска одной командой прямо в терминале.\n\nЭто открывает новые возможности для автоматизации рутинных задач без отправки конфиденциальных данных на сторонние серверы. Модели такого типа эффективно справляются с классификацией тикетов, маршрутизацией запросов между разными нейросетями и первичной модерацией контента в режиме реального времени.\n\n• 🔹 Локальный запуск моделей принятия решений без облачных API\n• 🔹 Интеграция через новый локальный API /v1/systemone\n• 🔹 Быстрая обработка задач вроде сортировки тикетов и модерации\n• 🔹 Простая установка привычной командой ollama pull nimble\n\n💡 Почему это важно: Локальная автоматизация процессов маршрутизации и триажа данных позволяет разработчикам создавать полностью автономные и безопасные конвейеры без зависимости от внешних провайдеров.\n\n🔗 Источник\n\n#Ollama #LocalAI #DevTools #Automation #OpenSource\n\n## Tags\n\n#telegram-import #live-sync #ollama #localai #devtools #automation #opensource #backend #tools #решений #без #для"
+    },
+    {
       "id": 3524,
       "date": "2026-09-29T22:28:17.000Z",
       "title": "![Post cover](https://alevoldon.com/media/telegram/2026/09/2026-09-29T22-28-17-6...",

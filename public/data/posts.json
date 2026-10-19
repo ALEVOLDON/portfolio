@@ -1,6 +1,51 @@
 {
   "posts": [
     {
+      "id": 3611,
+      "date": "2026-10-18T19:16:57.000Z",
+      "title": "🛠️ You can just build things",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3611,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "hardware",
+        "opensource",
+        "devtools",
+        "ai",
+        "maker",
+        "innovation",
+        "design",
+        "tools",
+        "готовых",
+        "для",
+        "идеи"
+      ],
+      "content": "📌 TL;DR: OpenAI запускает платформу для энтузиастов, объединяющую программные идеи с аппаратным обеспечением.\n\nСовременные технологии стирают грань между софтом и «железом». Новая инициатива призвана помочь разработчикам и инженерам воплощать смелые аппаратные проекты в жизнь с помощью современных инструментов искусственного интеллекта.\n\nПлатформа ориентирована на создание открытого сообщества, где каждый может исследовать чужие идеи, обучаться на готовых кейсах и делиться собственными разработками в области взаимодействия софта с физическим миром.\n\n• 🔹 Исследование готовых аппаратных проектов\n• 🔹 Обучение на практике с помощью продвинутых инструментов\n• 🔹 Публикация и шеринг собственных разработок\n• 🔹 Интеграция с экосистемой ChatGPT для авторизации и участия\n\n💡 Почему это важно: Проект снижает порог входа в физическое прототипирование, позволяя разработчикам легко переносить концепты из виртуального пространства в реальный мир.\n\n🔗 Источник\n\n#Hardware #OpenSource #DevTools #AI #Maker #Innovation\n\n## Tags\n\n#telegram-import #live-sync #hardware #opensource #devtools #ai #maker #innovation #design #tools #готовых #для #идеи"
+    },
+    {
+      "id": 3610,
+      "date": "2026-10-18T17:03:43.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/10/2026-10-18T17-03-52-9...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3610,
+      "tags": [
+        "telegram-import",
+        "live-sync",
+        "python",
+        "ai",
+        "vibecoding",
+        "gamedev",
+        "ии",
+        "development",
+        "space",
+        "trader"
+      ],
+      "content": "📰 SPACE TRADER: от промпта до игровой экономики\n\nА что, если поручить искусственному интеллекту разработать полноценную, пусть и небольшую, космическую игру на Python? В этой статье мы рассмотрим эксперимент по созданию консольного проекта **Space Trader**, объединяющего торговлю, исследование планет и генерацию случайных событий.\n\n👉 Читать полностью в Instant View ⚡️\n\n#Python #AI #VibeCoding #GameDev #ИИ #Development\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/10/2026-10-18T17-03-52-965Z-7601af41.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/10/2026-10-18T17-03-52-965Z-7601af41.jpg\n\n## Tags\n\n#telegram-import #live-sync #python #ai #vibecoding #gamedev #ии #development #space #trader"
+    },
+    {
       "id": 3609,
       "date": "2026-10-17T04:12:09.000Z",
       "title": "🚀 Gemini 4 Argon доступна в Google AI Studio",

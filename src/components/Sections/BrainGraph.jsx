@@ -125,14 +125,24 @@ const extractTitleFromContent = (content) => {
   return '';
 };
 
-const resolvePostTitle = (post, fallback = 'Untitled post') => {
-  const raw = String(post?.title || '').trim();
+const resolvePostTitle = (post, fallback = 'Untitled post', language = 'en') => {
+  const isEn = language === 'en';
+  const localizedTitle = isEn && post?.title_en ? post.title_en : post?.title;
+  const raw = String(localizedTitle || '').trim();
   if (!isBrokenPostTitle(raw)) return stripInlineMarkdown(raw);
 
-  const fromContent = extractTitleFromContent(post?.content);
+  const localizedContent = isEn && post?.content_en ? post.content_en : post?.content;
+  const fromContent = extractTitleFromContent(localizedContent);
   if (fromContent) return fromContent;
 
   return fallback;
+};
+
+const resolvePostContent = (post, language = 'en') => {
+  if (language === 'en' && post?.content_en) {
+    return post.content_en;
+  }
+  return post?.content || '';
 };
 
 const stripSyncMetadata = (content) => {
@@ -283,11 +293,20 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
     // Filter by search query
     if (searchQuery.trim()) {
       const q = searchQuery.toLowerCase();
-      result = result.filter(p => 
-        resolvePostTitle(p).toLowerCase().includes(q) || 
-        p.content.toLowerCase().includes(q) ||
-        p.tags.some(t => t.toLowerCase().includes(q))
-      );
+      result = result.filter(p => {
+        const titleEn = p.title_en ? String(p.title_en).toLowerCase() : '';
+        const titleRu = p.title ? String(p.title).toLowerCase() : '';
+        const contentEn = p.content_en ? String(p.content_en).toLowerCase() : '';
+        const contentRu = p.content ? String(p.content).toLowerCase() : '';
+        const tags = Array.isArray(p.tags) ? p.tags : [];
+        return (
+          titleEn.includes(q) ||
+          titleRu.includes(q) ||
+          contentEn.includes(q) ||
+          contentRu.includes(q) ||
+          tags.some(t => t.toLowerCase().includes(q))
+        );
+      });
     }
 
     // Sort by date and slice to limit
@@ -306,7 +325,7 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
       const node = {
         id: `post-${post.id}`,
         type: 'post',
-        label: resolvePostTitle(post, t.untitledPost),
+        label: resolvePostTitle(post, t.untitledPost, language),
         size: 7,
         color: themeColors.primary,
         glowColor: themeColors.primaryGlow,
@@ -383,7 +402,7 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
     }
 
     return { nodes, links };
-  }, [filteredPosts, showTags, themeColors, t.untitledPost]);
+  }, [filteredPosts, showTags, themeColors, t.untitledPost, language]);
 
   // Keep track of current nodes state for canvas animation loop
   const nodesRef = useRef([]);
@@ -429,16 +448,17 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
   const parsedMarkdown = useMemo(() => {
     if (!selectedPost) return '';
     try {
-      const displayTitle = resolvePostTitle(selectedPost, t.untitledPost);
+      const displayTitle = resolvePostTitle(selectedPost, t.untitledPost, language);
+      const postContent = resolvePostContent(selectedPost, language);
       const displayContent = stripSyncMetadata(
-        stripHeadingMatchingTitle(selectedPost.content || '', displayTitle)
+        stripHeadingMatchingTitle(postContent, displayTitle)
       );
       const rawHtml = marked.parse(displayContent);
       return DOMPurify.sanitize(rawHtml);
     } catch {
-      return selectedPost.content || '';
+      return resolvePostContent(selectedPost, language);
     }
-  }, [selectedPost, t.untitledPost]);
+  }, [selectedPost, t.untitledPost, language]);
 
   // Main Render & Physics simulation loop (runs on mount only, using refs to avoid tearing down the canvas)
   useEffect(() => {
@@ -1271,7 +1291,7 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
 
                   {/* Title */}
                   <h3 className="text-lg font-black text-white leading-snug border-b border-white/5 pb-3">
-                    {resolvePostTitle(selectedPost, t.untitledPost)}
+                    {resolvePostTitle(selectedPost, t.untitledPost, language)}
                   </h3>
 
                   {/* Body Content */}
@@ -1357,7 +1377,7 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
                             <ChevronRight className="w-3.5 h-3.5 text-gray-600 group-hover:text-cyber-cyan transition-colors" />
                           </div>
                           <h4 className="text-xs md:text-sm font-bold text-white group-hover:text-cyber-cyan line-clamp-2 transition-colors">
-                            {resolvePostTitle(post, t.untitledPost)}
+                            {resolvePostTitle(post, t.untitledPost, language)}
                           </h4>
                         </div>
                         {post.tags && post.tags.length > 0 && (

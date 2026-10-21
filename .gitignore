@@ -48,3 +48,6 @@ terminals/
 # Telegram synced media
 public/media/telegram/
 
+
+__pycache__/
+*.pyc

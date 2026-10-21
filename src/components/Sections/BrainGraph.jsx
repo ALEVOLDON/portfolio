@@ -151,6 +151,94 @@ const stripSyncMetadata = (content) => {
   return (match === -1 ? body : body.slice(0, match)).trim();
 };
 
+const IGNORED_TAGS = new Set([
+  'telegram-import', 'live-sync', 'dump-channel', 'post', 'archive',
+  'ab_channel', 'fbclid', 'youtu', 'utm_source', 'utm_medium', 'utm_campaign',
+  'для', 'без', 'при', 'как', 'что', 'это', 'или', 'если', 'все', 'всё',
+  'вместо', 'где', 'теперь', 'под', 'через', 'более', 'какие', 'кого',
+  'между', 'базе', 'всего', 'его', 'оно', 'они', 'уже', 'еще', 'так',
+  'над', 'про', 'после', 'когда', 'чтобы', 'только', 'просто', 'может',
+  'могут', 'можно', 'нужно', 'очень', 'даже', 'сейчас', 'здесь', 'там',
+  'кто', 'чем', 'тем', 'этих', 'этого', 'этой', 'этом', 'этот', 'эта',
+  'эти', 'свой', 'свои', 'своих', 'наш', 'ваш', 'мой', 'твой', 'сам',
+  'быть', 'был', 'была', 'были', 'будет', 'будут', 'есть', 'нет',
+  'новый', 'новая', 'новые', 'новых', 'работы', 'работа', 'почему',
+  'важно', 'источник', 'постов', 'канал', 'видео', 'фото', 'запуск',
+  'полностью', 'решений', 'разработки', 'данных', 'задач', 'доступ',
+  'генерации', 'моделей', 'модели', 'модель', 'инструмент', 'обновление'
+]);
+
+const QUICK_FILTER_TAG_GROUPS = {
+  ai: new Set(['ai', 'llm', 'machinelearning', 'agents', 'voiceagents', 'imagegeneration', 'openai', 'gemini', 'claude', 'grok', 'qwen', 'deepseek', 'artificialintelligence']),
+  design: new Set(['design', 'ui', 'ux', 'figma', 'creativecoding', 'dribbble', 'behance']),
+  '3d': new Set(['3d', 'blender', 'webgl', 'threejs', 'cad', '3dprinting', 'gamedev']),
+  modularsynth: new Set(['modularsynth', 'eurorack', 'vcvrack', 'synth', 'synthesizer', 'webaudio', 'audioai', 'midi', 'musictech', 'sounddesign', 'generativemusic', 'modulargenesis', 'modular-genesis', 'abletonlive', 'maxmsp', 'rnbo']),
+  dev: new Set(['dev', 'devtools', 'frontend', 'backend', 'code', 'opensource', 'github', 'cli', 'api', 'python', 'webdev', 'coding'])
+};
+
+const sanitizePostTags = (tags, language = 'en') => {
+  if (!Array.isArray(tags)) return [];
+  const isEn = language === 'en';
+  const result = [];
+  const seen = new Set();
+
+  for (const raw of tags) {
+    const tag = String(raw || '').trim().toLowerCase();
+    if (!tag || seen.has(tag)) continue;
+    if (IGNORED_TAGS.has(tag)) continue;
+    if (isEn && /[\u0400-\u04FF]/.test(tag)) continue;
+    seen.add(tag);
+    result.push(tag);
+  }
+  return result;
+};
+
+const postMatchesSelectedTag = (post, selectedTag) => {
+  if (!selectedTag) return true;
+  const rawTags = Array.isArray(post?.tags) ? post.tags.map(t => String(t).toLowerCase()) : [];
+  const group = QUICK_FILTER_TAG_GROUPS[selectedTag];
+  if (group) {
+    return rawTags.some(t => group.has(t));
+  }
+  return rawTags.includes(selectedTag.toLowerCase());
+};
+
+const normalizeMediaUrl = (url) => {
+  const clean = String(url || '').trim();
+  if (!clean || clean.endsWith('...')) return '';
+  return clean.replace(/^https?:\/\/(www\.)?alevoldon\.com\/media\//i, '/media/');
+};
+
+const extractPostMedia = (post) => {
+  const content = String(post?.content || '');
+  const mediaMatch = content.match(/##\s+Media\s+([\s\S]*?)(?=\n##\s+|\s*$)/i);
+  if (mediaMatch) {
+    const block = mediaMatch[1];
+    const itemMatch = block.match(/[-*]\s+\[(photo|video|image)\]\((https?:\/\/[^)\s]+|\/media\/[^)\s]+)\)/i);
+    if (itemMatch) {
+      const type = itemMatch[1].toLowerCase() === 'video' ? 'video' : 'image';
+      const url = normalizeMediaUrl(itemMatch[2]);
+      if (url) return { type, url };
+    }
+  }
+
+  const inlineImg = content.match(/!\[[^\]]*\]\((https?:\/\/[^)\s]+|\/media\/[^)\s]+)\)/i);
+  if (inlineImg) {
+    const url = normalizeMediaUrl(inlineImg[1]);
+    if (url && !url.endsWith('...')) {
+      const isVideo = /\.(mp4|webm|mov)$/i.test(url);
+      return { type: isVideo ? 'video' : 'image', url };
+    }
+  }
+  return null;
+};
+
+const resolveTelegramPostUrl = (post) => {
+  const msgId = post?.telegram_message_id || post?.id;
+  if (!msgId) return 'https://t.me/dump_dump';
+  return `https://t.me/dump_dump/${msgId}`;
+};
+
 const seededRandom = (value) => {
   const text = String(value);
   let hash = 2166136261;
@@ -287,7 +375,7 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
 
     // Filter by tag if selected
     if (selectedTag) {
-      result = result.filter(p => p.tags.includes(selectedTag));
+      result = result.filter(p => postMatchesSelectedTag(p, selectedTag));
     }
 
     // Filter by search query
@@ -322,6 +410,7 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
 
     // 1. Create Post Nodes
     filteredPosts.forEach(post => {
+      const cleanTags = sanitizePostTags(post.tags, language);
       const node = {
         id: `post-${post.id}`,
         type: 'post',
@@ -330,6 +419,7 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
         color: themeColors.primary,
         glowColor: themeColors.primaryGlow,
         data: post,
+        cleanTags,
         x: seededRandom(`${post.id}:x`) * 500 - 250,
         y: seededRandom(`${post.id}:y`) * 500 - 250,
         vx: 0,
@@ -338,8 +428,8 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
       nodes.push(node);
       nodeMap.set(node.id, node);
 
-      if (showTags && post.tags) {
-        post.tags.forEach(tag => {
+      if (showTags) {
+        cleanTags.forEach(tag => {
           tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1);
         });
       }
@@ -372,7 +462,8 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
 
         // Connect posts to this tag with wider distance
         filteredPosts.forEach(post => {
-          if (post.tags.includes(tag)) {
+          const cleanTags = sanitizePostTags(post.tags, language);
+          if (cleanTags.includes(tag)) {
             links.push({
               source: `post-${post.id}`,
               target: `tag-${tag}`,
@@ -387,9 +478,9 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
     if (!showTags) {
       for (let i = 0; i < nodes.length; i++) {
         for (let j = i + 1; j < nodes.length; j++) {
-          const p1 = nodes[i].data;
-          const p2 = nodes[j].data;
-          const sharedTags = p1.tags.filter(t => p2.tags.includes(t));
+          const p1Tags = nodes[i].cleanTags || [];
+          const p2Tags = nodes[j].cleanTags || [];
+          const sharedTags = p1Tags.filter(t => p2Tags.includes(t));
           if (sharedTags.length >= 2) {
             links.push({
               source: nodes[i].id,
@@ -443,6 +534,19 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
   const dragStartRef = useRef({ x: 0, y: 0 });
   const isPanningRef = useRef(false);
   const panStartRef = useRef({ x: 0, y: 0 });
+  const [failedMediaUrl, setFailedMediaUrl] = useState(null);
+
+  const selectedPostMedia = useMemo(() => {
+    if (!selectedPost) return null;
+    const media = extractPostMedia(selectedPost);
+    if (!media || media.url === failedMediaUrl) return null;
+    return media;
+  }, [selectedPost, failedMediaUrl]);
+
+  const selectedPostCleanTags = useMemo(() => {
+    if (!selectedPost) return [];
+    return sanitizePostTags(selectedPost.tags, language);
+  }, [selectedPost, language]);
 
   // Markdown rendering
   const parsedMarkdown = useMemo(() => {
@@ -452,7 +556,7 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
       const postContent = resolvePostContent(selectedPost, language);
       const displayContent = stripSyncMetadata(
         stripHeadingMatchingTitle(postContent, displayTitle)
-      );
+      ).replace(/^!\[[^\]]*\]\([^)]+\)\s*/i, '');
       const rawHtml = marked.parse(displayContent);
       return DOMPurify.sanitize(rawHtml);
     } catch {
@@ -1281,13 +1385,37 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
 
                     <div className="bg-white/5 px-2.5 py-2 rounded-lg border border-white/5 flex flex-col">
                       <span className="text-[9px] uppercase text-gray-500 font-semibold mb-0.5 flex items-center gap-1">
-                        <MessageSquare className="w-3.5 h-3.5" /> Source
+                        <MessageSquare className="w-3.5 h-3.5" /> {t.source || 'Source'}
                       </span>
                       <span className="text-[11px] text-white truncate">
                         {selectedPost.channel}
                       </span>
                     </div>
                   </div>
+
+                  {/* Media Cover / Video Preview */}
+                  {selectedPostMedia && (
+                    <div className="relative rounded-xl overflow-hidden border border-white/10 bg-cyber-black/60 shadow-[0_0_20px_rgba(var(--primary-color-rgb),0.12)] group">
+                      {selectedPostMedia.type === 'video' ? (
+                        <video
+                          src={selectedPostMedia.url}
+                          controls
+                          playsInline
+                          preload="metadata"
+                          onError={() => setFailedMediaUrl(selectedPostMedia.url)}
+                          className="w-full max-h-56 object-cover bg-black"
+                        />
+                      ) : (
+                        <img
+                          src={selectedPostMedia.url}
+                          alt={resolvePostTitle(selectedPost, t.untitledPost, language)}
+                          loading="lazy"
+                          onError={() => setFailedMediaUrl(selectedPostMedia.url)}
+                          className="w-full max-h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                      )}
+                    </div>
+                  )}
 
                   {/* Title */}
                   <h3 className="text-lg font-black text-white leading-snug border-b border-white/5 pb-3">
@@ -1301,11 +1429,11 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
                   />
 
                   {/* Tags */}
-                  {selectedPost.tags && selectedPost.tags.length > 0 && (
+                  {selectedPostCleanTags.length > 0 && (
                     <div className="pt-3 border-t border-white/5">
                       <div className="text-[9px] uppercase text-gray-500 font-semibold mb-1.5">{t.tagsHeading}</div>
                       <div className="flex flex-wrap gap-1">
-                        {selectedPost.tags.map(tag => (
+                        {selectedPostCleanTags.map(tag => (
                           <button 
                             key={tag}
                             onClick={() => {
@@ -1326,12 +1454,12 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
                 {/* Footer with Telegram Link */}
                 <div className="p-4 border-t border-white/10 bg-cyber-dark/80 flex items-center">
                   <a 
-                    href={`https://t.me/c/${String(selectedPost.telegram_chat_id).replace('-100', '')}/${selectedPost.telegram_message_id}`}
+                    href={resolveTelegramPostUrl(selectedPost)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full flex items-center justify-center gap-1.5 py-2.5 bg-cyber-cyan hover:bg-cyber-cyan/80 text-black text-xs font-black tracking-widest uppercase rounded-full transition-all shadow-[0_0_10px_rgba(var(--primary-color-rgb),0.2)] hover:shadow-[0_0_15px_rgba(var(--primary-color-rgb),0.4)]"
                   >
-                    <span>Open in Telegram</span>
+                    <span>{t.openInTelegram || 'Open in Telegram'}</span>
                     <ExternalLink className="w-3.5 h-3.5" />
                   </a>
                 </div>
@@ -1359,41 +1487,44 @@ const BrainGraph = ({ theme = 'cyber', language = 'en' }) => {
                 {/* Post Cards List */}
                 <div className="flex-grow overflow-y-auto p-4 space-y-3 scrollbar">
                   {filteredPosts.length > 0 ? (
-                    filteredPosts.map(post => (
-                      <div 
-                        key={post.id}
-                        onClick={() => setSelectedPost(post)}
-                        className="group p-3.5 rounded-xl border border-white/5 bg-white/5 hover:bg-white/10 hover:border-cyber-cyan/30 cursor-pointer transition-all duration-300 flex flex-col justify-between"
-                      >
-                        <div>
-                          <div className="flex justify-between items-start gap-2 mb-1.5">
-                            <span className="text-[9px] text-gray-500">
-                              {new Date(post.date).toLocaleDateString(dateLocale, {
-                                month: 'short',
-                                day: 'numeric',
-                                year: 'numeric'
-                              })}
-                            </span>
-                            <ChevronRight className="w-3.5 h-3.5 text-gray-600 group-hover:text-cyber-cyan transition-colors" />
-                          </div>
-                          <h4 className="text-xs md:text-sm font-bold text-white group-hover:text-cyber-cyan line-clamp-2 transition-colors">
-                            {resolvePostTitle(post, t.untitledPost, language)}
-                          </h4>
-                        </div>
-                        {post.tags && post.tags.length > 0 && (
-                          <div className="flex flex-wrap gap-1 mt-3.5">
-                            {post.tags.slice(0, 3).map(tag => (
-                              <span key={tag} className="text-[8px] font-medium text-cyber-purple/80 bg-cyber-purple/5 border border-cyber-purple/10 px-1 py-0.5 rounded">
-                                #{tag}
+                    filteredPosts.map(post => {
+                      const cardTags = sanitizePostTags(post.tags, language);
+                      return (
+                        <div 
+                          key={post.id}
+                          onClick={() => setSelectedPost(post)}
+                          className="group p-3.5 rounded-xl border border-white/5 bg-white/5 hover:bg-white/10 hover:border-cyber-cyan/30 cursor-pointer transition-all duration-300 flex flex-col justify-between"
+                        >
+                          <div>
+                            <div className="flex justify-between items-start gap-2 mb-1.5">
+                              <span className="text-[9px] text-gray-500">
+                                {new Date(post.date).toLocaleDateString(dateLocale, {
+                                  month: 'short',
+                                  day: 'numeric',
+                                  year: 'numeric'
+                                })}
                               </span>
-                            ))}
-                            {post.tags.length > 3 && (
-                              <span className="text-[8px] text-gray-500 font-semibold mt-0.5">+{post.tags.length - 3}</span>
-                            )}
+                              <ChevronRight className="w-3.5 h-3.5 text-gray-600 group-hover:text-cyber-cyan transition-colors" />
+                            </div>
+                            <h4 className="text-xs md:text-sm font-bold text-white group-hover:text-cyber-cyan line-clamp-2 transition-colors">
+                              {resolvePostTitle(post, t.untitledPost, language)}
+                            </h4>
                           </div>
-                        )}
-                      </div>
-                    ))
+                          {cardTags.length > 0 && (
+                            <div className="flex flex-wrap gap-1 mt-3.5">
+                              {cardTags.slice(0, 3).map(tag => (
+                                <span key={tag} className="text-[8px] font-medium text-cyber-purple/80 bg-cyber-purple/5 border border-cyber-purple/10 px-1 py-0.5 rounded">
+                                  #{tag}
+                                </span>
+                              ))}
+                              {cardTags.length > 3 && (
+                                <span className="text-[8px] text-gray-500 font-semibold mt-0.5">+{cardTags.length - 3}</span>
+                              )}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })
                   ) : (
                     <div className="flex flex-col items-center justify-center h-full text-gray-500 space-y-2 py-10">
                       <Search className="w-6 h-6 opacity-30 text-cyber-purple" />

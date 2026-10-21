@@ -26,6 +26,7 @@ const StaticBackground = () => (
 
 const BG_MODE_KEY = 'bgMode';
 const AVATAR_MODE_KEY = 'heroAvatarMode';
+const LANGUAGE_KEY = 'portfolioLanguage';
 
 const themeOrder = ['solar', 'emerald', 'cyber', 'void'];
 
@@ -39,7 +40,14 @@ const getChronoTheme = (hour) => {
 const App = () => {
   const { profile, repos, stats, readme, loading } = usePortfolioData();
   const [activeSection, setActiveSection] = useState('home');
-  const [language, setLanguage] = useState('en');
+  const [language, setLanguage] = useState(() => {
+    try {
+      const saved = localStorage.getItem(LANGUAGE_KEY);
+      return saved === 'ru' || saved === 'en' ? saved : 'en';
+    } catch {
+      return 'en';
+    }
+  });
   const [showBackground, setShowBackground] = useState(true);
   const [bgMode, setBgMode] = useState(() => {
     try {
@@ -189,9 +197,15 @@ const App = () => {
     };
   }, []);
 
-  // Sync theme changes with the audio service and document body class
+  // Sync language with document metadata and localStorage
   useEffect(() => {
-    const meta = translations[language].meta;
+    try {
+      localStorage.setItem(LANGUAGE_KEY, language);
+    } catch {
+      /* ignore */
+    }
+    document.documentElement.lang = language;
+    const meta = translations[language]?.meta;
     if (meta) {
       document.title = meta.title;
       const description = document.querySelector('meta[name="description"]');

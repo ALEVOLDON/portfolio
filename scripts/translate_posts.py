@@ -14,6 +14,15 @@ if sys.stdout.encoding.lower() != 'utf-8':
 
 from deep_translator import MyMemoryTranslator
 
+def has_cyrillic(value):
+    return bool(re.search(r'[\u0400-\u04FF]', str(value or '')))
+
+def get_main_body(content):
+    meta_match = re.search(r'\n##\s+(Media|Links|Tags)\b', str(content or ''), re.IGNORECASE)
+    if meta_match:
+        return content[:meta_match.start()]
+    return str(content or '')
+
 def strip_inline_markdown(value):
     val = str(value or '')
     val = re.sub(r'!\[([^\]]*)\]\([^)]+\)', r'\1', val)
@@ -26,6 +35,8 @@ def strip_inline_markdown(value):
 def is_broken_post_title(title):
     val = str(title or '').strip()
     if not val:
+        return True
+    if has_cyrillic(val):
         return True
     if val.startswith('!['):
         return True
@@ -110,13 +121,17 @@ def translate_piece(translator, text, retries=3):
         try:
             res = translator.translate(text)
             if res:
+                if has_cyrillic(text) and has_cyrillic(res):
+                    time.sleep(1.0)
+                    continue
                 return res
         except Exception as e:
             wait_time = 2.0 * (attempt + 1)
             time.sleep(wait_time)
             if attempt == retries - 1:
-                return text
-    return text
+                print(f" [API error: {e}]", end="", flush=True)
+                return ""
+    return ""
 
 def translate_content(translator, content):
     if not content:
@@ -161,9 +176,12 @@ def translate_content(translator, content):
 
     for grp in groups:
         trans = translate_piece(translator, grp)
-        translated_paragraphs.append(trans)
+        if trans:
+            translated_paragraphs.append(trans)
         time.sleep(0.3)
 
+    if not translated_paragraphs:
+        return ""
     return '\n\n'.join(translated_paragraphs) + meta_body
 
 def main():
@@ -198,9 +216,9 @@ def main():
         post = posts[idx]
         post_id = post.get("id", idx)
 
-        # Skip if already translated properly (and not broken title)
-        has_title_en = bool(post.get("title_en"))
-        has_content_en = bool(post.get("content_en"))
+        # Skip if already translated properly (and not broken title or Russian text in body)
+        has_title_en = bool(post.get("title_en")) and not has_cyrillic(post.get("title_en"))
+        has_content_en = bool(post.get("content_en")) and not has_cyrillic(get_main_body(post.get("content_en")))
         is_bad_title = is_broken_post_title(post.get("title_en", ""))
 
         if not args.force and has_title_en and has_content_en and not is_bad_title:
@@ -222,10 +240,16 @@ def main():
         # 2. Translate Content
         content_en = translate_content(translator, raw_content)
 
-        post["title_en"] = title_en
-        post["content_en"] = content_en
-        translated_count += 1
-        print(f" '{title_en[:45]}'")
+        if title_en and not has_cyrillic(title_en):
+            post["title_en"] = title_en
+        if content_en and not has_cyrillic(get_main_body(content_en)):
+            post["content_en"] = content_en
+
+        if (title_en and not has_cyrillic(title_en)) or (content_en and not has_cyrillic(get_main_body(content_en))):
+            translated_count += 1
+            print(f" '{title_en[:45]}'")
+        else:
+            print(" [Translation skipped/failed - no Cyrillic overwritten]")
 
         # Save progress every 5 posts
         if translated_count % 5 == 0:

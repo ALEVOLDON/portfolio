@@ -1,6 +1,106 @@
 {
   "posts": [
     {
+      "id": 3630,
+      "date": "2026-10-22T16:44:39.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/10/2026-10-22T16-44-40-8...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3630,
+      "tags": [
+        "claudecode",
+        "ai",
+        "devtools",
+        "terminal",
+        "programming",
+        "tools",
+        "claude",
+        "code"
+      ],
+      "content": "🚀 Claude Code Mods Explained\n\n📌 TL;DR: Разбор настройки и кастомизации Claude Code для адаптации под индивидуальные рабочие процессы разработчика.\n\nИнструменты искусственного интеллекта для командной строки становятся всё более гибкими. Новый ролик от Traversy Media подробно объясняет, как настраивать и модифицировать Claude Code, чтобы выжать максимум из AI-ассистента прямо в терминале.\n\nКастомизация среды позволяет точнее управлять контекстом, автоматизировать рутинные операции и ускорить написание кода без лишних переключений между окнами.\n\n• 🔹 Настройка конфигурации под проекты\n• 🔹 Интеграция в существующие CLI-пайплайны\n• 🔹 Управление контекстом и запросами\n\n💡 Почему это важно: Адаптация AI-инструментов под личный или командный стек превращает базового ассистента в мощного специализированного напарника.\n\n🔗 Источник\n\n#ClaudeCode #AI #DevTools #Terminal #Programming\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/10/2026-10-22T16-44-40-878Z-9163f7c7.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/10/2026-10-22T16-44-40-878Z-9163f7c7.jpg\n\n## Tags\n\n#telegram-import #live-sync #claudecode #ai #devtools #terminal #programming #tools #claude #code #под",
+      "title_en": "🚀 Claude Code Mods Explained",
+      "content_en": "🚀 Claude Code Mods Explained\n\n📌 TL;DR: Analyze the customization and customization of Claude Code to adapt to the developer's individual workflows.\n\nAI tools for the command line are becoming more flexible. A new video from Traversy Media explains in detail how to configure and modify Claude Code to make the most of the AI assistant right in the terminal.\n\nCustomization of the environment allows you to more accurately manage the context, automate routine operations and speed up writing code without unnecessary switching between windows.\n\n• 🔹 Configuration for projects\n• 🔹 Integration into existing CLI pipelines\n• 🔹 Manage context and queries\n\n💡 Why it matters: Adapting AI tools to a personal or command stack turns a basic assistant into a powerful specialized partner.\n\n🔗 Source\n\n#ClaudeCode #AI #DevTools #Terminal #Programming\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/10/2026-10-22T16-44-40-878Z-9163f7c7.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/10/2026-10-22T16-44-40-878Z-9163f7c7.jpg\n\n## Tags\n\n#telegram-import #live-sync #claudecode #ai #devtools #terminal #programming #tools #claude #code #под"
+    },
+    {
+      "id": 3629,
+      "date": "2026-10-22T15:40:10.000Z",
+      "title": "https://youtu.be/uizaxuzgEAk?si=wUXUttSs2MTOUxip",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3629,
+      "tags": [
+        "design",
+        "youtube",
+        "video"
+      ],
+      "content": "## Links\n\n- https://youtu.be/uizaxuzgEAk?si=wUXUttSs2MTOUxip\n\n## Tags\n\n#telegram-import #live-sync #design #youtube #video",
+      "title_en": "Untitled post",
+      "content_en": "## Links\n\n- https://youtu.be/uizaxuzgEAk?si=wUXUttSs2MTOUxip\n## Tags\n\n#telegram-import #live-sync #design #youtube #video"
+    },
+    {
+      "id": 3628,
+      "date": "2026-10-22T14:08:49.000Z",
+      "title": "💻 Базовые навыки командной строки",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3628,
+      "tags": [
+        "cli",
+        "development",
+        "beginners",
+        "opensource",
+        "education",
+        "ai",
+        "video"
+      ],
+      "content": "📌 TL;DR: Полноценный курс для новичков по основам работы с терминалом от freeCodeCamp.\n\nКомандная строка — это базовый инструмент любого разработчика и специалиста по автоматизации. Без него сложно представить настройку окружения или запуск локальных LLM.\n\nВ новом курсе на YouTube-канале freeCodeCamp разбираются ключевые концепции CLI. Материал ориентирован на тех, кто только начинает свой путь в IT и хочет уверенно чувствовать себя в терминале.\n\n• 🔹 Навигация по файловой системе\n• 🔹 Управление файлами и папками\n• 🔹 Базовые системные команды\n\n💡 Почему это важно: Понимание терминала критически важно для работы с современными инструментами разработки и open-source проектами.\n\n🔗 Источник\n\n#CLI #Development #Beginners #OpenSource #Education\n\n## Tags\n\n#telegram-import #live-sync #cli #development #beginners #opensource #education #ai #video #базовые #важно #для",
+      "title_en": "📌 TL;DR: Complete course for beginners on the basics of working with the terminal from freeCodeCamp.",
+      "content_en": "📌 TL;DR: Complete course for beginners on the basics of working with the terminal from freeCodeCamp.\n\nThe command line is the basic tool of any developer and automation specialist. Without it, it is difficult to imagine setting up an environment or launching local LLMs.\n\nThe new course on the freeCodeCamp YouTube channel explores key CLI concepts. The material is aimed at those who are just starting their way in IT and want to feel confident in the terminal.\n\n• 🔹 Navigating the file system\n• 🔹 Manage files and folders\n• 🔹 Basic system commands\n\n💡 Why it's important: Understanding the terminal is critical to working with modern development tools and open-source projects.\n\n🔗 Source\n\n#CLI #Development #Beginners #OpenSource #Education\n## Tags\n\n#telegram-import #live-sync #cli #development #beginners #opensource #education #ai #video #базовые #важно #для"
+    },
+    {
+      "id": 3627,
+      "date": "2026-10-22T13:47:48.000Z",
+      "title": "🤖 Какую модель выбрать для ИИ-агентов",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3627,
+      "tags": [
+        "ai",
+        "llm",
+        "agents",
+        "googlecloud",
+        "devtools",
+        "tech",
+        "tools",
+        "cloud"
+      ],
+      "content": "📌 TL;DR: Google Cloud Tech выпустили подробный разбор критериев выбора языковой модели под конкретные задачи агентной разработки.\n\nВ современной разработке выбор правильной LLM определяет успех всей архитектуры ИИ-агента. Разные модели демонстрируют кардинально отличающиеся результаты в зависимости от требований к скорости, стоимости и уровню логического рассуждения.\n\nВ новом видео от Google Cloud детально разбираются ключевые паттерны проектирования агентов и критерии подбора оптимального движка. Эксперты объясняют, когда критически важны тяжелые модели с глубоким контекстом, а где достаточно быстрых и легких решений для рутинных вызовов.\n\n• 🔹 Анализ производительности различных классов LLM\n• 🔹 Критерии баланса между стоимостью запросов и точностью\n• 🔹 Архитектурные паттерны для мультиагентных систем\n\n💡 Почему это важно: Понимание сильных и слабых сторон современных моделей позволяет проектировать отказоустойчивые ИИ-системы без переплат за избыточную вычислительную мощность.\n\n🔗 Источник\n\n#AI #LLM #Agents #GoogleCloud #DevTools #Tech\n\n## Tags\n\n#telegram-import #live-sync #ai #llm #agents #googlecloud #devtools #tech #tools #для #модели #cloud",
+      "title_en": "📌 TL;DR: Google Cloud Tech has released a detailed analysis of the criteria for selecting a language model for specific tasks of agent development.",
+      "content_en": "📌 TL;DR: Google Cloud Tech has released a detailed analysis of the criteria for selecting a language model for specific tasks of agent development.\n\nIn modern development, choosing the right LLM determines the success of the entire AI agent architecture. Different models show radically different results depending on the requirements for speed, cost and level of logical reasoning.\n\nThe new video from Google Cloud details the key design patterns of agents and the criteria for selecting the optimal engine. Experts explain when heavy models with deep context are critical, and where quick and easy solutions to routine challenges are sufficient.\n\n• Performance 🔹 analysis of different LLM classes\n• Balancing 🔹 criteria between query cost and accuracy\n• 🔹 Architectural patterns for multi-agent systems\n\n💡 Why it matters: Understanding the strengths and weaknesses of current models allows you to design fault-tolerant AI systems without overpaying for excess computing power.\n\n🔗 Source\n\n#AI #LLM #Agents #GoogleCloud #DevTools #Tech\n## Tags\n\n#telegram-import #live-sync #ai #llm #agents #googlecloud #devtools #tech #tools #для #модели #cloud"
+    },
+    {
+      "id": 3626,
+      "date": "2026-10-22T13:11:34.000Z",
+      "title": "🤖 Выбор правильной модели в эпоху ИИ: гайд от Google Cloud",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3626,
+      "tags": [
+        "ai",
+        "googlecloud",
+        "llm",
+        "machinelearning",
+        "devtools",
+        "learning",
+        "tools",
+        "cloud",
+        "google"
+      ],
+      "content": "📌 TL;DR: Эксперты Google Cloud Tech разбирают ключевые критерии выбора подходящей языковой модели под конкретные бизнес-задачи.\n\nСовременный рынок предлагает сотни различных AI-моделей — от компактных open-source решений до гигантских проприетарных систем. Разработчикам и архитекторам часто сложно определить, какая именно LLM оптимально подойдет под конкретный проект по соотношению цены, скорости и качества.\n\nВ новом выпуске The Agent Factory на канале Google Cloud Tech подробно рассматриваются практические подходы к оценке моделей. Авторы объясняют, когда действительно нужны тяжелые флагманские системы, а где эффективнее обойтись быстрыми и экономичными локальными аналогами.\n\n💡 Почему это важно: Правильный выбор модели на старте проекта позволяет сэкономить значительную часть бюджета на инференс и существенно снизить задержки в продакшене.\n\n🔗 Источник\n\n#AI #GoogleCloud #LLM #MachineLearning #DevTools\n\n## Tags\n\n#telegram-import #live-sync #ai #googlecloud #llm #machinelearning #devtools #learning #tools #cloud #google #модели",
+      "title_en": "📌 TL;DR: Google Cloud Tech experts analyze the key criteria for choosing a suitable language model for specific business tasks.",
+      "content_en": "📌 TL;DR: Google Cloud Tech experts analyze the key criteria for choosing a suitable language model for specific business tasks.\n\nThe modern market offers hundreds of different AI models — from compact open-source solutions to giant proprietary systems. It is often difficult for developers and architects to determine which LLM is best suited for a particular project in terms of price, speed and quality.\n\nThe new issue of The Agent Factory on the Google Cloud Tech channel details practical approaches to model evaluation. The authors explain when heavy flagship systems are really needed, and where it is more effective to do with fast and economical local analogues.\n\n💡 Why it's important: Choosing the right model at the start of the project can save a significant part of the budget for inference and significantly reduce delays in production.\n\n🔗 Source\n\n#AI #GoogleCloud #LLM #MachineLearning #DevTools\n## Tags\n\n#telegram-import #live-sync #ai #googlecloud #llm #machinelearning #devtools #learning #tools #cloud #google #модели"
+    },
+    {
       "id": 3625,
       "date": "2026-10-21T23:58:11.000Z",
       "title": "![Post cover](https://alevoldon.com/media/telegram/2026/10/2026-10-21T23-58-12-0...",
@@ -777,8 +877,8 @@
         "llama"
       ],
       "content": "📌 TL;DR: Open-source инструмент AirLLM позволяет запускать гигантские модели вроде Llama 3.1 405B на видеокартах всего с 8 ГБ VRAM без квантования.\n\nПроблема нехватки видеопамяти для локального запуска тяжелых нейросетей долгое время оставалась главным барьером для разработчиков и энтузиастов. Проект AirLLM радикально меняет подход к инференсу, доказывая, что мощный GPU больше не является обязательным условием для работы с передовым искусственным интеллектом.\n\nСекрет технологии заключается в поэлементном вычислении (Layer-wise Inference). Вместо того чтобы удерживать всю модель в памяти целиком, AirLLM загружает, обрабатывает и выгружает слои нейросети по очереди. Это позволяет эффективно использовать доступные ресурсы и открывает новые возможности для локального тестирования сложных архитектур.\n\n• 🔹 Поддержка флагманских моделей: Llama, Qwen и Mistral\n• 🔹 Работа с гигантами: модель на 70B запускается на 4 ГБ VRAM, а 405B — на 8 ГБ\n• 🔹 Отсутствие обязательного квантования по умолчанию\n• 🔹 Кроссплатформенность: Linux, Windows и macOS\n\n💡 Почему это важно: Разработчики и исследователи могут запускать локально тяжелые языковые модели для экспериментов и продакшена без необходимости инвестировать в дорогие серверные видеокарты.\n\n🔗 Источник\n\n#AI #OpenSource #LLM #DevTools #MachineLearning\n\n## Tags\n\n#telegram-import #live-sync #ai #opensource #llm #devtools #machinelearning #design #learning #tools #для #airllm #llama",
-      "title_en": "🚀 Running massive LLMs on weak hardware with AirLLM",
-      "content_en": "📌 TL;DR: Open-source tool AirLLM allows you to run giant models like Llama 3.1 405B on graphics cards with only 8 GB of VRAM without quantization.\n\nThe problem of lack of video memory for the local launch of heavy neural networks has long remained the main barrier for developers and enthusiasts. The AirLLM project radically changes the approach to inference, proving that a powerful GPU is no longer a prerequisite for working with advanced artificial intelligence.\n\nСекрет технологии заключается в поэлементном вычислении (Layer-wise Inference). Вместо того чтобы удерживать всю модель в памяти целиком, AirLLM загружает, обрабатывает и выгружает слои нейросети по очереди. Это позволяет эффективно использовать доступные ресурсы и открывает новые возможности для локального тестирования сложных архитектур.\n\n• 🔹 Поддержка флагманских моделей: Llama, Qwen и Mistral\n• 🔹 Работа с гигантами: модель на 70B запускается на 4 ГБ VRAM, а 405B — на 8 ГБ\n• 🔹 Отсутствие обязательного квантования по умолчанию\n• 🔹 Кроссплатформенность: Linux, Windows и macOS\n\n💡 Почему это важно: Разработчики и исследователи могут запускать локально тяжелые языковые модели для экспериментов и продакшена без необходимости инвестировать в дорогие серверные видеокарты.\n\n🔗 Источник\n\n#AI #OpenSource #LLM #DevTools #MachineLearning\n## Tags\n\n#telegram-import #live-sync #ai #opensource #llm #devtools #machinelearning #design #learning #tools #для #airllm #llama"
+      "title_en": "📌 TL;DR: Open-source tool AirLLM allows you to run giant models like Llama 3.1 405B on graphics cards with only 8 GB of VRAM without quantization.",
+      "content_en": "📌 TL;DR: Open-source tool AirLLM allows you to run giant models like Llama 3.1 405B on graphics cards with only 8 GB of VRAM without quantization.\n\nThe problem of lack of video memory for the local launch of heavy neural networks has long remained the main barrier for developers and enthusiasts. The AirLLM project radically changes the approach to inference, proving that a powerful GPU is no longer a prerequisite for working with advanced artificial intelligence.\n\nThe secret of the technology lies in element-by-element calculation (Layer-wise Inference). Instead of holding the entire model in memory, AirLLM loads, processes and unloads the layers of the neural network in turn. This allows efficient use of available resources and opens up new opportunities for local testing of complex architectures.\n\n• 🔹 Support for flagship models: Llama, Qwen and Mistral\n• 🔹 Work with giants: the 70B model runs on 4 GB VRAM, and the 405B runs on 8 GB\n• 🔹 No mandatory default quantization\n• 🔹 Cross-platform: Linux, Windows, and macOS\n\n💡 Why it matters: Developers and researchers can run locally heavy language models for experimentation and production without having to invest in expensive server-side graphics cards.\n\n🔗 Source\n\n#AI #OpenSource #LLM #DevTools #MachineLearning\n## Tags\n\n#telegram-import #live-sync #ai #opensource #llm #devtools #machinelearning #design #learning #tools #для #airllm #llama"
     },
     {
       "id": 3587,
@@ -5452,85 +5552,6 @@
         "qwen"
       ],
       "content": "📌 TL;DR: Появилась новая полностью свободная от цензуры языковая модель на базе архитектуры Qwen, созданная для глубокого тестирования и ред-тиминга.\n\nМодель Qwen3.8-27B-OBLITERATED представляет собой модифицированную версию популярной линейки Qwen, из которой были удалены стандартные ограничения и фильтры безопасности. Релиз ориентирован на исследователей безопасности и разработчиков, которым требуется инструмент для стресс-тестирования систем и генерации текста без искусственных барьеров.\n\nПроект быстро набирает популярность в сообществе и уже привлек внимание специалистов по кибербезопасности благодаря сохранению базового высокого интеллекта оригинальной архитектуры в сочетании с полной свободой генерации.\n\n• 🔹 Основана на технологиях серии Qwen\n• 🔹 Полное отсутствие встроенной цензуры\n• 🔹 Оптимизированный размер 27B для локального запуска\n• 🔹 Подходит для задач ред-тиминга и сложных исследований\n\n💡 Почему это важно: Инструменты подобного класса критически важны для специалистов по безопасности, которым необходимо проверять ИИ-системы на устойчивость к обходу защитных барьеров и изучать поведение моделей в экстремальных сценариях.\n\n🔗 Источник\n\n#AI #LLM #OpenSource #MachineLearning #DevTools\n\n## Tags\n\n#telegram-import #live-sync #ai #llm #opensource #machinelearning #devtools #learning #tools #для #qwen #безопасности"
-    },
-    {
-      "id": 3330,
-      "date": "2026-08-20T23:02:44.000Z",
-      "title": "🚀 Запуск Claude Academy",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3330,
-      "tags": [
-        "ai",
-        "claude",
-        "anthropic",
-        "education",
-        "machinelearning",
-        "llm",
-        "learning",
-        "academy"
-      ],
-      "content": "📌 TL;DR: Anthropic запустила бесплатную образовательную платформу с курсами и гайдами по эффективной работе с Claude для пользователей любого уровня.\n\nКомпания Anthropic представила Claude Academy — официальный ресурс для обучения работе со своим искусственным интеллектом. Платформа разработана так, чтобы быть полезной как новичкам, которые только знакомятся с LLM, так и опытным разработчикам и промпт-инженерам, использующим ассистента ежедневно.\n\nВсе учебные материалы, курсы и пошаговые руководства доступны абсолютно бесплатно для каждого. Платформа призвана помочь пользователям раскрыть весь потенциал моделей Claude и научиться применять их в реальных задачах.\n\n• 🔹 Бесплатные курсы и туториалы для разного уровня подготовки\n• 🔹 Практические сценарии использования ИИ в работе и разработке\n• 🔹 Официальные гайды от создателей модели\n\n💡 Почему это важно: Официальные структурированные материалы от создателей передовых моделей позволяют быстрее осваивать лучшие практики промптинга и автоматизации без необходимости искать разрозненную информацию.\n\n🔗 Источник\n\n#AI #Claude #Anthropic #Education #MachineLearning #LLM\n\n## Tags\n\n#telegram-import #live-sync #ai #claude #anthropic #education #machinelearning #llm #learning #для #работе #academy"
-    },
-    {
-      "id": 3329,
-      "date": "2026-08-20T23:02:40.000Z",
-      "title": "🚀 Расширения Antigravity IDE уже здесь",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3329,
-      "tags": [
-        "antigravity",
-        "ide",
-        "devtools",
-        "ai",
-        "coding",
-        "vscode",
-        "jetbrains",
-        "tools",
-        "studio",
-        "visual"
-      ],
-      "content": "📌 TL;DR: Долгожданные расширения Antigravity стали доступны для большинства популярных редакторов кода.\n\nКоманда Google Antigravity выпустила официальные расширения для разработчиков. Теперь инструмент глубокой интеграции ИИ и автоматизации доступен прямо в привычной рабочей среде без необходимости менять устоявшиеся привычки.\n\nНовинка поддерживает самые востребованные среди разработчиков среды: Visual Studio Code, классическую Visual Studio, современный редактор Zed, а также экосистему JetBrains. Это позволяет внедрить ИИ-ассистента в любые пайплайны разработки с минимальным трением.\n\n• 🔹 Поддержка VS Code и Visual Studio\n• 🔹 Интеграция с редактором Zed\n• 🔹 Полная совместимость с продуктами JetBrains\n\n💡 Почему это важно: Разработчики могут использовать возможности Antigravity не в отдельном окне браузера или изолированном приложении, а прямо внутри своего любимого редактора кода.\n\n🔗 Источник\n\n#Antigravity #IDE #DevTools #AI #Coding #VSCode #JetBrains\n\n## Tags\n\n#telegram-import #live-sync #antigravity #ide #devtools #ai #coding #vscode #jetbrains #tools #studio #visual #расширения"
-    },
-    {
-      "id": 3328,
-      "date": "2026-08-20T10:40:47.000Z",
-      "title": "Запиши это сообщение в обсидиан.",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3328,
-      "tags": [],
-      "content": "## Tags\n\n#telegram-import #live-sync #post #archive"
-    },
-    {
-      "id": 3327,
-      "date": "2026-08-20T09:30:59.000Z",
-      "title": "🚀 Подготовка к релизу Grok 5: масштабы инфраструктуры и данных",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3327,
-      "tags": [
-        "ai",
-        "grok",
-        "llm",
-        "spacex",
-        "openai",
-        "technews",
-        "machinelearning",
-        "learning"
-      ],
-      "content": "📌 TL;DR: Илон Маск готовит к выходу модель Grok 5 с 6–10 триллионами параметров, обученную на колоссальном кластере из 220 тысяч GPU.\n\nПроект находится в активной фазе обучения на базе кластера Colossus II. Энергопотребление системы уже достигло 1 гигаватта, и мощности продолжают наращиваться. Архитектурно новый релиз станет качественным скачком по сравнению с линейкой Grok 4.x, а не рядовым минорным обновлением.\n\nГлавной особенностью станет датасет: модель обучается на 25-летнем массиве инженерных данных компании SpaceX. Это позволит системе решать сложные задачи в области физического моделирования, аэрокосмического проектирования и инженерии, недоступные современным языковым моделям общего назначения.\n\n• 🔹 Масштаб кластера: около 220 000 топовых NVIDIA GPU в строю.\n• 🔹 Объем модели: целевой показатель от 6 до 10 триллионов параметров.\n• 🔹 Уникальные данные: полный архив инженерной документации SpaceX за 25 лет.\n• 🔹 Сроки: запуск ожидается до конца 2026 года.\n\n💡 Почему это важно: Слияние гигантских вычислительных мощностей с реальными инженерными датасетами открывает путь к созданию специализированных ИИ-систем, способных проектировать физические объекты на принципиально новом уровне.\n\n🔗 Источник\n\n#AI #Grok #LLM #SpaceX #OpenAI #TechNews #MachineLearning\n\n## Tags\n\n#telegram-import #live-sync #ai #grok #llm #spacex #openai #technews #machinelearning #learning #данных #кластера #модель"
-    },
-    {
-      "id": 3326,
-      "date": "2026-08-20T09:03:36.000Z",
-      "title": "Чек чек ...",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3326,
-      "tags": [],
-      "content": "## Tags\n\n#telegram-import #live-sync #чек"
     },
     {
       "id": 3290,

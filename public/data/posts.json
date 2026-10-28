@@ -1,6 +1,103 @@
 {
   "posts": [
     {
+      "id": 3649,
+      "date": "2026-10-27T13:52:27.000Z",
+      "title": "🎹 Ответ Behringer на FM-1?",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3649,
+      "tags": [
+        "synthesizers",
+        "behringer",
+        "musictech",
+        "hardware",
+        "fm-1"
+      ],
+      "content": "📌 TL;DR: Музыкальная индустрия обсуждает возможный ответ компании Behringer на революционный синтезатор FM-1.\n\nВ новом видео на канале PhilipsKnobs разбираются слухи и предположения о том, как известный производитель музыкального оборудования может отреагировать на последние технологические тренды в сфере синтеза.\n\n• 🔹 Анализ рынка аналоговых и FM-синтезаторов\n• 🔹 Разбор патентов и возможных анонсов Behringer\n• 🔹 Влияние новых устройств на индустрию\n\n💡 Почему это важно: Конкуренция среди производителей доступных музыкальных инструментов продолжает двигать рынок вперед, делая сложные технологии ближе к музыкантам.\n\n🔗 Источник\n\n#Synthesizers #Behringer #MusicTech #Hardware\n\n## Tags\n\n#telegram-import #live-sync #synthesizers #behringer #musictech #hardware #fm-1",
+      "title_en": "📌 TL;DR: The music industry is discussing Behringer's possible response to the revolutionary FM-1 synthesizer.",
+      "content_en": "📌 TL;DR: The music industry is discussing Behringer's possible response to the revolutionary FM-1 synthesizer.\n\nA new video on the PhilipsKnobs channel explores rumors and assumptions about how a well-known music equipment manufacturer may respond to the latest technological trends in the field of synthesis.\n\n• Analog and FM synthesizer market 🔹 analysis\n• 🔹 Analysis of Behringer patents and possible announcements\n• 🔹 The impact of new devices on the industry\n\n💡 Why it matters: Competition among manufacturers of affordable musical instruments continues to move the market forward, bringing sophisticated technology closer to musicians.\n\n🔗 Source\n\n#Synthesizers #Behringer #MusicTech #Hardware\n## Tags\n\n#telegram-import #live-sync #synthesizers #behringer #musictech #hardware #fm-1"
+    },
+    {
+      "id": 3648,
+      "date": "2026-10-27T13:45:50.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/10/2026-10-27T13-45-50-9...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3648,
+      "tags": [
+        "ai",
+        "opensource",
+        "devtools",
+        "automation",
+        "search",
+        "tools"
+      ],
+      "content": "🚀 Jev: Open-Source AI People Search\n\n📌 TL;DR: Доступный и полностью открытый инструмент для поиска людей на базе AI с оплатой за лид.\n\nJev предлагает альтернативу дорогостоящим подпискам, позволяя находить контакты всего за $0.0089 за лид. Проект ориентирован на разработчиков и команды продаж, которым нужен точный поиск без переплат.\n\n• 🔹 На 85% дешевле сервиса Clay\n• 🔹 Лидер по точности поиска в бенчмарках\n• 🔹 Интеграция с любыми агентами\n\n💡 Почему это важно: Инструмент дает возможность встроить мощный поиск людей прямо в собственные AI-пайплайны бесплатно.\n\n🔗 Источник\n\n#AI #OpenSource #DevTools #Automation #Search\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/10/2026-10-27T13-45-50-913Z-defef704.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/10/2026-10-27T13-45-50-913Z-defef704.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #opensource #devtools #automation #search #tools",
+      "title_en": "🚀 Jev: Open-Source AI People Search",
+      "content_en": "🚀 Jev: Open-Source AI People Search\n\n📌 TL;DR: Affordable and fully open source AI-pay-per-lead human search tool.\n\nJev offers an alternative to expensive subscriptions, allowing you to find contacts for as little as $0.0089 per lead. The project is aimed at developers and sales teams who need an accurate search without overpayments.\n\n• 🔹 85% cheaper than Clay\n• 🔹 Leader in search accuracy in benchmarks\n• 🔹 Integration with any agents\n\n💡 Why it matters: The tool allows you to build powerful people search right into your own AI pipelines for free.\n\n🔗 Source\n\n#AI #OpenSource #DevTools #Automation #Search\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/10/2026-10-27T13-45-50-913Z-defef704.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/10/2026-10-27T13-45-50-913Z-defef704.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #opensource #devtools #automation #search #tools"
+    },
+    {
+      "id": 3647,
+      "date": "2026-10-27T13:19:53.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/10/2026-10-27T13-19-54-8...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3647,
+      "tags": [
+        "ai",
+        "cursor",
+        "devtools",
+        "typescript",
+        "automation",
+        "frontend",
+        "tools",
+        "agent"
+      ],
+      "content": "🚀 Релиз Agent SDK от Cursor\n\n📌 TL;DR: Создавайте автономных ИИ-агентoв как код с промптами в Markdown и инструментами на TypeScript.\n\nКоманда Cursor выпустила Agent SDK, позволяющий описывать агентов с помощью кода, настраивать промпты через Markdown и подключать инструменты на TypeScript. Инструмент упрощает разработку сложных сценариев автоматизации и интеграцию ИИ в существующие рабочие процессы.\n\n• 🔹 Определение агентов в виде кода\n• 🔹 Встроенные инструменты для оценки изменений\n• 🔹 Запуск в облаке Cursor или на своей инфраструктуре\n\n💡 Почему это важно: Разработчики получили стандартизированный подход к созданию и тестированию надежных ИИ-агентов.\n\n🔗 Источник\n\n#AI #Cursor #DevTools #TypeScript #Automation\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/10/2026-10-27T13-19-54-835Z-de3f9abc.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/10/2026-10-27T13-19-54-835Z-de3f9abc.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #cursor #devtools #typescript #automation #frontend #tools #agent",
+      "title_en": "Agent SDK 🚀 release from Cursor",
+      "content_en": "Agent SDK 🚀 release from Cursor\n\n📌 TL;DR: Create standalone AI agents as code with Markdown prompts and TypeScript tools.\n\nThe Cursor team has released the Agent SDK, which allows you to describe agents using code, configure prompts through Markdown, and connect tools in TypeScript. The tool simplifies the development of complex automation scenarios and the integration of AI into existing workflows.\n\n• 🔹 Define agents as code\n• 🔹 Built-in tools to assess changes\n• 🔹 Run in the Cursor cloud or on your infrastructure\n\n💡 Why it matters: Developers got a standardized approach to building and testing reliable AI agents.\n\n🔗 Source\n\n#AI #Cursor #DevTools #TypeScript #Automation\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/10/2026-10-27T13-19-54-835Z-de3f9abc.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/10/2026-10-27T13-19-54-835Z-de3f9abc.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #cursor #devtools #typescript #automation #frontend #tools #agent"
+    },
+    {
+      "id": 3646,
+      "date": "2026-10-27T10:42:08.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/10/2026-10-27T10-42-07-2...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3646,
+      "tags": [
+        "opensource",
+        "hardware",
+        "devtools",
+        "technews",
+        "tools",
+        "music",
+        "tribe"
+      ],
+      "content": "🚀 Music Tribe Open Source\n\n📌 TL;DR: Инициатива открытого железа с поддержкой любых прошивок и софта для авторов.\n\nMusic Tribe запускает экосистему открытого аппаратного обеспечения, способного работать под управлением произвольного ПО и прошивок. Проект дает разработчикам и инженерам полную свободу кастомизации устройств под творческие и технические задачи.\n\n• 🔹 Поддержка любых сторонних прошивок\n• 🔹 Полная кастомизация аппаратных платформ\n• 🔹 Инструменты для создания кастомных решений\n\n💡 Почему это важно: Открытое железо стирает границы между кастомным софтом и физическими устройствами.\n\n🔗 Источник\n\n#OpenSource #Hardware #DevTools #TechNews\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/10/2026-10-27T10-42-07-224Z-b5c1b102.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/10/2026-10-27T10-42-07-224Z-b5c1b102.jpg\n\n## Tags\n\n#telegram-import #live-sync #opensource #hardware #devtools #technews #tools #music #tribe",
+      "title_en": "🚀 Music Tribe Open Source",
+      "content_en": "🚀 Music Tribe Open Source\n\n📌 TL;DR: Open Iron Initiative with support for any firmware and software for authors.\n\nMusic Tribe launches an ecosystem of open hardware capable of running arbitrary software and firmware. The project gives developers and engineers complete freedom to customize devices for creative and technical tasks.\n\n• 🔹 Support for any third-party firmware\n• 🔹 Full customization of hardware platforms\n• 🔹 Tools for creating custom solutions\n\n💡 Why it matters: Open hardware blurs the boundaries between custom software and physical devices.\n\n🔗 Source\n\n#OpenSource #Hardware #DevTools #TechNews\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/10/2026-10-27T10-42-07-224Z-b5c1b102.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/10/2026-10-27T10-42-07-224Z-b5c1b102.jpg\n\n## Tags\n\n#telegram-import #live-sync #opensource #hardware #devtools #technews #tools #music #tribe"
+    },
+    {
+      "id": 3645,
+      "date": "2026-10-27T06:13:34.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/10/2026-10-27T06-13-34-8...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3645,
+      "tags": [
+        "ai",
+        "opensource",
+        "devtools",
+        "automation",
+        "agents",
+        "tools"
+      ],
+      "content": "🚀 Agent Swarm\n\n📌 TL;DR: Open-source операционная система для управления корпоративными агентами на базе ИИ.\n\nAgent-swarm от desplega-ai — это готовая среда для координации множества ИИ-агентов внутри компании. Платформа автоматизирует рутинные процессы разработки, интеграции и управления цифровыми ассистентами.\n\n• 🔹 Оркестрация агентов\n• 🔹 Интеграция с рабочими процессами\n• 🔹 Масштабируемая архитектура\n\n💡 Почему это важно: Инструмент помогает компаниям собрать разрозненных ИИ-агентов в единую управляемую экосистему без сложной настройки с нуля.\n\n🔗 Источник\n\n#AI #OpenSource #DevTools #Automation #Agents\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/10/2026-10-27T06-13-34-838Z-cc3cf603.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/10/2026-10-27T06-13-34-838Z-cc3cf603.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #opensource #devtools #automation #agents #tools",
+      "title_en": "🚀 Agent Swarm",
+      "content_en": "🚀 Agent Swarm\n\n📌 TL;DR: Open-source operating system for managing corporate agents based on AI.\n\nAgent-swarm by desplega-ai is a ready-made environment for coordinating many AI agents within the company. The platform automates the routine processes of developing, integrating and managing digital assistants.\n\n• 🔹 Orchestration of agents\n• 🔹 Integration with workflows\n• 🔹 Scalable architecture\n\n💡 Why it matters: The tool helps companies assemble disparate AI agents into a single manageable ecosystem without complex setup from scratch.\n\n🔗 Source\n\n#AI #OpenSource #DevTools #Automation #Agents\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/10/2026-10-27T06-13-34-838Z-cc3cf603.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/10/2026-10-27T06-13-34-838Z-cc3cf603.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #opensource #devtools #automation #agents #tools"
+    },
+    {
       "id": 3643,
       "date": "2026-10-26T19:36:00.000Z",
       "title": "![Post cover](https://alevoldon.com/media/telegram/2026/10/2026-10-26T19-36-01-0...",
@@ -5546,93 +5643,6 @@
         "premium"
       ],
       "content": "📌 TL;DR: Пользователи подписок SuperGrok и X Premium теперь могут превращать текстовые промпты в готовые опубликованные приложения для web, iOS и Android.\n\nПлатформа Grok выкатила крупное обновление, позволяющее разрабатывать и запускать полноценные программные продукты с собственными доменами буквально с помощью одной текстовой команды. Инструмент стирает границы между задумкой и готовым деплоем, делая разработку доступной даже тем, кто не пишет код.\n\nНовая функция глубоко интегрирована в экосистему сервиса и доступна как в веб-версии на grok.com, так и на мобильных платформах. От идеи до релиза теперь проходит минимум времени, что кардинально меняет подход к прототипированию.\n\n• 🔹 Генерация готовых приложений из одного текстового промпта\n• 🔹 Поддержка веб-версии, iOS и Android из коробки\n• 🔹 Автоматическое выделение собственного домена для проекта\n• 🔹 Доступность для всех владельцев подписок SuperGrok и X Premium\n\n💡 Почему это важно: Инструменты генеративной разработки переходят от этапа написания сниппетов кода к полной автоматизации деплоя, позволяя запускать цифровые продукты за считанные минуты.\n\n🔗 Источник\n\n#AI #Grok #AppDev #NoCode #TechNews #OpenAI #Automation\n\n## Tags\n\n#telegram-import #live-sync #ai #grok #appdev #nocode #technews #openai #automation #mobile #для #android #premium"
-    },
-    {
-      "id": 3335,
-      "date": "2026-08-21T12:44:07.000Z",
-      "title": "🚀 Запуск MiniMax Design: ИИ-платформа для коммерческого контента",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3335,
-      "tags": [
-        "minimax",
-        "ai",
-        "design",
-        "automation",
-        "contentcreation",
-        "genai",
-        "backend"
-      ],
-      "content": "📌 TL;DR: MiniMax представила новую агентную экосистему для автоматического создания коммерческого контента, рекламы и графики.\n\nКоманда MiniMax выкатила масштабное обновление — официальный запуск платформы MiniMax Design. Инструмент заточен под быструю генерацию рекламных креативов, материалов для электронной коммерции, моушн-дизайна и постпродакшена без необходимости собирать каждый элемент вручную.\n\nВ основе системы лежит автономный агентный воркфлоу. Пользователю достаточно задать финальную цель, после чего ИИ-агенты самостоятельно планируют задачи, выполняют их и выдают готовый результат. Платформа также поддерживает интеграцию локальных ассистентов, приватное развертывание и масштабирование через API.\n\n• 🔹 Агентный воркфлоу с автономным планированием и выполнением задач\n• 🔹 Специализация на коммерческом контенте, рекламе и e-commerce\n• 🔹 Гибкая интеграция локальных ассистентов и масштабирование через API\n\n💡 Почему это важно: Инструменты вроде MiniMax Design постепенно стирают грань между ручным производством медиаконтента и полностью автоматизированным пайплайном, экономя часы работы дизайнерам и маркетологам.\n\n🔗 Источник\n\n#MiniMax #AI #Design #Automation #ContentCreation #GenAI\n\n## Tags\n\n#telegram-import #live-sync #minimax #ai #design #automation #contentcreation #genai #backend #для #агентный #ассистентов"
-    },
-    {
-      "id": 3334,
-      "date": "2026-08-21T01:08:43.000Z",
-      "title": "🚀 Spline: 3D-дизайн прямо в браузере с командной работой",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3334,
-      "tags": [
-        "spline",
-        "3ddesign",
-        "webdev",
-        "uiux",
-        "designtools",
-        "opensource",
-        "technews",
-        "design",
-        "3d",
-        "tools"
-      ],
-      "content": "📌 TL;DR: Spline — это бесплатный веб-инструмент для создания интерактивных 3D-интерфейсов и анимаций с поддержкой совместной работы в реальном времени.\n\nСоздание трехмерной графики традиционно ассоциируется с тяжелым софтом и необходимостью мощного железа. Spline ломает этот стереотип, перенося полноценный пайплайн 3D-дизайна прямо в окно браузера и делая его доступным для веб-разработчиков и дизайнеров без глубокого погружения в сложный софт вроде Blender.\n\nПлатформа объединяет в себе инструменты для моделирования, настройки материалов, анимации и интеграции интерактивных элементов. Благодаря облачной архитектуре команда может одновременно работать над проектом, вносить правки и сразу видеть готовый результат, пригодный для публикации в web.\n\n• 🔹 Браузерный редактор с поддержкой real-time коллаборации\n• 🔹 Инструменты 3D-моделирования и работы с примитивами\n• 🔹 Создание слоистых материалов и доступ к готовой библиотеке текстур\n• 🔹 Настройка анимации и интерактивных сценариев без кода\n• 🔹 Кроссплатформенный экспорт для интеграции в веб-проекты\n\n💡 Почему это важно: Инструмент стирает границы между статичным вебом и интерактивными 3D-мирами, позволяя быстро создавать прототипы и продакшн-контент прямо в облаке.\n\n🔗 Источник\n\n#Spline #3DDesign #WebDev #UIUX #DesignTools #OpenSource #TechNews\n\n## Tags\n\n#telegram-import #live-sync #spline #3ddesign #webdev #uiux #designtools #opensource #technews #design #3d #tools #для #интерактивных #прямо"
-    },
-    {
-      "id": 3333,
-      "date": "2026-08-20T23:50:38.000Z",
-      "title": "🛠 Эра бенчмарков всё. Наступает эпоха скучной инженерной гигиены в AI",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3333,
-      "tags": [
-        "ai",
-        "engineering",
-        "llm",
-        "development",
-        "backend"
-      ],
-      "content": "Последние дни на AI-рынке очень четко очертили тектонический сдвиг: индустрия наконец-то наигралась в замеры «у кого модель на 2% умнее» и уперлась в суровую реальность продакшена.\n\nКогда агент может не просто писать текст, а трогать файлы, запускать скрипты, дергать внешние API и коммитить код, ошибка перестает быть «забавной галлюцинацией» и становится реальным инцидентом.\n\nТри мысли, которые сейчас определяют зрелую AI-разработку:\n\n• 🔹 Монолитные чаты умирают — рулит Model Routing\n• 🔹 Выбирать модель вручную в интерфейсе — это как вручную выбирать ядро процессора для открытия вкладки в браузере. Архитектура здорового человека:\n• 🔹 Request → Classifier → Router (Fast / Cheap / Heavy Reasoning / Local) → Result.\n• 🔹 Глупо и дорого гонять топ-модели на форматирование JSON, когда для этого есть легковесные решения, а тяжелую артиллерию стоит звать только на сложный reasoning и независимый арбитраж.\n• 🔹 Главная боль AI-разработки — Context & Docs Drift\n• 🔹 Когда нейросети генерируют код со скоростью пулемета, документация, схемы и конфиги устаревают не за недели, а за пару часов. Код говорит одно, .env.example — другое, README — третье, а в проде вообще четвертое.\n• 🔹 Будущее здесь не за одним «всемогущим суперагентом», а за узкими фоновыми аудиторами (нотариусами), которые каждую ночь молча сверяют источники правды и выдают четкий диф.\n• 🔹 DAG и жесткие контрольные точки вместо «сделай всё сам»\n• 🔹 Если скормить сложную задачу одной модели одной портянкой — она сломается. Если разбить процесс на детерминированный граф с валидацией каждого шага (Code → Test → Fail? → Diagnose → Retry), надежность вырастает в разы без смены самой модели.\n\nРезюме: Самая большая ценность сейчас строится не вокруг создания еще одной LLM, а на слое после генерации: верификация, мониторинг прав доступа, умная маршрутизация и аудит.\n\nПисать код стало элементарно. Держать систему в непротиворечивом состоянии — вот настоящий вызов.\n\n#AI #Engineering #LLM #Development\n\n## Tags\n\n#telegram-import #live-sync #ai #engineering #llm #development #backend #код #когда #одной"
-    },
-    {
-      "id": 3332,
-      "date": "2026-08-20T23:49:44.000Z",
-      "title": "Эра бенчмарков всё. Наступает эпоха скучной инженерной гигиены в AI 🛠",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3332,
-      "tags": [
-        "backend",
-        "ai"
-      ],
-      "content": "Последние дни на AI-рынке очень четко очертили тектонический сдвиг: индустрия наконец-то наигралась в замеры «у кого модель на 2% умнее» и уперлась в суровую реальность продакшена.\nКогда агент может не просто писать текст, а трогать файлы, запускать скрипты, дергать внешние API и коммитить код, ошибка перестает быть «забавной галлюцинацией» и становится реальным инцидентом.\nТри мысли, которые сейчас определяют зрелую AI-разработку:\n1. Монолитные чаты умирают — рулит Model Routing\nВыбирать модель вручную в интерфейсе — это как вручную выбирать ядро процессора для открытия вкладки в браузере. Архитектура здорового человека:\nRequest → Classifier → Router (Fast / Cheap / Heavy Reasoning / Local) → Result.\nГлупо и дорого гонять топ-модели на форматирование JSON, когда для этого есть легковесные решения, а тяжелую артиллерию стоит звать только на сложный reasoning и независимый арбитраж.\n2. Главная боль AI-разработки — Context & Docs Drift\nКогда нейросети генерируют код со скоростью пулемета, документация, схемы и конфиги устаревают не за недели, а за пару часов. Код говорит одно, .env.example — другое, README — третье, а в проде вообще четвертое.\nБудущее здесь не за одним «всемогущим суперагентом», а за узкими фоновыми аудиторами (нотариусами), которые каждую ночь молча сверяют источники правды и выдают четкий диф.\n3. DAG и жесткие контрольные точки вместо «сделай всё сам»\nЕсли скормить сложную задачу одной модели одной портянкой — она сломается. Если разбить процесс на детерминированный граф с валидацией каждого шага (Code → Test → Fail? → Diagnose → Retry), надежность вырастает в разы без смены самой модели.\nРезюме: Самая большая ценность сейчас строится не вокруг создания еще одной LLM, а на слое после генерации: верификация, мониторинг прав доступа, умная маршрутизация и аудит.\nПисать код стало элементарно. Держать систему в непротиворечивом состоянии — вот настоящий вызов.\n\n## Tags\n\n#telegram-import #live-sync #backend #ai #код #когда #одной"
-    },
-    {
-      "id": 3331,
-      "date": "2026-08-20T23:02:48.000Z",
-      "title": "🚀 Qwen3.8-27B-OBLITERATED: Новая анценсоред-модель для экспериментов",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3331,
-      "tags": [
-        "ai",
-        "llm",
-        "opensource",
-        "machinelearning",
-        "devtools",
-        "learning",
-        "tools",
-        "qwen"
-      ],
-      "content": "📌 TL;DR: Появилась новая полностью свободная от цензуры языковая модель на базе архитектуры Qwen, созданная для глубокого тестирования и ред-тиминга.\n\nМодель Qwen3.8-27B-OBLITERATED представляет собой модифицированную версию популярной линейки Qwen, из которой были удалены стандартные ограничения и фильтры безопасности. Релиз ориентирован на исследователей безопасности и разработчиков, которым требуется инструмент для стресс-тестирования систем и генерации текста без искусственных барьеров.\n\nПроект быстро набирает популярность в сообществе и уже привлек внимание специалистов по кибербезопасности благодаря сохранению базового высокого интеллекта оригинальной архитектуры в сочетании с полной свободой генерации.\n\n• 🔹 Основана на технологиях серии Qwen\n• 🔹 Полное отсутствие встроенной цензуры\n• 🔹 Оптимизированный размер 27B для локального запуска\n• 🔹 Подходит для задач ред-тиминга и сложных исследований\n\n💡 Почему это важно: Инструменты подобного класса критически важны для специалистов по безопасности, которым необходимо проверять ИИ-системы на устойчивость к обходу защитных барьеров и изучать поведение моделей в экстремальных сценариях.\n\n🔗 Источник\n\n#AI #LLM #OpenSource #MachineLearning #DevTools\n\n## Tags\n\n#telegram-import #live-sync #ai #llm #opensource #machinelearning #devtools #learning #tools #для #qwen #безопасности"
     },
     {
       "id": 3139,

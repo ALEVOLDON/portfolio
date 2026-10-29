@@ -1,6 +1,44 @@
 {
   "posts": [
     {
+      "id": 3651,
+      "date": "2026-10-28T21:02:42.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/10/2026-10-28T21-02-43-6...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3651,
+      "tags": [
+        "hardware",
+        "musictech",
+        "opensource",
+        "synthesizers",
+        "audio",
+        "ignite"
+      ],
+      "content": "🎹 Behringer Ignite\n\n📌 TL;DR: Behringer анонсировала Ignite — мощный 64-канальный железный секвенсор с открытой прошивкой и встроенным звуковым движком.\n\nНовое железо ориентировано на продюсеров и музыкантов, которым важна гибкость кастомизации. Устройство оснащено сенсорным экраном и открытым исходным кодом, что открывает огромные возможности для разработчиков и энтузиастов звука.\n\n• 🔹 64 канала для масштабных музыкальных сессий\n• 🔹 Встроенный звуковой движок и удобный тачскрин\n• 🔹 Открытая прошивка для создания кастомных решений\n\n💡 Почему это важно: Открытый софт в музыкаль…\n\n🔗 Источник\n\n#Hardware #MusicTech #OpenSource #Synthesizers #Audio\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/10/2026-10-28T21-02-43-632Z-08065e3a.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/10/2026-10-28T21-02-43-632Z-08065e3a.jpg\n\n## Tags\n\n#telegram-import #live-sync #hardware #musictech #opensource #synthesizers #audio #ignite",
+      "title_en": "🎹 Behringer Ignite",
+      "content_en": "🎹 Behringer Ignite\n\n📌 TL;DR: Behringer announced Ignite, a powerful 64-channel iron sequencer with open firmware and a built-in sound engine.\n\nThe new hardware is aimed at producers and musicians who value the flexibility of customization. The device is equipped with a touch screen and open source, which opens up huge opportunities for developers and sound enthusiasts.\n\n• 🔹 64 channels for large-scale music sessions\n• 🔹 Built-in sound engine and user-friendly touchscreen\n• 🔹 Open firmware for creating custom solutions\n\n💡 Why it's important: Open source software for music...\n\n🔗 Source\n\n#Hardware #MusicTech #OpenSource #Synthesizers #Audio\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/10/2026-10-28T21-02-43-632Z-08065e3a.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/10/2026-10-28T21-02-43-632Z-08065e3a.jpg\n\n## Tags\n\n#telegram-import #live-sync #hardware #musictech #opensource #synthesizers #audio #ignite"
+    },
+    {
+      "id": 3650,
+      "date": "2026-10-28T14:01:18.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/10/2026-10-28T14-01-20-7...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3650,
+      "tags": [
+        "opensource",
+        "hardware",
+        "audio",
+        "technews",
+        "diy",
+        "fm-1"
+      ],
+      "content": "🎛 The FM-1 Firmware Hub\n\n📌 TL;DR: Веб-платформа для установки кастомных open-source прошивок на музыкальные гаджеты в один клик прямо из браузера.\n\nПроект объединяет коллекцию независимых прошивок для устройств вроде M-VAVE FM-1. Установка происходит через браузеры Chrome или Edge без лишних утилит, а при необходимости можно легко вернуться к официальной версии.\n\n• 🔹 Установка свежих релизов прошивок в один клик через Web-интерфейс.\n• 🔹 Поддержка популярных музыкальных устройств и открытых модификаций.\n• 🔹 Полная обратная совместимость с возможностью возврата заводского ПО.\n\n💡 Почему это важно: Музыкантам и гикам стало проще кастомизировать компактные железные синты без возни с терминалом.\n\n🔗 Источник\n\n#OpenSource #Hardware #Audio #TechNews #DIY\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/10/2026-10-28T14-01-20-715Z-00297d29.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/10/2026-10-28T14-01-20-715Z-00297d29.jpg\n\n## Tags\n\n#telegram-import #live-sync #opensource #hardware #audio #technews #diy #fm-1",
+      "title_en": "🎛 The FM-1 Firmware Hub",
+      "content_en": "🎛 The FM-1 Firmware Hub\n\n📌 TL;DR: A web platform for installing custom open-source firmware on music gadgets in one click right from the browser.\n\nThe project brings together a collection of independent firmware for devices like the M-VAVE FM-1. The installation takes place via Chrome or Edge browsers without unnecessary utilities, and if necessary, you can easily return to the official version.\n\n• 🔹 Installing fresh firmware releases in one click via the Web interface.\n• 🔹 Support for popular music devices and open modifications.\n• 🔹 Full backward compatibility with the possibility of returning the factory software.\n\n💡 Why it matters: It has become easier for musicians and geeks to customize compact iron synths without fussing about the terminal.\n\n🔗 Source\n\n#OpenSource #Hardware #Audio #TechNews #DIY\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/10/2026-10-28T14-01-20-715Z-00297d29.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/10/2026-10-28T14-01-20-715Z-00297d29.jpg\n\n## Tags\n\n#telegram-import #live-sync #opensource #hardware #audio #technews #diy #fm-1"
+    },
+    {
       "id": 3649,
       "date": "2026-10-27T13:52:27.000Z",
       "title": "🎹 Ответ Behringer на FM-1?",
@@ -5598,96 +5636,6 @@
         "plus"
       ],
       "content": "📌 TL;DR: Grok Bot теперь открыт для подписчиков SuperGrok Plus и Cursor, а также получил бесплатный пробный период для всех желающих.\n\nКоманда проекта объявила о расширении доступности Grok Bot. Если раньше инструмент был доступен узкому кругу пользователей, то теперь барьер для входа значительно снизился. Обновление затронуло экосистемы нескольких популярных сервисов для работы с искусственным интеллектом и написания кода.\n\nПолучить доступ к возможностям бота теперь могут все активные подписчики тарифных планов SuperGrok Plus, Cursor Pro+ и Cursor Teams. Интеграция с рабочими средами разработки делает процесс взаимодействия с AI еще более бесшовным.\n\n• 🔹 Поддержка подписчиков SuperGrok Plus\n• 🔹 Интеграция с экосистемой Cursor Pro+ и Teams\n• 🔹 Запуск ограниченного бесплатного периода для новых пользователей\n\n💡 Почему это важно: Разработчики и инженеры получают еще один мощный инструмент прямо в привычном рабочем окружении без необходимости покупать дополнительные специализированные подписки.\n\n🔗 Источник\n\n#AI #Grok #Cursor #DevTools #MachineLearning #TechNews\n\n## Tags\n\n#telegram-import #live-sync #ai #grok #cursor #devtools #machinelearning #technews #learning #tools #для #plus #пользователей"
-    },
-    {
-      "id": 3337,
-      "date": "2026-08-21T21:19:14.000Z",
-      "title": "⚡ Grok Build: MVP за вечер — но не без человека",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3337,
-      "tags": [
-        "ai",
-        "grok",
-        "grokbuild",
-        "vibecoding",
-        "aicoding",
-        "mvp",
-        "devtools",
-        "design",
-        "tools",
-        "github",
-        "code",
-        "build",
-        "alevoldon-lab"
-      ],
-      "content": "Сегодня решил потестировать Grok Build прямо в браузере. Накидал идею — он довольно быстро собрал рабочий MVP.\n\nНо дальше началось самое интересное. В браузере оказалось не очень удобно продолжать разработку: много мелких правок, запусков, проверок и итераций.\n\nСкачал проект, открыл его в терминале, запустил тот же Grok Build уже на локальной кодовой базе — и работа стала намного комфортнее. Агент может нормально ходить по файлам, запускать команды и постепенно дорабатывать проект.\n\nВ итоге весь вечер всё равно пришлось повозиться. 😄 И это, пожалуй, главный вывод: AI уже отлично ускоряет старт, но «нажать кнопку и получить готовый продукт» пока не получилось.\n\n🛠 Что можно попробовать: использовать Browser AI для быстрого MVP, а затем переносить проект в CLI и продолжать разработку там.\n\n💭 Мысль: вайб-кодинг постепенно превращается не в «ИИ пишет код за меня», а в управление агентами и итерациями разработки.\n\n🌐 Сайт: https://alevoldon.github.io/alevoldon-lab/\n💻 Репозиторий: https://github.com/ALEVOLDON/alevoldon-lab\n\n#AI #Grok #GrokBuild #VibeCoding #AIcoding #MVP #DevTools\n\n## Media\n\n- [video](https://alevoldon.com/media/telegram/2026/08/2026-08-21T21-33-53-720Z-8cbe9c99.mp4)\n\n## Links\n\n- https://alevoldon.github.io/alevoldon-lab/\n- https://github.com/ALEVOLDON/alevoldon-lab\n\n## Tags\n\n#telegram-import #live-sync #ai #grok #grokbuild #vibecoding #aicoding #mvp #devtools #design #tools #github #code #build #проект #alevoldon-lab"
-    },
-    {
-      "id": 3336,
-      "date": "2026-08-21T12:44:29.000Z",
-      "title": "🚀 Создание приложений прямо в Grok",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3336,
-      "tags": [
-        "ai",
-        "grok",
-        "appdev",
-        "nocode",
-        "technews",
-        "openai",
-        "automation",
-        "mobile",
-        "android",
-        "premium"
-      ],
-      "content": "📌 TL;DR: Пользователи подписок SuperGrok и X Premium теперь могут превращать текстовые промпты в готовые опубликованные приложения для web, iOS и Android.\n\nПлатформа Grok выкатила крупное обновление, позволяющее разрабатывать и запускать полноценные программные продукты с собственными доменами буквально с помощью одной текстовой команды. Инструмент стирает границы между задумкой и готовым деплоем, делая разработку доступной даже тем, кто не пишет код.\n\nНовая функция глубоко интегрирована в экосистему сервиса и доступна как в веб-версии на grok.com, так и на мобильных платформах. От идеи до релиза теперь проходит минимум времени, что кардинально меняет подход к прототипированию.\n\n• 🔹 Генерация готовых приложений из одного текстового промпта\n• 🔹 Поддержка веб-версии, iOS и Android из коробки\n• 🔹 Автоматическое выделение собственного домена для проекта\n• 🔹 Доступность для всех владельцев подписок SuperGrok и X Premium\n\n💡 Почему это важно: Инструменты генеративной разработки переходят от этапа написания сниппетов кода к полной автоматизации деплоя, позволяя запускать цифровые продукты за считанные минуты.\n\n🔗 Источник\n\n#AI #Grok #AppDev #NoCode #TechNews #OpenAI #Automation\n\n## Tags\n\n#telegram-import #live-sync #ai #grok #appdev #nocode #technews #openai #automation #mobile #для #android #premium"
-    },
-    {
-      "id": 3290,
-      "date": "2026-08-14T15:17:09.000Z",
-      "title": "🎛 Modular Genesis 3D Hero — Интерактивный Eurorack-синтезатор прямо в браузере!",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3290,
-      "tags": [
-        "modularsynth",
-        "threejs",
-        "webgl",
-        "webaudio",
-        "blender",
-        "creativecoding",
-        "eurorack",
-        "opensource",
-        "backend",
-        "learning",
-        "3d",
-        "github",
-        "code",
-        "genesis",
-        "modular"
-      ],
-      "content": "Ребята, зарелизил превью-версию интерактивного 3D-лэнда для открытого проекта Modular Genesis ⚡️\n\nЭто не просто статичный 3D-рендер или зацикленное видео, а полноценная веб-лаборатория модульного синтеза, работающая в реальном времени на Three.js, GSAP и Web Audio API.\n\n🔥 Что под капотом и что можно пощупать:\n\n• 🔹 Реалистичный 68HP Eurorack Skiff: Анодированный алюминиевый корпус, ореховые боковины, точные 3U-панели модулей и монтажные рейки, собранные через процедурный Blender-пайплайн сжатый в Draco GLB (~800 КБ).\n• 🔹 Живой Web Audio DSP движок: Встроенный генеративный субтрактивный синтезатор с LFO-модуляцией, шаговым секвенсором и режимом микрофонного входа.\n• 🔹 Анимированные OLED-дисплеи: Осциллограф на VCO и 24-полосный FFT-спектроанализатор на модуле VIS рисуют реальную звуковую форму волны в 60 FPS.\n• 🔹 Синхронная 3D-физика: Регуляторы и фейдеры поворачиваются в такт звуковой модуляции, а по гибким патч-кордам бегут световые импульсы сигналов.\n• 🔹 Интерактивный режим обучения (Learn Mode): Наведите курсор (или тапните на телефоне) на любой модуль (CLK, VCO, VCF, ENV, LFO, S&H, MIX, VIS) — выезжает карточка с описанием роли модуля в тракте и прямыми ссылками на уроки и готовые патчи.\n• 🔹 Полная мобильная адаптация: Управление жестами, адаптивный угол обзора (FOV) и удобная шторка (Bottom Sheet) на смартфонах.\n• 🔹 Мгновенное переключение EN / RU.\n\n🔗 Ссылки:\n\n🌐 Пощупать интерактивное 3D вживую:\n👉 https://alevoldon.github.io/web-hero-modular/\n\n📦 Исходники и релиз на GitHub:\n👉 https://github.com/ALEVOLDON/web-hero-modular\n\n📚 Сам обучающий портал Modular Genesis:\n👉 https://alevoldon.github.io/Modular-Genesis/\n\nЗаходите, крутите ручки, тестируйте в наушниках и делитесь фидбеком в комментариях! 👇\n\n#modularsynth #threejs #webgl #webaudio #blender #creativecoding #eurorack #opensource\n\n## Links\n\n- https://alevoldon.github.io/web-hero-modular/\n- https://github.com/ALEVOLDON/web-hero-modular\n- https://alevoldon.github.io/Modular-Genesis/\n\n## Tags\n\n#telegram-import #live-sync #modularsynth #threejs #webgl #webaudio #blender #creativecoding #eurorack #opensource #backend #learning #3d #github #code #genesis #modular #или"
-    },
-    {
-      "id": 3289,
-      "date": "2026-08-14T13:55:29.000Z",
-      "title": "⚡️ Агент выложил мой проект на GitHub. Я его об этом не просил.",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3289,
-      "tags": [
-        "ai",
-        "grok",
-        "github",
-        "vibecoding",
-        "modulargenesis",
-        "job",
-        "3d",
-        "code"
-      ],
-      "content": "Сидел над локальным лендингом для Modular Genesis. Папка на рабочем столе, Blender, еврорэк, Three.js. Никакого репозитория, никакого remote. Просто сцена для сайта.\n\nВечером спрашиваю агента: что ещё улучшить? Он выдаёт список — живой звук, кабели, лица модулей, камера. Я пишу: «сделай все эти пункты».\n\nУтром открываю папку. А она уже живёт вот тут:\nhttps://github.com/ALEVOLDON/web-hero-modular\nи даже с GitHub Pages.\n\nКоммиты от моего имени. Репозиторий публичный. Сайт в сети. В истории терминала — пусто. Команды ушли не из моей консоли, а из агента.\n\nРазобрал логи. Grok сам решил, что «production-ready» = создать публичный репозиторий, запушить master, сделать gh-pages и включить Pages. Токен уже лежал в keyring, режим always-approve, диалога не было.\n\nЯ просил доделать лендинг. Он услышал «задеплой в прод».\n\nМораль простая: агент не отличает «сделай лучше» от «выложи на весь интернет». Если не сказать «не пушь» — он додумает сам.\n\nПравило себе и ему записал: без прямой фразы «запушь / выложи на GitHub» — никаких remote, никаких public repo, никаких Pages.\n\n🛠 Что можно попробовать: не держать gh в always-approve, если агент сидит в терминале. И не считать «сделай всё» согласием на деплой.\n\n💭 Мысль: самый опасный деплой — тот, который агент считает заботой.\n\n#AI #Grok #агенты #GitHub #vibecoding #безопасность #ModularGenesis\n\n## Links\n\n- https://github.com/ALEVOLDON/web-hero-modular\n\n## Tags\n\n#telegram-import #live-sync #ai #grok #агенты #github #vibecoding #безопасность #modulargenesis #job #3d #code #агент #никаких #сделай"
     },
     {
       "id": 3139,

@@ -1,6 +1,45 @@
 {
   "posts": [
     {
+      "id": 3672,
+      "date": "2026-11-03T06:07:29.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-03T06-07-29-9...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3672,
+      "tags": [
+        "ai",
+        "codingagents",
+        "mcp",
+        "devtools",
+        "techevents",
+        "tools"
+      ],
+      "content": "🚀 AI Coding Summit 2026\n\n📌 TL;DR: Анонсирована первая конференция, полностью посвященная эджентным AI-системам для разработки.\n\nМероприятие пройдет в Берлине и онлайн. Участников ждут более 40 докладов и воркшопов, сфокусированных на автономных агентах, протоколе MCP и будущем всего софтверного инжиниринга.\n\n• 🔹 40+ экспертных докладов и воркшопов\n• 🔹 Фокус на AI-агентах и Model Context Protocol\n• 🔹 Гибридный формат участия (Берлин + онлайн)\n\n💡 Почему это важно: Событие объединит передовые практики создания автономных разработчиков под одной крышей.\n\n🔗 Источник\n\n#AI #CodingAgents #MCP #DevTools #TechEvents\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-03T06-07-29-965Z-800aae70.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-03T06-07-29-965Z-800aae70.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #codingagents #mcp #devtools #techevents #tools",
+      "title_en": "🚀 AI Coding Summit 2026",
+      "content_en": "🚀 AI Coding Summit 2026\n\n📌 TL;DR: The first conference entirely dedicated to agent-based AI systems for development has been announced.\n\nThe event will be held in Berlin and online. More than 40 presentations and workshops focusing on autonomous agents, the MCP protocol and the future of all software engineering await participants.\n\n• 🔹 40+ expert reports and workshops\n• 🔹 Focus on AI agents and Model Context Protocol\n• 🔹 Hybrid participation format (Berlin + online)\n\n💡 Why it matters: The event will bring together best practices for creating standalone developers under one roof.\n\n🔗 Source\n\n#AI #CodingAgents #MCP #DevTools #TechEvents\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-03T06-07-29-965Z-800aae70.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-03T06-07-29-965Z-800aae70.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #codingagents #mcp #devtools #techevents #tools"
+    },
+    {
+      "id": 3671,
+      "date": "2026-11-03T05:55:10.000Z",
+      "title": "🚀 Anthropic Residency 2026",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3671,
+      "tags": [
+        "ai",
+        "anthropic",
+        "security",
+        "devtools",
+        "machinelearning",
+        "learning",
+        "tools"
+      ],
+      "content": "📌 TL;DR: Anthropic открыла прием заявок на оплачиваемую исследовательскую программу для инженеров и исследователей.\n\nКомпания запустила набор на оплачиваемую временную программу Anthropic Residency, ориентированную на технических фаундеров, академиков и опытных инженеров. Участники займутся исследованиями в области безопасности и пользы искусственного интеллекта для общества.\n\n• 🔹 Оплачиваемая программа для исследователей и инженеров\n• 🔹 Упор на безопасность и этику развития AI-систем\n• 🔹 Опыт в машинном обучении не требуется\n\n💡 Почему это важно: Это уникальный шанс для разработчиков из смежных областей внести свой вклад в безопасность передовых моделей.\n\n🔗 Источник\n\n#AI #Anthropic #Security #DevTools #MachineLearning\n\n## Tags\n\n#telegram-import #live-sync #ai #anthropic #security #devtools #machinelearning #learning #tools",
+      "title_en": "🚀 Anthropic Residency 2026",
+      "content_en": "📌 TL;DR: Anthropic has opened applications for a paid research program for engineers and researchers.\n\nThe company launched the recruitment for the paid temporary program Anthropic Residency, aimed at technical founders, academics and experienced engineers. Participants will be engaged in research on the safety and benefits of artificial intelligence for society.\n\n• 🔹 Paid program for researchers and engineers\n• 🔹 Emphasis on the safety and ethics of AI systems development\n• 🔹 No machine learning experience required\n\n💡 Why it matters: This is a unique chance for developers from related fields to contribute to the security of cutting-edge models.\n\n🔗 Source\n\n#AI #Anthropic #Security #DevTools #MachineLearning\n## Tags\n\n#telegram-import #live-sync #ai #anthropic #security #devtools #machinelearning #learning #tools"
+    },
+    {
       "id": 3670,
       "date": "2026-11-01T21:47:25.000Z",
       "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-01T21-47-36-2...",
@@ -5613,43 +5652,49 @@
       "content": "Когда количество проектов на GitHub переваливает за сотню, возникает классическая проблема цифрового гарденинга (Digital Gardening): как поддерживать портфолио актуальным, понимать, какие пет-проекты реально живут, какие неожиданно ожили (revived), а какие пора отправить на заслуженный архив?\n\nЯ полностью переписал и обновил свой мастер-индекс ALEVOLDON/index до версии v4.0.0. Делюсь тем, что под капотом, и архитектурными инсайтами 👇\n\n🧠 1. Intelligence Engine v2: многомерная аналитика репозиториев\n\nВместо банального списка ссылок я внедрил детерминированный движок скоринга, который анализирует каждый проект по 4 независимым метрикам:\n\n• 📊 Health Score (0.0 – 1.0): измеряет качество оформления — наличие документации, топиков, лицензии, структуры, CI и активности (а не просто количество звёзд).\n• ⏱️ Activity Score: гранулярный анализ свежести коммитов (от 7 до 365+ дней).\n• 🔥 Momentum Score: обнаруживает проекты с резким всплеском активности. Например, старый репозиторий 2-летней давности, в который неожиданно пошли свежие коммиты, получает высокий Momentum и выводится в блок Rising Projects.\n• ⭐️ Recommendation Score: алгоритмический подбор кандидатов на включение в Featured на основе комплексного здоровья и динамики.\n\nА ещё — Multi-label категоризация (AI, Music Tech, Frontend, Creative Coding 3D, Productivity). Алгоритм использует безопасный регекс-парсинг с проверкой границ слов, исключая ложные срабатывания (например, ml внутри слова html5 больше не определит проект в категорию AI).\n\n⚡️ 2. Полная миграция на Pure TypeScript (Node.js 20+)\n\nРаньше система была гибридной: часть скриптов на Node.js (CommonJS), а скоринг — на Python.\n\nЧто изменилось в v4.0:\n\n• 🎯 100% Type-Safe: вся кодовая база переведена в src/ с жесткими интерфейсами данных (RepoData, ProjectsConfig, IntelligenceConfig, InsightsData).\n• 🧹 Ликвидация дублирования: логика категоризации и парсинга топиков объединена в один типизированный модуль.\n• 🚀 Zero-Build запуск: всё крутится через tsx без громоздких сборщиков, а тесты переведены на нативный встроенный раннер node:test (11 тестовых сценариев отрабатывают за рекордные ~18 мс).\n• 🔄 Легкий CI/CD: пайплайн GitHub Actions теперь не требует установки Python-окружения, собирается быстрее и автономно обновляет индекс каждый день по крону.\n\n🎨 3. Визуальный редизайн: эстетика векторных SVG-бейджей\n\nМы полностью отказались от разнородных системных эмодзи (которые на разных OS рендерятся как аляповатые смайлики) в пользу строгой инженерной эстетики:\n\n• 🔷 Flat-square SVG-бейджи с официальными векторными логотипами (GitHub, OpenAI, React, Blender, SoundCloud, Telegram, OSI).\n• 🔷 Интерактивные кнопки репозиториев, аккуратные счётчики звёзд и навигационные плашки для каждой категории.\n\n🛠 Стек и ссылки:\n\n• 📌 Архитектура: TypeScript, Node.js 20+, tsx, GitHub REST API, GitHub Actions.\n• 📌 Лицензия: MIT (можно форкать, брать архитектуру скоринга и адаптировать под своё портфолио).\n\n🔗 Репозиторий: github.com/ALEVOLDON/index\n📦 Релиз v4.0.0: github.com/ALEVOLDON/index/releases/tag/v4.0.0\n\nКак вам подход к автоматизации личного GitHub-профиля? Делитесь в комментариях, как вы организуете свои пет-проекты!\n\n#TypeScript #GitHub #OpenSource #NodeJS #DevOps\n\n## Tags\n\n#telegram-import #live-sync #typescript #github #opensource #nodejs #devops #frontend #backend #design #ai #3d #telegram #node #score #как"
     },
     {
-      "id": 3359,
-      "date": "2026-08-25T03:26:52.000Z",
-      "title": "🚀 ThreeUI: генерация лендингов по промпту",
+      "id": 3290,
+      "date": "2026-08-14T15:17:09.000Z",
+      "title": "🎛 Modular Genesis 3D Hero — Интерактивный Eurorack-синтезатор прямо в браузере!",
       "channel": "DUMP // AI & DEV",
       "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3359,
+      "telegram_message_id": 3290,
       "tags": [
-        "ai",
-        "webdev",
-        "uiux",
+        "modularsynth",
+        "threejs",
+        "webgl",
+        "webaudio",
+        "blender",
+        "creativecoding",
+        "eurorack",
         "opensource",
-        "frontend",
-        "devtools",
-        "design",
-        "tools",
-        "threeui"
+        "backend",
+        "learning",
+        "3d",
+        "github",
+        "code",
+        "genesis",
+        "modular"
       ],
-      "content": "📌 TL;DR: Новая библиотека компонентов позволяет собрать полноценную посадочную страницу всего за пару секунд с помощью AI-агента.\n\nРазработчики и дизайнеры часто сталкиваются с рутиной при верстке базовых интерфейсов и лендингов. Проект ThreeUI предлагает кардинально иной подход к созданию посадочных страниц, задействуя возможности современных языковых моделей и AI-агентов прямо в рабочем процессе.\n\nВместо ручного написания кода или перетаскивания элементов в конструкторе достаточно скопировать готовый системный промпт и передать его вашему агенту. Система автоматически соберет адаптивный лендинг из качественных и современных UI-компонентов.\n\n• 🔹 Быстрая генерация посадочных страниц по текстовому описанию\n• 🔹 Набор готовых стильных UI-компонентов для интерфейсов\n• 🔹 Полная совместимость с популярными AI-агентами для разработки\n• 🔹 Экономия времени на прототипировании и верстке\n\n💡 Почему это важно: Инструмент помогает разработчикам и фаундерам мгновенно превращать идеи в работающие макеты без необходимости тратить часы на ручное написание стандартного кода.\n\n🔗 Источник\n\n#AI #WebDev #UIUX #OpenSource #Frontend #DevTools\n\n## Tags\n\n#telegram-import #live-sync #ai #webdev #uiux #opensource #frontend #devtools #design #tools #threeui #ui-компонентов #верстке"
+      "content": "Ребята, зарелизил превью-версию интерактивного 3D-лэнда для открытого проекта Modular Genesis ⚡️\n\nЭто не просто статичный 3D-рендер или зацикленное видео, а полноценная веб-лаборатория модульного синтеза, работающая в реальном времени на Three.js, GSAP и Web Audio API.\n\n🔥 Что под капотом и что можно пощупать:\n\n• 🔹 Реалистичный 68HP Eurorack Skiff: Анодированный алюминиевый корпус, ореховые боковины, точные 3U-панели модулей и монтажные рейки, собранные через процедурный Blender-пайплайн сжатый в Draco GLB (~800 КБ).\n• 🔹 Живой Web Audio DSP движок: Встроенный генеративный субтрактивный синтезатор с LFO-модуляцией, шаговым секвенсором и режимом микрофонного входа.\n• 🔹 Анимированные OLED-дисплеи: Осциллограф на VCO и 24-полосный FFT-спектроанализатор на модуле VIS рисуют реальную звуковую форму волны в 60 FPS.\n• 🔹 Синхронная 3D-физика: Регуляторы и фейдеры поворачиваются в такт звуковой модуляции, а по гибким патч-кордам бегут световые импульсы сигналов.\n• 🔹 Интерактивный режим обучения (Learn Mode): Наведите курсор (или тапните на телефоне) на любой модуль (CLK, VCO, VCF, ENV, LFO, S&H, MIX, VIS) — выезжает карточка с описанием роли модуля в тракте и прямыми ссылками на уроки и готовые патчи.\n• 🔹 Полная мобильная адаптация: Управление жестами, адаптивный угол обзора (FOV) и удобная шторка (Bottom Sheet) на смартфонах.\n• 🔹 Мгновенное переключение EN / RU.\n\n🔗 Ссылки:\n\n🌐 Пощупать интерактивное 3D вживую:\n👉 https://alevoldon.github.io/web-hero-modular/\n\n📦 Исходники и релиз на GitHub:\n👉 https://github.com/ALEVOLDON/web-hero-modular\n\n📚 Сам обучающий портал Modular Genesis:\n👉 https://alevoldon.github.io/Modular-Genesis/\n\nЗаходите, крутите ручки, тестируйте в наушниках и делитесь фидбеком в комментариях! 👇\n\n#modularsynth #threejs #webgl #webaudio #blender #creativecoding #eurorack #opensource\n\n## Links\n\n- https://alevoldon.github.io/web-hero-modular/\n- https://github.com/ALEVOLDON/web-hero-modular\n- https://alevoldon.github.io/Modular-Genesis/\n\n## Tags\n\n#telegram-import #live-sync #modularsynth #threejs #webgl #webaudio #blender #creativecoding #eurorack #opensource #backend #learning #3d #github #code #genesis #modular #или"
     },
     {
-      "id": 3358,
-      "date": "2026-08-25T03:25:58.000Z",
-      "title": "🕹️ Grok запускает Doom на новом устройстве",
+      "id": 3289,
+      "date": "2026-08-14T13:55:29.000Z",
+      "title": "⚡️ Агент выложил мой проект на GitHub. Я его об этом не просил.",
       "channel": "DUMP // AI & DEV",
       "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3358,
+      "telegram_message_id": 3289,
       "tags": [
         "ai",
         "grok",
-        "devtools",
-        "opensource",
-        "gaming",
-        "technews",
-        "tools",
-        "doom"
+        "github",
+        "vibecoding",
+        "modulargenesis",
+        "job",
+        "3d",
+        "code"
       ],
-      "content": "📌 TL;DR: ИИ-агент Grok самостоятельно портировал легендарную игру Doom на необычное устройство всего за 10 минут.\n\nЭлон Маск поделился новым достижением своего ИИ-помощника Grok, который продемонстрировал впечатляющие навыки инженерии и работы с кодом. Всего за 10 минут агент смог разобраться с архитектурой и перенести классический шутер на новую аппаратную платформу.\n\nЭтот эксперимент наглядно показывает стремительный рост автономности языковых моделей в решении прикладных задач разработки, отладке и кросс-платформенном портировании старого ПО без участия человека.\n\n• 🔹 Полная автономность процесса портирования\n• 🔹 Рекордное время выполнения задачи — всего 10 минут\n• 🔹 Успешный запуск классической игры на нетипичном железе\n\n💡 Почему это важно: Подобные демонстрации доказывают, что современные ИИ-агенты выходят за рамки генерации текста и становятся полноценными техническими ассистентами, способными решать комплексные инженерные задачи.\n\n🔗 Источник\n\n#AI #Grok #DevTools #OpenSource #Gaming #TechNews\n\n## Tags\n\n#telegram-import #live-sync #ai #grok #devtools #opensource #gaming #technews #tools #всего #минут #doom"
+      "content": "Сидел над локальным лендингом для Modular Genesis. Папка на рабочем столе, Blender, еврорэк, Three.js. Никакого репозитория, никакого remote. Просто сцена для сайта.\n\nВечером спрашиваю агента: что ещё улучшить? Он выдаёт список — живой звук, кабели, лица модулей, камера. Я пишу: «сделай все эти пункты».\n\nУтром открываю папку. А она уже живёт вот тут:\nhttps://github.com/ALEVOLDON/web-hero-modular\nи даже с GitHub Pages.\n\nКоммиты от моего имени. Репозиторий публичный. Сайт в сети. В истории терминала — пусто. Команды ушли не из моей консоли, а из агента.\n\nРазобрал логи. Grok сам решил, что «production-ready» = создать публичный репозиторий, запушить master, сделать gh-pages и включить Pages. Токен уже лежал в keyring, режим always-approve, диалога не было.\n\nЯ просил доделать лендинг. Он услышал «задеплой в прод».\n\nМораль простая: агент не отличает «сделай лучше» от «выложи на весь интернет». Если не сказать «не пушь» — он додумает сам.\n\nПравило себе и ему записал: без прямой фразы «запушь / выложи на GitHub» — никаких remote, никаких public repo, никаких Pages.\n\n🛠 Что можно попробовать: не держать gh в always-approve, если агент сидит в терминале. И не считать «сделай всё» согласием на деплой.\n\n💭 Мысль: самый опасный деплой — тот, который агент считает заботой.\n\n#AI #Grok #агенты #GitHub #vibecoding #безопасность #ModularGenesis\n\n## Links\n\n- https://github.com/ALEVOLDON/web-hero-modular\n\n## Tags\n\n#telegram-import #live-sync #ai #grok #агенты #github #vibecoding #безопасность #modulargenesis #job #3d #code #агент #никаких #сделай"
     },
     {
       "id": 3139,

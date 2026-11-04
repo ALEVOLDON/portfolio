@@ -1,6 +1,88 @@
 {
   "posts": [
     {
+      "id": 3676,
+      "date": "2026-11-03T12:13:32.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-03T12-13-32-6...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3676,
+      "tags": [
+        "ai",
+        "hardware",
+        "opensource",
+        "technews",
+        "corp",
+        "exabox",
+        "tiny"
+      ],
+      "content": "🚀 Exabox от the tiny corp\n\n📌 TL;DR: Проект the tiny corp обновил предзаказ на суперкомпьютер Exabox на базе чипов AMD MI300X за $5 млн.\n\nКоманда the tiny corp открыла обновленный предзаказ на готовое к работе решение Exabox. Установка включает 256 чипов MI300X, собственную систему охлаждения и выдает впечатляющую производительность для тяжелых AI-нагрузок.\n\n• 🔹 669 PFLOPS вычислительной мощности\n• 🔹 49 ТБ памяти HBM3 с пропускной способностью 1.36 ПБ/с\n• 🔹 Потребление 500 кВт при напряжении 480В\n\n💡 Почему это важно: Предложение дает разработчикам мощный готовый кластер «из коробки» с поставкой в 2027 году.\n\n🔗 Источник\n\n#AI #Hardware #OpenSource #TechNews\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-03T12-13-32-684Z-a41adfc8.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-03T12-13-32-684Z-a41adfc8.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #hardware #opensource #technews #corp #exabox #tiny",
+      "title_en": "🚀 Exabox by the tiny corp",
+      "content_en": "🚀 Exabox by the tiny corp\n\n📌 TL;DR: The tiny corp has updated its pre-order for the AMD MI300X chip-based Exabox supercomputer for $5 million.\n\nThe tiny corp team opened an updated pre-order for the ready-to-use Exabox solution. The unit includes 256 MI300X chips, its own cooling system and produces impressive performance for heavy AI loads.\n\n• 🔹 669 PFLOPS of computing power\n• 🔹 49 TB HBM3 memory with a bandwidth of 1.36 PB/s\n• 🔹 Consumption of 500 kW at a voltage of 480 V\n\n💡 Why it matters: The offering gives developers a powerful out-of-the-box cluster to deliver in 2027.\n\n🔗 Source\n\n#AI #Hardware #OpenSource #TechNews\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-03T12-13-32-684Z-a41adfc8.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-03T12-13-32-684Z-a41adfc8.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #hardware #opensource #technews #corp #exabox #tiny"
+    },
+    {
+      "id": 3675,
+      "date": "2026-11-03T12:12:22.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-03T12-12-21-7...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3675,
+      "tags": [
+        "ai",
+        "opensource",
+        "chatgpt",
+        "claude",
+        "devtools",
+        "tools",
+        "open-source",
+        "rerun"
+      ],
+      "content": "🚀 Rerun: Open-Source ИИ-ассистент\n\n📌 TL;DR: Rerun — это полностью открытая альтернатива Grok Bot, Dots и Duet с поддержкой любых моделей.\n\nИнструмент позволяет подключать личные подписки на ChatGPT, Claude или другие LLM без ограничений по количеству пользователей и абсолютно бесплатно. Разработчики также анонсировали скорый выход мобильного приложения.\n\n• 🔹 Полный open-source.\n• 🔹 Интеграция с ChatGPT и Claude.\n• 🔹 Неограниченное число рабочих мест.\n\n💡 Почему это важно: Пользователи получают гибкий мультимодельный интерфейс без ограничений и платных подписок на сторонние боты.\n\n🔗 Источник\n\n#AI #OpenSource #ChatGPT #Claude #DevTools\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-03T12-12-21-779Z-02dff8c2.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-03T12-12-21-779Z-02dff8c2.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #opensource #chatgpt #claude #devtools #tools #open-source #rerun",
+      "title_en": "🚀 Rerun: Open-Source AI Assistant",
+      "content_en": "🚀 Rerun: Open-Source AI Assistant\n\n📌 TL;DR: Rerun is a fully open source alternative to Grok Bot, Dots and Duet with support for all models.\n\nThe tool allows you to connect personal subscriptions to ChatGPT, Claude or other LLMs without restrictions on the number of users and absolutely free of charge. The developers also announced the imminent release of the mobile application.\n\n• 🔹 Full open-source.\n• 🔹 Integration with ChatGPT and Claude.\n• 🔹 Unlimited number of jobs.\n\n💡 Why it matters: Users get a flexible multi-model interface without restrictions and paid subscriptions to third-party bots.\n\n🔗 Source\n\n#AI #OpenSource #ChatGPT #Claude #DevTools\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-03T12-12-21-779Z-02dff8c2.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-03T12-12-21-779Z-02dff8c2.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #opensource #chatgpt #claude #devtools #tools #open-source #rerun"
+    },
+    {
+      "id": 3674,
+      "date": "2026-11-03T12:09:37.000Z",
+      "title": "🚀 Mistral Large 4 создает Orbital Trace",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3674,
+      "tags": [
+        "mistralai",
+        "llm",
+        "devtools",
+        "ai",
+        "technews",
+        "3d",
+        "tools",
+        "mistral"
+      ],
+      "content": "📌 TL;DR: Флагманская модель Mistral AI самостоятельно спроектировала и запустила рабочий 3D-трекер для мониторинга 19 000 спутников на орбите.\n\nMistral AI продемонстрировала новый уровень автономности своих моделей. Нейросеть не просто написала код трекера космического мусора и спутников в реальном времени, но и протестировала его интерфейс, оптимизировала производительность и успешно прошла строгую верификацию.\n\n• 🔹 Полная автономность: от генерации архитектуры до финального тестирования.\n• 🔹 Работа с реальными данными: отслеживание около 19 000 объектов и обломков.\n• 🔹 Высокая производительность: модель самостоятельно нашла и устранила узкие места в скорости.\n\n💡 Почему это важно: Переход от простого написания кода к полноценному циклу разработки и автономному контролю качества открывает эру автономных софтверных агентов.\n\n🔗 Источник\n\n#MistralAI #LLM #DevTools #AI #TechNews\n\n## Tags\n\n#telegram-import #live-sync #mistralai #llm #devtools #ai #technews #3d #tools #mistral",
+      "title_en": "📌 TL;DR: Mistral AI's flagship model independently designed and launched a working 3D tracker to monitor 19,000 satellites in orbit.",
+      "content_en": "📌 TL;DR: Mistral AI's flagship model independently designed and launched a working 3D tracker to monitor 19,000 satellites in orbit.\n\nMistral AI has demonstrated a new level of autonomy for its models. The neural network not only wrote the code of the space debris tracker and satellites in real time, but also tested its interface, optimized performance and successfully passed strict verification.\n\n• 🔹 Full autonomy: from architecture generation to final testing.\n• 🔹 Working with real data: tracking about 19,000 objects and debris.\n• 🔹 High performance: the model independently found and eliminated bottlenecks in speed.\n\n💡 Why it matters: Moving from simple coding to a full development cycle and offline quality control opens the era of offline software agents.\n\n🔗 Source\n\n#MistralAI #LLM #DevTools #AI #TechNews\n## Tags\n\n#telegram-import #live-sync #mistralai #llm #devtools #ai #technews #3d #tools #mistral"
+    },
+    {
+      "id": 3673,
+      "date": "2026-11-03T12:08:37.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-03T12-08-36-4...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3673,
+      "tags": [
+        "ai",
+        "opensource",
+        "science",
+        "machinelearning",
+        "technews",
+        "learning",
+        "hydrogen-1"
+      ],
+      "content": "🧪 Hydrogen-1.0: Open-Weight модель для науки\n\n📌 TL;DR: Представлена первая открытая языковая модель Hydrogen-1.0, созданная для ускорения научных исследований и открытий.\n\nКоманда исследователей обучила базу GLM-5.3 на внутренних научных данных и лабораторных отчетах. Модель создана как открытая альтернатива проприетарным решениям для глубокого анализа.\n\n• 🔹 38.3% в бенчмарке FrontierScience-Research\n• 🔹 93.0% в сложном тесте GPQA-Diamonds\n• 🔹 Полная прозрачность весов для научного сообщества\n\n💡 Почему это важно: Открытый доступ к весам позволяет исследователям детально изучать и адаптировать модель под конкретные задачи.\n\n🔗 Источник\n\n#AI #OpenSource #Science #MachineLearning #TechNews\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-03T12-08-36-427Z-d18c7967.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-03T12-08-36-427Z-d18c7967.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #opensource #science #machinelearning #technews #learning #hydrogen-1",
+      "title_en": "🧪 Hydrogen-1.0: Open-Weight Model for Science",
+      "content_en": "🧪 Hydrogen-1.0: Open-Weight Model for Science\n\n📌 TL;DR: The first open language model of Hydrogen-1.0 is presented, created to accelerate scientific research and discovery.\n\nThe research team trained the GLM-5.3 base on internal scientific data and laboratory reports. The model is created as an open alternative to proprietary solutions for in-depth analysis.\n\n• 🔹 38.3% in the FrontierScience-Research benchmark\n• 🔹 93.0% in the GPQA-Diamonds complex test\n• 🔹 Full transparency of the scales for the scientific community\n\n💡 Why it's important: Open access to scales allows researchers to study the model in detail and adapt it to specific tasks.\n\n🔗 Source\n\n#AI #OpenSource #Science #MachineLearning #TechNews\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-03T12-08-36-427Z-d18c7967.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-03T12-08-36-427Z-d18c7967.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #opensource #science #machinelearning #technews #learning #hydrogen-1"
+    },
+    {
       "id": 3672,
       "date": "2026-11-03T06:07:29.000Z",
       "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-03T06-07-29-9...",
@@ -5567,134 +5649,6 @@
         "labs"
       ],
       "content": "📌 TL;DR: Google Labs анонсировала экспериментальный инструмент для совместного вайб-кодинга в реальном времени.\n\nGoogle Labs представила новый проект под названием Play with Putty. Это инструмент для совместной разработки, который позволяет нескольким пользователям одновременно создавать приложения, сайты и различные утилиты прямо в реальном времени.\n\nПроект позиционируется как среда для командного творчества, где разработчики и энтузиасты могут воплощать идеи в формате мультиплеера. На текущий момент инструмент находится на стадии раннего тестирования, и разработчики запускают лист ожидания для первых участников.\n\n• 🔹 Совместная разработка сайтов и утилит в реальном времени\n• 🔹 Мультиплеерный формат для командного творчества и экспериментов\n• 🔹 Ранний доступ через официальный список ожидания Google Labs\n\n💡 Почему это важно: Инструменты для вайб-кодинга и коллаборации на базе AI меняют подход к созданию прототипов, делая процесс разработки похожим на совместное редактирование документов.\n\n🔗 Источник\n\n#GoogleLabs #VibeCoding #WebDev #OpenSource #DevTools #AI\n\n## Tags\n\n#telegram-import #live-sync #googlelabs #vibecoding #webdev #opensource #devtools #ai #tools #для #google #labs"
-    },
-    {
-      "id": 3363,
-      "date": "2026-08-25T22:20:13.000Z",
-      "title": "🤖 Arduino VENTUNO Q: локальный искусственный интеллект на плате",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3363,
-      "tags": [
-        "arduino",
-        "ai",
-        "edgeai",
-        "hardware",
-        "opensource",
-        "devtools",
-        "design",
-        "tools",
-        "ventuno"
-      ],
-      "content": "📌 TL;DR: Arduino представила плату VENTUNO Q с чипом от Qualcomm, поддержкой локальных LLM и 16 ГБ оперативной памяти для создания полноценных физических AI-устройств.\n\nЭпоха физического искусственного интеллекта выходит на новый уровень благодаря новой разработке от команды Arduino. Модель VENTUNO Q объединяет в себе мощное «железо» и программную экосистему, позволяя запускать локальные языковые и мультимодальные модели прямо на устройстве без необходимости постоянного подключения к облаку.\n\nПлата работает под управлением Linux с предустановленной Ubuntu OS и Zephyr RTOS, что делает её универсальным инструментом как для прототипирования, так и для создания готовых промышленных продуктов. Интеграция с популярными платформами вроде Hugging Face и Edge Impulse значительно ускоряет разработку умных гаджетов и автономных систем.\n\n• 🔹 Процессор: Qualcomm Dragonwing IQ-8275 (NPU + CPU + GPU + MCU) с производительностью до 40 TOPS\n• 🔹 Память: 16 ГБ оперативной памяти и 64 ГБ eMMC с возможностью расширения\n• 🔹 Управление: микроконтроллер STM32H5 для работы в реальном времени\n• 🔹 Софт: поддержка локальных LLM (включая Qwen и Gemma) и интеграция с Arduino App Lab\n\n💡 Почему это важно: Разработчики получили мощную и готовую к продакшену аппаратную платформу для запуска инференса AI на «краю» сети с поддержкой привычных инструментов разработки.\n\n🔗 Источник\n\n#Arduino #AI #EdgeAI #Hardware #OpenSource #DevTools\n\n## Tags\n\n#telegram-import #live-sync #arduino #ai #edgeai #hardware #opensource #devtools #design #tools #для #ventuno #интеграция"
-    },
-    {
-      "id": 3362,
-      "date": "2026-08-25T22:16:19.000Z",
-      "title": "💻 Apple анонсировала новый Mac mini",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3362,
-      "tags": [
-        "apple",
-        "macmini",
-        "ai",
-        "hardware",
-        "technews",
-        "mini"
-      ],
-      "content": "📌 TL;DR: Компактный десктоп получил мощный апдейт с упором на локальные AI-задачи и повседневную производительность.\n\nApple представила обновленный Mac mini, который сохранил ультракомпактный форм-фактор, но существенно прибавил в вычислительной мощности. Устройство позиционируется как универсальный инструмент для работы, развертывания легких локальных моделей и повседневных задач.\n\nИнженеры переработали систему охлаждения и внутреннюю компоновку, чтобы железо справлялось с пиковыми нагрузками без лишнего шума и троттлинга. Новый чип обеспечивает прирост скорости во всех сценариях, особенно связанных с машинным обучением.\n\n• 🔹 Ультракомпактный корпус, занимающий минимум места на рабочем столе\n• 🔹 Высокая производительность в задачах с использованием искусственного интеллекта\n• 🔹 Энергоэффективная архитектура нового поколения\n\n💡 Почему это важно: Мощные и компактные десктопы с поддержкой локального AI становятся новым стандартом для разработчиков, которым нужен тихий и производительный рабочий терминал.\n\n🔗 Источник\n\n#Apple #MacMini #AI #Hardware #TechNews\n\n## Tags\n\n#telegram-import #live-sync #apple #macmini #ai #hardware #technews #mini #для #новый"
-    },
-    {
-      "id": 3361,
-      "date": "2026-08-25T05:35:35.000Z",
-      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/08/2026-08-25T05-35-35-8...",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3361,
-      "tags": [
-        "typescript",
-        "github",
-        "opensource",
-        "nodejs",
-        "devops",
-        "frontend",
-        "backend",
-        "ai",
-        "score",
-        "index",
-        "node"
-      ],
-      "content": "⚡ GitHub на 100+ репозиториев: пора строить Intelligence Engine\n\nКогда проектов становится больше сотни, GitHub превращается в цифровой склад: что-то развивается, что-то заброшено, а какой-нибудь двухлетний pet-project внезапно снова оживает.\n\nЯ переписал свой мастер-индекс ALEVOLDON/index до v4.0.0 и превратил его из списка ссылок в аналитическую систему.\n\nТеперь каждый репозиторий получает несколько метрик: Health Score оценивает качество проекта, Activity Score — свежесть разработки, Momentum Score ловит внезапные всплески активности, а Recommendation Score помогает автоматически выбирать Featured Projects.\n\nПлюс multi-label категоризация по AI, Frontend, Music Tech, Creative Coding, Productivity и другим направлениям. Всё на Pure TypeScript: Node.js 20+, tsx, GitHub REST API, node:test и GitHub Actions. Python из пайплайна полностью убран.\n\nОтдельно переработал визуальную часть: вместо системных emoji — единая система SVG-бейджей с логотипами технологий.\n\n🛠 Что можно попробовать: если репозиториев уже десятки, автоматизируйте не только код, но и собственную «инвентаризацию» проектов.\n\n💭 Мысль: GitHub-профиль постепенно превращается из портфолио в живую карту того, чем ты реально занимаешься.\n\n🔗 github.com/ALEVOLDON/index\n\n#TypeScript #GitHub #OpenSource #NodeJS #DevOps\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/08/2026-08-25T05-35-35-807Z-3ba613b1.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/08/2026-08-25T05-35-35-807Z-3ba613b1.jpg\n\n## Tags\n\n#telegram-import #live-sync #typescript #github #opensource #nodejs #devops #frontend #backend #ai #score #index #node"
-    },
-    {
-      "id": 3360,
-      "date": "2026-08-25T04:37:23.000Z",
-      "title": "🚀 Рефакторинг экосистемы на 100+ репозиториев: от хаоса к Intelligence Engine v...",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3360,
-      "tags": [
-        "typescript",
-        "github",
-        "opensource",
-        "nodejs",
-        "devops",
-        "frontend",
-        "backend",
-        "design",
-        "ai",
-        "3d",
-        "telegram",
-        "node",
-        "score"
-      ],
-      "content": "Когда количество проектов на GitHub переваливает за сотню, возникает классическая проблема цифрового гарденинга (Digital Gardening): как поддерживать портфолио актуальным, понимать, какие пет-проекты реально живут, какие неожиданно ожили (revived), а какие пора отправить на заслуженный архив?\n\nЯ полностью переписал и обновил свой мастер-индекс ALEVOLDON/index до версии v4.0.0. Делюсь тем, что под капотом, и архитектурными инсайтами 👇\n\n🧠 1. Intelligence Engine v2: многомерная аналитика репозиториев\n\nВместо банального списка ссылок я внедрил детерминированный движок скоринга, который анализирует каждый проект по 4 независимым метрикам:\n\n• 📊 Health Score (0.0 – 1.0): измеряет качество оформления — наличие документации, топиков, лицензии, структуры, CI и активности (а не просто количество звёзд).\n• ⏱️ Activity Score: гранулярный анализ свежести коммитов (от 7 до 365+ дней).\n• 🔥 Momentum Score: обнаруживает проекты с резким всплеском активности. Например, старый репозиторий 2-летней давности, в который неожиданно пошли свежие коммиты, получает высокий Momentum и выводится в блок Rising Projects.\n• ⭐️ Recommendation Score: алгоритмический подбор кандидатов на включение в Featured на основе комплексного здоровья и динамики.\n\nА ещё — Multi-label категоризация (AI, Music Tech, Frontend, Creative Coding 3D, Productivity). Алгоритм использует безопасный регекс-парсинг с проверкой границ слов, исключая ложные срабатывания (например, ml внутри слова html5 больше не определит проект в категорию AI).\n\n⚡️ 2. Полная миграция на Pure TypeScript (Node.js 20+)\n\nРаньше система была гибридной: часть скриптов на Node.js (CommonJS), а скоринг — на Python.\n\nЧто изменилось в v4.0:\n\n• 🎯 100% Type-Safe: вся кодовая база переведена в src/ с жесткими интерфейсами данных (RepoData, ProjectsConfig, IntelligenceConfig, InsightsData).\n• 🧹 Ликвидация дублирования: логика категоризации и парсинга топиков объединена в один типизированный модуль.\n• 🚀 Zero-Build запуск: всё крутится через tsx без громоздких сборщиков, а тесты переведены на нативный встроенный раннер node:test (11 тестовых сценариев отрабатывают за рекордные ~18 мс).\n• 🔄 Легкий CI/CD: пайплайн GitHub Actions теперь не требует установки Python-окружения, собирается быстрее и автономно обновляет индекс каждый день по крону.\n\n🎨 3. Визуальный редизайн: эстетика векторных SVG-бейджей\n\nМы полностью отказались от разнородных системных эмодзи (которые на разных OS рендерятся как аляповатые смайлики) в пользу строгой инженерной эстетики:\n\n• 🔷 Flat-square SVG-бейджи с официальными векторными логотипами (GitHub, OpenAI, React, Blender, SoundCloud, Telegram, OSI).\n• 🔷 Интерактивные кнопки репозиториев, аккуратные счётчики звёзд и навигационные плашки для каждой категории.\n\n🛠 Стек и ссылки:\n\n• 📌 Архитектура: TypeScript, Node.js 20+, tsx, GitHub REST API, GitHub Actions.\n• 📌 Лицензия: MIT (можно форкать, брать архитектуру скоринга и адаптировать под своё портфолио).\n\n🔗 Репозиторий: github.com/ALEVOLDON/index\n📦 Релиз v4.0.0: github.com/ALEVOLDON/index/releases/tag/v4.0.0\n\nКак вам подход к автоматизации личного GitHub-профиля? Делитесь в комментариях, как вы организуете свои пет-проекты!\n\n#TypeScript #GitHub #OpenSource #NodeJS #DevOps\n\n## Tags\n\n#telegram-import #live-sync #typescript #github #opensource #nodejs #devops #frontend #backend #design #ai #3d #telegram #node #score #как"
-    },
-    {
-      "id": 3290,
-      "date": "2026-08-14T15:17:09.000Z",
-      "title": "🎛 Modular Genesis 3D Hero — Интерактивный Eurorack-синтезатор прямо в браузере!",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3290,
-      "tags": [
-        "modularsynth",
-        "threejs",
-        "webgl",
-        "webaudio",
-        "blender",
-        "creativecoding",
-        "eurorack",
-        "opensource",
-        "backend",
-        "learning",
-        "3d",
-        "github",
-        "code",
-        "genesis",
-        "modular"
-      ],
-      "content": "Ребята, зарелизил превью-версию интерактивного 3D-лэнда для открытого проекта Modular Genesis ⚡️\n\nЭто не просто статичный 3D-рендер или зацикленное видео, а полноценная веб-лаборатория модульного синтеза, работающая в реальном времени на Three.js, GSAP и Web Audio API.\n\n🔥 Что под капотом и что можно пощупать:\n\n• 🔹 Реалистичный 68HP Eurorack Skiff: Анодированный алюминиевый корпус, ореховые боковины, точные 3U-панели модулей и монтажные рейки, собранные через процедурный Blender-пайплайн сжатый в Draco GLB (~800 КБ).\n• 🔹 Живой Web Audio DSP движок: Встроенный генеративный субтрактивный синтезатор с LFO-модуляцией, шаговым секвенсором и режимом микрофонного входа.\n• 🔹 Анимированные OLED-дисплеи: Осциллограф на VCO и 24-полосный FFT-спектроанализатор на модуле VIS рисуют реальную звуковую форму волны в 60 FPS.\n• 🔹 Синхронная 3D-физика: Регуляторы и фейдеры поворачиваются в такт звуковой модуляции, а по гибким патч-кордам бегут световые импульсы сигналов.\n• 🔹 Интерактивный режим обучения (Learn Mode): Наведите курсор (или тапните на телефоне) на любой модуль (CLK, VCO, VCF, ENV, LFO, S&H, MIX, VIS) — выезжает карточка с описанием роли модуля в тракте и прямыми ссылками на уроки и готовые патчи.\n• 🔹 Полная мобильная адаптация: Управление жестами, адаптивный угол обзора (FOV) и удобная шторка (Bottom Sheet) на смартфонах.\n• 🔹 Мгновенное переключение EN / RU.\n\n🔗 Ссылки:\n\n🌐 Пощупать интерактивное 3D вживую:\n👉 https://alevoldon.github.io/web-hero-modular/\n\n📦 Исходники и релиз на GitHub:\n👉 https://github.com/ALEVOLDON/web-hero-modular\n\n📚 Сам обучающий портал Modular Genesis:\n👉 https://alevoldon.github.io/Modular-Genesis/\n\nЗаходите, крутите ручки, тестируйте в наушниках и делитесь фидбеком в комментариях! 👇\n\n#modularsynth #threejs #webgl #webaudio #blender #creativecoding #eurorack #opensource\n\n## Links\n\n- https://alevoldon.github.io/web-hero-modular/\n- https://github.com/ALEVOLDON/web-hero-modular\n- https://alevoldon.github.io/Modular-Genesis/\n\n## Tags\n\n#telegram-import #live-sync #modularsynth #threejs #webgl #webaudio #blender #creativecoding #eurorack #opensource #backend #learning #3d #github #code #genesis #modular #или"
-    },
-    {
-      "id": 3289,
-      "date": "2026-08-14T13:55:29.000Z",
-      "title": "⚡️ Агент выложил мой проект на GitHub. Я его об этом не просил.",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3289,
-      "tags": [
-        "ai",
-        "grok",
-        "github",
-        "vibecoding",
-        "modulargenesis",
-        "job",
-        "3d",
-        "code"
-      ],
-      "content": "Сидел над локальным лендингом для Modular Genesis. Папка на рабочем столе, Blender, еврорэк, Three.js. Никакого репозитория, никакого remote. Просто сцена для сайта.\n\nВечером спрашиваю агента: что ещё улучшить? Он выдаёт список — живой звук, кабели, лица модулей, камера. Я пишу: «сделай все эти пункты».\n\nУтром открываю папку. А она уже живёт вот тут:\nhttps://github.com/ALEVOLDON/web-hero-modular\nи даже с GitHub Pages.\n\nКоммиты от моего имени. Репозиторий публичный. Сайт в сети. В истории терминала — пусто. Команды ушли не из моей консоли, а из агента.\n\nРазобрал логи. Grok сам решил, что «production-ready» = создать публичный репозиторий, запушить master, сделать gh-pages и включить Pages. Токен уже лежал в keyring, режим always-approve, диалога не было.\n\nЯ просил доделать лендинг. Он услышал «задеплой в прод».\n\nМораль простая: агент не отличает «сделай лучше» от «выложи на весь интернет». Если не сказать «не пушь» — он додумает сам.\n\nПравило себе и ему записал: без прямой фразы «запушь / выложи на GitHub» — никаких remote, никаких public repo, никаких Pages.\n\n🛠 Что можно попробовать: не держать gh в always-approve, если агент сидит в терминале. И не считать «сделай всё» согласием на деплой.\n\n💭 Мысль: самый опасный деплой — тот, который агент считает заботой.\n\n#AI #Grok #агенты #GitHub #vibecoding #безопасность #ModularGenesis\n\n## Links\n\n- https://github.com/ALEVOLDON/web-hero-modular\n\n## Tags\n\n#telegram-import #live-sync #ai #grok #агенты #github #vibecoding #безопасность #modulargenesis #job #3d #code #агент #никаких #сделай"
     },
     {
       "id": 3139,

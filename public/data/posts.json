@@ -1,6 +1,43 @@
 {
   "posts": [
     {
+      "id": 3678,
+      "date": "2026-11-04T22:04:57.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-04T22-04-58-1...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3678,
+      "tags": [
+        "esp32",
+        "diy",
+        "smarthome",
+        "electronics",
+        "iot",
+        "engineering"
+      ],
+      "content": "Умное реле против нестабильной электросети\n\nОбычные реле напряжения не умеют различать аварийную просадку сети и кратковременное падение напряжения при запуске компрессора холодильника.\n\nВ условиях постоянных блэкаутов и пониженного напряжения это превращается в проблему: реле отключает питание, холодильник пытается перезапуститься, цикл повторяется.\n\nИдея — разработать собственный Smart Power Controller на ESP32.\n\nЧто планируется:\n\n- Мониторинг входного и выходного напряжения.\n- Измерение потребляемого тока.\n- Распознавание пускового режима компрессора.\n- Интеллектуальная защита от длительных просадок.\n- Контроль блэкаутов и безопасное восстановление питания.\n- Wi-Fi-телеметрия, графики и журнал событий.\n\nГлавная задача — не просто отключать питание при каждом скачке, а анализировать происходящее и принимать обоснованные решения. При этом аппаратная защита от критических режимов должна оставаться независимой от программной логики.\n\n🛠 Практический вывод: иногда готовое устройство проще заменить собственной системой, адаптированной под реальные условия эксплуатации.\n\n💭 Нестабильная инфраструктура — не только проблема, но и повод создавать более интеллектуальные инженерные решения.\n\n#ESP32 #DIY #SmartHome #Electronics #IoT #Engineering\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-04T22-04-58-121Z-6f939278.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-04T22-04-58-121Z-6f939278.jpg\n\n## Tags\n\n#telegram-import #live-sync #esp32 #diy #smarthome #electronics #iot #engineering",
+      "title_en": "Smart relay against unstable power supply",
+      "content_en": "Smart relay against unstable power supply\n\nConventional voltage relays do not know how to distinguish between an emergency network drawdown and a short-term voltage drop when starting a refrigerator compressor.\n\nIn conditions of constant blackouts and undervoltage, this turns into a problem: the relay turns off the power, the refrigerator tries to restart, the cycle repeats.\n\nThe idea is to develop your own Smart Power Controller on ESP32.\n\nWhat is planned:\n\n- Input and output voltage monitoring.\n- Measurement of current consumption.\n- Recognition of the start-up mode of the compressor.\n- Intelligent protection against long drawdowns.\n- Control of blackouts and safe restoration of power supply.\n- Wi-Fi telemetry, graphs and event log.\n\nThe main task is not just to turn off the power at each jump, but to analyze what is happening and make informed decisions. At the same time, hardware protection against critical modes must remain independent of software logic.\n\n🛠 Practical conclusion: sometimes the finished device is easier to replace with its own system adapted to real operating conditions.\n\n💭 Unstable infrastructure is not only a problem, but also a reason to create more intelligent engineering solutions.\n\n#ESP32 #DIY #SmartHome #Electronics #IoT #Engineering\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-04T22-04-58-121Z-6f939278.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-04T22-04-58-121Z-6f939278.jpg\n\n## Tags\n\n#telegram-import #live-sync #esp32 #diy #smarthome #electronics #iot #engineering"
+    },
+    {
+      "id": 3677,
+      "date": "2026-11-04T13:03:02.000Z",
+      "title": "🚀 Завод SpaceX стоимостью $119 млрд",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3677,
+      "tags": [
+        "spacex",
+        "elonmusk",
+        "technews",
+        "automation",
+        "engineering"
+      ],
+      "content": "📌 TL;DR: ЭКСКЛЮЗИВНЫЙ ВЗГЛЯД ИЗНУТРИ НА ПРОИЗВОДСТВО КОСМИЧЕСКИХ КОРАБЛЕЙ И РАКЕТ.\n\nУникальный видеотур по гигантскому предприятию Илона Маска раскрывает детали сборки тяжелых ракет и космических аппаратов. Это масштабный инженерный комплекс, где технологии автоматизации и робототехники сочетаются с колоссальными производственными мощностями.\n\n• 🔹 Роботизированные линии сборки корпусов\n• 🔹 Инновационные методы сварки и работы с металлом\n• 🔹 Масштабные испытательные стенды двигателей\n\n💡 Почему это важно: Передовые методы оптимизации и автоматизации процессов из аэрокосмической сферы все чаще находят применение в ИТ и робототехнике.\n\n🔗 Источник\n\n#SpaceX #ElonMusk #TechNews #Automation #Engineering\n\n## Tags\n\n#telegram-import #live-sync #spacex #elonmusk #technews #automation #engineering",
+      "title_en": "📌 TL;DR: EXCLUSIVE INSIGHT INTO THE PRODUCTION OF SPACESHIPS AND ROCKETS.",
+      "content_en": "📌 TL;DR: EXCLUSIVE INSIGHT INTO THE PRODUCTION OF SPACESHIPS AND ROCKETS.\n\nA unique video tour of the giant enterprise of Elon Musk reveals the details of the assembly of heavy rockets and spacecraft. This is a large-scale engineering complex, where automation and robotics technologies are combined with colossal production capacities.\n\n• 🔹 Robotic body assembly lines\n• 🔹 Innovative methods of welding and working with metal\n• 🔹 Scale engine test benches\n\n💡 Why it matters: Advanced methods for optimizing and automating aerospace processes are increasingly being used in IT and robotics.\n\n🔗 Source\n\n#SpaceX #ElonMusk #TechNews #Automation #Engineering\n## Tags\n\n#telegram-import #live-sync #spacex #elonmusk #technews #automation #engineering"
+    },
+    {
       "id": 3676,
       "date": "2026-11-03T12:13:32.000Z",
       "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-03T12-13-32-6...",
@@ -5610,90 +5647,6 @@
         "tools"
       ],
       "content": "🚀 Я хотел собрать себе бесплатный Google Antigravity для телефона. А потом понял, что почти весь велосипед уже существует.\n\nПоследние пару дней я крутил одну идею: есть локальная модель в LM Studio, есть Gemma, есть MCP. А что если сделать так, чтобы с телефона можно было управлять своим компьютером через AI?\n\nНапример, лежишь на диване и пишешь:\n\n> «Проверь мой проект на диске D, найди ошибки TypeScript, исправь их, запусти тесты и сделай commit».\n\nИли отправляешь фотографию платы:\n\n> «Что это за контроллер? Найди документацию и скажи, как его подключить».\n\nИли:\n\n> «Возьми задачи из очереди и работай до утра. Утром покажи результат».\n\nПо сути хотелось получить что-то вроде Google Antigravity / Claude Code / Cursor, но локально, бесплатно и с моей собственной моделью.\n\nИ тут выяснилось самое интересное: большую часть этого уже не нужно писать с нуля.\n\nКак это может выглядеть\n\n📱 Телефон\n↓\n🌐 Open WebUI / Telegram\n↓\n🤖 AI Agent\n↓\n🧠 Gemma в LM Studio\n↓\n🔌 MCP / Tools\n↓\n📁 Файлы\n💻 Терминал\n🌐 Браузер\n🐙 GitHub\n🐳 Docker\n📷 Изображения\n\nОбычная локальная LLM сама по себе сидит в песочнице: она генерирует текст и не может просто так залезть на диск или запустить команду.\n\nА агентная система работает иначе:\n\nмодель → вызывает инструмент → инструмент выполняет действие → результат возвращается модели → модель принимает следующее решение.\n\nНапример:\n\n> «Проверь мой проект robot».\n\nАгент:\n\n→ находит проект\n→ читает package.json\n→ запускает тесты\n→ получает ошибку\n→ анализирует код\n→ исправляет\n→ снова запускает тесты\n→ проверяет результат\n→ создаёт commit.\n\nИ после этого пишет:\n\n> «Готово. Исправил 4 ошибки. Все тесты проходят».\n\nЭто уже совсем другой уровень.\n\nА если добавить телефон?\n\nТелефон становится просто пультом управления.\n\nМожно написать:\n\n> «Открой проект robot».\n\n> «Запусти тесты».\n\n> «Проверь мои GitHub-репозитории».\n\n> «Найди все TypeScript errors».\n\n> «Сделай code review последних изменений».\n\n> «Исправь проблемы и создай PR».\n\nПри этом сама модель работает на твоём компьютере.\n\nА фотографии?\n\nТут становится ещё интереснее.\n\nБерём vision-модель и отправляем ей фотографию платы.\n\nОна может:\n\n→ определить компонент\n→ найти документацию\n→ найти datasheet\n→ определить распиновку\n→ найти соответствующий проект на компьютере\n→ посмотреть код\n→ предложить решение.\n\nТо есть получается цепочка:\n\nфото → vision → поиск → файлы → код → решение.\n\nИ это уже очень похоже не на чат-бота, а на персонального технического ассистента.\n\nА потом можно добавить автономную работу\n\nНапример, перед сном оставить очередь:\n\n[ ] Проверить проект robot\n[ ] Обновить зависимости\n[ ] Найти TypeScript errors\n[ ] Проверить тесты\n[ ] Обновить README\n[ ] Сделать security audit\n\nА дальше компьютер работает ночью.\n\nУтром:\n\n> 🌙 NIGHT SHIFT\n\nПроанализировано: 18 проектов\nИсправлено: 24 проблемы\nСоздано: 6 PR\nТребует внимания: 3 задачи\n\nВот здесь AI начинает превращаться уже не в игрушку, а в инфраструктуру.\n\nИ самое приятное — готовые кирпичики уже есть\n\nLM Studio — локальная модель и API.\n\nOpen WebUI — интерфейс и агентный слой.\n\nMCP — подключение инструментов.\n\nOpenHands — автономная работа с кодом.\n\nGitHub — задачи, branches, commits и PR.\n\nDocker — песочница.\n\nTailscale — безопасный удалённый доступ.\n\nTelegram — удобный пульт.\n\nТо есть вместо того чтобы писать собственного «AI-фреймворка Франкенштейна», можно собрать систему из уже существующих компонентов и писать самостоятельно только то, чего действительно не хватает.\n\nКонцептуально получается:\n\n📱 Телефон → 🤖 Agent → 🧠 Local LLM → 🔌 MCP → 🖥️ твой компьютер\n\nИ вот это мне уже действительно интересно.\n\nПотому что следующая стадия AI — это, похоже, не только вопрос:\n\n> «Какая модель умнее?»\n\nА вопрос:\n\n> «Что эта модель реально умеет делать?»\n\nМодель сама по себе — это мозг.\n\nА вот мозг + инструменты + память + компьютер + автономность — уже совершенно другая история.\n\nИ, похоже, пришло время собрать себе такого локального монстра. 😄\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/08/2026-08-25T23-19-37-744Z-e6d65532.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/08/2026-08-25T23-19-37-744Z-e6d65532.jpg\n\n## Tags\n\n#telegram-import #live-sync #frontend #backend #design #ai #security #telegram #tools #уже #модель #это"
-    },
-    {
-      "id": 3365,
-      "date": "2026-08-25T22:23:13.000Z",
-      "title": "🚀 Perplexity запускает Portable Computer на NVIDIA DGX Spark",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3365,
-      "tags": [
-        "ai",
-        "perplexity",
-        "nvidia",
-        "localllm",
-        "agents",
-        "opensource",
-        "backend",
-        "spark"
-      ],
-      "content": "📌 TL;DR: Perplexity представила полностью локальную версию Portable Computer, которая работает прямо на вашем железе без какой-либо зависимости от облака.\n\nКоманда Perplexity выпустила Portable Computer — полностью автономную версию своей системы, созданную для запуска на оборудовании NVIDIA DGX Spark. Теперь весь рантайм, включая оркестратор LLM, субагентов и агентный хаб, функционирует локально на вашем устройстве.\n\nЭто решение открывает новые возможности для разработчиков и исследователей, которым важна полная конфиденциальность данных и независимость от внешних API-сервисов при работе со сложными многоагентными системами.\n\n• 🔹 Полная автономность без отправки данных в облако\n• 🔹 Запуск оркестратора и субагентов на локальном железе\n• 🔹 Оптимизация под работу на NVIDIA DGX Spark\n\n💡 Почему это важно: Локальный запуск сложных агентных систем позволяет проводить глубокие исследования и автоматизировать задачи с гарантией полной конфиденциальности и минимальными задержками.\n\n🔗 Источник\n\n#AI #Perplexity #NVIDIA #LocalLLM #Agents #OpenSource\n\n## Tags\n\n#telegram-import #live-sync #ai #perplexity #nvidia #localllm #agents #opensource #backend #spark #без #вашем"
-    },
-    {
-      "id": 3364,
-      "date": "2026-08-25T22:21:36.000Z",
-      "title": "🚀 Play with Putty от Google Labs",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3364,
-      "tags": [
-        "googlelabs",
-        "vibecoding",
-        "webdev",
-        "opensource",
-        "devtools",
-        "ai",
-        "tools",
-        "google",
-        "labs"
-      ],
-      "content": "📌 TL;DR: Google Labs анонсировала экспериментальный инструмент для совместного вайб-кодинга в реальном времени.\n\nGoogle Labs представила новый проект под названием Play with Putty. Это инструмент для совместной разработки, который позволяет нескольким пользователям одновременно создавать приложения, сайты и различные утилиты прямо в реальном времени.\n\nПроект позиционируется как среда для командного творчества, где разработчики и энтузиасты могут воплощать идеи в формате мультиплеера. На текущий момент инструмент находится на стадии раннего тестирования, и разработчики запускают лист ожидания для первых участников.\n\n• 🔹 Совместная разработка сайтов и утилит в реальном времени\n• 🔹 Мультиплеерный формат для командного творчества и экспериментов\n• 🔹 Ранний доступ через официальный список ожидания Google Labs\n\n💡 Почему это важно: Инструменты для вайб-кодинга и коллаборации на базе AI меняют подход к созданию прототипов, делая процесс разработки похожим на совместное редактирование документов.\n\n🔗 Источник\n\n#GoogleLabs #VibeCoding #WebDev #OpenSource #DevTools #AI\n\n## Tags\n\n#telegram-import #live-sync #googlelabs #vibecoding #webdev #opensource #devtools #ai #tools #для #google #labs"
-    },
-    {
-      "id": 3290,
-      "date": "2026-08-14T15:17:09.000Z",
-      "title": "🎛 Modular Genesis 3D Hero — Интерактивный Eurorack-синтезатор прямо в браузере!",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3290,
-      "tags": [
-        "modularsynth",
-        "threejs",
-        "webgl",
-        "webaudio",
-        "blender",
-        "creativecoding",
-        "eurorack",
-        "opensource",
-        "backend",
-        "learning",
-        "3d",
-        "github",
-        "code",
-        "genesis",
-        "modular"
-      ],
-      "content": "Ребята, зарелизил превью-версию интерактивного 3D-лэнда для открытого проекта Modular Genesis ⚡️\n\nЭто не просто статичный 3D-рендер или зацикленное видео, а полноценная веб-лаборатория модульного синтеза, работающая в реальном времени на Three.js, GSAP и Web Audio API.\n\n🔥 Что под капотом и что можно пощупать:\n\n• 🔹 Реалистичный 68HP Eurorack Skiff: Анодированный алюминиевый корпус, ореховые боковины, точные 3U-панели модулей и монтажные рейки, собранные через процедурный Blender-пайплайн сжатый в Draco GLB (~800 КБ).\n• 🔹 Живой Web Audio DSP движок: Встроенный генеративный субтрактивный синтезатор с LFO-модуляцией, шаговым секвенсором и режимом микрофонного входа.\n• 🔹 Анимированные OLED-дисплеи: Осциллограф на VCO и 24-полосный FFT-спектроанализатор на модуле VIS рисуют реальную звуковую форму волны в 60 FPS.\n• 🔹 Синхронная 3D-физика: Регуляторы и фейдеры поворачиваются в такт звуковой модуляции, а по гибким патч-кордам бегут световые импульсы сигналов.\n• 🔹 Интерактивный режим обучения (Learn Mode): Наведите курсор (или тапните на телефоне) на любой модуль (CLK, VCO, VCF, ENV, LFO, S&H, MIX, VIS) — выезжает карточка с описанием роли модуля в тракте и прямыми ссылками на уроки и готовые патчи.\n• 🔹 Полная мобильная адаптация: Управление жестами, адаптивный угол обзора (FOV) и удобная шторка (Bottom Sheet) на смартфонах.\n• 🔹 Мгновенное переключение EN / RU.\n\n🔗 Ссылки:\n\n🌐 Пощупать интерактивное 3D вживую:\n👉 https://alevoldon.github.io/web-hero-modular/\n\n📦 Исходники и релиз на GitHub:\n👉 https://github.com/ALEVOLDON/web-hero-modular\n\n📚 Сам обучающий портал Modular Genesis:\n👉 https://alevoldon.github.io/Modular-Genesis/\n\nЗаходите, крутите ручки, тестируйте в наушниках и делитесь фидбеком в комментариях! 👇\n\n#modularsynth #threejs #webgl #webaudio #blender #creativecoding #eurorack #opensource\n\n## Links\n\n- https://alevoldon.github.io/web-hero-modular/\n- https://github.com/ALEVOLDON/web-hero-modular\n- https://alevoldon.github.io/Modular-Genesis/\n\n## Tags\n\n#telegram-import #live-sync #modularsynth #threejs #webgl #webaudio #blender #creativecoding #eurorack #opensource #backend #learning #3d #github #code #genesis #modular #или"
-    },
-    {
-      "id": 3289,
-      "date": "2026-08-14T13:55:29.000Z",
-      "title": "⚡️ Агент выложил мой проект на GitHub. Я его об этом не просил.",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3289,
-      "tags": [
-        "ai",
-        "grok",
-        "github",
-        "vibecoding",
-        "modulargenesis",
-        "job",
-        "3d",
-        "code"
-      ],
-      "content": "Сидел над локальным лендингом для Modular Genesis. Папка на рабочем столе, Blender, еврорэк, Three.js. Никакого репозитория, никакого remote. Просто сцена для сайта.\n\nВечером спрашиваю агента: что ещё улучшить? Он выдаёт список — живой звук, кабели, лица модулей, камера. Я пишу: «сделай все эти пункты».\n\nУтром открываю папку. А она уже живёт вот тут:\nhttps://github.com/ALEVOLDON/web-hero-modular\nи даже с GitHub Pages.\n\nКоммиты от моего имени. Репозиторий публичный. Сайт в сети. В истории терминала — пусто. Команды ушли не из моей консоли, а из агента.\n\nРазобрал логи. Grok сам решил, что «production-ready» = создать публичный репозиторий, запушить master, сделать gh-pages и включить Pages. Токен уже лежал в keyring, режим always-approve, диалога не было.\n\nЯ просил доделать лендинг. Он услышал «задеплой в прод».\n\nМораль простая: агент не отличает «сделай лучше» от «выложи на весь интернет». Если не сказать «не пушь» — он додумает сам.\n\nПравило себе и ему записал: без прямой фразы «запушь / выложи на GitHub» — никаких remote, никаких public repo, никаких Pages.\n\n🛠 Что можно попробовать: не держать gh в always-approve, если агент сидит в терминале. И не считать «сделай всё» согласием на деплой.\n\n💭 Мысль: самый опасный деплой — тот, который агент считает заботой.\n\n#AI #Grok #агенты #GitHub #vibecoding #безопасность #ModularGenesis\n\n## Links\n\n- https://github.com/ALEVOLDON/web-hero-modular\n\n## Tags\n\n#telegram-import #live-sync #ai #grok #агенты #github #vibecoding #безопасность #modulargenesis #job #3d #code #агент #никаких #сделай"
     },
     {
       "id": 3139,

@@ -1,6 +1,60 @@
 {
   "posts": [
     {
+      "id": 3681,
+      "date": "2026-11-05T22:17:06.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-05T22-17-07-0...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3681,
+      "tags": [
+        "markets",
+        "economy",
+        "finance",
+        "news"
+      ],
+      "content": "📉 Исторический обвал рынка США\n\n📌 TL;DR: Фондовый рынок США зафиксировал крупнейший однодневный обвал в истории с потерей $2.8 трлн.\n\nАмериканский рынок акций столкнулся с беспрецедентным падением, превысившим рекордные показатели времен ковидного кризиса. Событие уже привлекло внимание глобальных инвесторов и аналитиков.\n\n• 🔹 Потеря $2.8 трлн капитализации за один день\n• 🔹 Превышен антирекорд эпохи Covid-краха ($2.69 трлн)\n• 🔹 Масштабный стресс-тест для мировой финансовой системы\n\n💡 Почему это важно: Исторические скачки ликвидности на традиционных рынках часто провоцируют переток капитала в технологический сектор и криптоактивы.\n\n🔗 Источник\n\n#Markets #Economy #Finance #News\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-05T22-17-07-034Z-4be24b8b.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-05T22-17-07-034Z-4be24b8b.jpg\n\n## Tags\n\n#telegram-import #live-sync #markets #economy #finance #news",
+      "title_en": "📉 Historic US Market Crash",
+      "content_en": "📉 Historic US Market Crash\n\n📌 TL;DR: The US stock market recorded the largest one-day crash in history with a loss of $2.8 trillion.\n\nThe American stock market faced an unprecedented fall, exceeding the record figures of the times of the COVID crisis. The event has already attracted the attention of global investors and analysts.\n\n• 🔹 Loss of $2.8 trillion of capitalization in one day\n• 🔹 Covid-era anti-record exceeded ($2.69 trillion)\n• 🔹 Large-scale stress test for the global financial system\n\n💡 Why it matters: Historical liquidity spikes in traditional markets often trigger capital outflows into the tech sector and crypto assets.\n\n🔗 Source\n\n#Markets #Economy #Finance #News\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-05T22-17-07-034Z-4be24b8b.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-05T22-17-07-034Z-4be24b8b.jpg\n\n## Tags\n\n#telegram-import #live-sync #markets #economy #finance #news"
+    },
+    {
+      "id": 3680,
+      "date": "2026-11-05T21:52:31.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-05T21-52-31-9...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3680,
+      "tags": [
+        "ai",
+        "claude",
+        "vpn",
+        "security",
+        "devtools",
+        "tools"
+      ],
+      "content": "🛡️ Как Anthropic блокирует пользователей\n\n📌 TL;DR: Эксперимент AmneziaVPN показал, как системы безопасности Claude вычисляют пользователей из недоступных регионов.\n\nКоманда Amnezia провела исследование методов блокировки в Claude. Оказалось, что главным триггером для ограничений выступает репутация IP-адреса и принадлежность к зафлагманенным подсетям VPN-провайдеров. Это полезно знать разработчикам и энтузиастам, работающим с зарубежными AI-сервисами.\n\n• 🔹 Анализ методов детекции региона\n• 🔹 Влияние VPN-диапазонов на баны\n• 🔹 Рекомендации по обходу блокировок\n\n💡 Почему это важно: Понимание алгоритмов фильтрации помогает избежать внезапной блокировки аккаунта при работе с LLM.\n\n🔗 Источник\n\n#AI #Claude #VPN #Security #DevTools\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-05T21-52-31-993Z-90fd48cb.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-05T21-52-31-993Z-90fd48cb.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #claude #vpn #security #devtools #tools",
+      "title_en": "🛡️ How Anthropic blocks users",
+      "content_en": "🛡️ How Anthropic blocks users\n\n📌 TL;DR: The AmneziaVPN experiment showed how Claude's security systems calculate users from inaccessible regions.\n\nThe Amnezia team conducted a study of blocking methods in Claude. It turned out that the main trigger for restrictions is the reputation of the IP address and belonging to the flagship subnets of VPN providers. This is useful for developers and enthusiasts working with foreign AI services.\n\n• 🔹 Analysis of region detection methods\n• 🔹 Effect of VPN ranges on bans\n• 🔹 Recommendations for bypassing interlocks\n\n💡 Why it's important: Understanding filtering algorithms helps avoid sudden account blocking when working with an LLM.\n\n🔗 Source\n\n#AI #Claude #VPN #Security #DevTools\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-05T21-52-31-993Z-90fd48cb.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-05T21-52-31-993Z-90fd48cb.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #claude #vpn #security #devtools #tools"
+    },
+    {
+      "id": 3679,
+      "date": "2026-11-05T18:06:05.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-05T18-06-13-6...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3679,
+      "tags": [
+        "musicproduction",
+        "ableton",
+        "daw",
+        "audiotech",
+        "news"
+      ],
+      "content": "🎵 Утекли детали Ableton Live 13\n\n📌 TL;DR: В сеть попали первые данные о грядущем обновлении популярной DAW с новыми инструментами организации и синтеза.\n\nВ сети появились подробности о готовящемся релизе Ableton Live 13. Новая версия популярной цифровой рабочей станции принесет масштабные улучшения интерфейса и встроенных инструментов для саунд-продюсеров и музыкантов.\n\n• 🔹 Новый удобный браузер цепочек эффектов\n• 🔹 Усовершенствованный встроенный драм-синтезатор\n• 🔹 Переработанный шаг секвенсора для быстрой работы\n\n💡 Почему это важно: Обновление значительно ускорит рутинные процессы создания музыки и упростит живые выступления.\n\n🔗 Источник\n\n#MusicProduction #Ableton #DAW #AudioTech #News\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-05T18-06-13-621Z-dd52c480.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-05T18-06-13-621Z-dd52c480.jpg\n\n## Tags\n\n#telegram-import #live-sync #musicproduction #ableton #daw #audiotech #news",
+      "title_en": "🎵 Ableton Live 13 parts leaked",
+      "content_en": "🎵 Ableton Live 13 parts leaked\n\n📌 TL;DR: The network has received the first data on the upcoming update of the popular Daw with new organization and synthesis tools.\n\nThe network has details about the upcoming release of Ableton Live 13. The new version of the popular digital workstation will bring massive improvements to the interface and built-in tools for sound producers and musicians.\n\n• 🔹 New user-friendly effect chain browser\n• 🔹 Advanced built-in drum synthesizer\n• 🔹 Reworked sequencer pitch for fast operation\n\n💡 Why it matters: The update will significantly speed up the routine processes of creating music and simplify live performances.\n\n🔗 Source\n\n#MusicProduction #Ableton #Daw #AudioTech #News\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-05T18-06-13-621Z-dd52c480.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-05T18-06-13-621Z-dd52c480.jpg\n\n## Tags\n\n#telegram-import #live-sync #musicproduction #ableton #daw #audiotech #news"
+    },
+    {
       "id": 3678,
       "date": "2026-11-04T22:04:57.000Z",
       "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-04T22-04-58-1...",
@@ -5584,114 +5638,6 @@
         "react"
       ],
       "content": "🚀 Как выглядит современный tech stack в 2026\nЕсли раньше вопрос звучал примерно так:\n«Что выбрать — React или Vue? Node или Python?»\n\nто в 2026 этого уже недостаточно.\nМы постепенно переходим от web stack к AI-native stack.\nИ архитектура начинает выглядеть совсем иначе.\n🟦 Frontend\nTypeScript + React + Next.js\nПлюс:\nTailwind CSS\nshadcn/ui\nсовременные React patterns\nTypeScript окончательно превращается не просто в «язык для фронтенда», а в один из главных универсальных языков AI-приложений.\n⚙️ Backend\nДля большинства проектов:\nTypeScript + Next.js / Hono\nНе обязательно поднимать огромный backend с десятками микросервисов.\nИногда достаточно:\nAPI → бизнес-логика → PostgreSQL\nА если нужна высокая производительность или edge-инфраструктура — подключаем соответствующие инструменты.\n🧠 AI layer\nВот здесь начинается самое интересное.\nСовременное приложение всё чаще выглядит так:\nUser → Agent → Tools → APIs → Database → Agent → User\nА не:\nUser → Frontend → REST API → Database\nВ стек постепенно входят:\nAI SDK\nAgents\nMCP\ntool calling\nstructured outputs\nRAG\nembeddings\nknowledge graphs\nТо есть AI становится частью архитектуры приложения, а не кнопкой «Спросить ChatGPT».\n🗄️ Database\nЗдесь ситуация удивительно скучная.\nИ это хорошо.\nPostgreSQL по-прежнему отличный default.\nДля AI:\npgvector\nДля cache/queues:\nRedis\nДля файлов:\nS3 / Cloudflare R2\nИ во многих проектах уже нет необходимости тащить отдельную vector database только потому, что модно.\n🐍 Python никуда не делся\nЕсли речь про ML/AI infrastructure:\nPython + FastAPI + PyTorch + Transformers + vLLM\nИ совершенно нормально иметь гибрид:\nTypeScript → application\nPython → AI/ML\nНе нужно превращать выбор языка в религиозную войну.\n🦀 А Rust?\nRust становится всё интереснее для:\nhigh-performance backend\nCLI\ndesktop\nWASM\nлокального AI\nсистемных инструментов\nНо изучать Rust только потому, что он сейчас модный — сомнительная инвестиция.\nЛучше сначала найти задачу, которую он реально решает.\n🐳 Infrastructure\nМинимальный современный набор:\nGitHub + Docker + CI/CD\nА дальше уже:\nVercel\nCloudflare\nVPS\nKubernetes — если действительно понадобился Kubernetes, а не потому что хочется почувствовать себя enterprise.\n🤖 И появился ещё один слой\nСамое интересное изменение 2026 года — AI coding tools становятся частью самого development stack.\nНапример:\nClaude / GPT / Gemini\n↓\nCodex / Claude Code / Cursor\n↓\nGit\n↓\nGitHub\n↓\nTests\n↓\nCI/CD\n↓\nProduction\nТо есть разработчик теперь работает не только с IDE.\nОн всё чаще управляет агентами, которые работают с кодовой базой.\n🔥 А какой стек выбрал бы я?\nДля AI-native проектов сегодня я бы начал примерно так:\nTypeScript\nReact + Next.js\nTailwind + shadcn/ui\nHono\nPostgreSQL + pgvector\nRedis\nAI SDK + Agents + MCP\nRAG + Knowledge Graph\nTelegram\nDocker\nGitHub Actions\nVercel / Cloudflare / VPS\nИ поверх всего этого:\nClaude / GPT / Gemini + coding agents\nПолучается уже не просто Full-Stack.\nПолучается:\nAI-Native Full-Stack\nИ, пожалуй, самое важное изменение:\nв 2026 хороший стек — это не тот, где 50 модных технологий.\nХороший стек — это тот, который позволяет человеку + AI-агентам быстро создавать, изменять, тестировать и разворачивать реальные продукты.\nА технологический зоопарк из 73 фреймворков можно оставить для тех, кто любит настраивать конфиги больше, чем создавать продукты. 😏\n#AI #Development #TechStack #TypeScript #NextJS #Agents #MCP #RAG #VibeCoding\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/08/2026-08-26T01-03-50-765Z-e42fa561.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/08/2026-08-26T01-03-50-765Z-e42fa561.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #development #techstack #typescript #nextjs #agents #mcp #rag #vibecoding #frontend #backend #design #telegram #tools #для #python #react"
-    },
-    {
-      "id": 3370,
-      "date": "2026-08-26T01:03:50.000Z",
-      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/08/2026-08-26T01-03-50-7...",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3370,
-      "tags": [
-        "ai",
-        "development",
-        "techstack",
-        "typescript",
-        "nextjs",
-        "agents",
-        "mcp",
-        "rag",
-        "vibecoding",
-        "frontend",
-        "backend",
-        "design",
-        "telegram",
-        "tools",
-        "python",
-        "react"
-      ],
-      "content": "🚀 Как выглядит современный tech stack в 2026\n\nЕсли раньше вопрос звучал примерно так:\n\n««Что выбрать — React или Vue? Node или Python?»»\n\nто в 2026 этого уже недостаточно.\n\nМы постепенно переходим от web stack к AI-native stack.\n\nИ архитектура начинает выглядеть совсем иначе.\n\n🟦 Frontend\n\nTypeScript + React + Next.js\n\nПлюс:\n\n- Tailwind CSS\n- shadcn/ui\n- современные React patterns\n\nTypeScript окончательно превращается не просто в «язык для фронтенда», а в один из главных универсальных языков AI-приложений.\n\n⚙️ Backend\n\nДля большинства проектов:\n\nTypeScript + Next.js / Hono\n\nНе обязательно поднимать огромный backend с десятками микросервисов.\n\nИногда достаточно:\n\n\"API → бизнес-логика → PostgreSQL\"\n\nА если нужна высокая производительность или edge-инфраструктура — подключаем соответствующие инструменты.\n\n🧠 AI layer\n\nВот здесь начинается самое интересное.\n\nСовременное приложение всё чаще выглядит так:\n\n\"User → Agent → Tools → APIs → Database → Agent → User\"\n\nА не:\n\n\"User → Frontend → REST API → Database\"\n\nВ стек постепенно входят:\n\n- AI SDK\n- Agents\n- MCP\n- tool calling\n- structured outputs\n- RAG\n- embeddings\n- knowledge graphs\n\nТо есть AI становится частью архитектуры приложения, а не кнопкой «Спросить ChatGPT».\n\n🗄️ Database\n\nЗдесь ситуация удивительно скучная.\n\nИ это хорошо.\n\nPostgreSQL по-прежнему отличный default.\n\nДля AI:\n\npgvector\n\nДля cache/queues:\n\nRedis\n\nДля файлов:\n\nS3 / Cloudflare R2\n\nИ во многих проектах уже нет необходимости тащить отдельную vector database только потому, что модно.\n\n🐍 Python никуда не делся\n\nЕсли речь про ML/AI infrastructure:\n\nPython + FastAPI + PyTorch + Transformers + vLLM\n\nИ совершенно нормально иметь гибрид:\n\n\"TypeScript → application\"\n\n\"Python → AI/ML\"\n\nНе нужно превращать выбор языка в религиозную войну.\n\n🦀 А Rust?\n\nRust становится всё интереснее для:\n\n- high-performance backend\n- CLI\n- desktop\n- WASM\n- локального AI\n- системных инструментов\n\nНо изучать Rust только потому, что он сейчас модный — сомнительная инвестиция.\n\nЛучше сначала найти задачу, которую он реально решает.\n\n🐳 Infrastructure\n\nМинимальный современный набор:\n\nGitHub + Docker + CI/CD\n\nА дальше уже:\n\n- Vercel\n- Cloudflare\n- VPS\n- Kubernetes — если действительно понадобился Kubernetes, а не потому что хочется почувствовать себя enterprise.\n\n---\n\n🤖 И появился ещё один слой\n\nСамое интересное изменение 2026 года — AI coding tools становятся частью самого development stack.\n\nНапример:\n\n\"Claude / GPT / Gemini\"\n\n↓\n\n\"Codex / Claude Code / Cursor\"\n\n↓\n\n\"Git\"\n\n↓\n\n\"GitHub\"\n\n↓\n\n\"Tests\"\n\n↓\n\n\"CI/CD\"\n\n↓\n\n\"Production\"\n\nТо есть разработчик теперь работает не только с IDE.\n\nОн всё чаще управляет агентами, которые работают с кодовой базой.\n\n---\n\n🔥 А какой стек выбрал бы я?\n\nДля AI-native проектов сегодня я бы начал примерно так:\n\nTypeScript\n\nReact + Next.js\n\nTailwind + shadcn/ui\n\nHono\n\nPostgreSQL + pgvector\n\nRedis\n\nAI SDK + Agents + MCP\n\nRAG + Knowledge Graph\n\nTelegram\n\nDocker\n\nGitHub Actions\n\nVercel / Cloudflare / VPS\n\nИ поверх всего этого:\n\nClaude / GPT / Gemini + coding agents\n\nПолучается уже не просто Full-Stack.\n\nПолучается:\n\n\"AI-Native Full-Stack\"\n\nИ, пожалуй, самое важное изменение:\n\nв 2026 хороший стек — это не тот, где 50 модных технологий.\n\nХороший стек — это тот, который позволяет человеку + AI-агентам быстро создавать, изменять, тестировать и разворачивать реальные продукты.\n\nА технологический зоопарк из 73 фреймворков можно оставить для тех, кто любит настраивать конфиги больше, чем создавать продукты. 😏\n\n#AI #Development #TechStack #TypeScript #NextJS #Agents #MCP #RAG #VibeCoding\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/08/2026-08-26T01-03-50-765Z-e42fa561.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/08/2026-08-26T01-03-50-765Z-e42fa561.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #development #techstack #typescript #nextjs #agents #mcp #rag #vibecoding #frontend #backend #design #telegram #tools #для #python #react"
-    },
-    {
-      "id": 3368,
-      "date": "2026-08-25T23:29:59.000Z",
-      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/08/2026-08-25T23-30-24-9...",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3368,
-      "tags": [
-        "ai",
-        "knowledgemanagement",
-        "obsidian",
-        "personalai",
-        "rag",
-        "telegram",
-        "tools"
-      ],
-      "content": "🤖 Эволюция идей: от простого RAG к личному графу знаний\n\nЯ тут понял, что обычный RAG для моих постов в Telegram — уже слишком примитивная задача.\n\nУ меня есть отдельный бот, который автоматически сохраняет все мои посты в Obsidian. По сути, там постепенно накопился личный архив мыслей, идей, наблюдений, проектов и экспериментов.\n\nИ вот теперь хочется сделать из этого не просто поиск по старым текстам, а личную интеллектуальную систему.\n\nУсловно:\n\nTelegram → бот → Obsidian → Knowledge Graph + Vector DB → AI Analyst.\n\nСистема должна не просто находить пост по запросу.\n\nОна должна понимать, о чём я вообще думал последние годы.\n\nНапример, из постов можно автоматически извлекать:\n\n• 🔹 сущности\n• 🔹 концепции\n• 🔹 идеи\n• 🔹 тезисы\n• 🔹 вопросы\n• 🔹 проекты\n• 🔹 технологии\n• 🔹 людей и компании\n• 🔹 связи между понятиями\n• 🔹 противоречия\n• 🔹 повторяющиеся мысли\n\nА дальше самое интересное.\n\nДопустим, я год назад написал:\n\n««AI-агент постепенно становится интерфейсом для работы с компьютером».»\n\nПотом через несколько месяцев писал про AI coding.\n\nПотом про MCP.\n\nПотом про локальные модели.\n\nПотом про управление компьютером через агента.\n\nА сейчас я начинаю думать о персональной AI OS.\n\nОбычный RAG просто скажет:\n\n⚠️ «Вот пять похожих постов».\n\nА нормальная система должна сказать:\n\n«Это развитие одной и той же идеи».\n\nИ показать примерно такую цепочку:\n\nAI tools\n↓\nAI coding\n↓\nAI agents\n↓\nMCP\n↓\nlocal agents\n↓\ncomputer control\n↓\npersonal AI infrastructure\n↓\nPersonal AI OS\n\nТо есть получится уже не поиск по архиву, а карта эволюции собственных идей.\n\nПричём очень полезная функция — анти-повтор.\n\nПеред публикацией нового поста можно спросить:\n\n«Я уже писал об этом?»\n\nИ система должна ответить:\n\n«Да. Нашла 6 похожих постов.\n\nСамый близкий — от 17 апреля.\n\nНо сейчас твоя идея отличается: раньше ты говорил про агента как интерфейс, а сейчас рассматриваешь агента как операционный слой.\n\nЭто не повтор. Это развитие темы.\n\nВот предыдущие посты, на которые стоит сослаться».\n\nПолучается своеобразный AI-редактор собственной интеллектуальной базы.\n\nЕщё интереснее — отслеживать жизненный цикл идей:\n\nSEED → OBSERVATION → HYPOTHESIS → EXPERIMENT → VALIDATED → PROJECT.\n\nНапример:\n\n«AI может управлять компьютером»\n\n↓\n\nпост\n\n↓\n\nэксперимент с MCP\n\n↓\n\nлокальный агент\n\n↓\n\nуправление приложениями\n\n↓\n\nуправление с телефона\n\n↓\n\nперсональная AI OS.\n\nИ тогда мои старые посты превращаются не просто в архив.\n\nОни становятся историей развития моих собственных идей.\n\nА потом можно задавать системе уже совершенно другие вопросы:\n\n• 🔸 Какие мои идеи за последний год реально развились?\n• 🔸 Где я постоянно повторяюсь?\n• 🔸 Какие идеи я бросил?\n• 🔸 Какие темы становятся центральными?\n• 🔸 Какие старые идеи сейчас стали технически реализуемыми?\n• 🔸 Где мои собственные мысли противоречат друг другу?\n• 🔸 Какие идеи могут превратиться в проекты?\n• 🔸 Что логично исследовать дальше?\n\nИ вот это, на мой взгляд, гораздо интереснее очередного RAG «загрузил документы → задал вопрос».\n\nПотому что RAG отвечает на вопрос:\n\n«Что написано в моих документах?»\n\nА такая система должна отвечать на вопрос:\n\n💡 «Как развивались мои мысли?»\n\nИ, возможно, следующий шаг здесь вообще не RAG, а что-то вроде Personal Knowledge Engine — личного интеллектуального двигателя, который постепенно строит модель твоего собственного информационного мира.\n\nПричём Obsidian в этой схеме остаётся источником истины.\n\nAI ничего не должен «переписывать задним числом».\n\nОн только строит производный слой:\n\n• ✅ embeddings\n• ✅ entities\n• ✅ concepts\n• ✅ relations\n• ✅ timelines\n• ✅ clusters\n• ✅ idea states\n• ✅ duplicate detection.\n\nА оригинальные мысли остаются нетронутыми.\n\nВ общем, кажется, мой Telegram-архив пора перестать считать архивом.\n\nПохоже, там уже начинает формироваться личный граф знаний.\n\nИ вот его действительно интересно раскопать.\n\n#AI #KnowledgeManagement #Obsidian #PersonalAI #RAG\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/08/2026-08-25T23-30-24-935Z-3a620f05.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/08/2026-08-25T23-30-24-935Z-3a620f05.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #knowledgemanagement #obsidian #personalai #rag #telegram #tools #идеи #вот #должна"
-    },
-    {
-      "id": 3366,
-      "date": "2026-08-25T23:19:36.000Z",
-      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/08/2026-08-25T23-19-37-7...",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3366,
-      "tags": [
-        "frontend",
-        "backend",
-        "design",
-        "ai",
-        "security",
-        "telegram",
-        "tools"
-      ],
-      "content": "🚀 Я хотел собрать себе бесплатный Google Antigravity для телефона. А потом понял, что почти весь велосипед уже существует.\n\nПоследние пару дней я крутил одну идею: есть локальная модель в LM Studio, есть Gemma, есть MCP. А что если сделать так, чтобы с телефона можно было управлять своим компьютером через AI?\n\nНапример, лежишь на диване и пишешь:\n\n> «Проверь мой проект на диске D, найди ошибки TypeScript, исправь их, запусти тесты и сделай commit».\n\nИли отправляешь фотографию платы:\n\n> «Что это за контроллер? Найди документацию и скажи, как его подключить».\n\nИли:\n\n> «Возьми задачи из очереди и работай до утра. Утром покажи результат».\n\nПо сути хотелось получить что-то вроде Google Antigravity / Claude Code / Cursor, но локально, бесплатно и с моей собственной моделью.\n\nИ тут выяснилось самое интересное: большую часть этого уже не нужно писать с нуля.\n\nКак это может выглядеть\n\n📱 Телефон\n↓\n🌐 Open WebUI / Telegram\n↓\n🤖 AI Agent\n↓\n🧠 Gemma в LM Studio\n↓\n🔌 MCP / Tools\n↓\n📁 Файлы\n💻 Терминал\n🌐 Браузер\n🐙 GitHub\n🐳 Docker\n📷 Изображения\n\nОбычная локальная LLM сама по себе сидит в песочнице: она генерирует текст и не может просто так залезть на диск или запустить команду.\n\nА агентная система работает иначе:\n\nмодель → вызывает инструмент → инструмент выполняет действие → результат возвращается модели → модель принимает следующее решение.\n\nНапример:\n\n> «Проверь мой проект robot».\n\nАгент:\n\n→ находит проект\n→ читает package.json\n→ запускает тесты\n→ получает ошибку\n→ анализирует код\n→ исправляет\n→ снова запускает тесты\n→ проверяет результат\n→ создаёт commit.\n\nИ после этого пишет:\n\n> «Готово. Исправил 4 ошибки. Все тесты проходят».\n\nЭто уже совсем другой уровень.\n\nА если добавить телефон?\n\nТелефон становится просто пультом управления.\n\nМожно написать:\n\n> «Открой проект robot».\n\n> «Запусти тесты».\n\n> «Проверь мои GitHub-репозитории».\n\n> «Найди все TypeScript errors».\n\n> «Сделай code review последних изменений».\n\n> «Исправь проблемы и создай PR».\n\nПри этом сама модель работает на твоём компьютере.\n\nА фотографии?\n\nТут становится ещё интереснее.\n\nБерём vision-модель и отправляем ей фотографию платы.\n\nОна может:\n\n→ определить компонент\n→ найти документацию\n→ найти datasheet\n→ определить распиновку\n→ найти соответствующий проект на компьютере\n→ посмотреть код\n→ предложить решение.\n\nТо есть получается цепочка:\n\nфото → vision → поиск → файлы → код → решение.\n\nИ это уже очень похоже не на чат-бота, а на персонального технического ассистента.\n\nА потом можно добавить автономную работу\n\nНапример, перед сном оставить очередь:\n\n[ ] Проверить проект robot\n[ ] Обновить зависимости\n[ ] Найти TypeScript errors\n[ ] Проверить тесты\n[ ] Обновить README\n[ ] Сделать security audit\n\nА дальше компьютер работает ночью.\n\nУтром:\n\n> 🌙 NIGHT SHIFT\n\nПроанализировано: 18 проектов\nИсправлено: 24 проблемы\nСоздано: 6 PR\nТребует внимания: 3 задачи\n\nВот здесь AI начинает превращаться уже не в игрушку, а в инфраструктуру.\n\nИ самое приятное — готовые кирпичики уже есть\n\nLM Studio — локальная модель и API.\n\nOpen WebUI — интерфейс и агентный слой.\n\nMCP — подключение инструментов.\n\nOpenHands — автономная работа с кодом.\n\nGitHub — задачи, branches, commits и PR.\n\nDocker — песочница.\n\nTailscale — безопасный удалённый доступ.\n\nTelegram — удобный пульт.\n\nТо есть вместо того чтобы писать собственного «AI-фреймворка Франкенштейна», можно собрать систему из уже существующих компонентов и писать самостоятельно только то, чего действительно не хватает.\n\nКонцептуально получается:\n\n📱 Телефон → 🤖 Agent → 🧠 Local LLM → 🔌 MCP → 🖥️ твой компьютер\n\nИ вот это мне уже действительно интересно.\n\nПотому что следующая стадия AI — это, похоже, не только вопрос:\n\n> «Какая модель умнее?»\n\nА вопрос:\n\n> «Что эта модель реально умеет делать?»\n\nМодель сама по себе — это мозг.\n\nА вот мозг + инструменты + память + компьютер + автономность — уже совершенно другая история.\n\nИ, похоже, пришло время собрать себе такого локального монстра. 😄\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/08/2026-08-25T23-19-37-744Z-e6d65532.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/08/2026-08-25T23-19-37-744Z-e6d65532.jpg\n\n## Tags\n\n#telegram-import #live-sync #frontend #backend #design #ai #security #telegram #tools #уже #модель #это"
-    },
-    {
-      "id": 3290,
-      "date": "2026-08-14T15:17:09.000Z",
-      "title": "🎛 Modular Genesis 3D Hero — Интерактивный Eurorack-синтезатор прямо в браузере!",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3290,
-      "tags": [
-        "modularsynth",
-        "threejs",
-        "webgl",
-        "webaudio",
-        "blender",
-        "creativecoding",
-        "eurorack",
-        "opensource",
-        "backend",
-        "learning",
-        "3d",
-        "github",
-        "code",
-        "genesis",
-        "modular"
-      ],
-      "content": "Ребята, зарелизил превью-версию интерактивного 3D-лэнда для открытого проекта Modular Genesis ⚡️\n\nЭто не просто статичный 3D-рендер или зацикленное видео, а полноценная веб-лаборатория модульного синтеза, работающая в реальном времени на Three.js, GSAP и Web Audio API.\n\n🔥 Что под капотом и что можно пощупать:\n\n• 🔹 Реалистичный 68HP Eurorack Skiff: Анодированный алюминиевый корпус, ореховые боковины, точные 3U-панели модулей и монтажные рейки, собранные через процедурный Blender-пайплайн сжатый в Draco GLB (~800 КБ).\n• 🔹 Живой Web Audio DSP движок: Встроенный генеративный субтрактивный синтезатор с LFO-модуляцией, шаговым секвенсором и режимом микрофонного входа.\n• 🔹 Анимированные OLED-дисплеи: Осциллограф на VCO и 24-полосный FFT-спектроанализатор на модуле VIS рисуют реальную звуковую форму волны в 60 FPS.\n• 🔹 Синхронная 3D-физика: Регуляторы и фейдеры поворачиваются в такт звуковой модуляции, а по гибким патч-кордам бегут световые импульсы сигналов.\n• 🔹 Интерактивный режим обучения (Learn Mode): Наведите курсор (или тапните на телефоне) на любой модуль (CLK, VCO, VCF, ENV, LFO, S&H, MIX, VIS) — выезжает карточка с описанием роли модуля в тракте и прямыми ссылками на уроки и готовые патчи.\n• 🔹 Полная мобильная адаптация: Управление жестами, адаптивный угол обзора (FOV) и удобная шторка (Bottom Sheet) на смартфонах.\n• 🔹 Мгновенное переключение EN / RU.\n\n🔗 Ссылки:\n\n🌐 Пощупать интерактивное 3D вживую:\n👉 https://alevoldon.github.io/web-hero-modular/\n\n📦 Исходники и релиз на GitHub:\n👉 https://github.com/ALEVOLDON/web-hero-modular\n\n📚 Сам обучающий портал Modular Genesis:\n👉 https://alevoldon.github.io/Modular-Genesis/\n\nЗаходите, крутите ручки, тестируйте в наушниках и делитесь фидбеком в комментариях! 👇\n\n#modularsynth #threejs #webgl #webaudio #blender #creativecoding #eurorack #opensource\n\n## Links\n\n- https://alevoldon.github.io/web-hero-modular/\n- https://github.com/ALEVOLDON/web-hero-modular\n- https://alevoldon.github.io/Modular-Genesis/\n\n## Tags\n\n#telegram-import #live-sync #modularsynth #threejs #webgl #webaudio #blender #creativecoding #eurorack #opensource #backend #learning #3d #github #code #genesis #modular #или"
-    },
-    {
-      "id": 3289,
-      "date": "2026-08-14T13:55:29.000Z",
-      "title": "⚡️ Агент выложил мой проект на GitHub. Я его об этом не просил.",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3289,
-      "tags": [
-        "ai",
-        "grok",
-        "github",
-        "vibecoding",
-        "modulargenesis",
-        "job",
-        "3d",
-        "code"
-      ],
-      "content": "Сидел над локальным лендингом для Modular Genesis. Папка на рабочем столе, Blender, еврорэк, Three.js. Никакого репозитория, никакого remote. Просто сцена для сайта.\n\nВечером спрашиваю агента: что ещё улучшить? Он выдаёт список — живой звук, кабели, лица модулей, камера. Я пишу: «сделай все эти пункты».\n\nУтром открываю папку. А она уже живёт вот тут:\nhttps://github.com/ALEVOLDON/web-hero-modular\nи даже с GitHub Pages.\n\nКоммиты от моего имени. Репозиторий публичный. Сайт в сети. В истории терминала — пусто. Команды ушли не из моей консоли, а из агента.\n\nРазобрал логи. Grok сам решил, что «production-ready» = создать публичный репозиторий, запушить master, сделать gh-pages и включить Pages. Токен уже лежал в keyring, режим always-approve, диалога не было.\n\nЯ просил доделать лендинг. Он услышал «задеплой в прод».\n\nМораль простая: агент не отличает «сделай лучше» от «выложи на весь интернет». Если не сказать «не пушь» — он додумает сам.\n\nПравило себе и ему записал: без прямой фразы «запушь / выложи на GitHub» — никаких remote, никаких public repo, никаких Pages.\n\n🛠 Что можно попробовать: не держать gh в always-approve, если агент сидит в терминале. И не считать «сделай всё» согласием на деплой.\n\n💭 Мысль: самый опасный деплой — тот, который агент считает заботой.\n\n#AI #Grok #агенты #GitHub #vibecoding #безопасность #ModularGenesis\n\n## Links\n\n- https://github.com/ALEVOLDON/web-hero-modular\n\n## Tags\n\n#telegram-import #live-sync #ai #grok #агенты #github #vibecoding #безопасность #modulargenesis #job #3d #code #агент #никаких #сделай"
     },
     {
       "id": 3139,

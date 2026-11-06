@@ -1,6 +1,68 @@
 {
   "posts": [
     {
+      "id": 3684,
+      "date": "2026-11-06T05:54:18.000Z",
+      "title": "🚀 Будущее за маленькими LLM",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3684,
+      "tags": [
+        "ai",
+        "llm",
+        "opensource",
+        "techtrends",
+        "devtools",
+        "backend",
+        "tools"
+      ],
+      "content": "📌 TL;DR: Андрей Карпаты объяснил, почему модели на 1B параметров эффективнее гигантов.\n\nСовременные языковые модели тратят до 90% ресурсов на заучивание ненужных фактов из интернета. Настоящий когнитивный центр разумных систем компактен, а интеллект живет в архитектуре агента, а не в гигантских весах.\n\n• 🔹 Фокус на рассуждениях вместо зубрежки\n• 🔹 Полная автономность и запуск на своем железе\n• 🔹 Превосходство связки «маленькая модель + инструменты» над монолитами\n\n💡 Почему это важно: Локальные модели на 1B–8B параметров избавят разработчиков от зависимости провайдеров и дорогого подешевого API.\n\n🔗 Источник\n\n#AI #LLM #OpenSource #TechTrends #DevTools\n\n## Tags\n\n#telegram-import #live-sync #ai #llm #opensource #techtrends #devtools #backend #tools",
+      "title_en": "📌 TL;DR: Andrey Karpaty explained why models with 1B parameters are more efficient than giants.",
+      "content_en": "📌 TL;DR: Andrey Karpaty explained why models with 1B parameters are more efficient than giants.\n\nModern language models spend up to 90% of their resources on learning unnecessary facts from the Internet. The true cognitive center of intelligent systems is compact, and intelligence lives in agent architecture, not in giant scales.\n\n• 🔹 Focus on reasoning instead of cramming\n• 🔹 Full autonomy and start-up on your hardware\n• 🔹 The superiority of the “small model + tools” bundle over the monoliths\n\n💡 Why it matters: Local models on 1B–8B parameters will save developers from the dependence of providers and an expensive cheap API.\n\n🔗 Source\n\n#AI #LLM #OpenSource #TechTrends #DevTools\n## Tags\n\n#telegram-import #live-sync #ai #llm #opensource #techtrends #devtools #backend #tools"
+    },
+    {
+      "id": 3683,
+      "date": "2026-11-06T05:52:18.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-06T05-52-18-8...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3683,
+      "tags": [
+        "ai",
+        "devtools",
+        "coding",
+        "opensource",
+        "technews",
+        "backend",
+        "tools",
+        "deepai"
+      ],
+      "content": "🚀 DeepAI Code: Топовые AI-модели для кода бесплатно\n\n📌 TL;DR: Платформа открыла свободный доступ к премиальным моделям для разработки без подписок и API-ключей.\n\nDeepAI запустила инструмент для генерации кода, объединяющий передовые языковые модели. Сервис предлагает бесплатный ежедневный лимит и быстрые модели без ограничений, заменяя дорогие аналоги.\n\n• 🔹 Доступ к моделям Claude и GPT\n• 🔹 Без привязки банковской карты\n• 🔹 Не требует личных API-ключей\n\n💡 Почему это важно: Разработчики получили мощный инструмент для написания кода без необходимости оформлять дорогие ежемесячные подписки.\n\n🔗 Источник\n\n#AI #DevTools #Coding #OpenSource #TechNews\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-06T05-52-18-815Z-8024e6be.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-06T05-52-18-815Z-8024e6be.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #devtools #coding #opensource #technews #backend #tools #deepai",
+      "title_en": "🚀 DeepAI Code: Top AI models for code for free",
+      "content_en": "🚀 DeepAI Code: Top AI models for code for free\n\n📌 TL;DR: The platform opened free access to premium models for development without subscriptions and API keys.\n\nDeepAI has launched a code generation tool that brings together advanced language models. The service offers a free daily limit and fast models without restrictions, replacing expensive analogues.\n\n• 🔹 Access to Claude and GPT models\n• 🔹 Without linking a bank card\n• 🔹 No personal API keys required\n\n💡 Why it matters: Developers got a powerful tool for writing code without having to sign up for expensive monthly subscriptions.\n\n🔗 Source\n\n#AI #DevTools #Coding #OpenSource #TechNews\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-06T05-52-18-815Z-8024e6be.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-06T05-52-18-815Z-8024e6be.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #devtools #coding #opensource #technews #backend #tools #deepai"
+    },
+    {
+      "id": 3682,
+      "date": "2026-11-06T05:49:09.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-06T05-49-09-5...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3682,
+      "tags": [
+        "ai",
+        "google",
+        "devtools",
+        "cloud",
+        "automation",
+        "tools",
+        "pull",
+        "request"
+      ],
+      "content": "🚀 Google Antigravity запускает удаленных AI-агентов\n\n📌 TL;DR: Google внедряет облачных агентов, которые выполняют задачи разработки в изолированных виртуальных машинах.\n\nТеперь разработчики могут запускать долгие процессы, отходить от ПК и управлять разрешениями прямо с телефона. По завершении задач система сама подготовит чистый pull request с пройденными тестами.\n\n• 🔹 Работа в независимых облачных виртуальных машинах\n• 🔹 Управление разрешениями и мониторинг со смартфона\n• 🔹 Автоматическое создание pull request после тестов\n\n💡 Почему это важно: Рутинные пайплайны и прогон тестов теперь полностью делегируются фоновым агентам.\n\n🔗 Источник\n\n#AI #Google #DevTools #Cloud #Automation\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-06T05-49-09-529Z-e14c9fc7.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-06T05-49-09-529Z-e14c9fc7.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #google #devtools #cloud #automation #tools #pull #request",
+      "title_en": "🚀 Google Antigravity Launches Remote AI Agents",
+      "content_en": "🚀 Google Antigravity Launches Remote AI Agents\n\n📌 TL;DR: Google implements cloud agents that perform development tasks in isolated virtual machines.\n\nDevelopers can now run long processes, move away from their PC, and manage permissions directly from their phone. Upon completion of the tasks, the system itself will prepare a clean pull request with the tests passed.\n\n• 🔹 Working in independent cloud virtual machines\n• Smartphone permissions 🔹 management and monitoring\n• 🔹 Automatically create a pull request after tests\n\n💡 Why it matters: Routine pipelines and test runs are now fully delegated to background agents.\n\n🔗 Source\n\n#AI #Google #DevTools #Cloud #Automation\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-06T05-49-09-529Z-e14c9fc7.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-06T05-49-09-529Z-e14c9fc7.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #google #devtools #cloud #automation #tools #pull #request"
+    },
+    {
       "id": 3681,
       "date": "2026-11-05T22:17:06.000Z",
       "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-05T22-17-07-0...",
@@ -5584,60 +5646,49 @@
       "content": "🧊 Как я за пару часов собрал систему мониторинга для старого холодильника и вывел мастера на чистую воду\n\nНедавно чинили наш старый добрый холодильник Samsung RT34MB (классический неубиваемый No Frost на корейском компрессоре). Поменяли всю управляющую начинку — термостат и таймер оттайки.\n\nНо после ремонта появилась странность: закладываешь продукты в морозилку — и компрессор молотит без остановки по 4–5 часов подряд.\n\nЗвоню мастеру. Ответ классический:\n\n«Да это у вас в сети напряжение проседает, вот компрессору и не хватает мощности, чтобы отключиться!» 🤷‍♂️\n\nСлова к делу не пришьешь, поэтому я решил проверить всё на уровне точных цифр, IoT и Python.\n\n🛠 Что было сделано за вечер\n\n• 🔹 Вспомнил физику: Посчитали термодинамику: чтобы заморозить 4–5 кг свежих продуктов, нужно отобрать уйму тепла на кристаллизацию льда (334 кДж на каждый литр воды!). Для компрессора мощностью ~160 Вт непрерывная работа в течение 3–5 часов при свежей закладке — это нормальная физика, а не поломка.\n• 🔹 Подключили умную розетку к облаку: Взял обычную Wi-Fi розетку Tuya / Smart Life с энергомониторингом, зарегистрировал облачный проект в Tuya Developer Platform и связал розетку по API через OpenAPI ключи.\n• 🔹 Написали свой сервер и веб-дашборд: Бэкенд: Python (Flask + TinyTuya + SQLite). Опрашивает облако каждые 5 секунд, сам детектирует пуск компрессора (>40 Вт) и отключение (<20 Вт). Фронтенд: Интерактивный дашборд с живыми графиками (Chart.js), онлайн-вольтметром, амперметром и авто-секундомером каждого цикла заморозки. Защита: Прошили в чип розетки аппаратную память (relay_status: last) и программную задержку на 3 минуты для безопасного выравнивания давления фреона при моргании света.\n• 🔹 Вывели на планшет: В локальной сети открыл монитор прямо на планшете на кухне — теперь перед глазами live-телеметрия всего холодильника!\n\n📊 Момент истины\n\n• ✅ Напряжение в розетке: стабильные 201.7 – 203.7 В! А на заводском шильдике компрессора черным по белому написано: 200–220V. То есть сеть работает в идеальном для этого мотора диапазоне, и версия мастера полностью разбита в пух и прах.\n• ✅ В 17:41 компрессор сам штатно включился на 128.6 Вт, набрал температуру и зафиксировал идеальный цикл в базу данных.\n\nМораль простая: в 2026 году не нужно гадать или верить на слово — умные датчики, немного кода и аналитика за пару минут превращают любые споры в неопровержимые графики. ⚠️\n\nА как вы боретесь с «экспертными» мнениями сервисных мастеров? 👇\n\n#diy #smarthome #iot #python #умныйдом #samsung #reverseengineering\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/08/2026-08-27T18-39-33-345Z-bec2dee6.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/08/2026-08-27T18-39-33-345Z-bec2dee6.jpg\n\n## Tags\n\n#telegram-import #live-sync #diy #smarthome #iot #python #умныйдом #samsung #reverseengineering #backend #для #компрессора #розетку"
     },
     {
-      "id": 3377,
-      "date": "2026-08-27T03:52:05.000Z",
-      "title": "Анонсирован ремейк «Героев меча и магии 3»: уже показали основные нововведения.",
+      "id": 3290,
+      "date": "2026-08-14T15:17:09.000Z",
+      "title": "🎛 Modular Genesis 3D Hero — Интерактивный Eurorack-синтезатор прямо в браузере!",
       "channel": "DUMP // AI & DEV",
       "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3377,
-      "tags": [],
-      "content": "В переиздании полностью обновят графику, но геймплей оставят без изменений. Все дополнения будут включены.\n\nПока без даты релиза. Добавляем в вишлисты тут.\n\n## Media\n\n- [video](https://alevoldon.com/media/telegram/2026/08/2026-08-27T03-52-10-929Z-29685082.mp4)\n\n## Tags\n\n#telegram-import #live-sync #без"
-    },
-    {
-      "id": 3376,
-      "date": "2026-08-26T11:29:22.000Z",
-      "title": "🚀 Релиз Ollama v0.33: интеграция с Claude Desktop",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3376,
+      "telegram_message_id": 3290,
       "tags": [
-        "ollama",
-        "claude",
-        "ai",
-        "llm",
+        "modularsynth",
+        "threejs",
+        "webgl",
+        "webaudio",
+        "blender",
+        "creativecoding",
+        "eurorack",
         "opensource",
-        "devtools",
-        "tools",
-        "desktop"
+        "backend",
+        "learning",
+        "3d",
+        "github",
+        "code",
+        "genesis",
+        "modular"
       ],
-      "content": "📌 TL;DR: Вышла новая версия Ollama v0.33, которая добавляет простую интеграцию с Claude Desktop для работы с локальными и облачными моделями через единый шлюз.\n\nКоманда Ollama выпустила обновление v0.33, существенно упрощающее гибридные рабочие процессы. Теперь пользователи популярного десктопного клиента Claude могут настроить Ollama в качестве стороннего провайдера буквально в один клик.\n\nЭто обновление стирает границы между локальным запуском моделей и облачными решениями. Разработчики и исследователи получают удобный инструмент для тестирования различных LLM в привычном интерфейсе без необходимости настраивать сложные прокси или конфигурационные файлы вручную.\n\n• 🔹 Нативная поддержка интеграции с Claude Desktop\n• 🔹 Единая точка доступа для локальных и облачных моделей\n• 🔹 Быстрое переключение провайдеров в один клик\n\n💡 Почему это важно: Инструмент позволяет объединить экосистему локальных моделей с передовым интерфейсом Claude, экономя время разработчиков на инфраструктурную рутину.\n\n🔗 Источник\n\n#Ollama #Claude #AI #LLM #OpenSource #DevTools\n\n## Tags\n\n#telegram-import #live-sync #ollama #claude #ai #llm #opensource #devtools #tools #desktop #для #моделей"
+      "content": "Ребята, зарелизил превью-версию интерактивного 3D-лэнда для открытого проекта Modular Genesis ⚡️\n\nЭто не просто статичный 3D-рендер или зацикленное видео, а полноценная веб-лаборатория модульного синтеза, работающая в реальном времени на Three.js, GSAP и Web Audio API.\n\n🔥 Что под капотом и что можно пощупать:\n\n• 🔹 Реалистичный 68HP Eurorack Skiff: Анодированный алюминиевый корпус, ореховые боковины, точные 3U-панели модулей и монтажные рейки, собранные через процедурный Blender-пайплайн сжатый в Draco GLB (~800 КБ).\n• 🔹 Живой Web Audio DSP движок: Встроенный генеративный субтрактивный синтезатор с LFO-модуляцией, шаговым секвенсором и режимом микрофонного входа.\n• 🔹 Анимированные OLED-дисплеи: Осциллограф на VCO и 24-полосный FFT-спектроанализатор на модуле VIS рисуют реальную звуковую форму волны в 60 FPS.\n• 🔹 Синхронная 3D-физика: Регуляторы и фейдеры поворачиваются в такт звуковой модуляции, а по гибким патч-кордам бегут световые импульсы сигналов.\n• 🔹 Интерактивный режим обучения (Learn Mode): Наведите курсор (или тапните на телефоне) на любой модуль (CLK, VCO, VCF, ENV, LFO, S&H, MIX, VIS) — выезжает карточка с описанием роли модуля в тракте и прямыми ссылками на уроки и готовые патчи.\n• 🔹 Полная мобильная адаптация: Управление жестами, адаптивный угол обзора (FOV) и удобная шторка (Bottom Sheet) на смартфонах.\n• 🔹 Мгновенное переключение EN / RU.\n\n🔗 Ссылки:\n\n🌐 Пощупать интерактивное 3D вживую:\n👉 https://alevoldon.github.io/web-hero-modular/\n\n📦 Исходники и релиз на GitHub:\n👉 https://github.com/ALEVOLDON/web-hero-modular\n\n📚 Сам обучающий портал Modular Genesis:\n👉 https://alevoldon.github.io/Modular-Genesis/\n\nЗаходите, крутите ручки, тестируйте в наушниках и делитесь фидбеком в комментариях! 👇\n\n#modularsynth #threejs #webgl #webaudio #blender #creativecoding #eurorack #opensource\n\n## Links\n\n- https://alevoldon.github.io/web-hero-modular/\n- https://github.com/ALEVOLDON/web-hero-modular\n- https://alevoldon.github.io/Modular-Genesis/\n\n## Tags\n\n#telegram-import #live-sync #modularsynth #threejs #webgl #webaudio #blender #creativecoding #eurorack #opensource #backend #learning #3d #github #code #genesis #modular #или"
     },
     {
-      "id": 3372,
-      "date": "2026-08-26T01:06:58.000Z",
-      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/08/2026-08-26T01-03-50-7...",
+      "id": 3289,
+      "date": "2026-08-14T13:55:29.000Z",
+      "title": "⚡️ Агент выложил мой проект на GitHub. Я его об этом не просил.",
       "channel": "DUMP // AI & DEV",
       "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3372,
+      "telegram_message_id": 3289,
       "tags": [
         "ai",
-        "development",
-        "techstack",
-        "typescript",
-        "nextjs",
-        "agents",
-        "mcp",
-        "rag",
+        "grok",
+        "github",
         "vibecoding",
-        "frontend",
-        "backend",
-        "design",
-        "telegram",
-        "tools",
-        "python",
-        "react"
+        "modulargenesis",
+        "job",
+        "3d",
+        "code"
       ],
-      "content": "🚀 Как выглядит современный tech stack в 2026\nЕсли раньше вопрос звучал примерно так:\n«Что выбрать — React или Vue? Node или Python?»\n\nто в 2026 этого уже недостаточно.\nМы постепенно переходим от web stack к AI-native stack.\nИ архитектура начинает выглядеть совсем иначе.\n🟦 Frontend\nTypeScript + React + Next.js\nПлюс:\nTailwind CSS\nshadcn/ui\nсовременные React patterns\nTypeScript окончательно превращается не просто в «язык для фронтенда», а в один из главных универсальных языков AI-приложений.\n⚙️ Backend\nДля большинства проектов:\nTypeScript + Next.js / Hono\nНе обязательно поднимать огромный backend с десятками микросервисов.\nИногда достаточно:\nAPI → бизнес-логика → PostgreSQL\nА если нужна высокая производительность или edge-инфраструктура — подключаем соответствующие инструменты.\n🧠 AI layer\nВот здесь начинается самое интересное.\nСовременное приложение всё чаще выглядит так:\nUser → Agent → Tools → APIs → Database → Agent → User\nА не:\nUser → Frontend → REST API → Database\nВ стек постепенно входят:\nAI SDK\nAgents\nMCP\ntool calling\nstructured outputs\nRAG\nembeddings\nknowledge graphs\nТо есть AI становится частью архитектуры приложения, а не кнопкой «Спросить ChatGPT».\n🗄️ Database\nЗдесь ситуация удивительно скучная.\nИ это хорошо.\nPostgreSQL по-прежнему отличный default.\nДля AI:\npgvector\nДля cache/queues:\nRedis\nДля файлов:\nS3 / Cloudflare R2\nИ во многих проектах уже нет необходимости тащить отдельную vector database только потому, что модно.\n🐍 Python никуда не делся\nЕсли речь про ML/AI infrastructure:\nPython + FastAPI + PyTorch + Transformers + vLLM\nИ совершенно нормально иметь гибрид:\nTypeScript → application\nPython → AI/ML\nНе нужно превращать выбор языка в религиозную войну.\n🦀 А Rust?\nRust становится всё интереснее для:\nhigh-performance backend\nCLI\ndesktop\nWASM\nлокального AI\nсистемных инструментов\nНо изучать Rust только потому, что он сейчас модный — сомнительная инвестиция.\nЛучше сначала найти задачу, которую он реально решает.\n🐳 Infrastructure\nМинимальный современный набор:\nGitHub + Docker + CI/CD\nА дальше уже:\nVercel\nCloudflare\nVPS\nKubernetes — если действительно понадобился Kubernetes, а не потому что хочется почувствовать себя enterprise.\n🤖 И появился ещё один слой\nСамое интересное изменение 2026 года — AI coding tools становятся частью самого development stack.\nНапример:\nClaude / GPT / Gemini\n↓\nCodex / Claude Code / Cursor\n↓\nGit\n↓\nGitHub\n↓\nTests\n↓\nCI/CD\n↓\nProduction\nТо есть разработчик теперь работает не только с IDE.\nОн всё чаще управляет агентами, которые работают с кодовой базой.\n🔥 А какой стек выбрал бы я?\nДля AI-native проектов сегодня я бы начал примерно так:\nTypeScript\nReact + Next.js\nTailwind + shadcn/ui\nHono\nPostgreSQL + pgvector\nRedis\nAI SDK + Agents + MCP\nRAG + Knowledge Graph\nTelegram\nDocker\nGitHub Actions\nVercel / Cloudflare / VPS\nИ поверх всего этого:\nClaude / GPT / Gemini + coding agents\nПолучается уже не просто Full-Stack.\nПолучается:\nAI-Native Full-Stack\nИ, пожалуй, самое важное изменение:\nв 2026 хороший стек — это не тот, где 50 модных технологий.\nХороший стек — это тот, который позволяет человеку + AI-агентам быстро создавать, изменять, тестировать и разворачивать реальные продукты.\nА технологический зоопарк из 73 фреймворков можно оставить для тех, кто любит настраивать конфиги больше, чем создавать продукты. 😏\n#AI #Development #TechStack #TypeScript #NextJS #Agents #MCP #RAG #VibeCoding\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/08/2026-08-26T01-03-50-765Z-e42fa561.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/08/2026-08-26T01-03-50-765Z-e42fa561.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #development #techstack #typescript #nextjs #agents #mcp #rag #vibecoding #frontend #backend #design #telegram #tools #для #python #react"
+      "content": "Сидел над локальным лендингом для Modular Genesis. Папка на рабочем столе, Blender, еврорэк, Three.js. Никакого репозитория, никакого remote. Просто сцена для сайта.\n\nВечером спрашиваю агента: что ещё улучшить? Он выдаёт список — живой звук, кабели, лица модулей, камера. Я пишу: «сделай все эти пункты».\n\nУтром открываю папку. А она уже живёт вот тут:\nhttps://github.com/ALEVOLDON/web-hero-modular\nи даже с GitHub Pages.\n\nКоммиты от моего имени. Репозиторий публичный. Сайт в сети. В истории терминала — пусто. Команды ушли не из моей консоли, а из агента.\n\nРазобрал логи. Grok сам решил, что «production-ready» = создать публичный репозиторий, запушить master, сделать gh-pages и включить Pages. Токен уже лежал в keyring, режим always-approve, диалога не было.\n\nЯ просил доделать лендинг. Он услышал «задеплой в прод».\n\nМораль простая: агент не отличает «сделай лучше» от «выложи на весь интернет». Если не сказать «не пушь» — он додумает сам.\n\nПравило себе и ему записал: без прямой фразы «запушь / выложи на GitHub» — никаких remote, никаких public repo, никаких Pages.\n\n🛠 Что можно попробовать: не держать gh в always-approve, если агент сидит в терминале. И не считать «сделай всё» согласием на деплой.\n\n💭 Мысль: самый опасный деплой — тот, который агент считает заботой.\n\n#AI #Grok #агенты #GitHub #vibecoding #безопасность #ModularGenesis\n\n## Links\n\n- https://github.com/ALEVOLDON/web-hero-modular\n\n## Tags\n\n#telegram-import #live-sync #ai #grok #агенты #github #vibecoding #безопасность #modulargenesis #job #3d #code #агент #никаких #сделай"
     },
     {
       "id": 3139,

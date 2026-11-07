@@ -1,6 +1,48 @@
 {
   "posts": [
     {
+      "id": 3686,
+      "date": "2026-11-06T11:59:53.000Z",
+      "title": "🚀 Lucy 2.6 от Decart",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3686,
+      "tags": [
+        "ai",
+        "videogeneration",
+        "deeplearning",
+        "technews",
+        "learning",
+        "video",
+        "tools",
+        "decart"
+      ],
+      "content": "📌 TL;DR: Вышло масштабное обновление ведущей мировой модели для работы с живым видео с акцентом на качество.\n\nКоманда Decart представила новую версию своей передовой генеративной модели для видео в реальном времени. Обновление приносит значительное улучшение визуального качества и стабильности генерации, открывая новые возможности для интерактивных мультимедийных приложений и видеостриминга.\n\n• 🔹 Серьезный апгрейд качества генерации видео\n• 🔹 Оптимизация для работы в режиме реального времени\n• 🔹 Улучшенная стабильность и детализация кадров\n\n💡 Почему это важно: Модели живого видео приближают нас к интерактивным мирам с мгновенным откликом и высокой детализацией.\n\n🔗 Источник\n\n#AI #VideoGeneration #DeepLearning #TechNews\n\n## Tags\n\n#telegram-import #live-sync #ai #videogeneration #deeplearning #technews #learning #video #tools #decart",
+      "title_en": "📌 TL;DR: A large-scale update of the world's leading model for working with live video with an emphasis on quality has been released.",
+      "content_en": "📌 TL;DR: A large-scale update of the world's leading model for working with live video with an emphasis on quality has been released.\n\nThe Decart team has introduced a new version of its advanced real-time video generative model. The update brings a significant improvement in the visual quality and stability of generation, opening up new opportunities for interactive multimedia applications and video streaming.\n\n• 🔹 Serious upgrade of video generation quality\n• Real-time 🔹 optimization\n• 🔹 Improved frame stability and detail\n\n💡 Why it matters: Live video models bring us closer to interactive worlds with instant response and high detail.\n\n🔗 Source\n\n#AI #VideoGeneration #DeepLearning #TechNews\n## Tags\n\n#telegram-import #live-sync #ai #videogeneration #deeplearning #technews #learning #video #tools #decart"
+    },
+    {
+      "id": 3685,
+      "date": "2026-11-06T11:59:13.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-06T11-59-12-6...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3685,
+      "tags": [
+        "ai",
+        "opensource",
+        "apidev",
+        "datamining",
+        "technews",
+        "backend",
+        "tools",
+        "open-source"
+      ],
+      "content": "🚀 Jev: Универсальный social-API для разработчиков\n\n📌 TL;DR: Open-source инструмент для сбора данных из соцсетей через единый API с минимальной стоимостью запросов.\n\nJev от @typesafeai агрегирует социальные данные в единую точку доступа. Решение помогает автоматизировать мониторинг бренда и анализ конкурентной среды без переплат.\n\n• 🔹 Один API для любых соцсетей\n• 🔹 Трекинг упоминаний и трендов\n• 🔹 Дешевый парсинг рекламы конкурентов\n\n💡 Почему это важно: Разработчики получают open-source инструмент с нулевой наценкой для быстрого доступа к социальным метрикам.\n\n🔗 Источник\n\n#AI #OpenSource #APIDev #DataMining #TechNews\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-06T11-59-12-621Z-72999adf.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-06T11-59-12-621Z-72999adf.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #opensource #apidev #datamining #technews #backend #tools #open-source",
+      "title_en": "🚀 Jev: Universal social-API for developers",
+      "content_en": "🚀 Jev: Universal social-API for developers\n\n📌 TL;DR: Open-source tool for collecting data from social networks through a single API with a minimum cost of requests.\n\nJev by @typesafeai aggregates social data into a single hotspot. The solution helps to automate brand monitoring and analysis of the competitive environment without overpayments.\n\n• 🔹 One API for any social media\n• 🔹 Tracking mentions and trends\n• 🔹 Cheap parsing of competitors' ads\n\n💡 Why it matters: Developers get an open-source tool with zero margins for quick access to social metrics.\n\n🔗 Source\n\n#AI #OpenSource #APIDev #DataMining #TechNews\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-06T11-59-12-621Z-72999adf.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-06T11-59-12-621Z-72999adf.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #opensource #apidev #datamining #technews #backend #tools #open-source"
+    },
+    {
       "id": 3684,
       "date": "2026-11-06T05:54:18.000Z",
       "title": "🚀 Будущее за маленькими LLM",
@@ -5612,83 +5654,6 @@
         "security"
       ],
       "content": "📱 Как я дал вторую жизнь старому iPad и собрал умный холодильник за $0 (вместо $3000)\n\nИстория о том, как пара строчек кода и старое «железо» с полки побеждают догадки сервисников.\n\n🎬 Предыстория\n\nМастер по ремонту холодильника выдал базу: «Он у вас молотит часами, потому что в розетке напряжение плохое!».\n\nСпорить на словах я не стал — вместо этого решил ответить точными цифрами, логами и графиками.\n\n🛠 Что собрал за вечер\n\n• 🔹 Датчик: Умная Wi-Fi розетка Tuya с энергомониторингом.\n• 🔹 Сервер 24/7 (3 Вт потребления): Вся логика, Python-сервер на Flask и база данных SQLite крутятся на копеечной ТВ-приставке H96 Max в Termux. Она не шумит, потребляет 10 рублей электричества в месяц и пишет логи секунда в секунду.\n• 🔹 Бортовой экран: Достал с полки древний iPad 2 (который уже не тянет современные тяжелые сайты), написал под него специальный ультралегкий интерфейс на чистом ES5/CSS3 без фреймворков и закрепил на дверь холодильника.\n\n📊 Что получилось на экране\n\n• 🔸 Реальное напряжение в сети: стабильные 212.4 В (при паспортной норме мотора 200–220В). Мастер повержен цифрами.\n• 🔸 Умный секундомер циклов: компрессор сам определяет пуск/остановку. Когда холодильник отдыхает — таймер бирюзовым цветом считает время стоянки и пишет прогноз: «Отдых 18 мин (норма 35–55 мин). Запуск через ~27 мин».\n• 🔸 Автоматический журнал: система зафиксировала 5 идеальных циклов (30 мин работы на 42 мин отдыха, КРВ = 0.38 — эталонная энергоэффективность).\n\n💡 Мораль\n\nНе спешите выбрасывать старые планшеты и приставки — при правильном подходе из них получается премиальный Smart Home уровня Samsung Family Hub, только быстрее, надежнее и своими руками 🚀\n\nКак вам апгрейд? Пишите в комментарии 👇\n\n#SmartHome #DIY #LifeHack #Python #Tech\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/08/2026-08-27T20-26-00-711Z-73f2126d.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/08/2026-08-27T20-26-00-711Z-73f2126d.jpg\n\n## Tags\n\n#telegram-import #live-sync #smarthome #diy #lifehack #python #tech #frontend #backend #design #security #мин #как #что"
-    },
-    {
-      "id": 3379,
-      "date": "2026-08-27T17:00:19.000Z",
-      "title": "https://docs.google.com/document/d/18iPypSiK2Ch1aREFgpr6EBzN02jkWRa/edit?usp=sha...",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3379,
-      "tags": [
-        "design",
-        "google",
-        "true"
-      ],
-      "content": "## Links\n\n- https://docs.google.com/document/d/18iPypSiK2Ch1_aREFgpr6EBzN02jkWRa/edit?usp=sharing&ouid=113186996453109659730&rtpof=true&sd=true\n\n## Tags\n\n#telegram-import #live-sync #design #google #true"
-    },
-    {
-      "id": 3378,
-      "date": "2026-08-27T14:57:56.000Z",
-      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/08/2026-08-27T18-39-33-3...",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3378,
-      "tags": [
-        "diy",
-        "smarthome",
-        "iot",
-        "python",
-        "samsung",
-        "reverseengineering",
-        "backend"
-      ],
-      "content": "🧊 Как я за пару часов собрал систему мониторинга для старого холодильника и вывел мастера на чистую воду\n\nНедавно чинили наш старый добрый холодильник Samsung RT34MB (классический неубиваемый No Frost на корейском компрессоре). Поменяли всю управляющую начинку — термостат и таймер оттайки.\n\nНо после ремонта появилась странность: закладываешь продукты в морозилку — и компрессор молотит без остановки по 4–5 часов подряд.\n\nЗвоню мастеру. Ответ классический:\n\n«Да это у вас в сети напряжение проседает, вот компрессору и не хватает мощности, чтобы отключиться!» 🤷‍♂️\n\nСлова к делу не пришьешь, поэтому я решил проверить всё на уровне точных цифр, IoT и Python.\n\n🛠 Что было сделано за вечер\n\n• 🔹 Вспомнил физику: Посчитали термодинамику: чтобы заморозить 4–5 кг свежих продуктов, нужно отобрать уйму тепла на кристаллизацию льда (334 кДж на каждый литр воды!). Для компрессора мощностью ~160 Вт непрерывная работа в течение 3–5 часов при свежей закладке — это нормальная физика, а не поломка.\n• 🔹 Подключили умную розетку к облаку: Взял обычную Wi-Fi розетку Tuya / Smart Life с энергомониторингом, зарегистрировал облачный проект в Tuya Developer Platform и связал розетку по API через OpenAPI ключи.\n• 🔹 Написали свой сервер и веб-дашборд: Бэкенд: Python (Flask + TinyTuya + SQLite). Опрашивает облако каждые 5 секунд, сам детектирует пуск компрессора (>40 Вт) и отключение (<20 Вт). Фронтенд: Интерактивный дашборд с живыми графиками (Chart.js), онлайн-вольтметром, амперметром и авто-секундомером каждого цикла заморозки. Защита: Прошили в чип розетки аппаратную память (relay_status: last) и программную задержку на 3 минуты для безопасного выравнивания давления фреона при моргании света.\n• 🔹 Вывели на планшет: В локальной сети открыл монитор прямо на планшете на кухне — теперь перед глазами live-телеметрия всего холодильника!\n\n📊 Момент истины\n\n• ✅ Напряжение в розетке: стабильные 201.7 – 203.7 В! А на заводском шильдике компрессора черным по белому написано: 200–220V. То есть сеть работает в идеальном для этого мотора диапазоне, и версия мастера полностью разбита в пух и прах.\n• ✅ В 17:41 компрессор сам штатно включился на 128.6 Вт, набрал температуру и зафиксировал идеальный цикл в базу данных.\n\nМораль простая: в 2026 году не нужно гадать или верить на слово — умные датчики, немного кода и аналитика за пару минут превращают любые споры в неопровержимые графики. ⚠️\n\nА как вы боретесь с «экспертными» мнениями сервисных мастеров? 👇\n\n#diy #smarthome #iot #python #умныйдом #samsung #reverseengineering\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/08/2026-08-27T18-39-33-345Z-bec2dee6.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/08/2026-08-27T18-39-33-345Z-bec2dee6.jpg\n\n## Tags\n\n#telegram-import #live-sync #diy #smarthome #iot #python #умныйдом #samsung #reverseengineering #backend #для #компрессора #розетку"
-    },
-    {
-      "id": 3290,
-      "date": "2026-08-14T15:17:09.000Z",
-      "title": "🎛 Modular Genesis 3D Hero — Интерактивный Eurorack-синтезатор прямо в браузере!",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3290,
-      "tags": [
-        "modularsynth",
-        "threejs",
-        "webgl",
-        "webaudio",
-        "blender",
-        "creativecoding",
-        "eurorack",
-        "opensource",
-        "backend",
-        "learning",
-        "3d",
-        "github",
-        "code",
-        "genesis",
-        "modular"
-      ],
-      "content": "Ребята, зарелизил превью-версию интерактивного 3D-лэнда для открытого проекта Modular Genesis ⚡️\n\nЭто не просто статичный 3D-рендер или зацикленное видео, а полноценная веб-лаборатория модульного синтеза, работающая в реальном времени на Three.js, GSAP и Web Audio API.\n\n🔥 Что под капотом и что можно пощупать:\n\n• 🔹 Реалистичный 68HP Eurorack Skiff: Анодированный алюминиевый корпус, ореховые боковины, точные 3U-панели модулей и монтажные рейки, собранные через процедурный Blender-пайплайн сжатый в Draco GLB (~800 КБ).\n• 🔹 Живой Web Audio DSP движок: Встроенный генеративный субтрактивный синтезатор с LFO-модуляцией, шаговым секвенсором и режимом микрофонного входа.\n• 🔹 Анимированные OLED-дисплеи: Осциллограф на VCO и 24-полосный FFT-спектроанализатор на модуле VIS рисуют реальную звуковую форму волны в 60 FPS.\n• 🔹 Синхронная 3D-физика: Регуляторы и фейдеры поворачиваются в такт звуковой модуляции, а по гибким патч-кордам бегут световые импульсы сигналов.\n• 🔹 Интерактивный режим обучения (Learn Mode): Наведите курсор (или тапните на телефоне) на любой модуль (CLK, VCO, VCF, ENV, LFO, S&H, MIX, VIS) — выезжает карточка с описанием роли модуля в тракте и прямыми ссылками на уроки и готовые патчи.\n• 🔹 Полная мобильная адаптация: Управление жестами, адаптивный угол обзора (FOV) и удобная шторка (Bottom Sheet) на смартфонах.\n• 🔹 Мгновенное переключение EN / RU.\n\n🔗 Ссылки:\n\n🌐 Пощупать интерактивное 3D вживую:\n👉 https://alevoldon.github.io/web-hero-modular/\n\n📦 Исходники и релиз на GitHub:\n👉 https://github.com/ALEVOLDON/web-hero-modular\n\n📚 Сам обучающий портал Modular Genesis:\n👉 https://alevoldon.github.io/Modular-Genesis/\n\nЗаходите, крутите ручки, тестируйте в наушниках и делитесь фидбеком в комментариях! 👇\n\n#modularsynth #threejs #webgl #webaudio #blender #creativecoding #eurorack #opensource\n\n## Links\n\n- https://alevoldon.github.io/web-hero-modular/\n- https://github.com/ALEVOLDON/web-hero-modular\n- https://alevoldon.github.io/Modular-Genesis/\n\n## Tags\n\n#telegram-import #live-sync #modularsynth #threejs #webgl #webaudio #blender #creativecoding #eurorack #opensource #backend #learning #3d #github #code #genesis #modular #или"
-    },
-    {
-      "id": 3289,
-      "date": "2026-08-14T13:55:29.000Z",
-      "title": "⚡️ Агент выложил мой проект на GitHub. Я его об этом не просил.",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3289,
-      "tags": [
-        "ai",
-        "grok",
-        "github",
-        "vibecoding",
-        "modulargenesis",
-        "job",
-        "3d",
-        "code"
-      ],
-      "content": "Сидел над локальным лендингом для Modular Genesis. Папка на рабочем столе, Blender, еврорэк, Three.js. Никакого репозитория, никакого remote. Просто сцена для сайта.\n\nВечером спрашиваю агента: что ещё улучшить? Он выдаёт список — живой звук, кабели, лица модулей, камера. Я пишу: «сделай все эти пункты».\n\nУтром открываю папку. А она уже живёт вот тут:\nhttps://github.com/ALEVOLDON/web-hero-modular\nи даже с GitHub Pages.\n\nКоммиты от моего имени. Репозиторий публичный. Сайт в сети. В истории терминала — пусто. Команды ушли не из моей консоли, а из агента.\n\nРазобрал логи. Grok сам решил, что «production-ready» = создать публичный репозиторий, запушить master, сделать gh-pages и включить Pages. Токен уже лежал в keyring, режим always-approve, диалога не было.\n\nЯ просил доделать лендинг. Он услышал «задеплой в прод».\n\nМораль простая: агент не отличает «сделай лучше» от «выложи на весь интернет». Если не сказать «не пушь» — он додумает сам.\n\nПравило себе и ему записал: без прямой фразы «запушь / выложи на GitHub» — никаких remote, никаких public repo, никаких Pages.\n\n🛠 Что можно попробовать: не держать gh в always-approve, если агент сидит в терминале. И не считать «сделай всё» согласием на деплой.\n\n💭 Мысль: самый опасный деплой — тот, который агент считает заботой.\n\n#AI #Grok #агенты #GitHub #vibecoding #безопасность #ModularGenesis\n\n## Links\n\n- https://github.com/ALEVOLDON/web-hero-modular\n\n## Tags\n\n#telegram-import #live-sync #ai #grok #агенты #github #vibecoding #безопасность #modulargenesis #job #3d #code #агент #никаких #сделай"
     },
     {
       "id": 3139,

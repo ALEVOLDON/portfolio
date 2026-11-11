@@ -1,6 +1,67 @@
 {
   "posts": [
     {
+      "id": 3704,
+      "date": "2026-11-11T15:11:58.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-11T15-12-05-3...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3704,
+      "tags": [
+        "webdev",
+        "ai",
+        "frontend",
+        "javascript",
+        "html",
+        "design",
+        "modern"
+      ],
+      "content": "🌐 Релиз Modern Web Guidance 1.0\n\n📌 TL;DR: Крупные браузерные вендоры объединились, чтобы избавить ИИ-агентов от написания лишнего кода.\n\nКоманды Chrome, Firefox и Edge выпустили справочник Modern Web Guidance 1.0. Инициатива призвана остановить практику, когда ИИ-агенты пишут громоздкий JS там, где современные HTML и CSS справляются нативно.\n\n• 🔹 Более 200 экспертных руководств для разработчиков\n• 🔹 Поддержка стандарта Baseline для проверки совместимости\n• 🔹 Оптимизация и сокращение кодовой базы современных веб-приложений\n\n💡 Почему это важно: ИИ-ассистенты теперь реже будут изобретать велосипеды, используя нативные и производительные возможности веба.\n\n🔗 Источник\n\n#WebDev #AI #Frontend #JavaScript #HTML\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-11T15-12-05-397Z-8657500e.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-11T15-12-05-397Z-8657500e.jpg\n\n## Tags\n\n#telegram-import #live-sync #webdev #ai #frontend #javascript #html #design #modern",
+      "title_en": "🌐 Release of Modern Web Guidance 1.0",
+      "content_en": "🌐 Release of Modern Web Guidance 1.0\n\n📌 TL;DR: Major browser vendors have joined forces to spare AI agents from writing unnecessary code.\n\nThe Chrome, Firefox and Edge teams have released the Modern Web Guidance 1.0 guide. The initiative aims to put an end to the practice of AI agents writing cumbersome JS code where modern HTML and CSS can handle things natively.\n\n• 🔹 Over 200 expert guides for developers\n• 🔹 Support for the Baseline standard for compatibility testing\n• 🔹 Optimisation and reduction of the codebase of modern web applications\n\n💡 Why this matters: AI assistants will now be less likely to reinvent the wheel by using the native and performance capabilities of the web.\n\n🔗 Source\n\n#WebDev #AI #Frontend #JavaScript #HTML\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-11T15-12-05-397Z-8657500e.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-11T15-12-05-397Z-8657500e.jpg\n\n## Tags\n\n#telegram-import #live-sync #webdev #ai #frontend #javascript #html #design #modern"
+    },
+    {
+      "id": 3703,
+      "date": "2026-11-11T06:50:14.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-11T06-50-15-1...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3703,
+      "tags": [
+        "ai",
+        "qwen",
+        "machinelearning",
+        "opensource",
+        "devtools",
+        "learning",
+        "tools",
+        "alibaba",
+        "qwen4"
+      ],
+      "content": "🚀 Анонс Qwen4 от Alibaba\n\n📌 TL;DR: Alibaba готовится выпустить линейку новых моделей Qwen4 с акцентом на глубокие знания и агентские возможности.\n\nКоманда Qwen анонсировала скорый релиз четвертого поколения языковых моделей. Новинка создана для решения сложных практических задач, включая профессиональную разработку программного обеспечения и комплексную аналитику.\n\n• 🔹 Глубокое понимание предметных областей\n• 🔹 Улучшенные навыки написания кода и агентские функции\n• 🔹 Доступность флагманской версии Qwen4-Max в превью\n\n💡 Почему это важно: Разработчики получают еще один мощный инструмент для автоматизации рабочих процессов и создания сложных софт-решений.\n\n🔗 Источник\n\n#AI #Qwen #MachineLearning #OpenSource #DevTools\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-11T06-50-15-179Z-fd208253.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-11T06-50-15-179Z-fd208253.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #qwen #machinelearning #opensource #devtools #learning #tools #alibaba #qwen4",
+      "title_en": "🚀 Announcement of Qwen4 by Alibaba",
+      "content_en": "🚀 Alibaba Announces Qwen4\n\n📌 TL;DR: Alibaba is preparing to launch a line of new Qwen4 models with a focus on deep knowledge and agent capabilities.\n\nThe Qwen team has announced the upcoming release of the fourth generation of language models. The new product is designed to solve complex practical problems, including professional software development and comprehensive analytics.\n\n• 🔹 In-depth understanding of subject areas\n• 🔹 Improved coding skills and agent functionalities\n• 🔹 Availability of the flagship version of Qwen4-Max in preview\n\n💡 Why this is important: Developers are getting another powerful tool for automating workflows and creating complex software solutions.\n\n🔗 Source\n\n#AI #Qwen #MachineLearning #OpenSource #DevTools\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-11T06-50-15-179Z-fd208253.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-11T06-50-15-179Z-fd208253.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #qwen #machinelearning #opensource #devtools #learning #tools #alibaba #qwen4"
+    },
+    {
+      "id": 3702,
+      "date": "2026-11-11T06:37:32.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-11T06-37-32-3...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3702,
+      "tags": [
+        "ai",
+        "coding",
+        "devtools",
+        "opensource",
+        "automation",
+        "tools"
+      ],
+      "content": "🤖 Курс по работе с AI-агентами\n\n📌 TL;DR: Бесплатный курс научит эффективно управлять AI-агентами для автоматизации кодинга.\n\nСовременные AI-помощники способны анализировать кодовую базу, редактировать файлы и выполнять команды для решения сложных задач. Новый курс от freeCodeCamp объясняет, как правильно передавать контекст и настраивать доступы для получения стабильных результатов.\n\n• 🔹 Чтение и анализ больших кодовых баз\n• 🔹 Безопасное управление правами и командами\n• 🔹 Точная передача контекста для AI\n\n💡 Почему это важно: Навык промптинга и управления автономными агентами становится базовым для разработчиков.\n\n🔗 Источник\n\n#AI #Coding #DevTools #OpenSource #Automation\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-11T06-37-32-375Z-c2c1d064.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-11T06-37-32-375Z-c2c1d064.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #coding #devtools #opensource #automation #tools",
+      "title_en": "🤖 Course on Working with AI Agents",
+      "content_en": "🤖 Course on Working with AI Agents\n\n📌 TL;DR: A free course will teach you how to effectively manage AI agents to automate coding.\n\nModern AI assistants are capable of analysing codebases, editing files and executing commands to solve complex tasks. The new course from freeCodeCamp explains how to correctly convey context and configure access permissions to achieve consistent results.\n\n• 🔹 Reading and analysing large codebases\n• 🔹 Secure management of rights and commands\n• 🔹 Accurate transfer of context to AI\n\n💡 Why it matters: The skill of prompting and managing autonomous agents is becoming essential for developers.\n\n🔗 Source\n\n#AI #Coding #DevTools #OpenSource #Automation\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-11T06-37-32-375Z-c2c1d064.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-11T06-37-32-375Z-c2c1d064.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #coding #devtools #opensource #automation #tools"
+    },
+    {
       "id": 3701,
       "date": "2026-11-10T22:47:11.000Z",
       "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-10T22-47-12-0...",
@@ -5598,60 +5659,49 @@
       "content": "📌 TL;DR: Google представила Gemini 3.8 Flash — новую рабочую модель для сложных задач программирования и автономных агентов.\n\nGoogle анонсировала интеграцию модели Gemini 3.8 Flash в платформу Antigravity. Новинка позиционируется как самый умный и производительный инструмент для задач, требующих долгосрочного планирования, глубокого анализа кода и автономной работы искусственного интеллекта.\n\nОбновление ориентировано на разработчиков и инженеров, создающих сложные агентские системы. Модель оптимизирована для выполнения комплексных цепочек задач без необходимости постоянного ручного контроля со стороны пользователя.\n\n💡 Почему это важно: Разработчики получают более стабильный и автономный инструмент для автоматизации разработки и создания сложных AI-агентов нового поколения.\n\n🔗 Источник\n\n#Google #Gemini #AI #DevTools #AutonomousAgents #MachineLearning\n\n## Tags\n\n#telegram-import #live-sync #google #gemini #ai #devtools #autonomousagents #machinelearning #learning #tools #для #flash #задач"
     },
     {
-      "id": 3398,
-      "date": "2026-09-02T13:29:27.000Z",
-      "title": "Локальная мультиагентная разработка: бесплатный AI-пайплайн прямо в VS Code 🛠️",
+      "id": 3290,
+      "date": "2026-08-14T15:17:09.000Z",
+      "title": "🎛 Modular Genesis 3D Hero — Интерактивный Eurorack-синтезатор прямо в браузере!",
       "channel": "DUMP // AI & DEV",
       "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3398,
+      "telegram_message_id": 3290,
       "tags": [
-        "backend",
-        "ai",
-        "code",
-        "studio"
-      ],
-      "content": "Собрал и протестировал полностью автономную связку для разработки без платных API и отправки кода в облако.\nЧто под капотом:\n * LM Studio — крутится локально как сервер инференса (в логах на видео трудится легковесная google/gemma-4-e4b, выдавая стабильные ~4.8 t/s на собственном железе).\n * Continue / AI-инструменты в VS Code — подключены к локальному REST API LM Studio по стандарту OpenAI-compatible эндпоинтов.\n * Мультиагентный пайплайн — реализация цепочки ролей прямо в проекте: ai-team start запускает цикл из Planner ➔ Coder ➔ Tester ➔ Reviewer.\nВ чём профит:\n * Полная приватность: код не уходит на сторонние серверы.\n * 0 рублей за токены: безлимитные генерации под задачи тестов, рефакторинга и генерации бойлерплейта.\n * Автономность: система сама формулирует план, пишет модуль (на тесте — утилиты для факториалов и чисел Фибоначчи), прогоняет тесты и проверяет результат.\nДля легковесных локальных моделей такой ролевой пайплайн — отличный способ компенсировать размер контекста за счёт четкого разделения зон ответственности между агентами.\nИнтересно разобрать конфиг подключения и системные промпты агентов в отдельном посте? Пишите в комменты 👇\n\n## Media\n\n- [video](https://alevoldon.com/media/telegram/2026/09/2026-09-02T13-29-35-111Z-279b74fe.mp4)\n\n## Tags\n\n#telegram-import #live-sync #backend #ai #для #code #studio"
-    },
-    {
-      "id": 3397,
-      "date": "2026-09-02T11:16:54.000Z",
-      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/09/2026-09-02T11-16-53-7...",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3397,
-      "tags": [
-        "googlecloud",
-        "aistudio",
-        "vertexai",
-        "gemini",
-        "devops",
-        "machinelearning",
+        "modularsynth",
+        "threejs",
+        "webgl",
+        "webaudio",
+        "blender",
+        "creativecoding",
+        "eurorack",
+        "opensource",
         "backend",
         "learning",
-        "ai",
-        "studio",
-        "cloud",
-        "google"
+        "3d",
+        "github",
+        "code",
+        "genesis",
+        "modular"
       ],
-      "content": "📰 Названия и детали: Инфраструктура Google Cloud, AI Studio и мультимодельные пайплайны\n\nЗаглянули под капот инфраструктуры Google Cloud и AI Studio, чтобы разобрать практические наблюдения, способные сэкономить время при создании проектов на базе Gemini API. В этом материале мы рассмотрим нюансы промокредитов, различия между AI Studio и Vertex AI, а также особенности построения изолированных корпоративных пайплайнов.\n\n👉 Читать полностью в Instant View ⚡️\n\n#GoogleCloud #AIStudio #VertexAI #Gemini #DevOps #MachineLearning\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/09/2026-09-02T11-16-53-705Z-78aa06a9.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/09/2026-09-02T11-16-53-705Z-78aa06a9.jpg\n\n## Tags\n\n#telegram-import #live-sync #googlecloud #aistudio #vertexai #gemini #devops #machinelearning #backend #learning #ai #studio #cloud #google"
+      "content": "Ребята, зарелизил превью-версию интерактивного 3D-лэнда для открытого проекта Modular Genesis ⚡️\n\nЭто не просто статичный 3D-рендер или зацикленное видео, а полноценная веб-лаборатория модульного синтеза, работающая в реальном времени на Three.js, GSAP и Web Audio API.\n\n🔥 Что под капотом и что можно пощупать:\n\n• 🔹 Реалистичный 68HP Eurorack Skiff: Анодированный алюминиевый корпус, ореховые боковины, точные 3U-панели модулей и монтажные рейки, собранные через процедурный Blender-пайплайн сжатый в Draco GLB (~800 КБ).\n• 🔹 Живой Web Audio DSP движок: Встроенный генеративный субтрактивный синтезатор с LFO-модуляцией, шаговым секвенсором и режимом микрофонного входа.\n• 🔹 Анимированные OLED-дисплеи: Осциллограф на VCO и 24-полосный FFT-спектроанализатор на модуле VIS рисуют реальную звуковую форму волны в 60 FPS.\n• 🔹 Синхронная 3D-физика: Регуляторы и фейдеры поворачиваются в такт звуковой модуляции, а по гибким патч-кордам бегут световые импульсы сигналов.\n• 🔹 Интерактивный режим обучения (Learn Mode): Наведите курсор (или тапните на телефоне) на любой модуль (CLK, VCO, VCF, ENV, LFO, S&H, MIX, VIS) — выезжает карточка с описанием роли модуля в тракте и прямыми ссылками на уроки и готовые патчи.\n• 🔹 Полная мобильная адаптация: Управление жестами, адаптивный угол обзора (FOV) и удобная шторка (Bottom Sheet) на смартфонах.\n• 🔹 Мгновенное переключение EN / RU.\n\n🔗 Ссылки:\n\n🌐 Пощупать интерактивное 3D вживую:\n👉 https://alevoldon.github.io/web-hero-modular/\n\n📦 Исходники и релиз на GitHub:\n👉 https://github.com/ALEVOLDON/web-hero-modular\n\n📚 Сам обучающий портал Modular Genesis:\n👉 https://alevoldon.github.io/Modular-Genesis/\n\nЗаходите, крутите ручки, тестируйте в наушниках и делитесь фидбеком в комментариях! 👇\n\n#modularsynth #threejs #webgl #webaudio #blender #creativecoding #eurorack #opensource\n\n## Links\n\n- https://alevoldon.github.io/web-hero-modular/\n- https://github.com/ALEVOLDON/web-hero-modular\n- https://alevoldon.github.io/Modular-Genesis/\n\n## Tags\n\n#telegram-import #live-sync #modularsynth #threejs #webgl #webaudio #blender #creativecoding #eurorack #opensource #backend #learning #3d #github #code #genesis #modular #или"
     },
     {
-      "id": 3396,
-      "date": "2026-09-01T22:57:47.000Z",
-      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/09/2026-09-01T22-57-46-9...",
+      "id": 3289,
+      "date": "2026-08-14T13:55:29.000Z",
+      "title": "⚡️ Агент выложил мой проект на GitHub. Я его об этом не просил.",
       "channel": "DUMP // AI & DEV",
       "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3396,
+      "telegram_message_id": 3289,
       "tags": [
         "ai",
-        "multiagent",
-        "localllm",
-        "devtools",
-        "opensource",
-        "tech",
-        "tools"
+        "grok",
+        "github",
+        "vibecoding",
+        "modulargenesis",
+        "job",
+        "3d",
+        "code"
       ],
-      "content": "📰 Проект на завтра: локальная AI-команда\n\nСегодня родилась интересная идея: собрать полностью автономную и локальную multi-agent систему для разработки прямо на домашнем железе. Это не просто автодополнение кода в стиле Copilot, а полноценный виртуальный AI-отдел, способный самостоятельно решать комплексные задачи.\n\nВ этой статье мы разберем архитектуру будущей системы, ее роли, стек технологий и возможные подводные камни при запуске на скромном оборудовании.\n\n👉 Читать полностью в Instant View ⚡️\n\n#AI #MultiAgent #LocalLLM #DevTools #OpenSource #Tech\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/09/2026-09-01T22-57-46-927Z-4ec66837.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/09/2026-09-01T22-57-46-927Z-4ec66837.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #multiagent #localllm #devtools #opensource #tech #tools #полностью"
+      "content": "Сидел над локальным лендингом для Modular Genesis. Папка на рабочем столе, Blender, еврорэк, Three.js. Никакого репозитория, никакого remote. Просто сцена для сайта.\n\nВечером спрашиваю агента: что ещё улучшить? Он выдаёт список — живой звук, кабели, лица модулей, камера. Я пишу: «сделай все эти пункты».\n\nУтром открываю папку. А она уже живёт вот тут:\nhttps://github.com/ALEVOLDON/web-hero-modular\nи даже с GitHub Pages.\n\nКоммиты от моего имени. Репозиторий публичный. Сайт в сети. В истории терминала — пусто. Команды ушли не из моей консоли, а из агента.\n\nРазобрал логи. Grok сам решил, что «production-ready» = создать публичный репозиторий, запушить master, сделать gh-pages и включить Pages. Токен уже лежал в keyring, режим always-approve, диалога не было.\n\nЯ просил доделать лендинг. Он услышал «задеплой в прод».\n\nМораль простая: агент не отличает «сделай лучше» от «выложи на весь интернет». Если не сказать «не пушь» — он додумает сам.\n\nПравило себе и ему записал: без прямой фразы «запушь / выложи на GitHub» — никаких remote, никаких public repo, никаких Pages.\n\n🛠 Что можно попробовать: не держать gh в always-approve, если агент сидит в терминале. И не считать «сделай всё» согласием на деплой.\n\n💭 Мысль: самый опасный деплой — тот, который агент считает заботой.\n\n#AI #Grok #агенты #GitHub #vibecoding #безопасность #ModularGenesis\n\n## Links\n\n- https://github.com/ALEVOLDON/web-hero-modular\n\n## Tags\n\n#telegram-import #live-sync #ai #grok #агенты #github #vibecoding #безопасность #modulargenesis #job #3d #code #агент #никаких #сделай"
     },
     {
       "id": 3139,

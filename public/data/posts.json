@@ -1,6 +1,145 @@
 {
   "posts": [
     {
+      "id": 3711,
+      "date": "2026-11-13T04:54:13.000Z",
+      "title": "🚀 Ситуация вокруг NVIDIA и Дженсена Хуанга",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3711,
+      "tags": [
+        "ai",
+        "nvidia",
+        "technews",
+        "leadership",
+        "opensource",
+        "apple"
+      ],
+      "content": "📌 TL;DR: Лек Фридман высказался об уходе Дженсена Хуанга из NVIDIA, сравнив это с увольнением Стива Джобса из Apple.\n\nИзвестный подкастер и исследователь встал на защиту главы NVIDIA, назвав его уход масштабной ошибкой для технологической индустрии США и всего мира. По его словам, личные ошибки не перечеркивают выдающихся человеческих качеств и уникального вклада Хуанга в развитие искусственного интеллекта.\n\n• 🔹 Сравнение ухода Хуанга с историей увольнения Стива Джобса из Apple\n• 🔹 Характеристика Дженсена как лидера с высоким уровнем эмпатии и человечности\n• 🔹 Массовая поддержка топ-менеджера со стороны инженеров, коллег и технологического сообщества\n\n💡 Почему это важно: Стабильность и будущее ключевых игроков рынка AI напрямую зависят от лидерства их создателей.\n\n🔗 Источник\n\n#AI #NVIDIA #TechNews #Leadership #OpenSource\n\n## Tags\n\n#telegram-import #live-sync #ai #nvidia #technews #leadership #opensource #apple",
+      "title_en": "📌 TL;DR: Lex Friedman commented on Jensen Huang's departure from NVIDIA, comparing it to Steve Jobs's ousting from Apple.",
+      "content_en": "📌 TL;DR: Lex Friedman commented on Jensen Huang's departure from NVIDIA, comparing it to Steve Jobs' dismissal from Apple.\n\nThe renowned podcaster and researcher defended the head of NVIDIA, calling his departure a major mistake for the US technology industry and the world at large. According to him, personal mistakes do not negate Huang's outstanding human qualities and unique contribution to the development of artificial intelligence.\n\n• 🔹 Comparing Huang's departure to the story of Steve Jobs's ousting from Apple\n• 🔹 Jensen's reputation as a leader with a high level of empathy and humanity\n• 🔹 Widespread support for the top executive from engineers, colleagues and the tech community\n\n💡 Why this matters: The stability and future of key players in the AI market directly depend on the leadership of their founders.\n\n🔗 Source\n\n#AI #NVIDIA #TechNews #Leadership #OpenSource\n## Tags\n\n#telegram-import #live-sync #ai #nvidia #technews #leadership #opensource #apple"
+    },
+    {
+      "id": 3710,
+      "date": "2026-11-13T04:52:43.000Z",
+      "title": "🚀 World Labs открывает доступ к Atlas",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3710,
+      "tags": [
+        "ai",
+        "3d",
+        "worldlabs",
+        "technews",
+        "openaccess",
+        "backend",
+        "atlas",
+        "labs",
+        "world"
+      ],
+      "content": "📌 TL;DR: Инновационная платформа для генерации 3D-миров Atlas стала доступна абсолютно всем пользователям.\n\nWorld Labs открыла публичный доступ к своему флагманскому инструменту Atlas. Теперь каждый может создавать полноценные трехмерные миры, используя веб-приложения и готовые API-эндпоинты для интеграции.\n\n• 🔹 Генерация 3D-миров по текстовым описаниям или идеям.\n• 🔹 Экспорт результатов в виде ключевых кадров, видеороликов или 3D Gaussian splats.\n• 🔹 Гибкие варианты использования через веб-интерфейс или API.\n\n💡 Почему это важно: Инструмент значительно упрощает создание качественного 3D-контента для разработчиков, дизайнеров и создателей контента.\n\n🔗 Источник\n\n#AI #3D #WorldLabs #TechNews #OpenAccess\n\n## Tags\n\n#telegram-import #live-sync #ai #3d #worldlabs #technews #openaccess #backend #atlas #labs #world",
+      "title_en": "📌 TL;DR: Atlas, an innovative platform for generating 3D worlds, is now available to absolutely everyone.",
+      "content_en": "📌 TL;DR: Atlas, the innovative platform for generating 3D worlds, is now available to absolutely everyone.\n\nWorld Labs has opened public access to its flagship tool, Atlas. Now, anyone can create fully fledged 3D worlds using web applications and ready-made API endpoints for integration.\n\n• 🔹 Generation of 3D worlds based on text descriptions or ideas.\n• 🔹 Export results as keyframes, videos, or 3D Gaussian splats.\n• 🔹 Flexible use cases via the web interface or API.\n\n💡 Why it matters: The tool makes it much easier for developers, designers, and content creators to produce high-quality 3D content.\n\n🔗 Source\n\n#AI #3D #WorldLabs #TechNews #OpenAccess\n## Tags\n\n#telegram-import #live-sync #ai #3d #worldlabs #technews #openaccess #backend #atlas #labs #world"
+    },
+    {
+      "id": 3709,
+      "date": "2026-11-13T04:25:26.000Z",
+      "title": "🚀 Google выпускает Gemini 4 Hydrogen",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3709,
+      "tags": [
+        "ai",
+        "google",
+        "gemini",
+        "devtools",
+        "coding",
+        "tools"
+      ],
+      "content": "📌 TL;DR: Новая языковая модель для кодинга и агентских задач уже доступна платным пользователям Google Antigravity.\n\nGoogle представила модель Gemini 4 Hydrogen, ориентированную на разработку и автоматизацию рабочих процессов. Новинка демонстрирует впечатляющие результаты в бенчмарках, превосходя предыдущие версии и предлагая продвинутые возможности для инженеров.\n\n• 🔹 Набирает 51 балл в Artificial Analysis Intelligence Index.\n• 🔹 Показывает 57% в сложном тесте Terminal-Bench 4.1.\n• 🔹 Доступна для тарифов Pro, Ultra и корпоративных клиентов.\n\n💡 Почему это важно: Инструмент значительно упрощает поддержку кодовых баз и автоматизацию рутинных задач разработчиков.\n\n🔗 Источник\n\n#AI #Google #Gemini #DevTools #Coding\n\n## Tags\n\n#telegram-import #live-sync #ai #google #gemini #devtools #coding #tools",
+      "title_en": "📌 TL;DR: A new language model for coding and agent tasks is now available to paid users of Google Antigravity.",
+      "content_en": "📌 TL;DR: A new language model for coding and agent tasks is now available to paid users of Google Antigravity.\n\nGoogle has unveiled the Gemini 4 Hydrogen model, which is focused on developing and automating workflows. The new model demonstrates impressive results in benchmarks, outperforming previous versions and offering advanced capabilities for engineers.\n\n• 🔹 Scores 51 points in the Artificial Analysis Intelligence Index.\n• 🔹 Scores 57% in the challenging Terminal-Bench 4.1 test.\n• 🔹 Available for Pro, Ultra and corporate clients.\n\n💡 Why this matters: The tool significantly simplifies the maintenance of codebases and the automation of routine developer tasks.\n\n🔗 Source\n\n#AI #Google #Gemini #DevTools #Coding\n## Tags\n\n#telegram-import #live-sync #ai #google #gemini #devtools #coding #tools"
+    },
+    {
+      "id": 3708,
+      "date": "2026-11-13T04:21:55.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-13T04-21-54-5...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3708,
+      "tags": [
+        "blender",
+        "3d",
+        "opensource",
+        "gamedev",
+        "design",
+        "haven",
+        "poly"
+      ],
+      "content": "🚀 Вышел Blender 5.3\n\n📌 TL;DR: В новом релизе Blender появилась встроенная библиотека бесплатных 3D-ассетов от Poly Haven.\n\nПопулярный редактор 3D-графики получил интеграцию платформы расширений с предустановленной облегченной версией библиотеки Poly Haven. Теперь художники могут скачивать качественные модели, материалы и даже демо-сцены прямо из интерфейса программы.\n\n• 🔹 Быстрый доступ через настройки\n• 🔹 Готовые ассеты и демо-сцены «из коробки»\n• 🔹 Регулярное пополнение библиотеки контентом\n\n💡 Почему это важно: Интеграция профессиональных библиотек прямо в ядро редактора значительно ускоряет пайплайн 3D-моделирования.\n\n🔗 Источник\n\n#Blender #3D #OpenSource #GameDev #Design\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-13T04-21-54-528Z-74fe4521.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-13T04-21-54-528Z-74fe4521.jpg\n\n## Tags\n\n#telegram-import #live-sync #blender #3d #opensource #gamedev #design #haven #poly",
+      "title_en": "🚀 Blender 5.3 is out",
+      "content_en": "🚀 Blender 5.3 has been released\n\n📌 TL;DR: The new Blender release features a built-in library of free 3D assets from Poly Haven.\n\nThe popular 3D graphics editor has gained integration with the extensions platform, featuring a pre-installed lightweight version of the Poly Haven library. Artists can now download high-quality models, materials and even demo scenes directly from the programme's interface.\n\n• 🔹 Quick access via settings\n• 🔹 Ready-to-use assets and out-of-the-box demo scenes\n• 🔹 Regular replenishment of the library with content\n\n💡 Why this is important: Integrating professional libraries directly into the editor's core significantly speeds up the 3D modelling pipeline.\n\n🔗 Source\n\n#Blender #3D #OpenSource #GameDev #Design\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-13T04-21-54-528Z-74fe4521.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-13T04-21-54-528Z-74fe4521.jpg\n\n## Tags\n\n#telegram-import #live-sync #blender #3d #opensource #gamedev #design #haven #poly"
+    },
+    {
+      "id": 3707,
+      "date": "2026-11-13T04:20:50.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-13T04-20-50-1...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3707,
+      "tags": [
+        "webdev",
+        "opensource",
+        "ai",
+        "coding",
+        "github",
+        "design"
+      ],
+      "content": "🚀 Modern Web Guidance v1.0\n\n📌 TL;DR: Новый open-source репозиторий вышел на первое место в трендах GitHub всего за 48 часов после релиза.\n\nИнструмент помогает AI-агентам для кодинга ориентироваться в современных, поддерживаемых стандартом Baseline веб-примитивах. Это ускоряет разработку и избавляет ИИ от использования устаревших подходов.\n\n• 🔹 Простая установка навыков агента одной командой через CLI\n• 🔹 Быстрый аудит и сканирование существующей кодовой базы\n• 🔹 Совместная поддержка от команд Chromium, Firefox, MDN и Edge\n\n💡 Почему это важно: Разработчики получают надежный стандарт для обучения ИИ актуальным веб-технологиям вместо генерации легаси-кода.\n\n🔗 Источник\n\n#WebDev #OpenSource #AI #Coding #GitHub\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-13T04-20-50-135Z-c407ff8d.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-13T04-20-50-135Z-c407ff8d.jpg\n\n## Tags\n\n#telegram-import #live-sync #webdev #opensource #ai #coding #github #design",
+      "title_en": "🚀 Modern Web Guidance v1.0",
+      "content_en": "🚀 Modern Web Guidance v1.0\n\n📌 TL;DR: A new open-source repository reached the top of GitHub's trending list just 48 hours after its release.\n\nThe tool helps AI coding agents navigate modern web primitives supported by the Baseline standard. This speeds up development and prevents AI from using outdated approaches.\n\n• 🔹 Easy installation of agent skills with a single command via CLI\n• 🔹 Quick audit and scan of the existing codebase\n• 🔹 Joint support from the Chromium, Firefox, MDN and Edge teams\n\n💡 Why this matters: Developers get a reliable standard for training AI in up-to-date web technologies instead of generating legacy code.\n\n🔗 Source\n\n#WebDev #OpenSource #AI #Coding #GitHub\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-13T04-20-50-135Z-c407ff8d.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-13T04-20-50-135Z-c407ff8d.jpg\n\n## Tags\n\n#telegram-import #live-sync #webdev #opensource #ai #coding #github #design"
+    },
+    {
+      "id": 3706,
+      "date": "2026-11-13T04:18:43.000Z",
+      "title": "🎵 ACE Music v1: новый лидер генерации",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3706,
+      "tags": [
+        "ai",
+        "musicai",
+        "opensource",
+        "audiogen",
+        "technews",
+        "music",
+        "suno"
+      ],
+      "content": "📌 TL;DR: Модель ACE Music v1 возглавила чарт Artificial Analysis, обогнав последнюю версию Suno.\n\nНовый музыкальный ИИ официально занял первое место в престижном рейтинге, продемонстрировав впечатляющее качество генерации. Создатели обещают открыть веса модели в ближайшие недели для локального запуска.\n\n• 🔹 Первое место в независимом музыкальном бенчмарке\n• 🔹 Обход главного конкурента в лице Suno\n• 🔹 Скоростной релиз open-source весов для локального использования\n\n💡 Почему это важно: Открытый доступ к топовым музыкальным моделям позволит энтузиастам запускать генерацию треков на собственном железе без ограничений.\n\n🔗 Источник\n\n#AI #MusicAI #OpenSource #AudioGen #TechNews\n\n## Tags\n\n#telegram-import #live-sync #ai #musicai #opensource #audiogen #technews #music #suno",
+      "title_en": "📌 TL;DR: The ACE Music v1 model topped the Artificial Analysis chart, surpassing the latest version of Suno.",
+      "content_en": "📌 TL;DR: The ACE Music v1 model has topped the Artificial Analysis chart, overtaking the latest version of Suno.\n\nThe new music AI has officially taken first place in the prestigious ranking, demonstrating impressive generation quality. The creators promise to release the model's weights in the coming weeks for local deployment.\n\n• 🔹 First place in an independent music benchmark\n• 🔹 Overtaking its main competitor, Suno\n• 🔹 Fast release of open-source weights for local use\n\n💡 Why this is important: Open access to top music models will allow enthusiasts to generate tracks on their own hardware without restrictions.\n\n🔗 Source\n\n#AI #MusicAI #OpenSource #AudioGen #TechNews\n## Tags\n\n#telegram-import #live-sync #ai #musicai #opensource #audiogen #technews #music #suno"
+    },
+    {
+      "id": 3705,
+      "date": "2026-11-13T04:17:49.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-13T04-17-49-9...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3705,
+      "tags": [
+        "google",
+        "gemini",
+        "ai",
+        "devtools",
+        "machinelearning",
+        "learning",
+        "tools"
+      ],
+      "content": "🚀 Анонс Gemini 4 Hydrogen\n\n📌 TL;DR: Google представила новую языковую модель Gemini 4 Hydrogen с четырьмя уровнями мышления для быстрой разработки и агентных задач.\n\nНовинка ориентирована на повседневный кодинг и высокую скорость работы. Модель превосходит предыдущие версии по эффективности и способна работать как автономно, так и в связке с другими системами.\n\n• 🔹 Четыре настраиваемых уровня мышления\n• 🔹 Ускорение в 2.5 раза по сравнению с 3.8 Flash\n• 🔹 Полная оптимизация под агентные рабочие процессы\n\n💡 Почему это важно: Разработчики получают сверхбыстрый и умный инструмент для рутинных задач программирования и автоматизации.\n\n🔗 Источник\n\n#Google #Gemini #AI #DevTools #MachineLearning\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-13T04-17-49-935Z-8eb8c030.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-13T04-17-49-935Z-8eb8c030.jpg\n\n## Tags\n\n#telegram-import #live-sync #google #gemini #ai #devtools #machinelearning #learning #tools",
+      "title_en": "🚀 Gemini 4 Hydrogen Announcement",
+      "content_en": "🚀 Gemini 4 Hydrogen Announcement\n\n📌 TL;DR: Google has unveiled a new language model, Gemini 4 Hydrogen, featuring four levels of reasoning for rapid development and agent-based tasks.\n\nThe new model is geared towards everyday coding and high-speed performance. The model outperforms previous versions in terms of efficiency and is capable of operating both autonomously and in conjunction with other systems.\n\n• 🔹 Four customisable levels of thinking\n• 🔹 2.5 times faster than 3.8 Flash\n• 🔹 Fully optimised for agent-based workflows\n\n💡 Why it matters: Developers get an ultra-fast and intelligent tool for routine programming and automation tasks.\n\n🔗 Source\n\n#Google #Gemini #AI #DevTools #MachineLearning\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-13T04-17-49-935Z-8eb8c030.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-13T04-17-49-935Z-8eb8c030.jpg\n\n## Tags\n\n#telegram-import #live-sync #google #gemini #ai #devtools #machinelearning #learning #tools"
+    },
+    {
       "id": 3704,
       "date": "2026-11-11T15:11:58.000Z",
       "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-11T15-12-05-3...",
@@ -5526,137 +5665,49 @@
       "content": "📌 TL;DR: Вышел новый практический курс по созданию RAG-чат-бота на JavaScript для работы с актуальными данными в реальном времени.\n\nБольшие языковые модели ограничены рамками своих обучающих данных и часто не знают свежей информации. Решением этой проблемы выступает архитектура RAG (Retrieval-Augmented Generation), которая подключает к моделям внешние базы знаний и актуальные документы.\n\nТеперь разработчики, использующие стек JavaScript, могут изучить этот подход на практике. Новый бесплатный курс от Ania Kubow на платформе freeCodeCamp пошагово показывает, как интегрировать поиск по данным и запустить кастомного ИИ-ассистента.\n\n• 🔹 Архитектура Retrieval-Augmented Generation\n• 🔹 Интеграция внешних данных в LLM-пайплайн\n• 🔹 Практическая разработка на JavaScript\n\n💡 Почему это важно: RAG стал индустриальным стандартом для создания полезных ИИ-продуктов на основе корпоративных баз или актуального веб-контента без затрат на дообучение моделей.\n\n🔗 Источник\n\n#JavaScript #RAG #AI #WebDev #LLM #OpenSource\n\n## Tags\n\n#telegram-import #live-sync #javascript #rag #ai #webdev #llm #opensource #frontend #retrieval-augmented #архитектура #данных"
     },
     {
-      "id": 3407,
-      "date": "2026-09-02T22:44:33.000Z",
-      "title": "⚡️ AMD предоставляет бесплатный доступ к API сильным языковым моделям",
+      "id": 3290,
+      "date": "2026-08-14T15:17:09.000Z",
+      "title": "🎛 Modular Genesis 3D Hero — Интерактивный Eurorack-синтезатор прямо в браузере!",
       "channel": "DUMP // AI & DEV",
       "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3407,
+      "telegram_message_id": 3290,
       "tags": [
-        "amd",
-        "ai",
-        "api",
-        "deepseek",
-        "qwen",
-        "devtools",
-        "opensource",
-        "backend",
-        "tools"
-      ],
-      "content": "📌 TL;DR: AMD открыла бесплатный и безпредоплатный доступ к API для актуальных AI-моделей через свою платформу TokenFactory.\n\nКомпания тихо запустила инициативу, позволяющую разработчикам тестировать производительные модели без необходимости привязывать карту или вносить депозит. Это отличная возможность оценить скорость и качество генерации в реальных рабочих процессах без финансовых рисков.\n\nВ открытый контур вошли две популярные нейросети, оптимизированные под быстрый инференс. Они отлично подходят для интеграции в легкие утилиты, чат-ботов и задачи автоматизации, где критически важна низкая задержка.\n\n• 🔹 Поддержка DeepSeek-V4-Flash для быстрых и точных текстовых задач\n• 🔹 Интеграция Qwen3.8-Flash-Next с акцентом на скорость ответа\n• 🔹 Полное отсутствие предоплаты и сложных процедур верификации для старта\n\n💡 Почему это важно: Бесплатные API-лимиты от крупных вендоров железа позволяют инди-разработчикам и стартапам тестировать архитектуры мультиагентных систем и прототипы приложений без затрат на инфраструктуру.\n\n🔗 Источник\n\n#AMD #AI #API #DeepSeek #Qwen #DevTools #OpenSource\n\n## Tags\n\n#telegram-import #live-sync #amd #ai #api #deepseek #qwen #devtools #opensource #backend #tools #для #без #бесплатный"
-    },
-    {
-      "id": 3406,
-      "date": "2026-09-02T22:39:27.000Z",
-      "title": "🚀 Gemini 3.8 Flash интегрирован в Stitch",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3406,
-      "tags": [
-        "google",
-        "gemini",
-        "uiux",
-        "design",
-        "ai",
-        "webdev",
-        "flash",
-        "stitch"
-      ],
-      "content": "📌 TL;DR: Google обновила движок интерфейса Stitch до модели Gemini 3.8 Flash, повысив качество генерации UI и точность следования инструкциям.\n\nПлатформа Stitch получила крупное обновление: теперь в качестве модели по умолчанию используется Gemini 3.8 Flash. Инструмент стал еще ближе к полноценному дизайн-партнеру, способному выдавать продакшн-макеты значительно быстрее и с меньшим количеством правок от разработчика.\n\nОбновление затронуло ключевые аспекты генерации визуальных интерфейсов, улучшив работу с деталями, контекстом бренда и сложными текстовыми запросами.\n\n* 🔹 **Внимание к деталям:** Интерфейсы выглядят готовыми к продакшну с первых секунд благодаря более проработанным и реалистичным элементам UI.\n* 🔹 **Качественная визуализация:** ИИ генерирует умные промпты для изображений, которые идеально соответствуют контенту страницы и стилю бренда.\n* 🔹 **Понимание инструкций:** Модель точнее улавливает сложные и неочевидные правки дизайна с первой попытки.\n💡 Почему это важно: Дизайнеры и разработчики экономят время на ручной доработке сгенерированных макетов, получая более осмысленные и готовые к внедрению интерфейсы.\n\n🔗 Источник\n\n#Google #Gemini #UIUX #Design #AI #WebDev\n\n## Tags\n\n#telegram-import #live-sync #google #gemini #uiux #design #ai #webdev #flash #stitch #более"
-    },
-    {
-      "id": 3405,
-      "date": "2026-09-02T22:38:43.000Z",
-      "title": "🤖 Создаем собственного AI-агента с нуля на Python",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3405,
-      "tags": [
-        "python",
-        "aiagents",
-        "gemini",
-        "developer",
-        "opensource",
-        "backend",
-        "ai",
-        "tools"
-      ],
-      "content": "📌 TL;DR: Бесплатный практический курс по разработке автономного AI-агента с использованием Python и Gemini API.\n\nРазработка автономных систем становится ключевы навыком для инженеров. Понимание того, как заставить языковую модель не просто отвечать на вопросы, а выполнять конкретные задачи в цикле, открывает огромные возможности для автоматизации.\n\nОбразовательная платформа freeCodeCamp выпустила подробный курс, который проводит через весь процесс создания полноценного AI-агента для написания и отладки кода. Обучение ориентировано на практику и объясняет базовые принципы работы современных агентных архитектур.\n\n• 🔹 Изучение концепции агентного цикла (agentic loop)\n• 🔹 Настройка и практическое применение tool calling\n• 🔹 Реализация механизмов автоматического исправления ошибок в коде\n• 🔹 Использование бесплатного Gemini API для интеграции\n\n💡 Почему это важно: Курс отлично подходит разработчикам, которые хотят разобраться в архитектуре автономных агентов без погружения в сложные сторонние фреймворки, используя чистый Python.\n\n🔗 Источник\n\n#Python #AIAgents #Gemini #Developer #OpenSource\n\n## Tags\n\n#telegram-import #live-sync #python #aiagents #gemini #developer #opensource #backend #ai #tools #для #ai-агента #курс"
-    },
-    {
-      "id": 3404,
-      "date": "2026-09-02T22:33:05.000Z",
-      "title": "Полностью локальный мультиагентный пайплайн разработки в VS Code 💻🤖",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3404,
-      "tags": [
-        "backend",
-        "ai",
-        "tools",
-        "localhost",
-        "code",
-        "studio"
-      ],
-      "content": "Без платных API, подписок и отправки исходного кода в облака. Связка разворачивается прямо на локальном железе и автоматизирует рутинные этапы разработки.\nЧто под капотом:\n * Инференс-сервер: LM Studio, запущенный локально и отдающий OpenAI-совместимый REST API. На видео крутится легковесная Google Gemma (~4.8 токенов/сек).\n * Интерфейс в IDE: плагин Continue.dev в VS Code, настроенный на локальный эндпоинт http://localhost:1234/v1.\n * Мультиагентная логика: цепочка ролей, запускаемая одной командой (ai-team start):\n * Planner — анализирует задачу и проектирует структуру модуля.\n * Coder — генерирует исполняемый код и функции.\n * Tester — пишет юнит-тесты и прогоняет их на валидность.\n * Reviewer — проверяет качество, код-стайл и даёт рекомендации по оптимизации.\nВ чём профит такого сетапа:\n * 100% приватность: корпоративный или пет-проект ни при каких условиях не покидает машину.\n * 0 ₽ за токены: безлимитный кодинг тестов, рефакторинг и бойлерплейт без страха сжечь лимиты.\n * Компенсация размера моделей: разделение ролей на узкие задачи позволяет небольшим локальным LLM работать кратно точнее, чем при попытке решать всё одним общим промптом.\nРазобрать в следующем посте конфиг подключения Continue.dev к LM Studio и системные промпты для каждого агента? Накидайте реакций 👇\n\n## Links\n\n- http://localhost:1234/v1.\n\n## Tags\n\n#telegram-import #live-sync #backend #ai #tools #localhost #code #studio #без"
-    },
-    {
-      "id": 3402,
-      "date": "2026-09-02T19:58:33.000Z",
-      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/09/2026-09-02T19-58-33-5...",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3402,
-      "tags": [
-        "ai",
-        "multiagent",
-        "localllm",
-        "python",
-        "devtools",
-        "tech",
-        "tools"
-      ],
-      "content": "📰 Автономная команда AI-разработчиков на домашней RTX 3050\n\nПоследние дни я пилил проект, о котором давно думал: полноценную multi-agent систему разработки ПО (`ai-team`), которая работает полностью локально на обычном домашнем ПК (RTX 3050 8GB, Ryzen 5 5600G, 32GB RAM).\n\nЭто не просто «чат с кодогенератором», а замкнутый производственный цикл, способный решать реальные задачи автономно и без участия человека в рутинных процессах.\n\n👉 Читать полностью в Instant View ⚡️\n\n#AI #MultiAgent #LocalLLM #Python #DevTools #Tech\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/09/2026-09-02T19-58-33-529Z-b32064c0.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/09/2026-09-02T19-58-33-529Z-b32064c0.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #multiagent #localllm #python #devtools #tech #tools #полностью"
-    },
-    {
-      "id": 3401,
-      "date": "2026-09-02T18:13:20.000Z",
-      "title": "☕ Создаем трехмерный веб-сайт с помощью Blender и Three.js",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3401,
-      "tags": [
+        "modularsynth",
         "threejs",
+        "webgl",
+        "webaudio",
         "blender",
-        "webdev",
-        "frontend",
-        "3d",
+        "creativecoding",
+        "eurorack",
         "opensource",
-        "tutorial",
+        "backend",
         "learning",
-        "three"
+        "3d",
+        "github",
+        "code",
+        "genesis",
+        "modular"
       ],
-      "content": "📌 TL;DR: Вышел практический курс по разработке уютного портфолио-кафе с нуля с использованием Blender и Three.js.\n\nТрехмерная веб-разработка часто пугает разработчиков из-за сложности совмещения дизайна, логики взаимодействия и оптимизации производительности. Новый обучающий материал закрывает эту проблему, проводя вас через полный рабочий процесс создания интерактивного сайта.\n\nКурс охватывает весь цикл разработки: от начального моделирования объектов и текстурной покраски в Blender до написания логики на Three.js и финальной оптимизации для плавной работы в браузере. Это отличная возможность для фронтенд-разработчиков и дизайнеров прокачать навыки создания иммерсивных веб-интерфейсов.\n\n• 🔹 Полный цикл от моделирования до продакшна\n• 🔹 Работа с трехмерной графикой в Blender\n• 🔹 Интеграция интерактивных элементов через Three.js\n• 🔹 Настройка производительности и оптимизация рендеринга\n\n💡 Почему это важно: Интерактивные 3D-интерфейсы становятся новым стандартом для портфолио и промо-сайтов, а понимание связки Blender и Three.js позволяет создавать уникальные продукты без тяжеловесных движков.\n\n🔗 Источник\n\n#ThreeJS #Blender #WebDev #Frontend #3D #OpenSource #Tutorial\n\n## Tags\n\n#telegram-import #live-sync #threejs #blender #webdev #frontend #3d #opensource #tutorial #learning #three #для #курс"
+      "content": "Ребята, зарелизил превью-версию интерактивного 3D-лэнда для открытого проекта Modular Genesis ⚡️\n\nЭто не просто статичный 3D-рендер или зацикленное видео, а полноценная веб-лаборатория модульного синтеза, работающая в реальном времени на Three.js, GSAP и Web Audio API.\n\n🔥 Что под капотом и что можно пощупать:\n\n• 🔹 Реалистичный 68HP Eurorack Skiff: Анодированный алюминиевый корпус, ореховые боковины, точные 3U-панели модулей и монтажные рейки, собранные через процедурный Blender-пайплайн сжатый в Draco GLB (~800 КБ).\n• 🔹 Живой Web Audio DSP движок: Встроенный генеративный субтрактивный синтезатор с LFO-модуляцией, шаговым секвенсором и режимом микрофонного входа.\n• 🔹 Анимированные OLED-дисплеи: Осциллограф на VCO и 24-полосный FFT-спектроанализатор на модуле VIS рисуют реальную звуковую форму волны в 60 FPS.\n• 🔹 Синхронная 3D-физика: Регуляторы и фейдеры поворачиваются в такт звуковой модуляции, а по гибким патч-кордам бегут световые импульсы сигналов.\n• 🔹 Интерактивный режим обучения (Learn Mode): Наведите курсор (или тапните на телефоне) на любой модуль (CLK, VCO, VCF, ENV, LFO, S&H, MIX, VIS) — выезжает карточка с описанием роли модуля в тракте и прямыми ссылками на уроки и готовые патчи.\n• 🔹 Полная мобильная адаптация: Управление жестами, адаптивный угол обзора (FOV) и удобная шторка (Bottom Sheet) на смартфонах.\n• 🔹 Мгновенное переключение EN / RU.\n\n🔗 Ссылки:\n\n🌐 Пощупать интерактивное 3D вживую:\n👉 https://alevoldon.github.io/web-hero-modular/\n\n📦 Исходники и релиз на GitHub:\n👉 https://github.com/ALEVOLDON/web-hero-modular\n\n📚 Сам обучающий портал Modular Genesis:\n👉 https://alevoldon.github.io/Modular-Genesis/\n\nЗаходите, крутите ручки, тестируйте в наушниках и делитесь фидбеком в комментариях! 👇\n\n#modularsynth #threejs #webgl #webaudio #blender #creativecoding #eurorack #opensource\n\n## Links\n\n- https://alevoldon.github.io/web-hero-modular/\n- https://github.com/ALEVOLDON/web-hero-modular\n- https://alevoldon.github.io/Modular-Genesis/\n\n## Tags\n\n#telegram-import #live-sync #modularsynth #threejs #webgl #webaudio #blender #creativecoding #eurorack #opensource #backend #learning #3d #github #code #genesis #modular #или"
     },
     {
-      "id": 3400,
-      "date": "2026-09-02T18:09:27.000Z",
-      "title": "🚀 Gemini 3.8 Flash в Antigravity",
+      "id": 3289,
+      "date": "2026-08-14T13:55:29.000Z",
+      "title": "⚡️ Агент выложил мой проект на GitHub. Я его об этом не просил.",
       "channel": "DUMP // AI & DEV",
       "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3400,
+      "telegram_message_id": 3289,
       "tags": [
-        "google",
-        "gemini",
         "ai",
-        "devtools",
-        "autonomousagents",
-        "machinelearning",
-        "learning",
-        "tools",
-        "flash"
+        "grok",
+        "github",
+        "vibecoding",
+        "modulargenesis",
+        "job",
+        "3d",
+        "code"
       ],
-      "content": "📌 TL;DR: Google представила Gemini 3.8 Flash — новую рабочую модель для сложных задач программирования и автономных агентов.\n\nGoogle анонсировала интеграцию модели Gemini 3.8 Flash в платформу Antigravity. Новинка позиционируется как самый умный и производительный инструмент для задач, требующих долгосрочного планирования, глубокого анализа кода и автономной работы искусственного интеллекта.\n\nОбновление ориентировано на разработчиков и инженеров, создающих сложные агентские системы. Модель оптимизирована для выполнения комплексных цепочек задач без необходимости постоянного ручного контроля со стороны пользователя.\n\n💡 Почему это важно: Разработчики получают более стабильный и автономный инструмент для автоматизации разработки и создания сложных AI-агентов нового поколения.\n\n🔗 Источник\n\n#Google #Gemini #AI #DevTools #AutonomousAgents #MachineLearning\n\n## Tags\n\n#telegram-import #live-sync #google #gemini #ai #devtools #autonomousagents #machinelearning #learning #tools #для #flash #задач"
+      "content": "Сидел над локальным лендингом для Modular Genesis. Папка на рабочем столе, Blender, еврорэк, Three.js. Никакого репозитория, никакого remote. Просто сцена для сайта.\n\nВечером спрашиваю агента: что ещё улучшить? Он выдаёт список — живой звук, кабели, лица модулей, камера. Я пишу: «сделай все эти пункты».\n\nУтром открываю папку. А она уже живёт вот тут:\nhttps://github.com/ALEVOLDON/web-hero-modular\nи даже с GitHub Pages.\n\nКоммиты от моего имени. Репозиторий публичный. Сайт в сети. В истории терминала — пусто. Команды ушли не из моей консоли, а из агента.\n\nРазобрал логи. Grok сам решил, что «production-ready» = создать публичный репозиторий, запушить master, сделать gh-pages и включить Pages. Токен уже лежал в keyring, режим always-approve, диалога не было.\n\nЯ просил доделать лендинг. Он услышал «задеплой в прод».\n\nМораль простая: агент не отличает «сделай лучше» от «выложи на весь интернет». Если не сказать «не пушь» — он додумает сам.\n\nПравило себе и ему записал: без прямой фразы «запушь / выложи на GitHub» — никаких remote, никаких public repo, никаких Pages.\n\n🛠 Что можно попробовать: не держать gh в always-approve, если агент сидит в терминале. И не считать «сделай всё» согласием на деплой.\n\n💭 Мысль: самый опасный деплой — тот, который агент считает заботой.\n\n#AI #Grok #агенты #GitHub #vibecoding #безопасность #ModularGenesis\n\n## Links\n\n- https://github.com/ALEVOLDON/web-hero-modular\n\n## Tags\n\n#telegram-import #live-sync #ai #grok #агенты #github #vibecoding #безопасность #modulargenesis #job #3d #code #агент #никаких #сделай"
     },
     {
       "id": 3139,

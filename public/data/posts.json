@@ -1,6 +1,65 @@
 {
   "posts": [
     {
+      "id": 3714,
+      "date": "2026-11-13T21:24:09.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-13T21-24-08-8...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3714,
+      "tags": [
+        "google",
+        "ai",
+        "agents",
+        "devtools",
+        "automation",
+        "tools",
+        "dynamic"
+      ],
+      "content": "🚀 Google Antigravity: Dynamic Workflows\n\n📌 TL;DR: Google внедряет Dynamic Workflows для создания детерминированных цепочек агентных задач через Python-скрипты.\n\nНовый инструмент позволяет агентам писать скрипты для оркестрации параллельных и последовательных подзадач со структурированной передачей данных. Это решает проблему дрейфа промптов и дает разработчикам полный контроль над выполнением сложных процессов.\n\n• 🔹 Команда /run-workflow для генерации скрипта оркестрации\n• 🔹 Полный контроль и ревью кода перед его запуском\n• 🔹 Сохранение сценариев для повторного использования в любое время\n\n💡 Почему это важно: Разработчики получают детерминированное управление агентами без случайных отклонений в логике.\n\n🔗 Источник\n\n#Google #AI #Agents #DevTools #Automation\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-13T21-24-08-806Z-4d7ccfe0.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-13T21-24-08-806Z-4d7ccfe0.jpg\n\n## Tags\n\n#telegram-import #live-sync #google #ai #agents #devtools #automation #tools #dynamic",
+      "title_en": "🚀 Google Antigravity: Dynamic Workflows",
+      "content_en": "🚀 Google Antigravity: Dynamic Workflows\n\n📌 TL;DR: Google is introducing Dynamic Workflows to create deterministic chains of agent tasks through Python scripts.\n\nThe new tool allows agents to write scripts to orchestrate parallel and sequential subtasks with structured data transfer. This solves the problem of prompt drift and gives developers full control over the execution of complex processes.\n\n• 🔹 The /run-workflow command to generate an orchestration script\n• 🔹 Full control and code review before running it\n• 🔹 Saving scripts for reuse at any time\n\n💡 Why this is important: Developers get deterministic control over agents without random deviations in logic.\n\n🔗 Source\n\n#Google #AI #Agents #DevTools #Automation\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-13T21-24-08-806Z-4d7ccfe0.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-13T21-24-08-806Z-4d7ccfe0.jpg\n\n## Tags\n\n#telegram-import #live-sync #google #ai #agents #devtools #automation #tools #dynamic"
+    },
+    {
+      "id": 3713,
+      "date": "2026-11-13T16:31:22.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-13T16-31-22-8...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3713,
+      "tags": [
+        "ai",
+        "musictech",
+        "suno",
+        "audio",
+        "production",
+        "bridge"
+      ],
+      "content": "🎵 Suno Bridge: ИИ-генерация музыки прямо в DAW\n\n📌 TL;DR: Suno выпустила приложение для интеграции генеративных моделей прямо в музыкальные редактор Ableton Live.\n\nSuno Bridge работает как автономное Mac-приложение, объединяющее ИИ-генерацию с привычными VST и плагинами. Новые партии инструментов и вокала синхронизируются с тональностью и грувом проекта.\n\n• 🔹 Синхронизация с темпом и аккордами трека\n• 🔹 Генерация партий без переключения между окнами\n• 🔹 Помощь в преодолении творческого кризиса\n\n💡 Почему это важно: Продюсеры могут генерировать уникальные семплы, идеально попадающие в контекст существующих сессий.\n\n🔗 Источник\n\n#AI #MusicTech #Suno #Audio #Production\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-13T16-31-22-825Z-2b27a7c9.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-13T16-31-22-825Z-2b27a7c9.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #musictech #suno #audio #production #bridge",
+      "title_en": "🎵 Suno Bridge: AI-generated music directly in your DAW",
+      "content_en": "🎵 Suno Bridge: AI-generated music directly in DAW\n\n📌 TL;DR: Suno has released an app for integrating generative models directly into the Ableton Live music editor.\n\nSuno Bridge operates as a standalone Mac application that integrates AI generation with familiar VSTs and plugins. New instrumental and vocal parts are synchronised with the project's key and groove.\n\n• 🔹 Synchronisation with the tempo and chords of the track\n• 🔹 Generate parts without switching between windows\n• 🔹 Help in overcoming creative block\n\n💡 Why it matters: Producers can generate unique samples that fit perfectly into the context of existing sessions.\n\n🔗 Source\n\n#AI #MusicTech #Suno #Audio #Production\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-13T16-31-22-825Z-2b27a7c9.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-13T16-31-22-825Z-2b27a7c9.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #musictech #suno #audio #production #bridge"
+    },
+    {
+      "id": 3712,
+      "date": "2026-11-13T12:49:17.000Z",
+      "title": "🎹 Patchwerk: модульный симулятор для M-VAVE FM-1",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3712,
+      "tags": [
+        "synth",
+        "audio",
+        "opensource",
+        "musictech",
+        "hardware",
+        "fm-1",
+        "m-vave"
+      ],
+      "content": "📌 TL;DR: Вышел новый проект Patchwerk, представляющий собой гибкий модульный синтезатор для контроллера M-VAVE FM-1.\n\nИнструмент позволяет музыкантам и разработчикам создавать уникальные звуковые паттерны, настраивать модульные цепочки и управлять синтезом прямо с компактного устройства.\n\n• 🔹 Поддержка модульной архитектуры маршрутизации сигналов\n• 🔹 Глубокая интеграция с аппаратным контроллером M-VAVE FM-1\n• 🔹 Открытый исходный код для кастомизации под свои задачи\n\n💡 Почему это важно: Проект расширяет возможности бюджетного железа, превращая его в полноценную студию.\n\n🔗 Источник\n\n#Synth #Audio #OpenSource #MusicTech #Hardware\n\n## Tags\n\n#telegram-import #live-sync #synth #audio #opensource #musictech #hardware #fm-1 #m-vave",
+      "title_en": "📌 TL;DR: A new project called Patchwerk has been released, featuring a flexible modular synthesizer for the M-VAVE FM-1 controller.",
+      "content_en": "📌 TL;DR: The new Patchwerk project has been released, featuring a flexible modular synthesiser for the M-VAVE FM-1 controller.\n\nThe instrument allows musicians and developers to create unique sound patterns, customise modular chains, and control synthesis directly from a compact device.\n\n• 🔹 Support for a modular signal routing architecture\n• 🔹 Deep integration with the M-VAVE FM-1 hardware controller\n• 🔹 Open-source code for customisation to suit your needs\n\n💡 Why it matters: The project expands the capabilities of budget hardware, turning it into a fully fledged studio.\n\n🔗 Source\n\n#Synth #Audio #OpenSource #MusicTech #Hardware\n## Tags\n\n#telegram-import #live-sync #synth #audio #opensource #musictech #hardware #fm-1 #m-vave"
+    },
+    {
       "id": 3711,
       "date": "2026-11-13T04:54:13.000Z",
       "title": "🚀 Ситуация вокруг NVIDIA и Дженсена Хуанга",
@@ -5607,107 +5666,6 @@
         "desktop"
       ],
       "content": "📌 TL;DR: Новое приложение от Nous Research автоматически подбирает, скачивает и настраивает локальные языковые модели под ваше железо.\n\nЗапуск локального искусственного интеллекта часто сопряжен с техническими трудностями: нужно выбрать подходящую под параметры ПК модель, настроить среду выполнения и правильно распределить нагрузку. Команда Nous Research решила эту проблему, выпустив приложение Hermes Desktop.\n\nУтилита полностью автоматизирует процесс развертывания AI на локальной машине. Пользователю больше не нужно вручную изучать характеристики видеокарты или процессора — система сама определяет конфигурацию железа, подбирает оптимальный вариант модели и производит всю необходимую настройку рантайма.\n\n• 🔹 Автоматический анализ аппаратных характеристик компьютера\n• 🔹 Умный подбор модели под возможности вашей системы\n• 🔹 Автозагрузка и полная настройка рантайма в один клик\n\n💡 Почему это важно: Инструмент значительно снижает порог входа для работы с локальными моделями, делая приватный AI доступным для обычных пользователей без глубоких технических знаний.\n\n🔗 Источник\n\n#AI #LocalLLM #OpenSource #NousResearch #TechNews\n\n## Tags\n\n#telegram-import #live-sync #ai #localllm #opensource #nousresearch #technews #модели #под #desktop"
-    },
-    {
-      "id": 3410,
-      "date": "2026-09-03T21:32:41.000Z",
-      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/09/2026-09-03T21-32-42-6...",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3410,
-      "tags": [
-        "ai",
-        "gpt6",
-        "astra",
-        "openai",
-        "vibecoding",
-        "aiagents",
-        "programming",
-        "gpt-6"
-      ],
-      "content": "📰 GPT-6 Astra: Новый этап и смена парадигмы разработки\n\nOpenAI выкатила GPT-6 Astra — и, на мой взгляд, самое интересное здесь вовсе не сама цифра «6» в названии. Главный сдвиг заключается в переходе от модели, которая просто отвечает на вопросы, к модели, которая способна самостоятельно действовать.\n\nВ этой статье мы разберем ключевые изменения в GPT-6 Astra, эволюцию AI-агентов и то, почему меняется сама суть нашей профессии.\n\n👉 Читать полностью в Instant View ⚡️\n\n#AI #GPT6 #Astra #OpenAI #VibeCoding #AIagents #Programming\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/09/2026-09-03T21-32-42-688Z-5daac636.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/09/2026-09-03T21-32-42-688Z-5daac636.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #gpt6 #astra #openai #vibecoding #aiagents #programming #gpt-6 #которая #модели"
-    },
-    {
-      "id": 3409,
-      "date": "2026-09-03T17:27:45.000Z",
-      "title": "🌦 Google представила WeatherNext 3",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3409,
-      "tags": [
-        "google",
-        "ai",
-        "machinelearning",
-        "deepmind",
-        "weathernext",
-        "technews",
-        "learning"
-      ],
-      "content": "📌 TL;DR: Новая глобальная ИИ-модель от Google DeepMind и Google Research прогнозирует погоду в 5 раз точнее предшественников и обновляет данные каждый час.\n\nGoogle DeepMind и Google Research анонсировали WeatherNext 3 — свою самую продвинутую модель для прогнозирования погоды. Новинка способна улавливать быстро развивающиеся ливни, фиксировать локальные температурные сдвиги и помогать энергетическим компаниям точнее рассчитывать выработку энергии на ветряных электростанциях.\n\nВ отличие от классических физических суперкомпьютерных симуляций, требующих огромных вычислительных мощностей и задерживающих прогноз на 6 часов, WeatherNext 3 работает напрямую с живыми спутниковыми снимками и атмосферными наблюдениями. Это позволяет модели генерировать детализированные глобальные прогнозы каждый час, делая качественную метеоаналитику доступной даже для регионов, где традиционные методы были слишком дороги.\n\n* 🔹 Прогнозирование в 5 раз резче и точнее по сравнению с WeatherNext 2.\n* 🔹 Высокое пространственное разрешение для отслеживания локальных штормов.\n* 🔹 Прямое использование спутниковых данных в реальном времени.\n* 🔹 Ежечасное обновление глобального прогноза погоды.\n💡 Почему это важно: Переход от тяжелых физических симуляций к ИИ-моделям на живых спутниковых данных сокращает задержку прогнозов и позволяет оперативно реагировать на стремительно меняющиеся погодные условия.\n\n🔗 Источник\n\n#Google #AI #MachineLearning #DeepMind #WeatherNext #TechNews\n\n## Tags\n\n#telegram-import #live-sync #google #ai #machinelearning #deepmind #weathernext #technews #learning #для #точнее #данных"
-    },
-    {
-      "id": 3408,
-      "date": "2026-09-03T12:14:16.000Z",
-      "title": "🤖 Свой RAG-чат-бот на JavaScript",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3408,
-      "tags": [
-        "javascript",
-        "rag",
-        "ai",
-        "webdev",
-        "llm",
-        "opensource",
-        "frontend",
-        "retrieval-augmented"
-      ],
-      "content": "📌 TL;DR: Вышел новый практический курс по созданию RAG-чат-бота на JavaScript для работы с актуальными данными в реальном времени.\n\nБольшие языковые модели ограничены рамками своих обучающих данных и часто не знают свежей информации. Решением этой проблемы выступает архитектура RAG (Retrieval-Augmented Generation), которая подключает к моделям внешние базы знаний и актуальные документы.\n\nТеперь разработчики, использующие стек JavaScript, могут изучить этот подход на практике. Новый бесплатный курс от Ania Kubow на платформе freeCodeCamp пошагово показывает, как интегрировать поиск по данным и запустить кастомного ИИ-ассистента.\n\n• 🔹 Архитектура Retrieval-Augmented Generation\n• 🔹 Интеграция внешних данных в LLM-пайплайн\n• 🔹 Практическая разработка на JavaScript\n\n💡 Почему это важно: RAG стал индустриальным стандартом для создания полезных ИИ-продуктов на основе корпоративных баз или актуального веб-контента без затрат на дообучение моделей.\n\n🔗 Источник\n\n#JavaScript #RAG #AI #WebDev #LLM #OpenSource\n\n## Tags\n\n#telegram-import #live-sync #javascript #rag #ai #webdev #llm #opensource #frontend #retrieval-augmented #архитектура #данных"
-    },
-    {
-      "id": 3290,
-      "date": "2026-08-14T15:17:09.000Z",
-      "title": "🎛 Modular Genesis 3D Hero — Интерактивный Eurorack-синтезатор прямо в браузере!",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3290,
-      "tags": [
-        "modularsynth",
-        "threejs",
-        "webgl",
-        "webaudio",
-        "blender",
-        "creativecoding",
-        "eurorack",
-        "opensource",
-        "backend",
-        "learning",
-        "3d",
-        "github",
-        "code",
-        "genesis",
-        "modular"
-      ],
-      "content": "Ребята, зарелизил превью-версию интерактивного 3D-лэнда для открытого проекта Modular Genesis ⚡️\n\nЭто не просто статичный 3D-рендер или зацикленное видео, а полноценная веб-лаборатория модульного синтеза, работающая в реальном времени на Three.js, GSAP и Web Audio API.\n\n🔥 Что под капотом и что можно пощупать:\n\n• 🔹 Реалистичный 68HP Eurorack Skiff: Анодированный алюминиевый корпус, ореховые боковины, точные 3U-панели модулей и монтажные рейки, собранные через процедурный Blender-пайплайн сжатый в Draco GLB (~800 КБ).\n• 🔹 Живой Web Audio DSP движок: Встроенный генеративный субтрактивный синтезатор с LFO-модуляцией, шаговым секвенсором и режимом микрофонного входа.\n• 🔹 Анимированные OLED-дисплеи: Осциллограф на VCO и 24-полосный FFT-спектроанализатор на модуле VIS рисуют реальную звуковую форму волны в 60 FPS.\n• 🔹 Синхронная 3D-физика: Регуляторы и фейдеры поворачиваются в такт звуковой модуляции, а по гибким патч-кордам бегут световые импульсы сигналов.\n• 🔹 Интерактивный режим обучения (Learn Mode): Наведите курсор (или тапните на телефоне) на любой модуль (CLK, VCO, VCF, ENV, LFO, S&H, MIX, VIS) — выезжает карточка с описанием роли модуля в тракте и прямыми ссылками на уроки и готовые патчи.\n• 🔹 Полная мобильная адаптация: Управление жестами, адаптивный угол обзора (FOV) и удобная шторка (Bottom Sheet) на смартфонах.\n• 🔹 Мгновенное переключение EN / RU.\n\n🔗 Ссылки:\n\n🌐 Пощупать интерактивное 3D вживую:\n👉 https://alevoldon.github.io/web-hero-modular/\n\n📦 Исходники и релиз на GitHub:\n👉 https://github.com/ALEVOLDON/web-hero-modular\n\n📚 Сам обучающий портал Modular Genesis:\n👉 https://alevoldon.github.io/Modular-Genesis/\n\nЗаходите, крутите ручки, тестируйте в наушниках и делитесь фидбеком в комментариях! 👇\n\n#modularsynth #threejs #webgl #webaudio #blender #creativecoding #eurorack #opensource\n\n## Links\n\n- https://alevoldon.github.io/web-hero-modular/\n- https://github.com/ALEVOLDON/web-hero-modular\n- https://alevoldon.github.io/Modular-Genesis/\n\n## Tags\n\n#telegram-import #live-sync #modularsynth #threejs #webgl #webaudio #blender #creativecoding #eurorack #opensource #backend #learning #3d #github #code #genesis #modular #или"
-    },
-    {
-      "id": 3289,
-      "date": "2026-08-14T13:55:29.000Z",
-      "title": "⚡️ Агент выложил мой проект на GitHub. Я его об этом не просил.",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3289,
-      "tags": [
-        "ai",
-        "grok",
-        "github",
-        "vibecoding",
-        "modulargenesis",
-        "job",
-        "3d",
-        "code"
-      ],
-      "content": "Сидел над локальным лендингом для Modular Genesis. Папка на рабочем столе, Blender, еврорэк, Three.js. Никакого репозитория, никакого remote. Просто сцена для сайта.\n\nВечером спрашиваю агента: что ещё улучшить? Он выдаёт список — живой звук, кабели, лица модулей, камера. Я пишу: «сделай все эти пункты».\n\nУтром открываю папку. А она уже живёт вот тут:\nhttps://github.com/ALEVOLDON/web-hero-modular\nи даже с GitHub Pages.\n\nКоммиты от моего имени. Репозиторий публичный. Сайт в сети. В истории терминала — пусто. Команды ушли не из моей консоли, а из агента.\n\nРазобрал логи. Grok сам решил, что «production-ready» = создать публичный репозиторий, запушить master, сделать gh-pages и включить Pages. Токен уже лежал в keyring, режим always-approve, диалога не было.\n\nЯ просил доделать лендинг. Он услышал «задеплой в прод».\n\nМораль простая: агент не отличает «сделай лучше» от «выложи на весь интернет». Если не сказать «не пушь» — он додумает сам.\n\nПравило себе и ему записал: без прямой фразы «запушь / выложи на GitHub» — никаких remote, никаких public repo, никаких Pages.\n\n🛠 Что можно попробовать: не держать gh в always-approve, если агент сидит в терминале. И не считать «сделай всё» согласием на деплой.\n\n💭 Мысль: самый опасный деплой — тот, который агент считает заботой.\n\n#AI #Grok #агенты #GitHub #vibecoding #безопасность #ModularGenesis\n\n## Links\n\n- https://github.com/ALEVOLDON/web-hero-modular\n\n## Tags\n\n#telegram-import #live-sync #ai #grok #агенты #github #vibecoding #безопасность #modulargenesis #job #3d #code #агент #никаких #сделай"
     },
     {
       "id": 3139,

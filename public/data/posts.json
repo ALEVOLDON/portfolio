@@ -1,6 +1,26 @@
 {
   "posts": [
     {
+      "id": 3715,
+      "date": "2026-11-16T14:32:22.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-16T14-32-33-4...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3715,
+      "tags": [
+        "google",
+        "gemini",
+        "ai",
+        "devtools",
+        "coding",
+        "opensource",
+        "tools"
+      ],
+      "content": "🚀 Google анонсировал Gemini 4 Hydrogen и режим Orchestrator\n\n📌 TL;DR: Новая архитектура связывает тяжелые и легкие версии Gemini для быстрого и эффективного написания кода.\n\nGoogle обновил среду разработки @Antigravity, внедрив модель Gemini 4 Hydrogen и режимы Orchestrator (Carbon/Argon). Теперь система автоматически распределяет задачи: тяжелые модели строят план и проверяют тесты, а легкая Hydrogen мгновенно пишет код.\n\n• 🔹 Автоматический выбор модели под задачу\n• 🔹 Снижение задержек и экономия квот\n• 🔹 Умная корректировка плана при падении тестов\n\n💡 Почему это важно: Разработчики получают баланс скорости и качества без необходимости запускать тяжелый AI на каждое мелкое изменение кода.\n\n🔗 Источник\n\n#Google #Gemini #AI #DevTools #Coding #OpenSource\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-16T14-32-33-429Z-a8fd0adf.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-16T14-32-33-429Z-a8fd0adf.jpg\n\n## Tags\n\n#telegram-import #live-sync #google #gemini #ai #devtools #coding #opensource #tools",
+      "title_en": "🚀 Google announces Gemini 4 Hydrogen and Orchestrator mode",
+      "content_en": "🚀 Google announces Gemini 4 Hydrogen and Orchestrator mode\n\n📌 TL;DR: The new architecture links the heavy and light versions of Gemini for fast and efficient code writing.\n\nGoogle has updated the @Antigravity development environment by introducing the Gemini 4 Hydrogen model and Orchestrator modes (Carbon/Argon). Now, the system automatically allocates tasks: heavy models create a plan and check tests, while the lightweight Hydrogen writes code instantly.\n\n• 🔹 Automatic selection of the model for the task\n• 🔹 Reduced delays and quota savings\n• 🔹 Smart adjustment of the plan when tests fail\n\n💡 Why it matters: Developers get a balance of speed and quality without having to run resource-intensive AI for every minor code change.\n\n🔗 Source\n\n#Google #Gemini #AI #DevTools #Coding #OpenSource\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-16T14-32-33-429Z-a8fd0adf.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-16T14-32-33-429Z-a8fd0adf.jpg\n\n## Tags\n\n#telegram-import #live-sync #google #gemini #ai #devtools #coding #opensource #tools"
+    },
+    {
       "id": 3714,
       "date": "2026-11-13T21:24:09.000Z",
       "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-13T21-24-08-8...",
@@ -5649,23 +5669,6 @@
         "3d"
       ],
       "content": "📌 TL;DR: Новый рабочий процесс позволяет мгновенно переносить фотографии реальных объектов прямо в рабочее пространство Blender 3D.\n\nСоздание трехмерных моделей на основе реальных объектов становится еще быстрее благодаря свежему воркфлоу, представленному разработчиком Siddharth Ahuja. Метод позволяет буквально сделать снимок физического мира и вставить его в редактор в качестве готовой основы для дальнейшей работы.\n\nТакой подход существенно упрощает прототипирование, текстурирование и моделирование сцен, сокращая рутину по воссозданию объектов с нуля по референсам. Технологию оценят как 3D-художники, так и специалисты по созданию контента и визуальных эффектов.\n\n• 🔹 Быстрый перенос физических объектов в цифровую среду\n• 🔹 Ускорение процесса моделирования и прототипирования\n• 🔹 Удобная интеграция непосредственно в интерфейс Blender\n\n💡 Почему это важно: Инструменты, стирающие грань между реальным миром и 3D-графикой, экономят часы ручной работы и делают процесс создания контента интуитивнее.\n\n🔗 Источник\n\n#Blender #3DModeling #Design #Workflow #TechNews\n\n## Tags\n\n#telegram-import #live-sync #blender #3dmodeling #design #workflow #technews #3d #объектов #интеграция #контента"
-    },
-    {
-      "id": 3411,
-      "date": "2026-09-03T23:53:33.000Z",
-      "title": "🚀 Вышел Hermes Desktop: локальные LLM в один клик",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3411,
-      "tags": [
-        "ai",
-        "localllm",
-        "opensource",
-        "nousresearch",
-        "technews",
-        "desktop"
-      ],
-      "content": "📌 TL;DR: Новое приложение от Nous Research автоматически подбирает, скачивает и настраивает локальные языковые модели под ваше железо.\n\nЗапуск локального искусственного интеллекта часто сопряжен с техническими трудностями: нужно выбрать подходящую под параметры ПК модель, настроить среду выполнения и правильно распределить нагрузку. Команда Nous Research решила эту проблему, выпустив приложение Hermes Desktop.\n\nУтилита полностью автоматизирует процесс развертывания AI на локальной машине. Пользователю больше не нужно вручную изучать характеристики видеокарты или процессора — система сама определяет конфигурацию железа, подбирает оптимальный вариант модели и производит всю необходимую настройку рантайма.\n\n• 🔹 Автоматический анализ аппаратных характеристик компьютера\n• 🔹 Умный подбор модели под возможности вашей системы\n• 🔹 Автозагрузка и полная настройка рантайма в один клик\n\n💡 Почему это важно: Инструмент значительно снижает порог входа для работы с локальными моделями, делая приватный AI доступным для обычных пользователей без глубоких технических знаний.\n\n🔗 Источник\n\n#AI #LocalLLM #OpenSource #NousResearch #TechNews\n\n## Tags\n\n#telegram-import #live-sync #ai #localllm #opensource #nousresearch #technews #модели #под #desktop"
     },
     {
       "id": 3290,

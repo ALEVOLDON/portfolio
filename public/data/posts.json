@@ -1,6 +1,48 @@
 {
   "posts": [
     {
+      "id": 3717,
+      "date": "2026-11-16T19:52:48.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-16T19-52-48-7...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3717,
+      "tags": [
+        "ai",
+        "python",
+        "machinelearning",
+        "devtools",
+        "opensource",
+        "learning",
+        "tools",
+        "glm-5"
+      ],
+      "content": "🚀 Обучение GLM-5.3-Flash с нуля\n\n📌 TL;DR: Практический гайд по созданию мини-версии эффективной языковой модели на обычном CPU.\n\nПлатформа freeCodeCamp опубликовала туториал по сборке и обучению уменьшенной копии продвинутой модели GLM-5.3-Flash на Python. Это отличная возможность для разработчиков разобраться во внутренних механизмах современных LLM.\n\n• 🔹 Реализация архитектуры на чистом Python\n• 🔹 Изучение механизмов внимания и Mixture of Experts\n• 🔹 Обучение модели локально на стандартном процессоре\n\n💡 Почему это важно: Гайд позволяет заглянуть под капот современных языковых моделей без необходимости аренды дорогих GPU-кластеров.\n\n🔗 Источник\n\n#AI #Python #MachineLearning #DevTools #OpenSource\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-16T19-52-48-706Z-7b3789a7.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-16T19-52-48-706Z-7b3789a7.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #python #machinelearning #devtools #opensource #learning #tools #glm-5",
+      "title_en": "🚀 Training GLM-5.3-Flash from scratch",
+      "content_en": "🚀 Training GLM-5.3-Flash from scratch\n\n📌 TL;DR: A practical guide to creating a mini version of an efficient language model on a standard CPU.\n\nThe freeCodeCamp platform has published a tutorial on building and training a scaled-down version of the advanced GLM-5.3-Flash model in Python. This is a great opportunity for developers to understand the inner workings of modern LLMs.\n\n• 🔹 Implementation of the architecture in pure Python\n• 🔹 Studying attention mechanisms and Mixture of Experts\n• 🔹 Training the model locally on a standard CPU\n\n💡 Why it matters: The guide allows you to take a look under the hood of modern language models without having to rent expensive GPU clusters.\n\n🔗 Source\n\n#AI #Python #MachineLearning #DevTools #OpenSource\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-16T19-52-48-706Z-7b3789a7.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-16T19-52-48-706Z-7b3789a7.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #python #machinelearning #devtools #opensource #learning #tools #glm-5"
+    },
+    {
+      "id": 3716,
+      "date": "2026-11-16T19:50:07.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-16T19-50-07-6...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3716,
+      "tags": [
+        "ai",
+        "qwen",
+        "llm",
+        "openai",
+        "technews",
+        "backend",
+        "3d",
+        "qwen4-max"
+      ],
+      "content": "🚀 Релиз Qwen4-Max\n\n📌 TL;DR: Команда Alibaba представила Qwen4-Max — новую флагманскую LLM на архитектуре MoE с нативной поддержкой зрения и контекстом на 1M токенов.\n\nМодель превосходит предыдущую версию при снижении расхода токенов на 50% и падении стоимости задач более чем на 60%. Новинка уверенно справляется со сложными рабочими процессами от 3D-моделирования до научных исследований.\n\n• 🔹 Новая архитектура MoE с нативным зрением и окном в 1M токенов\n• 🔹 Снижение стоимости: $1.5 за млн входных и $4.5 за млн выходных токенов\n• 🔹 Поддержка сложных сценариев: разработка игр, право, финансы и медицина\n\n💡 Почему это важно: Сочетание низкой цены API и глубокой интеграции с профессиональными инструментами делает Qwen4-Max отличным выбором для масштабных автоматизаций.\n\n🔗 Источник\n\n#AI #Qwen #LLM #OpenAI #TechNews\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-16T19-50-07-621Z-18a0f6e7.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-16T19-50-07-621Z-18a0f6e7.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #qwen #llm #openai #technews #backend #3d #qwen4-max",
+      "title_en": "🚀 Qwen4-Max Release",
+      "content_en": "🚀 Qwen4-Max Release\n\n📌 TL;DR: The Alibaba team has unveiled Qwen4-Max — a new flagship LLM based on the MoE architecture with native vision support and a context of 1M tokens.\n\nThe model outperforms the previous version, with a 50% reduction in token consumption and a more than 60% drop in the cost of tasks. The new model confidently handles complex workflows, from 3D modelling to scientific research.\n\n• 🔹 New MoE architecture with native vision and a 1M-token window\n• 🔹 Cost reduction: $1.5 per million input tokens and $4.5 per million output tokens\n• 🔹 Support for complex scenarios: game development, law, finance and medicine\n\n💡 Why this matters: The combination of a low API price and deep integration with professional tools makes Qwen4-Max an excellent choice for large-scale automation.\n\n🔗 Source\n\n#AI #Qwen #LLM #OpenAI #TechNews\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-16T19-50-07-621Z-18a0f6e7.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-16T19-50-07-621Z-18a0f6e7.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #qwen #llm #openai #technews #backend #3d #qwen4-max"
+    },
+    {
       "id": 3715,
       "date": "2026-11-16T14:32:22.000Z",
       "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-16T14-32-33-4...",
@@ -5634,41 +5676,6 @@
         "tech"
       ],
       "content": "📰 Эволюция ИИ: от чат-ботов к автономным агентам\n\nИндустрия искусственного интеллекта стремительно трансформируется. ИИ перестает быть просто умным собеседником и превращается в самостоятельную рабочую силу, способную решать комплексные задачи без постоянного вмешательства человека.\n\nВ этой статье мы разберем ключевые сдвиги в парадигме разработки, переход к мультиагентным системам и то, как меняется роль инженера в мире автономного софта.\n\n👉 Читать полностью в Instant View ⚡️\n\n#AI #ArtificialIntelligence #VibeCoding #Agents #Programming #Tech\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/09/2026-09-04T08-26-51-758Z-ac086173.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/09/2026-09-04T08-26-51-758Z-ac086173.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #artificialintelligence #vibecoding #agents #programming #tech"
-    },
-    {
-      "id": 3413,
-      "date": "2026-09-04T00:04:16.000Z",
-      "title": "⚡️ Microwave WB: новый верстак для радиоинженерии во FreeCAD",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3413,
-      "tags": [
-        "freecad",
-        "opensource",
-        "cad",
-        "engineering",
-        "rf",
-        "hardware",
-        "openems"
-      ],
-      "content": "📌 TL;DR: Во FreeCAD появился экспериментальный верстак Microwave WB, который приносит инструменты RF-моделирования и СВЧ-инженерии в экосистему открытого CAD.\n\nПроект представляет собой смелую и амбициозную разработку, призванную закрыть потребности инженеров, работающих с радиоэлектроникой и высокочастотными структурами. На текущий момент уже реализована работа с openEMS в качестве основного солвера, однако в будущем авторы планируют добавить интеграцию и с другими решателями.\n\nИнструмент будет полезен инженерам-электронщикам, разработчикам антенн и всем, кто ищет open-source альтернативы проприетарным САПР для симуляции СВЧ-устройств.\n\n• 🔹 Поддержка RF и microwave-инженерии прямо внутри FreeCAD\n• 🔹 Интеграция с открытым электромагнитным солвером openEMS\n• 🔹 Планы по расширению списка поддерживаемых решателей\n\n💡 Почему это важно: Профессиональные инструменты для СВЧ-моделирования традиционно стоят дорого и закрыты. Развитие подобных открытых модулей делает сложную радиоинженерию доступнее для инженеров и энтузиастов со всего мира.\n\n🔗 Источник\n\n#FreeCAD #OpenSource #CAD #Engineering #RF #Hardware\n\n## Tags\n\n#telegram-import #live-sync #freecad #opensource #cad #engineering #rf #hardware #для #openems #верстак"
-    },
-    {
-      "id": 3412,
-      "date": "2026-09-03T23:58:09.000Z",
-      "title": "🌐 Интеграция реального мира в Blender 3D",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3412,
-      "tags": [
-        "blender",
-        "3dmodeling",
-        "design",
-        "workflow",
-        "technews",
-        "3d"
-      ],
-      "content": "📌 TL;DR: Новый рабочий процесс позволяет мгновенно переносить фотографии реальных объектов прямо в рабочее пространство Blender 3D.\n\nСоздание трехмерных моделей на основе реальных объектов становится еще быстрее благодаря свежему воркфлоу, представленному разработчиком Siddharth Ahuja. Метод позволяет буквально сделать снимок физического мира и вставить его в редактор в качестве готовой основы для дальнейшей работы.\n\nТакой подход существенно упрощает прототипирование, текстурирование и моделирование сцен, сокращая рутину по воссозданию объектов с нуля по референсам. Технологию оценят как 3D-художники, так и специалисты по созданию контента и визуальных эффектов.\n\n• 🔹 Быстрый перенос физических объектов в цифровую среду\n• 🔹 Ускорение процесса моделирования и прототипирования\n• 🔹 Удобная интеграция непосредственно в интерфейс Blender\n\n💡 Почему это важно: Инструменты, стирающие грань между реальным миром и 3D-графикой, экономят часы ручной работы и делают процесс создания контента интуитивнее.\n\n🔗 Источник\n\n#Blender #3DModeling #Design #Workflow #TechNews\n\n## Tags\n\n#telegram-import #live-sync #blender #3dmodeling #design #workflow #technews #3d #объектов #интеграция #контента"
     },
     {
       "id": 3290,

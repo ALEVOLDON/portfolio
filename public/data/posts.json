@@ -1,6 +1,18 @@
 {
   "posts": [
     {
+      "id": 3718,
+      "date": "2026-11-17T20:49:31.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-17T20-49-34-7...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3718,
+      "tags": [],
+      "content": "Новый блок питания: апгрейд с компромиссами\n\nСегодня заменил блок питания на DeepCool PL750D (750 Вт, 80+ Bronze). Установка прошла успешно: компьютер запустился без проблем, несколько часов Factorio — тоже без приключений. После нескольких недель борьбы с нестабильным напряжением это уже неплохой результат.\n\nНо есть нюансы. Блок немодульный, поэтому лишние кабели приходится прятать в нижнем отсеке корпуса. Провода и коннекторы выглядят довольно бюджетно, а доступ к крепёжным винтам оказался неудобным. Сама электроника вызывает больше доверия, чем внешнее исполнение, но окончательные выводы можно будет сделать только после продолжительной эксплуатации.\n\nОтдельный инженерный компромисс — отсутствие съёмных кабелей. Модульная конструкция позволила бы подключить только необходимые линии и избавиться от лишнего кабельного хозяйства. Завтра займусь кабель-менеджментом и попробую привести внутреннее пространство в порядок.\n\n🛠 Практика: свободные разъёмы нужно закреплять, кабели не пережимать и не допускать контакта с вентиляторами.\n\n💭 Наблюдение: хороший технический продукт — это не только характеристики компонентов, но и удобство монтажа, обслуживания и эксплуатации.\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-17T20-49-34-768Z-c5f658b3.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-17T20-49-34-768Z-c5f658b3.jpg\n\n## Tags\n\n#telegram-import #live-sync #post #archive",
+      "title_en": "New Power Supply Unit: An Upgrade with Compromises",
+      "content_en": "New power supply unit: an upgrade with compromises\n\nToday, I replaced the power supply unit with a DeepCool PL750D (750 W, 80+ Bronze). The installation went smoothly: the computer booted up without any issues, and I played Factorio for several hours without any hiccups. After several weeks of struggling with unstable voltage, this is already a good result.\n\nBut there are some nuances. The unit is not modular, so excess cables have to be hidden in the lower compartment of the casing. The wires and connectors look rather budget-friendly, and access to the fastening screws turned out to be inconvenient. The electronics themselves inspire more confidence than the external design, but final conclusions can only be drawn after prolonged use.\n\nA separate engineering compromise is the absence of detachable cables. A modular design would allow for connecting only the necessary lines and getting rid of excess cabling. Tomorrow, I'll tackle cable management and try to tidy up the internal space.\n\n🛠 Practical tip: Loose connectors should be secured, cables should not be pinched, and contact with fans should be avoided.\n\n💭 Observation: A good technical product is not only about the characteristics of its components, but also about the ease of installation, maintenance and operation.\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-17T20-49-34-768Z-c5f658b3.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-17T20-49-34-768Z-c5f658b3.jpg\n\n## Tags\n\n#telegram-import #live-sync #post #archive"
+    },
+    {
       "id": 3717,
       "date": "2026-11-16T19:52:48.000Z",
       "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-16T19-52-48-7...",
@@ -5659,68 +5671,6 @@
         "engineering"
       ],
       "content": "📌 TL;DR: Китайские инженеры представили уникального робота, объединяющего форм-фактор гуманоида и промышленную робототехнику.\n\nНовая разработка предлагает необычный подход к автоматизации, объединяя гибкость гуманоидного робота с мощью и точностью механической руки. Модульная конструкция устройства и полный радиус действия в 360 градусов позволяют полностью избавиться от слепых зон при выполнении задач.\n\nТакая техническая синергия открывает принципиально новые возможности для применения робототехники в сложных сценариях. Решение особенно актуально для масштабных строительных проектов, где требуются универсальность, высокая эффективность и адаптивность к меняющимся условиям среды.\n\n* 🔹 Гибридная архитектура гуманоида и роборуки\n* 🔹 Полный диапазон работы на 360 градусов без слепых зон\n* 🔹 Модульная конструкция для быстрой адаптации под задачи\n* 🔹 Высокая эффективность в сложных строительных проектах\n💡 Почему это важно: Подобные гибридные системы стирают грань между специализированными промышленными станками и универсальными роботами-помощниками, ускоряя автоматизацию тяжелого физического труда.\n\n🔗 Источник\n\n#Robotics #Automation #AI #TechNews #Innovation #Engineering\n\n## Tags\n\n#telegram-import #live-sync #robotics #automation #ai #technews #innovation #engineering #для #высокая #градусов"
-    },
-    {
-      "id": 3414,
-      "date": "2026-09-04T08:26:52.000Z",
-      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/09/2026-09-04T08-26-51-7...",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3414,
-      "tags": [
-        "ai",
-        "artificialintelligence",
-        "vibecoding",
-        "agents",
-        "programming",
-        "tech"
-      ],
-      "content": "📰 Эволюция ИИ: от чат-ботов к автономным агентам\n\nИндустрия искусственного интеллекта стремительно трансформируется. ИИ перестает быть просто умным собеседником и превращается в самостоятельную рабочую силу, способную решать комплексные задачи без постоянного вмешательства человека.\n\nВ этой статье мы разберем ключевые сдвиги в парадигме разработки, переход к мультиагентным системам и то, как меняется роль инженера в мире автономного софта.\n\n👉 Читать полностью в Instant View ⚡️\n\n#AI #ArtificialIntelligence #VibeCoding #Agents #Programming #Tech\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/09/2026-09-04T08-26-51-758Z-ac086173.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/09/2026-09-04T08-26-51-758Z-ac086173.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #artificialintelligence #vibecoding #agents #programming #tech"
-    },
-    {
-      "id": 3290,
-      "date": "2026-08-14T15:17:09.000Z",
-      "title": "🎛 Modular Genesis 3D Hero — Интерактивный Eurorack-синтезатор прямо в браузере!",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3290,
-      "tags": [
-        "modularsynth",
-        "threejs",
-        "webgl",
-        "webaudio",
-        "blender",
-        "creativecoding",
-        "eurorack",
-        "opensource",
-        "backend",
-        "learning",
-        "3d",
-        "github",
-        "code",
-        "genesis",
-        "modular"
-      ],
-      "content": "Ребята, зарелизил превью-версию интерактивного 3D-лэнда для открытого проекта Modular Genesis ⚡️\n\nЭто не просто статичный 3D-рендер или зацикленное видео, а полноценная веб-лаборатория модульного синтеза, работающая в реальном времени на Three.js, GSAP и Web Audio API.\n\n🔥 Что под капотом и что можно пощупать:\n\n• 🔹 Реалистичный 68HP Eurorack Skiff: Анодированный алюминиевый корпус, ореховые боковины, точные 3U-панели модулей и монтажные рейки, собранные через процедурный Blender-пайплайн сжатый в Draco GLB (~800 КБ).\n• 🔹 Живой Web Audio DSP движок: Встроенный генеративный субтрактивный синтезатор с LFO-модуляцией, шаговым секвенсором и режимом микрофонного входа.\n• 🔹 Анимированные OLED-дисплеи: Осциллограф на VCO и 24-полосный FFT-спектроанализатор на модуле VIS рисуют реальную звуковую форму волны в 60 FPS.\n• 🔹 Синхронная 3D-физика: Регуляторы и фейдеры поворачиваются в такт звуковой модуляции, а по гибким патч-кордам бегут световые импульсы сигналов.\n• 🔹 Интерактивный режим обучения (Learn Mode): Наведите курсор (или тапните на телефоне) на любой модуль (CLK, VCO, VCF, ENV, LFO, S&H, MIX, VIS) — выезжает карточка с описанием роли модуля в тракте и прямыми ссылками на уроки и готовые патчи.\n• 🔹 Полная мобильная адаптация: Управление жестами, адаптивный угол обзора (FOV) и удобная шторка (Bottom Sheet) на смартфонах.\n• 🔹 Мгновенное переключение EN / RU.\n\n🔗 Ссылки:\n\n🌐 Пощупать интерактивное 3D вживую:\n👉 https://alevoldon.github.io/web-hero-modular/\n\n📦 Исходники и релиз на GitHub:\n👉 https://github.com/ALEVOLDON/web-hero-modular\n\n📚 Сам обучающий портал Modular Genesis:\n👉 https://alevoldon.github.io/Modular-Genesis/\n\nЗаходите, крутите ручки, тестируйте в наушниках и делитесь фидбеком в комментариях! 👇\n\n#modularsynth #threejs #webgl #webaudio #blender #creativecoding #eurorack #opensource\n\n## Links\n\n- https://alevoldon.github.io/web-hero-modular/\n- https://github.com/ALEVOLDON/web-hero-modular\n- https://alevoldon.github.io/Modular-Genesis/\n\n## Tags\n\n#telegram-import #live-sync #modularsynth #threejs #webgl #webaudio #blender #creativecoding #eurorack #opensource #backend #learning #3d #github #code #genesis #modular #или"
-    },
-    {
-      "id": 3289,
-      "date": "2026-08-14T13:55:29.000Z",
-      "title": "⚡️ Агент выложил мой проект на GitHub. Я его об этом не просил.",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3289,
-      "tags": [
-        "ai",
-        "grok",
-        "github",
-        "vibecoding",
-        "modulargenesis",
-        "job",
-        "3d",
-        "code"
-      ],
-      "content": "Сидел над локальным лендингом для Modular Genesis. Папка на рабочем столе, Blender, еврорэк, Three.js. Никакого репозитория, никакого remote. Просто сцена для сайта.\n\nВечером спрашиваю агента: что ещё улучшить? Он выдаёт список — живой звук, кабели, лица модулей, камера. Я пишу: «сделай все эти пункты».\n\nУтром открываю папку. А она уже живёт вот тут:\nhttps://github.com/ALEVOLDON/web-hero-modular\nи даже с GitHub Pages.\n\nКоммиты от моего имени. Репозиторий публичный. Сайт в сети. В истории терминала — пусто. Команды ушли не из моей консоли, а из агента.\n\nРазобрал логи. Grok сам решил, что «production-ready» = создать публичный репозиторий, запушить master, сделать gh-pages и включить Pages. Токен уже лежал в keyring, режим always-approve, диалога не было.\n\nЯ просил доделать лендинг. Он услышал «задеплой в прод».\n\nМораль простая: агент не отличает «сделай лучше» от «выложи на весь интернет». Если не сказать «не пушь» — он додумает сам.\n\nПравило себе и ему записал: без прямой фразы «запушь / выложи на GitHub» — никаких remote, никаких public repo, никаких Pages.\n\n🛠 Что можно попробовать: не держать gh в always-approve, если агент сидит в терминале. И не считать «сделай всё» согласием на деплой.\n\n💭 Мысль: самый опасный деплой — тот, который агент считает заботой.\n\n#AI #Grok #агенты #GitHub #vibecoding #безопасность #ModularGenesis\n\n## Links\n\n- https://github.com/ALEVOLDON/web-hero-modular\n\n## Tags\n\n#telegram-import #live-sync #ai #grok #агенты #github #vibecoding #безопасность #modulargenesis #job #3d #code #агент #никаких #сделай"
     },
     {
       "id": 3139,

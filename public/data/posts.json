@@ -1,6 +1,127 @@
 {
   "posts": [
     {
+      "id": 3724,
+      "date": "2026-11-18T05:48:43.000Z",
+      "title": "🚀 Кастомные домены в Google AI Studio",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3724,
+      "tags": [
+        "googleai",
+        "ai",
+        "devtools",
+        "webdev",
+        "opensource",
+        "design",
+        "tools",
+        "studio",
+        "google"
+      ],
+      "content": "📌 TL;DR: Google AI Studio теперь позволяет превращать ИИ-прототипы в полноценные брендированные приложения с собственными доменами прямо в интерфейсе сборки.\n\nИнструмент упрощает путь от идеи до готового продукта, позволяя развернуть приложение на кастомном домене в пару кликов без сложной настройки хостинга.\n\n• 🔹 Быстрый запуск веб-приложений\n• 🔹 Поддержка персональных доменов\n• 🔹 Прямая интеграция в AI Studio Build\n\n💡 Почему это важно: Разработчики могут мгновенно делиться готовыми ИИ-инструментами с клиентами под собственным брендом.\n\n🔗 Источник\n\n#GoogleAI #AI #DevTools #WebDev #OpenSource\n\n## Tags\n\n#telegram-import #live-sync #googleai #ai #devtools #webdev #opensource #design #tools #studio #google",
+      "title_en": "📌 TL;DR: Google AI Studio now allows you to turn AI prototypes into fully fledged branded apps with their own domains, directly within the build interface.",
+      "content_en": "📌 TL;DR: Google AI Studio now allows you to turn AI prototypes into fully fledged branded apps with their own domains directly in the build interface.\n\nThe tool simplifies the journey from idea to finished product, allowing you to deploy an app on a custom domain in just a couple of clicks, without the need for complex hosting configuration.\n\n• 🔹 Quick launch of web applications\n• 🔹 Support for personal domains\n• 🔹 Direct integration into AI Studio Build\n\n💡 Why it matters: Developers can instantly share ready-made AI tools with clients under their own brand.\n\n🔗 Source\n\n#GoogleAI #AI #DevTools #WebDev #OpenSource\n## Tags\n\n#telegram-import #live-sync #googleai #ai #devtools #webdev #opensource #design #tools #studio #google"
+    },
+    {
+      "id": 3723,
+      "date": "2026-11-18T05:03:20.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-18T05-03-20-1...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3723,
+      "tags": [
+        "ai",
+        "agents",
+        "technews",
+        "opensource",
+        "innovation",
+        "clarity",
+        "helsing"
+      ],
+      "content": "🚀 Helsing: Clarity\n\n📌 TL;DR: Helsing представила Clarity — новую AI-нативную агентную платформу.\n\nКомпания выпустила яркий манифест-анонс своей платформы Clarity. Продукт ориентирован на создание автономных интеллектуальных агентов для сложных технологических задач.\n\n• 🔹 AI-native архитектура для агентных систем\n• 🔹 Интеграция спутниковых и интерфейсных данных\n• 🔹 Передовые инструменты визуализации и анализа\n\n💡 Почему это важно: Платформа задает новые стандарты для разработки автономных решений в сфере безопасности и аналитики.\n\n🔗 Источник\n\n#AI #Agents #TechNews #OpenSource #Innovation\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-18T05-03-20-135Z-6f36e34f.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-18T05-03-20-135Z-6f36e34f.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #agents #technews #opensource #innovation #clarity #helsing",
+      "title_en": "🚀 Helsing: Clarity",
+      "content_en": "🚀 Helsing: Clarity\n\n📌 TL;DR: Helsing has unveiled Clarity – a new AI-native agent platform.\n\nThe company has released a striking manifesto announcing its Clarity platform. The product is focused on creating autonomous intelligent agents for complex technological tasks.\n\n• 🔹 AI-native architecture for agent systems\n• 🔹 Integration of satellite and interface data\n• 🔹 Advanced visualisation and analysis tools\n\n💡 Why it matters: The platform sets new standards for developing autonomous solutions in the fields of security and analytics.\n\n🔗 Source\n\n#AI #Agents #TechNews #OpenSource #Innovation\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-18T05-03-20-135Z-6f36e34f.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-18T05-03-20-135Z-6f36e34f.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #agents #technews #opensource #innovation #clarity #helsing"
+    },
+    {
+      "id": 3722,
+      "date": "2026-11-18T04:39:20.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-18T04-39-20-4...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3722,
+      "tags": [
+        "ai",
+        "technews",
+        "berlin",
+        "ethics",
+        "innovation"
+      ],
+      "content": "🚀 Военный ИИ на рейв-сцене Берлина\n\n📌 TL;DR: Крупнейший берлинский клуб электронный музыки Kraftwerk неожиданно стал площадкой для презентации военных ИИ-технологий.\n\nПроведение подобных технологических презентаций в культовых ночных клубах стирает грань между индустрией развлечений и оборонными инновациями. Это событие вызывает активные дискуссии в обществе о допустимости интеграции алгоритмов двойного назначения в привычную культурную среду.\n\n• 🔹 Презентация систем военного ИИ в необычной локации\n• 🔹 Слияние индустрии развлечений и оборонных технологий\n• 🔹 Дискуссия об этике использования алгоритмов двойного назначения\n\n💡 Почему это важно: Интеграция военных разработок в культурные пространства показывает изменение подходов к публичному продвижению оборонных технологий.\n\n🔗 Источник\n\n#AI #TechNews #Berlin #Ethics #Innovation\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-18T04-39-20-402Z-f30cebb7.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-18T04-39-20-402Z-f30cebb7.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #technews #berlin #ethics #innovation",
+      "title_en": "🚀 Military AI on Berlin's rave scene",
+      "content_en": "🚀 Military AI on Berlin's rave scene\n\n📌 TL;DR: Berlin's largest electronic music club, Kraftwerk, unexpectedly became a venue for the presentation of military AI technologies.\n\nHolding such technology presentations in iconic nightclubs blurs the line between the entertainment industry and defence innovations. This event has sparked lively public debate about the acceptability of integrating dual-use algorithms into the familiar cultural environment.\n\n• 🔹 Presentation of military AI systems in an unusual location\n• 🔹 Convergence of the entertainment industry and defence technologies\n• 🔹 Discussion on the ethics of using dual-use algorithms\n\n💡 Why it matters: The integration of military developments into cultural spaces demonstrates a shift in approaches to the public promotion of defence technologies.\n\n🔗 Source\n\n#AI #TechNews #Berlin #Ethics #Innovation\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-18T04-39-20-402Z-f30cebb7.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-18T04-39-20-402Z-f30cebb7.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #technews #berlin #ethics #innovation"
+    },
+    {
+      "id": 3721,
+      "date": "2026-11-18T04:11:18.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-18T04-11-18-7...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3721,
+      "tags": [
+        "ai",
+        "langgraph",
+        "automation",
+        "devtools",
+        "tools"
+      ],
+      "content": "🚀 Курс по созданию агентов на LangGraph\n\n📌 TL;DR: Бесплатный практический курс по разработке автономных AI-агентов для автоматизации сложных рабочих процессов.\n\nСовременные языковые модели способны не просто отвечать на запросы, а планировать действия и выполнять многошаговые задачи. Новый курс от freeCodeCamp обучает созданию надежных agentic-приложений с минимальным вмешательством человека.\n\n• 🔹 Проектирование архитектуры агентов\n• 🔹 Автоматизация рутинных пайплайнов\n• 🔹 Интеграция с инструментом LangGraph\n\n💡 Почему это важно: Навык сборки автономных AI-систем становится ключевым для разработчиков, желающих выйти за рамки простых чат-ботов.\n\n🔗 Источник\n\n#AI #LangGraph #Automation #DevTools\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-18T04-11-18-734Z-c46c0429.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-18T04-11-18-734Z-c46c0429.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #langgraph #automation #devtools #tools",
+      "title_en": "🚀 Course on creating agents in LangGraph",
+      "content_en": "🚀 Course on creating agents with LangGraph\n\n📌 TL;DR: A free practical course on developing autonomous AI agents to automate complex workflows.\n\nModern language models are capable not only of responding to queries but also of planning actions and performing multi-step tasks. The new course from freeCodeCamp teaches how to build robust agentic applications with minimal human intervention.\n\n• 🔹 Designing agent architecture\n• 🔹 Automation of routine pipelines\n• 🔹 Integration with the LangGraph tool\n\n💡 Why this is important: The ability to build autonomous AI systems is becoming crucial for developers who want to go beyond simple chatbots.\n\n🔗 Source\n\n#AI #LangGraph #Automation #DevTools\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-18T04-11-18-734Z-c46c0429.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-18T04-11-18-734Z-c46c0429.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #langgraph #automation #devtools #tools"
+    },
+    {
+      "id": 3720,
+      "date": "2026-11-18T04:04:12.000Z",
+      "title": "🚀 OpenAI анонсировала модели GPT-6.2 Astra и Sol",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3720,
+      "tags": [
+        "openai",
+        "gpt6",
+        "artificialintelligence",
+        "technews",
+        "machinelearning",
+        "learning",
+        "ai",
+        "astra",
+        "gpt-6"
+      ],
+      "content": "📌 TL;DR: OpenAI выпустила новые высокоэффективные модели для работы в реальных условиях.\n\nOpenAI представила линейку новых продвинутых моделей GPT-6.2 Astra и Sol, оптимизированных для высокой производительности и энергоэффективности. Релиз ориентирован на практическое применение в реальном мире, решая задачи автоматизации и обработки данных с минимальными затратами ресурсов.\n\n• 🔹 Сверхэффективная архитектура для работы в реальном времени\n• 🔹 Повышенная производительность в сложных прикладных сценариях\n• 🔹 Оптимизация под нагрузку в реальных условиях эксплуатации\n\n💡 Почему это важно: Новые модели позволяют разработчикам внедрять передовой искусственный интеллект в критически важные системы с жесткими требованиями к скорости.\n\n🔗 Источник\n\n#OpenAI #GPT6 #ArtificialIntelligence #TechNews #MachineLearning\n\n## Tags\n\n#telegram-import #live-sync #openai #gpt6 #artificialintelligence #technews #machinelearning #learning #ai #astra #gpt-6",
+      "title_en": "📌 TL;DR: OpenAI has released new high-performance models for real-world applications.",
+      "content_en": "📌 TL;DR: OpenAI has released new high-performance models for real-world applications.\n\nOpenAI has unveiled a range of new advanced GPT-6.2 models, Astra and Sol, optimised for high performance and energy efficiency. The release is focused on practical, real-world applications, addressing automation and data processing challenges with minimal resource consumption.\n\n• 🔹 Highly efficient architecture for real-time operation\n• 🔹 Improved performance in complex application scenarios\n• 🔹 Optimisation for loads in real-world operating conditions\n\n💡 Why this is important: The new models enable developers to integrate advanced artificial intelligence into critical systems with stringent speed requirements.\n\n🔗 Source\n\n#OpenAI #GPT6 #ArtificialIntelligence #TechNews #MachineLearning\n## Tags\n\n#telegram-import #live-sync #openai #gpt6 #artificialintelligence #technews #machinelearning #learning #ai #astra #gpt-6"
+    },
+    {
+      "id": 3719,
+      "date": "2026-11-18T04:02:45.000Z",
+      "title": "🚀 Офлайн-приложение для изучения языков от Google",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3719,
+      "tags": [
+        "google",
+        "ai",
+        "gemma",
+        "offlineai",
+        "mobiledev",
+        "design",
+        "mobile",
+        "figma"
+      ],
+      "content": "📌 TL;DR: Команда Google AI Edge создала полностью автономное приложение для изучения языков на базе локальных ИИ-моделей.\n\nПроект объединяет технологии распознавания и синтеза речи с языковой моделью Gemma 4 для работы без подключения к интернету. Разработчики использовали Figma MCP для быстрого переноса макетов в код, превратив обычный бумажный эскиз в работающий продукт.\n\n• 🔹 Работает на 100% офлайн без отправки данных в облако\n• 🔹 Объединяет ASR, Gemma 4 и современные TTS SDK\n• 🔹 Ускоряет проектирование интерфейсов через Figma MCP\n\n💡 Почему это важно: Подход демонстрирует, как создавать производительные ИИ-приложения для边缘-устройств с упором на приватность.\n\n🔗 Источник\n\n#Google #AI #Gemma #OfflineAI #MobileDev\n\n## Tags\n\n#telegram-import #live-sync #google #ai #gemma #offlineai #mobiledev #design #mobile #figma",
+      "title_en": "📌 TL;DR: The Google AI Edge team has created a fully autonomous language learning app based on local AI models.",
+      "content_en": "📌 TL;DR: The Google AI Edge team has created a fully offline language learning app powered by local AI models.\n\nThe project combines speech recognition and synthesis technologies with the Gemma 4 language model to operate without an internet connection. The developers used Figma MCP to quickly convert mock-ups into code, turning an ordinary paper sketch into a working product.\n\n• 🔹 Works 100% offline without sending data to the cloud\n• 🔹 Combines ASR, Gemma 4 and modern TTS SDKs\n• 🔹 Accelerates interface design through Figma MCP\n\n💡 Why this is important: The approach demonstrates how to create high-performance AI applications for edge devices with an emphasis on privacy.\n\n🔗 Source\n\n#Google #AI #Gemma #OfflineAI #MobileDev\n## Tags\n\n#telegram-import #live-sync #google #ai #gemma #offlineai #mobiledev #design #mobile #figma"
+    },
+    {
       "id": 3718,
       "date": "2026-11-17T20:49:31.000Z",
       "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-17T20-49-34-7...",
@@ -5561,116 +5682,49 @@
       "content": "📌 TL;DR: Эволюция ИИ дошла до создания полностью интерактивных 3D-сцен «на лету» прямо в браузере без использования привычных файлов моделей.\n\nВ новом впечатляющем демо автор показал связку GPT-6 Astra и библиотеки Three.js. Забудьте про тяжелые статические 3D-модели — теперь цифровые миры буквально пишутся кодом в реальном времени. Все элементы, включая поезда, их геометрию, параметры и профили, генерируются «с нуля» на TypeScript.\n\nИнтересно, что вся логика движений, включая вращение колес и сложнейшую анимацию сборки-разборки объектов, полностью управляется кодом. При этом производительность остается на высоте, а вся сцена плавно работает внутри обычного веб-браузера.\n\n• 🔹 Генерация 3D-геометрии и окружения на лету силами ИИ\n• 🔹 Отсутствие традиционных файлов моделей (GLTF, OBJ и т.д.)\n• 🔹 Полная программная анимация движения и трансформации\n• 🔹 Высокая производительность и плавный рендеринг в браузере\n\n💡 Почему это важно: Такой подход открывает эру процедурной генерации сложных интерактивных сред в веб-разработке и геймдеве, где окружение может адаптироваться под пользователя мгновенно.\n\n🔗 Источник\n\n#AI #ThreeJS #TypeScript #WebDev #3D #GenerativeAI\n\n## Tags\n\n#telegram-import #live-sync #ai #threejs #typescript #webdev #3d #generativeai #frontend #astra #gpt-6 #three"
     },
     {
-      "id": 3421,
-      "date": "2026-09-05T23:16:31.000Z",
-      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/09/2026-09-05T23-16-31-6...",
+      "id": 3290,
+      "date": "2026-08-14T15:17:09.000Z",
+      "title": "🎛 Modular Genesis 3D Hero — Интерактивный Eurorack-синтезатор прямо в браузере!",
       "channel": "DUMP // AI & DEV",
       "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3421,
+      "telegram_message_id": 3290,
       "tags": [
-        "ai",
-        "llm",
-        "api",
-        "technews",
+        "modularsynth",
+        "threejs",
+        "webgl",
+        "webaudio",
+        "blender",
+        "creativecoding",
+        "eurorack",
         "opensource",
-        "devtools",
         "backend",
-        "tools"
-      ],
-      "content": "💸 Самый доступный провайдер ИИ\n\n📌 TL;DR: Запуск платформы CheaperInference обещает скидки до 81% на популярные языковые модели.\n\nНа рынке ИИ-услуг появляется всё больше альтернативных провайдеров, стремящихся снизить порог входа для разработчиков и энтузиастов. Новый сервис CheaperInference предлагает значительное сокращение расходов на запуск LLM, снижая привычные прайсы до 81% за счет оптимизации инфраструктуры.\n\nПлатформа ориентирована на тех, кто активно экспериментирует с агентскими системами или разворачивает тяжелые пайплайны и хочет существенно сократить ежемесячные косты на API без потери в качестве генерации.\n\n💡 Почему это важно: Снижение стоимости инференса позволяет запускать масштабные автономные воркфлоу и тестировать тяжелые архитектуры без риска исчерпать бюджет на ранних этапах разработки.\n\n🔗 Источник\n\n#AI #LLM #API #TechNews #OpenSource #DevTools\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/09/2026-09-05T23-16-31-672Z-2f34ec2f.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/09/2026-09-05T23-16-31-672Z-2f34ec2f.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #llm #api #technews #opensource #devtools #backend #tools #без #запуск #тяжелые"
-    },
-    {
-      "id": 3420,
-      "date": "2026-09-05T23:13:02.000Z",
-      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/09/2026-09-05T23-13-01-8...",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3420,
-      "tags": [
-        "ai",
-        "llm",
-        "aiagents",
-        "openrouter",
-        "deepseek",
-        "gemini",
-        "huggingface",
-        "aistudio",
-        "aiinfrastructure",
-        "machinelearning",
-        "learning"
-      ],
-      "content": "📰 Инфраструктурный подход к AI: Как перестать платить за подписки и собирать свой AI-стек\n\nВ современной разработке стандартная схема использования нейросетей быстро бьет по карману. Подписки на ChatGPT, Claude, Cursor и сопутствующие сервисы легко суммарно выливаются в $60–100+ ежемесячно, привязывая вас к конкретным экосистемам.\n\nВ этой статье мы разберем принципиально иной подход: как рассматривать AI-модели не как потребительский софт по подписке, а как гибкую инфраструктуру. Вы узнаете, как построить собственную систему маршрутизации моделей, оптимизировать затраты и создать автономную AI-студию нового поколения.\n\n👉 Читать полностью в Instant View ⚡️\n\n#AI #LLM #AIAgents #OpenRouter #DeepSeek #Gemini #HuggingFace #AIStudio #AIInfrastructure #MachineLearning\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/09/2026-09-05T23-13-01-832Z-d560beb0.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/09/2026-09-05T23-13-01-832Z-d560beb0.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #llm #aiagents #openrouter #deepseek #gemini #huggingface #aistudio #aiinfrastructure #machinelearning #learning #как #подписки #подход"
-    },
-    {
-      "id": 3418,
-      "date": "2026-09-05T22:16:03.000Z",
-      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/09/2026-09-05T22-16-03-0...",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3418,
-      "tags": [
-        "ai",
-        "multiagent",
-        "machinelearning",
-        "devops",
-        "tech",
-        "architecture",
-        "learning"
-      ],
-      "content": "📰 Эволюция AI Studio: План создания универсальной Multi-Agent платформы\n\nСоздание современных систем на базе искусственного интеллекта требует перехода от простых чат-ботов к автономным многоагентным платформам. Главная цель текущего этапа — превратить узкоспециализированное решение в универсальную AI-студию, способную самостоятельно проектировать, разрабатывать и тестировать проекты любого типа, оптимизируя затраты и ресурсы.\n\n👉 Читать полностью в Instant View ⚡️\n\n#AI #MultiAgent #MachineLearning #DevOps #Tech #Architecture\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/09/2026-09-05T22-16-03-091Z-ae3e0a3e.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/09/2026-09-05T22-16-03-091Z-ae3e0a3e.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #multiagent #machinelearning #devops #tech #architecture #learning"
-    },
-    {
-      "id": 3417,
-      "date": "2026-09-05T21:17:16.000Z",
-      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/09/2026-09-05T21-17-16-9...",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3417,
-      "tags": [
-        "ai",
-        "autonomousagents",
-        "python",
-        "pygame",
-        "devtools",
-        "machinelearning",
         "learning",
-        "tools"
+        "3d",
+        "github",
+        "code",
+        "genesis",
+        "modular"
       ],
-      "content": "📰 Как мы учили AI-студию писать игры: разбор ошибок, копеечные токены и архитектурные инсайты\n\nСегодня мы провели хардкорный стресс-тест автономной AI Team Studio, состоящей из агентов: Архитектора, Кодера, Тестировщика и Ревьюера. В качестве реальной задачи мы выбрали создание полноценного клона легендарных танчиков Battle City на Python/Pygame с нуля.\n\nВ этой статье мы подробно разберем, на какие грабли наступили разработчики, куда утекли бюджеты на токены и какие архитектурные выводы были сделаны для создания надежных мультиагентных систем.\n\n👉 Читать полностью в Instant View ⚡️\n\n#AI #AutonomousAgents #Python #Pygame #DevTools #MachineLearning\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/09/2026-09-05T21-17-16-987Z-55968e17.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/09/2026-09-05T21-17-16-987Z-55968e17.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #autonomousagents #python #pygame #devtools #machinelearning #learning #tools #архитектурные #какие #токены"
+      "content": "Ребята, зарелизил превью-версию интерактивного 3D-лэнда для открытого проекта Modular Genesis ⚡️\n\nЭто не просто статичный 3D-рендер или зацикленное видео, а полноценная веб-лаборатория модульного синтеза, работающая в реальном времени на Three.js, GSAP и Web Audio API.\n\n🔥 Что под капотом и что можно пощупать:\n\n• 🔹 Реалистичный 68HP Eurorack Skiff: Анодированный алюминиевый корпус, ореховые боковины, точные 3U-панели модулей и монтажные рейки, собранные через процедурный Blender-пайплайн сжатый в Draco GLB (~800 КБ).\n• 🔹 Живой Web Audio DSP движок: Встроенный генеративный субтрактивный синтезатор с LFO-модуляцией, шаговым секвенсором и режимом микрофонного входа.\n• 🔹 Анимированные OLED-дисплеи: Осциллограф на VCO и 24-полосный FFT-спектроанализатор на модуле VIS рисуют реальную звуковую форму волны в 60 FPS.\n• 🔹 Синхронная 3D-физика: Регуляторы и фейдеры поворачиваются в такт звуковой модуляции, а по гибким патч-кордам бегут световые импульсы сигналов.\n• 🔹 Интерактивный режим обучения (Learn Mode): Наведите курсор (или тапните на телефоне) на любой модуль (CLK, VCO, VCF, ENV, LFO, S&H, MIX, VIS) — выезжает карточка с описанием роли модуля в тракте и прямыми ссылками на уроки и готовые патчи.\n• 🔹 Полная мобильная адаптация: Управление жестами, адаптивный угол обзора (FOV) и удобная шторка (Bottom Sheet) на смартфонах.\n• 🔹 Мгновенное переключение EN / RU.\n\n🔗 Ссылки:\n\n🌐 Пощупать интерактивное 3D вживую:\n👉 https://alevoldon.github.io/web-hero-modular/\n\n📦 Исходники и релиз на GitHub:\n👉 https://github.com/ALEVOLDON/web-hero-modular\n\n📚 Сам обучающий портал Modular Genesis:\n👉 https://alevoldon.github.io/Modular-Genesis/\n\nЗаходите, крутите ручки, тестируйте в наушниках и делитесь фидбеком в комментариях! 👇\n\n#modularsynth #threejs #webgl #webaudio #blender #creativecoding #eurorack #opensource\n\n## Links\n\n- https://alevoldon.github.io/web-hero-modular/\n- https://github.com/ALEVOLDON/web-hero-modular\n- https://alevoldon.github.io/Modular-Genesis/\n\n## Tags\n\n#telegram-import #live-sync #modularsynth #threejs #webgl #webaudio #blender #creativecoding #eurorack #opensource #backend #learning #3d #github #code #genesis #modular #или"
     },
     {
-      "id": 3416,
-      "date": "2026-09-05T12:21:45.000Z",
-      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/09/2026-09-05T12-21-44-4...",
+      "id": 3289,
+      "date": "2026-08-14T13:55:29.000Z",
+      "title": "⚡️ Агент выложил мой проект на GitHub. Я его об этом не просил.",
       "channel": "DUMP // AI & DEV",
       "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3416,
+      "telegram_message_id": 3289,
       "tags": [
         "ai",
-        "agents",
-        "deepseek",
-        "python",
-        "tech",
-        "opensource"
+        "grok",
+        "github",
+        "vibecoding",
+        "modulargenesis",
+        "job",
+        "3d",
+        "code"
       ],
-      "content": "📰 ИИ-студия автономных разработчиков: как я создал команду виртуальных агентов\n\nПоследние дни были посвящены созданию собственной студии автономных ИИ-агентов. Проект получил название AI-Team — это не просто стандартный чат-бот для копирования кода, а полноценная команда виртуальных разработчиков, работающая в отдельном десктопном приложении.\n\nВ этой статье мы подробно разберем внутреннюю архитектуру системы, экономику использования облачных LLM через OpenRouter, а также новые фичи, добавленные в студию прямо сегодня.\n\n👉 Читать полностью в Instant View ⚡️\n\n#AI #Agents #DeepSeek #Python #Tech #OpenSource\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/09/2026-09-05T12-21-44-452Z-b975abce.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/09/2026-09-05T12-21-44-452Z-b975abce.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #agents #deepseek #python #tech #opensource #автономных #виртуальных #разработчиков"
-    },
-    {
-      "id": 3415,
-      "date": "2026-09-04T22:10:24.000Z",
-      "title": "🤖 Гибридный робот-манипулятор из Китая",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3415,
-      "tags": [
-        "robotics",
-        "automation",
-        "ai",
-        "technews",
-        "innovation",
-        "engineering"
-      ],
-      "content": "📌 TL;DR: Китайские инженеры представили уникального робота, объединяющего форм-фактор гуманоида и промышленную робототехнику.\n\nНовая разработка предлагает необычный подход к автоматизации, объединяя гибкость гуманоидного робота с мощью и точностью механической руки. Модульная конструкция устройства и полный радиус действия в 360 градусов позволяют полностью избавиться от слепых зон при выполнении задач.\n\nТакая техническая синергия открывает принципиально новые возможности для применения робототехники в сложных сценариях. Решение особенно актуально для масштабных строительных проектов, где требуются универсальность, высокая эффективность и адаптивность к меняющимся условиям среды.\n\n* 🔹 Гибридная архитектура гуманоида и роборуки\n* 🔹 Полный диапазон работы на 360 градусов без слепых зон\n* 🔹 Модульная конструкция для быстрой адаптации под задачи\n* 🔹 Высокая эффективность в сложных строительных проектах\n💡 Почему это важно: Подобные гибридные системы стирают грань между специализированными промышленными станками и универсальными роботами-помощниками, ускоряя автоматизацию тяжелого физического труда.\n\n🔗 Источник\n\n#Robotics #Automation #AI #TechNews #Innovation #Engineering\n\n## Tags\n\n#telegram-import #live-sync #robotics #automation #ai #technews #innovation #engineering #для #высокая #градусов"
+      "content": "Сидел над локальным лендингом для Modular Genesis. Папка на рабочем столе, Blender, еврорэк, Three.js. Никакого репозитория, никакого remote. Просто сцена для сайта.\n\nВечером спрашиваю агента: что ещё улучшить? Он выдаёт список — живой звук, кабели, лица модулей, камера. Я пишу: «сделай все эти пункты».\n\nУтром открываю папку. А она уже живёт вот тут:\nhttps://github.com/ALEVOLDON/web-hero-modular\nи даже с GitHub Pages.\n\nКоммиты от моего имени. Репозиторий публичный. Сайт в сети. В истории терминала — пусто. Команды ушли не из моей консоли, а из агента.\n\nРазобрал логи. Grok сам решил, что «production-ready» = создать публичный репозиторий, запушить master, сделать gh-pages и включить Pages. Токен уже лежал в keyring, режим always-approve, диалога не было.\n\nЯ просил доделать лендинг. Он услышал «задеплой в прод».\n\nМораль простая: агент не отличает «сделай лучше» от «выложи на весь интернет». Если не сказать «не пушь» — он додумает сам.\n\nПравило себе и ему записал: без прямой фразы «запушь / выложи на GitHub» — никаких remote, никаких public repo, никаких Pages.\n\n🛠 Что можно попробовать: не держать gh в always-approve, если агент сидит в терминале. И не считать «сделай всё» согласием на деплой.\n\n💭 Мысль: самый опасный деплой — тот, который агент считает заботой.\n\n#AI #Grok #агенты #GitHub #vibecoding #безопасность #ModularGenesis\n\n## Links\n\n- https://github.com/ALEVOLDON/web-hero-modular\n\n## Tags\n\n#telegram-import #live-sync #ai #grok #агенты #github #vibecoding #безопасность #modulargenesis #job #3d #code #агент #никаких #сделай"
     },
     {
       "id": 3139,

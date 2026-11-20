@@ -1,6 +1,42 @@
 {
   "posts": [
     {
+      "id": 3729,
+      "date": "2026-11-20T00:35:05.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-20T00-35-07-1...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3729,
+      "tags": [
+        "fintech",
+        "x",
+        "payments",
+        "technews"
+      ],
+      "content": "🚀 Развитие платежной системы X\n\n📌 TL;DR: Платежный сервис внутри платформы X демонстрирует быстрый рост показателей.\n\nПроект Илона Маска по интеграции финансовых сервисов набирает обороты. Новые функции призваны превратить соцсеть в полноценное приложение для закрытия повседневных задач пользователей, включая переводы и управление финансами.\n\n• 🔹 Быстрое масштабирование платформы\n• 🔹 Интеграция финансовых услуг в экосистему\n• 🔹 Упрощение транзакций для глобальной аудитории\n\n💡 Почему это важно: Сервис может составить серьезную конкуренцию классическим финтех-приложениям.\n\n🔗 Источник\n\n#FinTech #X #Payments #TechNews\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-20T00-35-07-177Z-ede4270a.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-20T00-35-07-177Z-ede4270a.jpg\n\n## Tags\n\n#telegram-import #live-sync #fintech #x #payments #technews",
+      "title_en": "🚀 Development of the X payment system",
+      "content_en": "🚀 Development of the X payment system\n\n📌 TL;DR: The payment service within the X platform is showing rapid growth in its metrics.\n\nElon Musk's project to integrate financial services is gaining momentum. The new features are designed to transform the social network into a fully fledged app for handling users' everyday tasks, including transfers and financial management.\n\n• 🔹 Rapid platform scaling\n• 🔹 Integration of financial services into the ecosystem\n• 🔹 Simplifying transactions for a global audience\n\n💡 Why this is important: The service can pose serious competition to traditional fintech apps.\n\n🔗 Source\n\n#FinTech #X #Payments #TechNews\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-20T00-35-07-177Z-ede4270a.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-20T00-35-07-177Z-ede4270a.jpg\n\n## Tags\n\n#telegram-import #live-sync #fintech #x #payments #technews"
+    },
+    {
+      "id": 3728,
+      "date": "2026-11-20T00:30:29.000Z",
+      "title": "🚀 Исторический IPO Anthropic",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3728,
+      "tags": [
+        "anthropic",
+        "ai",
+        "ipo",
+        "technews",
+        "investments",
+        "nasdaq"
+      ],
+      "content": "📌 TL;DR: Компания Anthropic привлекла рекордные 107 миллиардов долларов перед выходом на биржу NASDAQ.\n\nAnthropic установила абсолютный исторический рекорд по масштабу IPO, опередив все предыдущие технологические размещения. Этот раунд финансирования знаменует новую эру для рынка искусственного интеллекта и гигантских инвестиций в LLM-разработчиков.\n\n• 🔹 Привлечено более $107 млрд до выхода на Nasdaq\n• 🔹 Официально крупнейшее IPO в мировой истории\n• 🔹 Новый уровень капитализации для AI-индустрии\n\n💡 Почему это важно: Такой масштаб инвестиций подтверждает переход генеративного ИИ в статус фундаментальной мировой инфраструктуры.\n\n🔗 Источник\n\n#Anthropic #AI #IPO #TechNews #Investments\n\n## Tags\n\n#telegram-import #live-sync #anthropic #ai #ipo #technews #investments #nasdaq",
+      "title_en": "📌 TL;DR: Anthropic has raised a record $107 billion ahead of its NASDAQ IPO.",
+      "content_en": "📌 TL;DR: Anthropic has raised a record $107 billion ahead of its NASDAQ listing.\n\nAnthropic has set an absolute historical record for the size of an IPO, surpassing all previous tech listings. This funding round marks a new era for the artificial intelligence market and massive investments in LLM developers.\n\n• 🔹 Over $107 billion raised before listing on Nasdaq\n• 🔹 Officially the largest IPO in world history\n• 🔹 A new level of capitalisation for the AI industry\n\n💡 Why this matters: This scale of investment confirms the transition of generative AI to the status of fundamental global infrastructure.\n\n🔗 Source\n\n#Anthropic #AI #IPO #TechNews #Investments\n## Tags\n\n#telegram-import #live-sync #anthropic #ai #ipo #technews #investments #nasdaq"
+    },
+    {
       "id": 3727,
       "date": "2026-11-19T04:02:28.000Z",
       "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-19T04-02-28-0...",
@@ -5650,46 +5686,6 @@
         "mobile"
       ],
       "content": "📰 Как AI-агент с root-правами поймал и исправил сетевой баг на Android\n\nВ эпоху развития автономных ассистентов их роль давно вышла за рамки написания простого кода. Сегодня они способны погружаться в низкоуровневые задачи, такие как анализ системных логов через ADB и исправление сетевой архитектуры «на лету». В этой статье мы разберем реальный кейс из 2026 года, когда AI-агент с root-доступом спас домашнюю сеть от последствий неудачного обновления VPN-клиента.\n\n👉 Читать полностью в Instant View ⚡️\n\n#AI #DevStory #HomeServer #VibeCoding #Android #Linux #Networking #DIY\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/09/2026-09-07T07-41-41-555Z-d3f5f887.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/09/2026-09-07T07-41-41-555Z-d3f5f887.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #devstory #homeserver #vibecoding #android #linux #networking #diy #design #security #mobile #ai-агент #как #сетевой"
-    },
-    {
-      "id": 3426,
-      "date": "2026-09-07T07:35:38.000Z",
-      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/09/2026-09-07T07-35-38-0...",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3426,
-      "tags": [
-        "ai",
-        "devstory",
-        "homeserver",
-        "vibecoding",
-        "android",
-        "telegrambots",
-        "linux",
-        "networking",
-        "design",
-        "security",
-        "mobile",
-        "telegram"
-      ],
-      "content": "📰 Подключаем AI-агента к расследованию сетевых сбоев\n\nВ этой статье мы рассмотрим реальный кейс того, как современный AI-ассистент с полным root-доступом через ADB смог провести глубокий траблшутинг Android-приставки, найти фатальную ошибку разработчиков в конфигурации VPN и исправить маршрутизацию на уровне ядра Linux быстрее официального саппорта.\n\n👉 Читать полностью в Instant View ⚡️\n\n#AI #DevStory #HomeServer #VibeCoding #Android #TelegramBots #Linux #Networking\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/09/2026-09-07T07-35-38-066Z-4ea7a61f.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/09/2026-09-07T07-35-38-066Z-4ea7a61f.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #devstory #homeserver #vibecoding #android #telegrambots #linux #networking #design #security #mobile #telegram"
-    },
-    {
-      "id": 3425,
-      "date": "2026-09-06T23:09:44.000Z",
-      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/09/2026-09-06T23-09-47-2...",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3425,
-      "tags": [
-        "ai",
-        "music",
-        "techhistory",
-        "personalbrand",
-        "diy",
-        "futuretech"
-      ],
-      "content": "📰 Опережая время: Как мой музыкальный псевдоним из 2012 года стал AI-компанией\n\nВ этой личной и немного сюрреалистичной заметке автор делится неожиданным открытием: его старый музыкальный псевдоним 14-летней давности внезапно материализовался в названии современной AI-компании. Читатель узнает, как переплетаются прошлое и будущее, музыка и технологии, а также почему не стоит спешить тратить деньги на дорогие домены.\n\n👉 Читать полностью в Instant View ⚡️\n\n#AI #Music #TechHistory #PersonalBrand #DIY #FutureTech\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/09/2026-09-06T23-09-47-275Z-59d6f91c.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/09/2026-09-06T23-09-47-275Z-59d6f91c.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #music #techhistory #personalbrand #diy #futuretech #как #музыкальный #псевдоним"
     },
     {
       "id": 3290,

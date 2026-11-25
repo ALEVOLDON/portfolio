@@ -1,6 +1,260 @@
 {
   "posts": [
     {
+      "id": 3754,
+      "date": "2026-11-25T08:23:43.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-25T08-24-04-5...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3754,
+      "tags": [
+        "ai",
+        "devtools",
+        "gemini",
+        "agents",
+        "opensource",
+        "tools",
+        "neon"
+      ],
+      "content": "🚀 Связка Gemini 4 Neon и Antigravity\n\n📌 TL;DR: Практический курс по эффективному использованию связки Gemini 4 Neon и агентов Antigravity для разработки.\n\nЭнтузиаст Питер Янг поделился опытом тестирования связки Gemini 4 Neon и инструмента Antigravity. Комбинация позволяет запускать десятки агентов параллельно, упрощая планирование и написание кода.\n\n• 🔹 Оркестрация и swarm-режим для одновременного запуска до 42 агентов\n• 🔹 Встроенный навык /grill-me для детальной проработки планов через уточняющие вопросы\n• 🔹 Удобный удаленный контроль со смартфона для управления активными потоками\n\n💡 Почему это важно: Инструмент дает разработчикам мощную мультиагентную среду с возможностью удаленного мониторинга прямо с телефона.\n\n🔗 Источник\n\n#AI #DevTools #Gemini #Agents #OpenSource\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-25T08-24-04-511Z-6265004d.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-25T08-24-04-511Z-6265004d.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #devtools #gemini #agents #opensource #tools #neon",
+      "title_en": "🚀 Gemini 4 Neon and Antigravity bundle",
+      "content_en": "🚀 Gemini 4 Neon and Antigravity Bundle\n\n📌 TL;DR: A practical course on the effective use of the Gemini 4 Neon combination and Antigravity agents for development.\n\nEnthusiast Peter Young shared his experience of testing the Gemini 4 Neon combination and the Antigravity tool. This combination allows you to run dozens of agents in parallel, simplifying planning and coding.\n\n• 🔹 Orchestration and swarm mode for running up to 42 agents simultaneously\n• 🔹 Built-in /grill-me skill for detailed elaboration of plans through clarifying questions\n• 🔹 Convenient remote control from a smartphone for managing active threads\n\n💡 Why it matters: The tool provides developers with a powerful multi-agent environment with the ability to monitor remotely directly from their phones.\n\n🔗 Source\n\n#AI #DevTools #Gemini #Agents #OpenSource\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-25T08-24-04-511Z-6265004d.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-25T08-24-04-511Z-6265004d.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #devtools #gemini #agents #opensource #tools #neon"
+    },
+    {
+      "id": 3753,
+      "date": "2026-11-25T08:23:40.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-25T08-23-54-1...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3753,
+      "tags": [
+        "ai",
+        "llm",
+        "opensource",
+        "localai",
+        "devtools",
+        "tools",
+        "mmlu"
+      ],
+      "content": "🚀 Uncensored Bonsai 2.5 27B\n\n📌 TL;DR: Локальная языковая модель на 27B с полной отменой цензуры и оптимизацией под запуск на 8 GB VRAM.\n\nКоманда atomic.chat интегрировала веса LoRA прямо в GGUF-формат. Модель демонстрирует нулевой уровень отказов на запросы и набирает 81.2% в бенчмарке MMLU, оставаясь доступной для обычных ПК.\n\n• 🔹 Общий объем файла всего 5.99 GB\n• 🔹 Снижение отказа отвечать с 100% до 0%\n• 🔹 Высокий результат 81.2% на бенчмарке MMLU\n\n💡 Почему это важно: Теперь разработчики и энтузиасты могут запускать мощные uncensored-модели локально без необходимости в серверных видеокартах.\n\n🔗 Источник\n\n#AI #LLM #OpenSource #LocalAI #DevTools\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-25T08-23-54-192Z-a535b370.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-25T08-23-54-192Z-a535b370.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #llm #opensource #localai #devtools #tools #mmlu",
+      "title_en": "🚀 Uncensored Bonsai 2.5 27B",
+      "content_en": "🚀 Uncensored Bonsai 2.5 27B\n\n📌 TL;DR: A 27B local language model with complete removal of censorship and optimisation for running on 8 GB VRAM.\n\nThe atomic.chat team has integrated LoRA weights directly into the GGUF format. The model demonstrates a zero failure rate for queries and scores 81.2% in the MMLU benchmark, while remaining accessible to ordinary PCs.\n\n• 🔹 The total file size is only 5.99 GB\n• 🔹 Reduction in refusal to respond from 100% to 0%\n• 🔹 High score of 81.2% on the MMLU benchmark\n\n💡 Why this is important: Developers and enthusiasts can now run powerful uncensored models locally without the need for server-grade GPUs.\n\n🔗 Source\n\n#AI #LLM #OpenSource #LocalAI #DevTools\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-25T08-23-54-192Z-a535b370.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-25T08-23-54-192Z-a535b370.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #llm #opensource #localai #devtools #tools #mmlu"
+    },
+    {
+      "id": 3752,
+      "date": "2026-11-25T08:23:36.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-25T08-23-45-2...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3752,
+      "tags": [
+        "ai",
+        "webdevelopment",
+        "agents",
+        "opensource",
+        "technews",
+        "frontend",
+        "design",
+        "google"
+      ],
+      "content": "🚀 Google Antigravity\n\n📌 TL;DR: Новый инструмент добавляет декларативные WebMCP-инструменты в существующие HTML-формы для ИИ-агентов.\n\nGoogle Antigravity представил навык Modern Web Guidance, который делает веб-приложения готовыми к работе с агентами без переписывания фронтенда. Это открывает разработчикам простой способ дать ИИ структурированный доступ к формам.\n\n• 🔹 Интеграция WebMCP в HTML-формы\n• 🔹 Сохранение UX для людей\n• 🔹 Готовность к ИИ-агентам\n\n💡 Почему это важно: Разработчики могут легко адаптировать старые веб-интерфейсы под современные мультиагентные системы.\n\n🔗 Источник\n\n#AI #WebDevelopment #Agents #OpenSource #TechNews\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-25T08-23-45-232Z-fe451f66.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-25T08-23-45-232Z-fe451f66.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #webdevelopment #agents #opensource #technews #frontend #design #google",
+      "title_en": "🚀 Google Antigravity",
+      "content_en": "🚀 Google Antigravity\n\n📌 TL;DR: A new tool adds declarative WebMCP tools to existing HTML forms for AI agents.\n\nGoogle Antigravity has introduced the Modern Web Guidance skill, which makes web applications ready to work with agents without rewriting the frontend. This provides developers with an easy way to give AI structured access to forms.\n\n• 🔹 Integrating WebMCP into HTML forms\n• 🔹 Preserving UX for humans\n• 🔹 Readiness for AI agents\n\n💡 Why this matters: Developers can easily adapt old web interfaces to modern multi-agent systems.\n\n🔗 Source\n\n#AI #WebDevelopment #Agents #OpenSource #TechNews\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-25T08-23-45-232Z-fe451f66.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-25T08-23-45-232Z-fe451f66.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #webdevelopment #agents #opensource #technews #frontend #design #google"
+    },
+    {
+      "id": 3751,
+      "date": "2026-11-24T20:47:53.000Z",
+      "title": "⚡️ Треть месяца без света: честный отчёт домашнего мониторинга (25.10 – 24.11)",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3751,
+      "tags": [
+        "h96max",
+        "diy",
+        "exegate",
+        "samsung"
+      ],
+      "content": "Моя ТВ-приставка H96 Max круглосуточно (24/7) собирает телеметрию с холодильника Samsung RT34MB и ИБП ExeGate SpecialPro UNB-1200. Собрал все данные за 31 день в короткий видеоразбор с графиками 👆\n📊 Главные цифры месяца: 🔴 245 часов без электричества — это 32,9% месяца (отключения в 25 из 31 дня) ⚡️ 60 блэкаутов, антирекорд — 26,5 часов подряд (15–16 ноября) 🛡 ИБП ExeGate: 1 528 событий — 730 раз (47,8%) вытягивал просадки через AVR (вход падал до 142 В!) и 281 раз спасал от батареи. АКБ держится молодцом (мин. 11,9 В) ❄️ Холодильник Samsung: 19,84 кВт·ч за месяц (0,64 кВт·ч/сут), 283 цикла охлаждения и 14 оттаек\n🎯 План на следующий месяц: проверить реле напряжения на компрессоре (190–250 В, задержка 5–7 мин), поставить реальный термодатчик в морозилку и сделать тест ёмкости АКБ ИБП.\nА как у вас с сетью в этом месяце? Ставите мониторинг на технику или живёте по ощущениям? 👇\n#умныйдом #мониторинг #ИБП #электричество #H96Max #DIY\n\n## Media\n\n- [video](https://alevoldon.com/media/telegram/2026/11/2026-11-24T20-48-00-064Z-ca01462d.mp4)\n\n## Tags\n\n#telegram-import #live-sync #умныйдом #мониторинг #ибп #электричество #h96max #diy #exegate #samsung",
+      "title_en": "My H96 Max TV box collects telemetry from the Samsung RT34MB fridge and the ExeGate SpecialPro UNB-1200 UPS 24/7. I compiled all the data for 31 days into a short video analysis with graphs 👆",
+      "content_en": "My H96 Max TV box collects telemetry data from the Samsung RT34MB refrigerator and the ExeGate SpecialPro UNB-1200 UPS 24/7.\n\nI've compiled all the data for 31 days into a short video analysis with graphs 👆\n📊 Key figures for the month: 🔴 245 hours without electricity — that's 32.9% of the month (outages on 25 out of 31 days) ⚡️ 60 blackouts, with the worst being 26.5 hours straight (15–16 November) 🛡 ExeGate UPS: 1,528 events — 730 times (47.8%) it compensated for voltage dips via AVR (the input dropped to 142 V!) and 281 times it provided backup power from the battery. The battery is holding up well (min.\n\n11.9 V) ❄️ Samsung refrigerator: 19.84 kWh per month (0.64 kWh/day), 283 cooling cycles and 14 defrosts\n🎯 Plan for next month: Check the voltage relay on the compressor (190–250 V, delay 5–7 min), install a real temperature sensor in the freezer, and test the capacity of the UPS battery. How's your power supply been this month? Do you monitor your appliances, or do you go by feel?\n\n👇\n#smarthome #monitoring #UPS #electricity #H96Max #DIY\n## Media\n\n- [video](https://alevoldon.com/media/telegram/2026/11/2026-11-24T20-48-00-064Z-ca01462d.mp4)\n\n## Tags\n\n#telegram-import #live-sync #умныйдом #мониторинг #ибп #электричество #h96max #diy #exegate #samsung"
+    },
+    {
+      "id": 3750,
+      "date": "2026-11-24T20:34:27.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-24T20-34-27-1...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3750,
+      "tags": [
+        "ai",
+        "opensource",
+        "machinelearning",
+        "devtools",
+        "competition",
+        "learning",
+        "tools"
+      ],
+      "content": "🚀 Крупнейший чемпионат по пост-тренировке ИИ\n\n📌 TL;DR: White Circle запускает глобальный онлайн-турнир по дообучению моделей с призовым фондом и грантами на вычисления.\n\nСоревнование проходит при поддержке ведущих игроков индустрии, включая OpenAI, Google DeepMind и Mistral AI. Участники получат уникальную возможность протестировать передовые архитектуры и побороться за ценные призы.\n\n• 🔹 Общий призовой фонд превышает $200 000.\n• 🔹 На вычислительные мощности выделено $1,5 млн.\n• 🔹 Состязание пройдет онлайн по всему миру с 1 по 10 декабря.\n\n💡 Почему это важно: Это отличный шанс для разработчиков и исследователей получить доступ к мощным ресурсам и заявить о себе.\n\n🔗 Источник\n\n#AI #OpenSource #MachineLearning #DevTools #Competition\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-24T20-34-27-112Z-5320c686.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-24T20-34-27-112Z-5320c686.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #opensource #machinelearning #devtools #competition #learning #tools",
+      "title_en": "🚀 The biggest AI post-training championship",
+      "content_en": "🚀 The largest championship in AI post-training\n\n📌 TL;DR: White Circle is launching a global online tournament for fine-tuning models, featuring a prize pool and computing grants.\n\nThe competition is supported by leading industry players, including OpenAI, Google DeepMind and Mistral AI. Participants will have a unique opportunity to test cutting-edge architectures and compete for valuable prizes.\n\n• 🔹 The total prize pool exceeds $200,000.\n• 🔹 $1.5 million has been allocated for computing power.\n• 🔹 The competition will take place online worldwide from 1 to 10 December.\n\n💡 Why it matters: This is a great opportunity for developers and researchers to gain access to powerful resources and make a name for themselves.\n\n🔗 Source\n\n#AI #OpenSource #MachineLearning #DevTools #Competition\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-24T20-34-27-112Z-5320c686.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-24T20-34-27-112Z-5320c686.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #opensource #machinelearning #devtools #competition #learning #tools"
+    },
+    {
+      "id": 3749,
+      "date": "2026-11-24T20:32:12.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-24T20-32-11-9...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3749,
+      "tags": [
+        "ai",
+        "opensource",
+        "llm",
+        "devtools",
+        "machinelearning",
+        "learning",
+        "tools"
+      ],
+      "content": "🚀 Релиз Ternary Bonsai 2.5 27B\n\n📌 TL;DR: Вышла новая версия компактной языковой модели для автономного кодинга и работы с инструментами.\n\nКоманда PrismML представила обновление модели на базе Qwen3.8 с упором на сложные агентские задачи. Модель сохранила рекордно малый вес 5.9 ГБ при значительном росте производительности в программировании.\n\n• 🔹 Усиленные навыки агентского написания кода\n• 🔹 Поддержка многошагового использования инструментов\n• 🔹 Настоящая работа с задачами на длинных дистанциях\n\n💡 Почему это важно: Модель превосходит аналоги в своем весовом классе, решая сложные инженерные задачи быстрее и эффективнее.\n\n🔗 Источник\n\n#AI #OpenSource #LLM #DevTools #MachineLearning\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-24T20-32-11-966Z-23faa12a.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-24T20-32-11-966Z-23faa12a.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #opensource #llm #devtools #machinelearning #learning #tools",
+      "title_en": "🚀 Ternary Bonsai 2.5 27B Release",
+      "content_en": "🚀 Ternary Bonsai 2.5 27B Release\n\n📌 TL;DR: A new version of the compact language model for offline coding and tool usage has been released.\n\nThe PrismML team has unveiled an update to the Qwen3.8-based model, with a focus on complex agent tasks. The model has retained its record-low size of 5.9 GB while achieving a significant increase in programming performance.\n\n• 🔹 Enhanced agent-based coding skills\n• 🔹 Support for multi-step tool usage\n• 🔹 Genuine handling of long-term tasks\n\n💡 Why it matters: The model outperforms its peers in its weight class, solving complex engineering problems faster and more efficiently.\n\n🔗 Source\n\n#AI #OpenSource #LLM #DevTools #MachineLearning\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-24T20-32-11-966Z-23faa12a.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-24T20-32-11-966Z-23faa12a.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #opensource #llm #devtools #machinelearning #learning #tools"
+    },
+    {
+      "id": 3748,
+      "date": "2026-11-24T19:46:20.000Z",
+      "title": "🚀 Нейросеть на FPGA: запуск моделей на чипе",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3748,
+      "tags": [
+        "ai",
+        "fpga",
+        "hardware",
+        "embedded",
+        "tech"
+      ],
+      "content": "📌 TL;DR: Разбор процесса развертывания компактных искусственных нейронных сетей непосредственно на программируемых логических интегральных схемах.\n\nЗапуск AI-моделей на FPGA позволяет добиться максимальной энергоэффективности и минимальных задержек. Это востребовано в робототехнике, встраиваемых системах и граничных вычислениях, где критична скорость реакции.\n\n• 🔹 Аппаратное ускорение вычислений без использования стандартных GPU.\n• 🔹 Оптимизация архитектуры модели под конкретную логику чипа.\n• 🔹 Снижение энергопотребления для автономных и встраиваемых систем.\n\n💡 Почему это важно: Такой подход открывает путь к созданию умных устройств реального времени с жесткими ограничениями по мощности и весу.\n\n🔗 Источник\n\n#AI #FPGA #Hardware #Embedded #Tech\n\n## Tags\n\n#telegram-import #live-sync #ai #fpga #hardware #embedded #tech",
+      "title_en": "📌 TL;DR: An analysis of the process of deploying compact artificial neural networks directly on field-programmable gate arrays.",
+      "content_en": "📌 TL;DR: An analysis of the process of deploying compact artificial neural networks directly on field-programmable gate arrays.\n\nRunning AI models on FPGAs enables maximum energy efficiency and minimal latency. This is in demand in robotics, embedded systems and edge computing, where reaction speed is critical.\n\n• 🔹 Hardware acceleration of computations without using standard GPUs.\n• 🔹 Optimisation of the model architecture for the specific logic of the chip.\n• 🔹 Reduced power consumption for standalone and embedded systems.\n\n💡 Why this is important: This approach paves the way for creating real-time smart devices with strict power and weight constraints.\n\n🔗 Source\n\n#AI #FPGA #Hardware #Embedded #Tech\n## Tags\n\n#telegram-import #live-sync #ai #fpga #hardware #embedded #tech"
+    },
+    {
+      "id": 3747,
+      "date": "2026-11-24T19:34:18.000Z",
+      "title": "🚀 Революция чипов для ИИ",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3747,
+      "tags": [
+        "ai",
+        "hardware",
+        "opensource",
+        "technews",
+        "devtools",
+        "tools",
+        "fpga"
+      ],
+      "content": "📌 TL;DR: Стартап Config AI создал компилятор, который ускоряет настройку FPGA-чипов в 19 раз, открывая путь к сверхбыстрым и бесплатным LLM.\n\nНовый подход использует перепрограммируемые вентильные матрицы (FPGA) вместо привычных GPU, позволяя адаптировать архитектуру чипа под конкретные задачи. Ранее ручной маппинг слоев модели занимал месяцы, но автоматизация изменила правила игры.\n\n• 🔹 Скорость инференса модели Kimi K3 Nano достигла 48 000 токенов в секунду.\n• 🔹 Технология масштабируется на более крупные модели с параметрами от 20B до 700B.\n• 🔹 Архитектура FPGA обеспечивает минимальные задержки при обработке запросов.\n\n💡 Почему это важно: Снижение стоимости и ускорение работы аппаратного обеспечения делают передовые языковые модели доступными для массового использования без ограничений по производительности.\n\n🔗 Источник\n\n#AI #Hardware #OpenSource #TechNews #DevTools\n\n## Tags\n\n#telegram-import #live-sync #ai #hardware #opensource #technews #devtools #tools #fpga",
+      "title_en": "📌 TL;DR: The Config AI startup has developed a compiler that speeds up the configuration of FPGA chips by 19 times, paving the way for ultra-fast and free LLMs.",
+      "content_en": "📌 TL;DR: The startup Config AI has created a compiler that speeds up the configuration of FPGA chips by 19 times, paving the way for ultra-fast and free LLMs.\n\nThe new approach uses field-programmable gate arrays (FPGAs) instead of conventional GPUs, allowing the chip architecture to be adapted to specific tasks. Previously, manual mapping of model layers took months, but automation has changed the game.\n\n• 🔹 The inference speed of the Kimi K3 Nano model has reached 48,000 tokens per second.\n• 🔹 The technology scales to larger models with parameters ranging from 20B to 700B.\n• 🔹 The FPGA architecture ensures minimal latency when processing requests.\n\n💡 Why it matters: Lower costs and faster hardware performance make advanced language models accessible for widespread use without performance limitations.\n\n🔗 Source\n\n#AI #Hardware #OpenSource #TechNews #DevTools\n## Tags\n\n#telegram-import #live-sync #ai #hardware #opensource #technews #devtools #tools #fpga"
+    },
+    {
+      "id": 3746,
+      "date": "2026-11-24T19:26:03.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-24T19-26-03-0...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3746,
+      "tags": [
+        "ai",
+        "google",
+        "devtools",
+        "opensource",
+        "cli",
+        "backend",
+        "tools",
+        "gemini"
+      ],
+      "content": "🚀 Gemini API CLI\n\n📌 TL;DR: Google выпустила официальный экспериментальный CLI-инструмент для удобной работы с Gemini API прямо из терминала.\n\nНовый инструмент позволяет разработчикам быстро интегрировать возможности языковых моделей Google в свои локальные скрипты и рабочие процессы без необходимости писать громоздкий код.\n\n• 🔹 Прямой доступ к Gemini API из командной строки\n• 🔹 Ускорение рутинных задач и автоматизация процессов\n• 🔹 Экспериментальный интерфейс для быстрой проверки гипотез\n\n💡 Почему это важно: Инструмент упрощает прототипирование и позволяет разработчикам взаимодействовать с AI прямо во время написания кода.\n\n🔗 Источник\n\n#AI #Google #DevTools #OpenSource #CLI\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-24T19-26-03-058Z-4183f790.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-24T19-26-03-058Z-4183f790.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #google #devtools #opensource #cli #backend #tools #gemini",
+      "title_en": "🚀 Gemini API CLI",
+      "content_en": "🚀 Gemini API CLI\n\n📌 TL;DR: Google has released an official experimental CLI tool for convenient interaction with the Gemini API directly from the terminal.\n\nThe new tool allows developers to quickly integrate the capabilities of Google's language models into their local scripts and workflows without having to write cumbersome code.\n\n• 🔹 Direct access to the Gemini API from the command line\n• 🔹 Speeding up routine tasks and automating processes\n• 🔹 Experimental interface for quick hypothesis testing\n\n💡 Why it matters: The tool simplifies prototyping and allows developers to interact with AI directly while writing code.\n\n🔗 Source\n\n#AI #Google #DevTools #OpenSource #CLI\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-24T19-26-03-058Z-4183f790.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-24T19-26-03-058Z-4183f790.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #google #devtools #opensource #cli #backend #tools #gemini"
+    },
+    {
+      "id": 3745,
+      "date": "2026-11-24T19:24:13.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-24T19-24-12-8...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3745,
+      "tags": [
+        "ai",
+        "openai",
+        "science",
+        "tech",
+        "opensource",
+        "astra",
+        "nasa"
+      ],
+      "content": "🪐 Поиск экзопланет с Astra и OpenAI\n\n📌 TL;DR: Двое астрономов-любителей использовали искусственный интеллект для поиска далеких миров в архивах NASA.\n\nПроект OpenAI демонстрирует, как современные инструменты на базе AI помогают энтузиастам анализировать публичные данные телескопов Kepler и TESS. Разработка открывает новые возможности для научных открытий без необходимости иметь доступ к сложным суперкомпьютерам.\n\n• 🔹 Анализ световых кривых звезд с помощью Codex и Astra\n• 🔹 Обработка колоссальных массивов открытых данных NASA\n• 🔹 Поиск кандидатов в экзопланеты для профессиональных астрономов\n\n💡 Почему это важно: AI демократизирует науку, позволяя любителям совершать реальные открытия в астрономии.\n\n🔗 Источник\n\n#AI #OpenAI #Science #Tech #OpenSource\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-24T19-24-12-804Z-7aeb046c.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-24T19-24-12-804Z-7aeb046c.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #openai #science #tech #opensource #astra #nasa",
+      "title_en": "🪐 Searching for exoplanets with Astra and OpenAI",
+      "content_en": "🪐 Searching for exoplanets with Astra and OpenAI\n\n📌 TL;DR: Two amateur astronomers used artificial intelligence to search for distant worlds in NASA's archives.\n\nThe OpenAI project demonstrates how modern AI-based tools help enthusiasts analyse public data from the Kepler and TESS telescopes. This development opens up new possibilities for scientific discoveries without the need for access to sophisticated supercomputers.\n\n• 🔹 Analysis of stellar light curves using Codex and Astra\n• 🔹 Processing vast datasets of NASA open data\n• 🔹 Searching for exoplanet candidates for professional astronomers\n\n💡 Why this is important: AI is democratising science, enabling amateurs to make real discoveries in astronomy.\n\n🔗 Source\n\n#AI #OpenAI #Science #Tech #OpenSource\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-24T19-24-12-804Z-7aeb046c.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-24T19-24-12-804Z-7aeb046c.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #openai #science #tech #opensource #astra #nasa"
+    },
+    {
+      "id": 3744,
+      "date": "2026-11-24T12:41:29.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-24T12-41-29-9...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3744,
+      "tags": [
+        "google",
+        "gemini",
+        "gemma",
+        "ai",
+        "startupschool"
+      ],
+      "content": "🚀 Google Startup School: AI & LLM\n\n📌 TL;DR: Google DeepMind и Google for Startups запускают бесплатную онлайн-серию мастер-классов по работе с новыми моделями.\n\nС 1 по 10 декабря пройдет практический интенсив для разработчиков и основателей стартапов. Участники научатся развертывать инференс Gemma 4, настраивать гибридную маршрутизацию Gemini и дообучать открытые агенты для написания кода.\n\n• 🔹 Деплой и оптимизация Gemma 4\n• 🔹 Архитектура гибридного роутинга Gemini\n• 🔹 Тонкая настройка open-weights агентов\n\n💡 Почему это важно: Отличная возможность бесплатно прокачать навыки работы с передовым стеком Google под руководством экспертов.\n\n🔗 Источник\n\n#Google #Gemini #Gemma #AI #StartupSchool\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-24T12-41-29-926Z-bc7bc60f.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-24T12-41-29-926Z-bc7bc60f.jpg\n\n## Tags\n\n#telegram-import #live-sync #google #gemini #gemma #ai #startupschool",
+      "title_en": "🚀 Google Startup School: AI and LLM",
+      "content_en": "🚀 Google Startup School: AI & LLM\n\n📌 TL;DR: Google DeepMind and Google for Startups are launching a free online series of masterclasses on working with new models.\n\nFrom 1 to 10 December, a hands-on intensive will be held for developers and startup founders. Participants will learn how to deploy Gemma 4 inference, configure Gemini hybrid routing, and fine-tune open-source agents for code writing.\n\n• 🔹 Gemma 4 deployment and optimisation\n• 🔹 Gemini hybrid routing architecture\n• 🔹 Fine-tuning of open-weights agents\n\n💡 Why it matters: This is a great opportunity to improve your skills in working with Google's cutting-edge stack for free, under the guidance of experts.\n\n🔗 Source\n\n#Google #Gemini #Gemma #AI #StartupSchool\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-24T12-41-29-926Z-bc7bc60f.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-24T12-41-29-926Z-bc7bc60f.jpg\n\n## Tags\n\n#telegram-import #live-sync #google #gemini #gemma #ai #startupschool"
+    },
+    {
+      "id": 3743,
+      "date": "2026-11-24T12:00:32.000Z",
+      "title": "🚀 Новый мультиагентный инструмент /swarm от Google Antigravity",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3743,
+      "tags": [
+        "ai",
+        "google",
+        "automation",
+        "agents",
+        "devtools",
+        "tools",
+        "swarm"
+      ],
+      "content": "📌 TL;DR: Google представила революционную систему /swarm для автоматизации задач с помощью роя ИИ-агентов.\n\nЭтот инструмент объединяет несколько автономных агентов для параллельного решения сложных задач в сфере разработки и SEO. Подход позволяет многократно ускорить рутинные процессы, распределяя нагрузку между узкоспециализированными моделями.\n\n• 🔹 Параллельное выполнение комплексных задач\n• 🔹 Автономная координация работы агентов\n• 🔹 Глубокая интеграция с современными LLM\n\n💡 Почему это важно: Разработчики и оптимизаторы получают мощный фреймворк для делегирования рутины автономному рою ИИ.\n\n🔗 Источник\n\n#AI #Google #Automation #Agents #DevTools\n\n## Tags\n\n#telegram-import #live-sync #ai #google #automation #agents #devtools #tools #swarm",
+      "title_en": "📌 TL;DR: Google has introduced a revolutionary /swarm system to automate tasks using a swarm of AI agents.",
+      "content_en": "📌 TL;DR: Google has unveiled a revolutionary /swarm system for automating tasks using a swarm of AI agents.\n\nThis tool brings together several autonomous agents to solve complex development and SEO tasks in parallel. This approach enables a significant acceleration of routine processes by distributing the workload among highly specialised models.\n\n• 🔹 Parallel execution of complex tasks\n• 🔹 Autonomous coordination of agents' work\n• 🔹 Deep integration with modern LLMs\n\n💡 Why it matters: Developers and optimisers gain a powerful framework for delegating routine tasks to an autonomous swarm of AI agents.\n\n🔗 Source\n\n#AI #Google #Automation #Agents #DevTools\n## Tags\n\n#telegram-import #live-sync #ai #google #automation #agents #devtools #tools #swarm"
+    },
+    {
+      "id": 3742,
+      "date": "2026-11-24T11:52:34.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-24T11-52-34-8...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3742,
+      "tags": [
+        "ai",
+        "devtools",
+        "opensource",
+        "automation",
+        "tools",
+        "neon"
+      ],
+      "content": "🚀 Новый стек swarm, neon и orchestrator\n\n📌 TL;DR: Мощная связка инструментов для оркестрации агентов набирает популярность среди разработчиков.\n\nПродвинутый паттерн для управления ИИ-агентами через swarm-архитектуру в сочетании с бессерверной БД Neon и оркестратором открывает новые возможности для автономных рабочих процессов.\n\n• 🔹 Быстрое развертывание мультиагентных систем\n• 🔹 Надежное хранение данных в Neon\n• 🔹 Гибкая оркестрация сложных задач\n\n💡 Почему это важно: Такой стек позволяет создавать масштабируемые автономные приложения без лишней боли.\n\n🔗 Источник\n\n#AI #DevTools #OpenSource #Automation\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-24T11-52-34-810Z-1e5d6330.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-24T11-52-34-810Z-1e5d6330.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #devtools #opensource #automation #tools #neon",
+      "title_en": "🚀 New stack: Swarm, Neon, and Orchestrator",
+      "content_en": "🚀 New stack: Swarm, Neon and Orchestrator\n\n📌 TL;DR: A powerful suite of tools for agent orchestration is gaining popularity among developers.\n\nAn advanced pattern for managing AI agents through swarm architecture, combined with the serverless Neon database and an orchestrator, opens up new possibilities for autonomous workflows.\n\n• 🔹 Rapid deployment of multi-agent systems\n• 🔹 Reliable data storage in Neon\n• 🔹 Flexible orchestration of complex tasks\n\n💡 Why it matters: This stack allows you to create scalable autonomous applications without unnecessary hassle.\n\n🔗 Source\n\n#AI #DevTools #OpenSource #Automation\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-24T11-52-34-810Z-1e5d6330.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-24T11-52-34-810Z-1e5d6330.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #devtools #opensource #automation #tools #neon"
+    },
+    {
       "id": 3741,
       "date": "2026-11-24T05:02:17.000Z",
       "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-24T05-02-18-0...",
@@ -5440,247 +5694,6 @@
         "tools"
       ],
       "content": "📌 TL;DR: Новая бесплатная книга от freeCodeCamp обучает разработчиков превращать Python-код в интерактивные AI-приложения без написания фронтенда.\n\nБиблиотека Gradio стала де-факто стандартом для быстрого прототипирования ML-моделей и Python-скриптов в виде веб-интерфейсов. Теперь сообщество получило полноценное руководство для погружения в инструмент от базовых концепций до развертывания готовых продуктов в продакшене.\n\nКнига написана автором Eva и охватывает весь необходимый стек для работы с пользовательским интерфейсом на чистом Python. Маджурный фокус сделан на интеграцию языковых моделей, создание чат-ботов и управление состоянием приложения прямо в коде.\n\n• 🔹 Основы работы с компонентами и событиями\n• 🔹 Создание интерфейсов для чат-ботов и LLM\n• 🔹 Управление состоянием пользовательской сессии\n• 🔹 Интеграция сторонних ML-моделей\n• 🔹 Развертывание готовых приложений\n\n💡 Почему это важно: Инструмент позволяет инженерам и дата-саентистам презентовать свои разработки в виде полноценных веб-приложений за считанные минуты, не погружаясь в изучении JavaScript и HTML/CSS.\n\n🔗 Источник\n\n#Python #Gradio #MachineLearning #WebDev #OpenSource #DevTools #AI\n\n## Tags\n\n#telegram-import #live-sync #python #gradio #machinelearning #webdev #opensource #devtools #ai #frontend #learning #tools #для #создание #ml-моделей"
-    },
-    {
-      "id": 3453,
-      "date": "2026-09-11T23:43:06.000Z",
-      "title": "🚀 Релиз Muse Spark 1.3",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3453,
-      "tags": [
-        "ai",
-        "meta",
-        "devtools",
-        "coding",
-        "opensource",
-        "technews",
-        "tools",
-        "muse",
-        "spark"
-      ],
-      "content": "📌 TL;DR: Meta выпустила обновление Muse Spark 1.3 с продвинутыми возможностями рассуждения для контрибьюторов.\n\nMeta анонсировала свежий апдейт инструмента Muse Code, получивший название Muse Spark 1.3. Главным нововведением стала активация режима максимального логического рассуждения (max reasoning) на уровне контрибьюторов. Это позволяет модели эффективнее справляться со сложными архитектурными задачами и глубоким анализом кода.\n\nОбновление ориентировано на разработчиков и инженерные команды, активно использующие экосистему Meta для создания и тестирования технологических продуктов. Инструмент призван существенно ускорить рутинные процессы разработки и автоматизировать написание комплексных скриптов.\n\n💡 Почему это важно: Интеграция глубокого логического рассуждения в инструменты разработки помогает минимизировать ошибки на ранних этапах и освобождает время инженеров для решения продуктовых задач.\n\n🔗 Источник\n\n#AI #Meta #DevTools #Coding #OpenSource #TechNews\n\n## Tags\n\n#telegram-import #live-sync #ai #meta #devtools #coding #opensource #technews #tools #muse #spark #для"
-    },
-    {
-      "id": 3452,
-      "date": "2026-09-11T23:41:13.000Z",
-      "title": "🚀 SpaceX и xAI создают компанию в прямом эфире с помощью ИИ",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3452,
-      "tags": [
-        "spacex",
-        "xai",
-        "grok",
-        "ai",
-        "automation",
-        "technews"
-      ],
-      "content": "📌 TL;DR: С 15 по 17 сентября SpaceX и xAI планируют запустить уникальный трехдневный стрим, в рамках которого будет полностью создана новая компания с нуля с помощью бота Grok.\n\nЭто беспрецедентный эксперимент на стыке искусственного интеллекта и реального бизнеса. Вместо традиционного планирования и долгих совещаний процесс проектирования, создания структуры и запуска компании будет полностью автоматизирован и выведен на публичное обозрение.\n\nПроект демонстрирует практические возможности современных генеративных моделей и агентов на базе Grok в решении комплексных задач реального мира — от написания концепции до операционного управления. Для индустрии это станет громким стресс-тестом автономных ИИ-систем в режиме реального времени.\n\n* 🔹 Полная автономность: создание компании от идеи до реализации под управлением Grok Bot\n* 🔹 Публичный формат: трехдневный марафон в прямом эфире с 15 по 17 сентября\n* 🔹 Синергия индустрий: объединение технологической базы SpaceX и разработок xAI в области искусственного интеллекта\n💡 Почему это важно: Эксперимент показывает переход ИИ от роли помощника к роли полноценного архитектора бизнес-процессов, способного координировать масштабные проекты.\n\n🔗 Источник\n\n#SpaceX #xAI #Grok #AI #Automation #TechNews\n\n## Tags\n\n#telegram-import #live-sync #spacex #xai #grok #ai #automation #technews #реального #это #будет"
-    },
-    {
-      "id": 3451,
-      "date": "2026-09-11T21:22:42.000Z",
-      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/09/2026-09-11T21-22-41-6...",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3451,
-      "tags": [
-        "ai",
-        "nodejs",
-        "automation",
-        "opensource",
-        "devtools",
-        "tech",
-        "backend",
-        "design",
-        "tools",
-        "node"
-      ],
-      "content": "📰 Релиз AI-Team Studio v0.6.0: Мультиязычность, Node.js и 127/127 тестов\n\nСегодня у нас выдался невероятно плотный день системной разработки. Если раньше наша автономная ИИ-команда умела разрабатывать и тестировать проекты исключительно на Python, то теперь студия совершила качественный скачок и стала полноценной мультиязычной платформой.\n\nВ этом обзоре мы подробно расскажем про архитектурные слои для Node.js, бронированную песочницу безопасности, обновленный UX и рекордное прохождение 127 тестов.\n\n👉 Читать полностью в Instant View ⚡️\n\n#AI #NodeJS #Automation #OpenSource #DevTools #Tech\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/09/2026-09-11T21-22-41-697Z-29896890.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/09/2026-09-11T21-22-41-697Z-29896890.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #nodejs #automation #opensource #devtools #tech #backend #design #tools #node #тестов"
-    },
-    {
-      "id": 3450,
-      "date": "2026-09-11T15:58:45.000Z",
-      "title": "🎵 YuE2: Новый открытый генератор музыки, обходящий коммерческие аналоги",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3450,
-      "tags": [
-        "ai",
-        "opensource",
-        "audiogen",
-        "machinelearning",
-        "technews",
-        "backend",
-        "learning",
-        "minimax",
-        "mureka"
-      ],
-      "content": "📌 TL;DR: В сети представили YuE2 — передовую open-source модель для генерации музыки, которая превосходит Mureka v9 и Minimax 3 в бенчмарках.\n\nИндустрия генеративного аудио продолжает стремительно развиваться. На этот раз разработчики представили проект YuE2, ориентированный на создание качественных музыкальных треков с открытым исходным кодом. Согласно первичным тестам и бенчмаркам, новинка обходит даже такие популярные коммерческие решения, как Mureka v9 и Minimax 3.\n\nПроект привлекает внимание исследователей и музыкантов своей доступностью и высоким качеством синтеза. Открытый код позволяет локально разворачивать модель, экспериментировать с промптами и интегрировать генерацию в собственные творческие пайплайны без ограничений облачных API.\n\n* 🔹 Передовая архитектура для генерации музыки\n* 🔹 Открытый исходный код (Open Source)\n* 🔹 Превосходство над Mureka v9 и Minimax 3 в ряде бенчмарков\n* 🔹 Потенциал для локального запуска и кастомизации\n💡 Почему это важно: Открытые музыкальные модели снижают порог входа для создания качественного аудиоконтента и дают разработчикам полный контроль над процессом генерации без привязки к закрытым платформам.\n\n🔗 Источник\n\n#AI #OpenSource #AudioGen #MachineLearning #TechNews\n\n## Tags\n\n#telegram-import #live-sync #ai #opensource #audiogen #machinelearning #technews #backend #learning #для #minimax #mureka"
-    },
-    {
-      "id": 3449,
-      "date": "2026-09-10T22:20:23.000Z",
-      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/09/2026-09-10T22-20-23-4...",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3449,
-      "tags": [
-        "ai",
-        "multiagents",
-        "python",
-        "gamedev",
-        "deepseek",
-        "devtools",
-        "tools"
-      ],
-      "content": "📰 Все тесты зелёные, а код крашится на 1-й секунде: как мы учили ИИ-команду не вешать лапшу на уши\n\nПродолжаем хроники разработки автономной мультиагентной студии (AI-Team Studio). После релиза версии `v0.5.0` с живыми 8-битными спрайтами я решил устроить системе настоящий краш-тест на сложной задаче — написать с нуля текстовую пошаговую Rogue-lite RPG на Python.\n\nВ этой статье разберем, почему изоляция агентов приводит к ложным победам, как справляться с ограничениями моделей и что сделать, чтобы ИИ больше не рапортовал о мертвых фичах как об успешных.\n\n👉 Читать полностью в Instant View ⚡️\n\n#AI #MultiAgents #Python #GameDev #DeepSeek #DevTools\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/09/2026-09-10T22-20-23-420Z-2d6b1b2f.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/09/2026-09-10T22-20-23-420Z-2d6b1b2f.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #multiagents #python #gamedev #deepseek #devtools #tools #как"
-    },
-    {
-      "id": 3448,
-      "date": "2026-09-10T20:41:26.000Z",
-      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/09/2026-09-10T20-41-25-9...",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3448,
-      "tags": [
-        "aiteamstudio",
-        "python",
-        "deepseek",
-        "developertools",
-        "ai",
-        "automation",
-        "tools"
-      ],
-      "content": "📰 Релиз AI-Team Studio v0.4.1: Боевой стресс-тест и разработка за $0.015\n\nПеред тем как выкатить обновление v0.4.1, я решил устроить виртуальной команде агентов полноценный краш-тест в реальном времени. В этой статье мы разберем результаты стресс-теста, экономику разработки и ключевые фичи нового релиза.\n\nДля проверки была поставлена задача: с нуля спроектировать, написать и протестировать модульный финансовый CLI-калькулятор на Python. Вот как отработала команда:\n\n👉 Читать полностью в Instant View ⚡️\n\n#AITeamStudio #Python #DeepSeek #DeveloperTools #AI #Automation\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/09/2026-09-10T20-41-25-955Z-d5975d7d.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/09/2026-09-10T20-41-25-955Z-d5975d7d.jpg\n\n## Tags\n\n#telegram-import #live-sync #aiteamstudio #python #deepseek #developertools #ai #automation #tools #как"
-    },
-    {
-      "id": 3447,
-      "date": "2026-09-10T14:37:15.000Z",
-      "title": "🚀 DeepSeek представляет DeepSeek-V4.1-Flash",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3447,
-      "tags": [
-        "deepseek",
-        "ai",
-        "llm",
-        "machinelearning",
-        "opensource",
-        "technews",
-        "learning",
-        "deepseek-v4"
-      ],
-      "content": "📌 TL;DR: Новая компактная модель от DeepSeek предлагает встроенное визуальное понимание, высокую скорость инференса и повышенную эффективность.\n\nКоманда DeepSeek анонсировала выпуск DeepSeek-V4.1-Flash — самой легкой модели в новом семействе архитектур. Релиз ориентирован на разработчиков и компании, которым важны низкие задержки при обработке запросов и высокая пропускная способность без ущерба для качества генерации.\n\nАрхитектурные улучшения позволяют эффективнее масштабировать решения на базе этой модели, сохраняя баланс между производительностью и ресурсоемкостью. Наличие нативного мультимодального восприятия расширяет сценарии применения в задачах компьютерного зрения и анализа интерфейсов.\n\n• 🔹 Нативное визуальное понимание с первых версий\n• 🔹 Увеличенная скорость инференса и пропускная способность\n• 🔹 Оптимизированная архитектура для масштабирования\n\n💡 Почему это важно: Модели формата Flash позволяют существенно сократить затраты на инфраструктуру и ускорить работу клиентских приложений в реальном времени.\n\n🔗 Источник\n\n#DeepSeek #AI #LLM #MachineLearning #OpenSource #TechNews\n\n## Tags\n\n#telegram-import #live-sync #deepseek #ai #llm #machinelearning #opensource #technews #learning #модели #deepseek-v4 #визуальное"
-    },
-    {
-      "id": 3446,
-      "date": "2026-09-09T22:28:46.000Z",
-      "title": "🚀 Тестирование DeepSeek V4.1 Flash",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3446,
-      "tags": [
-        "deepseek",
-        "ai",
-        "opensource",
-        "llm",
-        "technews",
-        "design",
-        "astra",
-        "flash"
-      ],
-      "content": "📌 TL;DR: Новая открытая модель DeepSeek V4.1 Flash показала результаты, сопоставимые с закрытыми флагманами, при минимальной стоимости выполнения задач.\n\nКоманда OpenDesign провела бенчмаркинг свежей языковой модели DeepSeek V4.1 Flash на повседневных дизайнерских задачах по реальным пользовательским запросам. Результаты демонстрируют серьезный сдвиг в балансе сил между открытыми и закрытыми решениями на рынке AI.\n\nНовинка смогла достичь 98% от показателей GPT-6 Astra, обогнав практически все существующие аналоги. При этом экономическая эффективность модели оказалась беспрецедентной — ее стоимость составила всего 1.4% от затрат на запуск Astra.\n\n• 🔹 98% производительности GPT-6 Astra на профильных задачах\n• 🔹 Стоимость инференса на уровне 1.4% от флагманских аналогов\n• 🔹 Высокая эффективность в повседневных генеративных и дизайнерских сценариях\n\n💡 Почему это важно: Открытые модели стремительно догоняют проприетарные системы, предлагая сопоставимое качество за символические деньги, что делает внедрение AI доступным для любых команд.\n\n🔗 Источник\n\n#DeepSeek #AI #OpenSource #LLM #TechNews\n\n## Tags\n\n#telegram-import #live-sync #deepseek #ai #opensource #llm #technews #design #astra #flash #модели"
-    },
-    {
-      "id": 3445,
-      "date": "2026-09-09T14:38:15.000Z",
-      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/09/2026-09-09T14-38-16-0...",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3445,
-      "tags": [
-        "ai",
-        "python",
-        "refactoring",
-        "soundcloud",
-        "devtools",
-        "automation",
-        "tools"
-      ],
-      "content": "📰 Рефакторинг старого пет-проекта: как я переписал выкачивание 1400+ треков из SoundCloud с помощью AI-агента\n\nУ каждого из нас есть старый код, на который больно смотреть, но который когда-то решал конкретную задачу. В этой статье мы разберем, как превратить хрупкий костыльный легаси-скрипт в современное и надежное приложение всего за полтора часа с помощью AI-агента.\n\nГода три назад я набросал тулзу для бэкапа своих лайков из SoundCloud. Работало это по классике костыльного жанра:\n\n👉 Читать полностью в Instant View ⚡️\n\n#AI #Python #Refactoring #SoundCloud #DevTools #Automation\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/09/2026-09-09T14-38-16-006Z-1b591a0b.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/09/2026-09-09T14-38-16-006Z-1b591a0b.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #python #refactoring #soundcloud #devtools #automation #tools #ai-агента #как #который"
-    },
-    {
-      "id": 3444,
-      "date": "2026-09-09T07:15:17.000Z",
-      "title": "🎧 theDAW: локальное ИИ-приложение для создания музыки и DJ-сетов",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3444,
-      "tags": [
-        "ai",
-        "audioai",
-        "stableaudio",
-        "musicproduction",
-        "opensource",
-        "devtools",
-        "tools",
-        "thedaw"
-      ],
-      "content": "📌 TL;DR: theDAW — это мощная ИИ-станция для работы со звуком и живых выступлений, которая работает полностью на вашем компьютере.\n\nИнструмент объединяет передовые модели генерации аудио и профессиональный софт для создания музыки. Проект создан разработчиком под ником gantasmo и поддерживает все популярные операционные системы, обеспечивая максимальную конфиденциальность за счет локального запуска.\n\nАрхитектура приложения построена на базе Stable Audio 3 для качественной генерации звука. Кроме того, реализована глубокая интеграция с Magenta RealTime 2, Suno и Google Lyria, что открывает огромные возможности для экспериментов со звуковыми паттернами и композицией.\n\n* 🔹 Полная автономность: работает 100% локально на PC под управлением любых ОС.\n* 🔹 Передовые модели: интеграция Stable Audio 3, Magenta RealTime 2, Suno и Google Lyria.\n* 🔹 Профессиональная совместимость: полная интеграция с Ableton, Reaper, Resolume и другим софтом.\n* 🔹 Живые выступления: подходит как для студийной работы, так и для интерактивных DJ-сетов в реальном времени.\n💡 Почему это важно: theDAW стирает границу между генеративными ИИ-моделями и классическими DAW-программами, давая музыкантам и продюсерам локальный инструмент для бесшовного внедрения нейросетей в привычный рабочий процесс.\n\n🔗 Источник\n\n#AI #AudioAI #StableAudio #MusicProduction #OpenSource #DevTools\n\n## Tags\n\n#telegram-import #live-sync #ai #audioai #stableaudio #musicproduction #opensource #devtools #tools #для #thedaw #интеграция"
-    },
-    {
-      "id": 3443,
-      "date": "2026-09-09T07:12:38.000Z",
-      "title": "🚨 Уход ведущего исследователя из Anthropic",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3443,
-      "tags": [
-        "ai",
-        "anthropic",
-        "openai",
-        "safety",
-        "technews",
-        "ethics"
-      ],
-      "content": "📌 TL;DR: Бывший сотрудник OpenAI и Anthropic Джейкоб Коксон объявил об увольнении, обвинив обе компании в безответственной гонке к самосовершенствующемуся суперинтеллекту.\n\nИндустрия искусственного интеллекта снова сталкивается с внутренними конфликтами безопасности. Джейкоб Коксон (Jacob Coxon), отдавший три года претренинг-исследованиям в OpenAI и Anthropic, публично заявил об уходе из последней. По его словам, руководство ведущих лабораторий игнорирует экзистенциальные риски ради первенства в гонке вооружений.\n\nЗаявление вызвало огромный резонанс в технологическом сообществе, набрав сотни тысяч просмотров и десятки тысяч репостов за считанные часы. Подобные демарши от ключевых инженеров поднимают серьезные вопросы о внутренней культуре безопасности в компаниях, создающих передовые языковые модели.\n\n💡 Почему это важно: Критика изнутри от практиков, занимающихся предобучением нейросетей, подчеркивает реальный разрыв между публичными заявлениями корпораций об этике и их реальной агрессивной стратегией разработки.\n\n🔗 Источник\n\n#AI #Anthropic #OpenAI #Safety #TechNews #Ethics\n\n## Tags\n\n#telegram-import #live-sync #ai #anthropic #openai #safety #technews #ethics #безопасности #гонке #джейкоб"
-    },
-    {
-      "id": 3442,
-      "date": "2026-09-09T07:11:30.000Z",
-      "title": "🚀 Meta представила Muse",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3442,
-      "tags": [
-        "meta",
-        "ai",
-        "aiagents",
-        "technews",
-        "innovation",
-        "muse"
-      ],
-      "content": "📌 TL;DR: Meta анонсировала Muse — персонального AI-агента, созданного для помощи в самых разных жизненных задачах.\n\nКомпания Meta продолжает развивать экосистему умных помощников и анонсировала запуск Muse. Этот персональный агент спроектирован так, чтобы брать на себя рутинные задачи и координировать действия в различных сферах повседневной жизни.\n\nПриложение уже доступно для скачивания, что знаменует собой следующий шаг технологического гиганта в сторону массового внедрения автономных AI-систем для широкой аудитории.\n\n• 🔹 Персональный ИИ-агент для повседневных задач\n• 🔹 Глубокая интеграция с экосистемой Meta\n• 🔹 Кросс-платформенная доступность через мобильное приложение\n\n💡 Почему это важно: Выход Muse от Meta усиливает конкуренцию на рынке потребительских AI-агентов, делая автономных помощников доступнее для массового пользователя.\n\n🔗 Источник\n\n#Meta #AI #AIAgents #TechNews #Innovation\n\n## Tags\n\n#telegram-import #live-sync #meta #ai #aiagents #technews #innovation #для #muse #автономных"
-    },
-    {
-      "id": 3441,
-      "date": "2026-09-08T22:17:27.000Z",
-      "title": "🎬 Video States Website: Интерактивный кинематографический веб-проект",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3441,
-      "tags": [
-        "ai",
-        "webdev",
-        "opensource",
-        "devtools",
-        "videogen",
-        "video",
-        "tools"
-      ],
-      "content": "📌 TL;DR: Открытый репозиторий с гайдами, промптами и спецификациями для создания интерактивных видеосайтов с бесшовным воспроизведением.\n\nПроект представляет собой полноценный набор инструментов и спецификаций для разработки современных кинематографических веб-страниц, управляемых кликами пользователя. Он ориентирован на разработчиков, которые хотят интегрировать передовой видеоконтент, сгенерированный с помощью ИИ, в веб-интерфейсы.\n\nВ основе решения лежат наработки по использованию современных моделей генерации видео (включая футажи LTX), детальные промпты для генерации изображений и видеоряда, а также готовые спецификации для AI-ассистентов разработки. Это позволяет быстро развернуть сложный мультимедийный интерфейс без потери качества воспроизведения.\n\n* 🔹 Готовая спецификация для кодинг-агентов для быстрой генерации кода\n* 🔹 Набор промптов для создания визуального контента под видеосайты\n* 🔹 Руководство по организации бесшовного (seam-safe) воспроизведения медиа\n* 🔹 Практический воркфлоу сборки интерактивных интерфейсов\n💡 Почему это важно: Проект упрощает создание иммерсивных веб-приложений с использованием ИИ-видео, предоставляя разработчикам четкий пайплайн от генерации контента до его бесшовной интеграции на сайт.\n\n🔗 Источник\n\n#AI #WebDev #OpenSource #DevTools #VideoGen\n\n## Tags\n\n#telegram-import #live-sync #ai #webdev #opensource #devtools #videogen #video #tools #для #генерации #воспроизведения"
     },
     {
       "id": 3290,

@@ -1,6 +1,25 @@
 {
   "posts": [
     {
+      "id": 3755,
+      "date": "2026-11-26T06:06:41.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-26T06-06-59-5...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3755,
+      "tags": [
+        "obsidian",
+        "ai",
+        "knowledgemanagement",
+        "opensource",
+        "devtools",
+        "tools"
+      ],
+      "content": "🚀 Официальные коннекторы Obsidian для ИИ-агентов\n\n📌 TL;DR: Популярный сервис заметок Obsidian выпустил официальные коннекторы для подключения ИИ-агентов к вашей базе знаний.\n\nТеперь любые автономные ассистенты могут работать с вашими локальными заметками, графами и канбан-досками, сохраняя полный контроль над данными на вашем устройстве.\n\n• 🔹 Подключение агентов к единой локальной базе знаний\n• 🔹 Сохранение данных в открытых форматах без привязки к облаку\n• 🔹 Полная конфиденциальность без встроенного ИИ и аналитики\n\n💡 Почему это важно: Разработчики получили безопасный способ интеграции ИИ-агентов с личными данными без риска утечки конфиденциальной информации.\n\n🔗 Источник\n\n#Obsidian #AI #KnowledgeManagement #OpenSource #DevTools\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-26T06-06-59-501Z-5165d398.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-26T06-06-59-501Z-5165d398.jpg\n\n## Tags\n\n#telegram-import #live-sync #obsidian #ai #knowledgemanagement #opensource #devtools #tools",
+      "title_en": "🚀 Official Obsidian connectors for AI agents",
+      "content_en": "🚀 Official Obsidian connectors for AI agents\n\n📌 TL;DR: The popular note-taking service Obsidian has released official connectors to link AI agents to your knowledge base.\n\nNow, any offline assistants can work with your local notes, graphs, and Kanban boards, while maintaining full control over the data on your device.\n\n• 🔹 Connecting agents to a single local knowledge base\n• 🔹 Saving data in open formats without being tied to the cloud\n• 🔹 Complete confidentiality without built-in AI and analytics\n\n💡 Why this is important: Developers have gained a secure way to integrate AI agents with personal data without the risk of leaking sensitive information.\n\n🔗 Source\n\n#Obsidian #AI #KnowledgeManagement #OpenSource #DevTools\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-26T06-06-59-501Z-5165d398.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-26T06-06-59-501Z-5165d398.jpg\n\n## Tags\n\n#telegram-import #live-sync #obsidian #ai #knowledgemanagement #opensource #devtools #tools"
+    },
+    {
       "id": 3754,
       "date": "2026-11-25T08:23:43.000Z",
       "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-25T08-24-04-5...",
@@ -5673,27 +5692,6 @@
         "learning"
       ],
       "content": "📌 TL;DR: Энтузиаст подключил нейросеть, смоделированную на основе мозга мухи, к реальному криптокошельку для торговли на Coinbase.\n\nРазработчик Алекс Вормут представил необычный эксперимент: он выделил 100 долларов виртуальному организму, архитектура которого имитирует нейронные связи плодовой мухи. В этой системе дофаминовые нейроны стимулируются каждый раз, когда бокс-трейдер совершает прибыльную сделку.\n\nАктивность синапсов напрямую определяет решения о покупке или продаже активов на бирже Coinbase. Проект исследует принципы биологического подкрепления в алгоритмической торговле и реакцию примитивных нейросетей на финансовые стимулы.\n\n• 🔹 Основа модели: имитация нейронной сети мозга мухи\n• 🔹 Капитал: 100 долларов для торговли на Coinbase\n• 🔹 Механика: дофаминовое поощрение за успешные сделки\n• 🔹 Управление: активность нейронов определяет торговые ордера\n\n💡 Почему это важно: Подобные эксперименты помогают исследователям тестировать биоподобные алгоритмы принятия решений и изучать возможности переноса принципов работы живой природы в финансовый финтех-сегмент.\n\n🔗 Источник\n\n#AI #Crypto #BioTech #Trading #OpenSource #MachineLearning\n\n## Tags\n\n#telegram-import #live-sync #ai #crypto #biotech #trading #opensource #machinelearning #learning #мухи #активность #для"
-    },
-    {
-      "id": 3454,
-      "date": "2026-09-11T23:45:07.000Z",
-      "title": "🌐 Создание веб-интерфейсов для Python с Gradio",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3454,
-      "tags": [
-        "python",
-        "gradio",
-        "machinelearning",
-        "webdev",
-        "opensource",
-        "devtools",
-        "ai",
-        "frontend",
-        "learning",
-        "tools"
-      ],
-      "content": "📌 TL;DR: Новая бесплатная книга от freeCodeCamp обучает разработчиков превращать Python-код в интерактивные AI-приложения без написания фронтенда.\n\nБиблиотека Gradio стала де-факто стандартом для быстрого прототипирования ML-моделей и Python-скриптов в виде веб-интерфейсов. Теперь сообщество получило полноценное руководство для погружения в инструмент от базовых концепций до развертывания готовых продуктов в продакшене.\n\nКнига написана автором Eva и охватывает весь необходимый стек для работы с пользовательским интерфейсом на чистом Python. Маджурный фокус сделан на интеграцию языковых моделей, создание чат-ботов и управление состоянием приложения прямо в коде.\n\n• 🔹 Основы работы с компонентами и событиями\n• 🔹 Создание интерфейсов для чат-ботов и LLM\n• 🔹 Управление состоянием пользовательской сессии\n• 🔹 Интеграция сторонних ML-моделей\n• 🔹 Развертывание готовых приложений\n\n💡 Почему это важно: Инструмент позволяет инженерам и дата-саентистам презентовать свои разработки в виде полноценных веб-приложений за считанные минуты, не погружаясь в изучении JavaScript и HTML/CSS.\n\n🔗 Источник\n\n#Python #Gradio #MachineLearning #WebDev #OpenSource #DevTools #AI\n\n## Tags\n\n#telegram-import #live-sync #python #gradio #machinelearning #webdev #opensource #devtools #ai #frontend #learning #tools #для #создание #ml-моделей"
     },
     {
       "id": 3290,

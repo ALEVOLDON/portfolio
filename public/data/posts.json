@@ -1,6 +1,26 @@
 {
   "posts": [
     {
+      "id": 3765,
+      "date": "2026-11-28T00:08:31.000Z",
+      "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-28T00-08-30-8...",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3765,
+      "tags": [
+        "ai",
+        "desktopapp",
+        "licensing",
+        "security",
+        "devtools",
+        "webview2",
+        "tools"
+      ],
+      "content": "📰 Интеграция оффлайн-лицензирования в десктопные AI-приложения\n\nСоздание локальных десктопных студий на WebView2 с поддержкой автономных AI-рантаймов (таких как Ollama или LM Studio) требует особого подхода к защите софта. В этом материале мы разберем практический кейс интеграции системы оффлайн-лицензирования для десктопных приложений с использованием криптографических JWT-токенов.\n\n👉 Читать полностью в Instant View ⚡️\n\n#AI #DesktopApp #Licensing #Security #DevTools #WebView2\n\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-28T00-08-30-868Z-94f5a925.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-28T00-08-30-868Z-94f5a925.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #desktopapp #licensing #security #devtools #webview2 #tools",
+      "title_en": "📰 Integration of offline licensing into desktop AI applications",
+      "content_en": "📰 Integrating offline licensing into desktop AI applications\n\nCreating local desktop studios on WebView2 with support for offline AI runtimes (such as Ollama or LM Studio) requires a special approach to software protection. In this article, we will examine a practical case study of integrating an offline licensing system for desktop applications using cryptographic JWT tokens.\n\n👉 Read the full article in Instant View ⚡️\n\n#AI #DesktopApp #Licensing #Security #DevTools #WebView2\n## Media\n\n- [photo](https://alevoldon.com/media/telegram/2026/11/2026-11-28T00-08-30-868Z-94f5a925.jpg)\n\n## Links\n\n- https://alevoldon.com/media/telegram/2026/11/2026-11-28T00-08-30-868Z-94f5a925.jpg\n\n## Tags\n\n#telegram-import #live-sync #ai #desktopapp #licensing #security #devtools #webview2 #tools"
+    },
+    {
       "id": 3764,
       "date": "2026-11-27T23:53:02.000Z",
       "title": "![Post cover](https://alevoldon.com/media/telegram/2026/11/2026-11-27T23-53-01-0...",
@@ -5687,25 +5707,6 @@
       "content": "📌 TL;DR: Кураторская коллекция платформ с готовыми стилями, дизайн-системами и компонентами для быстрой генерации интерфейсов с помощью нейросетей.\n\nСовременные инструменты разработки и LLM позволяют создавать полноценные интерфейсы прямо по текстовому описанию. Однако для получения качественного результата AI-моделям часто не хватает качественного контекста по верстке, актуальным стилям и компонентной базе.\n\nРазработчик Abraham John собрал исчерпывающую коллекцию платформ, которые закрывают эту потребность. Ресурсы включают в себя готовые дизайн-системы, референсы UI-компонентов и специализированные описания для точной генерации интерфейсов через AI-агентов.\n\n• 🔹 Styles: http://styles.refero.design\n• 🔹 Design Systems: http://neuform.ai\n• 🔹 UI Components: http://typeui.sh\n• 🔹 Web Design: http://aura.build\n• 🔹 Design.md: http://design-md.hyperbrowser.ai\n• 🔹 Design Resources: http://designmd.supply\n• 🔹 Open Design: http://open-design.ai\n• 🔹 Design.md: http://designmd.me\n\n💡 Почему это важно: Использование структурированных дизайн-ресурсов в формате Markdown и готовых систем компонентов помогает минимизировать галлюцинации AI и ускоряет прототипирование продуктов.\n\n🔗 Источник\n\n#AI #Design #UIUX #WebDev #Frontend #OpenSource #DevTools\n\n## Links\n\n- http://styles.refero.design\n- http://neuform.ai\n- http://typeui.sh\n- http://aura.build\n- http://design-md.hyperbrowser.ai\n- http://designmd.supply\n- http://open-design.ai\n- http://designmd.me\n\n## Tags\n\n#telegram-import #live-sync #ai #design #uiux #webdev #frontend #opensource #devtools #tools #refero #neuform #typeui #aura #hyperbrowser #designmd #open-design #для #styles #генерации"
     },
     {
-      "id": 3464,
-      "date": "2026-09-14T06:57:10.000Z",
-      "title": "🚀 Анонс Grok 4.8: Новый флагман от xAI",
-      "channel": "DUMP // AI & DEV",
-      "telegram_chat_id": -1001329670526,
-      "telegram_message_id": 3464,
-      "tags": [
-        "ai",
-        "grok",
-        "xai",
-        "llm",
-        "machinelearning",
-        "technews",
-        "learning",
-        "c"
-      ],
-      "content": "📌 TL;DR: Илон Маск сообщил о завершении обучения Grok 4.8 — массивной LLM на 2.5 триллиона параметров.\n\nКоманда xAI выходит на финишную прямую в создании новой версии своей флагманской языковой модели. Особенностью Grok 4.8 стал не только масштаб в 2.5 триллиона параметров, но и принципиально новый программный стек на C++, разработанный специально для оптимизации процессов обучения.\n\nПосле завершения финальной фазы обучения на этой неделе модель сразу перейдет к этапу обучения с подкреплением (RL). Это позволит существенно улучшить логические способности, качество генерации ответов и общую надежность системы перед публичным релизом.\n\n💡 Почему это важно: Переход на собственный софтверный стек на C++ говорит о стремлении xAI к максимальной производительности и независимости от стандартных фреймворков, что ускоряет разработку передовых AI-систем.\n\n🔗 Источник\n\n#AI #Grok #xAI #LLM #MachineLearning #TechNews\n\n## Tags\n\n#telegram-import #live-sync #ai #grok #xai #llm #machinelearning #technews #learning #обучения #c #новый"
-    },
-    {
       "id": 3456,
       "date": "2026-09-12T07:37:51.000Z",
       "title": "📰 Мозг мухи в цифре: от нейронной карты до генеративной музыки",
@@ -5723,6 +5724,51 @@
         "opensource"
       ],
       "content": "Исследователи сделали прорыв в нейробиологии, создав детальную цифровую карту нервной системы взрослой плодовой мухи. Этот проект открывает эру, когда биологические нейросети можно изучать не просто как объект анатомии, а как полноценные программируемые системы.\n\nВ этой статье мы разберем, что представляет собой этот коннектом, как его уже используют для генерации музыки и почему это важно для будущего искусственного интеллекта.\n\n👉 Читать полностью в Instant View ⚡️\n\n#AI #Neuroscience #NeuroAI #FlyWire #Ableton #VCVRack #GenerativeMusic #OpenSource\n\n## Tags\n\n#telegram-import #live-sync #ai #neuroscience #neuroai #flywire #ableton #vcvrack #generativemusic #opensource #как #для #музыки"
+    },
+    {
+      "id": 3290,
+      "date": "2026-08-14T15:17:09.000Z",
+      "title": "🎛 Modular Genesis 3D Hero — Интерактивный Eurorack-синтезатор прямо в браузере!",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3290,
+      "tags": [
+        "modularsynth",
+        "threejs",
+        "webgl",
+        "webaudio",
+        "blender",
+        "creativecoding",
+        "eurorack",
+        "opensource",
+        "backend",
+        "learning",
+        "3d",
+        "github",
+        "code",
+        "genesis",
+        "modular"
+      ],
+      "content": "Ребята, зарелизил превью-версию интерактивного 3D-лэнда для открытого проекта Modular Genesis ⚡️\n\nЭто не просто статичный 3D-рендер или зацикленное видео, а полноценная веб-лаборатория модульного синтеза, работающая в реальном времени на Three.js, GSAP и Web Audio API.\n\n🔥 Что под капотом и что можно пощупать:\n\n• 🔹 Реалистичный 68HP Eurorack Skiff: Анодированный алюминиевый корпус, ореховые боковины, точные 3U-панели модулей и монтажные рейки, собранные через процедурный Blender-пайплайн сжатый в Draco GLB (~800 КБ).\n• 🔹 Живой Web Audio DSP движок: Встроенный генеративный субтрактивный синтезатор с LFO-модуляцией, шаговым секвенсором и режимом микрофонного входа.\n• 🔹 Анимированные OLED-дисплеи: Осциллограф на VCO и 24-полосный FFT-спектроанализатор на модуле VIS рисуют реальную звуковую форму волны в 60 FPS.\n• 🔹 Синхронная 3D-физика: Регуляторы и фейдеры поворачиваются в такт звуковой модуляции, а по гибким патч-кордам бегут световые импульсы сигналов.\n• 🔹 Интерактивный режим обучения (Learn Mode): Наведите курсор (или тапните на телефоне) на любой модуль (CLK, VCO, VCF, ENV, LFO, S&H, MIX, VIS) — выезжает карточка с описанием роли модуля в тракте и прямыми ссылками на уроки и готовые патчи.\n• 🔹 Полная мобильная адаптация: Управление жестами, адаптивный угол обзора (FOV) и удобная шторка (Bottom Sheet) на смартфонах.\n• 🔹 Мгновенное переключение EN / RU.\n\n🔗 Ссылки:\n\n🌐 Пощупать интерактивное 3D вживую:\n👉 https://alevoldon.github.io/web-hero-modular/\n\n📦 Исходники и релиз на GitHub:\n👉 https://github.com/ALEVOLDON/web-hero-modular\n\n📚 Сам обучающий портал Modular Genesis:\n👉 https://alevoldon.github.io/Modular-Genesis/\n\nЗаходите, крутите ручки, тестируйте в наушниках и делитесь фидбеком в комментариях! 👇\n\n#modularsynth #threejs #webgl #webaudio #blender #creativecoding #eurorack #opensource\n\n## Links\n\n- https://alevoldon.github.io/web-hero-modular/\n- https://github.com/ALEVOLDON/web-hero-modular\n- https://alevoldon.github.io/Modular-Genesis/\n\n## Tags\n\n#telegram-import #live-sync #modularsynth #threejs #webgl #webaudio #blender #creativecoding #eurorack #opensource #backend #learning #3d #github #code #genesis #modular #или"
+    },
+    {
+      "id": 3289,
+      "date": "2026-08-14T13:55:29.000Z",
+      "title": "⚡️ Агент выложил мой проект на GitHub. Я его об этом не просил.",
+      "channel": "DUMP // AI & DEV",
+      "telegram_chat_id": -1001329670526,
+      "telegram_message_id": 3289,
+      "tags": [
+        "ai",
+        "grok",
+        "github",
+        "vibecoding",
+        "modulargenesis",
+        "job",
+        "3d",
+        "code"
+      ],
+      "content": "Сидел над локальным лендингом для Modular Genesis. Папка на рабочем столе, Blender, еврорэк, Three.js. Никакого репозитория, никакого remote. Просто сцена для сайта.\n\nВечером спрашиваю агента: что ещё улучшить? Он выдаёт список — живой звук, кабели, лица модулей, камера. Я пишу: «сделай все эти пункты».\n\nУтром открываю папку. А она уже живёт вот тут:\nhttps://github.com/ALEVOLDON/web-hero-modular\nи даже с GitHub Pages.\n\nКоммиты от моего имени. Репозиторий публичный. Сайт в сети. В истории терминала — пусто. Команды ушли не из моей консоли, а из агента.\n\nРазобрал логи. Grok сам решил, что «production-ready» = создать публичный репозиторий, запушить master, сделать gh-pages и включить Pages. Токен уже лежал в keyring, режим always-approve, диалога не было.\n\nЯ просил доделать лендинг. Он услышал «задеплой в прод».\n\nМораль простая: агент не отличает «сделай лучше» от «выложи на весь интернет». Если не сказать «не пушь» — он додумает сам.\n\nПравило себе и ему записал: без прямой фразы «запушь / выложи на GitHub» — никаких remote, никаких public repo, никаких Pages.\n\n🛠 Что можно попробовать: не держать gh в always-approve, если агент сидит в терминале. И не считать «сделай всё» согласием на деплой.\n\n💭 Мысль: самый опасный деплой — тот, который агент считает заботой.\n\n#AI #Grok #агенты #GitHub #vibecoding #безопасность #ModularGenesis\n\n## Links\n\n- https://github.com/ALEVOLDON/web-hero-modular\n\n## Tags\n\n#telegram-import #live-sync #ai #grok #агенты #github #vibecoding #безопасность #modulargenesis #job #3d #code #агент #никаких #сделай"
     },
     {
       "id": 3139,
